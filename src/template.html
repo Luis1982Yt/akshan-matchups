@@ -1,0 +1,802 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Guias de matchup</title>
+<script>
+try {
+  const t = localStorage.getItem("tema"); if (t === "claro") document.documentElement.dataset.tema = t;
+  const h = location.hash.slice(1).split("/")[0], g = localStorage.getItem("guia");
+  // Guia sem paleta própria (ou link antigo do Akshan) cai na paleta padrão até o JS confirmar o guia.
+  document.documentElement.dataset.guia = h || g || "akshan";
+} catch (e) {}
+</script>
+<style>
+/*FONTS*/
+/* Uma tela de seleção de campeões por guia: você, a lista de inimigos e o inimigo. Cada guia tem sua paleta; o Akshan é Sentinelas da Luz. */
+:root {
+  --fundo: #0c0b09;
+  --painel: #15130f;
+  --painel-alto: #1e1a13;
+  --linha: rgba(214, 178, 98, .26);
+  --linha-forte: rgba(214, 178, 98, .55);
+  --acento: #d6b262;
+  --acento-vivo: #f2d488;
+  --destaque: #ffd96b;
+  --texto: #e9e1cd;
+  --texto-baixo: #a99f88;
+  --tinta-botao: #17130a;
+  --luz: rgba(255, 228, 150, .16);
+  --sombra: 0 10px 30px rgba(0, 0, 0, .45);
+  --sobre-arte: #ffe6a3;
+  --destaque-arte: #ffd96b;
+  --botao-1: #ffe7a1;
+  --botao-2: #e2b24a;
+  --brilho: rgba(255, 240, 200, .55);
+  --brilho-2: rgba(255, 210, 110, .18);
+  --titulo: "Cinzel", "Times New Roman", serif;
+  --corpo: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --barra: 64px;
+  --borda: max(16px, env(safe-area-inset-left, 0px));
+  color-scheme: dark;
+}
+:root[data-tema="claro"] {
+  --fundo: #f6f0e1;
+  --painel: #fffcf4;
+  --painel-alto: #efe5cd;
+  --linha: rgba(150, 112, 30, .28);
+  --linha-forte: rgba(150, 112, 30, .6);
+  --acento: #8a6416;
+  --acento-vivo: #6f4e0c;
+  --destaque: #e3b23c;
+  --texto: #2a2316;
+  --texto-baixo: #66593f;
+  --tinta-botao: #1d1608;
+  --luz: rgba(227, 178, 60, .18);
+  --sombra: 0 10px 30px rgba(90, 64, 10, .14);
+  color-scheme: light;
+}
+/* Mordekaiser: ferro e o verde do Reino da Morte. */
+:root[data-guia="mordekaiser"] {
+  --fundo: #0a0d0c;
+  --painel: #121715;
+  --painel-alto: #19201c;
+  --linha: rgba(110, 214, 156, .22);
+  --linha-forte: rgba(110, 214, 156, .48);
+  --acento: #63c98f;
+  --acento-vivo: #97ecbb;
+  --destaque: #5be39a;
+  --texto: #dde7e1;
+  --texto-baixo: #92a39a;
+  --tinta-botao: #05110a;
+  --luz: rgba(80, 220, 140, .12);
+  --sombra: 0 10px 30px rgba(0, 0, 0, .5);
+  --sobre-arte: #c8ffdf;
+  --destaque-arte: #6cf0a8;
+  --botao-1: #b5f7cf;
+  --botao-2: #3fbd78;
+  --brilho: rgba(200, 255, 225, .5);
+  --brilho-2: rgba(80, 220, 140, .18);
+  color-scheme: dark;
+}
+:root[data-guia="mordekaiser"][data-tema="claro"] {
+  --fundo: #edf2ee;
+  --painel: #fbfdfb;
+  --painel-alto: #dde7e0;
+  --linha: rgba(25, 110, 65, .26);
+  --linha-forte: rgba(25, 110, 65, .56);
+  --acento: #1d7448;
+  --acento-vivo: #135a37;
+  --destaque: #2fa865;
+  --texto: #17201b;
+  --texto-baixo: #4c5d53;
+  --tinta-botao: #04120a;
+  --luz: rgba(47, 168, 101, .14);
+  --sombra: 0 10px 30px rgba(10, 60, 30, .14);
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scrollbar-color: var(--linha-forte) var(--fundo); }
+body { margin: 0; color: var(--texto); font: 400 16px/1.6 var(--corpo); -webkit-font-smoothing: antialiased; background: var(--fundo); }
+/* A luz vem de cima, numa camada própria atrás de tudo. */
+body::after { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; background: radial-gradient(1100px 520px at 50% -120px, var(--luz), transparent 70%); }
+::selection { background: var(--destaque); color: var(--tinta-botao); }
+input { caret-color: var(--acento); }
+button { font: inherit; color: inherit; }
+img { display: block; }
+img.falhou { visibility: hidden; }
+a { color: var(--acento-vivo); text-underline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--acento-vivo); outline-offset: 3px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+
+/* Barra e troca de guia */
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 20; background: var(--fundo); }
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: color-mix(in oklab, var(--fundo) 90%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 1px solid var(--linha); }
+.bar-in { height: var(--barra); max-width: 1320px; margin: 0 auto; padding: 0 var(--borda); display: flex; align-items: center; gap: 16px; }
+.guias { position: relative; min-width: 0; }
+.trocar { display: flex; align-items: center; gap: 12px; min-height: 48px; max-width: 100%; padding: 4px 12px 4px 4px; border-radius: 999px; border: 1px solid transparent; background: none; cursor: pointer; text-align: left; }
+.trocar:hover, .trocar[aria-expanded="true"] { border-color: var(--linha-forte); background: var(--painel); }
+.trocar img { width: 38px; height: 38px; flex: none; border-radius: 50%; box-shadow: 0 0 0 2px var(--acento); }
+.trocar .txt { display: grid; min-width: 0; line-height: 1.15; }
+.trocar b { font: 700 20px/1.1 var(--titulo); letter-spacing: .04em; color: var(--acento-vivo); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.trocar .txt span { font-size: 13px; color: var(--texto-baixo); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.trocar svg { flex: none; color: var(--acento); transition: transform .2s; }
+.trocar[aria-expanded="true"] svg { transform: rotate(180deg); }
+.menu { position: absolute; z-index: 15; top: calc(100% + 8px); left: 0; width: min(340px, calc(100vw - 32px)); padding: 8px; border-radius: 12px; background: var(--painel); border: 1px solid var(--linha-forte); box-shadow: var(--sombra); }
+.menu-tit { margin: 4px 10px 6px; font: 600 12px var(--corpo); letter-spacing: .14em; text-transform: uppercase; color: var(--texto-baixo); }
+.menu ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+.menu li button { width: 100%; min-height: 60px; display: flex; align-items: center; gap: 12px; padding: 8px 10px; border: 0; border-radius: 8px; background: none; cursor: pointer; text-align: left; }
+.menu li button:hover, .menu li button[aria-current="true"] { background: var(--painel-alto); }
+.menu li img { width: 42px; height: 42px; flex: none; border-radius: 50%; }
+.menu li b { display: block; font: 700 17px/1.2 var(--titulo); color: var(--texto); }
+.menu li small { display: block; font-size: 13px; color: var(--texto-baixo); }
+.menu li .atual { margin-left: auto; flex: none; font-size: 12px; font-weight: 700; color: var(--acento-vivo); }
+.dica { margin: 6px 10px 4px; padding-top: 8px; border-top: 1px solid var(--linha); font-size: 13px; color: var(--texto-baixo); }
+.tema { margin-left: auto; width: 44px; height: 44px; flex: none; display: grid; place-items: center; cursor: pointer; border-radius: 50%; border: 1px solid var(--linha-forte); background: transparent; color: var(--acento-vivo); }
+.tema:hover { background: var(--painel-alto); }
+.tema .sol { display: none; }
+:root[data-tema="claro"] .tema .sol { display: block; }
+:root[data-tema="claro"] .tema .lua { display: none; }
+
+/* Palco: você, a lista e o inimigo */
+.palco {
+  max-width: 1320px; margin: 0 auto; padding: 24px var(--borda) 0;
+  display: grid; gap: 20px; grid-template-columns: 280px minmax(0, 1fr) 280px;
+  grid-template-areas: "voce anel inimigo" "voce anel trava" "setup setup setup";
+  grid-template-rows: auto 1fr auto;
+  align-items: start;
+}
+.duelo { display: contents; }
+.card { position: relative; overflow: hidden; border-radius: 10px; background: var(--painel); border: 1px solid var(--linha-forte); box-shadow: var(--sombra); aspect-ratio: 308 / 560; }
+.card.voce { grid-area: voce; }
+.card.inimigo { grid-area: inimigo; }
+.card img { width: 100%; height: 100%; object-fit: cover; }
+#artEle, #artVoce { position: absolute; inset: 0; }
+#trocarImg { display: contents; }
+.card::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(to top, rgba(8, 8, 6, .92) 0%, rgba(8, 8, 6, .55) 26%, transparent 48%); }
+.card .selo { position: absolute; z-index: 2; top: 12px; left: 12px; padding: 3px 10px; border-radius: 4px; font: 700 12px/1.4 var(--titulo); letter-spacing: .12em; text-transform: uppercase; background: var(--destaque-arte); color: #111; }
+.card.inimigo .selo { left: auto; right: 12px; background: #f6f3ea; color: #111; }
+.card .quem { position: absolute; z-index: 2; left: 0; right: 0; bottom: 0; padding: 0 16px 16px; color: #f6f3ea; }
+.card.inimigo .quem { text-align: right; }
+.quem .t { margin: 4px 0 0; font-size: 14px; line-height: 1.3; color: #e4ddcf; }
+.quem .n { margin: 0; font: 800 clamp(26px, 2.6vw, 34px)/1.05 var(--titulo); letter-spacing: .02em; color: var(--sobre-arte); overflow-wrap: break-word; text-wrap: balance; }
+.quem .n.longo { font-size: clamp(20px, 2vw, 27px); letter-spacing: 0; }
+.quem .guia { display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; font-size: 14px; color: #e4ddcf; }
+.quem .guia.sim { color: var(--destaque-arte); }
+.quem .guia > i { width: 9px; height: 9px; border-radius: 50%; box-shadow: inset 0 0 0 1.5px currentColor; }
+.quem .guia.sim > i { background: currentColor; }
+.quem .guia .pips i { background: rgba(255, 255, 255, .25); }
+.quem .guia .pips i.on { background: var(--destaque-arte); }
+
+/* Botão de travar */
+.travar {
+  grid-area: trava; width: 100%; min-height: 56px; padding: 8px 16px; border: 0; border-radius: 10px; cursor: pointer;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+  font: 800 19px/1 var(--titulo); letter-spacing: .1em; text-transform: uppercase; color: #111;
+  background: linear-gradient(180deg, var(--botao-1), var(--botao-2)); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .6), 0 6px 18px rgba(0, 0, 0, .35);
+}
+.travar small { font: 600 13px var(--corpo); letter-spacing: .02em; text-transform: none; }
+.travar:hover { filter: brightness(1.06); }
+.travar:active { transform: translateY(1px); }
+
+/* Lista de inimigos */
+.anel { grid-area: anel; min-width: 0; padding: 18px 20px 24px; border-radius: 12px; background: var(--painel); border: 1px solid var(--linha); }
+.anel h2 { display: flex; align-items: center; justify-content: center; gap: 12px; margin: 0 0 14px; font: 700 22px/1.2 var(--titulo); letter-spacing: .14em; text-transform: uppercase; color: var(--acento-vivo); text-align: center; }
+.anel h2 svg { flex: none; color: var(--acento); }
+.busca { display: flex; align-items: center; gap: 10px; height: 46px; padding: 0 14px; border-radius: 8px; background: var(--fundo); border: 1px solid var(--linha-forte); color: var(--texto-baixo); }
+.busca:focus-within { border-color: var(--acento-vivo); color: var(--acento-vivo); }
+.busca input { flex: 1; min-width: 0; height: 100%; border: 0; outline: 0; background: transparent; color: var(--texto); font: 16px var(--corpo); }
+.busca input::placeholder { color: var(--texto-baixo); }
+.busca .conta { font: 700 13px var(--corpo); color: var(--acento); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.filtros { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin: 12px 0 4px; }
+.chip {
+  min-height: 44px; padding: 0 14px; border-radius: 999px; cursor: pointer; display: inline-flex; align-items: center; gap: 7px;
+  background: transparent; border: 1px solid var(--linha-forte); color: var(--texto); font: 600 14px var(--corpo);
+}
+.chip img { width: 20px; height: 20px; border-radius: 4px; }
+.chip:hover { border-color: var(--acento-vivo); }
+.chip[aria-pressed="true"] { background: var(--destaque); border-color: var(--destaque); color: var(--tinta-botao); }
+.roda { position: relative; width: min(100%, 520px); aspect-ratio: 1; margin: 14px auto 0; border-radius: 50%; }
+/* Mira da Punição (R do Akshan), como no jogo: losango que trava no alvo, círculo por dentro e setas laterais apontando para o centro. */
+.mira { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
+.mira .aro { fill: none; stroke: var(--acento); stroke-width: 1.5px; }
+.mira .aro.fino { stroke-width: 1px; opacity: .45; }
+.mira .setas { fill: var(--acento-vivo); }
+.alvo { position: absolute; z-index: 1; left: 50%; top: 9%; width: 74%; aspect-ratio: 1; transform: translateX(-50%); overflow: visible; pointer-events: none; filter: drop-shadow(0 0 4px rgba(255, 214, 120, .75)) drop-shadow(0 1px 3px rgba(0, 0, 0, .6)); }
+.alvo .losango { fill: none; stroke: #ffe39a; stroke-width: 3.5px; }
+.alvo .aro-alvo { fill: none; stroke: #fff4d6; stroke-width: 1px; opacity: .6; }
+.alvo .setas-alvo { fill: #fff4d6; opacity: .85; }
+.alvo.travando { animation: trava-alvo .5s cubic-bezier(.16, 1, .3, 1) both; }
+@keyframes trava-alvo { from { opacity: 0; transform: translateX(-50%) scale(1.35); } }
+:root:not([data-guia="akshan"]) .alvo, :root:not([data-guia="akshan"]) .mira .setas { display: none; }
+.lista {
+  position: absolute; inset: 16% 16% 9%; overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--acento) transparent;
+  -webkit-mask-image: linear-gradient(to bottom, #000 78%, transparent); mask-image: linear-gradient(to bottom, #000 78%, transparent);
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(52px, 1fr)); gap: 12px; align-content: start; padding: 12px 12px 28px;
+}
+.pick { position: relative; aspect-ratio: 1; padding: 0; border: 1px solid var(--linha-forte); border-radius: 6px; cursor: pointer; background: var(--painel-alto); }
+.pick img { width: 100%; height: 100%; border-radius: 5px; object-fit: cover; }
+.pick:has(img.falhou)::after { content: attr(data-ini); position: absolute; inset: 0; display: grid; place-items: center; font: 700 20px var(--titulo); color: var(--texto-baixo); }
+.pick .ponto { position: absolute; z-index: 1; top: 3px; right: 3px; width: 8px; height: 8px; border-radius: 50%; background: var(--destaque); box-shadow: 0 0 0 2px var(--painel); }
+.pick .nivel { position: absolute; z-index: 1; right: 2px; bottom: 2px; min-width: 17px; height: 17px; padding: 0 4px; border-radius: 4px; background: rgba(5, 8, 6, .82); color: #f2f6f3; font: 700 11px/17px var(--corpo); text-align: center; }
+.pick:hover { border-color: var(--acento-vivo); }
+.pick[aria-current="true"] { border: 2px solid var(--destaque); box-shadow: 0 0 0 2px var(--painel), 0 0 0 4px var(--acento); }
+:root[data-guia="akshan"] .pick[aria-current="true"] { box-shadow: none; }
+:root[data-guia="akshan"] .pick[aria-current="true"]::before { content: ""; position: absolute; z-index: 2; inset: -6px; border: 2px solid var(--destaque); transform: rotate(45deg) scale(.78); pointer-events: none; }
+.pick:focus-visible { outline-offset: 2px; }
+.vazio { position: absolute; inset: 30% 18%; margin: 0; display: grid; place-content: center; gap: 8px; text-align: center; font-size: 15px; color: var(--texto-baixo); }
+.vazio button { min-height: 44px; border: 0; background: none; cursor: pointer; color: var(--acento-vivo); font-weight: 700; text-decoration: underline; text-underline-offset: 4px; }
+
+/* Setup */
+.setup { grid-area: setup; scroll-margin-top: calc(var(--barra) + 16px); margin: 0; padding: 18px 22px; border-radius: 12px; background: var(--painel); border: 1px solid var(--linha); }
+.setup h2 { margin: 0 0 14px; font: 700 16px var(--titulo); letter-spacing: .14em; text-transform: uppercase; color: var(--acento-vivo); }
+.carga { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px 24px; margin: 0; }
+.slot { min-width: 0; }
+.slot dt, .bloco h3 { margin: 0 0 10px; font: 600 12px var(--corpo); letter-spacing: .14em; text-transform: uppercase; color: var(--texto-baixo); }
+.slot dd { margin: 0; display: grid; gap: 10px; }
+.opt, .peca { display: inline-flex; align-items: center; gap: 10px; min-width: 0; font-weight: 700; font-size: 16px; line-height: 1.2; color: var(--texto); }
+.opt { display: flex; }
+.opt img, .peca img { width: 36px; height: 36px; flex: none; border-radius: 6px; border: 1px solid var(--linha-forte); background: var(--painel-alto); }
+.peca img { width: 32px; height: 32px; }
+.opt.runa img, .peca.runa img { border-radius: 50%; background: #15130f; }
+.opt span, .peca span { min-width: 0; overflow-wrap: anywhere; }
+.soquete { width: 36px; height: 36px; flex: none; display: grid; place-items: center; border-radius: 6px; border: 1px solid var(--linha-forte); background: var(--painel-alto); }
+.peca .soquete { width: 32px; height: 32px; }
+.soquete::before { content: ""; width: 12px; height: 2px; border-radius: 1px; background: var(--acento); opacity: .7; }
+.opt .rush { font: 700 11px/1 var(--titulo); letter-spacing: .1em; text-transform: uppercase; padding: 4px 7px; border-radius: 4px; background: var(--destaque); color: var(--tinta-botao); }
+.livre { font-style: italic; color: var(--texto-baixo); }
+/* Setup completo: runas, itens com condições e dificuldade */
+.setup-completo { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.7fr) minmax(0, .8fr); gap: 20px 36px; }
+.bloco { min-width: 0; }
+.linha-runa + .linha-runa { margin-top: 12px; }
+.linha-runa .rot { display: block; margin-bottom: 6px; font-size: 13px; color: var(--texto-baixo); }
+.pecas { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.pecas .seta { flex: none; color: var(--acento); }
+.ou { font-size: 13px; font-style: italic; color: var(--texto-baixo); }
+.ou-bloco { margin: 14px 0 10px; font-size: 13px; font-style: italic; color: var(--texto-baixo); }
+.frag { margin: 0; font-size: 15px; font-weight: 600; }
+.build .grupo + .grupo { margin-top: 18px; }
+.build .cond { margin: 0 0 10px; font-weight: 700; font-size: 15px; color: var(--acento-vivo); }
+.build ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.build .motivo { margin: 4px 0 0; font-size: 14px; color: var(--texto-baixo); }
+.build .nota { font-size: 14px; font-style: italic; color: var(--texto-baixo); }
+.build .sub { margin-top: 4px; font-size: 14px; font-weight: 700; }
+.build .sep { height: 1px; background: var(--linha); }
+.dif dl { margin: 0; display: grid; gap: 10px; }
+.dif dl div { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.dif dt { font-size: 14px; color: var(--texto-baixo); }
+.dif dd { margin: 0; display: flex; align-items: center; gap: 10px; font-variant-numeric: tabular-nums; }
+.dif dd b { font-size: 15px; }
+.pips { display: inline-flex; gap: 3px; }
+.pips i { width: 10px; height: 10px; border-radius: 2px; background: var(--painel-alto); box-shadow: inset 0 0 0 1px var(--linha-forte); }
+.pips i.on { background: var(--destaque); box-shadow: none; }
+
+/* Guia */
+.guia-txt { max-width: 1320px; margin: 0 auto; padding: 40px var(--borda) 72px; }
+.notas, .dicio, .rodape { max-width: 820px; margin: 0 auto; }
+.navega { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 22px; }
+.navega h2, .dicio h2 { margin: 0; font: 700 28px/1.2 var(--titulo); letter-spacing: .06em; color: var(--acento-vivo); }
+.navega div { display: flex; gap: 8px; }
+.navega button { min-height: 44px; padding: 0 14px; display: inline-flex; align-items: center; gap: 8px; cursor: pointer; border-radius: 8px; border: 1px solid var(--linha-forte); background: var(--painel); color: var(--texto); font-weight: 600; font-size: 15px; }
+.navega button:hover { border-color: var(--acento-vivo); }
+.navega img { width: 24px; height: 24px; border-radius: 4px; }
+.lembretes { margin: 0; padding: 0; list-style: none; display: grid; gap: 14px; counter-reset: n; }
+.lembretes li { display: grid; grid-template-columns: 44px minmax(0, 1fr); align-items: start; padding: 16px 18px; border-radius: 10px; background: var(--painel); border: 1px solid var(--linha); font-size: 17.5px; line-height: 1.65; counter-increment: n; }
+.lembretes li::before { content: counter(n); width: 30px; height: 30px; margin-top: 1px; display: grid; place-items: center; border-radius: 50%; background: var(--destaque); color: var(--tinta-botao); font: 800 15px/1 var(--titulo); }
+.kw { font-weight: 700; color: var(--texto); text-decoration: underline; text-decoration-color: var(--destaque); text-decoration-thickness: 2px; text-underline-offset: 5px; }
+.resumo { margin-bottom: 32px; padding: 16px 20px; border-radius: 10px; background: var(--painel); border: 1px solid var(--linha); }
+.resumo h3 { margin: 0 0 8px; font: 700 13px var(--corpo); letter-spacing: .14em; text-transform: uppercase; color: var(--texto-baixo); }
+.secao + .secao { margin-top: 34px; }
+.secao h3 { margin: 0 0 12px; font: 700 21px/1.25 var(--titulo); letter-spacing: .04em; color: var(--acento-vivo); }
+.secao p { margin: 0 0 14px; font-size: 17px; line-height: 1.7; }
+.secoes ul { margin: 0 0 14px; padding: 0; list-style: none; display: grid; gap: 10px; }
+.secoes li { position: relative; padding-left: 22px; font-size: 17px; line-height: 1.7; }
+.secoes li::before { content: ""; position: absolute; left: 4px; top: .7em; width: 7px; height: 7px; transform: rotate(45deg); background: var(--destaque); }
+.cds { width: 100%; max-width: 560px; border-collapse: collapse; font-size: 15px; }
+.cds th, .cds td { padding: 9px 12px 9px 0; border-bottom: 1px solid var(--linha); text-align: left; vertical-align: top; }
+.cds th { font-weight: 700; color: var(--texto); white-space: nowrap; }
+.cds td { color: var(--texto-baixo); font-variant-numeric: tabular-nums; }
+.dicio { margin-top: 64px; }
+.dicio h2 { margin-bottom: 20px; }
+.dicio dl { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 20px 32px; margin: 0; }
+.dicio dt { font: 700 17px var(--titulo); letter-spacing: .04em; color: var(--texto); }
+.dicio dd { margin: 4px 0 0; font-size: 15px; color: var(--texto-baixo); }
+.rodape { display: block; margin-top: 48px; font-size: 14px; color: var(--texto-baixo); }
+.rodape p { margin: 0; }
+
+/* Pick travado: as duas artes frente a frente, como a tela de carregamento */
+.trava { position: fixed; inset: 0; z-index: 30; display: grid; grid-template-columns: 1fr 1fr; align-items: center; justify-items: center; gap: 4vw; padding: 6vh 6vw; background: rgba(6, 6, 4, .9); cursor: pointer; }
+.trava::before { content: ""; position: absolute; left: 50%; top: 50%; width: 60vmin; height: 60vmin; transform: translate(-50%, -50%); border-radius: 50%; background: radial-gradient(circle, var(--brilho), var(--brilho-2) 40%, transparent 70%); pointer-events: none; }
+.trava figure { position: relative; margin: 0; width: min(100%, 34vh); aspect-ratio: 308 / 560; border-radius: 10px; overflow: hidden; border: 2px solid var(--botao-2); box-shadow: 0 18px 50px rgba(0, 0, 0, .6); }
+.trava img { width: 100%; height: 100%; object-fit: cover; }
+.trava figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 10px 12px; text-align: center; font: 800 clamp(18px, 3vh, 28px)/1.1 var(--titulo); color: var(--sobre-arte); background: linear-gradient(transparent, rgba(8, 8, 6, .9)); }
+.trava .vs { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font: 800 clamp(28px, 6vh, 56px)/1 var(--titulo); color: #fff8e8; letter-spacing: .08em; }
+.trava.on .eu { animation: entra-e .7s cubic-bezier(.16, 1, .3, 1) both; }
+.trava.on .ele { animation: entra-d .7s cubic-bezier(.16, 1, .3, 1) both; }
+.trava.on .vs, .trava.on::before { animation: brilha .9s .25s cubic-bezier(.16, 1, .3, 1) both; }
+@keyframes entra-e { from { transform: translateX(-30vw); opacity: 0; } }
+@keyframes entra-d { from { transform: translateX(30vw); opacity: 0; } }
+@keyframes brilha { from { opacity: 0; transform: translate(-50%, -50%) scale(.6); } }
+
+@media (max-width: 1100px) {
+  .palco { grid-template-columns: 220px minmax(0, 1fr) 220px; }
+  .carga { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .setup-completo { grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); }
+  .setup-completo .dif { grid-column: 1 / -1; }
+}
+@media (max-width: 900px) {
+  :root { --barra: 60px; }
+  .palco { padding-top: 14px; gap: 14px; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-areas: "anel anel" "voce inimigo" "trava trava" "setup setup"; grid-template-rows: none; }
+  .anel { padding: 14px 12px 16px; }
+  .anel h2 { font-size: 18px; }
+  .filtros { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; scrollbar-width: none; margin-inline: -12px; padding: 4px 12px; }
+  .filtros::-webkit-scrollbar { display: none; }
+  .chip { flex: none; }
+  .lista { inset: 15% 15% 8%; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 11px; }
+  .quem .n { font-size: 22px; }
+  .quem .n.longo { font-size: 17px; }
+  .quem .t { font-size: 13px; }
+  .card .quem { padding: 0 10px 12px; }
+  .carga { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .slot:last-child { grid-column: 1 / -1; }
+  .setup { padding: 16px; }
+  .setup-completo { grid-template-columns: minmax(0, 1fr); }
+  .guia-txt { padding-top: 32px; }
+  .navega h2, .dicio h2 { font-size: 23px; }
+  .lembretes li { font-size: 16.5px; grid-template-columns: 40px minmax(0, 1fr); padding: 14px; }
+  .secao p, .secoes li { font-size: 16.5px; }
+}
+@media (max-width: 520px) {
+  .trocar b { font-size: 18px; }
+  .navega .lbl { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .trava.on .eu, .trava.on .ele, .trava.on .vs, .trava.on::before { animation: none; }
+  .trocar svg { transition: none; }
+}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="bar-in">
+    <div class="guias">
+      <button class="trocar" type="button" id="trocar" aria-expanded="false" aria-controls="menuGuias" aria-haspopup="true">
+        <span id="trocarImg"></span>
+        <span class="txt"><b id="trocarNome"></b><span id="trocarSub"></span></span>
+        <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 5l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="menu" id="menuGuias" hidden>
+        <p class="menu-tit">Guias de matchup</p>
+        <ul id="menuLista"></ul>
+        <p class="dica">O site sempre abre no último guia que você usou.</p>
+      </div>
+    </div>
+    <button class="tema" type="button" id="tema" aria-label="Usar tema claro">
+      <svg class="lua" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+      <svg class="sol" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+  <h1 class="sr" id="titulo"></h1>
+  <div class="palco">
+    <nav class="anel" aria-labelledby="escolhe">
+      <h2 id="escolhe"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1l6 6-6 6-6-6z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>Escolhe o inimigo<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1l6 6-6 6-6-6z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></h2>
+      <label class="busca" for="q">
+        <svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M11 11l3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <input id="q" type="search" placeholder="Campeão ou palavra" autocomplete="off" spellcheck="false" aria-label="Procurar matchup">
+        <span class="conta" id="contagem"></span>
+      </label>
+      <div class="filtros" id="filtros" role="group" aria-label="Filtros"></div>
+      <div class="roda">
+        <svg class="mira" viewBox="0 0 100 100" aria-hidden="true">
+          <circle class="aro" cx="50" cy="50" r="49" vector-effect="non-scaling-stroke"/>
+          <circle class="aro fino" cx="50" cy="50" r="46.5" vector-effect="non-scaling-stroke"/>
+          <path class="setas" d="M0 44.5L7 50l-7 5.5z M100 44.5L93 50l7 5.5z"/>
+        </svg>
+        <div class="lista" id="lista"></div>
+        <p class="vazio" id="vazio" hidden>Nenhum campeão com essa busca. <button type="button" id="limpar">Limpar busca e filtros</button></p>
+      </div>
+    </nav>
+
+    <section class="duelo" aria-label="Duelo">
+      <article class="card voce">
+        <div id="artVoce"></div>
+        <span class="selo">Você</span>
+        <div class="quem"><p class="n" id="vocNome"></p><p class="t" id="vocTitulo"></p></div>
+      </article>
+      <article class="card inimigo" aria-live="polite">
+        <div id="artEle"></div>
+        <svg class="alvo" id="alvo" viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="50" r="30" class="aro-alvo" vector-effect="non-scaling-stroke"/>
+          <polygon points="50,5 95,50 50,95 5,50" class="losango" vector-effect="non-scaling-stroke"/>
+          <path class="setas-alvo" d="M-4 45L3 50l-7 5z M104 45L97 50l7 5z"/>
+        </svg>
+        <span class="selo">Inimigo</span>
+        <div class="quem"><p class="n" id="eleNome"></p><p class="t" id="eleTitulo"></p><span class="guia" id="guia"></span></div>
+      </article>
+    </section>
+
+    <button class="travar" type="button" id="travar">Travar o pick<small id="travarNome"></small></button>
+
+    <section class="setup" aria-labelledby="st">
+      <h2 id="st">Seu setup pro confronto</h2>
+      <div id="carga"></div>
+    </section>
+  </div>
+
+  <div class="guia-txt">
+    <section class="notas" aria-labelledby="nt">
+      <div class="navega">
+        <h2 id="nt"></h2>
+        <div>
+          <button type="button" id="ant"></button>
+          <button type="button" id="prox"></button>
+        </div>
+      </div>
+      <div id="linhas"></div>
+    </section>
+
+    <section class="dicio" aria-labelledby="dt" data-so-guia="akshan">
+      <h2 id="dt">Como ler a planilha</h2>
+      <dl>
+        <div><dt>Arpel</dt><dd>O E do Akshan, a corda que gira em volta da parede. Fuga, engage e mindgame.</dd></div>
+        <div><dt>Bumerangue</dt><dd>O Q. Acertar alguém com ele ajuda a ganhar o escudo da passiva.</dd></div>
+        <div><dt>PTA e Electro</dt><dd>Pressione o Ataque e Eletrocutar, as duas runas principais da planilha.</dd></div>
+        <div><dt>Osso</dt><dd>Osso Revestido, runa de Determinação para lanes de muito burst.</dd></div>
+        <div><dt>Craquen</dt><dd>Mata-Cráquens, a build que troca de lugar com o crit.</dd></div>
+        <div><dt>Press</dt><dd>Prioridade de lane: quem empurra a wave e chega antes no rio.</dd></div>
+        <div><dt>Skirmish</dt><dd>Luta pequena, 2v2 ou 3v3, normalmente no rio.</dd></div>
+        <div><dt>Stat check</dt><dd>Quando o outro ganha a troca só por ter mais item ou nível.</dd></div>
+        <div><dt>Outscale</dt><dd>Ficar mais forte que você no fim do jogo.</dd></div>
+        <div><dt>100 0</dt><dd>Matar de vida cheia num combo só.</dd></div>
+      </dl>
+    </section>
+    <footer class="rodape" id="rodape"></footer>
+  </div>
+</main>
+
+<div class="trava" id="trava" hidden aria-hidden="true"></div>
+
+<script>
+const GUIAS = /*GUIAS*/;
+
+const DD = "https://ddragon.leagueoflegends.com/cdn/", VER = "16.20.1";
+const arte = id => `${DD}img/champion/loading/${id}_0.jpg`;
+const sq = id => `${DD}${VER}/img/champion/${id}.png`;
+const slug = s => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/['’.]/g, "").replace(/\s+/g, "-");
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const $ = id => document.getElementById(id);
+const raiz = document.documentElement;
+const semMovimento = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
+const SETA_E = '<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M9 2L4 7l5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+const SETA_D = '<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M5 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+const SETA_PASSO = '<svg class="seta" width="16" height="12" viewBox="0 0 16 12" aria-label="depois"><path d="M1 6h12M9 2l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+// Toda imagem que falhar (inclusive as criadas depois pelo JS) some, e volta se outra carregar no lugar.
+document.addEventListener("error", e => { if (e.target.tagName === "IMG") e.target.classList.add("falhou"); }, true);
+document.addEventListener("load", e => { if (e.target.tagName === "IMG") e.target.classList.remove("falhou"); }, true);
+
+/* ---------- Dados de cada guia ---------- */
+function prepara(g) {
+  if (g.formato === "simples") {
+    g.lista = g.matchups.map(([nome, runa, sec, spell, bota, build, notas, guia]) => ({
+      nome, runa, sec, spell, bota, build, guia: !!guia,
+      id: g.champs[nome].id, titulo: g.champs[nome].title, slug: slug(nome),
+      linhas: notas.split("\n").map(l => l.trim().replace(/\s{2,}/g, " ")).filter(Boolean),
+      hay: (nome + " " + notas).toLowerCase(),
+    }));
+  } else {
+    g.lista = g.matchups.map(m => ({ ...m, slug: slug(m.nome), hay: textoDe(m).toLowerCase() }));
+  }
+}
+function textoDe(m) {
+  const partes = [m.nome, m.planilha, ...m.tldr];
+  m.itens.forEach(gr => { partes.push(gr.rotulo); gr.linhas.forEach(l => partes.push(l.texto || "", l.motivo || "")); });
+  m.secoes.forEach(s => { partes.push(s.titulo); s.blocos.forEach(b => partes.push(...(b.itens || (b.linhas ? b.linhas.flat() : [b.texto])))); });
+  return partes.join(" ");
+}
+
+// Filtros: dentro do mesmo grupo vale qualquer um; entre grupos, todos.
+const FILTROS = {
+  simples: g => [
+    { id: "guia", grupo: "guia", rotulo: "Só com guia", teste: c => c.guia },
+    ...["Ignite", "TP", "Exhaust"].map(s => ({ id: s, grupo: "feitico", rotulo: s, icone: g.icones[s], teste: c => c.spell === s })),
+    { id: "Electro", grupo: "runa", rotulo: "Electro", icone: g.icones.Electro, teste: c => /electro/i.test(c.runa) },
+  ],
+  completo: () => [
+    { id: "facil", grupo: "dif", rotulo: "Fácil", teste: c => c.dificuldade.overall <= 2 },
+    { id: "medio", grupo: "dif", rotulo: "Médio", teste: c => c.dificuldade.overall === 3 },
+    { id: "dificil", grupo: "dif", rotulo: "Difícil", teste: c => c.dificuldade.overall >= 4 },
+  ],
+};
+
+/* ---------- Estado ---------- */
+const lista = $("lista"), q = $("q");
+let guia, filtros = [], current, shown = [];
+const ativos = new Set();
+
+function escolheGuia(id, inimigo) {
+  guia = GUIAS.find(g => g.id === id) || GUIAS[0];
+  if (!guia.lista) prepara(guia);
+  raiz.dataset.guia = guia.id;
+  try { localStorage.setItem("guia", guia.id); } catch (e) {}
+  filtros = FILTROS[guia.formato](guia);
+  ativos.clear(); q.value = "";
+  current = guia.lista.find(c => c.slug === inimigo) || guia.lista[0];
+  renderGuia();
+  renderLista();
+  renderDetalhe(false);
+  marcaHash();
+}
+
+function marcaHash() {
+  try { history.replaceState(null, "", `#${guia.id}/${current.slug}`); } catch (e) {}
+}
+
+/* ---------- Partes que mudam com o guia ---------- */
+function renderGuia() {
+  const eu = guia.campeao;
+  const sub = `${guia.rota ? guia.rota + " · " : ""}notas do ${guia.autor}`;
+  $("trocarImg").innerHTML = `<img src="${sq(eu.id)}" alt="" width="38" height="38">`;
+  $("trocarNome").textContent = eu.nome;
+  $("trocarSub").textContent = sub;
+  $("trocar").setAttribute("aria-label", `Guia atual: ${eu.nome}, ${sub}. Trocar de guia`);
+  $("menuLista").innerHTML = GUIAS.map(g => `
+    <li><button type="button" data-guia="${g.id}" aria-current="${g === guia}">
+      <img src="${sq(g.campeao.id)}" alt="" width="42" height="42">
+      <span><b>${esc(g.campeao.nome)}</b><small>${g.rota ? esc(g.rota) + " · " : ""}notas do ${esc(g.autor)} · ${g.matchups.length} matchups</small></span>
+      ${g === guia ? '<span class="atual">Aberto</span>' : ""}
+    </button></li>`).join("");
+  $("artVoce").innerHTML = `<img src="${arte(eu.id)}" alt="Arte do ${esc(eu.nome)}">`;
+  $("vocNome").textContent = eu.nome;
+  $("vocNome").classList.toggle("longo", eu.nome.length > 9);
+  $("vocTitulo").textContent = eu.titulo;
+  $("filtros").innerHTML = filtros.map(f => `<button class="chip" type="button" data-f="${f.id}" aria-pressed="false">${f.icone ? `<img src="${f.icone}" alt="" width="20" height="20">` : ""}${esc(f.rotulo)}</button>`).join("");
+  $("nt").textContent = guia.formato === "simples" ? "Lembrete" : "Como jogar";
+  document.querySelectorAll("[data-so-guia]").forEach(el => { el.hidden = el.dataset.soGuia !== guia.id; });
+  const links = guia.links.map(l => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.rotulo)}</a>`).join(" · ");
+  $("rodape").innerHTML = `<p>${esc(guia.fonte)}${links ? " " + links + "." : ""} Imagens de campeões, runas e itens da Riot Games. Site de fã, sem ligação com a Riot.</p>`;
+}
+
+function matches(c) {
+  const t = q.value.trim().toLowerCase();
+  if (t && !c.hay.includes(t)) return false;
+  const grupos = {};
+  filtros.filter(f => ativos.has(f.id)).forEach(f => (grupos[f.grupo] = grupos[f.grupo] || []).push(f));
+  return Object.values(grupos).every(fs => fs.some(f => f.teste(c)));
+}
+
+function renderLista() {
+  shown = guia.lista.filter(matches);
+  lista.innerHTML = shown.map(c => {
+    const marca = guia.formato === "simples"
+      ? (c.guia ? '<span class="ponto" aria-hidden="true"></span>' : "")
+      : (c.dificuldade.overall ? `<span class="nivel" aria-hidden="true">${c.dificuldade.overall}</span>` : "");
+    const extra = guia.formato === "simples" ? (c.guia ? ", no guia" : "") : (c.dificuldade.overall ? `, dificuldade ${c.dificuldade.overall} de 5` : "");
+    return `<button type="button" class="pick" data-id="${c.slug}" data-ini="${esc(c.nome.charAt(0))}" aria-current="${c === current}" title="${esc(c.nome)}">
+      <img src="${sq(c.id)}" alt="" width="56" height="56" loading="lazy">${marca}<span class="sr">${esc(c.nome)}${extra}</span></button>`;
+  }).join("");
+  $("vazio").hidden = shown.length > 0;
+  $("contagem").textContent = `${shown.length}/${guia.lista.length}`;
+}
+
+function vizinhos(passos) {
+  const list = shown.includes(current) ? shown : guia.lista;
+  const i = list.indexOf(current), n = list.length;
+  return passos.map(p => list[((i + p) % n + n) % n]);
+}
+
+/* ---------- Formato simples (planilha do Akshan) ---------- */
+const ICON = [
+  [/^pta$/i, "PTA", "runa"], [/^electro$/i, "Electro", "runa"],
+  [/^impacto repentino$/i, "Impacto repentino", "runa"], [/^osso revestido$/i, "Osso revestido", "runa"],
+  [/^inspira/i, "Inspiração", "runa"], [/^precis/i, "Precisão", "runa"],
+  [/^ignite$/i, "Ignite"], [/^tp$/i, "TP"], [/^exhaust$/i, "Exhaust"],
+  [/^mercs/i, "Mercs"], [/^tabis?/i, "Tabis"], [/^rapidez$/i, "Rapidez"], [/^craquen$/i, "Craquen"],
+];
+function opt(raw) {
+  const rush = /rush/i.test(raw);
+  const word = raw.replace(/rush/i, "").replace(/!+/g, "").trim();
+  const hit = ICON.find(([re]) => re.test(word));
+  const label = rush ? word.charAt(0) + word.slice(1).toLowerCase() : word;
+  const icon = hit ? `<img src="${guia.icones[hit[1]]}" alt="" width="36" height="36">` : '<span class="soquete" aria-hidden="true"></span>';
+  return `<div class="opt${hit && hit[2] ? " " + hit[2] : ""}">${icon}<span>${esc(label)}</span>${rush ? '<span class="rush">rush</span>' : ""}</div>`;
+}
+function slot(label, val) {
+  let body;
+  if (!val) body = '<span class="livre">Sem anotação</span>';
+  else if (/^tanto faz$/i.test(val)) body = '<span class="livre">Tanto faz</span>';
+  else if (/,/.test(val)) body = opt(val);
+  else body = val.split(/\s*\/\s*/).map(opt).join("");
+  return `<div class="slot"><dt>${label}</dt><dd>${body}</dd></div>`;
+}
+const KW = /(?<![\wÀ-ÿ])(lvl ?\d+|press|skirmish|roam(?:ing)?|gank|stat check|outscale|free kill|free lane|100 0|side ?lane|late ?game|early)(?![\wÀ-ÿ])/gi;
+const marca = line => esc(line).replace(KW, m => `<span class="kw">${m}</span>`);
+
+/* ---------- Formato completo (runas, itens, dificuldade e seções) ---------- */
+const TITULOS = { "Enemy Cooldowns": "Cooldowns do inimigo", "Early Game": "Early game", "How to trade": "Como trocar", "What to watch out for": "Cuidado com", "Tips": "Dicas", "Mini Rant": "Desabafo" };
+const KW_EN = /\b(level \d+|lvl \d+)\b/gi;
+const marcaEn = t => esc(t).replace(KW_EN, m => `<span class="kw">${m}</span>`);
+const pips = n => `<span class="pips" aria-hidden="true">${[1, 2, 3, 4, 5].map(i => `<i${i <= n ? ' class="on"' : ""}></i>`).join("")}</span>`;
+const peca = (p, runa) => `<span class="peca${runa ? " runa" : ""}">${p.icone ? `<img src="${p.icone}" alt="" width="32" height="32">` : '<span class="soquete" aria-hidden="true"></span>'}<span>${esc(p.nome)}</span></span>`;
+
+function linhaItem(l) {
+  if (l.tipo === "sep") return '<li class="sep" aria-hidden="true"></li>';
+  if (l.tipo === "rotulo") return `<li class="sub">${esc(l.texto)}</li>`;
+  if (l.tipo === "nota") return `<li class="nota">${esc(l.texto)}</li>`;
+  const passos = l.passos.map(alts => alts.map(p => peca(p)).join('<span class="ou">ou</span>')).join(SETA_PASSO);
+  return `<li><div class="pecas">${passos}</div>${l.motivo ? `<p class="motivo">${esc(l.motivo)}</p>` : ""}</li>`;
+}
+
+function setupCompleto(c) {
+  const runas = c.runas.map((bloco, i) => (i ? '<p class="ou-bloco">ou</p>' : "") + bloco.map(l => l.rotulo === "Fragmentos"
+    ? `<div class="linha-runa"><span class="rot">${esc(l.rotulo)}</span><p class="frag">${l.pecas.map(p => esc(p.nome)).join(" · ")}</p></div>`
+    : `<div class="linha-runa"><span class="rot">${esc(l.rotulo)}</span><div class="pecas">${l.pecas.map(p => peca(p, true)).join("")}</div></div>`).join("")).join("");
+  const itens = c.itens.map(g => `<div class="grupo">${g.rotulo && g.rotulo !== "Items vs." ? `<p class="cond" lang="en">${esc(g.rotulo)}</p>` : ""}<ol lang="en">${g.linhas.map(linhaItem).join("")}</ol></div>`).join("");
+  const dif = [["early", "Early"], ["mid", "Mid"], ["late", "Late"], ["overall", "Geral"]]
+    .map(([k, r]) => `<div><dt>${r}</dt><dd aria-label="${c.dificuldade[k] ?? "sem nota"} de 5">${pips(c.dificuldade[k])}<b>${c.dificuldade[k] ?? "–"}/5</b></dd></div>`).join("");
+  return `<div class="setup-completo">
+    <section class="bloco"><h3>Runas</h3>${runas || '<p class="livre">Sem anotação</p>'}</section>
+    <section class="bloco build"><h3>Itens</h3>${itens || '<p class="livre">Sem anotação</p>'}</section>
+    <section class="bloco dif"><h3>Dificuldade</h3><dl>${dif}</dl></section>
+  </div>`;
+}
+
+function blocoTexto(b) {
+  if (b.tipo === "tabela") return `<table class="cds"><tbody>${b.linhas.map(([k, v]) => `<tr><th scope="row">${esc(k)}</th><td>${esc(v)}</td></tr>`).join("")}</tbody></table>`;
+  if (b.tipo === "lista") return `<ul>${b.itens.map(t => `<li>${marcaEn(t)}</li>`).join("")}</ul>`;
+  return `<p>${marcaEn(b.texto)}</p>`;
+}
+function notasCompleto(c) {
+  const resumo = c.tldr.length ? `<section class="resumo"><h3>Resumo</h3><ul>${c.tldr.map(t => `<li>${esc(t)}</li>`).join("")}</ul></section>` : "";
+  return `<div class="secoes" lang="en">${resumo}${c.secoes.map(s => `<section class="secao">${s.titulo ? `<h3 lang="pt-BR">${esc(TITULOS[s.titulo] || s.titulo)}</h3>` : ""}${s.blocos.map(blocoTexto).join("")}</section>`).join("")}</div>`;
+}
+
+/* ---------- Detalhe do matchup ---------- */
+function renderDetalhe(animar) {
+  const c = current, eu = guia.campeao;
+  $("artEle").innerHTML = `<img src="${arte(c.id)}" alt="Arte de ${esc(c.nome)}">`;
+  $("eleNome").textContent = c.nome;
+  $("eleNome").classList.toggle("longo", c.nome.length > 9);
+  $("eleTitulo").textContent = c.titulo;
+  const alvo = $("alvo");
+  if (animar !== false && !semMovimento()) { alvo.classList.remove("travando"); void alvo.getBoundingClientRect(); alvo.classList.add("travando"); }
+  $("titulo").textContent = `${eu.nome} contra ${c.nome}`;
+  const g = $("guia");
+  if (guia.formato === "simples") {
+    g.className = "guia" + (c.guia ? " sim" : "");
+    g.innerHTML = "<i></i>" + (c.guia ? "Já está no guia" : "Ainda fora do guia");
+  } else {
+    g.className = "guia";
+    g.innerHTML = c.dificuldade.overall ? `${pips(c.dificuldade.overall)}Dificuldade ${c.dificuldade.overall}/5` : "";
+  }
+  $("travarNome").textContent = "contra " + c.nome;
+  if (guia.formato === "simples") {
+    $("carga").innerHTML = `<dl class="carga">${slot("Runa", c.runa) + slot("Secundária", c.sec) + slot("Feitiço", c.spell) + slot("Bota", c.bota) + slot("Build", c.build)}</dl>`;
+    $("linhas").innerHTML = `<ol class="lembretes">${c.linhas.map(l => `<li><span>${marca(l)}</span></li>`).join("")}</ol>`;
+  } else {
+    $("carga").innerHTML = setupCompleto(c);
+    $("linhas").innerHTML = notasCompleto(c);
+  }
+  const [p, n] = vizinhos([-1, 1]);
+  $("ant").innerHTML = `${SETA_E}<img src="${sq(p.id)}" alt="" width="24" height="24"><span class="lbl">${esc(p.nome)}</span>`;
+  $("ant").setAttribute("aria-label", "Anterior: " + p.nome);
+  $("prox").innerHTML = `<span class="lbl">${esc(n.nome)}</span><img src="${sq(n.id)}" alt="" width="24" height="24">${SETA_D}`;
+  $("prox").setAttribute("aria-label", "Próximo: " + n.nome);
+  [p, n].forEach(x => { const im = new Image(); im.src = arte(x.id); });
+  lista.querySelectorAll(".pick").forEach(b => b.setAttribute("aria-current", b.dataset.id === c.slug));
+  document.title = `${eu.nome} vs ${c.nome}`;
+}
+
+function select(c) {
+  if (!c || c === current) return;
+  current = c;
+  renderDetalhe();
+  marcaHash();
+  const tile = lista.querySelector(`[data-id="${c.slug}"]`);
+  if (tile) tile.scrollIntoView({ block: "nearest", inline: "nearest" });
+}
+
+// Travar o pick: as duas artes se encontram no meio e a página desce até o setup.
+let fechaTrava;
+function travar() {
+  const t = $("trava");
+  const desce = () => $("st").parentElement.scrollIntoView({ behavior: semMovimento() ? "auto" : "smooth", block: "start" });
+  if (semMovimento()) { desce(); return; }
+  t.innerHTML = `<figure class="eu"><img src="${arte(guia.campeao.id)}" alt=""><figcaption>${esc(guia.campeao.nome)}</figcaption></figure>
+    <figure class="ele"><img src="${arte(current.id)}" alt=""><figcaption>${esc(current.nome)}</figcaption></figure><span class="vs">VS</span>`;
+  t.hidden = false; t.classList.remove("on"); void t.offsetWidth; t.classList.add("on");
+  const fecha = () => { clearTimeout(fechaTrava); t.hidden = true; t.classList.remove("on"); t.onclick = null; desce(); };
+  fechaTrava = setTimeout(fecha, 1500);
+  t.onclick = fecha;
+}
+
+/* ---------- Menu de guias ---------- */
+function abreMenu(abrir) {
+  $("menuGuias").hidden = !abrir;
+  $("trocar").setAttribute("aria-expanded", abrir);
+  if (abrir) { const b = $("menuLista").querySelector('[aria-current="true"]') || $("menuLista").querySelector("button"); if (b) b.focus(); }
+}
+$("trocar").addEventListener("click", () => abreMenu($("menuGuias").hidden));
+$("menuLista").addEventListener("click", e => {
+  const b = e.target.closest("[data-guia]");
+  if (!b) return;
+  abreMenu(false);
+  if (b.dataset.guia !== guia.id) { escolheGuia(b.dataset.guia); scrollTo({ top: 0 }); }
+  $("trocar").focus();
+});
+document.addEventListener("click", e => { if (!$("menuGuias").hidden && !e.target.closest(".guias")) abreMenu(false); });
+
+/* ---------- Tema ---------- */
+function marcaTema() {
+  $("tema").setAttribute("aria-label", raiz.dataset.tema === "claro" ? "Usar tema escuro" : "Usar tema claro");
+}
+$("tema").addEventListener("click", () => {
+  const claro = raiz.dataset.tema !== "claro";
+  if (claro) raiz.dataset.tema = "claro"; else delete raiz.dataset.tema;
+  try { localStorage.setItem("tema", claro ? "claro" : "escuro"); } catch (e) {}
+  marcaTema();
+});
+marcaTema();
+
+/* ---------- Eventos ---------- */
+lista.addEventListener("click", e => {
+  const b = e.target.closest(".pick");
+  if (b) select(guia.lista.find(c => c.slug === b.dataset.id));
+});
+q.addEventListener("input", () => { renderLista(); if (shown.length === 1) select(shown[0]); });
+$("filtros").addEventListener("click", e => {
+  const b = e.target.closest(".chip");
+  if (!b) return;
+  const f = b.dataset.f;
+  ativos.has(f) ? ativos.delete(f) : ativos.add(f);
+  b.setAttribute("aria-pressed", ativos.has(f));
+  renderLista();
+});
+$("limpar").addEventListener("click", () => {
+  q.value = ""; ativos.clear();
+  document.querySelectorAll(".chip").forEach(b => b.setAttribute("aria-pressed", "false"));
+  renderLista();
+  q.focus();
+});
+$("travar").addEventListener("click", travar);
+$("ant").addEventListener("click", () => select(vizinhos([-1])[0]));
+$("prox").addEventListener("click", () => select(vizinhos([1])[0]));
+document.addEventListener("keydown", e => {
+  if (e.altKey || e.ctrlKey || e.metaKey) return;
+  if (!$("trava").hidden) { if (e.key === "Escape" || e.key === "Enter") { e.preventDefault(); $("trava").onclick(); } return; }
+  if (!$("menuGuias").hidden) { if (e.key === "Escape") { abreMenu(false); $("trocar").focus(); } return; }
+  if (e.key === "/" && document.activeElement !== q) { e.preventDefault(); q.focus(); return; }
+  if (document.activeElement === q) {
+    if (e.key === "Enter" && shown[0]) { select(shown[0]); q.blur(); }
+    if (e.key === "Escape") { q.value = ""; renderLista(); q.blur(); }
+    return;
+  }
+  if (e.target.closest && e.target.closest("input, textarea, select")) return;
+  if (e.key === "ArrowRight") select(vizinhos([1])[0]);
+  if (e.key === "ArrowLeft") select(vizinhos([-1])[0]);
+});
+
+/* ---------- Começo: link com guia (#mordekaiser/aatrox), link antigo do Akshan (#ahri) ou o último guia usado ---------- */
+function lerHash() {
+  const [a, b] = decodeURIComponent(location.hash.slice(1)).split("/");
+  if (GUIAS.some(g => g.id === a)) return [a, b];
+  if (a) return [GUIAS[0].id, a];
+  let ultimo = null;
+  try { ultimo = localStorage.getItem("guia"); } catch (e) {}
+  return [ultimo, null];
+}
+addEventListener("hashchange", () => {
+  const [g, i] = lerHash();
+  if (g === guia.id && i === current.slug) return;
+  if (g === guia.id) select(guia.lista.find(c => c.slug === i)); else escolheGuia(g, i);
+});
+escolheGuia(...lerHash());
+</script>
+
+</body>
+</html>

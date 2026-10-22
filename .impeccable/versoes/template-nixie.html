@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#090d16">
+<title>Akshan Mid Matchups</title>
+<style>
+/*FONTS*/
+/* Válvula Nixie: tudo existe ao mesmo tempo como fantasma apagado atrás de uma malha de bronze; só o matchup escolhido acende. */
+:root {
+  --tinta: #090d16;
+  --tinta-alta: #101726;
+  --fio: 150, 112, 64;
+  --osso: #ece3d3;
+  --osso-baixo: #a79f92;
+  --catodo: #ff7a1c;
+  --catodo-quente: #ffb46b;
+  --fantasma: rgba(255, 122, 28, .2);
+  --brilho: 0 0 1px #ffd9b0, 0 0 10px rgba(255, 122, 28, .7), 0 0 30px rgba(255, 90, 10, .4);
+  --brilho-baixo: 0 0 8px rgba(255, 122, 28, .45);
+  --malha: repeating-linear-gradient(0deg, rgba(var(--fio), .22) 0 1px, transparent 1px 4px), repeating-linear-gradient(90deg, rgba(var(--fio), .22) 0 1px, transparent 1px 4px);
+  --malha-leve: repeating-linear-gradient(0deg, rgba(var(--fio), .09) 0 1px, transparent 1px 4px), repeating-linear-gradient(90deg, rgba(var(--fio), .09) 0 1px, transparent 1px 4px);
+  --malha-densa: repeating-linear-gradient(0deg, rgba(9, 13, 22, .6) 0 1px, transparent 1px 3px), repeating-linear-gradient(90deg, rgba(9, 13, 22, .6) 0 1px, transparent 1px 3px);
+  --malha-acesa: repeating-linear-gradient(0deg, rgba(9, 13, 22, .32) 0 1px, transparent 1px 4px), repeating-linear-gradient(90deg, rgba(9, 13, 22, .32) 0 1px, transparent 1px 4px);
+  --display: "Big Shoulders Display", "Arial Narrow", sans-serif;
+  --texto: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --barra: 64px;
+  --borda: max(16px, env(safe-area-inset-left, 0px));
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scrollbar-color: rgba(var(--fio), .6) var(--tinta); }
+body {
+  margin: 0; background: var(--tinta); color: var(--osso);
+  font: 400 16px/1.6 var(--texto); -webkit-font-smoothing: antialiased;
+}
+::selection { background: var(--catodo); color: var(--tinta); }
+input { caret-color: var(--catodo); }
+button { font: inherit; color: inherit; }
+img { display: block; }
+img.falhou { visibility: hidden; }
+:focus-visible { outline: 2px solid var(--catodo-quente); outline-offset: 3px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+
+/* Barra */
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--tinta); }
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--malha-leve), var(--tinta); }
+.bar-in {
+  height: var(--barra); max-width: 1320px; margin: 0 auto; padding: 0 var(--borda);
+  display: flex; align-items: center; gap: 20px;
+}
+.marca { display: flex; align-items: center; gap: 12px; min-height: 44px; min-width: 0; color: var(--osso); text-decoration: none; }
+.marca img { width: 34px; height: 34px; border-radius: 50%; filter: saturate(.6) brightness(.85); }
+.marca b { font: 800 22px/1 var(--display); letter-spacing: .04em; text-transform: uppercase; color: var(--catodo-quente); }
+.marca span { font-size: 14px; color: var(--osso-baixo); white-space: nowrap; }
+.busca {
+  margin-left: auto; flex: 0 1 340px; min-width: 0; height: 44px; display: flex; align-items: center; gap: 10px;
+  padding: 0 14px; border-radius: 4px; background: var(--tinta); box-shadow: inset 0 0 0 1px var(--fantasma); color: var(--osso-baixo);
+}
+.busca:focus-within { box-shadow: inset 0 0 0 1px var(--catodo), 0 0 14px rgba(255, 122, 28, .25); color: var(--catodo-quente); }
+.busca input { flex: 1; min-width: 0; height: 100%; border: 0; outline: 0; background: transparent; color: var(--osso); font: 16px var(--texto); }
+.busca input::placeholder { color: var(--osso-baixo); }
+.busca input::-webkit-search-cancel-button { filter: sepia(1) saturate(4) hue-rotate(-20deg); }
+.busca kbd { font: 700 13px var(--display); color: var(--osso-baixo); padding: 0 6px; box-shadow: inset 0 0 0 1px var(--fantasma); border-radius: 3px; }
+
+/* Corpo */
+.casco {
+  max-width: 1320px; margin: 0 auto; padding: 0 var(--borda);
+  display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 40px; align-items: start;
+}
+
+/* Índice */
+.indice {
+  position: sticky; top: calc(env(safe-area-inset-top, 0px) + var(--barra));
+  max-height: calc(100vh - var(--barra) - env(safe-area-inset-top, 0px));
+  overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin;
+  padding: 20px 6px 32px; margin-inline: -6px;
+}
+.filtros { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+.chip {
+  height: 44px; padding: 0 14px; border: 0; border-radius: 4px; cursor: pointer; background: transparent;
+  box-shadow: inset 0 0 0 1px var(--fantasma); color: var(--osso-baixo);
+  font: 700 16px/1 var(--display); letter-spacing: .06em; text-transform: uppercase;
+  display: inline-flex; align-items: center; gap: 8px;
+}
+.chip img { width: 20px; height: 20px; border-radius: 3px; filter: grayscale(1) brightness(.75); }
+.chip:hover { color: var(--osso); box-shadow: inset 0 0 0 1px rgba(255, 122, 28, .45); }
+.chip[aria-pressed="true"] { color: var(--tinta); background: var(--malha-acesa), var(--catodo); box-shadow: 0 0 18px rgba(255, 122, 28, .35); }
+.chip[aria-pressed="true"] img { filter: none; }
+.contagem { margin: 0 0 14px; font-size: 14px; color: var(--osso-baixo); font-variant-numeric: tabular-nums; }
+.contagem b { font: 800 18px var(--display); color: var(--catodo-quente); }
+.lista { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px 8px; }
+.pick { position: relative; display: grid; justify-items: center; gap: 6px; padding: 4px 0; border: 0; background: none; cursor: pointer; color: var(--osso-baixo); min-width: 0; }
+.face { position: relative; width: 100%; max-width: 60px; aspect-ratio: 1; border-radius: 6px; background: var(--tinta-alta); }
+.face img { width: 100%; height: 100%; border-radius: 6px; object-fit: cover; filter: grayscale(.85) brightness(.5) contrast(1.1); }
+.face::before { content: ""; position: absolute; inset: 0; z-index: 1; border-radius: 6px; background: var(--malha); pointer-events: none; }
+.face:has(img.falhou)::after { content: attr(data-ini); position: absolute; inset: 0; display: grid; place-items: center; font: 800 26px var(--display); color: var(--osso-baixo); }
+.ponto { position: absolute; z-index: 2; right: -4px; bottom: -4px; width: 9px; height: 9px; border-radius: 50%; background: var(--catodo); box-shadow: 0 0 0 3px var(--tinta), 0 0 8px var(--catodo); }
+.nm { font: 700 14px/1.1 var(--display); letter-spacing: .01em; text-transform: uppercase; text-align: center; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pick:hover { color: var(--osso); }
+.pick:hover .face img { filter: grayscale(.3) brightness(.8); }
+.pick[aria-current="true"] { color: var(--catodo-quente); }
+.pick[aria-current="true"] .nm { text-shadow: var(--brilho-baixo); }
+.pick[aria-current="true"] .face { box-shadow: 0 0 0 2px var(--tinta), 0 0 0 3px var(--catodo), 0 0 18px rgba(255, 122, 28, .45); }
+.pick[aria-current="true"] .face img { filter: none; }
+.pick[aria-current="true"] .face::before { opacity: .35; }
+.pick:focus-visible { outline: none; }
+.pick:focus-visible .face { box-shadow: 0 0 0 2px var(--tinta), 0 0 0 4px var(--osso); }
+.vazio { margin: 4px 0 0; font-size: 15px; color: var(--osso-baixo); }
+.vazio button { min-height: 44px; padding: 0; border: 0; background: none; cursor: pointer; color: var(--catodo-quente); text-decoration: underline; text-underline-offset: 4px; }
+
+/* Duelo */
+.detalhe { padding: 20px 0 64px; min-width: 0; }
+.duelo { position: relative; aspect-ratio: 2.15 / 1; overflow: hidden; border-radius: 6px; background: var(--tinta-alta); isolation: isolate; }
+.lado { position: absolute; top: 0; bottom: 0; }
+.lado img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; }
+.lado.eu { left: 0; width: 46%; }
+.lado.eu img { filter: saturate(.55) brightness(.55); }
+.lado.ele { right: 0; width: 72%; -webkit-mask-image: linear-gradient(to right, transparent, #000 26%); mask-image: linear-gradient(to right, transparent, #000 26%); }
+/* A malha fica na frente de tudo, inclusive do nome aceso; a faixa de malha densa dá leitura ao texto sem lavar a splash. */
+.duelo::before { content: ""; position: absolute; inset: 0; z-index: 4; background: var(--malha); pointer-events: none; }
+.duelo::after { content: ""; position: absolute; z-index: 1; right: 0; bottom: 0; width: 80%; height: 56%; background: var(--malha-densa); pointer-events: none; -webkit-mask-image: radial-gradient(130% 100% at 100% 100%, #000 45%, transparent 100%); mask-image: radial-gradient(130% 100% at 100% 100%, #000 45%, transparent 100%); }
+.titulo { position: absolute; inset: 0; margin: 0; pointer-events: none; font-weight: 400; }
+.eu-nome, .contra, .ele-titulo { z-index: 5; text-shadow: 0 1px 2px rgba(9, 13, 22, .95), 0 2px 12px rgba(9, 13, 22, .85); }
+.eu-nome { position: absolute; left: 24px; top: 20px; font: 800 20px/1 var(--display); letter-spacing: .08em; text-transform: uppercase; color: var(--osso); }
+.contra { position: absolute; left: 24px; top: 46px; font: 500 15px/1 var(--display); letter-spacing: .16em; text-transform: uppercase; color: var(--osso-baixo); }
+.ele-nome, .fantasma, .rastro {
+  position: absolute; right: 24px; bottom: 58px; max-width: calc(100% - 48px);
+  font: 900 clamp(56px, 8.4vw, 124px)/.82 var(--display); letter-spacing: .01em; text-transform: uppercase; text-align: right;
+  overflow-wrap: anywhere;
+}
+.ele-nome { z-index: 3; color: var(--catodo-quente); text-shadow: var(--brilho), 0 4px 28px rgba(9, 13, 22, .7); }
+/* Vizinhos aninhados no mesmo cátodo: recortados à caixa do nome aceso, aparecem entre os traços dele. */
+#fantasmas { position: absolute; z-index: 2; overflow: hidden; pointer-events: none; }
+.fantasma { color: transparent; -webkit-text-stroke: 1.5px rgba(255, 140, 60, .4); }
+#fantasmas .fantasma { right: 0; bottom: 0; max-width: none; white-space: nowrap; overflow-wrap: normal; }
+.fantasma:nth-child(2) { -webkit-text-stroke-color: rgba(255, 140, 60, .26); }
+.fantasma:nth-child(3) { -webkit-text-stroke-color: rgba(255, 140, 60, .16); }
+.fantasma:nth-child(4) { -webkit-text-stroke-color: rgba(255, 140, 60, .09); }
+.rastro { z-index: 3; color: transparent; text-shadow: 0 0 14px rgba(255, 110, 20, .8); pointer-events: none; opacity: 0; }
+.rastro.decai { animation: decai .45s cubic-bezier(.2, .7, .3, 1) both; }
+@keyframes decai { from { opacity: 1; } to { opacity: 0; filter: blur(4px); } }
+.ele-titulo { position: absolute; right: 24px; bottom: 22px; margin: 0; max-width: calc(100% - 48px); text-align: right; font-size: 15px; color: var(--osso); }
+
+/* Estado e navegação */
+.estado { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 18px 0; }
+.guia { display: inline-flex; align-items: center; gap: 10px; font: 700 17px var(--display); letter-spacing: .06em; text-transform: uppercase; color: var(--osso-baixo); }
+.guia i { width: 10px; height: 10px; border-radius: 50%; box-shadow: inset 0 0 0 1px rgba(255, 140, 60, .4); }
+.guia.sim { color: var(--catodo-quente); text-shadow: var(--brilho-baixo); }
+.guia.sim i { background: var(--catodo); box-shadow: 0 0 8px var(--catodo); }
+.navega { display: flex; gap: 8px; }
+.navega button {
+  height: 44px; padding: 0 14px; display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+  border: 0; border-radius: 4px; background: transparent; box-shadow: inset 0 0 0 1px var(--fantasma); color: var(--osso);
+  font: 700 16px var(--display); letter-spacing: .05em; text-transform: uppercase;
+}
+.navega button:hover { box-shadow: inset 0 0 0 1px var(--catodo); color: var(--catodo-quente); }
+.navega img { width: 24px; height: 24px; border-radius: 3px; filter: grayscale(.6) brightness(.8); }
+.navega svg { flex: none; }
+
+/* Carga */
+.carga { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0 24px; margin: 0; padding: 20px 22px 22px; border-radius: 6px; background: var(--malha-leve); }
+.slot { min-width: 0; }
+.slot dt { margin-bottom: 12px; font: 700 15px var(--display); letter-spacing: .14em; text-transform: uppercase; color: var(--osso-baixo); }
+.slot dd { margin: 0; display: grid; gap: 10px; }
+.opt { display: flex; align-items: center; gap: 10px; min-width: 0; font-weight: 700; font-size: 16px; line-height: 1.2; color: var(--osso); }
+.opt img { width: 32px; height: 32px; flex: none; border-radius: 4px; background: var(--tinta-alta); }
+.opt.runa img { border-radius: 50%; }
+.soquete { width: 32px; height: 32px; flex: none; border-radius: 4px; background: var(--malha-leve); box-shadow: inset 0 0 0 1px rgba(var(--fio), .45); }
+.opt span { min-width: 0; overflow-wrap: anywhere; }
+.opt .rush { font: 800 13px/1 var(--display); letter-spacing: .1em; text-transform: uppercase; color: var(--catodo-quente); padding: 3px 6px; box-shadow: inset 0 0 0 1px var(--catodo); border-radius: 3px; }
+.livre { font-style: italic; color: var(--osso-baixo); }
+
+/* Lembretes */
+.notas { padding-top: 40px; }
+.notas h2, .dicio h2 { margin: 0 0 18px; font: 800 26px/1 var(--display); letter-spacing: .06em; text-transform: uppercase; color: var(--catodo-quente); }
+.notas ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; max-width: 70ch; counter-reset: n; }
+.notas li { position: relative; isolation: isolate; display: grid; grid-template-columns: 40px minmax(0, 1fr); font-size: 17.5px; line-height: 1.65; counter-increment: n; }
+.notas li::before, .notas li::after { font: 800 34px/1 var(--display); font-variant-numeric: tabular-nums; }
+.notas li::before { content: counter(n); color: var(--catodo-quente); text-shadow: var(--brilho-baixo); }
+.notas li::after { content: "8"; position: absolute; left: 0; top: 0; z-index: -1; color: transparent; -webkit-text-stroke: 1px rgba(255, 140, 60, .24); background: var(--malha-leve); }
+.kw { font-weight: 700; color: var(--osso); text-decoration: underline; text-decoration-color: var(--catodo); text-decoration-thickness: 2px; text-underline-offset: 5px; }
+
+/* Como ler a planilha */
+.dicio { margin-top: 96px; }
+.dicio dl { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 20px 32px; margin: 0; }
+.dicio dt { font: 800 19px/1.1 var(--display); letter-spacing: .05em; text-transform: uppercase; color: var(--osso); }
+.dicio dd { margin: 4px 0 0; font-size: 15px; color: var(--osso-baixo); }
+.rodape { margin: 40px 0 0; font-size: 14px; color: var(--osso-baixo); max-width: 70ch; }
+
+@media (max-width: 900px) {
+  :root { --barra: 60px; }
+  .marca span, .busca kbd { display: none; }
+  .busca { flex: 1 1 auto; }
+  .casco { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .indice { position: static; max-height: none; overflow: visible; padding: 12px 0 0; margin: 0; }
+  .filtros { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin: 0 calc(var(--borda) * -1) 10px; padding: 4px var(--borda); }
+  .filtros::-webkit-scrollbar, .lista::-webkit-scrollbar { display: none; }
+  .chip { flex: none; }
+  .contagem { margin-bottom: 8px; }
+  .lista {
+    grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 64px; gap: 10px;
+    overflow-x: auto; scrollbar-width: none; scroll-snap-type: x proximity; margin: 0 calc(var(--borda) * -1); padding: 6px var(--borda) 8px;
+  }
+  .pick { scroll-snap-align: start; }
+  .nm { font-size: 14px; }
+  .detalhe { padding-top: 14px; }
+  .duelo { aspect-ratio: 1.15 / 1; }
+  .lado.eu { width: 52%; }
+  .lado.ele { width: 82%; }
+  .ele-nome, .fantasma, .rastro { right: 16px; bottom: 50px; max-width: calc(100% - 32px); font-size: clamp(44px, 14vw, 88px); }
+  .fantasma:nth-child(n+3) { display: none; }
+  .ele-titulo { right: 16px; bottom: 18px; font-size: 14px; }
+  .eu-nome, .contra { left: 16px; }
+  .eu-nome { top: 16px; }
+  .contra { top: 40px; }
+  .carga { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 18px; padding: 18px 16px; }
+  .slot:last-child { grid-column: 1 / -1; }
+  .notas li { font-size: 16.5px; grid-template-columns: 34px minmax(0, 1fr); }
+  .dicio { margin-top: 72px; }
+}
+@media (max-width: 520px) {
+  .marca b { display: none; }
+  .navega .lbl { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rastro.decai { animation: none; }
+}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="bar-in">
+    <a class="marca" href="#" aria-label="Akshan, matchups do mid">
+      <img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Akshan.png" alt="" width="34" height="34">
+      <b>Akshan · mid</b><span>matchups pelas notas do Peteruso</span>
+    </a>
+    <label class="busca" for="q">
+      <svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M11 11l3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <input id="q" type="search" placeholder="Campeão ou palavra das notas" autocomplete="off" spellcheck="false" aria-label="Procurar matchup">
+      <kbd aria-hidden="true">/</kbd>
+    </label>
+  </div>
+</header>
+
+<div class="casco">
+  <nav class="indice" aria-label="Escolher campeão">
+    <div class="filtros" role="group" aria-label="Filtros">
+      <button class="chip" type="button" data-f="guia" aria-pressed="false">No guia</button>
+      <button class="chip" type="button" data-f="Ignite" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/spell/SummonerDot.png" alt="" width="20" height="20">Ignite</button>
+      <button class="chip" type="button" data-f="TP" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/spell/SummonerTeleport.png" alt="" width="20" height="20">TP</button>
+      <button class="chip" type="button" data-f="Exhaust" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/spell/SummonerExhaust.png" alt="" width="20" height="20">Exhaust</button>
+      <button class="chip" type="button" data-f="Electro" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/Electrocute/Electrocute.png" alt="" width="20" height="20">Electro</button>
+    </div>
+    <p class="contagem" id="contagem"></p>
+    <div class="lista" id="lista"></div>
+    <p class="vazio" id="vazio" hidden>Nenhum campeão com essa busca. <button type="button" id="limpar">Limpar busca e filtros</button></p>
+  </nav>
+
+  <main class="detalhe">
+    <section class="duelo" id="duelo" aria-labelledby="titulo">
+      <div class="lado eu"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/centered/Akshan_0.jpg" alt="Splash art do Akshan"></div>
+      <div class="lado ele" id="ladoEle"></div>
+      <div id="fantasmas" aria-hidden="true"></div>
+      <span class="rastro" id="rastro" aria-hidden="true"></span>
+      <h1 class="titulo" id="titulo"><span class="eu-nome">Akshan</span> <span class="contra">contra</span> <span class="ele-nome" id="eleNome"></span></h1>
+      <p class="ele-titulo" id="eleTitulo"></p>
+    </section>
+    <p class="sr" id="anuncio" aria-live="polite"></p>
+
+    <div class="estado">
+      <span class="guia" id="guia"></span>
+      <div class="navega">
+        <button type="button" id="ant"></button>
+        <button type="button" id="prox"></button>
+      </div>
+    </div>
+
+    <dl class="carga" id="carga"></dl>
+
+    <section class="notas" aria-labelledby="nt">
+      <h2 id="nt">Lembrete</h2>
+      <ol id="linhas"></ol>
+    </section>
+
+    <section class="dicio" aria-labelledby="dt">
+      <h2 id="dt">Como ler a planilha</h2>
+      <dl>
+        <div><dt>Arpel</dt><dd>O E do Akshan, a corda que gira em volta da parede. Fuga, engage e mindgame.</dd></div>
+        <div><dt>Bumerangue</dt><dd>O Q. Acertar alguém com ele ajuda a ganhar o escudo da passiva.</dd></div>
+        <div><dt>PTA e Electro</dt><dd>Pressione o Ataque e Eletrocutar, as duas runas principais da planilha.</dd></div>
+        <div><dt>Osso</dt><dd>Osso Revestido, runa de Determinação para lanes de muito burst.</dd></div>
+        <div><dt>Craquen</dt><dd>Mata-Cráquens, a build que troca de lugar com o crit.</dd></div>
+        <div><dt>Press</dt><dd>Prioridade de lane: quem empurra a wave e chega antes no rio.</dd></div>
+        <div><dt>Skirmish</dt><dd>Luta pequena, 2v2 ou 3v3, normalmente no rio.</dd></div>
+        <div><dt>Stat check</dt><dd>Quando o outro ganha a troca só por ter mais item ou nível.</dd></div>
+        <div><dt>Outscale</dt><dd>Ficar mais forte que você no fim do jogo.</dd></div>
+        <div><dt>100 0</dt><dd>Matar de vida cheia num combo só.</dd></div>
+      </dl>
+      <p class="rodape">Notas da planilha "Akshan Matchups - Peteruso". Imagens de campeões, runas e itens da Riot Games. Site de fã, sem ligação com a Riot.</p>
+    </section>
+  </main>
+</div>
+
+<script>
+const ROWS = /*ROWS*/;
+
+const META = /*META*/;
+
+const slug = s => s.toLowerCase().replace(/['’]/g, "").replace(/\s+/g, "-");
+const esc = s => s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const DD = "https://ddragon.leagueoflegends.com/cdn/", VER = "16.20.1";
+const art = n => `${DD}img/champion/centered/${META.champs[n].id}_0.jpg`;
+const sq = n => `${DD}${VER}/img/champion/${META.champs[n].id}.png`;
+
+const CHAMPS = ROWS.map(([name, runa, sec, spell, bota, build, notes, guia]) => ({
+  name, runa, sec, spell, bota, build, guia: !!guia, id: slug(name), title: META.champs[name].title,
+  lines: notes.split("\n").map(l => l.trim().replace(/\s{2,}/g, " ")).filter(Boolean),
+  hay: (name + " " + notes).toLowerCase(),
+}));
+
+// Palavras da planilha que ganham ícone do jogo.
+const ICON = [
+  [/^pta$/i, "PTA", "runa"], [/^electro$/i, "Electro", "runa"],
+  [/^impacto repentino$/i, "Impacto repentino", "runa"], [/^osso revestido$/i, "Osso revestido", "runa"],
+  [/^inspira/i, "Inspiração", "runa"], [/^precis/i, "Precisão", "runa"],
+  [/^ignite$/i, "Ignite"], [/^tp$/i, "TP"], [/^exhaust$/i, "Exhaust"],
+  [/^mercs/i, "Mercs"], [/^tabis?/i, "Tabis"], [/^rapidez$/i, "Rapidez"], [/^craquen$/i, "Craquen"],
+];
+
+function opt(raw) {
+  const rush = /rush/i.test(raw);
+  const word = raw.replace(/rush/i, "").replace(/!+/g, "").trim();
+  const hit = ICON.find(([re]) => re.test(word));
+  const label = rush ? word.charAt(0) + word.slice(1).toLowerCase() : word;
+  const icon = hit ? `<img src="${META.icons[hit[1]]}" alt="" width="32" height="32">` : '<span class="soquete" aria-hidden="true"></span>';
+  return `<div class="opt${hit && hit[2] ? " " + hit[2] : ""}">${icon}<span>${esc(label)}</span>${rush ? '<span class="rush">rush</span>' : ""}</div>`;
+}
+
+function slot(label, val) {
+  let body;
+  if (!val) body = '<span class="livre">Sem anotação</span>';
+  else if (/^tanto faz$/i.test(val)) body = '<span class="livre">Tanto faz</span>';
+  else if (/,/.test(val)) body = opt(val);
+  else body = val.split(/\s*\/\s*/).map(opt).join("");
+  return `<div class="slot"><dt>${label}</dt><dd>${body}</dd></div>`;
+}
+
+const KW = /(?<![\wÀ-ÿ])(lvl ?\d+|press|skirmish|roam(?:ing)?|gank|stat check|outscale|free kill|free lane|100 0|side ?lane|late ?game|early)(?![\wÀ-ÿ])/gi;
+const mark = line => esc(line).replace(KW, m => `<span class="kw">${m}</span>`);
+const SETA_E = '<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M9 2L4 7l5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+const SETA_D = '<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M5 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+// Toda imagem que falhar (inclusive as criadas depois pelo JS) some, e volta se outra carregar no lugar.
+document.addEventListener("error", e => { if (e.target.tagName === "IMG") e.target.classList.add("falhou"); }, true);
+document.addEventListener("load", e => { if (e.target.tagName === "IMG") e.target.classList.remove("falhou"); }, true);
+
+const $ = id => document.getElementById(id);
+const lista = $("lista"), q = $("q");
+const filters = new Set();
+let current = CHAMPS[0], shown = CHAMPS;
+
+function matches(c) {
+  const t = q.value.trim().toLowerCase();
+  if (t && !c.hay.includes(t)) return false;
+  for (const f of filters) {
+    if (f === "guia" && !c.guia) return false;
+    if (f === "Electro" && !/electro/i.test(c.runa)) return false;
+    if (["Ignite", "TP", "Exhaust"].includes(f) && c.spell !== f) return false;
+  }
+  return true;
+}
+
+function renderLista() {
+  shown = CHAMPS.filter(matches);
+  lista.innerHTML = shown.map(c => `
+    <button type="button" class="pick" data-id="${c.id}" aria-current="${c === current}" title="${esc(c.name)}">
+      <span class="face" data-ini="${esc(c.name.charAt(0))}"><img src="${sq(c.name)}" alt="" width="60" height="60" loading="lazy">${c.guia ? '<span class="ponto" aria-hidden="true"></span>' : ""}</span>
+      <span class="nm">${esc(c.name)}</span>${c.guia ? '<span class="sr">, no guia</span>' : ""}
+    </button>`).join("");
+  $("vazio").hidden = shown.length > 0;
+  const g = CHAMPS.filter(c => c.guia).length;
+  $("contagem").innerHTML = shown.length === CHAMPS.length
+    ? `<b>${CHAMPS.length}</b> matchups, <b>${g}</b> já no guia`
+    : `<b>${shown.length}</b> de ${CHAMPS.length} matchups`;
+}
+
+function vizinhos(passos) {
+  const list = shown.includes(current) ? shown : CHAMPS;
+  const i = list.indexOf(current), n = list.length;
+  return passos.map(p => list[((i + p) % n + n) % n]);
+}
+
+function renderDetalhe(acender) {
+  const c = current;
+  const nome = $("eleNome");
+  if (acender && nome.textContent && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const r = $("rastro");
+    r.textContent = nome.textContent;
+    r.classList.remove("decai"); void r.offsetWidth; r.classList.add("decai");
+  }
+  $("ladoEle").innerHTML = `<img src="${art(c.name)}" alt="Splash art de ${esc(c.name)}">`;
+  nome.textContent = c.name;
+  $("eleTitulo").textContent = c.title;
+  $("fantasmas").innerHTML = vizinhos([1, -1, 2, -2]).map(x => `<span class="fantasma">${esc(x.name)}</span>`).join("");
+  encaixaFantasmas();
+  const g = $("guia");
+  g.className = "guia" + (c.guia ? " sim" : "");
+  g.innerHTML = "<i></i>" + (c.guia ? "Matchup já está no guia" : "Ainda fora do guia");
+  $("carga").innerHTML = slot("Runa", c.runa) + slot("Secundária", c.sec) + slot("Feitiço", c.spell) + slot("Bota", c.bota) + slot("Build", c.build);
+  $("linhas").innerHTML = c.lines.map(l => `<li><span>${mark(l)}</span></li>`).join("");
+  const [p, n] = vizinhos([-1, 1]);
+  $("ant").innerHTML = `${SETA_E}<img src="${sq(p.name)}" alt="" width="24" height="24"><span class="lbl">${esc(p.name)}</span>`;
+  $("ant").setAttribute("aria-label", "Anterior: " + p.name);
+  $("prox").innerHTML = `<span class="lbl">${esc(n.name)}</span><img src="${sq(n.name)}" alt="" width="24" height="24">${SETA_D}`;
+  $("prox").setAttribute("aria-label", "Próximo: " + n.name);
+  [p, n].forEach(x => { const im = new Image(); im.src = art(x.name); });
+  lista.querySelectorAll(".pick").forEach(b => b.setAttribute("aria-current", b.dataset.id === c.id));
+  document.title = "Akshan vs " + c.name;
+  if (acender) $("anuncio").textContent = `Akshan contra ${c.name}. ${c.guia ? "Matchup já está no guia." : "Ainda fora do guia."}`;
+}
+
+// A caixa dos fantasmas acompanha a do nome aceso.
+function encaixaFantasmas() {
+  const f = $("fantasmas"), n = $("eleNome");
+  Object.assign(f.style, { left: n.offsetLeft + "px", top: n.offsetTop + "px", width: n.offsetWidth + "px", height: n.offsetHeight + "px" });
+}
+
+function select(c, opts = {}) {
+  if (!c || c === current) return;
+  current = c;
+  renderDetalhe(true);
+  try { history.replaceState(null, "", "#" + c.id); } catch (e) {}
+  const tile = lista.querySelector(`[data-id="${c.id}"]`);
+  if (tile) tile.scrollIntoView({ block: "nearest", inline: "nearest" });
+  if (opts.reveal && matchMedia("(max-width: 900px)").matches) {
+    const duelo = $("duelo"), top = duelo.getBoundingClientRect().top;
+    const y = top + scrollY - 72;
+    if (top < 0 || top > innerHeight * .5) scrollTo({ top: y, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+  }
+}
+
+lista.addEventListener("click", e => {
+  const b = e.target.closest(".pick");
+  if (b) select(CHAMPS.find(c => c.id === b.dataset.id), { reveal: true });
+});
+q.addEventListener("input", () => { renderLista(); if (shown.length === 1) select(shown[0]); });
+document.querySelectorAll(".chip").forEach(b => b.addEventListener("click", () => {
+  const f = b.dataset.f;
+  filters.has(f) ? filters.delete(f) : filters.add(f);
+  b.setAttribute("aria-pressed", filters.has(f));
+  renderLista();
+}));
+$("limpar").addEventListener("click", () => {
+  q.value = ""; filters.clear();
+  document.querySelectorAll(".chip").forEach(b => b.setAttribute("aria-pressed", "false"));
+  renderLista();
+  q.focus();
+});
+$("ant").addEventListener("click", () => select(vizinhos([-1])[0]));
+$("prox").addEventListener("click", () => select(vizinhos([1])[0]));
+document.addEventListener("keydown", e => {
+  if (e.altKey || e.ctrlKey || e.metaKey) return;
+  if (e.key === "/" && document.activeElement !== q) { e.preventDefault(); q.focus(); return; }
+  if (document.activeElement === q) {
+    if (e.key === "Enter" && shown[0]) { select(shown[0], { reveal: true }); q.blur(); }
+    if (e.key === "Escape") { q.value = ""; renderLista(); q.blur(); }
+    return;
+  }
+  if (e.target.closest && e.target.closest("input, textarea, select")) return;
+  if (e.key === "ArrowRight") select(vizinhos([1])[0]);
+  if (e.key === "ArrowLeft") select(vizinhos([-1])[0]);
+});
+
+current = CHAMPS.find(c => c.id === location.hash.slice(1)) || CHAMPS[0];
+renderLista();
+renderDetalhe(false);
+addEventListener("resize", encaixaFantasmas);
+if (document.fonts) document.fonts.ready.then(encaixaFantasmas);
+</script>
+
+</body>
+</html>

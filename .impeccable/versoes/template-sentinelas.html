@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Akshan Mid Matchups</title>
+<script>try { const t = localStorage.getItem("tema"); if (t === "claro") document.documentElement.dataset.tema = t; } catch (e) {}</script>
+<style>
+/*FONTS*/
+/* Sentinelas da Luz: preto quente, ouro, amarelo e branco. A tela imita a seleção de campeões: você, o anel com os inimigos e o inimigo. */
+:root {
+  --fundo: #0c0b09;
+  --painel: #15130f;
+  --painel-alto: #1e1a13;
+  --linha: rgba(214, 178, 98, .26);
+  --linha-forte: rgba(214, 178, 98, .55);
+  --ouro: #d6b262;
+  --ouro-vivo: #f2d488;
+  --amarelo: #ffd96b;
+  --branco: #fbf6ea;
+  --texto: #e9e1cd;
+  --texto-baixo: #a99f88;
+  --tinta-botao: #17130a;
+  --luz: rgba(255, 228, 150, .16);
+  --sombra: 0 10px 30px rgba(0, 0, 0, .45);
+  --titulo: "Cinzel", "Times New Roman", serif;
+  --corpo: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --barra: 64px;
+  --borda: max(16px, env(safe-area-inset-left, 0px));
+  color-scheme: dark;
+}
+:root[data-tema="claro"] {
+  --fundo: #f6f0e1;
+  --painel: #fffcf4;
+  --painel-alto: #efe5cd;
+  --linha: rgba(150, 112, 30, .28);
+  --linha-forte: rgba(150, 112, 30, .6);
+  --ouro: #8a6416;
+  --ouro-vivo: #6f4e0c;
+  --amarelo: #e3b23c;
+  --branco: #ffffff;
+  --texto: #2a2316;
+  --texto-baixo: #66593f;
+  --tinta-botao: #1d1608;
+  --luz: rgba(227, 178, 60, .18);
+  --sombra: 0 10px 30px rgba(90, 64, 10, .14);
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scrollbar-color: var(--linha-forte) var(--fundo); }
+body {
+  margin: 0; color: var(--texto); font: 400 16px/1.6 var(--corpo); -webkit-font-smoothing: antialiased;
+  background: var(--fundo);
+}
+/* A luz das Sentinelas vem de cima, numa camada própria atrás de tudo. */
+body::after { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; background: radial-gradient(1100px 520px at 50% -120px, var(--luz), transparent 70%); }
+::selection { background: var(--amarelo); color: var(--tinta-botao); }
+input { caret-color: var(--ouro); }
+button { font: inherit; color: inherit; }
+img { display: block; }
+img.falhou { visibility: hidden; }
+:focus-visible { outline: 2px solid var(--ouro-vivo); outline-offset: 3px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+
+/* Barra */
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 20; background: var(--fundo); }
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: color-mix(in oklab, var(--fundo) 90%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 1px solid var(--linha); }
+.bar-in { height: var(--barra); max-width: 1320px; margin: 0 auto; padding: 0 var(--borda); display: flex; align-items: center; gap: 16px; }
+.marca { display: flex; align-items: center; gap: 12px; min-height: 44px; min-width: 0; color: var(--texto); text-decoration: none; }
+.marca img { width: 36px; height: 36px; border-radius: 50%; box-shadow: 0 0 0 2px var(--ouro); }
+.marca b { font: 700 21px/1 var(--titulo); letter-spacing: .04em; color: var(--ouro-vivo); white-space: nowrap; }
+.marca span { font-size: 14px; color: var(--texto-baixo); white-space: nowrap; }
+.tema { margin-left: auto; width: 44px; height: 44px; flex: none; display: grid; place-items: center; cursor: pointer; border-radius: 50%; border: 1px solid var(--linha-forte); background: transparent; color: var(--ouro-vivo); }
+.tema:hover { background: var(--painel-alto); }
+.tema .sol { display: none; }
+:root[data-tema="claro"] .tema .sol { display: block; }
+:root[data-tema="claro"] .tema .lua { display: none; }
+
+/* Palco: você, o anel e o inimigo */
+.palco {
+  max-width: 1320px; margin: 0 auto; padding: 24px var(--borda) 0;
+  display: grid; gap: 20px; grid-template-columns: 280px minmax(0, 1fr) 280px;
+  grid-template-areas: "voce anel inimigo" "voce anel trava" "setup setup setup";
+  grid-template-rows: auto 1fr auto;
+  align-items: start;
+}
+.duelo { display: contents; }
+.card { position: relative; overflow: hidden; border-radius: 10px; background: var(--painel); border: 1px solid var(--linha-forte); box-shadow: var(--sombra); aspect-ratio: 308 / 560; }
+.card.voce { grid-area: voce; }
+.card.inimigo { grid-area: inimigo; }
+.card img { width: 100%; height: 100%; object-fit: cover; }
+#artEle { position: absolute; inset: 0; }
+.card::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(to top, rgba(10, 8, 4, .92) 0%, rgba(10, 8, 4, .55) 26%, transparent 48%); }
+.card .selo { position: absolute; z-index: 2; top: 12px; left: 12px; padding: 3px 10px; border-radius: 4px; font: 700 12px/1.4 var(--titulo); letter-spacing: .12em; text-transform: uppercase; background: var(--amarelo); color: var(--tinta-botao); }
+.card.inimigo .selo { left: auto; right: 12px; background: #fbf6ea; color: #17130a; }
+.card .quem { position: absolute; z-index: 2; left: 0; right: 0; bottom: 0; padding: 0 16px 16px; color: #fbf6ea; }
+.card.inimigo .quem { text-align: right; }
+.quem .t { margin: 4px 0 0; font-size: 14px; line-height: 1.3; color: #e6dcc3; }
+.quem .n { margin: 0; font: 800 clamp(26px, 2.6vw, 34px)/1.05 var(--titulo); letter-spacing: .02em; color: #ffe6a3; overflow-wrap: anywhere; text-wrap: balance; }
+.quem .guia { display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; font-size: 14px; color: #e6dcc3; }
+.quem .guia.sim { color: #ffd96b; }
+.quem .guia i { width: 9px; height: 9px; border-radius: 50%; box-shadow: inset 0 0 0 1.5px currentColor; }
+.quem .guia.sim i { background: currentColor; }
+
+/* Botão de travar */
+.travar {
+  grid-area: trava; width: 100%; min-height: 56px; padding: 8px 16px; border: 0; border-radius: 10px; cursor: pointer;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+  font: 800 19px/1 var(--titulo); letter-spacing: .1em; text-transform: uppercase; color: #17130a;
+  background: linear-gradient(180deg, #ffe7a1, #e2b24a); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .6), 0 6px 18px rgba(0, 0, 0, .35);
+}
+.travar small { font: 600 13px var(--corpo); letter-spacing: .02em; text-transform: none; }
+.travar:hover { filter: brightness(1.06); }
+.travar:active { transform: translateY(1px); }
+
+/* Anel */
+.anel { grid-area: anel; min-width: 0; padding: 18px 20px 24px; border-radius: 12px; background: var(--painel); border: 1px solid var(--linha); }
+.anel h2 { display: flex; align-items: center; justify-content: center; gap: 12px; margin: 0 0 14px; font: 700 22px/1.2 var(--titulo); letter-spacing: .14em; text-transform: uppercase; color: var(--ouro-vivo); text-align: center; }
+.anel h2 svg { flex: none; color: var(--ouro); }
+.busca { display: flex; align-items: center; gap: 10px; height: 46px; padding: 0 14px; border-radius: 8px; background: var(--fundo); border: 1px solid var(--linha-forte); color: var(--texto-baixo); }
+.busca:focus-within { border-color: var(--ouro-vivo); color: var(--ouro-vivo); }
+.busca input { flex: 1; min-width: 0; height: 100%; border: 0; outline: 0; background: transparent; color: var(--texto); font: 16px var(--corpo); }
+.busca input::placeholder { color: var(--texto-baixo); }
+.busca .conta { font: 700 13px var(--corpo); color: var(--ouro); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.filtros { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin: 12px 0 4px; }
+.chip {
+  min-height: 44px; padding: 0 14px; border-radius: 999px; cursor: pointer; display: inline-flex; align-items: center; gap: 7px;
+  background: transparent; border: 1px solid var(--linha-forte); color: var(--texto); font: 600 14px var(--corpo);
+}
+.chip img { width: 20px; height: 20px; border-radius: 4px; }
+.chip:hover { border-color: var(--ouro-vivo); }
+.chip[aria-pressed="true"] { background: var(--amarelo); border-color: var(--amarelo); color: var(--tinta-botao); }
+.roda { position: relative; width: min(100%, 520px); aspect-ratio: 1; margin: 14px auto 0; border-radius: 50%; }
+/* Mira da Punição (R do Akshan), como no jogo: losango que trava no alvo, círculo por dentro e setas laterais apontando para o centro. */
+.mira { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
+.mira .aro { fill: none; stroke: var(--ouro); stroke-width: 1.5px; }
+.mira .aro.fino { stroke-width: 1px; opacity: .45; }
+.mira .setas { fill: var(--ouro-vivo); }
+.alvo { position: absolute; z-index: 1; left: 50%; top: 9%; width: 74%; aspect-ratio: 1; transform: translateX(-50%); overflow: visible; pointer-events: none; filter: drop-shadow(0 0 4px rgba(255, 214, 120, .75)) drop-shadow(0 1px 3px rgba(0, 0, 0, .6)); }
+.alvo .losango { fill: none; stroke: #ffe39a; stroke-width: 3.5px; }
+.alvo .aro-alvo { fill: none; stroke: #fff4d6; stroke-width: 1px; opacity: .6; }
+.alvo .setas-alvo { fill: #fff4d6; opacity: .85; }
+.alvo.travando { animation: trava-alvo .5s cubic-bezier(.16, 1, .3, 1) both; }
+@keyframes trava-alvo { from { opacity: 0; transform: translateX(-50%) scale(1.35); } }
+.lista {
+  position: absolute; inset: 16% 16% 9%; overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--ouro) transparent;
+  -webkit-mask-image: linear-gradient(to bottom, #000 78%, transparent); mask-image: linear-gradient(to bottom, #000 78%, transparent);
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(52px, 1fr)); gap: 12px; align-content: start; padding: 12px 12px 28px;
+}
+.pick { position: relative; aspect-ratio: 1; padding: 0; border: 1px solid var(--linha-forte); border-radius: 6px; cursor: pointer; background: var(--painel-alto); }
+.pick img { width: 100%; height: 100%; border-radius: 5px; object-fit: cover; }
+.pick:has(img.falhou)::after { content: attr(data-ini); position: absolute; inset: 0; display: grid; place-items: center; font: 700 20px var(--titulo); color: var(--texto-baixo); }
+.pick .ponto { position: absolute; z-index: 1; top: 3px; right: 3px; width: 8px; height: 8px; border-radius: 50%; background: var(--amarelo); box-shadow: 0 0 0 2px var(--painel); }
+.pick:hover { border-color: var(--ouro-vivo); }
+.pick[aria-current="true"] { border: 2px solid var(--amarelo); }
+.pick[aria-current="true"]::before { content: ""; position: absolute; z-index: 2; inset: -6px; border: 2px solid var(--amarelo); transform: rotate(45deg) scale(.78); pointer-events: none; }
+.pick:focus-visible { outline-offset: 2px; }
+.vazio { position: absolute; inset: 30% 18%; margin: 0; display: grid; place-content: center; gap: 8px; text-align: center; font-size: 15px; color: var(--texto-baixo); }
+.vazio button { min-height: 44px; border: 0; background: none; cursor: pointer; color: var(--ouro-vivo); font-weight: 700; text-decoration: underline; text-underline-offset: 4px; }
+
+/* Setup */
+.setup { grid-area: setup; scroll-margin-top: calc(var(--barra) + 16px); margin: 0; padding: 18px 22px; border-radius: 12px; background: var(--painel); border: 1px solid var(--linha); }
+.setup h2 { margin: 0 0 14px; font: 700 16px var(--titulo); letter-spacing: .14em; text-transform: uppercase; color: var(--ouro-vivo); }
+.carga { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px 24px; margin: 0; }
+.slot { min-width: 0; }
+.slot dt { margin-bottom: 10px; font: 600 12px var(--corpo); letter-spacing: .14em; text-transform: uppercase; color: var(--texto-baixo); }
+.slot dd { margin: 0; display: grid; gap: 10px; }
+.opt { display: flex; align-items: center; gap: 10px; min-width: 0; font-weight: 700; font-size: 16px; line-height: 1.2; color: var(--texto); }
+.opt img { width: 36px; height: 36px; flex: none; border-radius: 6px; border: 1px solid var(--linha-forte); background: var(--painel-alto); }
+.opt.runa img { border-radius: 50%; background: #15130f; }
+.opt span { min-width: 0; overflow-wrap: anywhere; }
+.soquete { width: 36px; height: 36px; flex: none; display: grid; place-items: center; border-radius: 6px; border: 1px solid var(--linha-forte); background: var(--painel-alto); }
+.soquete::before { content: ""; width: 12px; height: 2px; border-radius: 1px; background: var(--ouro); opacity: .7; }
+.opt .rush { font: 700 11px/1 var(--titulo); letter-spacing: .1em; text-transform: uppercase; padding: 4px 7px; border-radius: 4px; background: var(--amarelo); color: var(--tinta-botao); }
+.livre { font-style: italic; color: var(--texto-baixo); }
+
+/* Guia */
+.guia-txt { max-width: 1320px; margin: 0 auto; padding: 40px var(--borda) 72px; }
+.notas, .dicio { max-width: 820px; margin: 0 auto; }
+.navega { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 22px; }
+.navega h2, .dicio h2 { margin: 0; font: 700 28px/1.2 var(--titulo); letter-spacing: .06em; color: var(--ouro-vivo); }
+.navega div { display: flex; gap: 8px; }
+.navega button { min-height: 44px; padding: 0 14px; display: inline-flex; align-items: center; gap: 8px; cursor: pointer; border-radius: 8px; border: 1px solid var(--linha-forte); background: var(--painel); color: var(--texto); font-weight: 600; font-size: 15px; }
+.navega button:hover { border-color: var(--ouro-vivo); }
+.navega img { width: 24px; height: 24px; border-radius: 4px; }
+.notas ol { margin: 0; padding: 0; list-style: none; display: grid; gap: 14px; counter-reset: n; }
+.notas li { display: grid; grid-template-columns: 44px minmax(0, 1fr); align-items: start; padding: 16px 18px; border-radius: 10px; background: var(--painel); border: 1px solid var(--linha); font-size: 17.5px; line-height: 1.65; counter-increment: n; }
+.notas li::before { content: counter(n); width: 30px; height: 30px; margin-top: 1px; display: grid; place-items: center; border-radius: 50%; background: var(--amarelo); color: var(--tinta-botao); font: 800 15px/1 var(--titulo); }
+.kw { font-weight: 700; color: var(--texto); text-decoration: underline; text-decoration-color: var(--amarelo); text-decoration-thickness: 2px; text-underline-offset: 5px; }
+.dicio { margin-top: 64px; }
+.dicio h2 { margin-bottom: 20px; }
+.dicio dl { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 20px 32px; margin: 0; }
+.dicio dt { font: 700 17px var(--titulo); letter-spacing: .04em; color: var(--texto); }
+.dicio dd { margin: 4px 0 0; font-size: 15px; color: var(--texto-baixo); }
+.rodape { margin: 44px 0 0; font-size: 14px; color: var(--texto-baixo); }
+
+/* Pick travado: as duas artes frente a frente, como a tela de carregamento */
+.trava { position: fixed; inset: 0; z-index: 30; display: grid; grid-template-columns: 1fr 1fr; align-items: center; justify-items: center; gap: 4vw; padding: 6vh 6vw; background: rgba(8, 6, 3, .9); cursor: pointer; }
+.trava::before { content: ""; position: absolute; left: 50%; top: 50%; width: 60vmin; height: 60vmin; transform: translate(-50%, -50%); border-radius: 50%; background: radial-gradient(circle, rgba(255, 240, 200, .55), rgba(255, 210, 110, .18) 40%, transparent 70%); pointer-events: none; }
+.trava figure { position: relative; margin: 0; width: min(100%, 34vh); aspect-ratio: 308 / 560; border-radius: 10px; overflow: hidden; border: 2px solid #d6b262; box-shadow: 0 18px 50px rgba(0, 0, 0, .6); }
+.trava img { width: 100%; height: 100%; object-fit: cover; }
+.trava figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 10px 12px; text-align: center; font: 800 clamp(18px, 3vh, 28px)/1.1 var(--titulo); color: #ffe6a3; background: linear-gradient(transparent, rgba(10, 8, 4, .9)); }
+.trava .vs { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font: 800 clamp(28px, 6vh, 56px)/1 var(--titulo); color: #fff4d6; letter-spacing: .08em; }
+.trava.on .eu { animation: entra-e .7s cubic-bezier(.16, 1, .3, 1) both; }
+.trava.on .ele { animation: entra-d .7s cubic-bezier(.16, 1, .3, 1) both; }
+.trava.on .vs, .trava.on::before { animation: brilha .9s .25s cubic-bezier(.16, 1, .3, 1) both; }
+@keyframes entra-e { from { transform: translateX(-30vw); opacity: 0; } }
+@keyframes entra-d { from { transform: translateX(30vw); opacity: 0; } }
+@keyframes brilha { from { opacity: 0; transform: translate(-50%, -50%) scale(.6); } }
+
+@media (max-width: 1100px) {
+  .palco { grid-template-columns: 220px minmax(0, 1fr) 220px; }
+  .carga { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 900px) {
+  :root { --barra: 60px; }
+  .marca span { display: none; }
+  .palco { padding-top: 14px; gap: 14px; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-areas: "anel anel" "voce inimigo" "trava trava" "setup setup"; grid-template-rows: none; }
+  .anel { padding: 14px 12px 16px; }
+  .anel h2 { font-size: 18px; }
+  .filtros { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; scrollbar-width: none; margin-inline: -12px; padding: 4px 12px; }
+  .filtros::-webkit-scrollbar { display: none; }
+  .chip { flex: none; }
+  .lista { inset: 15% 15% 8%; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 11px; }
+  .quem .n { font-size: 22px; }
+  .quem .t { font-size: 13px; }
+  .card .quem { padding: 0 10px 12px; }
+  .carga { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .slot:last-child { grid-column: 1 / -1; }
+  .setup { padding: 16px; }
+  .guia-txt { padding-top: 32px; }
+  .navega h2, .dicio h2 { font-size: 23px; }
+  .notas li { font-size: 16.5px; grid-template-columns: 40px minmax(0, 1fr); padding: 14px; }
+}
+@media (max-width: 520px) {
+  .marca b { font-size: 18px; }
+  .navega .lbl { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .trava.on .eu, .trava.on .ele, .trava.on .vs, .trava.on::before { animation: none; }
+}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="bar-in">
+    <a class="marca" href="#" aria-label="Akshan mid, matchups">
+      <img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/champion/Akshan.png" alt="" width="36" height="36">
+      <b>Akshan Mid</b><span>matchups pelas notas do Peteruso</span>
+    </a>
+    <button class="tema" type="button" id="tema" aria-label="Usar tema claro">
+      <svg class="lua" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+      <svg class="sol" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+  <h1 class="sr" id="titulo">Akshan contra</h1>
+  <div class="palco">
+    <nav class="anel" aria-labelledby="escolhe">
+      <h2 id="escolhe"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1l6 6-6 6-6-6z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>Escolhe o inimigo<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1l6 6-6 6-6-6z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></h2>
+      <label class="busca" for="q">
+        <svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M11 11l3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <input id="q" type="search" placeholder="Campeão ou palavra" autocomplete="off" spellcheck="false" aria-label="Procurar matchup">
+        <span class="conta" id="contagem"></span>
+      </label>
+      <div class="filtros" role="group" aria-label="Filtros">
+        <button class="chip" type="button" data-f="guia" aria-pressed="false">Só com guia</button>
+        <button class="chip" type="button" data-f="Ignite" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/spell/SummonerDot.png" alt="" width="20" height="20">Ignite</button>
+        <button class="chip" type="button" data-f="TP" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/spell/SummonerTeleport.png" alt="" width="20" height="20">TP</button>
+        <button class="chip" type="button" data-f="Exhaust" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/16.20.1/img/spell/SummonerExhaust.png" alt="" width="20" height="20">Exhaust</button>
+        <button class="chip" type="button" data-f="Electro" aria-pressed="false"><img src="https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/Electrocute/Electrocute.png" alt="" width="20" height="20">Electro</button>
+      </div>
+      <div class="roda">
+        <svg class="mira" viewBox="0 0 100 100" aria-hidden="true">
+          <circle class="aro" cx="50" cy="50" r="49" vector-effect="non-scaling-stroke"/>
+          <circle class="aro fino" cx="50" cy="50" r="46.5" vector-effect="non-scaling-stroke"/>
+          <path class="setas" d="M0 44.5L7 50l-7 5.5z M100 44.5L93 50l7 5.5z"/>
+        </svg>
+        <div class="lista" id="lista"></div>
+        <p class="vazio" id="vazio" hidden>Nenhum campeão com essa busca. <button type="button" id="limpar">Limpar busca e filtros</button></p>
+      </div>
+    </nav>
+
+    <section class="duelo" aria-label="Duelo">
+      <article class="card voce">
+        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Akshan_0.jpg" alt="Arte do Akshan">
+        <span class="selo">Você</span>
+        <div class="quem"><p class="n">Akshan</p><p class="t">o Sentinela Rebelde</p></div>
+      </article>
+      <article class="card inimigo" aria-live="polite">
+        <div id="artEle"></div>
+        <svg class="alvo" id="alvo" viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="50" r="30" class="aro-alvo" vector-effect="non-scaling-stroke"/>
+          <polygon points="50,5 95,50 50,95 5,50" class="losango" vector-effect="non-scaling-stroke"/>
+          <path class="setas-alvo" d="M-4 45L3 50l-7 5z M104 45L97 50l7 5z"/>
+        </svg>
+        <span class="selo">Inimigo</span>
+        <div class="quem"><p class="n" id="eleNome"></p><p class="t" id="eleTitulo"></p><span class="guia" id="guia"></span></div>
+      </article>
+    </section>
+
+    <button class="travar" type="button" id="travar">Travar o pick<small id="travarNome"></small></button>
+
+    <section class="setup" aria-labelledby="st">
+      <h2 id="st">Seu setup pro confronto</h2>
+      <dl class="carga" id="carga"></dl>
+    </section>
+  </div>
+
+  <div class="guia-txt">
+    <section class="notas" aria-labelledby="nt">
+      <div class="navega">
+        <h2 id="nt">Lembrete</h2>
+        <div>
+          <button type="button" id="ant"></button>
+          <button type="button" id="prox"></button>
+        </div>
+      </div>
+      <ol id="linhas"></ol>
+    </section>
+
+    <section class="dicio" aria-labelledby="dt">
+      <h2 id="dt">Como ler a planilha</h2>
+      <dl>
+        <div><dt>Arpel</dt><dd>O E do Akshan, a corda que gira em volta da parede. Fuga, engage e mindgame.</dd></div>
+        <div><dt>Bumerangue</dt><dd>O Q. Acertar alguém com ele ajuda a ganhar o escudo da passiva.</dd></div>
+        <div><dt>PTA e Electro</dt><dd>Pressione o Ataque e Eletrocutar, as duas runas principais da planilha.</dd></div>
+        <div><dt>Osso</dt><dd>Osso Revestido, runa de Determinação para lanes de muito burst.</dd></div>
+        <div><dt>Craquen</dt><dd>Mata-Cráquens, a build que troca de lugar com o crit.</dd></div>
+        <div><dt>Press</dt><dd>Prioridade de lane: quem empurra a wave e chega antes no rio.</dd></div>
+        <div><dt>Skirmish</dt><dd>Luta pequena, 2v2 ou 3v3, normalmente no rio.</dd></div>
+        <div><dt>Stat check</dt><dd>Quando o outro ganha a troca só por ter mais item ou nível.</dd></div>
+        <div><dt>Outscale</dt><dd>Ficar mais forte que você no fim do jogo.</dd></div>
+        <div><dt>100 0</dt><dd>Matar de vida cheia num combo só.</dd></div>
+      </dl>
+      <p class="rodape">Notas da planilha "Akshan Matchups - Peteruso". Imagens de campeões, runas e itens da Riot Games. Site de fã, sem ligação com a Riot.</p>
+    </section>
+  </div>
+</main>
+
+<div class="trava" id="trava" hidden aria-hidden="true"></div>
+
+<script>
+const ROWS = /*ROWS*/;
+
+const META = /*META*/;
+
+const slug = s => s.toLowerCase().replace(/['’]/g, "").replace(/\s+/g, "-");
+const esc = s => s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const DD = "https://ddragon.leagueoflegends.com/cdn/", VER = "16.20.1";
+const arte = n => `${DD}img/champion/loading/${META.champs[n].id}_0.jpg`;
+const sq = n => `${DD}${VER}/img/champion/${META.champs[n].id}.png`;
+
+const CHAMPS = ROWS.map(([name, runa, sec, spell, bota, build, notes, guia]) => ({
+  name, runa, sec, spell, bota, build, guia: !!guia, id: slug(name), title: META.champs[name].title,
+  lines: notes.split("\n").map(l => l.trim().replace(/\s{2,}/g, " ")).filter(Boolean),
+  hay: (name + " " + notes).toLowerCase(),
+}));
+
+// Palavras da planilha que ganham ícone do jogo.
+const ICON = [
+  [/^pta$/i, "PTA", "runa"], [/^electro$/i, "Electro", "runa"],
+  [/^impacto repentino$/i, "Impacto repentino", "runa"], [/^osso revestido$/i, "Osso revestido", "runa"],
+  [/^inspira/i, "Inspiração", "runa"], [/^precis/i, "Precisão", "runa"],
+  [/^ignite$/i, "Ignite"], [/^tp$/i, "TP"], [/^exhaust$/i, "Exhaust"],
+  [/^mercs/i, "Mercs"], [/^tabis?/i, "Tabis"], [/^rapidez$/i, "Rapidez"], [/^craquen$/i, "Craquen"],
+];
+
+function opt(raw) {
+  const rush = /rush/i.test(raw);
+  const word = raw.replace(/rush/i, "").replace(/!+/g, "").trim();
+  const hit = ICON.find(([re]) => re.test(word));
+  const label = rush ? word.charAt(0) + word.slice(1).toLowerCase() : word;
+  const icon = hit ? `<img src="${META.icons[hit[1]]}" alt="" width="36" height="36">` : '<span class="soquete" aria-hidden="true"></span>';
+  return `<div class="opt${hit && hit[2] ? " " + hit[2] : ""}">${icon}<span>${esc(label)}</span>${rush ? '<span class="rush">rush</span>' : ""}</div>`;
+}
+
+function slot(label, val) {
+  let body;
+  if (!val) body = '<span class="livre">Sem anotação</span>';
+  else if (/^tanto faz$/i.test(val)) body = '<span class="livre">Tanto faz</span>';
+  else if (/,/.test(val)) body = opt(val);
+  else body = val.split(/\s*\/\s*/).map(opt).join("");
+  return `<div class="slot"><dt>${label}</dt><dd>${body}</dd></div>`;
+}
+
+const KW = /(?<![\wÀ-ÿ])(lvl ?\d+|press|skirmish|roam(?:ing)?|gank|stat check|outscale|free kill|free lane|100 0|side ?lane|late ?game|early)(?![\wÀ-ÿ])/gi;
+const mark = line => esc(line).replace(KW, m => `<span class="kw">${m}</span>`);
+const SETA_E = '<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M9 2L4 7l5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+const SETA_D = '<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M5 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+// Toda imagem que falhar (inclusive as criadas depois pelo JS) some, e volta se outra carregar no lugar.
+document.addEventListener("error", e => { if (e.target.tagName === "IMG") e.target.classList.add("falhou"); }, true);
+document.addEventListener("load", e => { if (e.target.tagName === "IMG") e.target.classList.remove("falhou"); }, true);
+
+const $ = id => document.getElementById(id);
+const lista = $("lista"), q = $("q");
+const filters = new Set();
+const semMovimento = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
+let current = CHAMPS[0], shown = CHAMPS;
+
+// Tema escuro por padrão; o claro fica salvo neste navegador.
+function marcaTema() {
+  const claro = document.documentElement.dataset.tema === "claro";
+  $("tema").setAttribute("aria-label", claro ? "Usar tema escuro" : "Usar tema claro");
+}
+$("tema").addEventListener("click", () => {
+  const claro = document.documentElement.dataset.tema !== "claro";
+  if (claro) document.documentElement.dataset.tema = "claro"; else delete document.documentElement.dataset.tema;
+  try { localStorage.setItem("tema", claro ? "claro" : "escuro"); } catch (e) {}
+  marcaTema();
+});
+marcaTema();
+
+function matches(c) {
+  const t = q.value.trim().toLowerCase();
+  if (t && !c.hay.includes(t)) return false;
+  for (const f of filters) {
+    if (f === "guia" && !c.guia) return false;
+    if (f === "Electro" && !/electro/i.test(c.runa)) return false;
+    if (["Ignite", "TP", "Exhaust"].includes(f) && c.spell !== f) return false;
+  }
+  return true;
+}
+
+function renderLista() {
+  shown = CHAMPS.filter(matches);
+  lista.innerHTML = shown.map(c => `
+    <button type="button" class="pick" data-id="${c.id}" data-ini="${esc(c.name.charAt(0))}" aria-current="${c === current}" title="${esc(c.name)}">
+      <img src="${sq(c.name)}" alt="" width="56" height="56" loading="lazy">${c.guia ? '<span class="ponto" aria-hidden="true"></span>' : ""}
+      <span class="sr">${esc(c.name)}${c.guia ? ", no guia" : ""}</span>
+    </button>`).join("");
+  $("vazio").hidden = shown.length > 0;
+  $("contagem").textContent = `${shown.length}/${CHAMPS.length}`;
+}
+
+function vizinhos(passos) {
+  const list = shown.includes(current) ? shown : CHAMPS;
+  const i = list.indexOf(current), n = list.length;
+  return passos.map(p => list[((i + p) % n + n) % n]);
+}
+
+function renderDetalhe() {
+  const c = current;
+  $("artEle").innerHTML = `<img src="${arte(c.name)}" alt="Arte de ${esc(c.name)}">`;
+  $("eleNome").textContent = c.name;
+  const alvo = $("alvo");
+  if (!semMovimento()) { alvo.classList.remove("travando"); void alvo.getBoundingClientRect(); alvo.classList.add("travando"); }
+  $("eleTitulo").textContent = c.title;
+  $("titulo").textContent = "Akshan contra " + c.name;
+  const g = $("guia");
+  g.className = "guia" + (c.guia ? " sim" : "");
+  g.innerHTML = "<i></i>" + (c.guia ? "Já está no guia" : "Ainda fora do guia");
+  $("travarNome").textContent = "contra " + c.name;
+  $("carga").innerHTML = slot("Runa", c.runa) + slot("Secundária", c.sec) + slot("Feitiço", c.spell) + slot("Bota", c.bota) + slot("Build", c.build);
+  $("linhas").innerHTML = c.lines.map(l => `<li><span>${mark(l)}</span></li>`).join("");
+  const [p, n] = vizinhos([-1, 1]);
+  $("ant").innerHTML = `${SETA_E}<img src="${sq(p.name)}" alt="" width="24" height="24"><span class="lbl">${esc(p.name)}</span>`;
+  $("ant").setAttribute("aria-label", "Anterior: " + p.name);
+  $("prox").innerHTML = `<span class="lbl">${esc(n.name)}</span><img src="${sq(n.name)}" alt="" width="24" height="24">${SETA_D}`;
+  $("prox").setAttribute("aria-label", "Próximo: " + n.name);
+  [p, n].forEach(x => { const im = new Image(); im.src = arte(x.name); });
+  lista.querySelectorAll(".pick").forEach(b => b.setAttribute("aria-current", b.dataset.id === c.id));
+  document.title = "Akshan vs " + c.name;
+}
+
+function select(c) {
+  if (!c || c === current) return;
+  current = c;
+  renderDetalhe();
+  try { history.replaceState(null, "", "#" + c.id); } catch (e) {}
+  const tile = lista.querySelector(`[data-id="${c.id}"]`);
+  if (tile) tile.scrollIntoView({ block: "nearest", inline: "nearest" });
+}
+
+// Travar o pick: as duas artes se encontram no meio e a página desce até o setup.
+let fechaTrava;
+function travar() {
+  const t = $("trava");
+  const desce = () => $("st").parentElement.scrollIntoView({ behavior: semMovimento() ? "auto" : "smooth", block: "start" });
+  if (semMovimento()) { desce(); return; }
+  t.innerHTML = `<figure class="eu"><img src="${arte("Akshan")}" alt=""><figcaption>Akshan</figcaption></figure>
+    <figure class="ele"><img src="${arte(current.name)}" alt=""><figcaption>${esc(current.name)}</figcaption></figure><span class="vs">VS</span>`;
+  t.hidden = false; t.classList.remove("on"); void t.offsetWidth; t.classList.add("on");
+  const fecha = () => { clearTimeout(fechaTrava); t.hidden = true; t.classList.remove("on"); t.onclick = null; desce(); };
+  fechaTrava = setTimeout(fecha, 1500);
+  t.onclick = fecha;
+}
+
+lista.addEventListener("click", e => {
+  const b = e.target.closest(".pick");
+  if (b) select(CHAMPS.find(c => c.id === b.dataset.id));
+});
+q.addEventListener("input", () => { renderLista(); if (shown.length === 1) select(shown[0]); });
+document.querySelectorAll(".chip").forEach(b => b.addEventListener("click", () => {
+  const f = b.dataset.f;
+  filters.has(f) ? filters.delete(f) : filters.add(f);
+  b.setAttribute("aria-pressed", filters.has(f));
+  renderLista();
+}));
+$("limpar").addEventListener("click", () => {
+  q.value = ""; filters.clear();
+  document.querySelectorAll(".chip").forEach(b => b.setAttribute("aria-pressed", "false"));
+  renderLista();
+  q.focus();
+});
+$("travar").addEventListener("click", travar);
+$("ant").addEventListener("click", () => select(vizinhos([-1])[0]));
+$("prox").addEventListener("click", () => select(vizinhos([1])[0]));
+document.addEventListener("keydown", e => {
+  if (e.altKey || e.ctrlKey || e.metaKey) return;
+  if (!$("trava").hidden) { if (e.key === "Escape" || e.key === "Enter") { e.preventDefault(); $("trava").onclick(); } return; }
+  if (e.key === "/" && document.activeElement !== q) { e.preventDefault(); q.focus(); return; }
+  if (document.activeElement === q) {
+    if (e.key === "Enter" && shown[0]) { select(shown[0]); q.blur(); }
+    if (e.key === "Escape") { q.value = ""; renderLista(); q.blur(); }
+    return;
+  }
+  if (e.target.closest && e.target.closest("input, textarea, select")) return;
+  if (e.key === "ArrowRight") select(vizinhos([1])[0]);
+  if (e.key === "ArrowLeft") select(vizinhos([-1])[0]);
+});
+
+current = CHAMPS.find(c => c.id === location.hash.slice(1)) || CHAMPS[0];
+renderLista();
+renderDetalhe();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,211 @@
+{
+  "champs": {
+    "Akshan": {
+      "id": "Akshan",
+      "title": "o Sentinela Rebelde"
+    },
+    "Ahri": {
+      "id": "Ahri",
+      "title": "a Raposa de Nove Caudas"
+    },
+    "Akali": {
+      "id": "Akali",
+      "title": "a Assassina Renegada"
+    },
+    "Anivia": {
+      "id": "Anivia",
+      "title": "a Criofênix"
+    },
+    "Annie": {
+      "id": "Annie",
+      "title": "a Criança Sombria"
+    },
+    "Aurelion Sol": {
+      "id": "AurelionSol",
+      "title": "o Forjador de Estrelas"
+    },
+    "Aurora": {
+      "id": "Aurora",
+      "title": "a Bruxa Entre Mundos"
+    },
+    "Azir": {
+      "id": "Azir",
+      "title": "o Imperador das Areias"
+    },
+    "Brand": {
+      "id": "Brand",
+      "title": "a Vingança Flamejante"
+    },
+    "Cassiopeia": {
+      "id": "Cassiopeia",
+      "title": "o Abraço da Serpente"
+    },
+    "Diana": {
+      "id": "Diana",
+      "title": "o Escárnio da Lua"
+    },
+    "Ekko": {
+      "id": "Ekko",
+      "title": "o Rapaz que Estilhaçou o Tempo"
+    },
+    "Fizz": {
+      "id": "Fizz",
+      "title": "o Trapaceiro das Marés"
+    },
+    "Galio": {
+      "id": "Galio",
+      "title": "o Colosso"
+    },
+    "Hwei": {
+      "id": "Hwei",
+      "title": "o Visionário"
+    },
+    "Irelia": {
+      "id": "Irelia",
+      "title": "a Dançarina das Lâminas"
+    },
+    "Jayce": {
+      "id": "Jayce",
+      "title": "o Defensor do Amanhã"
+    },
+    "Kassadin": {
+      "id": "Kassadin",
+      "title": "o Andarilho do Vazio"
+    },
+    "Katarina": {
+      "id": "Katarina",
+      "title": "a Lâmina Sinistra"
+    },
+    "Kayle": {
+      "id": "Kayle",
+      "title": "a Justa"
+    },
+    "Kog'Maw": {
+      "id": "KogMaw",
+      "title": "a Boca do Abismo"
+    },
+    "LeBlanc": {
+      "id": "Leblanc",
+      "title": "a Farsante"
+    },
+    "Lissandra": {
+      "id": "Lissandra",
+      "title": "a Bruxa Gélida"
+    },
+    "Locke": {
+      "id": "Locke",
+      "title": "o Exorcista das Cinzas"
+    },
+    "Lux": {
+      "id": "Lux",
+      "title": "a Dama da Luz"
+    },
+    "Malzahar": {
+      "id": "Malzahar",
+      "title": "o Profeta do Vazio"
+    },
+    "Mel": {
+      "id": "Mel",
+      "title": "o Reflexo da Alma"
+    },
+    "Naafiri": {
+      "id": "Naafiri",
+      "title": "Fera das Cem Mordidas"
+    },
+    "Orianna": {
+      "id": "Orianna",
+      "title": "a Donzela Mecânica"
+    },
+    "Pantheon": {
+      "id": "Pantheon",
+      "title": "a Lança Indestrutível"
+    },
+    "Qiyana": {
+      "id": "Qiyana",
+      "title": "a Imperatriz dos Elementos"
+    },
+    "Ryze": {
+      "id": "Ryze",
+      "title": "o Mago Rúnico"
+    },
+    "Swain": {
+      "id": "Swain",
+      "title": "o Grande General Noxiano"
+    },
+    "Sylas": {
+      "id": "Sylas",
+      "title": "o Abjugado"
+    },
+    "Syndra": {
+      "id": "Syndra",
+      "title": "a Soberana Sombria"
+    },
+    "Taliyah": {
+      "id": "Taliyah",
+      "title": "a Tecelã de Pedras"
+    },
+    "Talon": {
+      "id": "Talon",
+      "title": "a Sombra da Lâmina"
+    },
+    "Twisted Fate": {
+      "id": "TwistedFate",
+      "title": "o Mestre das Cartas"
+    },
+    "Veigar": {
+      "id": "Veigar",
+      "title": "o Pequeno Mestre do Mal"
+    },
+    "Vel'Koz": {
+      "id": "Velkoz",
+      "title": "o Olho do Vazio"
+    },
+    "Vex": {
+      "id": "Vex",
+      "title": "a Melancolista"
+    },
+    "Viktor": {
+      "id": "Viktor",
+      "title": "o Arauto do Arcano"
+    },
+    "Vladimir": {
+      "id": "Vladimir",
+      "title": "o Sanguinário Escarlate"
+    },
+    "Xerath": {
+      "id": "Xerath",
+      "title": "o Mago Ascendente"
+    },
+    "Yasuo": {
+      "id": "Yasuo",
+      "title": "o Imperdoável"
+    },
+    "Yone": {
+      "id": "Yone",
+      "title": "o Inesquecido"
+    },
+    "Zed": {
+      "id": "Zed",
+      "title": "o Mestre das Sombras"
+    },
+    "Zoe": {
+      "id": "Zoe",
+      "title": "o Aspecto do Crepúsculo"
+    }
+  },
+  "icons": {
+    "PTA": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+    "Electro": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/Electrocute/Electrocute.png",
+    "Impacto repentino": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/SuddenImpact/SuddenImpact.png",
+    "Osso revestido": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/BonePlating/BonePlating.png",
+    "Inspiração": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/7203_Whimsy.png",
+    "Precisão": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/7201_Precision.png",
+    "Ignite": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/spell/SummonerDot.png",
+    "TP": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/spell/SummonerTeleport.png",
+    "Exhaust": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/spell/SummonerExhaust.png",
+    "Mercs": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3111.png",
+    "Tabis": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3047.png",
+    "Rapidez": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3009.png",
+    "Craquen": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/6672.png"
+  }
+}

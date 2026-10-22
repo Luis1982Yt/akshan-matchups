@@ -1,0 +1,26 @@
+[
+  {
+    "id": "akshan",
+    "campeao": "Akshan",
+    "rota": "Mid",
+    "autor": "Peteruso",
+    "formato": "simples",
+    "dados": "guias/akshan",
+    "fonte": "Notas da planilha \"Akshan Matchups - Peteruso\".",
+    "links": []
+  },
+  {
+    "id": "mordekaiser",
+    "campeao": "Mordekaiser",
+    "rota": "",
+    "autor": "Meowdekaiser",
+    "formato": "completo",
+    "dados": "guias/mordekaiser",
+    "fonte": "Notas da planilha de matchups do Meowdekaiser (em inglês, como no original).",
+    "links": [
+      {"rotulo": "Planilha", "url": "https://docs.google.com/spreadsheets/d/1BVH44IPxZNBQshDf90XZRJbfKvavVCUIIo_boyBVF8o/edit?gid=1560260169"},
+      {"rotulo": "Twitch", "url": "https://www.twitch.tv/meowdekaiser_"},
+      {"rotulo": "X", "url": "https://x.com/Meowdekaiser"}
+    ]
+  }
+]
