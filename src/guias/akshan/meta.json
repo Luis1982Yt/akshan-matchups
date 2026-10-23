@@ -33,7 +33,7 @@
       "title_en": "the Cryophoenix",
       "foco": [
         47,
-        41
+        34
       ]
     },
     "Annie": {
@@ -186,7 +186,7 @@
       "title_en": "the Mouth of the Abyss",
       "foco": [
         47,
-        43
+        36
       ]
     },
     "LeBlanc": {
@@ -249,7 +249,7 @@
       "title_en": "the Hound of a Hundred Bites",
       "foco": [
         54,
-        34
+        28
       ]
     },
     "Orianna": {
@@ -366,7 +366,7 @@
       "title_en": "the Gloomist",
       "foco": [
         53,
-        36
+        33
       ]
     },
     "Viktor": {
@@ -438,7 +438,7 @@
       "title_en": "Shard of the Monolith",
       "foco": [
         48,
-        42
+        36
       ]
     }
   },

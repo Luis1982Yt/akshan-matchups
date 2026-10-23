@@ -817,33 +817,30 @@ function vizinhos(passos) {
 }
 
 /* ---------- Enquadramento das artes ----------
-   Cada splash tem o rosto num lugar. O recorte (object-position) leva o rosto o mais perto
-   possível do ponto alvo do card, e a mira vai para onde o rosto ficou de fato. */
+   Cada splash tem o rosto num lugar (foco). A mira enquadra rosto + tronco: o recorte
+   (object-position) leva esse ponto para perto do alvo do card, e a mira vai para onde ele ficou. */
 const FOCO_PADRAO = [50, 28];
 function enquadra(card, foco, alvo) {
   const img = card.querySelector("img");
   if (!img) return;
   const W = card.clientWidth, H = card.clientHeight;
   if (!W || !H) return;
-  const [fx, fy] = (foco || FOCO_PADRAO).map(n => n / 100);
+  const [fx, rosto] = (foco || FOCO_PADRAO).map(n => n / 100), fy = Math.min(rosto + .09, .6);
   const s = Math.max(W / 1280, H / 720), iw = 1280 * s, ih = 720 * s;
   const ox = iw - W, oy = ih - H;
   // Ponto do card onde o rosto deveria ficar: o centro da mira (ou um pouco acima do meio).
   const cs = alvo ? getComputedStyle(alvo) : null;
   const ty = cs ? parseFloat(cs.top) / H : .3;
   const lim = (v, a, b) => Math.min(Math.max(v, a), b);
-  let dx = lim(fx * iw - W / 2, 0, ox);
+  const dx = lim(fx * iw - W / 2, 0, ox);
   const dy = lim(fy * ih - ty * H, 0, oy);
   if (alvo) {
     const r = parseFloat(cs.height) / 2, k = r * .8;
-    let x = lim(fx * iw - dx, r, W - r), y = lim(fy * ih - dy, r * .6, H - r);
-    // Rosto muito no alto encosta na etiqueta "Inimigo": puxa a arte para o lado e, se não der, desce a mira.
+    const x = lim(fx * iw - dx, r, W - r);
+    let y = lim(fy * ih - dy, r * .6, H - r);
+    // Se encostar na etiqueta "Inimigo", a mira desce um pouco (continua no corpo).
     const selo = card.querySelector(".selo"), sl = selo.offsetLeft - 4, sb = selo.offsetTop + selo.offsetHeight + 4;
-    if (x + k > sl && y - k < sb) {
-      dx = lim(fx * iw - (sl - k), 0, ox);
-      x = lim(fx * iw - dx, r, W - r);
-      if (x + k > sl) y = Math.min(sb + k, H - r);
-    }
+    if (x + k > sl && y - k < sb) y = Math.min(sb + k, H - r);
     alvo.style.left = x + "px";
     alvo.style.top = y + "px";
   }
