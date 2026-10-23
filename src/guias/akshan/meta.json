@@ -4,441 +4,441 @@
       "id": "Akshan",
       "title": "o Sentinela Rebelde",
       "title_en": "the Rogue Sentinel",
-      "foco": [
+      "mira": [
         45,
-        33
+        38
       ]
     },
     "Ahri": {
       "id": "Ahri",
       "title": "a Raposa de Nove Caudas",
       "title_en": "the Nine-Tailed Fox",
-      "foco": [
-        48,
-        28
+      "mira": [
+        49,
+        38
       ]
     },
     "Akali": {
       "id": "Akali",
       "title": "a Assassina Renegada",
       "title_en": "the Rogue Assassin",
-      "foco": [
-        47,
-        19
+      "mira": [
+        48,
+        32
       ]
     },
     "Anivia": {
       "id": "Anivia",
       "title": "a Criofênix",
       "title_en": "the Cryophoenix",
-      "foco": [
-        47,
-        34
+      "mira": [
+        49,
+        42
       ]
     },
     "Annie": {
       "id": "Annie",
       "title": "a Criança Sombria",
       "title_en": "the Dark Child",
-      "foco": [
+      "mira": [
         50,
-        35
+        46
       ]
     },
     "Aurelion Sol": {
       "id": "AurelionSol",
       "title": "o Forjador de Estrelas",
       "title_en": "The Star Forger",
-      "foco": [
-        54,
-        37
+      "mira": [
+        53,
+        46
       ]
     },
     "Aurora": {
       "id": "Aurora",
       "title": "a Bruxa Entre Mundos",
       "title_en": "the Witch Between Worlds",
-      "foco": [
+      "mira": [
         48,
-        31
+        41
       ]
     },
     "Azir": {
       "id": "Azir",
       "title": "o Imperador das Areias",
       "title_en": "the Emperor of the Sands",
-      "foco": [
-        47,
-        24
+      "mira": [
+        48,
+        35
       ]
     },
     "Brand": {
       "id": "Brand",
       "title": "a Vingança Flamejante",
       "title_en": "the Burning Vengeance",
-      "foco": [
-        52,
-        28
+      "mira": [
+        50,
+        39
       ]
     },
     "Cassiopeia": {
       "id": "Cassiopeia",
       "title": "o Abraço da Serpente",
       "title_en": "the Serpent's Embrace",
-      "foco": [
-        47,
-        38
+      "mira": [
+        48,
+        47
       ]
     },
     "Diana": {
       "id": "Diana",
       "title": "o Escárnio da Lua",
       "title_en": "Scorn of the Moon",
-      "foco": [
-        50,
-        33
+      "mira": [
+        49,
+        43
       ]
     },
     "Ekko": {
       "id": "Ekko",
       "title": "o Rapaz que Estilhaçou o Tempo",
       "title_en": "the Boy Who Shattered Time",
-      "foco": [
+      "mira": [
         47,
-        28
+        38
       ]
     },
     "Fizz": {
       "id": "Fizz",
       "title": "o Trapaceiro das Marés",
       "title_en": "the Tidal Trickster",
-      "foco": [
-        51,
-        24
+      "mira": [
+        50,
+        36
       ]
     },
     "Galio": {
       "id": "Galio",
       "title": "o Colosso",
       "title_en": "the Colossus",
-      "foco": [
+      "mira": [
         50,
-        22
+        34
       ]
     },
     "Hwei": {
       "id": "Hwei",
       "title": "o Visionário",
       "title_en": "the Visionary",
-      "foco": [
-        52,
-        19
+      "mira": [
+        50,
+        31
       ]
     },
     "Irelia": {
       "id": "Irelia",
       "title": "a Dançarina das Lâminas",
       "title_en": "the Blade Dancer",
-      "foco": [
+      "mira": [
         48,
-        33
+        43
       ]
     },
     "Jayce": {
       "id": "Jayce",
       "title": "o Defensor do Amanhã",
       "title_en": "the Defender of Tomorrow",
-      "foco": [
-        50,
-        28
+      "mira": [
+        49,
+        38
       ]
     },
     "Kassadin": {
       "id": "Kassadin",
       "title": "o Andarilho do Vazio",
       "title_en": "the Void Walker",
-      "foco": [
-        49,
-        31
+      "mira": [
+        50,
+        40
       ]
     },
     "Katarina": {
       "id": "Katarina",
       "title": "a Lâmina Sinistra",
       "title_en": "the Sinister Blade",
-      "foco": [
-        48,
-        26
+      "mira": [
+        49,
+        37
       ]
     },
     "Kayle": {
       "id": "Kayle",
       "title": "a Justa",
       "title_en": "the Righteous",
-      "foco": [
-        48,
-        28
+      "mira": [
+        49,
+        38
       ]
     },
     "Kog'Maw": {
       "id": "KogMaw",
       "title": "a Boca do Abismo",
       "title_en": "the Mouth of the Abyss",
-      "foco": [
-        47,
-        36
+      "mira": [
+        50,
+        38
       ]
     },
     "LeBlanc": {
       "id": "Leblanc",
       "title": "a Farsante",
       "title_en": "the Deceiver",
-      "foco": [
+      "mira": [
         50,
-        32
+        42
       ]
     },
     "Lissandra": {
       "id": "Lissandra",
       "title": "a Bruxa Gélida",
       "title_en": "the Ice Witch",
-      "foco": [
-        45,
-        28
+      "mira": [
+        47,
+        38
       ]
     },
     "Locke": {
       "id": "Locke",
       "title": "o Exorcista das Cinzas",
       "title_en": "the Ashen Exorcist",
-      "foco": [
+      "mira": [
         51,
-        28
+        38
       ]
     },
     "Lux": {
       "id": "Lux",
       "title": "a Dama da Luz",
       "title_en": "the Lady of Luminosity",
-      "foco": [
+      "mira": [
         52,
-        25
+        38
       ]
     },
     "Malzahar": {
       "id": "Malzahar",
       "title": "o Profeta do Vazio",
       "title_en": "the Prophet of the Void",
-      "foco": [
+      "mira": [
         51,
-        25
+        36
       ]
     },
     "Mel": {
       "id": "Mel",
       "title": "o Reflexo da Alma",
       "title_en": "the Soul's Reflection",
-      "foco": [
-        53,
-        24
+      "mira": [
+        52,
+        35
       ]
     },
     "Naafiri": {
       "id": "Naafiri",
       "title": "Fera das Cem Mordidas",
       "title_en": "the Hound of a Hundred Bites",
-      "foco": [
-        54,
-        28
+      "mira": [
+        50,
+        38
       ]
     },
     "Orianna": {
       "id": "Orianna",
       "title": "a Donzela Mecânica",
       "title_en": "the Lady of Clockwork",
-      "foco": [
+      "mira": [
         48,
-        28
+        38
       ]
     },
     "Pantheon": {
       "id": "Pantheon",
       "title": "a Lança Indestrutível",
       "title_en": "the Unbreakable Spear",
-      "foco": [
+      "mira": [
         49,
-        22
+        35
       ]
     },
     "Qiyana": {
       "id": "Qiyana",
       "title": "a Imperatriz dos Elementos",
       "title_en": "Empress of the Elements",
-      "foco": [
-        47,
-        28
+      "mira": [
+        48,
+        38
       ]
     },
     "Ryze": {
       "id": "Ryze",
       "title": "o Mago Rúnico",
       "title_en": "the Rune Mage",
-      "foco": [
-        62,
-        31
+      "mira": [
+        58,
+        38
       ]
     },
     "Swain": {
       "id": "Swain",
       "title": "o Grande General Noxiano",
       "title_en": "the Noxian Grand General",
-      "foco": [
+      "mira": [
         49,
-        24
+        36
       ]
     },
     "Sylas": {
       "id": "Sylas",
       "title": "o Abjugado",
       "title_en": "the Unshackled",
-      "foco": [
-        52,
-        32
+      "mira": [
+        51,
+        42
       ]
     },
     "Syndra": {
       "id": "Syndra",
       "title": "a Soberana Sombria",
       "title_en": "the Dark Sovereign",
-      "foco": [
-        48,
-        24
+      "mira": [
+        49,
+        35
       ]
     },
     "Taliyah": {
       "id": "Taliyah",
       "title": "a Tecelã de Pedras",
       "title_en": "the Stoneweaver",
-      "foco": [
+      "mira": [
         47,
-        31
+        40
       ]
     },
     "Talon": {
       "id": "Talon",
       "title": "a Sombra da Lâmina",
       "title_en": "the Blade's Shadow",
-      "foco": [
+      "mira": [
         49,
-        32
+        41
       ]
     },
     "Twisted Fate": {
       "id": "TwistedFate",
       "title": "o Mestre das Cartas",
       "title_en": "the Card Master",
-      "foco": [
+      "mira": [
         50,
-        28
+        38
       ]
     },
     "Veigar": {
       "id": "Veigar",
       "title": "o Pequeno Mestre do Mal",
       "title_en": "the Tiny Master of Evil",
-      "foco": [
-        52,
-        32
+      "mira": [
+        51,
+        38
       ]
     },
     "Vel'Koz": {
       "id": "Velkoz",
       "title": "o Olho do Vazio",
       "title_en": "the Eye of the Void",
-      "foco": [
-        45,
-        33
+      "mira": [
+        46,
+        38
       ]
     },
     "Vex": {
       "id": "Vex",
       "title": "a Melancolista",
       "title_en": "the Gloomist",
-      "foco": [
-        53,
-        33
+      "mira": [
+        52,
+        40
       ]
     },
     "Viktor": {
       "id": "Viktor",
       "title": "o Arauto do Arcano",
       "title_en": "the Herald of the Arcane",
-      "foco": [
-        45,
-        25
+      "mira": [
+        46,
+        36
       ]
     },
     "Vladimir": {
       "id": "Vladimir",
       "title": "o Sanguinário Escarlate",
       "title_en": "the Crimson Reaper",
-      "foco": [
-        52,
-        22
+      "mira": [
+        51,
+        33
       ]
     },
     "Xerath": {
       "id": "Xerath",
       "title": "o Mago Ascendente",
       "title_en": "the Magus Ascendant",
-      "foco": [
-        58,
-        22
+      "mira": [
+        52,
+        36
       ]
     },
     "Yasuo": {
       "id": "Yasuo",
       "title": "o Imperdoável",
       "title_en": "the Unforgiven",
-      "foco": [
+      "mira": [
         48,
-        25
+        36
       ]
     },
     "Yone": {
       "id": "Yone",
       "title": "o Inesquecido",
       "title_en": "the Unforgotten",
-      "foco": [
+      "mira": [
         47,
-        28
+        38
       ]
     },
     "Zed": {
       "id": "Zed",
       "title": "o Mestre das Sombras",
       "title_en": "the Master of Shadows",
-      "foco": [
-        48,
-        22
+      "mira": [
+        49,
+        34
       ]
     },
     "Zoe": {
       "id": "Zoe",
       "title": "o Aspecto do Crepúsculo",
       "title_en": "the Aspect of Twilight",
-      "foco": [
-        50,
-        33
+      "mira": [
+        49,
+        30
       ]
     },
     "Malphite": {
       "id": "Malphite",
       "title": "o Fragmento do Monolito",
       "title_en": "Shard of the Monolith",
-      "foco": [
-        48,
-        36
+      "mira": [
+        50,
+        35
       ]
     }
   },
