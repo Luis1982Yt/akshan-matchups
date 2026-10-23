@@ -30,17 +30,15 @@ Não é um agregador de estatísticas: é a leitura das notas de um jogador de c
 - Interface em português ou inglês (botão PT/EN). As notas do Akshan em inglês são uma tradução mantida à parte; o texto original da planilha nunca muda, e linha sem tradução aparece em português.
 - A planilha do Meowdekaiser é em inglês e o texto fica em inglês. Por enquanto entra só a aba de matchups; os outros guias da planilha ficam para depois.
 - Imagens de campeões, runas, feitiços e itens vêm do Data Dragon da Riot.
-- Akshan: cada matchup tem runa principal, secundária, feitiço, bota, build, lembrete (itens separados por quebra de linha) e a marca "no guia" da planilha.
+- Akshan: cada matchup tem runa principal, secundária, feitiço, bota, build (com os ícones exatos colados na planilha), lembrete (itens separados por quebra de linha) e a dificuldade, que é a cor da célula do campeão na planilha (classificação do Peteruso: vermelho escuro muito difícil, vermelho claro difícil, amarelo médio, verde fácil, ciano muito fácil). A marca "no guia" saiu do site a pedido do dono.
 - Mordekaiser: cada matchup tem runas, itens (com builds condicionais), dificuldade early/mid/late/geral de 1 a 5, às vezes um TL;DR, e as seções Enemy Cooldowns, Early Game, How to trade, What to watch out for e Tips.
 
 ## Capabilities and Constraints
 
-- Busca por campeão ou palavra das notas; filtros por guia (Akshan: No guia, Ignite, TP, Exhaust, Electro; Mordekaiser: Fácil, Médio, Difícil); navegação anterior/próximo.
+- Busca por campeão ou palavra das notas; filtros por guia (Akshan: as cinco dificuldades, Ignite, TP, Exhaust, Electro; Mordekaiser: Fácil, Médio, Difícil); navegação anterior/próximo; tier list por dificuldade.
 - Troca de guia no topo; o site abre no último guia usado; links `#guia/campeão` (e os antigos `#campeão` do Akshan).
 - O texto das notas não pode ser alterado; só a forma de mostrar.
 - Celular primeiro (390 px) e desktop (1440 px); a página nunca rola para o lado.
-- Em aberto: o que exatamente "no guia" significa na planilha (o dono não sabe). Mostrar como marca da planilha, sem inventar explicação.
-- Em aberto: quais itens/runas são "Vamps", "Scaling" e "Crit" para ganharem ícone.
 - Dois temas: escuro por padrão e claro num botão; a escolha fica salva no navegador.
 
 ## Brand Commitments

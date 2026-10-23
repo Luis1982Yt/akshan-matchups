@@ -296,7 +296,11 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .pick img { width: 100%; height: 100%; border-radius: 5px; object-fit: cover; }
 .pick:has(img.falhou)::after { content: attr(data-ini); position: absolute; inset: 0; display: grid; place-items: center; font: 700 20px var(--titulo); color: var(--texto-baixo); }
 /* Dificuldade da matchup = a cor da célula do campeão na planilha do Peteruso. */
-:root { --dif-muito_facil: #22d3ee; --dif-facil: #34a853; --dif-medio: #fbbc04; --dif-dificil: #e06666; --dif-muito_dificil: #c0281c; }
+:root {
+  --difc-muito_facil: #22d3ee; --difc-facil: #34a853; --difc-medio: #fbbc04; --difc-dificil: #e06666; --difc-muito_dificil: #c0281c;
+  --dif-muito_facil: var(--difc-muito_facil); --dif-facil: var(--difc-facil); --dif-medio: var(--difc-medio); --dif-dificil: var(--difc-dificil); --dif-muito_dificil: var(--difc-muito_dificil);
+}
+:root[data-tema="claro"] { --dif-muito_facil: #0e7490; --dif-facil: #15803d; --dif-medio: #b45309; --dif-dificil: #dc2626; --dif-muito_dificil: #7f1d1d; }
 .pick.tem-dif { border: 2px solid var(--dif); }
 .pick .nivel { position: absolute; z-index: 1; right: 2px; bottom: 2px; min-width: 17px; height: 17px; padding: 0 4px; border-radius: 4px; background: rgba(5, 8, 6, .82); color: #f2f6f3; font: 700 11px/17px var(--corpo); text-align: center; }
 .pick:hover { border-color: var(--acento-vivo); }
@@ -307,7 +311,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 :root[data-guia="akshan"] .pick[aria-current="true"] { box-shadow: none; }
 :root[data-guia="akshan"] .pick[aria-current="true"]::before { content: ""; position: absolute; z-index: 2; inset: -6px; border: 2px solid var(--destaque); transform: rotate(45deg) scale(.78); pointer-events: none; }
 .pick:focus-visible { outline-offset: 2px; }
-.ver-tier { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 40px; margin: 12px auto 0; padding: 0 16px; border-radius: 999px; border: 1px solid var(--linha-forte); background: var(--painel-alto); color: var(--texto); font: 700 13px var(--corpo); cursor: pointer; }
+.ver-tier { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; margin: 12px auto 0; padding: 0 16px; border-radius: 999px; border: 1px solid var(--linha-forte); background: var(--painel-alto); color: var(--texto); font: 700 13px var(--corpo); cursor: pointer; }
 .ver-tier[hidden] { display: none; }
 .ver-tier:hover { border-color: var(--acento-vivo); }
 .ver-tier svg { color: var(--acento-vivo); }
@@ -315,10 +319,10 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .tier::backdrop { background: rgba(0, 0, 0, .7); }
 .tier-topo { position: sticky; top: 0; z-index: 1; display: flex; align-items: center; gap: 12px; padding: 16px 20px; background: var(--fundo); border-bottom: 1px solid var(--linha); }
 .tier-topo h2 { margin: 0; font: 700 18px var(--titulo); letter-spacing: .14em; text-transform: uppercase; color: var(--acento-vivo); }
-.tier-fecha { margin-left: auto; width: 40px; height: 40px; display: grid; place-items: center; padding: 0; border-radius: 50%; border: 1px solid var(--linha-forte); background: var(--painel); color: var(--texto); cursor: pointer; }
+.tier-fecha { margin-left: auto; width: 44px; height: 44px; display: grid; place-items: center; padding: 0; border-radius: 50%; border: 1px solid var(--linha-forte); background: var(--painel); color: var(--texto); cursor: pointer; }
 .tier-corpo { display: grid; gap: 10px; padding: 16px 20px 20px; }
 .tier-linha { display: grid; grid-template-columns: 150px minmax(0, 1fr); border-radius: 10px; overflow: hidden; border: 1px solid var(--linha); background: var(--painel); }
-.tier-rot { display: flex; align-items: center; justify-content: center; padding: 10px; text-align: center; font: 800 15px var(--titulo); letter-spacing: .06em; text-transform: uppercase; color: #111; background: var(--dif); }
+.tier-rot { display: flex; align-items: center; justify-content: center; padding: 10px; text-align: center; font: 800 15px var(--titulo); letter-spacing: .06em; text-transform: uppercase; color: var(--dif-txt); background: var(--dif-fundo); }
 .tier-campeoes { display: flex; flex-wrap: wrap; gap: 8px; padding: 10px; }
 .tier-campeoes button { display: grid; justify-items: center; gap: 4px; width: 64px; padding: 0; border: 0; background: none; color: var(--texto); font: 600 11px/1.2 var(--corpo); cursor: pointer; }
 .tier-campeoes img { width: 52px; height: 52px; border-radius: 6px; border: 2px solid var(--dif); background: var(--painel-alto); }
@@ -562,7 +566,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   <div class="palco">
     <div class="col-lista">
     <nav class="anel" aria-labelledby="escolhe">
-      <h2 id="escolhe"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1l6 6-6 6-6-6z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span data-t="escolhe">Escolhe o inimigo</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1l6 6-6 6-6-6z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></h2>
+      <h2 id="escolhe"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1l6 6-6 6-6-6z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span data-t="escolhe">Escolha o inimigo</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1l6 6-6 6-6-6z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></h2>
       <label class="busca" for="q">
         <svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M11 11l3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
         <input id="q" type="search" placeholder="Campeão ou palavra" autocomplete="off" spellcheck="false" aria-label="Procurar matchup" data-t-placeholder="busca" data-t-aria="buscaRotulo">
@@ -658,7 +662,7 @@ document.addEventListener("load", e => { if (e.target.tagName === "IMG") e.targe
 const TXT = {
   pt: {
     pular: "Pular para o matchup", guiasTit: "Guias de matchup", dica: "O site sempre abre no último guia que você usou.",
-    escolhe: "Escolhe o inimigo", busca: "Campeão ou palavra", buscaRotulo: "Procurar matchup", filtros: "Filtros", campeoes: "Campeões",
+    escolhe: "Escolha o inimigo", busca: "Campeão ou palavra", buscaRotulo: "Procurar matchup", filtros: "Filtros", campeoes: "Campeões",
     vazio: "Nenhum campeão com essa busca.", limpar: "Limpar busca e filtros", voce: "Você", inimigo: "Inimigo", duelo: "Duelo",
     travarTit: "Travar o pick", travarContra: "Travar o pick contra ", setup: "Seu setup pro confronto",
     lembrete: "Lembrete", comoJogar: "Como jogar", contra: " contra ", arteDe: "Arte de ",
@@ -1343,7 +1347,8 @@ function abreTier() {
   $("tierCorpo").innerHTML = DIFS.map(d => {
     const cs = guia.lista.filter(c => c.dif === d).sort((a, b) => a.nome.localeCompare(b.nome));
     if (!cs.length) return "";
-    return `<section class="tier-linha" style="--dif: var(--dif-${d})" aria-label="${esc(rotuloDif(d))}">
+    // Faixa na cor da planilha; no vermelho escuro o texto vai branco para ter contraste.
+    return `<section class="tier-linha" style="--dif: var(--dif-${d}); --dif-fundo: var(--difc-${d}); --dif-txt: ${d === "muito_dificil" ? "#fff" : "#111"}" aria-label="${esc(rotuloDif(d))}">
       <div class="tier-rot">${esc(rotuloDif(d))}</div>
       <div class="tier-campeoes">${cs.map(c => `<button type="button" data-id="${c.slug}" title="${esc(c.nome)}"><img src="${sq(c.id)}" alt="" width="52" height="52"><span>${esc(c.nome)}</span></button>`).join("")}</div>
     </section>`;
