@@ -144,7 +144,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .acoes { margin-left: auto; display: flex; gap: 8px; }
 .tema, .som, .lingua { width: 44px; height: 44px; flex: none; display: grid; place-items: center; cursor: pointer; border-radius: 50%; border: 1px solid var(--linha-forte); background: transparent; color: var(--acento-vivo); }
 .tema:hover, .som:hover, .lingua:hover { background: var(--painel-alto); }
-.lingua, .mostra3d { font: 700 13px var(--corpo); letter-spacing: .04em; }
+.lingua { font: 700 13px var(--corpo); letter-spacing: .04em; }
 .trocar:disabled { cursor: default; }
 .trocar:disabled:hover { border-color: transparent; background: none; }
 .trocar:disabled svg { display: none; }
@@ -180,8 +180,13 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .anim3d button.tecla { min-width: 36px; padding: 0; font-family: var(--titulo); }
 .anim3d button:hover { background: var(--painel-alto); }
 .anim3d button[aria-pressed="true"] { border-color: var(--acento-vivo); color: var(--acento-vivo); }
-.mostra3d[hidden] { display: none; }
-.mostra3d[aria-pressed="false"] { color: var(--texto-baixo); }
+/* Esconder fica no canto da caixa; escondido, sobra uma alça na borda direita da tela para trazer de volta. */
+.fecha3d { position: absolute; top: 0; right: 0; z-index: 2; width: 36px; height: 36px; display: grid; place-items: center; padding: 0; border-radius: 50%; border: 1px solid var(--linha-forte); background: var(--painel); color: var(--texto-baixo); cursor: pointer; opacity: 0; transition: opacity .8s ease; }
+.akshan3d.pronto .fecha3d { opacity: 1; }
+.fecha3d:hover { color: var(--texto); background: var(--painel-alto); }
+.abre3d { position: fixed; right: 0; top: 50%; z-index: 5; transform: translateY(-50%); display: flex; align-items: center; gap: 8px; padding: 16px 9px; border: 1px solid var(--linha-forte); border-right: 0; border-radius: 10px 0 0 10px; background: var(--painel); color: var(--acento-vivo); font: 700 13px var(--titulo); letter-spacing: .14em; writing-mode: vertical-rl; cursor: pointer; }
+.abre3d:hover { background: var(--painel-alto); }
+.abre3d[hidden] { display: none; }
 .duelo { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .card { position: relative; overflow: hidden; height: 240px; border-radius: 10px; background: var(--painel); border: 1px solid var(--linha-forte); box-shadow: var(--sombra); }
 .card img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; }
@@ -450,7 +455,6 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
       </div>
     </div>
     <div class="acoes">
-    <button class="lingua mostra3d" type="button" id="mostra3d" aria-pressed="true" data-t-aria="mostra3d" data-t-title="mostra3d" hidden>3D</button>
     <button class="lingua" type="button" id="lingua"></button>
     <button class="som" type="button" id="som" aria-pressed="true" aria-label="Sons do cliente do LoL">
       <svg class="ligado" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M15.5 9a4.2 4.2 0 0 1 0 6M18.2 6.5a8 8 0 0 1 0 11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
@@ -527,11 +531,12 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 
       <footer class="rodape" id="rodape"></footer>
     </div>
-    <aside class="akshan3d" id="akshan3d" aria-label="Akshan 3D"><canvas id="cena3d" aria-hidden="true" data-t-title="emote"></canvas><div class="anim3d" id="anim3d" role="group" data-t-aria="animacoes"></div></aside>
+    <aside class="akshan3d" id="akshan3d" aria-label="Akshan 3D"><button class="fecha3d" type="button" id="fecha3d" data-t-aria="esconde3d" data-t-title="esconde3d"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button><canvas id="cena3d" aria-hidden="true" data-t-title="emote"></canvas><div class="anim3d" id="anim3d" role="group" data-t-aria="animacoes"></div></aside>
   </div>
 </main>
 
 <div class="trava" id="trava" hidden aria-hidden="true"></div>
+<button class="abre3d" type="button" id="abre3d" data-t-aria="mostra3d" hidden>Akshan 3D</button>
 
 <script>
 const GUIAS = /*GUIAS*/;
@@ -574,7 +579,7 @@ const TXT = {
     linguaRotulo: "Switch to English", linguaBotao: "EN",
     guiaAtual: "Guia atual: ", trocarGuia: ". Trocar de guia", notasDo: "notas do ", matchups: " matchups", aberto: "Aberto",
     facil: "Fácil", medio: "Médio", dificil: "Difícil", resumo: "Resumo", runas: "Runas", itens: "Itens", geral: "Geral",
-    principal: "Principal", fragmentos: "Fragmentos", emote: "Arraste para girar · clique para uma emote", mostra3d: "Mostrar o Akshan 3D", animacoes: "Animações do Akshan",
+    principal: "Principal", fragmentos: "Fragmentos", emote: "Arraste para girar · clique para uma emote", mostra3d: "Mostrar o Akshan 3D", esconde3d: "Esconder o Akshan 3D", animacoes: "Animações do Akshan",
     a_dance: "Dança", a_joke: "Piada", a_taunt: "Provocação", a_laugh: "Risada", a_attack: "Ataque", a_recall: "Recall",
   },
   en: {
@@ -596,7 +601,7 @@ const TXT = {
     linguaRotulo: "Mudar para português", linguaBotao: "PT",
     guiaAtual: "Current guide: ", trocarGuia: ". Change guide", notasDo: "notes by ", matchups: " matchups", aberto: "Open",
     facil: "Easy", medio: "Medium", dificil: "Hard", resumo: "Summary", runas: "Runes", itens: "Items", geral: "Overall",
-    principal: "Primary", fragmentos: "Shards", emote: "Drag to rotate · click for an emote", mostra3d: "Show 3D Akshan", animacoes: "Akshan animations",
+    principal: "Primary", fragmentos: "Shards", emote: "Drag to rotate · click for an emote", mostra3d: "Show 3D Akshan", esconde3d: "Hide 3D Akshan", animacoes: "Akshan animations",
     a_dance: "Dance", a_joke: "Joke", a_taunt: "Taunt", a_laugh: "Laugh", a_attack: "Attack", a_recall: "Recall",
   },
 };
@@ -1220,7 +1225,7 @@ escolheGuia(...lerHash());
    Modelo do jogo (modelo/akshan.glb, gerado por scripts/modelo3d) em idle; arrastar gira, clique faz
    uma emote e os botões tocam cada animação. Só carrega em tela larga, no guia do Akshan e no site
    publicado (aberto como arquivo o navegador bloqueia o .glb), depois que o resto da página abriu.
-   O botão 3D do topo esconde e centraliza tudo de novo (vem ligado). */
+   O X da caixa esconde e centraliza tudo de novo (vem ligado); a alça na borda direita traz de volta. */
 const TELA_3D = matchMedia("(min-width: 1720px)");
 // Cada botão toca uma sequência de clipes: [nome no .glb, quantas vezes].
 const SEQ_3D = {
@@ -1237,17 +1242,19 @@ try { ligado3d = localStorage.getItem("akshan3d") !== "0"; } catch (e) {}
 
 function atualiza3d() {
   const pode = location.protocol !== "file:" && TELA_3D.matches && guia && guia.id === "akshan" && estado3d !== "falhou";
-  $("mostra3d").hidden = !pode;
-  $("mostra3d").setAttribute("aria-pressed", ligado3d);
+  $("abre3d").hidden = !(pode && !ligado3d);
   document.documentElement.classList.toggle("com-3d", pode && ligado3d);
   if (pode && ligado3d && !estado3d) iniciaAkshan3d();
 }
-$("mostra3d").addEventListener("click", () => {
-  ligado3d = !ligado3d;
-  try { localStorage.setItem("akshan3d", ligado3d ? "1" : "0"); } catch (e) {}
-  toca("clique");
+function liga3d(sim) {
+  ligado3d = sim;
+  try { localStorage.setItem("akshan3d", sim ? "1" : "0"); } catch (e) {}
+  toca(sim ? "abre" : "fecha");
   atualiza3d();
-});
+  (sim ? $("fecha3d") : $("abre3d")).focus({ preventScroll: true });
+}
+$("fecha3d").addEventListener("click", () => liga3d(false));
+$("abre3d").addEventListener("click", () => liga3d(true));
 
 async function iniciaAkshan3d() {
   estado3d = "carregando";
