@@ -6,6 +6,7 @@
 <title>Guias de matchup</title>
 <link rel="icon" type="image/png" sizes="64x64" href="/*ICONE*/">
 <link rel="apple-touch-icon" href="/*ICONE_APPLE*/">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
 <script>
 try {
   const t = localStorage.getItem("tema"); if (t === "claro") document.documentElement.dataset.tema = t;
@@ -160,6 +161,18 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   display: grid; gap: 24px; grid-template-columns: 440px minmax(0, 1fr); align-items: start;
 }
 .detalhe { min-width: 0; display: grid; gap: 16px; }
+/* Akshan 3D: só em tela larga, numa terceira coluna à direita, sobre o fundo do próprio site. */
+.akshan3d { display: none; }
+@media (min-width: 1720px) {
+  :root.com-3d[data-guia="akshan"] .bar-in { max-width: 1760px; }
+  :root.com-3d[data-guia="akshan"] .palco { max-width: 1760px; grid-template-columns: 440px minmax(0, 1fr) 380px; }
+  :root.com-3d[data-guia="akshan"] .akshan3d {
+    display: block; position: sticky; top: calc(env(safe-area-inset-top, 0px) + var(--barra) + 16px);
+    height: calc(100vh - var(--barra) - 48px); min-height: 520px;
+  }
+}
+.akshan3d canvas { display: block; width: 100%; height: 100%; cursor: pointer; opacity: 0; transition: opacity .8s ease; }
+.akshan3d.pronto canvas { opacity: 1; }
 .duelo { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .card { position: relative; overflow: hidden; height: 240px; border-radius: 10px; background: var(--painel); border: 1px solid var(--linha-forte); box-shadow: var(--sombra); }
 .card img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; }
@@ -504,6 +517,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 
       <footer class="rodape" id="rodape"></footer>
     </div>
+    <aside class="akshan3d" id="akshan3d" aria-hidden="true"><canvas id="cena3d"></canvas></aside>
   </div>
 </main>
 
@@ -550,7 +564,7 @@ const TXT = {
     linguaRotulo: "Switch to English", linguaBotao: "EN",
     guiaAtual: "Guia atual: ", trocarGuia: ". Trocar de guia", notasDo: "notas do ", matchups: " matchups", aberto: "Aberto",
     facil: "Fácil", medio: "Médio", dificil: "Difícil", resumo: "Resumo", runas: "Runas", itens: "Itens", geral: "Geral",
-    principal: "Principal", fragmentos: "Fragmentos",
+    principal: "Principal", fragmentos: "Fragmentos", emote: "Clique no Akshan para ele fazer uma emote",
   },
   en: {
     pular: "Skip to matchup", guiasTit: "Matchup guides", dica: "The site always opens on the last guide you used.",
@@ -571,7 +585,7 @@ const TXT = {
     linguaRotulo: "Mudar para português", linguaBotao: "PT",
     guiaAtual: "Current guide: ", trocarGuia: ". Change guide", notasDo: "notes by ", matchups: " matchups", aberto: "Open",
     facil: "Easy", medio: "Medium", dificil: "Hard", resumo: "Summary", runas: "Runes", itens: "Items", geral: "Overall",
-    principal: "Primary", fragmentos: "Shards",
+    principal: "Primary", fragmentos: "Shards", emote: "Click Akshan to make him emote",
   },
 };
 let L = document.documentElement.lang === "en" ? "en" : "pt";
@@ -586,6 +600,7 @@ function aplicaTextos() {
   $("lingua").textContent = t("linguaBotao");
   $("lingua").setAttribute("aria-label", t("linguaRotulo"));
   $("lingua").setAttribute("lang", L === "en" ? "pt-BR" : "en");
+  if ($("cena3d")) $("cena3d").title = t("emote");
 }
 
 /* ---------- Sons do cliente do LoL (pasta sons/, ao lado do index.html) ---------- */
@@ -1189,6 +1204,103 @@ addEventListener("hashchange", () => {
 });
 aplicaTextos();
 escolheGuia(...lerHash());
+
+/* ---------- Akshan 3D ----------
+   Modelo do jogo (modelo/akshan.glb, gerado por scripts/modelo3d) parado em idle; clique faz uma emote.
+   Só carrega em tela larga, no guia do Akshan e no site publicado (aberto como arquivo o navegador
+   bloqueia o .glb), e depois que o resto da página já abriu. */
+const TELA_3D = matchMedia("(min-width: 1720px)");
+let cena3d = null;
+async function iniciaAkshan3d() {
+  if (cena3d || location.protocol === "file:" || !TELA_3D.matches || guia.id !== "akshan") return;
+  cena3d = {};
+  const raiz = document.documentElement, box = $("akshan3d"), canvas = $("cena3d");
+  raiz.classList.add("com-3d");
+  try {
+    const THREE = await import("three");
+    const { GLTFLoader } = await import("three/addons/loaders/GLTFLoader.js");
+    const gltf = await new GLTFLoader().loadAsync("modelo/akshan.glb");
+    const r = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+    r.setClearColor(0x000000, 0);
+    r.outputColorSpace = THREE.SRGBColorSpace;
+    const cena = new THREE.Scene(), cam = new THREE.PerspectiveCamera(26, 1, 10, 4000);
+    cena.add(new THREE.HemisphereLight(0xfff4d6, 0x221a0c, 1.1));
+    const luz = new THREE.DirectionalLight(0xffd66b, 2.2); luz.position.set(200, 400, 300); cena.add(luz);
+    const contorno = new THREE.DirectionalLight(0xffc24a, 3); contorno.position.set(-300, 250, -400); cena.add(contorno);
+    const m = gltf.scene;
+    // O jogo dá luz própria à textura (selfIllumination 0.7): emissivo com o mesmo mapa.
+    m.traverse(o => { if (o.isMesh) { const mt = o.material; mt.emissive = new THREE.Color(0xffffff); mt.emissiveMap = mt.map; mt.emissiveIntensity = .55; o.frustumCulled = false; } });
+    m.rotation.y = -.35;  // de leve virado para o conteúdo, à esquerda
+    cena.add(m);
+    const caixa = new THREE.Box3().setFromObject(m), centro = caixa.getCenter(new THREE.Vector3()), alt = caixa.getSize(new THREE.Vector3()).y;
+    // Brilho dourado no chão, embaixo dos pés (círculo com degradê, desenhado num canvas 2D).
+    const tela = document.createElement("canvas"); tela.width = tela.height = 128;
+    const g2 = tela.getContext("2d"), grad = g2.createRadialGradient(64, 64, 0, 64, 64, 64);
+    grad.addColorStop(0, "rgba(255,200,90,.55)"); grad.addColorStop(1, "rgba(255,200,90,0)");
+    g2.fillStyle = grad; g2.fillRect(0, 0, 128, 128);
+    const chao = new THREE.Mesh(new THREE.PlaneGeometry(alt * .75, alt * .75),
+      new THREE.MeshBasicMaterial({ map: new THREE.CanvasTexture(tela), transparent: true, depthWrite: false }));
+    chao.rotation.x = -Math.PI / 2; chao.position.set(centro.x, caixa.min.y + 1, centro.z);
+    cena.add(chao);
+    // Folga para os chutes da dança e o braço levantado da piada.
+    const enquadra = () => {
+      const w = box.clientWidth, h = box.clientHeight;
+      if (!w || !h) return;
+      r.setPixelRatio(Math.min(devicePixelRatio, 2)); r.setSize(w, h, false);
+      cam.aspect = w / h;
+      const dist = (alt * 1.25 / 2) / Math.tan(THREE.MathUtils.degToRad(cam.fov / 2)) / Math.min(1, cam.aspect / .55);
+      cam.position.set(centro.x, centro.y + alt * .04, centro.z + dist); cam.lookAt(centro.x, centro.y + alt * .04, centro.z);
+      cam.updateProjectionMatrix();
+    };
+    new ResizeObserver(enquadra).observe(box);
+    enquadra();
+
+    const mixer = new THREE.AnimationMixer(m), clipe = n => gltf.animations.find(a => a.name === n);
+    const acao = (n, vezes) => { const a = mixer.clipAction(clipe(n)); a.setLoop(THREE.LoopRepeat, vezes || Infinity); a.clampWhenFinished = true; return a; };
+    const idle = acao("idle"), seq = { dance: [["dance_intro", 1], ["dance", 2]], joke: [["joke", 1]], laugh: [["laugh", 1]] };
+    let atual = idle, fila = [], emote = null, ultima = "", voltas = 0;
+    const toca = a => { a.reset().play(); if (atual !== a) a.crossFadeFrom(atual, .25, false); atual = a; };
+    const proximo = () => {
+      if (fila.length) { const [n, v] = fila.shift(); toca(acao(n, v)); return; }
+      emote = null; toca(idle);
+    };
+    mixer.addEventListener("finished", proximo);
+    // De tempos em tempos o idle troca pela variação.
+    mixer.addEventListener("loop", e => {
+      if (e.action !== idle || emote) return;
+      if (++voltas % 3 === 0) { fila = [["idle_var", 1]]; emote = "var"; proximo(); }
+    });
+    const parado = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    canvas.title = t("emote");
+    canvas.addEventListener("click", () => {
+      if (parado || (emote && emote !== "var")) return;
+      const op = Object.keys(seq).filter(n => n !== ultima);
+      ultima = emote = op[Math.floor(Math.random() * op.length)];
+      fila = seq[emote].slice();
+      proximo();
+    });
+    idle.play();
+    const relogio = new THREE.Clock();
+    let visivel = true;
+    new IntersectionObserver(([e]) => { visivel = e.isIntersecting; }).observe(box);
+    const quadro = () => {
+      const dt = relogio.getDelta();
+      if (!document.hidden && visivel && box.offsetParent) { mixer.update(Math.min(dt, .1)); r.render(cena, cam); }
+      if (!parado) requestAnimationFrame(quadro);
+    };
+    mixer.update(0);
+    quadro();
+    if (parado) r.render(cena, cam);
+    box.classList.add("pronto");
+    cena3d = { canvas };
+  } catch (e) {
+    console.warn("Akshan 3D não carregou:", e);
+    raiz.classList.remove("com-3d");
+  }
+}
+const depois = window.requestIdleCallback || (f => setTimeout(f, 1200));
+addEventListener("load", () => depois(iniciaAkshan3d));
+TELA_3D.addEventListener("change", iniciaAkshan3d);
 </script>
 
 </body>

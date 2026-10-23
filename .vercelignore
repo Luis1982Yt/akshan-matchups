@@ -1,4 +1,5 @@
-# Publica só o site gerado e os sons; o resto (fontes, dados, scripts e notas do projeto) fica fora.
+# Publica só o site gerado, os sons e o modelo 3D; o resto (fontes, dados, scripts e notas do projeto) fica fora.
 /*
 !index.html
 !sons/
+!modelo/
