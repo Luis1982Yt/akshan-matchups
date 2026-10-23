@@ -22,7 +22,7 @@ Guias atuais:
 
 - `src/template.html`: HTML, CSS e JS do site. É aqui que se edita. Os marcadores `/*FONTS*/` e `/*GUIAS*/` recebem as fontes e os dados.
 - `src/guias.json`: a lista de guias (ordem do menu, autor, créditos, formato e pasta dos dados).
-- `src/guias/akshan/`: `rows.js` no formato `[campeão, runa, secundária, feitiço, bota, build, lembrete, noGuia(1/0)]`, `meta.json` com ids, títulos (pt e en) e ícones, e `traducao_en.json`.
+- `src/guias/akshan/`: `rows.js` no formato `[campeão, runa, secundária, feitiço, bota, build, lembrete, noGuia(1/0)]`, `meta.json` com ids, títulos (pt e en), ícones e `foco` (ponto do rosto no splash, em % de largura e altura: a arte e a mira do card se ajustam por ele; campeão novo sem `foco` usa 50, 28), e `traducao_en.json`.
 - `scripts/atualizar_akshan.py`: baixa a planilha do Peteruso para a cópia embutida (a que aparece sem internet), acrescenta campeões novos e lista linhas sem tradução. Depois rode o build.
 - `src/guias/mordekaiser/`: `planilha.csv` (cópia da planilha) e `matchups.json` (a planilha separada em runas, itens, dificuldade e seções).
 - `src/fonts/`: Cinzel e Hanken Grotesk (subconjunto latino), embutidas no HTML pelo build.

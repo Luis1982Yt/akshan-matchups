@@ -211,12 +211,12 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .mira .aro { fill: none; stroke: var(--acento); stroke-width: 1.5px; }
 .mira .aro.fino { stroke-width: 1px; opacity: .45; }
 .mira .setas { fill: var(--acento-vivo); }
-.alvo { position: absolute; z-index: 1; left: 50%; top: 5%; height: 58%; aspect-ratio: 1; transform: translateX(-50%); overflow: visible; pointer-events: none; filter: drop-shadow(0 0 4px rgba(255, 214, 120, .75)) drop-shadow(0 1px 3px rgba(0, 0, 0, .6)); }
+.alvo { position: absolute; z-index: 1; left: 50%; top: 34%; height: 58%; aspect-ratio: 1; transform: translate(-50%, -50%); overflow: visible; pointer-events: none; filter: drop-shadow(0 0 4px rgba(255, 214, 120, .75)) drop-shadow(0 1px 3px rgba(0, 0, 0, .6)); }
 .alvo .losango { fill: none; stroke: #ffe39a; stroke-width: 3.5px; }
 .alvo .aro-alvo { fill: none; stroke: #fff4d6; stroke-width: 1px; opacity: .6; }
 .alvo .setas-alvo { fill: #fff4d6; opacity: .85; }
 .alvo.travando { animation: trava-alvo .5s cubic-bezier(.16, 1, .3, 1) both; }
-@keyframes trava-alvo { from { opacity: 0; transform: translateX(-50%) scale(1.35); } }
+@keyframes trava-alvo { from { opacity: 0; transform: translate(-50%, -50%) scale(1.35); } }
 :root:not([data-guia="akshan"]) .alvo, :root:not([data-guia="akshan"]) .seta-mira { display: none; }
 /* As setas da mira do Akshan são anterior/próximo de verdade. */
 .seta-mira { position: absolute; z-index: 2; top: 50%; width: 44px; height: 44px; margin-top: -22px; display: grid; place-items: center; padding: 0; border: 0; background: none; cursor: pointer; color: var(--acento-vivo); }
@@ -369,7 +369,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   .quem .guia { white-space: nowrap; font-size: 12.5px; }
   .quem .guia .pips i { width: 8px; height: 8px; }
   .setup-completo .dif { order: -1; }
-  .alvo { top: 13%; height: 32%; }
+  .alvo { top: 29%; height: 32%; }
   .quem .n { font-size: 20px; }
   .quem .n.longo { font-size: 16px; }
   .travar { width: 54px; height: 54px; font-size: 17px; }
@@ -598,7 +598,7 @@ function prepara(g) {
   if (g.formato === "simples") {
     g.lista = g.matchups.map(([nome, runa, sec, spell, bota, build, notas, guia]) => ({
       nome, runa, sec, spell, bota, build, guia: !!guia,
-      id: g.champs[nome].id, titulo: g.champs[nome].title, titulo_en: g.champs[nome].title_en, slug: slug(nome),
+      id: g.champs[nome].id, titulo: g.champs[nome].title, titulo_en: g.champs[nome].title_en, foco: g.champs[nome].foco, slug: slug(nome),
       linhas: notas.split("\n").map(l => l.trim().replace(/\s{2,}/g, " ")).filter(Boolean),
       hay: (nome + " " + notas + " " + notas.split("\n").map(l => (g.traducao && g.traducao.linhas[l.trim().replace(/\s{2,}/g, " ")]) || "").join(" ")).toLowerCase(),
     }));
@@ -816,6 +816,48 @@ function vizinhos(passos) {
   return passos.map(p => list[((i + p) % n + n) % n]);
 }
 
+/* ---------- Enquadramento das artes ----------
+   Cada splash tem o rosto num lugar. O recorte (object-position) leva o rosto o mais perto
+   possível do ponto alvo do card, e a mira vai para onde o rosto ficou de fato. */
+const FOCO_PADRAO = [50, 28];
+function enquadra(card, foco, alvo) {
+  const img = card.querySelector("img");
+  if (!img) return;
+  const W = card.clientWidth, H = card.clientHeight;
+  if (!W || !H) return;
+  const [fx, fy] = (foco || FOCO_PADRAO).map(n => n / 100);
+  const s = Math.max(W / 1280, H / 720), iw = 1280 * s, ih = 720 * s;
+  const ox = iw - W, oy = ih - H;
+  // Ponto do card onde o rosto deveria ficar: o centro da mira (ou um pouco acima do meio).
+  const cs = alvo ? getComputedStyle(alvo) : null;
+  const ty = cs ? parseFloat(cs.top) / H : .3;
+  const lim = (v, a, b) => Math.min(Math.max(v, a), b);
+  let dx = lim(fx * iw - W / 2, 0, ox);
+  const dy = lim(fy * ih - ty * H, 0, oy);
+  if (alvo) {
+    const r = parseFloat(cs.height) / 2, k = r * .8;
+    let x = lim(fx * iw - dx, r, W - r), y = lim(fy * ih - dy, r * .6, H - r);
+    // Rosto muito no alto encosta na etiqueta "Inimigo": puxa a arte para o lado e, se não der, desce a mira.
+    const selo = card.querySelector(".selo"), sl = selo.offsetLeft - 4, sb = selo.offsetTop + selo.offsetHeight + 4;
+    if (x + k > sl && y - k < sb) {
+      dx = lim(fx * iw - (sl - k), 0, ox);
+      x = lim(fx * iw - dx, r, W - r);
+      if (x + k > sl) y = Math.min(sb + k, H - r);
+    }
+    alvo.style.left = x + "px";
+    alvo.style.top = y + "px";
+  }
+  img.style.objectPosition = `${ox > 0 ? dx / ox * 100 : 50}% ${oy > 0 ? dy / oy * 100 : 50}%`;
+}
+function enquadraTudo() {
+  if (!guia || !current) return;
+  enquadra($("artVoce").parentElement, focoDe(guia.campeao.id));
+  $("alvo").style.left = $("alvo").style.top = "";
+  enquadra($("artEle").parentElement, current.foco || focoDe(current.id), $("alvo"));
+}
+const focoDe = id => { const c = guia.champs && Object.values(guia.champs).find(x => x.id === id); return c && c.foco; };
+new ResizeObserver(() => enquadraTudo()).observe($("artEle").parentElement);
+
 /* ---------- Formato simples (planilha do Akshan) ---------- */
 const ICON = [
   [/^pta$/i, "PTA", "runa"], [/^electro$/i, "Electro", "runa"],
@@ -901,6 +943,7 @@ function notasCompleto(c) {
 function renderDetalhe(animar) {
   const c = current, eu = guia.campeao;
   $("artEle").innerHTML = `<img src="${cena(c.id)}" alt="${t("arteDe")}${esc(c.nome)}">`;
+  enquadraTudo();
   $("eleNome").textContent = c.nome;
   $("eleNome").classList.toggle("longo", c.nome.length > 9);
   $("eleTitulo").textContent = tituloDe(c);
