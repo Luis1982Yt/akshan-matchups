@@ -41,7 +41,7 @@ def guia_simples(cfg, pasta):
     planilha = pasta / "icones_planilha.json"
     return {"campeao": {"id": eu["id"], "nome": cfg["campeao"], "titulo": eu["title"], "titulo_en": eu.get("title_en", "")},
             "champs": meta["champs"], "icones": meta["icons"], "matchups": rows,
-            "pecas": meta.get("pecas", {}), "texto_pecas": meta.get("texto_pecas", {}),
+            "pecas": meta.get("pecas", {}), "texto_pecas": meta.get("texto_pecas", {}), "pecas_manuais": meta.get("pecas_manuais", {}),
             "icones_planilha": json.loads(planilha.read_text(encoding="utf-8")) if planilha.exists() else {},
             "traducao": json.loads(traducao.read_text(encoding="utf-8")) if traducao.exists() else None}
 

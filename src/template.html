@@ -28,6 +28,9 @@ try {
   document.documentElement.dataset.guia = ids.includes(h) ? h : ids.includes(g) ? g : ids[0];
   const l = localStorage.getItem("lingua") || ((navigator.language || "").toLowerCase().startsWith("pt") ? "pt" : "en");
   document.documentElement.lang = l === "en" ? "en" : "pt-BR";
+  if (location.protocol !== "file:") {
+    const m = document.createElement("link"); m.rel = "manifest"; m.href = "manifest.webmanifest"; document.head.appendChild(m);
+  }
   if (location.protocol !== "file:" && matchMedia("(min-width: 1720px)").matches && document.documentElement.dataset.guia === "akshan" && localStorage.getItem("akshan3d") !== "0") {
     [["modulepreload", "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js"], ["modulepreload", "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/loaders/GLTFLoader.js"], ["modulepreload", "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/utils/BufferGeometryUtils.js"],
      ["preload", "modelo/akshan.glb"]].forEach(([rel, href]) => {
@@ -302,6 +305,31 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 :root[data-guia="akshan"] .pick[aria-current="true"] { box-shadow: none; }
 :root[data-guia="akshan"] .pick[aria-current="true"]::before { content: ""; position: absolute; z-index: 2; inset: -6px; border: 2px solid var(--destaque); transform: rotate(45deg) scale(.78); pointer-events: none; }
 .pick:focus-visible { outline-offset: 2px; }
+.ver-tier { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 40px; margin: 12px auto 0; padding: 0 16px; border-radius: 999px; border: 1px solid var(--linha-forte); background: var(--painel-alto); color: var(--texto); font: 700 13px var(--corpo); cursor: pointer; }
+.ver-tier[hidden] { display: none; }
+.ver-tier:hover { border-color: var(--acento-vivo); }
+.ver-tier svg { color: var(--acento-vivo); }
+.tier { width: min(980px, calc(100vw - 32px)); max-height: calc(100vh - 48px); padding: 0; border-radius: 14px; border: 1px solid var(--linha-forte); background: var(--fundo); color: var(--texto); box-shadow: var(--sombra); }
+.tier::backdrop { background: rgba(0, 0, 0, .7); }
+.tier-topo { position: sticky; top: 0; z-index: 1; display: flex; align-items: center; gap: 12px; padding: 16px 20px; background: var(--fundo); border-bottom: 1px solid var(--linha); }
+.tier-topo h2 { margin: 0; font: 700 18px var(--titulo); letter-spacing: .14em; text-transform: uppercase; color: var(--acento-vivo); }
+.tier-fecha { margin-left: auto; width: 40px; height: 40px; display: grid; place-items: center; padding: 0; border-radius: 50%; border: 1px solid var(--linha-forte); background: var(--painel); color: var(--texto); cursor: pointer; }
+.tier-corpo { display: grid; gap: 10px; padding: 16px 20px 20px; }
+.tier-linha { display: grid; grid-template-columns: 150px minmax(0, 1fr); border-radius: 10px; overflow: hidden; border: 1px solid var(--linha); background: var(--painel); }
+.tier-rot { display: flex; align-items: center; justify-content: center; padding: 10px; text-align: center; font: 800 15px var(--titulo); letter-spacing: .06em; text-transform: uppercase; color: #111; background: var(--dif); }
+.tier-rot small { display: block; font: 600 12px var(--corpo); letter-spacing: 0; text-transform: none; opacity: .75; }
+.tier-campeoes { display: flex; flex-wrap: wrap; gap: 8px; padding: 10px; }
+.tier-campeoes button { display: grid; justify-items: center; gap: 4px; width: 64px; padding: 0; border: 0; background: none; color: var(--texto); font: 600 11px/1.2 var(--corpo); cursor: pointer; }
+.tier-campeoes img { width: 52px; height: 52px; border-radius: 6px; border: 2px solid var(--dif); background: var(--painel-alto); }
+.tier-campeoes button:hover img, .tier-campeoes button:focus-visible img { outline: 2px solid var(--destaque); outline-offset: 2px; }
+.tier-campeoes button span { max-width: 64px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+@media (max-width: 900px) {
+  .tier { width: 100vw; max-width: none; height: 100dvh; max-height: none; margin: 0; border-radius: 0; border: 0; }
+  .tier-linha { grid-template-columns: minmax(0, 1fr); }
+  .tier-rot { justify-content: flex-start; gap: 8px; padding: 8px 12px; }
+  .tier-rot small { display: inline; margin-left: 8px; }
+  .tier-campeoes { gap: 6px; }
+}
 .legenda { margin: 10px 0 0; text-align: center; font-size: 13px; color: var(--texto-baixo); }
 .legenda kbd { padding: 1px 6px; border-radius: 4px; border: 1px solid var(--linha-forte); font: 600 12px var(--corpo); color: var(--texto); }
 @media (hover: none) { .legenda .atalhos { display: none; } }
@@ -412,6 +440,13 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .acompanhe .canal > span { min-width: 0; }
 .acompanhe .canal small { display: block; font-size: 12px; line-height: 1.3; color: var(--texto-baixo); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .acompanhe .canal .ir { margin-left: auto; flex: none; font-size: 16px; font-weight: 700; color: var(--acento-vivo); }
+.acompanhe li { display: flex; }
+.acompanhe .canal { flex: 1; }
+.acompanhe .canal.ao-vivo { border-color: #e5484d; box-shadow: 0 0 0 1px #e5484d inset; }
+.acompanhe .canal.ao-vivo small { color: #ff6b6f; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+.acompanhe .canal.ao-vivo small::before { content: ""; display: inline-block; width: 7px; height: 7px; margin-right: 5px; border-radius: 50%; background: #ff3b3f; vertical-align: 1px; animation: pulsa-vivo 1.2s ease-in-out infinite alternate; }
+@keyframes pulsa-vivo { from { opacity: .35; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .acompanhe .canal.ao-vivo small::before { animation: none; } }
 .acompanhe .dev { margin: 10px 0 0; text-align: center; font-size: 13px; color: var(--texto-baixo); }
 .acompanhe .dev b { color: var(--texto); }
 .rodape p { margin: 0; }
@@ -544,6 +579,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
         <div class="lista" id="lista" role="group" aria-label="Campeões" data-t-aria="campeoes"></div>
         <p class="vazio" id="vazio" role="status" hidden><span data-t="vazio">Nenhum campeão com essa busca.</span> <button type="button" id="limpar" data-t="limpar">Limpar busca e filtros</button></p>
       </div>
+      <button class="ver-tier" type="button" id="verTier" hidden><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 3h12M2 8h12M2 13h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span data-t="tierBotao">Tier list das matchups</span></button>
       <p class="legenda" id="legenda"></p>
     </nav>
     </div>
@@ -592,6 +628,10 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 </main>
 
 <div class="trava" id="trava" hidden aria-hidden="true"></div>
+<dialog class="tier" id="tier" aria-labelledby="tierTit">
+  <div class="tier-topo"><h2 id="tierTit"></h2><button class="tier-fecha" type="button" id="tierFecha" data-t-aria="fechar"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button></div>
+  <div class="tier-corpo" id="tierCorpo"></div>
+</dialog>
 <button class="abre3d" type="button" id="abre3d" data-t-aria="mostra3d" hidden>Akshan 3D</button>
 
 <script>
@@ -635,7 +675,7 @@ const TXT = {
     linguaRotulo: "Switch to English", linguaBotao: "EN",
     guiaAtual: "Guia atual: ", trocarGuia: ". Trocar de guia", notasDo: "notas do ", matchups: " matchups", aberto: "Aberto",
     facil: "Fácil", medio: "Médio", dificil: "Difícil", resumo: "Resumo", runas: "Runas", itens: "Itens", geral: "Geral",
-    principal: "Principal", fragmentos: "Fragmentos", emote: "Arraste para girar · clique para uma emote", mostra3d: "Mostrar o Akshan 3D", esconde3d: "Esconder o Akshan 3D", carrega3d: "Carregando o Akshan…", acompanhe: "Acompanhe mono {c}s", assistir: "Assistir", devPor: "Site feito por", animacoes: "Animações do Akshan",
+    principal: "Principal", fragmentos: "Fragmentos", emote: "Arraste para girar · clique para uma emote", mostra3d: "Mostrar o Akshan 3D", esconde3d: "Esconder o Akshan 3D", carrega3d: "Carregando o Akshan…", tierBotao: "Tier list das matchups", tierTit: "Tier list · {c}", fechar: "Fechar", aoVivo: "Ao vivo", campeoesN: n => `${n} ${n === 1 ? "campeão" : "campeões"}`, acompanhe: "Acompanhe mono {c}s", assistir: "Assistir", devPor: "Site feito por", animacoes: "Animações do Akshan",
     a_dance: "Dança", a_taunt: "Provocação", a_laugh: "Risada", a_attack: "Ataque", a_recall: "Recall",
   },
   en: {
@@ -657,7 +697,7 @@ const TXT = {
     linguaRotulo: "Mudar para português", linguaBotao: "PT",
     guiaAtual: "Current guide: ", trocarGuia: ". Change guide", notasDo: "notes by ", matchups: " matchups", aberto: "Open",
     facil: "Easy", medio: "Medium", dificil: "Hard", resumo: "Summary", runas: "Runes", itens: "Items", geral: "Overall",
-    principal: "Primary", fragmentos: "Shards", emote: "Drag to rotate · click for an emote", mostra3d: "Show 3D Akshan", esconde3d: "Hide 3D Akshan", carrega3d: "Loading Akshan…", acompanhe: "Watch {c} one-tricks", assistir: "Watch", devPor: "Site by", animacoes: "Akshan animations",
+    principal: "Primary", fragmentos: "Shards", emote: "Drag to rotate · click for an emote", mostra3d: "Show 3D Akshan", esconde3d: "Hide 3D Akshan", carrega3d: "Loading Akshan…", tierBotao: "Matchup tier list", tierTit: "Tier list · {c}", fechar: "Close", aoVivo: "Live", campeoesN: n => `${n} champion${n === 1 ? "" : "s"}`, acompanhe: "Watch {c} one-tricks", assistir: "Watch", devPor: "Site by", animacoes: "Akshan animations",
     a_dance: "Dance", a_taunt: "Taunt", a_laugh: "Laugh", a_attack: "Attack", a_recall: "Recall",
   },
 };
@@ -874,6 +914,8 @@ function renderGuia() {
   $("acompanhe").innerHTML = ac.length ? `<h2 id="acompanheTit">${losango}<span>${esc(t("acompanhe").replace("{c}", guia.campeao.nome))}</span>${losango}</h2>
     <ul>${ac.map(x => `<li><a class="canal" href="${esc(x.url)}" target="_blank" rel="noopener">${twitch}<span><b>${esc(x.nome)}</b><small>Twitch</small></span><span class="ir" aria-hidden="true">→</span><span class="sr">, ${t("assistir")}</span></a></li>`).join("")}</ul>
     <p class="dev">${t("devPor")} <b>Luis1982</b></p>` : "";
+  $("verTier").hidden = !(guia.lista && guia.lista.some(c => c.dif));
+  if (typeof marcaAoVivo === "function" && document.readyState === "complete") marcaAoVivo();
   $("rodape").innerHTML = `<p>${esc((L === "en" && guia.fonte_en) || guia.fonte)}${links ? " " + links + "." : ""} ${t("rodapeRiot")}</p><p id="estadoPlanilha" class="estado-planilha" role="status"></p>`;
   mostraPlanilha(guia);
 }
@@ -976,6 +1018,9 @@ function opt(raw) {
 function pecasDe(c, campo, val) {
   const p = guia.icones_planilha && guia.icones_planilha[c.nome] && guia.icones_planilha[c.nome][campo];
   if (p && p.texto === val && p.pecas.length) return p.pecas;
+  // Célula sem imagem na planilha: vale a escolha feita à mão (meta.json > pecas_manuais), se o texto bate.
+  const m = guia.pecas_manuais && guia.pecas_manuais[c.nome] && guia.pecas_manuais[c.nome][campo];
+  if (m && m.texto === val) return m.pecas;
   const chaves = val.replace(/rush/i, "").replace(/!+/g, "").split(/\s*[\/,]\s*/)
     .flatMap(w => (guia.texto_pecas || {})[w.trim().toLowerCase()] || []);
   return [...new Set(chaves)];
@@ -1292,6 +1337,54 @@ addEventListener("hashchange", () => {
 aplicaTextos();
 escolheGuia(...lerHash());
 
+/* ---------- Tier list: os campeões agrupados pela dificuldade da planilha ---------- */
+function abreTier() {
+  $("tierTit").textContent = t("tierTit").replace("{c}", guia.campeao.nome);
+  $("tierCorpo").innerHTML = DIFS.map(d => {
+    const cs = guia.lista.filter(c => c.dif === d).sort((a, b) => a.nome.localeCompare(b.nome));
+    if (!cs.length) return "";
+    return `<section class="tier-linha" style="--dif: var(--dif-${d})" aria-label="${esc(rotuloDif(d))}">
+      <div class="tier-rot"><div>${esc(rotuloDif(d))}<small>${t("campeoesN", cs.length)}</small></div></div>
+      <div class="tier-campeoes">${cs.map(c => `<button type="button" data-id="${c.slug}" title="${esc(c.nome)}"><img src="${sq(c.id)}" alt="" width="52" height="52"><span>${esc(c.nome)}</span></button>`).join("")}</div>
+    </section>`;
+  }).join("");
+  toca("abre");
+  $("tier").showModal();
+}
+$("verTier").addEventListener("click", abreTier);
+$("tierFecha").addEventListener("click", () => $("tier").close());
+$("tier").addEventListener("close", () => toca("fecha"));
+// Clicar fora do conteúdo (no fundo escuro) fecha.
+$("tier").addEventListener("click", e => { if (e.target === $("tier")) $("tier").close(); });
+$("tierCorpo").addEventListener("click", e => {
+  const b = e.target.closest("[data-id]");
+  if (!b) return;
+  $("tier").close();
+  toca("grade");
+  select(guia.lista.find(c => c.slug === b.dataset.id));
+  $("matchup").scrollIntoView({ behavior: semMovimento() ? "auto" : "smooth", block: "start" });
+});
+
+/* ---------- Ao vivo: quem do "Acompanhe" está em live na Twitch (decapi.me responde sem chave) ---------- */
+async function marcaAoVivo() {
+  const links = [...document.querySelectorAll("#acompanhe .canal")];
+  if (!links.length) return;
+  await Promise.all(links.map(async a => {
+    const login = new URL(a.href).pathname.split("/")[1];
+    try {
+      const r = await fetch(`https://decapi.me/twitch/uptime/${encodeURIComponent(login)}`, { cache: "no-store" });
+      const txt = r.ok ? await r.text() : "";
+      // Em live a resposta é o tempo no ar ("1 hour, 5 minutes"); fora, "... is offline".
+      const vivo = /\d+\s+(second|minute|hour|day)/i.test(txt) && !/offline/i.test(txt);
+      a.classList.toggle("ao-vivo", vivo);
+      a.querySelector("small").textContent = vivo ? t("aoVivo") : "Twitch";
+      a.closest("li").style.order = vivo ? -1 : "";
+    } catch (e) {}
+  }));
+}
+setTimeout(marcaAoVivo, 1500);
+setInterval(marcaAoVivo, 5 * 60 * 1000);
+
 /* ---------- Akshan 3D ----------
    Modelo do jogo (modelo/akshan.glb, gerado por scripts/modelo3d) em idle; arrastar gira, clique faz
    uma emote e os botões tocam cada animação. Só carrega em tela larga, no guia do Akshan e no site
@@ -1469,7 +1562,11 @@ async function iniciaAkshan3d() {
     atualiza3d();
   }
 }
-setTimeout(atualiza3d, 50);  // logo depois de montar a página, sem esperar as imagens
+setTimeout(atualiza3d, 50);
+// App instalável e abrindo sem internet (sw.js); aberto como arquivo não tem como.
+if ("serviceWorker" in navigator && location.protocol !== "file:") {
+  addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
+}  // logo depois de montar a página, sem esperar as imagens
 TELA_3D.addEventListener("change", atualiza3d);
 </script>
 

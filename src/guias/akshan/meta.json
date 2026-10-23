@@ -695,5 +695,16 @@
     "26fac1a3e008e5d310a43019bd5896e2": "3031",
     "c74ef59fcaaf0658b4cb65663f110fda": "6672",
     "26af74366540757f4c01ea5baf085b47": "3009"
+  },
+  "pecas_manuais": {
+    "Malphite": {
+      "build": {
+        "texto": "Terminus / Crit",
+        "pecas": [
+          "3302",
+          "3031"
+        ]
+      }
+    }
   }
 }
