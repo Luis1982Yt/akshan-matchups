@@ -20,6 +20,14 @@ TEXTURA = {"Weapon": "weapon", "Hook": "weapon", "Boomerang": "weapon"}  # o res
 ANIMACOES = [  # (nome no glb, arquivo)
     ("idle", "akshan_idle1.anm"), ("idle_var", "idle1_var1.anm"), ("dance_intro", "dance_intro.anm"),
     ("dance", "dance_loop.anm"), ("joke", "joke.anm"), ("laugh", "laugh.anm"),
+    ("taunt_intro", "taunt_intro.anm"), ("taunt", "taunt_cycle.anm"),
+    ("attack1", "attack1.anm"), ("attack2", "attack2.anm"), ("crit", "akshan_base_crit.anm"), ("crit_to_idle", "crit_to_idle.anm"),
+    ("q", "spell1.anm"), ("q_catch", "spell1_catch.anm"),
+    ("w_intro", "spell2_intro.anm"), ("w_idle", "spell2_idle.anm"), ("w_exit", "spell2_exit.anm"),
+    ("e", "akshan_spell3.anm"), ("e_swing", "akshan_spell3_swing_shooting_0.anm"), ("e_to_idle", "akshan_spell3_to_idle.anm"),
+    ("r_cast", "akshan_base_spell4_cast_nomove.anm"), ("r", "akshan_base_spell4_nomove_0.anm"),
+    ("r_last", "akshan_base_spell4_lasthit.anm"), ("r_to_idle", "akshan_base_spell4_lasthit_to_idle.anm"),
+    ("recall", "recall.anm"),
 ]
 TOL_POS, TOL_ROT, TOL_ESC = 0.02, 0.0004, 0.001  # erro aceito ao tirar quadros (unidades do jogo, 1-|dot|, escala)
 

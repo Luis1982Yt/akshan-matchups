@@ -146,7 +146,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .acoes { margin-left: auto; display: flex; gap: 8px; }
 .tema, .som, .lingua { width: 44px; height: 44px; flex: none; display: grid; place-items: center; cursor: pointer; border-radius: 50%; border: 1px solid var(--linha-forte); background: transparent; color: var(--acento-vivo); }
 .tema:hover, .som:hover, .lingua:hover { background: var(--painel-alto); }
-.lingua { font: 700 13px var(--corpo); letter-spacing: .04em; }
+.lingua, .mostra3d { font: 700 13px var(--corpo); letter-spacing: .04em; }
 .trocar:disabled { cursor: default; }
 .trocar:disabled:hover { border-color: transparent; background: none; }
 .trocar:disabled svg { display: none; }
@@ -169,12 +169,21 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   :root.com-3d[data-guia="akshan"] .bar-in { max-width: 1760px; }
   :root.com-3d[data-guia="akshan"] .palco { max-width: 1760px; grid-template-columns: 440px minmax(0, 1fr) 380px; }
   :root.com-3d[data-guia="akshan"] .akshan3d {
-    display: block; position: sticky; top: calc(env(safe-area-inset-top, 0px) + var(--barra) + 16px);
-    height: calc(100vh - var(--barra) - 48px); min-height: 520px;
+    display: grid; grid-template-rows: minmax(0, 1fr) auto; gap: 12px;
+    position: sticky; top: calc(env(safe-area-inset-top, 0px) + var(--barra) + 16px);
+    height: calc(100vh - var(--barra) - 48px); min-height: 560px;
   }
 }
-.akshan3d canvas { display: block; width: 100%; height: 100%; cursor: pointer; opacity: 0; transition: opacity .8s ease; }
-.akshan3d.pronto canvas { opacity: 1; }
+.akshan3d canvas { display: block; width: 100%; height: 100%; min-height: 0; cursor: grab; touch-action: none; opacity: 0; transition: opacity .8s ease; }
+.akshan3d canvas.girando { cursor: grabbing; }
+.akshan3d.pronto canvas, .akshan3d.pronto .anim3d { opacity: 1; }
+.anim3d { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; opacity: 0; transition: opacity .8s ease; }
+.anim3d button { min-height: 36px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--linha-forte); background: var(--painel); color: var(--texto); font: 700 13px var(--corpo); cursor: pointer; }
+.anim3d button.tecla { min-width: 36px; padding: 0; font-family: var(--titulo); }
+.anim3d button:hover { background: var(--painel-alto); }
+.anim3d button[aria-pressed="true"] { border-color: var(--acento-vivo); color: var(--acento-vivo); }
+.mostra3d[hidden] { display: none; }
+.mostra3d[aria-pressed="false"] { color: var(--texto-baixo); }
 .duelo { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .card { position: relative; overflow: hidden; height: 240px; border-radius: 10px; background: var(--painel); border: 1px solid var(--linha-forte); box-shadow: var(--sombra); }
 .card img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; }
@@ -443,6 +452,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
       </div>
     </div>
     <div class="acoes">
+    <button class="lingua mostra3d" type="button" id="mostra3d" aria-pressed="true" data-t-aria="mostra3d" data-t-title="mostra3d" hidden>3D</button>
     <button class="lingua" type="button" id="lingua"></button>
     <button class="som" type="button" id="som" aria-pressed="true" aria-label="Sons do cliente do LoL">
       <svg class="ligado" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M15.5 9a4.2 4.2 0 0 1 0 6M18.2 6.5a8 8 0 0 1 0 11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
@@ -519,7 +529,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 
       <footer class="rodape" id="rodape"></footer>
     </div>
-    <aside class="akshan3d" id="akshan3d" aria-hidden="true"><canvas id="cena3d"></canvas></aside>
+    <aside class="akshan3d" id="akshan3d" aria-label="Akshan 3D"><canvas id="cena3d" aria-hidden="true" data-t-title="emote"></canvas><div class="anim3d" id="anim3d" role="group" data-t-aria="animacoes"></div></aside>
   </div>
 </main>
 
@@ -566,7 +576,8 @@ const TXT = {
     linguaRotulo: "Switch to English", linguaBotao: "EN",
     guiaAtual: "Guia atual: ", trocarGuia: ". Trocar de guia", notasDo: "notas do ", matchups: " matchups", aberto: "Aberto",
     facil: "Fácil", medio: "Médio", dificil: "Difícil", resumo: "Resumo", runas: "Runas", itens: "Itens", geral: "Geral",
-    principal: "Principal", fragmentos: "Fragmentos", emote: "Clique no Akshan para ele fazer uma emote",
+    principal: "Principal", fragmentos: "Fragmentos", emote: "Arraste para girar · clique para uma emote", mostra3d: "Mostrar o Akshan 3D", animacoes: "Animações do Akshan",
+    a_dance: "Dança", a_joke: "Piada", a_taunt: "Provocação", a_laugh: "Risada", a_attack: "Ataque", a_recall: "Recall",
   },
   en: {
     pular: "Skip to matchup", guiasTit: "Matchup guides", dica: "The site always opens on the last guide you used.",
@@ -587,7 +598,8 @@ const TXT = {
     linguaRotulo: "Mudar para português", linguaBotao: "PT",
     guiaAtual: "Current guide: ", trocarGuia: ". Change guide", notasDo: "notes by ", matchups: " matchups", aberto: "Open",
     facil: "Easy", medio: "Medium", dificil: "Hard", resumo: "Summary", runas: "Runes", itens: "Items", geral: "Overall",
-    principal: "Primary", fragmentos: "Shards", emote: "Click Akshan to make him emote",
+    principal: "Primary", fragmentos: "Shards", emote: "Drag to rotate · click for an emote", mostra3d: "Show 3D Akshan", animacoes: "Akshan animations",
+    a_dance: "Dance", a_joke: "Joke", a_taunt: "Taunt", a_laugh: "Laugh", a_attack: "Attack", a_recall: "Recall",
   },
 };
 let L = document.documentElement.lang === "en" ? "en" : "pt";
@@ -602,7 +614,6 @@ function aplicaTextos() {
   $("lingua").textContent = t("linguaBotao");
   $("lingua").setAttribute("aria-label", t("linguaRotulo"));
   $("lingua").setAttribute("lang", L === "en" ? "pt-BR" : "en");
-  if ($("cena3d")) $("cena3d").title = t("emote");
 }
 
 /* ---------- Sons do cliente do LoL (pasta sons/, ao lado do index.html) ---------- */
@@ -1208,16 +1219,41 @@ aplicaTextos();
 escolheGuia(...lerHash());
 
 /* ---------- Akshan 3D ----------
-   Modelo do jogo (modelo/akshan.glb, gerado por scripts/modelo3d) parado em idle; clique faz uma emote.
-   Só carrega em tela larga, no guia do Akshan e no site publicado (aberto como arquivo o navegador
-   bloqueia o .glb), e depois que o resto da página já abriu. */
+   Modelo do jogo (modelo/akshan.glb, gerado por scripts/modelo3d) em idle; arrastar gira, clique faz
+   uma emote e os botões tocam cada animação. Só carrega em tela larga, no guia do Akshan e no site
+   publicado (aberto como arquivo o navegador bloqueia o .glb), depois que o resto da página abriu.
+   O botão 3D do topo esconde e centraliza tudo de novo (vem ligado). */
 const TELA_3D = matchMedia("(min-width: 1720px)");
-let cena3d = null;
+// Cada botão toca uma sequência de clipes: [nome no .glb, quantas vezes].
+const SEQ_3D = {
+  dance: [["dance_intro", 1], ["dance", 2]], joke: [["joke", 1]], taunt: [["taunt_intro", 1], ["taunt", 3]], laugh: [["laugh", 1]],
+  attack: [["attack1", 1], ["attack2", 1], ["crit", 1], ["crit_to_idle", 1]],
+  q: [["q", 1], ["q_catch", 1]], w: [["w_intro", 1], ["w_idle", 1], ["w_exit", 1]],
+  e: [["e", 1], ["e_swing", 3], ["e_to_idle", 1]], r: [["r_cast", 1], ["r", 1], ["r_last", 1], ["r_to_idle", 1]],
+  recall: [["recall", 1]],
+};
+const EMOTES_3D = ["dance", "joke", "taunt", "laugh"];
+let estado3d = "";  // "" ainda não tentou, "carregando", "pronto" ou "falhou"
+let ligado3d = true;
+try { ligado3d = localStorage.getItem("akshan3d") !== "0"; } catch (e) {}
+
+function atualiza3d() {
+  const pode = location.protocol !== "file:" && TELA_3D.matches && guia && guia.id === "akshan" && estado3d !== "falhou";
+  $("mostra3d").hidden = !pode;
+  $("mostra3d").setAttribute("aria-pressed", ligado3d);
+  document.documentElement.classList.toggle("com-3d", pode && ligado3d);
+  if (pode && ligado3d && !estado3d) iniciaAkshan3d();
+}
+$("mostra3d").addEventListener("click", () => {
+  ligado3d = !ligado3d;
+  try { localStorage.setItem("akshan3d", ligado3d ? "1" : "0"); } catch (e) {}
+  toca("clique");
+  atualiza3d();
+});
+
 async function iniciaAkshan3d() {
-  if (cena3d || location.protocol === "file:" || !TELA_3D.matches || guia.id !== "akshan") return;
-  cena3d = {};
-  const raiz = document.documentElement, box = $("akshan3d"), canvas = $("cena3d");
-  raiz.classList.add("com-3d");
+  estado3d = "carregando";
+  const box = $("akshan3d"), canvas = $("cena3d");
   try {
     const THREE = await import("three");
     const { GLTFLoader } = await import("three/addons/loaders/GLTFLoader.js");
@@ -1246,7 +1282,7 @@ async function iniciaAkshan3d() {
     cena.add(chao);
     // Folga para os chutes da dança e o braço levantado da piada.
     const enquadra = () => {
-      const w = box.clientWidth, h = box.clientHeight;
+      const w = canvas.clientWidth, h = canvas.clientHeight;
       if (!w || !h) return;
       r.setPixelRatio(Math.min(devicePixelRatio, 2)); r.setSize(w, h, false);
       cam.aspect = w / h;
@@ -1254,33 +1290,54 @@ async function iniciaAkshan3d() {
       cam.position.set(centro.x, centro.y + alt * .04, centro.z + dist); cam.lookAt(centro.x, centro.y + alt * .04, centro.z);
       cam.updateProjectionMatrix();
     };
-    new ResizeObserver(enquadra).observe(box);
+    new ResizeObserver(enquadra).observe(canvas);
     enquadra();
 
     const mixer = new THREE.AnimationMixer(m), clipe = n => gltf.animations.find(a => a.name === n);
     const acao = (n, vezes) => { const a = mixer.clipAction(clipe(n)); a.setLoop(THREE.LoopRepeat, vezes || Infinity); a.clampWhenFinished = true; return a; };
-    const idle = acao("idle"), seq = { dance: [["dance_intro", 1], ["dance", 2]], joke: [["joke", 1]], laugh: [["laugh", 1]] };
+    const idle = acao("idle");
+    const parado = matchMedia("(prefers-reduced-motion: reduce)").matches;
     let atual = idle, fila = [], emote = null, ultima = "", voltas = 0;
-    const toca = a => { a.reset().play(); if (atual !== a) a.crossFadeFrom(atual, .25, false); atual = a; };
+    const tocaClipe = a => { a.reset().play(); if (atual !== a) a.crossFadeFrom(atual, .25, false); atual = a; };
+    const marcaBotoes = () => $("anim3d").querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", b.dataset.anim === emote));
     const proximo = () => {
-      if (fila.length) { const [n, v] = fila.shift(); toca(acao(n, v)); return; }
-      emote = null; toca(idle);
+      if (fila.length) { const [n, v] = fila.shift(); tocaClipe(acao(n, v)); return; }
+      emote = null; marcaBotoes(); tocaClipe(idle);
     };
+    const anima = nome => { emote = nome; fila = SEQ_3D[nome].slice(); marcaBotoes(); proximo(); };
     mixer.addEventListener("finished", proximo);
     // De tempos em tempos o idle troca pela variação.
     mixer.addEventListener("loop", e => {
-      if (e.action !== idle || emote) return;
-      if (++voltas % 3 === 0) { fila = [["idle_var", 1]]; emote = "var"; proximo(); }
+      if (e.action !== idle || emote || parado) return;
+      if (++voltas % 3 === 0) { emote = "var"; fila = [["idle_var", 1]]; proximo(); }
     });
-    const parado = matchMedia("(prefers-reduced-motion: reduce)").matches;
-    canvas.title = t("emote");
-    canvas.addEventListener("click", () => {
-      if (parado || (emote && emote !== "var")) return;
-      const op = Object.keys(seq).filter(n => n !== ultima);
-      ultima = emote = op[Math.floor(Math.random() * op.length)];
-      fila = seq[emote].slice();
-      proximo();
+    if (parado) idle.paused = true;  // com "reduzir movimento" o idle fica parado; os botões ainda funcionam
+
+    $("anim3d").innerHTML = Object.keys(SEQ_3D).map(n => n.length === 1
+      ? `<button type="button" class="tecla" data-anim="${n}" aria-pressed="false">${n.toUpperCase()}</button>`
+      : `<button type="button" data-anim="${n}" data-t="a_${n}" aria-pressed="false">${t("a_" + n)}</button>`).join("");
+    $("anim3d").addEventListener("click", e => { const b = e.target.closest("[data-anim]"); if (b) anima(b.dataset.anim); });
+
+    // Arrastar gira; clique sem arrastar faz uma emote sorteada.
+    let arrasto = null;
+    canvas.addEventListener("pointerdown", e => { arrasto = { x: e.clientX, girou: false }; canvas.setPointerCapture(e.pointerId); });
+    canvas.addEventListener("pointermove", e => {
+      if (!arrasto) return;
+      const dx = e.clientX - arrasto.x;
+      if (!arrasto.girou && Math.abs(dx) < 4) return;
+      arrasto.girou = true; canvas.classList.add("girando");
+      m.rotation.y += dx * .012; arrasto.x = e.clientX;
     });
+    const solta = () => {
+      if (arrasto && !arrasto.girou) {
+        const op = EMOTES_3D.filter(n => n !== ultima);
+        anima(ultima = op[Math.floor(Math.random() * op.length)]);
+      }
+      arrasto = null; canvas.classList.remove("girando");
+    };
+    canvas.addEventListener("pointerup", solta);
+    canvas.addEventListener("pointercancel", () => { arrasto = null; canvas.classList.remove("girando"); });
+
     idle.play();
     const relogio = new THREE.Clock();
     let visivel = true;
@@ -1288,21 +1345,21 @@ async function iniciaAkshan3d() {
     const quadro = () => {
       const dt = relogio.getDelta();
       if (!document.hidden && visivel && box.offsetParent) { mixer.update(Math.min(dt, .1)); r.render(cena, cam); }
-      if (!parado) requestAnimationFrame(quadro);
+      requestAnimationFrame(quadro);
     };
     mixer.update(0);
     quadro();
-    if (parado) r.render(cena, cam);
     box.classList.add("pronto");
-    cena3d = { canvas };
+    estado3d = "pronto";
   } catch (e) {
     console.warn("Akshan 3D não carregou:", e);
-    raiz.classList.remove("com-3d");
+    estado3d = "falhou";
+    atualiza3d();
   }
 }
 const depois = window.requestIdleCallback || (f => setTimeout(f, 1200));
-addEventListener("load", () => depois(iniciaAkshan3d));
-TELA_3D.addEventListener("change", iniciaAkshan3d);
+addEventListener("load", () => depois(atualiza3d));
+TELA_3D.addEventListener("change", atualiza3d);
 </script>
 
 </body>
