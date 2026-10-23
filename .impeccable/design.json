@@ -1,58 +1,361 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-22T12:00:00Z",
+  "generatedAt": "2026-10-22T18:00:00Z",
   "title": "Design System: Guias de Matchup",
   "extensions": {
     "colorMeta": {
-      "fundo": { "role": "neutral", "displayName": "Preto Quente", "canonical": "#0c0b09", "tonalRamp": ["#0c0b09", "#15130f", "#1e1a13", "#3a3326", "#665b45", "#a99f88", "#e9e1cd", "#f6f0e1"] },
-      "painel": { "role": "neutral", "displayName": "Painel", "canonical": "#15130f", "tonalRamp": ["#0c0b09", "#15130f", "#1e1a13", "#2c271d", "#4a4233", "#7d735e", "#c4baa3", "#fffcf4"] },
-      "painel-alto": { "role": "neutral", "displayName": "Painel Alto", "canonical": "#1e1a13", "tonalRamp": ["#0c0b09", "#15130f", "#1e1a13", "#2c271d", "#4a4233", "#7d735e", "#c4baa3", "#efe5cd"] },
-      "linha": { "role": "neutral", "displayName": "Linha", "canonical": "rgba(214, 178, 98, .26)", "tonalRamp": [] },
-      "linha-forte": { "role": "neutral", "displayName": "Linha Forte", "canonical": "rgba(214, 178, 98, .55)", "tonalRamp": [] },
-      "acento": { "role": "primary", "displayName": "Ouro Sentinela", "canonical": "#d6b262", "tonalRamp": ["#2a200b", "#4a3913", "#6f4e0c", "#8a6416", "#b08a3a", "#d6b262", "#f2d488", "#fbefcf"] },
-      "acento-vivo": { "role": "primary", "displayName": "Ouro Aceso", "canonical": "#f2d488", "tonalRamp": ["#2a200b", "#4a3913", "#6f4e0c", "#8a6416", "#b08a3a", "#d6b262", "#f2d488", "#fbefcf"] },
-      "destaque": { "role": "secondary", "displayName": "Amarelo da Luz", "canonical": "#ffd96b", "tonalRamp": ["#2e2306", "#5a440c", "#8a6814", "#b88b1f", "#e3b23c", "#ffd96b", "#ffe6a3", "#fff4d6"] },
-      "texto": { "role": "neutral", "displayName": "Texto", "canonical": "#e9e1cd", "tonalRamp": [] },
-      "texto-baixo": { "role": "neutral", "displayName": "Texto Baixo", "canonical": "#a99f88", "tonalRamp": [] },
-      "tinta-botao": { "role": "neutral", "displayName": "Tinta do Botão", "canonical": "#17130a", "tonalRamp": [] },
-      "luz": { "role": "neutral", "displayName": "Luz de Cima", "canonical": "rgba(255, 228, 150, .16)", "tonalRamp": [] },
-      "sobre-arte": { "role": "tertiary", "displayName": "Nome na Arte", "canonical": "#ffe6a3", "tonalRamp": [] },
-      "destaque-arte": { "role": "tertiary", "displayName": "Destaque na Arte", "canonical": "#ffd96b", "tonalRamp": [] },
-      "botao-1": { "role": "tertiary", "displayName": "Metal do Botão (topo)", "canonical": "#ffe7a1", "tonalRamp": [] },
-      "botao-2": { "role": "tertiary", "displayName": "Metal do Botão (base)", "canonical": "#e2b24a", "tonalRamp": [] },
-      "brilho": { "role": "tertiary", "displayName": "Clarão (centro)", "canonical": "rgba(255, 240, 200, .55)", "tonalRamp": [] },
-      "brilho-2": { "role": "tertiary", "displayName": "Clarão (borda)", "canonical": "rgba(255, 210, 110, .18)", "tonalRamp": [] },
-      "claro-fundo": { "role": "neutral", "displayName": "Marfim (Akshan, claro)", "canonical": "#f6f0e1", "tonalRamp": [] },
-      "claro-acento": { "role": "primary", "displayName": "Ouro Escuro (Akshan, claro)", "canonical": "#8a6416", "tonalRamp": [] },
-      "claro-acento-vivo": { "role": "primary", "displayName": "Ouro Aceso Escuro (Akshan, claro)", "canonical": "#6f4e0c", "tonalRamp": [] },
-      "claro-destaque": { "role": "secondary", "displayName": "Amarelo (Akshan, claro)", "canonical": "#e3b23c", "tonalRamp": [] },
-      "morde-fundo": { "role": "neutral", "displayName": "Ferro (Mordekaiser)", "canonical": "#0a0d0c", "tonalRamp": ["#0a0d0c", "#121715", "#19201c", "#2c3631", "#4c5d53", "#92a39a", "#dde7e1", "#edf2ee"] },
-      "morde-acento": { "role": "primary", "displayName": "Verde de Ferro (Mordekaiser)", "canonical": "#63c98f", "tonalRamp": ["#04120a", "#0d2a1a", "#135a37", "#1d7448", "#3fbd78", "#63c98f", "#97ecbb", "#dff9ea"] },
-      "morde-acento-vivo": { "role": "primary", "displayName": "Verde Pálido (Mordekaiser)", "canonical": "#97ecbb", "tonalRamp": ["#04120a", "#0d2a1a", "#135a37", "#1d7448", "#3fbd78", "#63c98f", "#97ecbb", "#dff9ea"] },
-      "morde-destaque": { "role": "secondary", "displayName": "Verde do Reino da Morte", "canonical": "#5be39a", "tonalRamp": ["#04120a", "#0f3a22", "#1d7448", "#2fa865", "#3fbd78", "#5be39a", "#6cf0a8", "#c8ffdf"] },
-      "morde-sobre-arte": { "role": "tertiary", "displayName": "Nome na Arte (Mordekaiser)", "canonical": "#c8ffdf", "tonalRamp": [] },
-      "morde-destaque-arte": { "role": "tertiary", "displayName": "Destaque na Arte (Mordekaiser)", "canonical": "#6cf0a8", "tonalRamp": [] },
-      "morde-botao-1": { "role": "tertiary", "displayName": "Metal do Botão topo (Mordekaiser)", "canonical": "#b5f7cf", "tonalRamp": [] },
-      "morde-botao-2": { "role": "tertiary", "displayName": "Metal do Botão base (Mordekaiser)", "canonical": "#3fbd78", "tonalRamp": [] },
-      "morde-claro-fundo": { "role": "neutral", "displayName": "Ferro Claro (Mordekaiser, claro)", "canonical": "#edf2ee", "tonalRamp": [] },
-      "morde-claro-acento": { "role": "primary", "displayName": "Verde Escuro (Mordekaiser, claro)", "canonical": "#1d7448", "tonalRamp": [] },
-      "morde-claro-acento-vivo": { "role": "primary", "displayName": "Verde Aceso Escuro (Mordekaiser, claro)", "canonical": "#135a37", "tonalRamp": [] },
-      "morde-claro-destaque": { "role": "secondary", "displayName": "Verde do Reino (Mordekaiser, claro)", "canonical": "#2fa865", "tonalRamp": [] },
-      "branco-arte": { "role": "tertiary", "displayName": "Branco da Arte", "canonical": "#f6f3ea", "tonalRamp": [] },
-      "tinta-arte": { "role": "tertiary", "displayName": "Tinta da Arte", "canonical": "#111111", "tonalRamp": [] }
+      "fundo": {
+        "role": "neutral",
+        "displayName": "Preto Quente",
+        "canonical": "#0c0b09",
+        "tonalRamp": [
+          "#0c0b09",
+          "#15130f",
+          "#1e1a13",
+          "#3a3326",
+          "#665b45",
+          "#a99f88",
+          "#e9e1cd",
+          "#f6f0e1"
+        ]
+      },
+      "painel": {
+        "role": "neutral",
+        "displayName": "Painel",
+        "canonical": "#15130f",
+        "tonalRamp": [
+          "#0c0b09",
+          "#15130f",
+          "#1e1a13",
+          "#2c271d",
+          "#4a4233",
+          "#7d735e",
+          "#c4baa3",
+          "#fffcf4"
+        ]
+      },
+      "painel-alto": {
+        "role": "neutral",
+        "displayName": "Painel Alto",
+        "canonical": "#1e1a13",
+        "tonalRamp": [
+          "#0c0b09",
+          "#15130f",
+          "#1e1a13",
+          "#2c271d",
+          "#4a4233",
+          "#7d735e",
+          "#c4baa3",
+          "#efe5cd"
+        ]
+      },
+      "linha": {
+        "role": "neutral",
+        "displayName": "Linha",
+        "canonical": "rgba(214, 178, 98, .26)",
+        "tonalRamp": []
+      },
+      "linha-forte": {
+        "role": "neutral",
+        "displayName": "Linha Forte",
+        "canonical": "rgba(214, 178, 98, .55)",
+        "tonalRamp": []
+      },
+      "acento": {
+        "role": "primary",
+        "displayName": "Ouro Sentinela",
+        "canonical": "#d6b262",
+        "tonalRamp": [
+          "#2a200b",
+          "#4a3913",
+          "#6f4e0c",
+          "#8a6416",
+          "#b08a3a",
+          "#d6b262",
+          "#f2d488",
+          "#fbefcf"
+        ]
+      },
+      "acento-vivo": {
+        "role": "primary",
+        "displayName": "Ouro Aceso",
+        "canonical": "#f2d488",
+        "tonalRamp": [
+          "#2a200b",
+          "#4a3913",
+          "#6f4e0c",
+          "#8a6416",
+          "#b08a3a",
+          "#d6b262",
+          "#f2d488",
+          "#fbefcf"
+        ]
+      },
+      "destaque": {
+        "role": "secondary",
+        "displayName": "Amarelo da Luz",
+        "canonical": "#ffd96b",
+        "tonalRamp": [
+          "#2e2306",
+          "#5a440c",
+          "#8a6814",
+          "#b88b1f",
+          "#e3b23c",
+          "#ffd96b",
+          "#ffe6a3",
+          "#fff4d6"
+        ]
+      },
+      "texto": {
+        "role": "neutral",
+        "displayName": "Texto",
+        "canonical": "#e9e1cd",
+        "tonalRamp": []
+      },
+      "texto-baixo": {
+        "role": "neutral",
+        "displayName": "Texto Baixo",
+        "canonical": "#a99f88",
+        "tonalRamp": []
+      },
+      "tinta-botao": {
+        "role": "neutral",
+        "displayName": "Tinta do Botão",
+        "canonical": "#17130a",
+        "tonalRamp": []
+      },
+      "luz": {
+        "role": "neutral",
+        "displayName": "Luz de Cima",
+        "canonical": "rgba(255, 228, 150, .16)",
+        "tonalRamp": []
+      },
+      "sobre-arte": {
+        "role": "tertiary",
+        "displayName": "Nome na Arte",
+        "canonical": "#ffe6a3",
+        "tonalRamp": []
+      },
+      "destaque-arte": {
+        "role": "tertiary",
+        "displayName": "Destaque na Arte",
+        "canonical": "#ffd96b",
+        "tonalRamp": []
+      },
+      "botao-1": {
+        "role": "tertiary",
+        "displayName": "Metal do Botão (topo)",
+        "canonical": "#ffe7a1",
+        "tonalRamp": []
+      },
+      "botao-2": {
+        "role": "tertiary",
+        "displayName": "Metal do Botão (base)",
+        "canonical": "#e2b24a",
+        "tonalRamp": []
+      },
+      "brilho": {
+        "role": "tertiary",
+        "displayName": "Clarão (centro)",
+        "canonical": "rgba(255, 240, 200, .55)",
+        "tonalRamp": []
+      },
+      "brilho-2": {
+        "role": "tertiary",
+        "displayName": "Clarão (borda)",
+        "canonical": "rgba(255, 210, 110, .18)",
+        "tonalRamp": []
+      },
+      "claro-fundo": {
+        "role": "neutral",
+        "displayName": "Marfim (Akshan, claro)",
+        "canonical": "#f6f0e1",
+        "tonalRamp": []
+      },
+      "claro-acento": {
+        "role": "primary",
+        "displayName": "Ouro Escuro (Akshan, claro)",
+        "canonical": "#8a6416",
+        "tonalRamp": []
+      },
+      "claro-acento-vivo": {
+        "role": "primary",
+        "displayName": "Ouro Aceso Escuro (Akshan, claro)",
+        "canonical": "#6f4e0c",
+        "tonalRamp": []
+      },
+      "claro-destaque": {
+        "role": "secondary",
+        "displayName": "Amarelo (Akshan, claro)",
+        "canonical": "#e3b23c",
+        "tonalRamp": []
+      },
+      "morde-fundo": {
+        "role": "neutral",
+        "displayName": "Ferro (Mordekaiser)",
+        "canonical": "#0a0d0c",
+        "tonalRamp": [
+          "#0a0d0c",
+          "#121715",
+          "#19201c",
+          "#2c3631",
+          "#4c5d53",
+          "#92a39a",
+          "#dde7e1",
+          "#edf2ee"
+        ]
+      },
+      "morde-acento": {
+        "role": "primary",
+        "displayName": "Verde de Ferro (Mordekaiser)",
+        "canonical": "#63c98f",
+        "tonalRamp": [
+          "#04120a",
+          "#0d2a1a",
+          "#135a37",
+          "#1d7448",
+          "#3fbd78",
+          "#63c98f",
+          "#97ecbb",
+          "#dff9ea"
+        ]
+      },
+      "morde-acento-vivo": {
+        "role": "primary",
+        "displayName": "Verde Pálido (Mordekaiser)",
+        "canonical": "#97ecbb",
+        "tonalRamp": [
+          "#04120a",
+          "#0d2a1a",
+          "#135a37",
+          "#1d7448",
+          "#3fbd78",
+          "#63c98f",
+          "#97ecbb",
+          "#dff9ea"
+        ]
+      },
+      "morde-destaque": {
+        "role": "secondary",
+        "displayName": "Verde do Reino da Morte",
+        "canonical": "#5be39a",
+        "tonalRamp": [
+          "#04120a",
+          "#0f3a22",
+          "#1d7448",
+          "#2fa865",
+          "#3fbd78",
+          "#5be39a",
+          "#6cf0a8",
+          "#c8ffdf"
+        ]
+      },
+      "morde-sobre-arte": {
+        "role": "tertiary",
+        "displayName": "Nome na Arte (Mordekaiser)",
+        "canonical": "#c8ffdf",
+        "tonalRamp": []
+      },
+      "morde-destaque-arte": {
+        "role": "tertiary",
+        "displayName": "Destaque na Arte (Mordekaiser)",
+        "canonical": "#6cf0a8",
+        "tonalRamp": []
+      },
+      "morde-botao-1": {
+        "role": "tertiary",
+        "displayName": "Metal do Botão topo (Mordekaiser)",
+        "canonical": "#b5f7cf",
+        "tonalRamp": []
+      },
+      "morde-botao-2": {
+        "role": "tertiary",
+        "displayName": "Metal do Botão base (Mordekaiser)",
+        "canonical": "#3fbd78",
+        "tonalRamp": []
+      },
+      "morde-claro-fundo": {
+        "role": "neutral",
+        "displayName": "Ferro Claro (Mordekaiser, claro)",
+        "canonical": "#edf2ee",
+        "tonalRamp": []
+      },
+      "morde-claro-acento": {
+        "role": "primary",
+        "displayName": "Verde Escuro (Mordekaiser, claro)",
+        "canonical": "#1d7448",
+        "tonalRamp": []
+      },
+      "morde-claro-acento-vivo": {
+        "role": "primary",
+        "displayName": "Verde Aceso Escuro (Mordekaiser, claro)",
+        "canonical": "#135a37",
+        "tonalRamp": []
+      },
+      "morde-claro-destaque": {
+        "role": "secondary",
+        "displayName": "Verde do Reino (Mordekaiser, claro)",
+        "canonical": "#2fa865",
+        "tonalRamp": []
+      },
+      "branco-arte": {
+        "role": "tertiary",
+        "displayName": "Branco da Arte",
+        "canonical": "#f6f3ea",
+        "tonalRamp": []
+      },
+      "tinta-arte": {
+        "role": "tertiary",
+        "displayName": "Tinta da Arte",
+        "canonical": "#111111",
+        "tonalRamp": []
+      }
     },
     "typographyMeta": {
-      "display": { "displayName": "Nome do campeão", "purpose": "Nome sobre a arte nos cards Você e Inimigo; 22px no celular; nomes longos descem para clamp(20px, 2vw, 27px)." },
-      "headline": { "displayName": "Título de seção", "purpose": "Lembrete (Akshan), Como jogar (formato completo) e Como ler a planilha; 23px no celular." },
-      "title": { "displayName": "Título do painel", "purpose": "Escolhe o inimigo (ladeado por losangos) e, a 16px, Seu setup pro confronto." },
-      "secao": { "displayName": "Título das seções", "purpose": "Títulos em português das seções do formato completo, sobre o texto em inglês." },
-      "marca": { "displayName": "Nome do guia", "purpose": "Nome do campeão do guia no botão de troca; 18px abaixo de 520px; 17px nos itens do menu." },
-      "button": { "displayName": "Botão de travar", "purpose": "Travar o pick, em caixa-alta." },
-      "body": { "displayName": "Corpo", "purpose": "Texto geral, busca, chips (600 14px)." },
-      "body-nota": { "displayName": "Lembrete", "purpose": "Itens numerados das notas do Akshan; 16.5px no celular, coluna de 820px." },
-      "body-secao": { "displayName": "Texto das seções", "purpose": "Parágrafos e listas do formato completo, em inglês; 16.5px no celular." },
-      "label": { "displayName": "Rótulo de slot", "purpose": "Runa, Secundária, Feitiço, Bota, Build e os blocos Runas, Itens e Dificuldade; o Resumo usa 700 13px." },
-      "selo": { "displayName": "Selo", "purpose": "Você e Inimigo nos cards; a tag rush usa o mesmo desenho a 11px." }
+      "display": {
+        "displayName": "Nome do campeão",
+        "purpose": "Nome sobre a arte nos cards Você e Inimigo; 20px no celular; nomes longos descem para clamp(19px, 1.8vw, 25px), 16px no celular."
+      },
+      "headline": {
+        "displayName": "Título de seção",
+        "purpose": "Lembrete (Akshan) e Como jogar (formato completo), ao lado de anterior e próximo; 20px no celular."
+      },
+      "title": {
+        "displayName": "Título do painel",
+        "purpose": "Escolhe o inimigo (ladeado por losangos); 17px abaixo de 1100px e 16px no celular. A 16px, Seu setup pro confronto."
+      },
+      "secao": {
+        "displayName": "Título das seções",
+        "purpose": "Títulos em português das seções do formato completo, sobre o texto em inglês."
+      },
+      "marca": {
+        "displayName": "Nome do guia",
+        "purpose": "Nome do campeão do guia no botão de troca, com a rota embaixo; 18px abaixo de 520px; 17px nos itens do menu."
+      },
+      "button": {
+        "displayName": "VS de travar",
+        "purpose": "O VS do círculo de travar; 17px no celular."
+      },
+      "body": {
+        "displayName": "Corpo",
+        "purpose": "Texto geral, busca, chips (600 14px)."
+      },
+      "body-nota": {
+        "displayName": "Lembrete",
+        "purpose": "Itens numerados das notas do Akshan; 16px no celular."
+      },
+      "body-secao": {
+        "displayName": "Texto das seções",
+        "purpose": "Parágrafos e listas do formato completo, em inglês; 16.5px no celular."
+      },
+      "label": {
+        "displayName": "Rótulo de slot",
+        "purpose": "Runa, Secundária, Feitiço, Bota, Build e os blocos Runas, Itens e Dificuldade; o Resumo usa 700 13px."
+      },
+      "selo": {
+        "displayName": "Selo",
+        "purpose": "Você e Inimigo nos cards; a tag rush usa o mesmo desenho a 11px."
+      }
     },
     "themes": {
       "padrao": "escuro do Akshan em :root",
@@ -60,44 +363,202 @@
       "guias": {
         "lista": "src/guias.json (hoje akshan e mordekaiser)",
         "seletor": ":root[data-guia=\"<id>\"] para o escuro do guia; :root[data-guia=\"<id>\"][data-tema=\"claro\"] para o claro do guia",
-        "herdados-no-claro": ["--sobre-arte", "--destaque-arte", "--botao-1", "--botao-2", "--brilho", "--brilho-2"],
+        "herdados-no-claro": [
+          "--sobre-arte",
+          "--destaque-arte",
+          "--botao-1",
+          "--botao-2",
+          "--brilho",
+          "--brilho-2"
+        ],
         "persistencia": "localStorage na chave guia; endereço #<guia>/<campeão>; #<campeão> antigo abre no Akshan",
-        "so-do-akshan": [".alvo", ".mira .setas", "losango girado em volta do .pick escolhido"]
+        "so-do-akshan": [
+          ".alvo",
+          ".mira .setas",
+          "losango girado em volta do .pick escolhido"
+        ]
       },
-      "tokens": ["--fundo", "--painel", "--painel-alto", "--linha", "--linha-forte", "--acento", "--acento-vivo", "--destaque", "--texto", "--texto-baixo", "--tinta-botao", "--luz", "--sombra", "--sobre-arte", "--destaque-arte", "--botao-1", "--botao-2", "--brilho", "--brilho-2", "--titulo", "--corpo", "--barra", "--borda"],
-      "renomeados": { "--ouro": "--acento", "--ouro-vivo": "--acento-vivo", "--amarelo": "--destaque" }
+      "tokens": [
+        "--fundo",
+        "--painel",
+        "--painel-alto",
+        "--linha",
+        "--linha-forte",
+        "--acento",
+        "--acento-vivo",
+        "--destaque",
+        "--texto",
+        "--texto-baixo",
+        "--tinta-botao",
+        "--luz",
+        "--sombra",
+        "--sobre-arte",
+        "--destaque-arte",
+        "--botao-1",
+        "--botao-2",
+        "--brilho",
+        "--brilho-2",
+        "--titulo",
+        "--corpo",
+        "--barra",
+        "--borda"
+      ],
+      "renomeados": {
+        "--ouro": "--acento",
+        "--ouro-vivo": "--acento-vivo",
+        "--amarelo": "--destaque"
+      }
     },
     "shadows": [
-      { "name": "sombra", "value": "0 10px 30px rgba(0, 0, 0, .45)", "purpose": "Cards de campeão e menu de guias. Akshan claro: rgba(90, 64, 10, .14); Mordekaiser escuro: rgba(0, 0, 0, .5); Mordekaiser claro: rgba(10, 60, 30, .14)." },
-      { "name": "relevo-travar", "value": "inset 0 1px 0 rgba(255, 255, 255, .6), 0 6px 18px rgba(0, 0, 0, .35)", "purpose": "Só o botão Travar o pick." },
-      { "name": "brilho-mira", "value": "drop-shadow(0 0 4px rgba(255, 214, 120, .75)) drop-shadow(0 1px 3px rgba(0, 0, 0, .6))", "purpose": "Filtro do losango da mira sobre o card do inimigo; só no Akshan." },
-      { "name": "anel-retrato", "value": "0 0 0 2px var(--acento)", "purpose": "Retrato do campeão do guia no botão de troca." },
-      { "name": "anel-duplo-escolhido", "value": "0 0 0 2px var(--painel), 0 0 0 4px var(--acento)", "purpose": "Campeão escolhido na lista em todo guia que não é o Akshan." },
-      { "name": "luz-de-cima", "value": "radial-gradient(1100px 520px at 50% -120px, var(--luz), transparent 70%)", "purpose": "Camada fixa atrás de tudo; a luz do guia desce do topo." },
-      { "name": "clarao-travar", "value": "radial-gradient(circle, var(--brilho), var(--brilho-2) 40%, transparent 70%)", "purpose": "Clarão no centro do Travar o pick, na cor do guia." }
+      {
+        "name": "sombra",
+        "value": "0 10px 30px rgba(0, 0, 0, .45)",
+        "purpose": "Cards de campeão e menu de guias. Akshan claro: rgba(90, 64, 10, .14); Mordekaiser escuro: rgba(0, 0, 0, .5); Mordekaiser claro: rgba(10, 60, 30, .14)."
+      },
+      {
+        "name": "relevo-travar",
+        "value": "inset 0 1px 0 rgba(255, 255, 255, .6), 0 6px 18px rgba(0, 0, 0, .45)",
+        "purpose": "Só o círculo VS de travar."
+      },
+      {
+        "name": "brilho-mira",
+        "value": "drop-shadow(0 0 4px rgba(255, 214, 120, .75)) drop-shadow(0 1px 3px rgba(0, 0, 0, .6))",
+        "purpose": "Filtro do losango da mira sobre o card do inimigo; só no Akshan."
+      },
+      {
+        "name": "anel-retrato",
+        "value": "0 0 0 2px var(--acento)",
+        "purpose": "Retrato do campeão do guia no botão de troca."
+      },
+      {
+        "name": "anel-duplo-escolhido",
+        "value": "0 0 0 2px var(--painel), 0 0 0 4px var(--acento)",
+        "purpose": "Campeão escolhido na lista em todo guia que não é o Akshan."
+      },
+      {
+        "name": "luz-de-cima",
+        "value": "radial-gradient(1100px 520px at 50% -120px, var(--luz), transparent 70%)",
+        "purpose": "Camada fixa atrás de tudo; a luz do guia desce do topo."
+      },
+      {
+        "name": "clarao-travar",
+        "value": "radial-gradient(circle, var(--brilho), var(--brilho-2) 40%, transparent 70%)",
+        "purpose": "Clarão no centro do overlay de travar, na cor do guia."
+      }
     ],
     "motion": [
-      { "name": "ease-trava", "value": "cubic-bezier(.16, 1, .3, 1)", "purpose": "Curva única das animações da mira e do Travar o pick." },
-      { "name": "trava-alvo", "value": "0.5s; de opacity 0 e scale(1.35)", "purpose": "O losango da mira trava no card do inimigo a cada troca, só no Akshan. Pulado com reduzir movimento." },
-      { "name": "entra-e / entra-d", "value": "0.7s; de translateX(-30vw) / translateX(30vw) e opacity 0", "purpose": "As artes de carregamento deslizam dos lados até o meio no Travar o pick." },
-      { "name": "brilha", "value": "0.9s com 0.25s de atraso; de opacity 0 e scale(.6)", "purpose": "Clarão e VS no centro do Travar o pick." },
-      { "name": "fecha-trava", "value": "1500ms", "purpose": "O overlay fecha sozinho (ou clique, Enter, Esc) e a página desce até o setup; com reduzir movimento, só desce sem rolagem suave." },
-      { "name": "chevron-guia", "value": "transform .2s; rotate(180deg) aberto", "purpose": "O chevron do botão de troca de guia vira ao abrir o menu; sem transição com reduzir movimento." }
+      {
+        "name": "ease-trava",
+        "value": "cubic-bezier(.16, 1, .3, 1)",
+        "purpose": "Curva única das animações da mira e do overlay de travar."
+      },
+      {
+        "name": "trava-alvo",
+        "value": "0.5s; de opacity 0 e scale(1.35)",
+        "purpose": "O losango da mira trava no card do inimigo a cada troca, só no Akshan. Pulado com reduzir movimento."
+      },
+      {
+        "name": "entra-e / entra-d",
+        "value": "0.7s; de translateX(-30vw) / translateX(30vw) e opacity 0",
+        "purpose": "As artes de carregamento deslizam dos lados até o meio no overlay de travar."
+      },
+      {
+        "name": "brilha",
+        "value": "0.9s com 0.25s de atraso; de opacity 0 e scale(.6)",
+        "purpose": "Clarão e VS no centro do overlay de travar."
+      },
+      {
+        "name": "fecha-trava",
+        "value": "1500ms",
+        "purpose": "O overlay fecha sozinho (ou clique, Enter, Esc) e a página desce até o setup só se ele não estiver à vista; com reduzir movimento, pula o overlay e só desce, sem rolagem suave."
+      },
+      {
+        "name": "vs-estado",
+        "value": "hover filter: brightness(1.08); active scale(.95)",
+        "purpose": "Resposta do círculo VS ao mouse e ao toque."
+      },
+      {
+        "name": "chevron-guia",
+        "value": "transform .2s; rotate(180deg) aberto",
+        "purpose": "O chevron do botão de troca de guia vira ao abrir o menu; sem transição com reduzir movimento."
+      }
     ],
     "breakpoints": [
-      { "name": "medio", "value": "1100px" },
-      { "name": "celular", "value": "900px" },
-      { "name": "estreito", "value": "520px" }
-    ]
+      {
+        "name": "medio",
+        "value": "1100px"
+      },
+      {
+        "name": "celular",
+        "value": "900px"
+      },
+      {
+        "name": "estreito",
+        "value": "520px"
+      }
+    ],
+    "layout": {
+      "desktop": "grade de até 1320px: lista sticky de 440px | detalhe flexível (duelo, setup, notas, rodapé), 24px entre colunas, 16px entre blocos do detalhe; alvo: Akshan inteiro a 1440x900 sem rolar",
+      "medio": "abaixo de 1100px a lista cai para 340px e o título dela para 17px; setup simples em 3 colunas; setup completo empilha",
+      "celular": "abaixo de 900px uma coluna; lista em faixa horizontal de rostos de 56px, mira grande some; cards de 168px, VS de 54px, alvo a 32% de altura a partir de 13% do topo; setup simples em linhas (rótulo 92px | ícones 32px)",
+      "duelo": "dois cards de 240px lado a lado (gap 10px), arte img/champion/centered, VS centrado sobre a junção",
+      "filtros": "max-width 360px, centralizados (3 + 2 no Akshan); no celular faixa com rolagem própria"
+    },
+    "sons": {
+      "pasta": "sons/ui/<nome>.ogg para a interface, sons/vo/<id do campeão>.ogg para a fala de escolha (pt-BR)",
+      "volumes": {
+        "grade": 0.45,
+        "passa": 0.18,
+        "travar": 0.5,
+        "avanca": 0.4,
+        "volta": 0.4,
+        "chip": 0.4,
+        "abre": 0.4,
+        "fecha": 0.4,
+        "clique": 0.35,
+        "vo": 0.8
+      },
+      "eventos": [
+        {
+          "som": "grade",
+          "quando": "escolher campeão na lista (ou Enter na busca)"
+        },
+        {
+          "som": "passa",
+          "quando": "mouse sobre um rosto; só pointerType mouse, no máximo um a cada 70ms"
+        },
+        {
+          "som": "travar + vo",
+          "quando": "clique no VS; a fala do campeão do guia entra 180ms depois"
+        },
+        {
+          "som": "volta / avanca",
+          "quando": "anterior e próximo, também pelas setas do teclado"
+        },
+        {
+          "som": "chip",
+          "quando": "ligar ou desligar um filtro"
+        },
+        {
+          "som": "abre / fecha",
+          "quando": "abrir e fechar o menu de guias"
+        },
+        {
+          "som": "clique",
+          "quando": "botão de tema e o próprio botão de som"
+        }
+      ],
+      "controle": "botão .som de 44px com aria-pressed; localStorage chave som (ligado | desligado); padrão ligado; só toca por ação do leitor"
+    }
   },
   "components": [
     {
-      "name": "Botão Travar o pick",
+      "name": "Botão de travar (VS)",
       "kind": "button",
       "refersTo": "botao-travar",
-      "description": "O fecho metálico da escolha, na cor do guia; leva ao setup com a animação das artes.",
-      "html": "<button class=\"ds-travar\" type=\"button\">Travar o pick<small>contra Ahri</small></button>",
-      "css": ".ds-travar { width: 280px; min-height: 56px; padding: 8px 16px; border: 0; border-radius: 10px; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; font: 800 19px/1 var(--titulo, 'Cinzel', serif); letter-spacing: .1em; text-transform: uppercase; color: #111; background: linear-gradient(180deg, var(--botao-1, #ffe7a1), var(--botao-2, #e2b24a)); box-shadow: inset 0 1px 0 rgba(255,255,255,.6), 0 6px 18px rgba(0,0,0,.35); } .ds-travar small { font: 600 13px var(--corpo, sans-serif); letter-spacing: .02em; text-transform: none; } .ds-travar:hover { filter: brightness(1.06); } .ds-travar:active { transform: translateY(1px); } .ds-travar:focus-visible { outline: 2px solid var(--acento-vivo, #f2d488); outline-offset: 3px; }"
+      "description": "Círculo metálico entre os dois cards, na cor do guia; trava o pick com a animação das artes. Nome acessível: Travar o pick contra X.",
+      "html": "<div class=\"ds-duelo\"><div class=\"ds-lado\"></div><button class=\"ds-vs\" type=\"button\"><span aria-hidden=\"true\">VS</span><span class=\"ds-sr\">Travar o pick contra Ahri</span></button><div class=\"ds-lado\"></div></div>",
+      "css": ".ds-duelo { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 520px; } .ds-lado { height: 160px; border-radius: 10px; background: var(--painel, #15130f); border: 1px solid var(--linha-forte, rgba(214,178,98,.55)); } .ds-vs { position: absolute; z-index: 3; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 66px; height: 66px; padding: 0; border: 3px solid var(--fundo, #0c0b09); border-radius: 50%; cursor: pointer; display: grid; place-items: center; font: 800 21px/1 var(--titulo, 'Cinzel', serif); letter-spacing: .04em; color: #111; background: linear-gradient(180deg, var(--botao-1, #ffe7a1), var(--botao-2, #e2b24a)); box-shadow: inset 0 1px 0 rgba(255,255,255,.6), 0 6px 18px rgba(0,0,0,.45); } .ds-vs:hover { filter: brightness(1.08); } .ds-vs:active { transform: translate(-50%, -50%) scale(.95); } .ds-vs:focus-visible { outline: 2px solid var(--acento-vivo, #f2d488); outline-offset: 3px; } .ds-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }"
     },
     {
       "name": "Chip de filtro",
@@ -119,17 +580,25 @@
       "name": "Troca de guia",
       "kind": "nav",
       "refersTo": "trocar-guia",
-      "description": "Botão no topo com retrato, nome do guia e autor; abre o menu com a lista de guias.",
-      "html": "<div class=\"ds-guias\"><button class=\"ds-trocar\" type=\"button\" aria-expanded=\"true\"><span class=\"ds-ret\"></span><span class=\"ds-txt\"><b>Mordekaiser</b><span>notas do Meowdekaiser</span></span><svg width=\"14\" height=\"14\" viewBox=\"0 0 14 14\" aria-hidden=\"true\"><path d=\"M3 5l4 4 4-4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button><div class=\"ds-menu\"><p class=\"ds-menu-tit\">Guias de matchup</p><ul><li><button type=\"button\"><span class=\"ds-ret\"></span><span><b>Akshan</b><small>Mid · notas do Peteruso · 47 matchups</small></span></button></li><li><button type=\"button\" aria-current=\"true\"><span class=\"ds-ret\"></span><span><b>Mordekaiser</b><small>notas do Meowdekaiser · 139 matchups</small></span><span class=\"ds-atual\">Aberto</span></button></li></ul><p class=\"ds-dica\">O site sempre abre no último guia que você usou.</p></div></div>",
+      "description": "Botão no topo com retrato, nome do guia e rota; abre o menu com a lista de guias.",
+      "html": "<div class=\"ds-guias\"><button class=\"ds-trocar\" type=\"button\" aria-expanded=\"true\"><span class=\"ds-ret\"></span><span class=\"ds-txt\"><b>Akshan</b><span>Mid</span></span><svg width=\"14\" height=\"14\" viewBox=\"0 0 14 14\" aria-hidden=\"true\"><path d=\"M3 5l4 4 4-4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button><div class=\"ds-menu\"><p class=\"ds-menu-tit\">Guias de matchup</p><ul><li><button type=\"button\" aria-current=\"true\"><span class=\"ds-ret\"></span><span><b>Akshan</b><small>Mid · notas do Peteruso · 47 matchups</small></span><span class=\"ds-atual\">Aberto</span></button></li><li><button type=\"button\"><span class=\"ds-ret\"></span><span><b>Mordekaiser</b><small>notas do Meowdekaiser · 139 matchups</small></span></button></li></ul><p class=\"ds-dica\">O site sempre abre no último guia que você usou.</p></div></div>",
       "css": ".ds-guias { position: relative; display: grid; gap: 8px; justify-items: start; } .ds-trocar { display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 4px 12px 4px 4px; border-radius: 999px; border: 1px solid transparent; background: none; cursor: pointer; text-align: left; } .ds-trocar:hover, .ds-trocar[aria-expanded=\"true\"] { border-color: var(--linha-forte, rgba(214,178,98,.55)); background: var(--painel, #15130f); } .ds-trocar:focus-visible { outline: 2px solid var(--acento-vivo, #f2d488); outline-offset: 3px; } .ds-ret { width: 38px; height: 38px; flex: none; border-radius: 50%; background: var(--painel-alto, #1e1a13); box-shadow: 0 0 0 2px var(--acento, #d6b262); } .ds-txt { display: grid; line-height: 1.15; } .ds-txt b { font: 700 20px/1.1 var(--titulo, 'Cinzel', serif); letter-spacing: .04em; color: var(--acento-vivo, #f2d488); } .ds-txt span { font-size: 13px; color: var(--texto-baixo, #a99f88); } .ds-trocar svg { color: var(--acento, #d6b262); transition: transform .2s; } .ds-trocar[aria-expanded=\"true\"] svg { transform: rotate(180deg); } .ds-menu { width: 340px; padding: 8px; border-radius: 12px; background: var(--painel, #15130f); border: 1px solid var(--linha-forte, rgba(214,178,98,.55)); box-shadow: var(--sombra, 0 10px 30px rgba(0,0,0,.45)); } .ds-menu-tit { margin: 4px 10px 6px; font: 600 12px var(--corpo, sans-serif); letter-spacing: .14em; text-transform: uppercase; color: var(--texto-baixo, #a99f88); } .ds-menu ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; } .ds-menu li button { width: 100%; min-height: 60px; display: flex; align-items: center; gap: 12px; padding: 8px 10px; border: 0; border-radius: 8px; background: none; cursor: pointer; text-align: left; color: var(--texto, #e9e1cd); } .ds-menu li button:hover, .ds-menu li button[aria-current=\"true\"] { background: var(--painel-alto, #1e1a13); } .ds-menu li .ds-ret { width: 42px; height: 42px; box-shadow: none; } .ds-menu li b { display: block; font: 700 17px/1.2 var(--titulo, 'Cinzel', serif); } .ds-menu li small { display: block; font-size: 13px; color: var(--texto-baixo, #a99f88); } .ds-atual { margin-left: auto; font-size: 12px; font-weight: 700; color: var(--acento-vivo, #f2d488); } .ds-dica { margin: 6px 10px 4px; padding-top: 8px; border-top: 1px solid var(--linha, rgba(214,178,98,.26)); font-size: 13px; color: var(--texto-baixo, #a99f88); } @media (prefers-reduced-motion: reduce) { .ds-trocar svg { transition: none; } }"
+    },
+    {
+      "name": "Botões de som e de tema",
+      "kind": "button",
+      "refersTo": "botao-som",
+      "description": "Par de botões redondos de 44px na barra; o de som alterna alto-falante ligado e mudo com aria-pressed.",
+      "html": "<div class=\"ds-acoes\"><button class=\"ds-redondo\" type=\"button\" aria-pressed=\"true\" aria-label=\"Desligar os sons\"><svg class=\"ds-ligado\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 9.5h3.5L12 5.5v13l-4.5-4H4z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linejoin=\"round\"/><path d=\"M15.5 9a4.2 4.2 0 0 1 0 6M18.2 6.5a8 8 0 0 1 0 11\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\"/></svg><svg class=\"ds-mudo\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 9.5h3.5L12 5.5v13l-4.5-4H4z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linejoin=\"round\"/><path d=\"M16 9.5l5 5M21 9.5l-5 5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\"/></svg></button><button class=\"ds-redondo\" type=\"button\" aria-label=\"Usar tema claro\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linejoin=\"round\"/></svg></button></div>",
+      "css": ".ds-acoes { display: flex; gap: 8px; } .ds-redondo { width: 44px; height: 44px; display: grid; place-items: center; cursor: pointer; border-radius: 50%; border: 1px solid var(--linha-forte, rgba(214,178,98,.55)); background: transparent; color: var(--acento-vivo, #f2d488); } .ds-redondo:hover { background: var(--painel-alto, #1e1a13); } .ds-redondo:focus-visible { outline: 2px solid var(--acento-vivo, #f2d488); outline-offset: 3px; } .ds-mudo { display: none; } .ds-redondo[aria-pressed=\"false\"] .ds-ligado { display: none; } .ds-redondo[aria-pressed=\"false\"] .ds-mudo { display: block; }"
     },
     {
       "name": "Card do inimigo com a mira",
       "kind": "card",
       "refersTo": "card-campeao",
-      "description": "Arte de carregamento com selo branco, nome em Cinzel e, no Akshan, o losango da Punição travado no alvo.",
+      "description": "Card em paisagem de 240px com a arte centralizada, selo branco, nome em Cinzel e, no Akshan, o losango da Punição travado acima do nome.",
       "html": "<article class=\"ds-card\"><svg class=\"ds-alvo\" viewBox=\"0 0 100 100\" aria-hidden=\"true\"><circle cx=\"50\" cy=\"50\" r=\"30\" class=\"ds-aro\" vector-effect=\"non-scaling-stroke\"/><polygon points=\"50,5 95,50 50,95 5,50\" class=\"ds-losango\" vector-effect=\"non-scaling-stroke\"/><path class=\"ds-setas\" d=\"M-4 45L3 50l-7 5z M104 45L97 50l7 5z\"/></svg><span class=\"ds-selo\">Inimigo</span><div class=\"ds-quem\"><p class=\"ds-n\">Ahri</p><p class=\"ds-t\">a Raposa de Nove Caudas</p></div></article>",
-      "css": ".ds-card { position: relative; overflow: hidden; width: 220px; aspect-ratio: 308 / 560; border-radius: 10px; background: linear-gradient(160deg, #3b3a6b, #15130f); border: 1px solid var(--linha-forte, rgba(214,178,98,.55)); box-shadow: var(--sombra, 0 10px 30px rgba(0,0,0,.45)); } .ds-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(8,8,6,.92) 0%, rgba(8,8,6,.55) 26%, transparent 48%); } .ds-alvo { position: absolute; z-index: 1; left: 50%; top: 9%; width: 74%; aspect-ratio: 1; transform: translateX(-50%); overflow: visible; filter: drop-shadow(0 0 4px rgba(255,214,120,.75)) drop-shadow(0 1px 3px rgba(0,0,0,.6)); animation: ds-trava .5s cubic-bezier(.16,1,.3,1) both; } .ds-losango { fill: none; stroke: #ffe39a; stroke-width: 3.5px; } .ds-aro { fill: none; stroke: #fff4d6; stroke-width: 1px; opacity: .6; } .ds-setas { fill: #fff4d6; opacity: .85; } @keyframes ds-trava { from { opacity: 0; transform: translateX(-50%) scale(1.35); } } .ds-selo { position: absolute; z-index: 2; top: 12px; right: 12px; padding: 3px 10px; border-radius: 4px; font: 700 12px/1.4 var(--titulo, 'Cinzel', serif); letter-spacing: .12em; text-transform: uppercase; background: #f6f3ea; color: #111; } .ds-quem { position: absolute; z-index: 2; left: 0; right: 0; bottom: 0; padding: 0 16px 16px; text-align: right; } .ds-n { margin: 0; font: 800 26px/1.05 var(--titulo, 'Cinzel', serif); color: var(--sobre-arte, #ffe6a3); } .ds-t { margin: 4px 0 0; font-size: 14px; color: #e4ddcf; } @media (prefers-reduced-motion: reduce) { .ds-alvo { animation: none; } }"
+      "css": ".ds-card { position: relative; overflow: hidden; width: 260px; height: 240px; border-radius: 10px; background: linear-gradient(160deg, #3b3a6b, #15130f); border: 1px solid var(--linha-forte, rgba(214,178,98,.55)); box-shadow: var(--sombra, 0 10px 30px rgba(0,0,0,.45)); } .ds-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(8,8,6,.9) 0%, rgba(8,8,6,.5) 34%, transparent 62%); } .ds-alvo { position: absolute; z-index: 1; left: 50%; top: 5%; height: 58%; aspect-ratio: 1; transform: translateX(-50%); overflow: visible; filter: drop-shadow(0 0 4px rgba(255,214,120,.75)) drop-shadow(0 1px 3px rgba(0,0,0,.6)); animation: ds-trava .5s cubic-bezier(.16,1,.3,1) both; } .ds-losango { fill: none; stroke: #ffe39a; stroke-width: 3.5px; } .ds-aro { fill: none; stroke: #fff4d6; stroke-width: 1px; opacity: .6; } .ds-setas { fill: #fff4d6; opacity: .85; } @keyframes ds-trava { from { opacity: 0; transform: translateX(-50%) scale(1.35); } } .ds-selo { position: absolute; z-index: 2; top: 12px; right: 12px; padding: 3px 10px; border-radius: 4px; font: 700 12px/1.4 var(--titulo, 'Cinzel', serif); letter-spacing: .12em; text-transform: uppercase; background: #f6f3ea; color: #111; } .ds-quem { position: absolute; z-index: 2; left: 0; right: 0; bottom: 0; padding: 0 16px 14px; text-align: right; } .ds-n { margin: 0; font: 800 24px/1.05 var(--titulo, 'Cinzel', serif); color: var(--sobre-arte, #ffe6a3); } .ds-t { margin: 4px 0 0; font-size: 14px; color: #e4ddcf; } @media (prefers-reduced-motion: reduce) { .ds-alvo { animation: none; } }"
     },
     {
       "name": "Campeão na lista",
@@ -161,7 +630,7 @@
       "refersTo": "resumo",
       "description": "Resumo (TL;DR) em painel, título em português sobre o texto em inglês, lista com losango e tabela de cooldowns.",
       "html": "<div class=\"ds-secoes\" lang=\"en\"><section class=\"ds-resumo\"><h3 lang=\"pt-BR\">Resumo</h3><ul><li>Short trades only before level 6.</li></ul></section><section class=\"ds-secao\"><h3 lang=\"pt-BR\">Cooldowns do inimigo</h3><table class=\"ds-cds\"><tbody><tr><th scope=\"row\">E</th><td>14/13/12/11/10s</td></tr><tr><th scope=\"row\">R</th><td>100/80/60s</td></tr></tbody></table></section><section class=\"ds-secao\"><h3 lang=\"pt-BR\">Dicas</h3><ul><li>Hold Q for when she dashes in.</li><li>Ghost wins the all-in at <span class=\"ds-kw\">level 6</span>.</li></ul></section></div>",
-      "css": ".ds-secoes { max-width: 820px; color: var(--texto, #e9e1cd); font: 400 17px/1.7 var(--corpo, sans-serif); } .ds-resumo { margin-bottom: 32px; padding: 16px 20px; border-radius: 10px; background: var(--painel, #15130f); border: 1px solid var(--linha, rgba(214,178,98,.26)); } .ds-resumo h3 { margin: 0 0 8px; font: 700 13px var(--corpo, sans-serif); letter-spacing: .14em; text-transform: uppercase; color: var(--texto-baixo, #a99f88); } .ds-secao + .ds-secao { margin-top: 34px; } .ds-secao h3 { margin: 0 0 12px; font: 700 21px/1.25 var(--titulo, 'Cinzel', serif); letter-spacing: .04em; color: var(--acento-vivo, #f2d488); } .ds-secoes ul { margin: 0 0 14px; padding: 0; list-style: none; display: grid; gap: 10px; } .ds-secoes li { position: relative; padding-left: 22px; } .ds-secoes li::before { content: ''; position: absolute; left: 4px; top: .7em; width: 7px; height: 7px; transform: rotate(45deg); background: var(--destaque, #ffd96b); } .ds-cds { width: 100%; max-width: 560px; border-collapse: collapse; font-size: 15px; } .ds-cds th, .ds-cds td { padding: 9px 12px 9px 0; border-bottom: 1px solid var(--linha, rgba(214,178,98,.26)); text-align: left; vertical-align: top; } .ds-cds th { font-weight: 700; white-space: nowrap; } .ds-cds td { color: var(--texto-baixo, #a99f88); font-variant-numeric: tabular-nums; } .ds-kw { font-weight: 700; text-decoration: underline; text-decoration-color: var(--destaque, #ffd96b); text-decoration-thickness: 2px; text-underline-offset: 5px; }"
+      "css": ".ds-secoes { color: var(--texto, #e9e1cd); font: 400 17px/1.7 var(--corpo, sans-serif); } .ds-resumo { margin-bottom: 32px; padding: 16px 20px; border-radius: 10px; background: var(--painel, #15130f); border: 1px solid var(--linha, rgba(214,178,98,.26)); } .ds-resumo h3 { margin: 0 0 8px; font: 700 13px var(--corpo, sans-serif); letter-spacing: .14em; text-transform: uppercase; color: var(--texto-baixo, #a99f88); } .ds-secao + .ds-secao { margin-top: 34px; } .ds-secao h3 { margin: 0 0 12px; font: 700 21px/1.25 var(--titulo, 'Cinzel', serif); letter-spacing: .04em; color: var(--acento-vivo, #f2d488); } .ds-secoes ul { margin: 0 0 14px; padding: 0; list-style: none; display: grid; gap: 10px; } .ds-secoes li { position: relative; padding-left: 22px; } .ds-secoes li::before { content: ''; position: absolute; left: 4px; top: .7em; width: 7px; height: 7px; transform: rotate(45deg); background: var(--destaque, #ffd96b); } .ds-cds { width: 100%; max-width: 560px; border-collapse: collapse; font-size: 15px; } .ds-cds th, .ds-cds td { padding: 9px 12px 9px 0; border-bottom: 1px solid var(--linha, rgba(214,178,98,.26)); text-align: left; vertical-align: top; } .ds-cds th { font-weight: 700; white-space: nowrap; } .ds-cds td { color: var(--texto-baixo, #a99f88); font-variant-numeric: tabular-nums; } .ds-kw { font-weight: 700; text-decoration: underline; text-decoration-color: var(--destaque, #ffd96b); text-decoration-thickness: 2px; text-underline-offset: 5px; }"
     },
     {
       "name": "Lembrete numerado",
@@ -169,27 +638,57 @@
       "refersTo": "painel",
       "description": "Item das notas do Akshan com número em círculo no destaque e termo-chave sublinhado.",
       "html": "<ol class=\"ds-notas\"><li>vc da <span class=\"ds-kw\">stat check</span> depois se ela não estiver mt forte</li></ol>",
-      "css": ".ds-notas { margin: 0; padding: 0; list-style: none; counter-reset: n; max-width: 820px; } .ds-notas li { display: grid; grid-template-columns: 44px minmax(0, 1fr); align-items: start; padding: 16px 18px; border-radius: 10px; background: var(--painel, #15130f); border: 1px solid var(--linha, rgba(214,178,98,.26)); color: var(--texto, #e9e1cd); font: 400 17.5px/1.65 var(--corpo, sans-serif); counter-increment: n; } .ds-notas li::before { content: counter(n); width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50%; background: var(--destaque, #ffd96b); color: var(--tinta-botao, #17130a); font: 800 15px/1 var(--titulo, 'Cinzel', serif); } .ds-kw { font-weight: 700; text-decoration: underline; text-decoration-color: var(--destaque, #ffd96b); text-decoration-thickness: 2px; text-underline-offset: 5px; }"
+      "css": ".ds-notas { margin: 0; padding: 0; list-style: none; counter-reset: n; } .ds-notas li { display: grid; grid-template-columns: 44px minmax(0, 1fr); align-items: start; padding: 12px 16px; border-radius: 10px; background: var(--painel, #15130f); border: 1px solid var(--linha, rgba(214,178,98,.26)); color: var(--texto, #e9e1cd); font: 400 17px/1.6 var(--corpo, sans-serif); counter-increment: n; } .ds-notas li::before { content: counter(n); width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50%; background: var(--destaque, #ffd96b); color: var(--tinta-botao, #17130a); font: 800 15px/1 var(--titulo, 'Cinzel', serif); } .ds-kw { font-weight: 700; text-decoration: underline; text-decoration-color: var(--destaque, #ffd96b); text-decoration-thickness: 2px; text-underline-offset: 5px; }"
     }
   ],
   "narrative": {
     "northStar": "A Seleção das Sentinelas",
-    "overview": "A página é a tela de seleção de campeões vestida com as cores das Sentinelas da Luz, a facção do Akshan. De um lado fica você (a arte em pé do Akshan, com selo amarelo), do outro o inimigo (selo branco), e no meio um painel com a mira da Punição, o R do Akshan, em volta da lista de campeões. O botão dourado de travar o pick fecha a escolha e leva ao setup e aos lembretes.\n\nO material é preto quente com ouro, amarelo e branco no tema escuro, que é o padrão; no tema claro vira marfim com ouro escuro. A profundidade vem de molduras finas douradas, painéis em degraus de tom e uma luz dourada difusa que desce do topo da tela. A densidade é de consulta: tudo o que se lê na seleção de campeões cabe na primeira dobra do celular, e os lembretes embaixo têm ritmo de leitura calma.\n\nA geometria vem do jogo: losangos, círculos e setas apontando para dentro, tirados da mira da Punição no vídeo oficial da habilidade. Não há raios de sol saindo do centro, e o verde do guia de referência não entra na paleta do Akshan.\n\nO site agora é multi-guia. A mesma tela de seleção serve a cada guia (hoje Akshan, das notas do Peteruso, e Mordekaiser, das notas do Meowdekaiser); o que muda de um para outro é a paleta, alguns marcadores e o formato do setup e das notas. A seleção das Sentinelas é a expressão do Akshan; o Mordekaiser veste a mesma estrutura de ferro escuro com o verde do Reino da Morte. A troca de guia mora no topo e o site abre no último guia usado.",
+    "overview": "A página é a tela de seleção de campeões vestida com as cores das Sentinelas da Luz, a facção do Akshan. À esquerda fica o painel com a mira da Punição, o R do Akshan, em volta da lista de campeões; à direita, o duelo: você (a arte do Akshan, com selo amarelo) e o inimigo (selo branco) lado a lado, com o círculo dourado \"VS\" entre os dois. Tocar no VS trava o pick, e logo abaixo estão o setup e os lembretes.\n\nO material é preto quente com ouro, amarelo e branco no tema escuro, que é o padrão; no tema claro vira marfim com ouro escuro. A profundidade vem de molduras finas douradas, painéis em degraus de tom e uma luz dourada difusa que desce do topo da tela. A densidade é de consulta: no desktop o matchup inteiro (duelo, setup, lembretes e rodapé) cabe na tela sem rolar no Akshan a 1440×900, e no celular a lista vira uma faixa de rostos para o duelo subir para a primeira dobra. O som acompanha a mão: cliques e falas do cliente do LoL, só quando o leitor age, e com um botão para calar.\n\nA geometria vem do jogo: losangos, círculos e setas apontando para dentro, tirados da mira da Punição no vídeo oficial da habilidade. Não há raios de sol saindo do centro, e o verde do guia de referência não entra na paleta do Akshan.\n\nO site é multi-guia. A mesma tela de seleção serve a cada guia (hoje Akshan, das notas do Peteruso, e Mordekaiser, das notas do Meowdekaiser); o que muda de um para outro é a paleta, alguns marcadores e o formato do setup e das notas. A seleção das Sentinelas é a expressão do Akshan; o Mordekaiser veste a mesma estrutura de ferro escuro com o verde do Reino da Morte. A troca de guia mora no topo, o site abre no último guia usado, e o crédito do autor fica no rodapé.",
     "keyCharacteristics": [
-      "Três colunas no desktop (Você | mira com a lista | Inimigo e Travar), anel no topo no celular.",
+      "Duas colunas no desktop: a lista fixa de 440px à esquerda e o detalhe (duelo, setup, notas, rodapé) à direita; uma coluna no celular, com a lista em faixa horizontal.",
+      "Duelo em paisagem: os dois cards lado a lado com a arte centralizada e o círculo VS de travar entre eles.",
       "Dois temas com os mesmos nomes de token; o escuro mora em `:root`, o claro em `:root[data-tema=\"claro\"]`.",
       "Uma paleta por guia com os mesmos nomes de token, em `:root[data-guia=\"<id>\"]` e `:root[data-guia=\"<id>\"][data-tema=\"claro\"]`.",
       "Cinzel em caixa-alta espaçada para títulos e rótulos de cerimônia; Hanken Grotesk para tudo o que se lê.",
       "A mira da Punição como assinatura do Akshan: losango, círculo inscrito e setas laterais para dentro. O losango pequeno é da casa toda.",
-      "Movimento só em dois momentos: a mira travando no alvo (Akshan) e o \"Travar o pick\" (todos os guias)."
+      "Movimento só em dois momentos: a mira travando no alvo (Akshan) e o travar do pick (todos os guias). Som só por ação do leitor, com o botão de som no topo."
     ],
     "rules": [
-      { "name": "A Regra dos Dois Temas", "body": "Todo componente usa os tokens por nome; o tema claro só troca os valores em `:root[data-tema=\"claro\"]`. Cor fixa só é permitida sobre a arte do campeão (nomes, selos, escurecimento do card, o número de dificuldade sobre o ícone, o overlay do Travar o pick), onde o fundo é a imagem e não o tema.", "section": "colors" },
-      { "name": "A Regra da Paleta por Guia", "body": "Um guia novo entra redefinindo os mesmos tokens em `:root[data-guia=\"<id>\"]` (base e sobre a arte) e `:root[data-guia=\"<id>\"][data-tema=\"claro\"]` (só os de base). Nenhum componente pergunta qual é o guia para escolher cor; só os marcadores próprios de um campeão (a mira da Punição) dependem de `data-guia`.", "section": "colors" },
-      { "name": "A Regra do Destaque é Seu", "body": "O destaque (amarelo no Akshan, verde no Mordekaiser) marca o que é seu, o que está ativo ou o que importa no texto: selo Você, filtro ligado, campeão escolhido, número do lembrete, termo-chave, pip ligado. Não vira cor de decoração.", "section": "colors" },
-      { "name": "A Regra da Cerimônia", "body": "Cinzel é para nomes, títulos, selos e o botão de travar. O que se lê de verdade (notas, rótulos de slot, chips, busca, tabela) é Hanken Grotesk.", "section": "typography" },
-      { "name": "A Regra da Voz Original", "body": "A interface fala português; o texto do autor fica na língua da planilha. No formato completo, o bloco de notas, a build e as condições vão marcados com `lang=\"en\"`, e os títulos das seções são traduzidos e marcados de volta com `lang=\"pt-BR\"`, em Cinzel sobre o corpo em inglês.", "section": "typography" },
-      { "name": "A Regra da Luz de Cima", "body": "A luz vem do topo da tela, numa camada fixa atrás de tudo. Não há brilhos radiais saindo do centro dos componentes, exceto o clarão do Travar o pick.", "section": "elevation" }
+      {
+        "name": "A Regra dos Dois Temas",
+        "body": "Todo componente usa os tokens por nome; o tema claro só troca os valores em `:root[data-tema=\"claro\"]`. Cor fixa só é permitida sobre a arte do campeão (nomes, selos, escurecimento do card, o número de dificuldade sobre o ícone, o \"VS\" do botão de travar, o overlay de travar), onde o fundo é a imagem e não o tema.",
+        "section": "colors"
+      },
+      {
+        "name": "A Regra da Paleta por Guia",
+        "body": "Um guia novo entra redefinindo os mesmos tokens em `:root[data-guia=\"<id>\"]` (base e sobre a arte) e `:root[data-guia=\"<id>\"][data-tema=\"claro\"]` (só os de base). Nenhum componente pergunta qual é o guia para escolher cor; só os marcadores próprios de um campeão (a mira da Punição) dependem de `data-guia`.",
+        "section": "colors"
+      },
+      {
+        "name": "A Regra do Destaque é Seu",
+        "body": "O destaque (amarelo no Akshan, verde no Mordekaiser) marca o que é seu, o que está ativo ou o que importa no texto: selo Você, filtro ligado, campeão escolhido, número do lembrete, termo-chave, pip ligado. Não vira cor de decoração.",
+        "section": "colors"
+      },
+      {
+        "name": "A Regra da Cerimônia",
+        "body": "Cinzel é para nomes, títulos, selos e o VS de travar. O que se lê de verdade (notas, rótulos de slot, chips, busca, tabela, rodapé) é Hanken Grotesk.",
+        "section": "typography"
+      },
+      {
+        "name": "A Regra da Voz Original",
+        "body": "A interface fala português; o texto do autor fica na língua da planilha. No formato completo, o bloco de notas, a build e as condições vão marcados com `lang=\"en\"`, e os títulos das seções são traduzidos e marcados de volta com `lang=\"pt-BR\"`, em Cinzel sobre o corpo em inglês.",
+        "section": "typography"
+      },
+      {
+        "name": "A Regra da Luz de Cima",
+        "body": "A luz vem do topo da tela, numa camada fixa atrás de tudo. Não há brilhos radiais saindo do centro dos componentes, exceto o clarão do overlay de travar.",
+        "section": "elevation"
+      },
+      {
+        "name": "A Regra do Som por Ação",
+        "body": "Todo som nasce de um gesto do leitor (clique, tecla ou mouse sobre um rosto); nada toca sozinho ao carregar ou em animação. Todo som passa pelo botão de som, e o hover nunca toca no toque.",
+        "section": "components"
+      }
     ],
     "dos": [
       "**Do** usar os tokens pelo nome (`--acento`, `--destaque`, `--painel`, `--linha-forte`...) para que o tema claro e a paleta de cada guia funcionem sozinhos.",
@@ -197,7 +696,9 @@
       "**Do** reservar o destaque para o que é seu ou está ativo: selo Você, filtro ligado, campeão escolhido, número do lembrete, termo-chave, pip ligado.",
       "**Do** desenhar marcadores novos com a geometria da casa (losango, círculo, setas apontando para dentro); a mira completa da Punição fica só no Akshan.",
       "**Do** manter alvos de toque de pelo menos 44px e o foco em contorno `acento-vivo` de 2px afastado 3px.",
-      "**Do** respeitar \"reduzir movimento\" em qualquer animação nova, como a mira, o Travar o pick e o chevron da troca de guia já fazem."
+      "**Do** respeitar \"reduzir movimento\" em qualquer animação nova, como a mira, o travar do pick e o chevron da troca de guia já fazem.",
+      "**Do** manter o matchup do Akshan inteiro na tela a 1440×900; o que entrar no detalhe precisa caber nesse orçamento ou sair dele.",
+      "**Do** tocar sons novos pela mesma função, com volume no objeto `VOLUME`, só por ação do leitor e respeitando o botão de som."
     ],
     "donts": [
       "**Don't** desenhar raios de sol saindo do centro da mira ou dos cards.",
@@ -205,7 +706,8 @@
       "**Don't** usar cor fixa fora da arte do campeão; fora dela, tudo passa pelos tokens dos temas e dos guias.",
       "**Don't** pôr a mira da Punição (alvo no card, setas, losango em volta do escolhido) em guia que não seja o do Akshan.",
       "**Don't** usar Cinzel em parágrafos, rótulos de slot, chips ou tabelas.",
-      "**Don't** deixar a página rolar para o lado; faixas largas (como os filtros no celular) rolam dentro do próprio painel."
+      "**Don't** deixar a página rolar para o lado; faixas largas (como a lista e os filtros no celular) rolam dentro do próprio painel.",
+      "**Don't** deixar o alvo da mira cobrir o nome do inimigo no card."
     ]
   }
 }

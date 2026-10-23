@@ -20,6 +20,7 @@ Guias atuais:
 - `src/guias/mordekaiser/`: `planilha.csv` (cópia da planilha) e `matchups.json` (a planilha separada em runas, itens, dificuldade e seções).
 - `src/fonts/`: Cinzel e Hanken Grotesk (subconjunto latino), embutidas no HTML pelo build.
 - `scripts/build.py`: gera o `index.html`. Rode `python scripts/build.py` depois de qualquer mudança.
+- `sons/`: sons do cliente do LoL (seleção de campeões) e a fala de escolha de cada campeão de guia, carregados só quando tocam. `scripts/baixar_sons.py` baixa de novo do CommunityDragon (rode quando entrar um guia novo). O botão de som no topo desliga tudo.
 - `scripts/atualizar_mordekaiser.py`: baixa de novo a planilha do Meowdekaiser e os dados do Data Dragon e refaz o `matchups.json` (precisa de internet). Depois rode o build.
 - `PRODUCT.md` e `DESIGN.md`: o que o produto é e o sistema visual.
 
@@ -38,4 +39,4 @@ Guias atuais:
 4. Celular primeiro: teste a 390 px e a 1440 px. A página nunca pode rolar para o lado.
 5. Mantenha o aviso de site de fã, sem ligação com a Riot, e o crédito de cada planilha.
 
-As imagens de campeões, runas, feitiços e itens vêm do Data Dragon da Riot (precisa de internet). Se uma falhar, o site esconde a imagem e mostra a inicial do campeão na lista.
+As imagens de campeões, runas, feitiços e itens vêm do Data Dragon da Riot (precisa de internet). Se uma falhar, o site esconde a imagem e mostra a inicial do campeão na lista. Os sons tocam no Chrome, Edge, Firefox e Android; Safari antigo pode ficar sem som (os arquivos são Ogg Vorbis).
