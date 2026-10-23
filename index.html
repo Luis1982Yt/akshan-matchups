@@ -24,6 +24,7 @@
 <script>
 try {
   const t = localStorage.getItem("tema"); if (t === "claro") document.documentElement.dataset.tema = t;
+  const sk = localStorage.getItem("skin"); if (sk) document.documentElement.dataset.skin = sk;
   const ids = ["akshan"], h = location.hash.slice(1).split("/")[0], g = localStorage.getItem("guia");
   document.documentElement.dataset.guia = ids.includes(h) ? h : ids.includes(g) ? g : ids[0];
   const l = localStorage.getItem("lingua") || ((navigator.language || "").toLowerCase().startsWith("pt") ? "pt" : "en");
@@ -33,7 +34,7 @@ try {
   }
   if (location.protocol !== "file:" && matchMedia("(min-width: 1720px)").matches && document.documentElement.dataset.guia === "akshan" && localStorage.getItem("akshan3d") !== "0") {
     [["modulepreload", "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js"], ["modulepreload", "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/loaders/GLTFLoader.js"], ["modulepreload", "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/utils/BufferGeometryUtils.js"],
-     ["preload", "modelo/akshan.glb"]].forEach(([rel, href]) => {
+     ["preload", sk ? `modelo/akshan-${sk}.glb` : "modelo/akshan.glb"]].forEach(([rel, href]) => {
       const k = document.createElement("link"); k.rel = rel; k.href = href;
       if (rel === "preload") { k.as = "fetch"; k.crossOrigin = "anonymous"; }
       document.head.appendChild(k);
@@ -86,6 +87,47 @@ try {
   --tinta-botao: #1d1608;
   --luz: rgba(227, 178, 60, .18);
   --sombra: 0 10px 30px rgba(90, 64, 10, .14);
+  color-scheme: light;
+}
+/* Skins do Akshan: cada uma redefine os mesmos tokens, com as cores tiradas da splash oficial dela. */
+:root[data-guia="akshan"][data-skin="ciberpop"] {
+  --fundo: #0b1020;
+  --painel: #121a2e;
+  --painel-alto: #1a2440;
+  --linha: rgba(85, 209, 236, .22);
+  --linha-forte: rgba(85, 209, 236, .5);
+  --acento: #55d1ec;
+  --acento-vivo: #9be8f7;
+  --destaque: #f08ccb;
+  --texto: #e4eaf6;
+  --texto-baixo: #95a2c2;
+  --tinta-botao: #1d0a18;
+  --luz: rgba(186, 76, 191, .16);
+  --sombra: 0 10px 30px rgba(0, 0, 0, .5);
+  --sobre-arte: #c8f4ff;
+  --destaque-arte: #f08ccb;
+  --botao-1: #ffc4e8;
+  --botao-2: #e086bd;
+  --brilho: rgba(155, 232, 247, .55);
+  --brilho-2: rgba(186, 76, 191, .22);
+  --mira: #9be8f7;
+  --mira-brilho: rgba(85, 209, 236, .8);
+  color-scheme: dark;
+}
+:root[data-guia="akshan"][data-skin="ciberpop"][data-tema="claro"] {
+  --fundo: #eef2fa;
+  --painel: #fbfcff;
+  --painel-alto: #dfe6f3;
+  --linha: rgba(26, 112, 140, .26);
+  --linha-forte: rgba(26, 112, 140, .55);
+  --acento: #1a708c;
+  --acento-vivo: #12566c;
+  --destaque: #c2418f;
+  --texto: #141a2b;
+  --texto-baixo: #4b5675;
+  --tinta-botao: #ffffff;
+  --luz: rgba(186, 76, 191, .12);
+  --sombra: 0 10px 30px rgba(20, 40, 90, .14);
   color-scheme: light;
 }
 /* Mordekaiser: ferro e o verde do Reino da Morte. */
@@ -225,6 +267,19 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 #trocarImg { display: contents; }
 .card::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(to top, rgba(8, 8, 6, .9) 0%, rgba(8, 8, 6, .5) 34%, transparent 62%); }
 .card .selo { position: absolute; z-index: 2; top: 12px; left: 12px; padding: 3px 10px; border-radius: 4px; font: 700 12px/1.4 var(--titulo); letter-spacing: .12em; text-transform: uppercase; background: var(--destaque-arte); color: #111; }
+.skin-btn { position: absolute; z-index: 3; top: 10px; right: 10px; display: flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 12px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, .35); background: rgba(10, 10, 14, .62); color: var(--branco-arte, #f6f3ea); font: 700 12px var(--corpo); letter-spacing: .04em; cursor: pointer; backdrop-filter: blur(4px); }
+.skin-btn[hidden] { display: none; }
+@media (max-width: 900px) { .skin-btn { width: 32px; padding: 0; justify-content: center; } .skin-btn span { display: none; } .skin-menu { top: 48px; left: 8px; right: 8px; min-width: 0; } }
+.skin-btn:hover { border-color: var(--destaque-arte); }
+.skin-btn svg { color: var(--destaque-arte); }
+/* Toque: a área do botão cresce até 44px sem mudar o desenho. */
+.skin-btn::after { content: ""; position: absolute; inset: -6px; }
+.skin-menu { position: absolute; z-index: 4; top: 50px; right: 10px; display: grid; gap: 4px; min-width: 210px; padding: 6px; border-radius: 12px; border: 1px solid var(--linha-forte); background: var(--painel); box-shadow: var(--sombra); }
+.skin-menu[hidden] { display: none; }
+.skin-menu button { display: flex; align-items: center; gap: 10px; min-height: 48px; padding: 4px 10px 4px 4px; border-radius: 8px; border: 0; background: none; color: var(--texto); font: 600 14px var(--corpo); text-align: left; cursor: pointer; }
+.skin-menu button:hover, .skin-menu button[aria-pressed="true"] { background: var(--painel-alto); }
+.skin-menu button[aria-pressed="true"] { color: var(--acento-vivo); }
+.skin-menu img { width: 40px; height: 40px; border-radius: 6px; object-fit: cover; border: 1px solid var(--linha-forte); }
 .card.inimigo .selo { left: auto; right: 12px; background: #f6f3ea; color: #111; }
 .card .quem { position: absolute; z-index: 2; left: 0; right: 0; bottom: 0; padding: 0 16px 14px; color: #f6f3ea; }
 .card.inimigo .quem { text-align: right; }
@@ -274,8 +329,8 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .mira .aro { fill: none; stroke: var(--acento); stroke-width: 1.5px; }
 .mira .aro.fino { stroke-width: 1px; opacity: .45; }
 .mira .setas { fill: var(--acento-vivo); }
-.alvo { position: absolute; z-index: 1; left: 50%; top: 50%; height: 70%; aspect-ratio: 1; transform: translate(-50%, -50%); overflow: visible; pointer-events: none; filter: drop-shadow(0 0 4px rgba(255, 214, 120, .75)) drop-shadow(0 1px 3px rgba(0, 0, 0, .6)); }
-.alvo .losango { fill: none; stroke: #ffe39a; stroke-width: 3.5px; }
+.alvo { position: absolute; z-index: 1; left: 50%; top: 50%; height: 70%; aspect-ratio: 1; transform: translate(-50%, -50%); overflow: visible; pointer-events: none; filter: drop-shadow(0 0 4px var(--mira-brilho, rgba(255, 214, 120, .75))) drop-shadow(0 1px 3px rgba(0, 0, 0, .6)); }
+.alvo .losango { fill: none; stroke: var(--mira, #ffe39a); stroke-width: 3.5px; }
 .alvo .aro-alvo { fill: none; stroke: #fff4d6; stroke-width: 1px; opacity: .6; }
 .alvo .setas-alvo { fill: #fff4d6; opacity: .85; }
 .alvo.travando { animation: trava-alvo .5s cubic-bezier(.16, 1, .3, 1) both; }
@@ -593,6 +648,8 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
         <article class="card voce">
           <div id="artVoce"></div>
           <span class="selo" data-t="voce">Você</span>
+          <button class="skin-btn" type="button" id="skinBtn" aria-expanded="false" aria-controls="skinMenu" hidden><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1l6 6-6 6-6-6z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span id="skinNome"></span></button>
+          <div class="skin-menu" id="skinMenu" role="group" data-t-aria="skins" hidden></div>
           <div class="quem"><p class="n" id="vocNome"></p><p class="t" id="vocTitulo"></p></div>
         </article>
         <button class="travar" type="button" id="travar" title="Travar o pick" data-t-title="travarTit"><span aria-hidden="true">VS</span><span class="sr" id="travarNome"></span></button>
@@ -645,6 +702,13 @@ const DD = "https://ddragon.leagueoflegends.com/cdn/", VER = "16.20.1";
 const arte = id => `${DD}img/champion/loading/${id}_0.jpg`;
 const sq = id => `${DD}${VER}/img/champion/${id}.png`;
 const cena = id => `${DD}img/champion/centered/${id}_0.jpg`;
+// Skins do Akshan com paleta própria (num = número da skin no Data Dragon).
+// Cada skin tem o modelo 3D (modelo/akshan-<id>.glb) e os efeitos sonoros (sons/akshan3d/<id>/) dela; a voz é a do Akshan.
+const SKINS = [{ id: "", num: 0, nome: "Padrão", nome_en: "Default" }, { id: "ciberpop", num: 1, nome: "Ciberpop", nome_en: "Cyber Pop" }];
+const modeloSkin = k => (k.id ? `modelo/akshan-${k.id}.glb` : "modelo/akshan.glb");
+const skinAtual = () => SKINS.find(k => k.id === (document.documentElement.dataset.skin || "")) || SKINS[0];
+const cenaSkin = (id, num) => `${DD}img/champion/centered/${id}_${num}.jpg`;
+const tileSkin = (id, num) => `${DD}img/champion/tiles/${id}_${num}.jpg`;
 const slug = s => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/['’.]/g, "").replace(/\s+/g, "-");
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const $ = id => document.getElementById(id);
@@ -679,7 +743,7 @@ const TXT = {
     linguaRotulo: "Switch to English", linguaBotao: "EN",
     guiaAtual: "Guia atual: ", trocarGuia: ". Trocar de guia", notasDo: "notas do ", matchups: " matchups", aberto: "Aberto",
     facil: "Fácil", medio: "Médio", dificil: "Difícil", resumo: "Resumo", runas: "Runas", itens: "Itens", geral: "Geral",
-    principal: "Principal", fragmentos: "Fragmentos", emote: "Arraste para girar · clique para uma emote", mostra3d: "Mostrar o Akshan 3D", esconde3d: "Esconder o Akshan 3D", carrega3d: "Carregando o Akshan…", tierBotao: "Tier list das matchups", tierTit: "Tier list · {c}", fechar: "Fechar", aoVivo: "Ao vivo", acompanhe: "Acompanhe mono {c}s", assistir: "Assistir", devPor: "Site feito por", animacoes: "Animações do Akshan",
+    principal: "Principal", fragmentos: "Fragmentos", emote: "Arraste para girar · clique para uma emote", mostra3d: "Mostrar o Akshan 3D", skins: "Skins do Akshan", esconde3d: "Esconder o Akshan 3D", carrega3d: "Carregando o Akshan…", tierBotao: "Tier list das matchups", tierTit: "Tier list · {c}", fechar: "Fechar", aoVivo: "Ao vivo", acompanhe: "Acompanhe mono {c}s", assistir: "Assistir", devPor: "Site feito por", animacoes: "Animações do Akshan",
     a_dance: "Dança", a_taunt: "Provocação", a_laugh: "Risada", a_attack: "Ataque", a_recall: "Recall",
   },
   en: {
@@ -701,7 +765,7 @@ const TXT = {
     linguaRotulo: "Mudar para português", linguaBotao: "PT",
     guiaAtual: "Current guide: ", trocarGuia: ". Change guide", notasDo: "notes by ", matchups: " matchups", aberto: "Open",
     facil: "Easy", medio: "Medium", dificil: "Hard", resumo: "Summary", runas: "Runes", itens: "Items", geral: "Overall",
-    principal: "Primary", fragmentos: "Shards", emote: "Drag to rotate · click for an emote", mostra3d: "Show 3D Akshan", esconde3d: "Hide 3D Akshan", carrega3d: "Loading Akshan…", tierBotao: "Matchup tier list", tierTit: "Tier list · {c}", fechar: "Close", aoVivo: "Live", acompanhe: "Watch {c} one-tricks", assistir: "Watch", devPor: "Site by", animacoes: "Akshan animations",
+    principal: "Primary", fragmentos: "Shards", emote: "Drag to rotate · click for an emote", mostra3d: "Show 3D Akshan", skins: "Akshan skins", esconde3d: "Hide 3D Akshan", carrega3d: "Loading Akshan…", tierBotao: "Matchup tier list", tierTit: "Tier list · {c}", fechar: "Close", aoVivo: "Live", acompanhe: "Watch {c} one-tricks", assistir: "Watch", devPor: "Site by", animacoes: "Akshan animations",
     a_dance: "Dance", a_taunt: "Taunt", a_laugh: "Laugh", a_attack: "Attack", a_recall: "Recall",
   },
 };
@@ -890,7 +954,8 @@ function marcaHash() {
 function renderGuia() {
   const eu = guia.campeao;
   const sub = guia.rota || "";
-  $("trocarImg").innerHTML = `<img src="${sq(eu.id)}" alt="" width="38" height="38">`;
+  const skt = guia.id === "akshan" ? skinAtual() : SKINS[0];
+  $("trocarImg").innerHTML = `<img src="${skt.num ? tileSkin(eu.id, skt.num) : sq(eu.id)}" alt="" width="38" height="38">`;
   $("trocarNome").textContent = eu.nome;
   $("trocarSub").textContent = sub;
   $("trocarSub").hidden = !sub;
@@ -902,7 +967,11 @@ function renderGuia() {
       <span><b>${esc(g.campeao.nome)}</b><small><span class="sr">, </span>${g.rota ? esc(g.rota) + " · " : ""}${t("notasDo")}${esc(g.autor)} · ${g.matchups.length}${t("matchups")}</small></span>
       ${g === guia ? `<span class="atual">${t("aberto")}</span>` : ""}
     </button></li>`).join("");
-  $("artVoce").innerHTML = `<img src="${cena(eu.id)}" alt="${t("arteDe")}${esc(eu.nome)}" fetchpriority="high">`;
+  const sk = guia.id === "akshan" ? skinAtual() : SKINS[0];
+  $("artVoce").innerHTML = `<img src="${cenaSkin(eu.id, sk.num)}" alt="${t("arteDe")}${esc(eu.nome)}" fetchpriority="high">`;
+  $("skinBtn").hidden = guia.id !== "akshan";
+  $("skinNome").textContent = (L === "en" && sk.nome_en) || sk.nome;
+  $("skinBtn").setAttribute("aria-label", `${t("skins")}: ${$("skinNome").textContent}`);
   $("vocNome").textContent = eu.nome;
   $("vocNome").classList.toggle("longo", eu.nome.length > 9);
   $("vocTitulo").textContent = tituloDe(eu);
@@ -1341,6 +1410,34 @@ addEventListener("hashchange", () => {
 aplicaTextos();
 escolheGuia(...lerHash());
 
+/* ---------- Skin do Akshan: troca a paleta (tokens em :root[data-skin]), a arte do card e o retrato do topo ---------- */
+function abreSkins(abrir) {
+  const m = $("skinMenu");
+  if (abrir) {
+    const atual = skinAtual();
+    m.innerHTML = SKINS.map(k => `<button type="button" data-skin="${k.id}" aria-pressed="${k === atual}"><img src="${tileSkin(guia.campeao.id, k.num)}" alt="" width="40" height="40">${esc((L === "en" && k.nome_en) || k.nome)}</button>`).join("");
+  }
+  m.hidden = !abrir;
+  $("skinBtn").setAttribute("aria-expanded", abrir);
+  toca(abrir ? "abre" : "fecha");
+  if (abrir) (m.querySelector('[aria-pressed="true"]') || m.querySelector("button")).focus();
+}
+$("skinBtn").addEventListener("click", () => abreSkins($("skinMenu").hidden));
+$("skinMenu").addEventListener("click", e => {
+  const b = e.target.closest("[data-skin]");
+  if (!b) return;
+  const id = b.dataset.skin;
+  if (id) document.documentElement.dataset.skin = id; else delete document.documentElement.dataset.skin;
+  try { id ? localStorage.setItem("skin", id) : localStorage.removeItem("skin"); } catch (e) {}
+  abreSkins(false);
+  renderGuia();
+  enquadraTudo();
+  recarrega3d();
+  $("skinBtn").focus();
+});
+document.addEventListener("click", e => { if (!$("skinMenu").hidden && !e.target.closest("#skinMenu, #skinBtn")) abreSkins(false); });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && !$("skinMenu").hidden) { abreSkins(false); $("skinBtn").focus(); } });
+
 /* ---------- Tier list: os campeões agrupados pela dificuldade da planilha ---------- */
 function abreTier() {
   $("tierTit").textContent = t("tierTit").replace("{c}", guia.campeao.nome);
@@ -1428,7 +1525,8 @@ function tocaSons3d(lista) {
     const n = VARIACOES_3D[nome];
     if (!n) return;
     const vai = () => {
-      const a = new Audio(`sons/akshan3d/${nome}-${Math.floor(Math.random() * n)}.ogg`);
+      const k = skinAtual(), pasta = k.id && !nome.startsWith("vo_") ? k.id + "/" : "";
+      const a = new Audio(`sons/akshan3d/${pasta}${nome}-${Math.floor(Math.random() * n)}.ogg`);
       a.volume = nome.startsWith("vo_") ? .8 : nome === "dance" ? .45 : .5;
       a.loop = repete;
       a.play().catch(() => {});
@@ -1458,15 +1556,28 @@ function liga3d(sim) {
 $("fecha3d").addEventListener("click", () => liga3d(false));
 $("abre3d").addEventListener("click", () => liga3d(true));
 
+let geracao3d = 0, desmonta3d = null;
+// Troca de skin com o 3D aberto: desmonta a cena atual e carrega o modelo da skin nova.
+function recarrega3d() {
+  if (!estado3d || estado3d === "falhou") return;
+  geracao3d++;
+  if (desmonta3d) { desmonta3d(); desmonta3d = null; }
+  estado3d = "";
+  atualiza3d();
+}
 async function iniciaAkshan3d() {
   estado3d = "carregando";
+  const geracao = ++geracao3d;
   const box = $("akshan3d"), canvas = $("cena3d");
+  box.classList.remove("pronto");
   try {
     const [THREE, { GLTFLoader }, bytes] = await Promise.all([
       import("three"), import("three/addons/loaders/GLTFLoader.js"),
-      fetch("modelo/akshan.glb").then(r => { if (!r.ok) throw new Error("modelo " + r.status); return r.arrayBuffer(); }),
+      fetch(modeloSkin(skinAtual())).then(r => { if (!r.ok) throw new Error("modelo " + r.status); return r.arrayBuffer(); }),
     ]);
     const gltf = await new GLTFLoader().parseAsync(bytes, "");
+    if (geracao !== geracao3d) return;  // trocaram de skin enquanto baixava
+    const fim = new AbortController(), ouve = { signal: fim.signal };
     const r = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
     r.setClearColor(0x000000, 0);
     r.outputColorSpace = THREE.SRGBColorSpace;
@@ -1499,7 +1610,7 @@ async function iniciaAkshan3d() {
       cam.position.set(centro.x, centro.y + alt * .04, centro.z + dist); cam.lookAt(centro.x, centro.y + alt * .04, centro.z);
       cam.updateProjectionMatrix();
     };
-    new ResizeObserver(enquadra).observe(canvas);
+    const ro = new ResizeObserver(enquadra); ro.observe(canvas);
     enquadra();
 
     const mixer = new THREE.AnimationMixer(m), clipe = n => gltf.animations.find(a => a.name === n);
@@ -1526,18 +1637,18 @@ async function iniciaAkshan3d() {
     $("anim3d").innerHTML = Object.keys(SEQ_3D).map(n => n.length === 1
       ? `<button type="button" class="tecla" data-anim="${n}" aria-pressed="false">${n.toUpperCase()}</button>`
       : `<button type="button" data-anim="${n}" data-t="a_${n}" aria-pressed="false">${t("a_" + n)}</button>`).join("");
-    $("anim3d").addEventListener("click", e => { const b = e.target.closest("[data-anim]"); if (b) anima(b.dataset.anim); });
+    $("anim3d").addEventListener("click", e => { const b = e.target.closest("[data-anim]"); if (b) anima(b.dataset.anim); }, ouve);
 
     // Arrastar gira; clique sem arrastar faz uma emote sorteada.
     let arrasto = null;
-    canvas.addEventListener("pointerdown", e => { arrasto = { x: e.clientX, girou: false }; canvas.setPointerCapture(e.pointerId); });
+    canvas.addEventListener("pointerdown", e => { arrasto = { x: e.clientX, girou: false }; canvas.setPointerCapture(e.pointerId); }, ouve);
     canvas.addEventListener("pointermove", e => {
       if (!arrasto) return;
       const dx = e.clientX - arrasto.x;
       if (!arrasto.girou && Math.abs(dx) < 4) return;
       arrasto.girou = true; canvas.classList.add("girando");
       m.rotation.y += dx * .012; arrasto.x = e.clientX;
-    });
+    }, ouve);
     const solta = () => {
       if (arrasto && !arrasto.girou) {
         const op = EMOTES_3D.filter(n => n !== ultima);
@@ -1545,20 +1656,26 @@ async function iniciaAkshan3d() {
       }
       arrasto = null; canvas.classList.remove("girando");
     };
-    canvas.addEventListener("pointerup", solta);
-    canvas.addEventListener("pointercancel", () => { arrasto = null; canvas.classList.remove("girando"); });
+    canvas.addEventListener("pointerup", solta, ouve);
+    canvas.addEventListener("pointercancel", () => { arrasto = null; canvas.classList.remove("girando"); }, ouve);
 
     idle.play();
     const relogio = new THREE.Clock();
     let visivel = true;
-    new IntersectionObserver(([e]) => { visivel = e.isIntersecting; }).observe(box);
+    const io = new IntersectionObserver(([e]) => { visivel = e.isIntersecting; }); io.observe(box);
     const quadro = () => {
+      if (fim.signal.aborted) return;
       const dt = relogio.getDelta();
       if (!document.hidden && visivel && box.offsetParent) { mixer.update(Math.min(dt, .1)); r.render(cena, cam); }
       requestAnimationFrame(quadro);
     };
     mixer.update(0);
     quadro();
+    desmonta3d = () => {
+      fim.abort(); ro.disconnect(); io.disconnect(); paraSons3d(); mixer.stopAllAction();
+      cena.traverse(o => { if (o.isMesh) { o.geometry.dispose(); [].concat(o.material).forEach(mt => { mt.map && mt.map.dispose(); mt.dispose(); }); } });
+      r.dispose();
+    };
     box.classList.add("pronto");
     estado3d = "pronto";
   } catch (e) {

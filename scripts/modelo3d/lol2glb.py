@@ -1,6 +1,10 @@
 """Converte esqueleto (.skl), malha (.skn) e animações (.anm) do LoL para um .glb.
 
-Uso: python lol2glb.py <pasta com os arquivos extraídos> <saida.glb>
+Uso: python lol2glb.py <pasta com os arquivos extraídos> <saida.glb> [config.json]
+
+Sem config, gera o Akshan padrão. Para uma skin, o config (montado por skin3d.py a partir dos
+dados do jogo) diz os arquivos de esqueleto e malha, as texturas, que submalha usa qual
+textura, o que fica escondido e as animações.
 """
 import io
 import json
@@ -15,6 +19,8 @@ from PIL import Image
 PASTA = pathlib.Path(sys.argv[1])
 SAIDA = pathlib.Path(sys.argv[2])
 
+SKL, SKN = "akshan_base.skl", "akshan_base.skn"
+TEXTURAS = {"main": ("akshan_base_tx_cm.png", True), "weapon": ("akshan_base_weapon_tx_cm.png", False)}  # chave: (png, vira jpeg?)
 ESCONDER = {"Hood", "Hood_Hair", "Rope"}  # initialSubmeshToHide da skin base
 TEXTURA = {"Weapon": "weapon", "Hook": "weapon", "Boomerang": "weapon"}  # o resto usa a principal
 ANIMACOES = [  # (nome no glb, arquivo)
@@ -24,6 +30,13 @@ ANIMACOES = [  # (nome no glb, arquivo)
     ("attack1", "attack1.anm"), ("attack2", "attack2.anm"), ("crit", "akshan_base_crit.anm"), ("crit_to_idle", "crit_to_idle.anm"),
     ("recall", "recall.anm"),
 ]
+if len(sys.argv) > 3:
+    _cfg = json.loads(pathlib.Path(sys.argv[3]).read_text(encoding="utf-8"))
+    SKL, SKN = _cfg["skl"], _cfg["skn"]
+    TEXTURAS = {k: tuple(v) for k, v in _cfg["texturas"].items()}
+    ESCONDER = set(_cfg["esconder"])
+    TEXTURA = _cfg["submesh_textura"]
+    ANIMACOES = [tuple(a) for a in _cfg["animacoes"]]
 TOL_POS, TOL_ROT, TOL_ESC = 0.02, 0.0004, 0.001  # erro aceito ao tirar quadros (unidades do jogo, 1-|dot|, escala)
 
 
@@ -245,8 +258,8 @@ def trs_matriz(t, r, s):
 
 
 def main():
-    joints, influencias = ler_skl((PASTA / "akshan_base.skl").read_bytes())
-    subs, idx, v = ler_skn((PASTA / "akshan_base.skn").read_bytes())
+    joints, influencias = ler_skl((PASTA / SKL).read_bytes())
+    subs, idx, v = ler_skn((PASTA / SKN).read_bytes())
     print(f"{len(joints)} ossos, {len(influencias)} influências, {len(v)} vértices, submalhas: {[s['nome'] for s in subs]}")
     g = Glb()
 
@@ -282,7 +295,11 @@ def main():
     a_w = g.acc(W, "VEC4", 5126, 34962)
 
     materiais = {}
-    for chave, arquivo, jpeg in (("main", "akshan_base_tx_cm.png", True), ("weapon", "akshan_base_weapon_tx_cm.png", False)):
+    # Só entram as texturas de submalhas visíveis (as escondidas, como as telas do recall, não pesam no arquivo).
+    usadas = {TEXTURA.get(sm["nome"], "main") for sm in subs if sm["nome"] not in ESCONDER}
+    for chave, (arquivo, jpeg) in TEXTURAS.items():
+        if chave not in usadas:
+            continue
         im = Image.open(PASTA / arquivo)
         buf = io.BytesIO()
         if jpeg:
