@@ -64,6 +64,19 @@ colors:
   morde-claro-luz: "rgba(47, 168, 101, .14)"
   branco-arte: "#f6f3ea"
   tinta-arte: "#111111"
+  dif-muito-facil: "#22d3ee"
+  dif-facil: "#34a853"
+  dif-medio: "#fbbc04"
+  dif-dificil: "#e06666"
+  dif-muito-dificil: "#c0281c"
+  claro-dif-muito-facil: "#0e7490"
+  claro-dif-facil: "#15803d"
+  claro-dif-medio: "#b45309"
+  claro-dif-dificil: "#dc2626"
+  claro-dif-muito-dificil: "#7f1d1d"
+  ao-vivo: "#e5484d"
+  ao-vivo-texto: "#ff6b6f"
+  ao-vivo-ponto: "#ff3b3f"
 typography:
   display:
     fontFamily: "Cinzel, Times New Roman, serif"
@@ -298,7 +311,7 @@ Os nomes abaixo são os tokens do CSS (`--acento`, `--destaque`...). No frontmat
 - **Ouro Aceso** (`acento-vivo`, antes `--ouro-vivo`): títulos em Cinzel, nome do guia no topo, condições da build, foco de teclado, borda em hover, links, ícones dos botões de tema e de som. No claro vira `claro-acento-vivo`, mais escuro ainda, para manter contraste de título sobre marfim. No Mordekaiser é o **Verde Pálido** (`morde-acento-vivo`).
 
 ### Secondary
-- **Amarelo da Luz** (`destaque`, antes `--amarelo`): o chip ativo, a bolinha "no guia", os números dos lembretes, o sublinhado dos termos-chave, os marcadores em losango das seções, os pips ligados, a marca do campeão escolhido na lista e a seleção de texto. No Mordekaiser é o **Verde do Reino da Morte** (`morde-destaque`).
+- **Amarelo da Luz** (`destaque`, antes `--amarelo`): o chip ativo, os números dos lembretes, o sublinhado dos termos-chave, os marcadores em losango das seções, os pips ligados, a marca do campeão escolhido na lista e a seleção de texto. No Mordekaiser é o **Verde do Reino da Morte** (`morde-destaque`).
 
 ### Tertiary (sobre a arte)
 Tokens que ficam sobre a arte do campeão ou no botão de travar. Mudam por guia, mas não por tema: o claro de cada guia herda os do escuro.
@@ -316,7 +329,20 @@ Tokens que ficam sobre a arte do campeão ou no botão de travar. Mudam por guia
 - **Tinta do Botão** (`tinta-botao`): texto escuro sobre o destaque.
 - **Luz** (`luz`): a luz radial que desce do topo, numa camada fixa atrás de tudo, na cor do guia.
 
+### Dificuldade (da planilha)
+A dificuldade de cada matchup é a cor que o Peteruso pinta na célula do campeão, lida do xlsx (`scripts/icones_planilha.py`). As cores originais da planilha moram em `--difc-*` e pintam o fundo das faixas da tier list; bordas de retrato, bolinhas dos filtros e a bolinha do card usam `--dif-*`, que no tema escuro são as mesmas e no claro escurecem para manter 3:1 sobre o creme.
+- **Muito difícil** (`dif-muito-dificil`, vermelho escuro; claro `#7f1d1d`). Na faixa da tier list o texto vai branco (5,9:1).
+- **Difícil** (`dif-dificil`, vermelho claro; claro `#dc2626`).
+- **Médio** (`dif-medio`, amarelo; claro `#b45309`).
+- **Fácil** (`dif-facil`, verde; claro `#15803d`).
+- **Muito fácil** (`dif-muito-facil`, ciano; claro `#0e7490`).
+
+### Status
+- **Ao vivo** (`ao-vivo` na borda, `ao-vivo-texto` no rótulo, `ao-vivo-ponto` no ponto que pulsa): só o selo de live no card "Acompanhe". Vermelho de transmissão, fora da paleta do guia de propósito.
+
 ### Named Rules
+**A Regra da Cor como Dado.** As cores de dificuldade e o vermelho do ao vivo são dados, não decoração: aparecem só onde dizem a dificuldade de um matchup ou que alguém está em live, e nunca no lugar do destaque do guia.
+
 **A Regra dos Dois Temas.** Todo componente usa os tokens por nome; o tema claro só troca os valores em `:root[data-tema="claro"]`. Cor fixa só é permitida sobre a arte do campeão (nomes, selos, escurecimento do card, o número de dificuldade sobre o ícone, o "VS" do botão de travar, o overlay de travar), onde o fundo é a imagem e não o tema.
 
 **A Regra da Paleta por Guia.** Um guia novo entra redefinindo os mesmos tokens em `:root[data-guia="<id>"]` (base e sobre a arte) e `:root[data-guia="<id>"][data-tema="claro"]` (só os de base). Nenhum componente pergunta qual é o guia para escolher cor; só os marcadores próprios de um campeão (a mira da Punição) dependem de `data-guia`.
@@ -333,7 +359,7 @@ Tokens que ficam sobre a arte do campeão ou no botão de travar. Mudam por guia
 ### Hierarchy
 - **Display** (800, clamp(24px, 2.3vw, 32px), 1.05; 20px no celular): o nome do campeão sobre a arte, em caixa versalete do Cinzel. Nomes longos (mais de 9 letras) descem para clamp(19px, 1.8vw, 25px), 16px no celular.
 - **Headline** (700, 23px, 1.2, 0.06em; 20px no celular): "Lembrete" (Akshan) e "Como jogar" (Mordekaiser), ao lado dos botões de anterior e próximo.
-- **Title** (700, 22px, 0.14em, caixa-alta): "Escolhe o inimigo", ladeado por dois losangos; 17px (0.1em) abaixo de 1100px e 16px no celular. O "Seu setup pro confronto" usa o mesmo desenho a 16px.
+- **Title** (700, 22px, 0.14em, caixa-alta): "Escolha o inimigo", ladeado por dois losangos; 17px (0.1em) abaixo de 1100px e 16px no celular. O "Seu setup pro confronto" usa o mesmo desenho a 16px.
 - **Seção** (700, 21px, 1.25, 0.04em): os títulos das seções do formato completo, em português, em `acento-vivo`.
 - **Marca** (700, 20px, 0.04em; 18px abaixo de 520px): o nome do guia no botão de troca, com a rota embaixo em Hanken 13px. Os itens do menu usam o mesmo desenho a 17px.
 - **Botão** (800, 21px, 0.04em, caixa-alta): o "VS" do círculo de travar; 17px no celular.
@@ -350,7 +376,9 @@ Tokens que ficam sobre a arte do campeão ou no botão de travar. Mudam por guia
 
 O palco é uma grade de 1320px no máximo, com margem lateral `borda` (16px ou a área segura) e 24px entre as colunas. No desktop são duas colunas: o painel da lista, com 440px, fica fixo (sticky) à esquerda logo abaixo da barra, e a coluna de detalhe à direita empilha o duelo, o setup, as notas e o rodapé com 16px entre eles. O alvo de densidade é o Akshan a 1440×900: o matchup inteiro visível sem rolar. Abaixo de 1100px a lista cai para 340px (padding de 16px por 14px) e o setup simples passa para três colunas.
 
-O duelo são os dois cards lado a lado (10px entre eles), em paisagem com 240px de altura, e o círculo VS centrado sobre a junção. Dentro da lista, a mira é um quadrado de até 400px com a grade de rostos (52px ou mais, 12px de espaço) rolando por dentro, com a borda de baixo esmaecendo. Os filtros ficam limitados a 360px de largura e centralizados, o que os distribui em 3 + 2 no Akshan.
+O duelo são os dois cards lado a lado (10px entre eles), em paisagem com 240px de altura, e o círculo VS centrado sobre a junção. Dentro da lista, a mira é um quadrado de até 400px com a grade de rostos (52px ou mais, 12px de espaço) rolando por dentro, com a borda de baixo esmaecendo. Os filtros ficam limitados a 400px de largura e centralizados (no Akshan: as cinco dificuldades e depois Ignite, TP, Exhaust e Electro). Embaixo da mira vêm o botão "Tier list das matchups" (pílula de 44px) e a legenda dos atalhos de teclado.
+
+A grade tem uma segunda linha: embaixo da lista, o card "Acompanhe mono Akshans"; embaixo do detalhe, o rodapé com as notas da fonte, alinhado embaixo. A lista fica dentro de `.col-lista`, que ocupa só a primeira linha, para o sticky não descer sobre o card. Em tela de 1720px ou mais, no guia do Akshan e no site publicado, a grade vai a 1760px e ganha a terceira coluna de 380px com o Akshan 3D, ocupando as duas linhas (`grid-template-rows: auto 1fr`, para a sobra de altura ir para a de baixo); o X dessa caixa esconde a coluna e centraliza tudo de novo, e uma alça "Akshan 3D" na borda direita da tela traz de volta.
 
 O setup tem dois formatos. O simples (Akshan) é uma fila de cinco slots (16px por 24px). O completo (Mordekaiser) são duas colunas, Runas e Dificuldade à esquerda e Itens à direita ocupando as duas linhas (1fr | 1.5fr, espaço de 20px por 32px); abaixo de 1100px os três blocos empilham.
 
@@ -378,7 +406,7 @@ Cantos discretos e uma geometria de mira. Pips de dificuldade usam 2px, selos, t
 
 A forma assinatura do Akshan é a da Punição: losango com círculo inscrito e setas triangulares laterais apontando para dentro. Ela aparece em três escalas: a mira grande em volta da lista (círculo duplo, um a 1.5px e outro fino a 1px com 45% de opacidade, mais as setas), a mira no card do inimigo (losango de 3.5px, círculo de 1px e setas, com 58% da altura do card a partir de 5% do topo, para não cobrir o nome; 32% a partir de 13% no celular) e o losango pequeno girado 45° em volta do campeão escolhido. Nos outros guias a mira fica só com o círculo duplo, sem setas e sem alvo no card. No celular a mira grande some com a faixa de rostos; o alvo no card fica.
 
-O losango pequeno é da casa toda: os dois losangos de 14px ao lado de "Escolhe o inimigo" e o marcador de 7px girado 45° nas listas das seções aparecem em todos os guias.
+O losango pequeno é da casa toda: os dois losangos de 14px ao lado de "Escolha o inimigo" e o marcador de 7px girado 45° nas listas das seções aparecem em todos os guias.
 
 ## Components
 
@@ -390,16 +418,17 @@ O fecho metálico da escolha, no centro do duelo.
 - **Acessibilidade:** o "VS" é escondido do leitor de tela; o nome acessível é "Travar o pick contra X", atualizado a cada inimigo.
 
 ### Chips de filtro
-- **Style:** pílula de 44px, fundo transparente, borda `linha-forte`, Hanken 600 14px, com ícone do feitiço ou runa a 20px quando houver. O grupo fica em até 360px, centralizado.
+- **Style:** pílula de 44px, fundo transparente, borda `linha-forte`, Hanken 600 14px, com ícone do feitiço ou runa a 20px quando houver, ou a bolinha de 11px na cor da dificuldade. O grupo fica em até 400px, centralizado.
 - **State:** ligado vira o destaque cheio com tinta escura; hover acende a borda em `acento-vivo`.
-- **Por guia:** cada formato traz seus filtros (Akshan: Só com guia, Ignite, TP, Exhaust, Electro; Mordekaiser: Fácil, Médio, Difícil).
+- **Por guia:** cada formato traz seus filtros (Akshan: Muito difícil, Difícil, Médio, Fácil, Muito fácil, Ignite, TP, Exhaust, Electro; Mordekaiser: Fácil, Médio, Difícil). Dentro do mesmo grupo vale qualquer um; entre grupos, todos.
 
 ### Cards de campeão
 - **Corner Style:** 10px, em paisagem com 240px de altura (168px no celular), metade da largura do duelo.
 - **Background:** a arte centralizada do campeão (`img/champion/centered`) cobre o card, enquadrada a 22% do topo; um escurecimento de baixo para cima segura o nome.
 - **Shadow Strategy:** sombra (ver Elevation).
 - **Border:** 1px `linha-forte`.
-- **Conteúdo:** selo no canto de cima (Você à esquerda em `destaque-arte`, Inimigo à direita em `branco-arte`), nome em Cinzel e título do campeão embaixo (alinhados à direita no inimigo) e, no inimigo, a linha do guia: no Akshan a marca "no guia" com bolinha; no formato completo cinco pips em `destaque-arte` e "Dificuldade N/5".
+- **Conteúdo:** selo no canto de cima (Você à esquerda em `destaque-arte`, Inimigo à direita em `branco-arte`), nome em Cinzel e título do campeão embaixo (alinhados à direita no inimigo) e, no inimigo, a linha da dificuldade: no Akshan a bolinha de 11px na cor da dificuldade e o nome dela em 700; no formato completo cinco pips em `destaque-arte` e "Dificuldade N/5".
+- **Enquadramento:** cada campeão tem em `meta.json > mira` o ponto do splash que fica no centro da mira (escolhido à mão para pegar rosto + corpo); o recorte e a mira se ajustam a ele. A mira tem 70% da altura do card (50% no celular) e passa por trás do selo quando o campeão está no alto.
 
 ### Busca
 - **Style:** 46px, fundo `fundo`, borda `linha-forte`, cantos de 8px, lupa em SVG e a contagem "47/47" em `acento` com números tabulares.
@@ -416,7 +445,19 @@ A lista, o setup, o Resumo e cada lembrete são painéis com fundo `painel` e bo
 - **Rodapé:** a fonte das notas com o link "Ver a planilha original" (e os outros links do autor), e o crédito da Riot, em texto baixo 14px.
 
 ### Campeão na lista
-Ícone de 52px ou mais (56px na faixa do celular) com borda `linha-forte` e cantos de 6px. O escolhido ganha borda de 2px no destaque: no Akshan com o losango pequeno girado em volta, nos outros guias com o anel duplo. No Akshan, os campeões "no guia" levam uma bolinha no destaque no canto de cima; no formato completo, cada rosto leva o número de dificuldade num selinho escuro de 17px no canto de baixo (Hanken 700 11px).
+Ícone de 52px ou mais (56px na faixa do celular) com borda `linha-forte` e cantos de 6px. No Akshan, a borda é de 2px na cor da dificuldade, também no escolhido, que se distingue pelo losango pequeno girado em volta; nos outros guias o escolhido ganha borda de 2px no destaque com o anel duplo, e no formato completo cada rosto leva o número de dificuldade num selinho escuro de 17px no canto de baixo (Hanken 700 11px). Os 25 primeiros retratos carregam na hora; os outros, sob demanda.
+
+### Setup simples (ícones da planilha)
+Cada slot de Runa, Secundária, Bota e Build mostra os ícones exatos colados naquela célula da planilha (lidos do xlsx e reconhecidos por md5), em fila de 36px (32px no celular; runas redondas), com o texto da célula embaixo no desktop e ao lado no celular. Sem imagem na planilha, vale `meta.json > pecas_manuais` e, por último, as peças de cada palavra (`texto_pecas`). O nome de cada runa ou item fica no `title` e no `alt`.
+
+### Tier list
+Diálogo modal (`<dialog>`) de até 980px, fundo `fundo`, borda `linha-forte`, cantos de 14px; tela cheia no celular. Topo fixo com "Tier list · Akshan" em Cinzel e o X de 44px. Uma faixa por dificuldade: rótulo de 150px no fundo `difc-*` (texto `tinta-arte`, branco no Muito difícil) e os rostos de 52px com borda na cor da dificuldade e o nome embaixo em Hanken 600 11px. Clicar num rosto fecha e abre a matchup; Esc ou clique fora fecham.
+
+### Acompanhe mono Akshans
+Painel embaixo da lista com o título em Cinzel entre losangos, os canais (de `guias.json > acompanhe`) lado a lado em botões de 48px com o ícone da Twitch, o nome e "Twitch" embaixo, e "Site feito por Luis1982" no pé. A cada 5 minutos o site pergunta ao decapi.me quem está em live: o canal ganha borda `ao-vivo`, o rótulo "Ao vivo" com ponto pulsando (parado com "reduzir movimento") e vai para o primeiro lugar.
+
+### Akshan 3D
+O modelo do jogo (`modelo/akshan.glb`, three.js do jsDelivr) sobre o fundo do próprio site, com luz própria da textura, contorno dourado e um brilho dourado no chão. Idle em loop com a variação a cada 3 voltas; arrastar gira; clique sem arrastar sorteia uma emote; os botões embaixo (pílulas de 36px) tocam Dança, Provocação, Risada, Ataque e Recall com os sons do jogo. "Carregando o Akshan…" pulsa enquanto baixa. Pausa fora da tela e com a aba escondida; com "reduzir movimento" o idle fica parado, mas os botões funcionam.
 
 ### Setup completo
 Três blocos com o título em rótulo:
@@ -444,6 +485,7 @@ Os sons vêm do cliente do LoL, na pasta `sons/` (`sons/ui/` para a interface, `
 - **Filtros:** o clique de chip.
 - **Menu de guias:** um som para abrir e outro para fechar.
 - **Tema e o próprio botão de som:** o clique pequeno.
+- **Akshan 3D:** cada clipe das animações toca os efeitos e a fala do jogo (`SONS_CLIPE_3D`, pasta `sons/akshan3d/`), sorteando a variação; trocar de animação, esconder o 3D ou desligar o som corta o que estiver tocando.
 
 **A Regra do Som por Ação.** Todo som nasce de um gesto do leitor (clique, tecla ou mouse sobre um rosto); nada toca sozinho ao carregar ou em animação. Todo som passa pelo botão de som, e o hover nunca toca no toque.
 
@@ -467,3 +509,4 @@ Os sons vêm do cliente do LoL, na pasta `sons/` (`sons/ui/` para a interface, `
 - **Don't** usar Cinzel em parágrafos, rótulos de slot, chips ou tabelas.
 - **Don't** deixar a página rolar para o lado; faixas largas (como a lista e os filtros no celular) rolam dentro do próprio painel.
 - **Don't** deixar o alvo da mira cobrir o nome do inimigo no card.
+- **Don't** usar as cores de dificuldade ou o vermelho do ao vivo como decoração; eles só dizem a dificuldade e a live.
