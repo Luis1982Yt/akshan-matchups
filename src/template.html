@@ -553,11 +553,12 @@ function marcaHash() {
 /* ---------- Partes que mudam com o guia ---------- */
 function renderGuia() {
   const eu = guia.campeao;
-  const sub = `${guia.rota ? guia.rota + " · " : ""}notas do ${guia.autor}`;
+  const sub = guia.rota || "";
   $("trocarImg").innerHTML = `<img src="${sq(eu.id)}" alt="" width="38" height="38">`;
   $("trocarNome").textContent = eu.nome;
   $("trocarSub").textContent = sub;
-  $("trocar").setAttribute("aria-label", `Guia atual: ${eu.nome}, ${sub}. Trocar de guia`);
+  $("trocarSub").hidden = !sub;
+  $("trocar").setAttribute("aria-label", `Guia atual: ${eu.nome}${sub ? ", " + sub : ""}. Trocar de guia`);
   $("menuLista").innerHTML = GUIAS.map(g => `
     <li><button type="button" data-guia="${g.id}" aria-current="${g === guia}">
       <img src="${sq(g.campeao.id)}" alt="" width="42" height="42">

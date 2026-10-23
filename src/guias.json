@@ -7,7 +7,12 @@
     "formato": "simples",
     "dados": "guias/akshan",
     "fonte": "Notas da planilha \"Akshan Matchups - Peteruso\".",
-    "links": []
+    "links": [
+      {
+        "rotulo": "Ver a planilha original",
+        "url": "https://docs.google.com/spreadsheets/d/1mmKUbJ77tWe7mYxeAjzg2Bb2LZiiHzA8o1PHnhzwQYI/edit?gid=893415135#gid=893415135"
+      }
+    ]
   },
   {
     "id": "mordekaiser",
@@ -18,9 +23,18 @@
     "dados": "guias/mordekaiser",
     "fonte": "Notas da planilha de matchups do Meowdekaiser (em inglês, como no original).",
     "links": [
-      {"rotulo": "Planilha", "url": "https://docs.google.com/spreadsheets/d/1BVH44IPxZNBQshDf90XZRJbfKvavVCUIIo_boyBVF8o/edit?gid=1560260169"},
-      {"rotulo": "Twitch", "url": "https://www.twitch.tv/meowdekaiser_"},
-      {"rotulo": "X", "url": "https://x.com/Meowdekaiser"}
+      {
+        "rotulo": "Ver a planilha original",
+        "url": "https://docs.google.com/spreadsheets/d/1BVH44IPxZNBQshDf90XZRJbfKvavVCUIIo_boyBVF8o/edit?gid=1560260169"
+      },
+      {
+        "rotulo": "Twitch",
+        "url": "https://www.twitch.tv/meowdekaiser_"
+      },
+      {
+        "rotulo": "X",
+        "url": "https://x.com/Meowdekaiser"
+      }
     ]
   }
 ]
