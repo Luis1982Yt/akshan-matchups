@@ -134,8 +134,12 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .menu li small { display: block; font-size: 13px; color: var(--texto-baixo); }
 .menu li .atual { margin-left: auto; flex: none; font-size: 12px; font-weight: 700; color: var(--acento-vivo); }
 .dica { margin: 6px 10px 4px; padding-top: 8px; border-top: 1px solid var(--linha); font-size: 13px; color: var(--texto-baixo); }
-.tema { margin-left: auto; width: 44px; height: 44px; flex: none; display: grid; place-items: center; cursor: pointer; border-radius: 50%; border: 1px solid var(--linha-forte); background: transparent; color: var(--acento-vivo); }
-.tema:hover { background: var(--painel-alto); }
+.acoes { margin-left: auto; display: flex; gap: 8px; }
+.tema, .som { width: 44px; height: 44px; flex: none; display: grid; place-items: center; cursor: pointer; border-radius: 50%; border: 1px solid var(--linha-forte); background: transparent; color: var(--acento-vivo); }
+.tema:hover, .som:hover { background: var(--painel-alto); }
+.som .mudo { display: none; }
+.som[aria-pressed="false"] .ligado { display: none; }
+.som[aria-pressed="false"] .mudo { display: block; }
 .tema .sol { display: none; }
 :root[data-tema="claro"] .tema .sol { display: block; }
 :root[data-tema="claro"] .tema .lua { display: none; }
@@ -185,7 +189,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .busca input { flex: 1; min-width: 0; height: 100%; border: 0; outline: 0; background: transparent; color: var(--texto); font: 16px var(--corpo); }
 .busca input::placeholder { color: var(--texto-baixo); }
 .busca .conta { font: 700 13px var(--corpo); color: var(--acento); font-variant-numeric: tabular-nums; white-space: nowrap; }
-.filtros { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin: 12px 0 4px; }
+.filtros { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; max-width: 360px; margin: 12px auto 4px; }
 .chip {
   min-height: 44px; padding: 0 14px; border-radius: 999px; cursor: pointer; display: inline-flex; align-items: center; gap: 7px;
   background: transparent; border: 1px solid var(--linha-forte); color: var(--texto); font: 600 14px var(--corpo);
@@ -199,7 +203,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .mira .aro { fill: none; stroke: var(--acento); stroke-width: 1.5px; }
 .mira .aro.fino { stroke-width: 1px; opacity: .45; }
 .mira .setas { fill: var(--acento-vivo); }
-.alvo { position: absolute; z-index: 1; left: 50%; top: 5%; height: 70%; aspect-ratio: 1; transform: translateX(-50%); overflow: visible; pointer-events: none; filter: drop-shadow(0 0 4px rgba(255, 214, 120, .75)) drop-shadow(0 1px 3px rgba(0, 0, 0, .6)); }
+.alvo { position: absolute; z-index: 1; left: 50%; top: 5%; height: 58%; aspect-ratio: 1; transform: translateX(-50%); overflow: visible; pointer-events: none; filter: drop-shadow(0 0 4px rgba(255, 214, 120, .75)) drop-shadow(0 1px 3px rgba(0, 0, 0, .6)); }
 .alvo .losango { fill: none; stroke: #ffe39a; stroke-width: 3.5px; }
 .alvo .aro-alvo { fill: none; stroke: #fff4d6; stroke-width: 1px; opacity: .6; }
 .alvo .setas-alvo { fill: #fff4d6; opacity: .85; }
@@ -241,7 +245,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .peca .soquete { width: 32px; height: 32px; }
 .soquete::before { content: ""; width: 12px; height: 2px; border-radius: 1px; background: var(--acento); opacity: .7; }
 .opt .rush { font: 700 11px/1 var(--titulo); letter-spacing: .1em; text-transform: uppercase; padding: 4px 7px; border-radius: 4px; background: var(--destaque); color: var(--tinta-botao); }
-.livre { font-style: italic; color: var(--texto-baixo); }
+.livre { display: flex; align-items: center; min-height: 36px; font-style: italic; color: var(--texto-baixo); }
 /* Setup completo: runas, itens com condições e dificuldade */
 .setup-completo { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); grid-template-rows: auto 1fr; gap: 20px 32px; align-items: start; }
 .setup-completo .build { grid-column: 2; grid-row: 1 / span 2; }
@@ -313,6 +317,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 @media (max-width: 1100px) {
   .palco { grid-template-columns: 340px minmax(0, 1fr); }
   .anel { padding: 16px 14px 18px; }
+  .anel h2 { font-size: 17px; letter-spacing: .1em; gap: 10px; }
   .carga { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .setup-completo { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; }
   .setup-completo .build { grid-column: auto; grid-row: auto; }
@@ -322,7 +327,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   .palco { padding: 12px var(--borda) 48px; gap: 14px; grid-template-columns: minmax(0, 1fr); }
   .anel { position: static; padding: 12px 12px 4px; }
   .anel h2 { font-size: 16px; margin-bottom: 10px; }
-  .filtros { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; scrollbar-width: none; margin: 8px -12px 0; padding: 4px 12px; }
+  .filtros { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; scrollbar-width: none; max-width: none; margin: 8px -12px 0; padding: 4px 12px; }
   .filtros::-webkit-scrollbar, .lista::-webkit-scrollbar { display: none; }
   .chip { flex: none; }
   /* No celular a lista vira uma faixa de rostos que rola para o lado. */
@@ -332,6 +337,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   .pick { flex: none; width: 56px; scroll-snap-align: start; }
   .vazio { position: static; inset: auto; padding: 8px 0 14px; }
   .card { height: 168px; }
+  .alvo { top: 13%; height: 32%; }
   .quem .n { font-size: 20px; }
   .quem .n.longo { font-size: 16px; }
   .travar { width: 54px; height: 54px; font-size: 17px; }
@@ -376,10 +382,16 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
         <p class="dica">O site sempre abre no último guia que você usou.</p>
       </div>
     </div>
+    <div class="acoes">
+    <button class="som" type="button" id="som" aria-pressed="true" aria-label="Sons do cliente do LoL">
+      <svg class="ligado" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M15.5 9a4.2 4.2 0 0 1 0 6M18.2 6.5a8 8 0 0 1 0 11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <svg class="mudo" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M16 9.5l5 5M21 9.5l-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
     <button class="tema" type="button" id="tema" aria-label="Usar tema claro">
       <svg class="lua" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
       <svg class="sol" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
     </button>
+    </div>
   </div>
 </header>
 
@@ -468,6 +480,23 @@ const SETA_PASSO = '<svg class="seta" width="16" height="12" viewBox="0 0 16 12"
 document.addEventListener("error", e => { if (e.target.tagName === "IMG") e.target.classList.add("falhou"); }, true);
 document.addEventListener("load", e => { if (e.target.tagName === "IMG") e.target.classList.remove("falhou"); }, true);
 
+/* ---------- Sons do cliente do LoL (pasta sons/, ao lado do index.html) ---------- */
+const VOLUME = { grade: .45, passa: .18, travar: .5, avanca: .4, volta: .4, chip: .4, abre: .4, fecha: .4, clique: .35, vo: .8 };
+let somLigado = true;
+try { somLigado = localStorage.getItem("som") !== "desligado"; } catch (e) {}
+let ultimoPassa = 0;
+function toca(nome, arquivo) {
+  if (!somLigado) return;
+  if (nome === "passa") { const agora = performance.now(); if (agora - ultimoPassa < 70) return; ultimoPassa = agora; }
+  const a = new Audio(arquivo || `sons/ui/${nome}.ogg`);
+  a.volume = VOLUME[nome] ?? .4;
+  a.play().catch(() => {});
+}
+function marcaSom() {
+  $("som").setAttribute("aria-pressed", somLigado);
+  $("som").setAttribute("aria-label", somLigado ? "Desligar os sons" : "Ligar os sons");
+}
+
 /* ---------- Dados de cada guia ---------- */
 function prepara(g) {
   if (g.formato === "simples") {
@@ -547,7 +576,7 @@ function renderGuia() {
   $("filtros").innerHTML = filtros.map(f => `<button class="chip" type="button" data-f="${f.id}" aria-pressed="false">${f.icone ? `<img src="${f.icone}" alt="" width="20" height="20">` : ""}${esc(f.rotulo)}</button>`).join("");
   $("nt").textContent = guia.formato === "simples" ? "Lembrete" : "Como jogar";
   const links = guia.links.map(l => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.rotulo)}</a>`).join(" · ");
-  $("rodape").innerHTML = `<p>${esc(guia.fonte)}${links ? " " + links + "." : ""} Imagens de campeões, runas e itens da Riot Games. Site de fã, sem ligação com a Riot.</p>`;
+  $("rodape").innerHTML = `<p>${esc(guia.fonte)}${links ? " " + links + "." : ""} Imagens e sons de campeões, runas e itens da Riot Games. Site de fã, sem ligação com a Riot.</p>`;
 }
 
 function matches(c) {
@@ -694,6 +723,8 @@ function select(c) {
 // Travar o pick: as duas artes se encontram no meio e a página desce até o setup.
 let fechaTrava;
 function travar() {
+  toca("travar");
+  setTimeout(() => toca("vo", `sons/vo/${guia.campeao.id}.ogg`), 180);
   const t = $("trava");
   // Só rola se o setup não estiver à vista (no celular, por exemplo).
   const desce = () => { const st = $("st").parentElement; if (st.getBoundingClientRect().top > innerHeight * .6) st.scrollIntoView({ behavior: semMovimento() ? "auto" : "smooth", block: "start" }); };
@@ -708,6 +739,7 @@ function travar() {
 
 /* ---------- Menu de guias ---------- */
 function abreMenu(abrir) {
+  toca(abrir ? "abre" : "fecha");
   $("menuGuias").hidden = !abrir;
   $("trocar").setAttribute("aria-expanded", abrir);
   if (abrir) { const b = $("menuLista").querySelector('[aria-current="true"]') || $("menuLista").querySelector("button"); if (b) b.focus(); }
@@ -727,17 +759,31 @@ function marcaTema() {
   $("tema").setAttribute("aria-label", raiz.dataset.tema === "claro" ? "Usar tema escuro" : "Usar tema claro");
 }
 $("tema").addEventListener("click", () => {
+  toca("clique");
   const claro = raiz.dataset.tema !== "claro";
   if (claro) raiz.dataset.tema = "claro"; else delete raiz.dataset.tema;
   try { localStorage.setItem("tema", claro ? "claro" : "escuro"); } catch (e) {}
   marcaTema();
 });
 marcaTema();
+$("som").addEventListener("click", () => {
+  somLigado = !somLigado;
+  try { localStorage.setItem("som", somLigado ? "ligado" : "desligado"); } catch (e) {}
+  marcaSom();
+  toca("clique");
+});
+marcaSom();
 
 /* ---------- Eventos ---------- */
 lista.addEventListener("click", e => {
   const b = e.target.closest(".pick");
-  if (b) select(guia.lista.find(c => c.slug === b.dataset.id));
+  if (b) { toca("grade"); select(guia.lista.find(c => c.slug === b.dataset.id)); }
+});
+// Hover na lista só com mouse, como no cliente.
+lista.addEventListener("pointerover", e => {
+  if (e.pointerType !== "mouse") return;
+  const b = e.target.closest(".pick");
+  if (b && !b.contains(e.relatedTarget)) toca("passa");
 });
 q.addEventListener("input", () => { renderLista(); if (shown.length === 1) select(shown[0]); });
 $("filtros").addEventListener("click", e => {
@@ -745,6 +791,7 @@ $("filtros").addEventListener("click", e => {
   if (!b) return;
   const f = b.dataset.f;
   ativos.has(f) ? ativos.delete(f) : ativos.add(f);
+  toca("chip");
   b.setAttribute("aria-pressed", ativos.has(f));
   renderLista();
 });
@@ -755,21 +802,21 @@ $("limpar").addEventListener("click", () => {
   q.focus();
 });
 $("travar").addEventListener("click", travar);
-$("ant").addEventListener("click", () => select(vizinhos([-1])[0]));
-$("prox").addEventListener("click", () => select(vizinhos([1])[0]));
+$("ant").addEventListener("click", () => { toca("volta"); select(vizinhos([-1])[0]); });
+$("prox").addEventListener("click", () => { toca("avanca"); select(vizinhos([1])[0]); });
 document.addEventListener("keydown", e => {
   if (e.altKey || e.ctrlKey || e.metaKey) return;
   if (!$("trava").hidden) { if (e.key === "Escape" || e.key === "Enter") { e.preventDefault(); $("trava").onclick(); } return; }
   if (!$("menuGuias").hidden) { if (e.key === "Escape") { abreMenu(false); $("trocar").focus(); } return; }
   if (e.key === "/" && document.activeElement !== q) { e.preventDefault(); q.focus(); return; }
   if (document.activeElement === q) {
-    if (e.key === "Enter" && shown[0]) { select(shown[0]); q.blur(); }
+    if (e.key === "Enter" && shown[0]) { toca("grade"); select(shown[0]); q.blur(); }
     if (e.key === "Escape") { q.value = ""; renderLista(); q.blur(); }
     return;
   }
   if (e.target.closest && e.target.closest("input, textarea, select")) return;
-  if (e.key === "ArrowRight") select(vizinhos([1])[0]);
-  if (e.key === "ArrowLeft") select(vizinhos([-1])[0]);
+  if (e.key === "ArrowRight") { toca("avanca"); select(vizinhos([1])[0]); }
+  if (e.key === "ArrowLeft") { toca("volta"); select(vizinhos([-1])[0]); }
 });
 
 /* ---------- Começo: link com guia (#mordekaiser/aatrox), link antigo do Akshan (#ahri) ou o último guia usado ---------- */
