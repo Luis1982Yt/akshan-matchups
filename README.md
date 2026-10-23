@@ -28,6 +28,7 @@ Guias atuais:
 - `scripts/icones_planilha.py` e `src/guias/akshan/icones_planilha.json`: os ícones de runa, secundária, bota e build saem das imagens coladas na planilha (só vêm no xlsx; o CSV traz só o texto). Cada imagem é reconhecida pelo md5 em `meta.json > imagens` e vira uma peça de `meta.json > pecas` (nome em pt e en). Se o Peteruso mudar o texto de uma célula, o site usa `texto_pecas` até a próxima leitura; imagem nova aparece na saída do script para cadastrar.
 - `src/guias/mordekaiser/`: `planilha.csv` (cópia da planilha) e `matchups.json` (a planilha separada em runas, itens, dificuldade e seções).
 - `src/fonts/`: Cinzel e Hanken Grotesk (subconjunto latino), embutidas no HTML pelo build.
+- `src/icone/`: ícone da aba (`icone-64.png`) e da tela inicial do celular (`apple-180.png`), também embutidos pelo build; `original.webp` é a arte de origem.
 - `scripts/build.py`: gera o `index.html`. Rode `python scripts/build.py` depois de qualquer mudança.
 - `sons/`: sons do cliente do LoL (seleção de campeões) e a fala de escolha de cada campeão de guia, carregados só quando tocam. `scripts/baixar_sons.py` baixa de novo do CommunityDragon (rode quando entrar um guia novo). O botão de som no topo desliga tudo.
 - `scripts/atualizar_mordekaiser.py`: baixa de novo a planilha do Meowdekaiser e os dados do Data Dragon e refaz o `matchups.json` (precisa de internet). Depois rode o build.

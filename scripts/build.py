@@ -26,6 +26,11 @@ def font_faces():
     return "\n".join(faces)
 
 
+def icone(arquivo):
+    """Ícone da aba (src/icone) embutido como data URI, como as fontes."""
+    return "data:image/png;base64," + base64.b64encode((SRC / "icone" / arquivo).read_bytes()).decode("ascii")
+
+
 def guia_simples(cfg, pasta):
     """Planilha no formato do Akshan: [campeão, runa, secundária, feitiço, bota, build, lembrete, noGuia]."""
     bruto = (pasta / "rows.js").read_text(encoding="utf-8").strip().rstrip(";")
@@ -50,7 +55,7 @@ def guia_completo(cfg, pasta):
 
 
 template = (SRC / "template.html").read_text(encoding="utf-8")
-for marker in ("/*GUIAS*/", "/*FONTS*/", "/*IDS*/"):
+for marker in ("/*GUIAS*/", "/*FONTS*/", "/*IDS*/", "/*ICONE*/", "/*ICONE_APPLE*/"):
     if template.count(marker) != 1:
         raise SystemExit(f"O template precisa ter exatamente um {marker}")
 
@@ -62,7 +67,7 @@ for cfg in json.loads((SRC / "guias.json").read_text(encoding="utf-8")):
     montar = guia_simples if cfg["formato"] == "simples" else guia_completo
     guias.append({**{k: v for k, v in cfg.items() if k != "dados"}, **montar(cfg, pasta)})
 
-html = template.replace("/*IDS*/", json.dumps([g["id"] for g in guias])).replace("/*FONTS*/", font_faces()).replace(
+html = template.replace("/*ICONE*/", icone("icone-64.png")).replace("/*ICONE_APPLE*/", icone("apple-180.png")).replace("/*IDS*/", json.dumps([g["id"] for g in guias])).replace("/*FONTS*/", font_faces()).replace(
     "/*GUIAS*/", json.dumps(guias, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
 )
 (ROOT / "index.html").write_text(html, encoding="utf-8", newline="\n")
