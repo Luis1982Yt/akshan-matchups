@@ -18,7 +18,19 @@
       "id": "1mmKUbJ77tWe7mYxeAjzg2Bb2LZiiHzA8o1PHnhzwQYI",
       "gid": "893415135"
     },
-    "fonte_en": "Notes from the \"Akshan Matchups - Peteruso\" spreadsheet, translated to English."
+    "fonte_en": "Notes from the \"Akshan Matchups - Peteruso\" spreadsheet, translated to English.",
+    "acompanhe": [
+      {
+        "nome": "Peteruso",
+        "url": "https://www.twitch.tv/peteruso3",
+        "canal": "twitch.tv/peteruso3"
+      },
+      {
+        "nome": "Phantasm",
+        "url": "https://www.twitch.tv/phantasm__",
+        "canal": "twitch.tv/phantasm__"
+      }
+    ]
   },
   {
     "id": "mordekaiser",
