@@ -3,7 +3,7 @@
 O site já lê a planilha ao vivo quando abre; esta cópia é o que aparece sem internet
 ou antes da planilha responder. Grava src/guias/akshan/rows.js, acrescenta campeões
 novos em meta.json e lista as linhas que ainda não têm tradução em traducao_en.json
-(no modo EN elas aparecem em português, com a marca PT). Depois rode `python scripts/build.py`.
+(no modo EN elas aparecem em português). Depois rode `python scripts/build.py`.
 """
 import csv
 import io

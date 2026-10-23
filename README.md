@@ -10,7 +10,7 @@ Guias atuais:
 
 - O botão PT/EN no topo troca a língua do site inteiro e fica salvo no navegador. Na primeira visita vale a língua do navegador.
 - As notas do Akshan em inglês ficam em `src/guias/akshan/traducao_en.json` (`linhas`: cada linha da planilha → tradução; `celulas`: nomes de runas e itens das colunas de setup).
-- Quando o Peteruso muda uma linha, ela aparece em português com a marca "PT" no modo EN até ganhar tradução. `python scripts/atualizar_akshan.py` lista essas linhas.
+- Quando o Peteruso muda uma linha, ela aparece em português no modo EN até ganhar tradução. `python scripts/atualizar_akshan.py` lista essas linhas.
 
 ## Como navegar
 

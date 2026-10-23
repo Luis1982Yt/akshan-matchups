@@ -27,7 +27,7 @@ Não é um agregador de estatísticas: é a leitura das notas de um jogador de c
 ## Operating Context
 
 - Projeto de fã do dono do site, usando as notas públicas das planilhas do Peteruso e do Meowdekaiser. Cada autor aparece como fonte (com os links públicos dele), sem o site parecer oficial deles.
-- Interface em português ou inglês (botão PT/EN). As notas do Akshan em inglês são uma tradução mantida à parte; o texto original da planilha nunca muda, e linha sem tradução aparece em português marcada "PT".
+- Interface em português ou inglês (botão PT/EN). As notas do Akshan em inglês são uma tradução mantida à parte; o texto original da planilha nunca muda, e linha sem tradução aparece em português.
 - A planilha do Meowdekaiser é em inglês e o texto fica em inglês. Por enquanto entra só a aba de matchups; os outros guias da planilha ficam para depois.
 - Imagens de campeões, runas, feitiços e itens vêm do Data Dragon da Riot.
 - Akshan: cada matchup tem runa principal, secundária, feitiço, bota, build, lembrete (itens separados por quebra de linha) e a marca "no guia" da planilha.

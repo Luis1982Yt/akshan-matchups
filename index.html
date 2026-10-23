@@ -147,7 +147,6 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .trocar:disabled { cursor: default; }
 .trocar:disabled:hover { border-color: transparent; background: none; }
 .trocar:disabled svg { display: none; }
-.pt-tag { margin-left: 6px; padding: 1px 5px; border-radius: 4px; border: 1px solid var(--linha-forte); font: 700 11px var(--corpo); color: var(--texto-baixo); vertical-align: 2px; }
 .som .mudo { display: none; }
 .som[aria-pressed="false"] .ligado { display: none; }
 .som[aria-pressed="false"] .mudo { display: block; }
@@ -541,7 +540,7 @@ const TXT = {
     linguaRotulo: "Switch to English", linguaBotao: "EN",
     guiaAtual: "Guia atual: ", trocarGuia: ". Trocar de guia", notasDo: "notas do ", matchups: " matchups", aberto: "Aberto",
     facil: "Fácil", medio: "Médio", dificil: "Difícil", resumo: "Resumo", runas: "Runas", itens: "Itens", geral: "Geral",
-    principal: "Principal", fragmentos: "Fragmentos", semTrad: "Ainda não traduzido",
+    principal: "Principal", fragmentos: "Fragmentos",
   },
   en: {
     pular: "Skip to matchup", guiasTit: "Matchup guides", dica: "The site always opens on the last guide you used.",
@@ -562,7 +561,7 @@ const TXT = {
     linguaRotulo: "Mudar para português", linguaBotao: "PT",
     guiaAtual: "Current guide: ", trocarGuia: ". Change guide", notasDo: "notes by ", matchups: " matchups", aberto: "Open",
     facil: "Easy", medio: "Medium", dificil: "Hard", resumo: "Summary", runas: "Runes", itens: "Items", geral: "Overall",
-    principal: "Primary", fragmentos: "Shards", semTrad: "Not translated yet",
+    principal: "Primary", fragmentos: "Shards",
   },
 };
 let L = document.documentElement.lang === "en" ? "en" : "pt";
@@ -849,11 +848,11 @@ function slot(label, val) {
 }
 const KW = /(?<![\wÀ-ÿ])(lvl ?\d+|press|skirmish|roam(?:ing)?|gank|stat check|outscale|free kill|free lane|100 0|side ?lane|late ?game|early)(?![\wÀ-ÿ])/gi;
 const marca = line => esc(line).replace(KW, m => `<span class="kw">${m}</span>`);
-// No modo EN usa a tradução da linha; se o autor editou e ainda não tem tradução, mostra o original marcado.
+// No modo EN usa a tradução da linha; se o autor editou e ainda não tem tradução, mostra o original.
 function linhaNaLingua(l) {
   if (L !== "en" || !guia.traducao) return marca(l);
   const en = guia.traducao.linhas[l];
-  return en ? marca(en) : `<span lang="pt-BR">${marca(l)}</span><span class="pt-tag" title="${t("semTrad")}">PT</span>`;
+  return en ? marca(en) : `<span lang="pt-BR">${marca(l)}</span>`;
 }
 
 /* ---------- Formato completo (runas, itens, dificuldade e seções) ---------- */
