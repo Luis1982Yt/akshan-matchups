@@ -12,7 +12,11 @@
         "rotulo": "Ver a planilha original",
         "url": "https://docs.google.com/spreadsheets/d/1mmKUbJ77tWe7mYxeAjzg2Bb2LZiiHzA8o1PHnhzwQYI/edit?gid=893415135#gid=893415135"
       }
-    ]
+    ],
+    "planilha": {
+      "id": "1mmKUbJ77tWe7mYxeAjzg2Bb2LZiiHzA8o1PHnhzwQYI",
+      "gid": "893415135"
+    }
   },
   {
     "id": "mordekaiser",

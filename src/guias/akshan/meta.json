@@ -191,6 +191,10 @@
     "Zoe": {
       "id": "Zoe",
       "title": "o Aspecto do Crepúsculo"
+    },
+    "Malphite": {
+      "id": "Malphite",
+      "title": "o Fragmento do Monolito"
     }
   },
   "icons": {
@@ -210,6 +214,7 @@
     "Vamps": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3008.png",
     "Crit": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/6676.png",
     "Letalidade": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3179.png",
-    "Scaling": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/7202_Sorcery.png"
+    "Scaling": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/7202_Sorcery.png",
+    "Terminus": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3302.png"
   }
 }

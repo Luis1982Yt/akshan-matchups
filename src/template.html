@@ -299,6 +299,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .cds td { color: var(--texto-baixo); font-variant-numeric: tabular-nums; }
 .rodape { display: block; margin-top: 16px; font-size: 14px; color: var(--texto-baixo); }
 .rodape p { margin: 0; }
+.estado-planilha:not(:empty) { margin-top: 6px; font-size: 13px; }
 
 /* Pick travado: as duas artes frente a frente, como a tela de carregamento */
 .trava { position: fixed; inset: 0; z-index: 30; display: grid; grid-template-columns: 1fr 1fr; align-items: center; justify-items: center; gap: 4vw; padding: 6vh 6vw; background: rgba(6, 6, 4, .9); cursor: pointer; }
@@ -531,6 +532,92 @@ const FILTROS = {
   ],
 };
 
+/* ---------- Planilha ao vivo: o guia lê a planilha do autor quando abre ---------- */
+function lerCsv(t) {
+  const linhas = []; let linha = [], campo = "", aspas = false;
+  for (let i = 0; i < t.length; i++) {
+    const c = t[i];
+    if (aspas) {
+      if (c === '"') { if (t[i + 1] === '"') { campo += '"'; i++; } else aspas = false; } else campo += c;
+    } else if (c === '"') aspas = true;
+    else if (c === ",") { linha.push(campo); campo = ""; }
+    else if (c === "\n" || c === "\r") {
+      if (c === "\r" && t[i + 1] === "\n") i++;
+      linha.push(campo); linhas.push(linha); linha = []; campo = "";
+    } else campo += c;
+  }
+  if (campo || linha.length) { linha.push(campo); linhas.push(linha); }
+  return linhas;
+}
+function linhasDaPlanilha(t) {
+  const linhas = lerCsv(t), cab = linhas.shift() || [];
+  if (!/campe/i.test(cab[0] || "")) throw new Error("cabeçalho inesperado");
+  return linhas.filter(r => (r[0] || "").trim()).map(r => {
+    r = r.concat(Array(8).fill("")).slice(0, 8);
+    return [r[0].trim(), ...r.slice(1, 7).map(x => x.trim()), /^s/i.test(r[7].trim()) ? 1 : 0];
+  });
+}
+// Campeão novo na planilha: pega id e título no Data Dragon.
+const chaveNome = s => s.toLowerCase().normalize("NFD").replace(/[^a-z0-9]/g, "");
+let ddCampeoes;
+async function completaCampeoes(g, nomes) {
+  if (!ddCampeoes) ddCampeoes = fetch(`${DD}${VER}/data/pt_BR/champion.json`).then(r => r.json()).then(j => j.data);
+  const por = {};
+  Object.values(await ddCampeoes).forEach(c => { por[chaveNome(c.name)] = c; por[chaveNome(c.id)] = c; });
+  nomes.forEach(n => { const c = por[chaveNome(n)]; if (c) g.champs[n] = { id: c.id, title: c.title }; });
+}
+function aplicaMatchups(g, rows) {
+  g.matchups = rows.filter(r => g.champs[r[0]]);
+  g.lista = null;
+  if (guia !== g) return;
+  const slugAtual = current && current.slug;
+  prepara(g);
+  current = g.lista.find(c => c.slug === slugAtual) || g.lista[0];
+  renderLista();
+  renderDetalhe(false);
+  marcaHash();
+}
+function usaCopiaSalva(g) {
+  if (!g.planilha) return;
+  try {
+    const salvo = JSON.parse(localStorage.getItem("planilha:" + g.id) || "null");
+    if (salvo && salvo.rows && salvo.rows.length) {
+      Object.assign(g.champs, salvo.champs);
+      g.matchups = salvo.rows.filter(r => g.champs[r[0]]);
+    }
+  } catch (e) {}
+}
+function mostraPlanilha(g) {
+  const el = $("estadoPlanilha");
+  if (!el || guia !== g) return;
+  el.textContent = !g.planilha ? "" :
+    g.sincronia === "ok" ? "Atualizado agora da planilha." :
+    g.sincronia === "arquivo" ? "Aberto como arquivo: mostrando a cópia salva. O site publicado lê a planilha ao vivo." :
+    g.sincronia === "falhou" ? "Sem conexão com a planilha: mostrando a última cópia salva." :
+    "Buscando a versão mais nova da planilha…";
+}
+async function sincroniza(g) {
+  if (!g.planilha || g.sincronia) return;
+  // O Google não libera a planilha para página aberta como arquivo (file://).
+  if (location.protocol === "file:") { g.sincronia = "arquivo"; mostraPlanilha(g); return; }
+  g.sincronia = "buscando";
+  mostraPlanilha(g);
+  try {
+    const { id, gid } = g.planilha;
+    const r = await fetch(`https://docs.google.com/spreadsheets/d/${id}/gviz/tq?tqx=out:csv&gid=${gid}&_=${Date.now()}`, { cache: "no-store" });
+    if (!r.ok) throw new Error("planilha respondeu " + r.status);
+    const rows = linhasDaPlanilha(await r.text());
+    const faltam = rows.filter(x => !g.champs[x[0]]).map(x => x[0]);
+    if (faltam.length) await completaCampeoes(g, faltam);
+    aplicaMatchups(g, rows);
+    g.sincronia = "ok";
+    try { localStorage.setItem("planilha:" + g.id, JSON.stringify({ quando: Date.now(), rows: g.matchups, champs: g.champs })); } catch (e) {}
+  } catch (e) {
+    g.sincronia = "falhou";
+  }
+  mostraPlanilha(g);
+}
+
 /* ---------- Estado ---------- */
 const lista = $("lista"), q = $("q");
 let guia, filtros = [], current, shown = [];
@@ -538,7 +625,7 @@ const ativos = new Set();
 
 function escolheGuia(id, inimigo) {
   guia = GUIAS.find(g => g.id === id) || GUIAS[0];
-  if (!guia.lista) prepara(guia);
+  if (!guia.lista) { if (!guia.sincronia) usaCopiaSalva(guia); prepara(guia); }
   raiz.dataset.guia = guia.id;
   try { localStorage.setItem("guia", guia.id); } catch (e) {}
   filtros = FILTROS[guia.formato](guia);
@@ -548,6 +635,7 @@ function escolheGuia(id, inimigo) {
   renderLista();
   renderDetalhe(false);
   marcaHash();
+  sincroniza(guia);
 }
 
 function marcaHash() {
@@ -576,7 +664,8 @@ function renderGuia() {
   $("filtros").innerHTML = filtros.map(f => `<button class="chip" type="button" data-f="${f.id}" aria-pressed="false">${f.icone ? `<img src="${f.icone}" alt="" width="20" height="20">` : ""}${esc(f.rotulo)}</button>`).join("");
   $("nt").textContent = guia.formato === "simples" ? "Lembrete" : "Como jogar";
   const links = guia.links.map(l => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.rotulo)}</a>`).join(" · ");
-  $("rodape").innerHTML = `<p>${esc(guia.fonte)}${links ? " " + links + "." : ""} Imagens e sons de campeões, runas e itens da Riot Games. Site de fã, sem ligação com a Riot.</p>`;
+  $("rodape").innerHTML = `<p>${esc(guia.fonte)}${links ? " " + links + "." : ""} Imagens e sons de campeões, runas e itens da Riot Games. Site de fã, sem ligação com a Riot.</p><p id="estadoPlanilha" class="estado-planilha" role="status"></p>`;
+  mostraPlanilha(guia);
 }
 
 function matches(c) {
@@ -616,6 +705,7 @@ const ICON = [
   [/^mercs/i, "Mercs"], [/^tabis?/i, "Tabis"], [/^rapidez$/i, "Rapidez"], [/^craquen$/i, "Craquen"],
   [/^vamps$/i, "Vamps", "", "Grevas Vorazes"], [/^crit$/i, "Crit", "", "A Coletora"],
   [/^letalidade$/i, "Letalidade", "", "Glaive Sombria"], [/^scaling$/i, "Scaling", "runa", "Feitiçaria"],
+  [/^terminus$/i, "Terminus"],
 ];
 function opt(raw) {
   const rush = /rush/i.test(raw);
