@@ -32,8 +32,10 @@ def guia_simples(cfg, pasta):
     rows = json.loads(re.sub(r",\s*\]$", "]", bruto))
     meta = json.loads((pasta / "meta.json").read_text(encoding="utf-8"))
     eu = meta["champs"][cfg["campeao"]]
-    return {"campeao": {"id": eu["id"], "nome": cfg["campeao"], "titulo": eu["title"]},
-            "champs": meta["champs"], "icones": meta["icons"], "matchups": rows}
+    traducao = pasta / "traducao_en.json"
+    return {"campeao": {"id": eu["id"], "nome": cfg["campeao"], "titulo": eu["title"], "titulo_en": eu.get("title_en", "")},
+            "champs": meta["champs"], "icones": meta["icons"], "matchups": rows,
+            "traducao": json.loads(traducao.read_text(encoding="utf-8")) if traducao.exists() else None}
 
 
 def guia_completo(cfg, pasta):
@@ -45,17 +47,19 @@ def guia_completo(cfg, pasta):
 
 
 template = (SRC / "template.html").read_text(encoding="utf-8")
-for marker in ("/*GUIAS*/", "/*FONTS*/"):
+for marker in ("/*GUIAS*/", "/*FONTS*/", "/*IDS*/"):
     if template.count(marker) != 1:
         raise SystemExit(f"O template precisa ter exatamente um {marker}")
 
 guias = []
 for cfg in json.loads((SRC / "guias.json").read_text(encoding="utf-8")):
+    if cfg.get("oculto"):
+        continue  # guia guardado, fora do site por enquanto
     pasta = SRC / cfg["dados"]
     montar = guia_simples if cfg["formato"] == "simples" else guia_completo
     guias.append({**{k: v for k, v in cfg.items() if k != "dados"}, **montar(cfg, pasta)})
 
-html = template.replace("/*FONTS*/", font_faces()).replace(
+html = template.replace("/*IDS*/", json.dumps([g["id"] for g in guias])).replace("/*FONTS*/", font_faces()).replace(
     "/*GUIAS*/", json.dumps(guias, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
 )
 (ROOT / "index.html").write_text(html, encoding="utf-8", newline="\n")

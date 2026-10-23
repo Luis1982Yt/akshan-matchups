@@ -1,8 +1,9 @@
 """Atualiza a cópia embutida do guia do Akshan a partir da planilha do Peteruso.
 
 O site já lê a planilha ao vivo quando abre; esta cópia é o que aparece sem internet
-ou antes da planilha responder. Grava src/guias/akshan/rows.js e acrescenta campeões
-novos em meta.json. Depois rode `python scripts/build.py`.
+ou antes da planilha responder. Grava src/guias/akshan/rows.js, acrescenta campeões
+novos em meta.json e lista as linhas que ainda não têm tradução em traducao_en.json
+(no modo EN elas aparecem em português, com a marca PT). Depois rode `python scripts/build.py`.
 """
 import csv
 import io
@@ -45,11 +46,12 @@ meta = json.loads(meta_path.read_text(encoding="utf-8"))
 novos = [r[0] for r in rows if r[0] not in meta["champs"]]
 if novos:
     dd = json.loads(baixar(f"https://ddragon.leagueoflegends.com/cdn/{VER}/data/pt_BR/champion.json"))["data"]
+    en = json.loads(baixar(f"https://ddragon.leagueoflegends.com/cdn/{VER}/data/en_US/champion.json"))["data"]
     por_nome = {chave(c["name"]): c for c in dd.values()} | {chave(c["id"]): c for c in dd.values()}
     for nome in novos:
         c = por_nome.get(chave(nome))
         if c:
-            meta["champs"][nome] = {"id": c["id"], "title": c["title"]}
+            meta["champs"][nome] = {"id": c["id"], "title": c["title"], "title_en": en[c["id"]]["title"]}
         else:
             print(f"Não achei '{nome}' no Data Dragon; esse matchup fica de fora até o nome bater.")
     meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
@@ -66,3 +68,12 @@ print(f"{len(rows)} matchups gravados.")
 print("Mudaram:", mudou or "nenhum")
 if saiu:
     print("Saíram da planilha:", saiu)
+
+traducao_path = PASTA / "traducao_en.json"
+if traducao_path.exists():
+    traducao = json.loads(traducao_path.read_text(encoding="utf-8"))
+    faltam = [(r[0], l) for r in rows for l in (re.sub(r"\s{2,}", " ", x.strip()) for x in r[6].split("\n")) if l and l not in traducao["linhas"]]
+    if faltam:
+        print(f"Sem tradução em inglês ({len(faltam)}); acrescente em traducao_en.json > linhas:")
+        for nome, l in faltam:
+            print(f"  {nome}: {l}")

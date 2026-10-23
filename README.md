@@ -3,12 +3,18 @@
 Site de fã com guias de matchup de vários campeões, cada um feito a partir da planilha de um jogador. Sem servidor e sem dependências: abra o `index.html` com dois cliques.
 
 Guias atuais:
-- **Akshan mid**: 47 matchups da planilha "Akshan Matchups - Peteruso".
-- **Mordekaiser**: 139 matchups da planilha do Meowdekaiser (aba de matchups; as notas ficam em inglês, como no original).
+- **Akshan mid**: 48 matchups da planilha "Akshan Matchups - Peteruso", lida ao vivo no site publicado.
+- **Mordekaiser** (escondido por enquanto, com `"oculto": true` em `src/guias.json`): 139 matchups da planilha do Meowdekaiser. Os dados continuam no repositório; é só tirar o `oculto` para voltar.
+
+## Português e inglês
+
+- O botão PT/EN no topo troca a língua do site inteiro e fica salvo no navegador. Na primeira visita vale a língua do navegador.
+- As notas do Akshan em inglês ficam em `src/guias/akshan/traducao_en.json` (`linhas`: cada linha da planilha → tradução; `celulas`: nomes de runas e itens das colunas de setup).
+- Quando o Peteruso muda uma linha, ela aparece em português com a marca "PT" no modo EN até ganhar tradução. `python scripts/atualizar_akshan.py` lista essas linhas.
 
 ## Como navegar
 
-- O nome do campeão no topo abre o menu de guias.
+- Com mais de um guia visível, o nome do campeão no topo abre o menu de guias.
 - O site sempre abre no último guia usado (fica salvo no navegador).
 - Cada guia e cada matchup tem link próprio: `index.html#mordekaiser`, `index.html#mordekaiser/aatrox`. Links antigos do Akshan (`#ahri`) continuam funcionando.
 
@@ -16,7 +22,8 @@ Guias atuais:
 
 - `src/template.html`: HTML, CSS e JS do site. É aqui que se edita. Os marcadores `/*FONTS*/` e `/*GUIAS*/` recebem as fontes e os dados.
 - `src/guias.json`: a lista de guias (ordem do menu, autor, créditos, formato e pasta dos dados).
-- `src/guias/akshan/`: `rows.js` no formato `[campeão, runa, secundária, feitiço, bota, build, lembrete, noGuia(1/0)]` e `meta.json` com ids, títulos e ícones.
+- `src/guias/akshan/`: `rows.js` no formato `[campeão, runa, secundária, feitiço, bota, build, lembrete, noGuia(1/0)]`, `meta.json` com ids, títulos (pt e en) e ícones, e `traducao_en.json`.
+- `scripts/atualizar_akshan.py`: baixa a planilha do Peteruso para a cópia embutida (a que aparece sem internet), acrescenta campeões novos e lista linhas sem tradução. Depois rode o build.
 - `src/guias/mordekaiser/`: `planilha.csv` (cópia da planilha) e `matchups.json` (a planilha separada em runas, itens, dificuldade e seções).
 - `src/fonts/`: Cinzel e Hanken Grotesk (subconjunto latino), embutidas no HTML pelo build.
 - `scripts/build.py`: gera o `index.html`. Rode `python scripts/build.py` depois de qualquer mudança.

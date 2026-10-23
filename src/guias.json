@@ -10,13 +10,15 @@
     "links": [
       {
         "rotulo": "Ver a planilha original",
-        "url": "https://docs.google.com/spreadsheets/d/1mmKUbJ77tWe7mYxeAjzg2Bb2LZiiHzA8o1PHnhzwQYI/edit?gid=893415135#gid=893415135"
+        "url": "https://docs.google.com/spreadsheets/d/1mmKUbJ77tWe7mYxeAjzg2Bb2LZiiHzA8o1PHnhzwQYI/edit?gid=893415135#gid=893415135",
+        "rotulo_en": "See the original spreadsheet"
       }
     ],
     "planilha": {
       "id": "1mmKUbJ77tWe7mYxeAjzg2Bb2LZiiHzA8o1PHnhzwQYI",
       "gid": "893415135"
-    }
+    },
+    "fonte_en": "Notes from the \"Akshan Matchups - Peteruso\" spreadsheet, translated to English."
   },
   {
     "id": "mordekaiser",
@@ -29,7 +31,8 @@
     "links": [
       {
         "rotulo": "Ver a planilha original",
-        "url": "https://docs.google.com/spreadsheets/d/1BVH44IPxZNBQshDf90XZRJbfKvavVCUIIo_boyBVF8o/edit?gid=1560260169"
+        "url": "https://docs.google.com/spreadsheets/d/1BVH44IPxZNBQshDf90XZRJbfKvavVCUIIo_boyBVF8o/edit?gid=1560260169",
+        "rotulo_en": "See the original spreadsheet"
       },
       {
         "rotulo": "Twitch",
@@ -39,6 +42,7 @@
         "rotulo": "X",
         "url": "https://x.com/Meowdekaiser"
       }
-    ]
+    ],
+    "oculto": true
   }
 ]

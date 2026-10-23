@@ -7,9 +7,10 @@
 <script>
 try {
   const t = localStorage.getItem("tema"); if (t === "claro") document.documentElement.dataset.tema = t;
-  const h = location.hash.slice(1).split("/")[0], g = localStorage.getItem("guia");
-  // Guia sem paleta própria (ou link antigo do Akshan) cai na paleta padrão até o JS confirmar o guia.
-  document.documentElement.dataset.guia = h || g || "akshan";
+  const ids = /*IDS*/, h = location.hash.slice(1).split("/")[0], g = localStorage.getItem("guia");
+  document.documentElement.dataset.guia = ids.includes(h) ? h : ids.includes(g) ? g : ids[0];
+  const l = localStorage.getItem("lingua") || ((navigator.language || "").toLowerCase().startsWith("pt") ? "pt" : "en");
+  document.documentElement.lang = l === "en" ? "en" : "pt-BR";
 } catch (e) {}
 </script>
 <style>
@@ -138,8 +139,13 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .menu li .atual { margin-left: auto; flex: none; font-size: 12px; font-weight: 700; color: var(--acento-vivo); }
 .dica { margin: 6px 10px 4px; padding-top: 8px; border-top: 1px solid var(--linha); font-size: 13px; color: var(--texto-baixo); }
 .acoes { margin-left: auto; display: flex; gap: 8px; }
-.tema, .som { width: 44px; height: 44px; flex: none; display: grid; place-items: center; cursor: pointer; border-radius: 50%; border: 1px solid var(--linha-forte); background: transparent; color: var(--acento-vivo); }
-.tema:hover, .som:hover { background: var(--painel-alto); }
+.tema, .som, .lingua { width: 44px; height: 44px; flex: none; display: grid; place-items: center; cursor: pointer; border-radius: 50%; border: 1px solid var(--linha-forte); background: transparent; color: var(--acento-vivo); }
+.tema:hover, .som:hover, .lingua:hover { background: var(--painel-alto); }
+.lingua { font: 700 13px var(--corpo); letter-spacing: .04em; }
+.trocar:disabled { cursor: default; }
+.trocar:disabled:hover { border-color: transparent; background: none; }
+.trocar:disabled svg { display: none; }
+.pt-tag { margin-left: 6px; padding: 1px 5px; border-radius: 4px; border: 1px solid var(--linha-forte); font: 700 11px var(--corpo); color: var(--texto-baixo); vertical-align: 2px; }
 .som .mudo { display: none; }
 .som[aria-pressed="false"] .ligado { display: none; }
 .som[aria-pressed="false"] .mudo { display: block; }
@@ -395,7 +401,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 </style>
 </head>
 <body>
-<a class="pular" href="#matchup">Pular para o matchup</a>
+<a class="pular" href="#matchup" data-t="pular">Pular para o matchup</a>
 <header class="bar">
   <div class="bar-in">
     <div class="guias">
@@ -405,12 +411,13 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
         <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 5l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
       <div class="menu" id="menuGuias" hidden>
-        <p class="menu-tit">Guias de matchup</p>
+        <p class="menu-tit" data-t="guiasTit">Guias de matchup</p>
         <ul id="menuLista"></ul>
-        <p class="dica">O site sempre abre no último guia que você usou.</p>
+        <p class="dica" data-t="dica">O site sempre abre no último guia que você usou.</p>
       </div>
     </div>
     <div class="acoes">
+    <button class="lingua" type="button" id="lingua"></button>
     <button class="som" type="button" id="som" aria-pressed="true" aria-label="Sons do cliente do LoL">
       <svg class="ligado" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M15.5 9a4.2 4.2 0 0 1 0 6M18.2 6.5a8 8 0 0 1 0 11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
       <svg class="mudo" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M16 9.5l5 5M21 9.5l-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
@@ -428,13 +435,13 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   <p class="sr" id="anuncio" aria-live="polite"></p>
   <div class="palco">
     <nav class="anel" aria-labelledby="escolhe">
-      <h2 id="escolhe"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1l6 6-6 6-6-6z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>Escolhe o inimigo<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1l6 6-6 6-6-6z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></h2>
+      <h2 id="escolhe"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1l6 6-6 6-6-6z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span data-t="escolhe">Escolhe o inimigo</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1l6 6-6 6-6-6z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></h2>
       <label class="busca" for="q">
         <svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M11 11l3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-        <input id="q" type="search" placeholder="Campeão ou palavra" autocomplete="off" spellcheck="false" aria-label="Procurar matchup">
+        <input id="q" type="search" placeholder="Campeão ou palavra" autocomplete="off" spellcheck="false" aria-label="Procurar matchup" data-t-placeholder="busca" data-t-aria="buscaRotulo">
         <span class="conta" id="contagem"></span>
       </label>
-      <div class="filtros" id="filtros" role="group" aria-label="Filtros"></div>
+      <div class="filtros" id="filtros" role="group" aria-label="Filtros" data-t-aria="filtros"></div>
       <div class="roda">
         <svg class="mira" viewBox="0 0 100 100" aria-hidden="true">
           <circle class="aro" cx="50" cy="50" r="49" vector-effect="non-scaling-stroke"/>
@@ -442,20 +449,20 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
         </svg>
         <button class="seta-mira esq" type="button" id="miraAnt" aria-label="Matchup anterior"><svg viewBox="0 0 15 24" aria-hidden="true"><path d="M0 0L15 12L0 24z" fill="currentColor"/></svg></button>
         <button class="seta-mira dir" type="button" id="miraProx" aria-label="Próximo matchup"><svg viewBox="0 0 15 24" aria-hidden="true"><path d="M15 0L0 12L15 24z" fill="currentColor"/></svg></button>
-        <div class="lista" id="lista" role="group" aria-label="Campeões"></div>
-        <p class="vazio" id="vazio" role="status" hidden>Nenhum campeão com essa busca. <button type="button" id="limpar">Limpar busca e filtros</button></p>
+        <div class="lista" id="lista" role="group" aria-label="Campeões" data-t-aria="campeoes"></div>
+        <p class="vazio" id="vazio" role="status" hidden><span data-t="vazio">Nenhum campeão com essa busca.</span> <button type="button" id="limpar" data-t="limpar">Limpar busca e filtros</button></p>
       </div>
       <p class="legenda" id="legenda"></p>
     </nav>
 
     <div class="detalhe" id="matchup" tabindex="-1">
-      <section class="duelo" aria-label="Duelo">
+      <section class="duelo" aria-label="Duelo" data-t-aria="duelo">
         <article class="card voce">
           <div id="artVoce"></div>
-          <span class="selo">Você</span>
+          <span class="selo" data-t="voce">Você</span>
           <div class="quem"><p class="n" id="vocNome"></p><p class="t" id="vocTitulo"></p></div>
         </article>
-        <button class="travar" type="button" id="travar" title="Travar o pick"><span aria-hidden="true">VS</span><span class="sr" id="travarNome"></span></button>
+        <button class="travar" type="button" id="travar" title="Travar o pick" data-t-title="travarTit"><span aria-hidden="true">VS</span><span class="sr" id="travarNome"></span></button>
         <article class="card inimigo">
           <div id="artEle"></div>
           <svg class="alvo" id="alvo" viewBox="0 0 100 100" aria-hidden="true">
@@ -463,13 +470,13 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
             <polygon points="50,5 95,50 50,95 5,50" class="losango" vector-effect="non-scaling-stroke"/>
             <path class="setas-alvo" d="M-4 45L3 50l-7 5z M104 45L97 50l7 5z"/>
           </svg>
-          <span class="selo">Inimigo</span>
+          <span class="selo" data-t="inimigo">Inimigo</span>
           <div class="quem"><p class="n" id="eleNome"></p><p class="t" id="eleTitulo"></p><span class="guia" id="guia"></span></div>
         </article>
       </section>
 
       <section class="setup" aria-labelledby="st">
-        <h2 id="st">Seu setup pro confronto</h2>
+        <h2 id="st" data-t="setup">Seu setup pro confronto</h2>
         <div id="carga"></div>
       </section>
 
@@ -511,6 +518,65 @@ const SETA_PASSO = '<svg class="seta" width="16" height="12" viewBox="0 0 16 12"
 document.addEventListener("error", e => { if (e.target.tagName === "IMG") e.target.classList.add("falhou"); }, true);
 document.addEventListener("load", e => { if (e.target.tagName === "IMG") e.target.classList.remove("falhou"); }, true);
 
+/* ---------- Língua da interface (pt-BR ou inglês) ---------- */
+const TXT = {
+  pt: {
+    pular: "Pular para o matchup", guiasTit: "Guias de matchup", dica: "O site sempre abre no último guia que você usou.",
+    escolhe: "Escolhe o inimigo", busca: "Campeão ou palavra", buscaRotulo: "Procurar matchup", filtros: "Filtros", campeoes: "Campeões",
+    vazio: "Nenhum campeão com essa busca.", limpar: "Limpar busca e filtros", voce: "Você", inimigo: "Inimigo", duelo: "Duelo",
+    travarTit: "Travar o pick", travarContra: "Travar o pick contra ", setup: "Seu setup pro confronto",
+    lembrete: "Lembrete", comoJogar: "Como jogar", contra: " contra ", arteDe: "Arte de ",
+    noGuia: "No guia", foraGuia: "Fora do guia", dificuldade: "Dificuldade",
+    runa: "Runa", secundaria: "Secundária", feitico: "Feitiço", bota: "Bota", build: "Build", semAnot: "Sem anotação", tantoFaz: "Tanto faz",
+    anterior: "Anterior: ", proximo: "Próximo: ",
+    legNoGuia: "no guia", legDif: "número = dificuldade (1 fácil, 5 difícil)", legBusca: "busca", legTroca: "troca de matchup",
+    rodapeRiot: "Imagens e sons de campeões, runas e itens da Riot Games. Site de fã, sem ligação com a Riot.",
+    plOk: "Atualizado agora da planilha.", plArquivo: "Aberto como arquivo: mostrando a cópia salva. O site publicado lê a planilha ao vivo.",
+    plFalhou: "Sem conexão com a planilha: mostrando a última cópia salva.", plBusca: "Buscando a versão mais nova da planilha…",
+    srNoGuia: ", no guia", srDif: n => `, dificuldade ${n} de 5`, srNotas: ", achado nas notas", titNotas: " (achado nas notas)",
+    nCampeoes: n => `${n} campeões`, nenhum: "Nenhum campeão com essa busca",
+    somOff: "Desligar os sons", somOn: "Ligar os sons", temaEsc: "Usar tema escuro", temaCla: "Usar tema claro",
+    linguaRotulo: "Switch to English", linguaBotao: "EN",
+    guiaAtual: "Guia atual: ", trocarGuia: ". Trocar de guia", notasDo: "notas do ", matchups: " matchups", aberto: "Aberto",
+    facil: "Fácil", medio: "Médio", dificil: "Difícil", resumo: "Resumo", runas: "Runas", itens: "Itens", geral: "Geral",
+    principal: "Principal", fragmentos: "Fragmentos", semTrad: "Ainda não traduzido",
+  },
+  en: {
+    pular: "Skip to matchup", guiasTit: "Matchup guides", dica: "The site always opens on the last guide you used.",
+    escolhe: "Choose your enemy", busca: "Champion or keyword", buscaRotulo: "Search matchup", filtros: "Filters", campeoes: "Champions",
+    vazio: "No champion matches this search.", limpar: "Clear search and filters", voce: "You", inimigo: "Enemy", duelo: "Matchup",
+    travarTit: "Lock in", travarContra: "Lock in vs ", setup: "Your setup for this matchup",
+    lembrete: "Notes", comoJogar: "How to play", contra: " vs ", arteDe: "Art of ",
+    noGuia: "In the guide", foraGuia: "Not in the guide", dificuldade: "Difficulty",
+    runa: "Rune", secundaria: "Secondary", feitico: "Spell", bota: "Boots", build: "Build", semAnot: "No note", tantoFaz: "Any",
+    anterior: "Previous: ", proximo: "Next: ",
+    legNoGuia: "in the guide", legDif: "number = difficulty (1 easy, 5 hard)", legBusca: "search", legTroca: "change matchup",
+    rodapeRiot: "Champion, rune and item images and sounds by Riot Games. Fan site, not affiliated with Riot.",
+    plOk: "Updated just now from the spreadsheet.", plArquivo: "Opened as a file: showing the saved copy. The published site reads the spreadsheet live.",
+    plFalhou: "Couldn't reach the spreadsheet: showing the last saved copy.", plBusca: "Fetching the latest version of the spreadsheet…",
+    srNoGuia: ", in the guide", srDif: n => `, difficulty ${n} of 5`, srNotas: ", found in the notes", titNotas: " (found in the notes)",
+    nCampeoes: n => `${n} champions`, nenhum: "No champion matches this search",
+    somOff: "Turn sounds off", somOn: "Turn sounds on", temaEsc: "Use dark theme", temaCla: "Use light theme",
+    linguaRotulo: "Mudar para português", linguaBotao: "PT",
+    guiaAtual: "Current guide: ", trocarGuia: ". Change guide", notasDo: "notes by ", matchups: " matchups", aberto: "Open",
+    facil: "Easy", medio: "Medium", dificil: "Hard", resumo: "Summary", runas: "Runes", itens: "Items", geral: "Overall",
+    principal: "Primary", fragmentos: "Shards", semTrad: "Not translated yet",
+  },
+};
+let L = document.documentElement.lang === "en" ? "en" : "pt";
+const t = (k, ...a) => { const v = TXT[L][k] ?? TXT.pt[k]; return typeof v === "function" ? v(...a) : v; };
+const tituloDe = c => (L === "en" && c.titulo_en) || c.titulo;
+function aplicaTextos() {
+  document.documentElement.lang = L === "en" ? "en" : "pt-BR";
+  document.querySelectorAll("[data-t]").forEach(el => { el.textContent = t(el.dataset.t); });
+  document.querySelectorAll("[data-t-placeholder]").forEach(el => { el.placeholder = t(el.dataset.tPlaceholder); });
+  document.querySelectorAll("[data-t-aria]").forEach(el => { el.setAttribute("aria-label", t(el.dataset.tAria)); });
+  document.querySelectorAll("[data-t-title]").forEach(el => { el.title = t(el.dataset.tTitle); });
+  $("lingua").textContent = t("linguaBotao");
+  $("lingua").setAttribute("aria-label", t("linguaRotulo"));
+  $("lingua").setAttribute("lang", L === "en" ? "pt-BR" : "en");
+}
+
 /* ---------- Sons do cliente do LoL (pasta sons/, ao lado do index.html) ---------- */
 const VOLUME = { grade: .45, passa: .18, travar: .5, avanca: .4, volta: .4, chip: .4, abre: .4, fecha: .4, clique: .35, vo: .8 };
 let somLigado = true;
@@ -525,7 +591,7 @@ function toca(nome, arquivo) {
 }
 function marcaSom() {
   $("som").setAttribute("aria-pressed", somLigado);
-  $("som").setAttribute("aria-label", somLigado ? "Desligar os sons" : "Ligar os sons");
+  $("som").setAttribute("aria-label", t(somLigado ? "somOff" : "somOn"));
 }
 
 /* ---------- Dados de cada guia ---------- */
@@ -533,9 +599,9 @@ function prepara(g) {
   if (g.formato === "simples") {
     g.lista = g.matchups.map(([nome, runa, sec, spell, bota, build, notas, guia]) => ({
       nome, runa, sec, spell, bota, build, guia: !!guia,
-      id: g.champs[nome].id, titulo: g.champs[nome].title, slug: slug(nome),
+      id: g.champs[nome].id, titulo: g.champs[nome].title, titulo_en: g.champs[nome].title_en, slug: slug(nome),
       linhas: notas.split("\n").map(l => l.trim().replace(/\s{2,}/g, " ")).filter(Boolean),
-      hay: (nome + " " + notas).toLowerCase(),
+      hay: (nome + " " + notas + " " + notas.split("\n").map(l => (g.traducao && g.traducao.linhas[l.trim().replace(/\s{2,}/g, " ")]) || "").join(" ")).toLowerCase(),
     }));
     g.lista.forEach(c => { c.hayN = normal(c.hay); });
   } else {
@@ -553,14 +619,14 @@ function textoDe(m) {
 // Filtros: dentro do mesmo grupo vale qualquer um; entre grupos, todos.
 const FILTROS = {
   simples: g => [
-    { id: "guia", grupo: "guia", rotulo: "No guia", teste: c => c.guia },
+    { id: "guia", grupo: "guia", chave: "noGuia", teste: c => c.guia },
     ...["Ignite", "TP", "Exhaust"].map(s => ({ id: s, grupo: "feitico", rotulo: s, icone: g.icones[s], teste: c => c.spell === s })),
     { id: "Electro", grupo: "runa", rotulo: "Electro", icone: g.icones.Electro, teste: c => /electro/i.test(c.runa) },
   ],
   completo: () => [
-    { id: "facil", grupo: "dif", rotulo: "Fácil", teste: c => c.dificuldade.overall <= 2 },
-    { id: "medio", grupo: "dif", rotulo: "Médio", teste: c => c.dificuldade.overall === 3 },
-    { id: "dificil", grupo: "dif", rotulo: "Difícil", teste: c => c.dificuldade.overall >= 4 },
+    { id: "facil", grupo: "dif", chave: "facil", teste: c => c.dificuldade.overall <= 2 },
+    { id: "medio", grupo: "dif", chave: "medio", teste: c => c.dificuldade.overall === 3 },
+    { id: "dificil", grupo: "dif", chave: "dificil", teste: c => c.dificuldade.overall >= 4 },
   ],
 };
 
@@ -597,6 +663,8 @@ async function completaCampeoes(g, nomes) {
   const por = {};
   Object.values(await ddCampeoes).forEach(c => { por[chaveNome(c.name)] = c; por[chaveNome(c.id)] = c; });
   nomes.forEach(n => { const c = por[chaveNome(n)]; if (c) g.champs[n] = { id: c.id, title: c.title }; });
+  // Título em inglês para o modo EN.
+  try { const en = (await (await fetch(`${DD}${VER}/data/en_US/champion.json`)).json()).data; nomes.forEach(n => { const c = g.champs[n]; if (c && en[c.id]) c.title_en = en[c.id].title; }); } catch (e) {}
 }
 function aplicaMatchups(g, rows) {
   g.matchups = rows.filter(r => g.champs[r[0]]);
@@ -614,7 +682,8 @@ function usaCopiaSalva(g) {
   try {
     const salvo = JSON.parse(localStorage.getItem("planilha:" + g.id) || "null");
     if (salvo && salvo.rows && salvo.rows.length) {
-      Object.assign(g.champs, salvo.champs);
+      // Só completa campeões novos: os do build já vêm com título em inglês.
+      Object.entries(salvo.champs || {}).forEach(([n, c]) => { if (!g.champs[n]) g.champs[n] = c; });
       g.matchups = salvo.rows.filter(r => g.champs[r[0]]);
     }
   } catch (e) {}
@@ -623,10 +692,7 @@ function mostraPlanilha(g) {
   const el = $("estadoPlanilha");
   if (!el || guia !== g) return;
   el.textContent = !g.planilha ? "" :
-    g.sincronia === "ok" ? "Atualizado agora da planilha." :
-    g.sincronia === "arquivo" ? "Aberto como arquivo: mostrando a cópia salva. O site publicado lê a planilha ao vivo." :
-    g.sincronia === "falhou" ? "Sem conexão com a planilha: mostrando a última cópia salva." :
-    "Buscando a versão mais nova da planilha…";
+    t({ ok: "plOk", arquivo: "plArquivo", falhou: "plFalhou" }[g.sincronia] || "plBusca");
 }
 async function sincroniza(g) {
   if (!g.planilha || g.sincronia) return;
@@ -682,23 +748,24 @@ function renderGuia() {
   $("trocarNome").textContent = eu.nome;
   $("trocarSub").textContent = sub;
   $("trocarSub").hidden = !sub;
-  $("trocar").setAttribute("aria-label", `Guia atual: ${eu.nome}${sub ? ", " + sub : ""}. Trocar de guia`);
+  $("trocar").disabled = GUIAS.length < 2;
+  $("trocar").setAttribute("aria-label", GUIAS.length < 2 ? `${eu.nome}${sub ? ", " + sub : ""}` : `${t("guiaAtual")}${eu.nome}${sub ? ", " + sub : ""}${t("trocarGuia")}`);
   $("menuLista").innerHTML = GUIAS.map(g => `
     <li><button type="button" data-guia="${g.id}" aria-current="${g === guia}">
       <img src="${sq(g.campeao.id)}" alt="" width="42" height="42">
-      <span><b>${esc(g.campeao.nome)}</b><small><span class="sr">, </span>${g.rota ? esc(g.rota) + " · " : ""}notas do ${esc(g.autor)} · ${g.matchups.length} matchups</small></span>
-      ${g === guia ? '<span class="atual">Aberto</span>' : ""}
+      <span><b>${esc(g.campeao.nome)}</b><small><span class="sr">, </span>${g.rota ? esc(g.rota) + " · " : ""}${t("notasDo")}${esc(g.autor)} · ${g.matchups.length}${t("matchups")}</small></span>
+      ${g === guia ? `<span class="atual">${t("aberto")}</span>` : ""}
     </button></li>`).join("");
-  $("artVoce").innerHTML = `<img src="${cena(eu.id)}" alt="Arte do ${esc(eu.nome)}">`;
+  $("artVoce").innerHTML = `<img src="${cena(eu.id)}" alt="${t("arteDe")}${esc(eu.nome)}">`;
   $("vocNome").textContent = eu.nome;
   $("vocNome").classList.toggle("longo", eu.nome.length > 9);
-  $("vocTitulo").textContent = eu.titulo;
-  $("filtros").innerHTML = filtros.map(f => `<button class="chip" type="button" data-f="${f.id}" aria-pressed="false">${f.icone ? `<img src="${f.icone}" alt="" width="20" height="20">` : ""}${esc(f.rotulo)}</button>`).join("");
-  $("nt").textContent = guia.formato === "simples" ? "Lembrete" : "Como jogar";
-  const marcas = guia.formato === "simples" ? '<span class="ponto-leg" aria-hidden="true"></span>no guia' : "número = dificuldade (1 fácil, 5 difícil)";
-  $("legenda").innerHTML = `${marcas}<span class="atalhos"> · <kbd>/</kbd> busca · <kbd>←</kbd> <kbd>→</kbd> troca de matchup</span>`;
-  const links = guia.links.map(l => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.rotulo)}</a>`).join(" · ");
-  $("rodape").innerHTML = `<p>${esc(guia.fonte)}${links ? " " + links + "." : ""} Imagens e sons de campeões, runas e itens da Riot Games. Site de fã, sem ligação com a Riot.</p><p id="estadoPlanilha" class="estado-planilha" role="status"></p>`;
+  $("vocTitulo").textContent = tituloDe(eu);
+  $("filtros").innerHTML = filtros.map(f => `<button class="chip" type="button" data-f="${f.id}" aria-pressed="${ativos.has(f.id)}">${f.icone ? `<img src="${f.icone}" alt="" width="20" height="20">` : ""}${esc(f.chave ? t(f.chave) : f.rotulo)}</button>`).join("");
+  $("nt").textContent = t(guia.formato === "simples" ? "lembrete" : "comoJogar");
+  const marcas = guia.formato === "simples" ? `<span class="ponto-leg" aria-hidden="true"></span>${t("legNoGuia")}` : t("legDif");
+  $("legenda").innerHTML = `${marcas}<span class="atalhos"> · <kbd>/</kbd> ${t("legBusca")} · <kbd>←</kbd> <kbd>→</kbd> ${t("legTroca")}</span>`;
+  const links = guia.links.map(l => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc((L === "en" && l.rotulo_en) || l.rotulo)}</a>`).join(" · ");
+  $("rodape").innerHTML = `<p>${esc((L === "en" && guia.fonte_en) || guia.fonte)}${links ? " " + links + "." : ""} ${t("rodapeRiot")}</p><p id="estadoPlanilha" class="estado-planilha" role="status"></p>`;
   mostraPlanilha(guia);
 }
 
@@ -725,19 +792,19 @@ function passaFiltros(c) {
 }
 
 function renderLista() {
-  const t = normal(q.value.trim());
-  const avaliados = guia.lista.map(c => [c, relevancia(c, t)]).filter(([c, n]) => n > 0 && passaFiltros(c));
-  if (t) avaliados.sort((a, b) => b[1] - a[1]);
+  const termo = normal(q.value.trim());
+  const avaliados = guia.lista.map(c => [c, relevancia(c, termo)]).filter(([c, n]) => n > 0 && passaFiltros(c));
+  if (termo) avaliados.sort((a, b) => b[1] - a[1]);
   shown = avaliados.map(x => x[0]);
-  const soNota = new Set(t ? avaliados.filter(x => x[1] === 1).map(x => x[0]) : []);
+  const soNota = new Set(termo ? avaliados.filter(x => x[1] === 1).map(x => x[0]) : []);
   const foco = shown.includes(current) ? current : shown[0];
   lista.innerHTML = shown.map(c => {
     const marca = guia.formato === "simples"
       ? (c.guia ? '<span class="ponto" aria-hidden="true"></span>' : "")
       : (c.dificuldade.overall ? `<span class="nivel" aria-hidden="true">${c.dificuldade.overall}</span>` : "");
-    const extra = guia.formato === "simples" ? (c.guia ? ", no guia" : "") : (c.dificuldade.overall ? `, dificuldade ${c.dificuldade.overall} de 5` : "");
-    return `<button type="button" class="pick${soNota.has(c) ? " so-nota" : ""}" data-id="${c.slug}" data-ini="${esc(c.nome.charAt(0))}" aria-current="${c === current}" tabindex="${c === foco ? 0 : -1}" title="${esc(c.nome)}${soNota.has(c) ? " (achado nas notas)" : ""}">
-      <img src="${sq(c.id)}" alt="" width="56" height="56">${marca}<span class="sr">${esc(c.nome)}${extra}${soNota.has(c) ? ", achado nas notas" : ""}</span></button>`;
+    const extra = guia.formato === "simples" ? (c.guia ? t("srNoGuia") : "") : (c.dificuldade.overall ? t("srDif", c.dificuldade.overall) : "");
+    return `<button type="button" class="pick${soNota.has(c) ? " so-nota" : ""}" data-id="${c.slug}" data-ini="${esc(c.nome.charAt(0))}" aria-current="${c === current}" tabindex="${c === foco ? 0 : -1}" title="${esc(c.nome)}${soNota.has(c) ? t("titNotas") : ""}">
+      <img src="${sq(c.id)}" alt="" width="56" height="56">${marca}<span class="sr">${esc(c.nome)}${extra}${soNota.has(c) ? t("srNotas") : ""}</span></button>`;
   }).join("");
   $("vazio").hidden = shown.length > 0;
   $("contagem").textContent = `${shown.length}/${guia.lista.length}`;
@@ -757,28 +824,35 @@ const ICON = [
   [/^inspira/i, "Inspiração", "runa"], [/^precis/i, "Precisão", "runa"],
   [/^ignite$/i, "Ignite"], [/^tp$/i, "TP"], [/^exhaust$/i, "Exhaust"],
   [/^mercs/i, "Mercs"], [/^tabis?/i, "Tabis"], [/^rapidez$/i, "Rapidez"], [/^craquen$/i, "Craquen"],
-  [/^vamps$/i, "Vamps", "", "Grevas Vorazes"], [/^crit$/i, "Crit", "", "A Coletora"],
-  [/^letalidade$/i, "Letalidade", "", "Glaive Sombria"], [/^scaling$/i, "Scaling", "runa", "Feitiçaria"],
+  [/^vamps$/i, "Vamps", "", "Grevas Vorazes", "Gluttonous Greaves"], [/^crit$/i, "Crit", "", "A Coletora", "The Collector"],
+  [/^letalidade$/i, "Letalidade", "", "Glaive Sombria", "Umbral Glaive"], [/^scaling$/i, "Scaling", "runa", "Feitiçaria", "Sorcery"],
   [/^terminus$/i, "Terminus"],
 ];
 function opt(raw) {
   const rush = /rush/i.test(raw);
   const word = raw.replace(/rush/i, "").replace(/!+/g, "").trim();
   const hit = ICON.find(([re]) => re.test(word));
-  const label = rush ? word.charAt(0) + word.slice(1).toLowerCase() : word;
+  let label = rush ? word.charAt(0) + word.slice(1).toLowerCase() : word;
+  if (L === "en" && guia.traducao) label = guia.traducao.celulas[label] || label;
   const icon = hit ? `<img src="${guia.icones[hit[1]]}" alt="" width="36" height="36">` : '<span class="soquete" aria-hidden="true"></span>';
-  return `<div class="opt${hit && hit[2] ? " " + hit[2] : ""}"${hit && hit[3] ? ` title="${esc(hit[3])}"` : ""}>${icon}<span>${esc(label)}</span>${rush ? '<span class="rush">rush</span>' : ""}</div>`;
+  return `<div class="opt${hit && hit[2] ? " " + hit[2] : ""}"${hit && hit[3] ? ` title="${esc((L === "en" && hit[4]) || hit[3])}"` : ""}>${icon}<span>${esc(label)}</span>${rush ? '<span class="rush">rush</span>' : ""}</div>`;
 }
 function slot(label, val) {
   let body;
-  if (!val) body = '<span class="livre">Sem anotação</span>';
-  else if (/^tanto faz$/i.test(val)) body = '<span class="livre">Tanto faz</span>';
+  if (!val) body = `<span class="livre">${t("semAnot")}</span>`;
+  else if (/^tanto faz$/i.test(val)) body = `<span class="livre">${t("tantoFaz")}</span>`;
   else if (/,/.test(val)) body = opt(val);
   else body = val.split(/\s*\/\s*/).map(opt).join("");
   return `<div class="slot"><dt>${label}</dt><dd>${body}</dd></div>`;
 }
 const KW = /(?<![\wÀ-ÿ])(lvl ?\d+|press|skirmish|roam(?:ing)?|gank|stat check|outscale|free kill|free lane|100 0|side ?lane|late ?game|early)(?![\wÀ-ÿ])/gi;
 const marca = line => esc(line).replace(KW, m => `<span class="kw">${m}</span>`);
+// No modo EN usa a tradução da linha; se o autor editou e ainda não tem tradução, mostra o original marcado.
+function linhaNaLingua(l) {
+  if (L !== "en" || !guia.traducao) return marca(l);
+  const en = guia.traducao.linhas[l];
+  return en ? marca(en) : `<span lang="pt-BR">${marca(l)}</span><span class="pt-tag" title="${t("semTrad")}">PT</span>`;
+}
 
 /* ---------- Formato completo (runas, itens, dificuldade e seções) ---------- */
 const TITULOS = { "Enemy Cooldowns": "Cooldowns do inimigo", "Early Game": "Early game", "How to trade": "Como trocar", "What to watch out for": "Cuidado com", "Tips": "Dicas", "Mini Rant": "Desabafo" };
@@ -806,11 +880,11 @@ function setupCompleto(c) {
     return `<details class="grupo"><summary><span lang="en">${esc(cond || "Other build")}</span></summary>${ol}</details>`;
   }).join("");
   const dif = [["early", "Early"], ["mid", "Mid"], ["late", "Late"], ["overall", "Geral"]]
-    .map(([k, r]) => `<div><dt>${r}</dt><dd aria-label="${c.dificuldade[k] ?? "sem nota"} de 5">${pips(c.dificuldade[k])}<b>${c.dificuldade[k] ?? "–"}/5</b></dd></div>`).join("");
+    .map(([k, r]) => `<div><dt>${k === "overall" ? t("geral") : r}</dt><dd aria-label="${c.dificuldade[k] ?? "sem nota"} de 5">${pips(c.dificuldade[k])}<b>${c.dificuldade[k] ?? "–"}/5</b></dd></div>`).join("");
   return `<div class="setup-completo">
-    <section class="bloco"><h3>Runas</h3>${runas || '<p class="livre">Sem anotação</p>'}</section>
-    <section class="bloco build"><h3>Itens</h3>${itens || '<p class="livre">Sem anotação</p>'}</section>
-    <section class="bloco dif"><h3>Dificuldade</h3><dl>${dif}</dl></section>
+    <section class="bloco"><h3>${t("runas")}</h3>${runas || '<p class="livre">Sem anotação</p>'}</section>
+    <section class="bloco build"><h3>${t("itens")}</h3>${itens || '<p class="livre">Sem anotação</p>'}</section>
+    <section class="bloco dif"><h3>${t("dificuldade")}</h3><dl>${dif}</dl></section>
   </div>`;
 }
 
@@ -820,32 +894,32 @@ function blocoTexto(b) {
   return `<p>${marcaEn(b.texto)}</p>`;
 }
 function notasCompleto(c) {
-  const resumo = c.tldr.length ? `<section class="resumo"><h3>Resumo</h3><ul>${c.tldr.map(t => `<li>${esc(t)}</li>`).join("")}</ul></section>` : "";
-  return `<div class="secoes" lang="en">${resumo}${c.secoes.map(s => `<section class="secao">${s.titulo ? `<h3 lang="pt-BR">${esc(TITULOS[s.titulo] || s.titulo)}</h3>` : ""}${s.blocos.map(blocoTexto).join("")}</section>`).join("")}</div>`;
+  const resumo = c.tldr.length ? `<section class="resumo"><h3>${t("resumo")}</h3><ul>${c.tldr.map(t => `<li>${esc(t)}</li>`).join("")}</ul></section>` : "";
+  return `<div class="secoes" lang="en">${resumo}${c.secoes.map(s => `<section class="secao">${s.titulo ? (L === "en" ? `<h3>${esc(s.titulo)}</h3>` : `<h3 lang="pt-BR">${esc(TITULOS[s.titulo] || s.titulo)}</h3>`) : ""}${s.blocos.map(blocoTexto).join("")}</section>`).join("")}</div>`;
 }
 
 /* ---------- Detalhe do matchup ---------- */
 function renderDetalhe(animar) {
   const c = current, eu = guia.campeao;
-  $("artEle").innerHTML = `<img src="${cena(c.id)}" alt="Arte de ${esc(c.nome)}">`;
+  $("artEle").innerHTML = `<img src="${cena(c.id)}" alt="${t("arteDe")}${esc(c.nome)}">`;
   $("eleNome").textContent = c.nome;
   $("eleNome").classList.toggle("longo", c.nome.length > 9);
-  $("eleTitulo").textContent = c.titulo;
+  $("eleTitulo").textContent = tituloDe(c);
   const alvo = $("alvo");
   if (animar !== false && !semMovimento()) { alvo.classList.remove("travando"); void alvo.getBoundingClientRect(); alvo.classList.add("travando"); }
-  $("titulo").textContent = `${eu.nome} contra ${c.nome}`;
+  $("titulo").textContent = `${eu.nome}${t("contra")}${c.nome}`;
   const g = $("guia");
   if (guia.formato === "simples") {
     g.className = "guia" + (c.guia ? " sim" : "");
-    g.innerHTML = "<i></i>" + (c.guia ? "No guia" : "Fora do guia");
+    g.innerHTML = "<i></i>" + t(c.guia ? "noGuia" : "foraGuia");
   } else {
     g.className = "guia";
-    g.innerHTML = c.dificuldade.overall ? `${pips(c.dificuldade.overall)}Dificuldade ${c.dificuldade.overall}/5` : "";
+    g.innerHTML = c.dificuldade.overall ? `${pips(c.dificuldade.overall)}${t("dificuldade")} ${c.dificuldade.overall}/5` : "";
   }
-  $("travarNome").textContent = "Travar o pick contra " + c.nome;
+  $("travarNome").textContent = t("travarContra") + c.nome;
   if (guia.formato === "simples") {
-    $("carga").innerHTML = `<dl class="carga">${slot("Runa", c.runa) + slot("Secundária", c.sec) + slot("Feitiço", c.spell) + slot("Bota", c.bota) + slot("Build", c.build)}</dl>`;
-    $("linhas").innerHTML = `<ol class="lembretes">${c.linhas.map(l => `<li><span>${marca(l)}</span></li>`).join("")}</ol>`;
+    $("carga").innerHTML = `<dl class="carga">${slot(t("runa"), c.runa) + slot(t("secundaria"), c.sec) + slot(t("feitico"), c.spell) + slot(t("bota"), c.bota) + slot(t("build"), c.build)}</dl>`;
+    $("linhas").innerHTML = `<ol class="lembretes"${L === "en" ? ' lang="en"' : ""}>${c.linhas.map(l => `<li><span>${linhaNaLingua(l)}</span></li>`).join("")}</ol>`;
   } else {
     $("carga").innerHTML = setupCompleto(c);
     $("linhas").innerHTML = notasCompleto(c);
@@ -859,11 +933,11 @@ function renderDetalhe(animar) {
 function atualizaVizinhos() {
   const [p, n] = vizinhos([-1, 1]);
   $("ant").innerHTML = `${SETA_E}<img src="${sq(p.id)}" alt="" width="24" height="24"><span class="lbl">${esc(p.nome)}</span>`;
-  $("ant").setAttribute("aria-label", "Anterior: " + p.nome);
+  $("ant").setAttribute("aria-label", t("anterior") + p.nome);
   $("prox").innerHTML = `<span class="lbl">${esc(n.nome)}</span><img src="${sq(n.id)}" alt="" width="24" height="24">${SETA_D}`;
-  $("prox").setAttribute("aria-label", "Próximo: " + n.nome);
-  $("miraAnt").setAttribute("aria-label", "Anterior: " + p.nome);
-  $("miraProx").setAttribute("aria-label", "Próximo: " + n.nome);
+  $("prox").setAttribute("aria-label", t("proximo") + n.nome);
+  $("miraAnt").setAttribute("aria-label", t("anterior") + p.nome);
+  $("miraProx").setAttribute("aria-label", t("proximo") + n.nome);
   [p, n].forEach(x => { const im = new Image(); im.src = cena(x.id); });
 }
 
@@ -883,7 +957,7 @@ function select(c) {
   marcaHash();
   const tile = lista.querySelector(`[data-id="${c.slug}"]`);
   if (tile) rolaNaLista(tile);
-  anuncia(`${guia.campeao.nome} contra ${c.nome}`);
+  anuncia(`${guia.campeao.nome}${t("contra")}${c.nome}`);
 }
 
 // Travar o pick: as duas artes se encontram no meio e a página desce até o setup.
@@ -925,7 +999,7 @@ document.querySelector(".guias").addEventListener("focusout", e => {
 
 /* ---------- Tema ---------- */
 function marcaTema() {
-  $("tema").setAttribute("aria-label", raiz.dataset.tema === "claro" ? "Usar tema escuro" : "Usar tema claro");
+  $("tema").setAttribute("aria-label", t(raiz.dataset.tema === "claro" ? "temaEsc" : "temaCla"));
 }
 $("tema").addEventListener("click", () => {
   toca("clique");
@@ -942,6 +1016,21 @@ $("som").addEventListener("click", () => {
   toca("clique");
 });
 marcaSom();
+$("lingua").addEventListener("click", () => {
+  L = L === "en" ? "pt" : "en";
+  try { localStorage.setItem("lingua", L); } catch (e) {}
+  toca("clique");
+  aplicaTextos();
+  marcaSom();
+  marcaTema();
+  guia.lista = null;
+  const slugAtual = current.slug;
+  prepara(guia);
+  current = guia.lista.find(c => c.slug === slugAtual) || guia.lista[0];
+  renderGuia();
+  renderLista();
+  renderDetalhe(false);
+});
 
 /* ---------- Eventos ---------- */
 lista.addEventListener("click", e => {
@@ -959,7 +1048,7 @@ q.addEventListener("input", () => {
   renderLista();
   if (shown.length === 1) select(shown[0]);
   clearTimeout(avisoBusca);
-  avisoBusca = setTimeout(() => anuncia(shown.length ? `${shown.length} campeões` : "Nenhum campeão com essa busca"), 700);
+  avisoBusca = setTimeout(() => anuncia(shown.length ? t("nCampeoes", shown.length) : t("nenhum")), 700);
 });
 $("filtros").addEventListener("click", e => {
   const b = e.target.closest(".chip");
@@ -1024,6 +1113,7 @@ addEventListener("hashchange", () => {
   if (g === guia.id && i === current.slug) return;
   if (g === guia.id) select(guia.lista.find(c => c.slug === i)); else escolheGuia(g, i);
 });
+aplicaTextos();
 escolheGuia(...lerHash());
 </script>
 

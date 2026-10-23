@@ -2,199 +2,248 @@
   "champs": {
     "Akshan": {
       "id": "Akshan",
-      "title": "o Sentinela Rebelde"
+      "title": "o Sentinela Rebelde",
+      "title_en": "the Rogue Sentinel"
     },
     "Ahri": {
       "id": "Ahri",
-      "title": "a Raposa de Nove Caudas"
+      "title": "a Raposa de Nove Caudas",
+      "title_en": "the Nine-Tailed Fox"
     },
     "Akali": {
       "id": "Akali",
-      "title": "a Assassina Renegada"
+      "title": "a Assassina Renegada",
+      "title_en": "the Rogue Assassin"
     },
     "Anivia": {
       "id": "Anivia",
-      "title": "a Criofênix"
+      "title": "a Criofênix",
+      "title_en": "the Cryophoenix"
     },
     "Annie": {
       "id": "Annie",
-      "title": "a Criança Sombria"
+      "title": "a Criança Sombria",
+      "title_en": "the Dark Child"
     },
     "Aurelion Sol": {
       "id": "AurelionSol",
-      "title": "o Forjador de Estrelas"
+      "title": "o Forjador de Estrelas",
+      "title_en": "The Star Forger"
     },
     "Aurora": {
       "id": "Aurora",
-      "title": "a Bruxa Entre Mundos"
+      "title": "a Bruxa Entre Mundos",
+      "title_en": "the Witch Between Worlds"
     },
     "Azir": {
       "id": "Azir",
-      "title": "o Imperador das Areias"
+      "title": "o Imperador das Areias",
+      "title_en": "the Emperor of the Sands"
     },
     "Brand": {
       "id": "Brand",
-      "title": "a Vingança Flamejante"
+      "title": "a Vingança Flamejante",
+      "title_en": "the Burning Vengeance"
     },
     "Cassiopeia": {
       "id": "Cassiopeia",
-      "title": "o Abraço da Serpente"
+      "title": "o Abraço da Serpente",
+      "title_en": "the Serpent's Embrace"
     },
     "Diana": {
       "id": "Diana",
-      "title": "o Escárnio da Lua"
+      "title": "o Escárnio da Lua",
+      "title_en": "Scorn of the Moon"
     },
     "Ekko": {
       "id": "Ekko",
-      "title": "o Rapaz que Estilhaçou o Tempo"
+      "title": "o Rapaz que Estilhaçou o Tempo",
+      "title_en": "the Boy Who Shattered Time"
     },
     "Fizz": {
       "id": "Fizz",
-      "title": "o Trapaceiro das Marés"
+      "title": "o Trapaceiro das Marés",
+      "title_en": "the Tidal Trickster"
     },
     "Galio": {
       "id": "Galio",
-      "title": "o Colosso"
+      "title": "o Colosso",
+      "title_en": "the Colossus"
     },
     "Hwei": {
       "id": "Hwei",
-      "title": "o Visionário"
+      "title": "o Visionário",
+      "title_en": "the Visionary"
     },
     "Irelia": {
       "id": "Irelia",
-      "title": "a Dançarina das Lâminas"
+      "title": "a Dançarina das Lâminas",
+      "title_en": "the Blade Dancer"
     },
     "Jayce": {
       "id": "Jayce",
-      "title": "o Defensor do Amanhã"
+      "title": "o Defensor do Amanhã",
+      "title_en": "the Defender of Tomorrow"
     },
     "Kassadin": {
       "id": "Kassadin",
-      "title": "o Andarilho do Vazio"
+      "title": "o Andarilho do Vazio",
+      "title_en": "the Void Walker"
     },
     "Katarina": {
       "id": "Katarina",
-      "title": "a Lâmina Sinistra"
+      "title": "a Lâmina Sinistra",
+      "title_en": "the Sinister Blade"
     },
     "Kayle": {
       "id": "Kayle",
-      "title": "a Justa"
+      "title": "a Justa",
+      "title_en": "the Righteous"
     },
     "Kog'Maw": {
       "id": "KogMaw",
-      "title": "a Boca do Abismo"
+      "title": "a Boca do Abismo",
+      "title_en": "the Mouth of the Abyss"
     },
     "LeBlanc": {
       "id": "Leblanc",
-      "title": "a Farsante"
+      "title": "a Farsante",
+      "title_en": "the Deceiver"
     },
     "Lissandra": {
       "id": "Lissandra",
-      "title": "a Bruxa Gélida"
+      "title": "a Bruxa Gélida",
+      "title_en": "the Ice Witch"
     },
     "Locke": {
       "id": "Locke",
-      "title": "o Exorcista das Cinzas"
+      "title": "o Exorcista das Cinzas",
+      "title_en": "the Ashen Exorcist"
     },
     "Lux": {
       "id": "Lux",
-      "title": "a Dama da Luz"
+      "title": "a Dama da Luz",
+      "title_en": "the Lady of Luminosity"
     },
     "Malzahar": {
       "id": "Malzahar",
-      "title": "o Profeta do Vazio"
+      "title": "o Profeta do Vazio",
+      "title_en": "the Prophet of the Void"
     },
     "Mel": {
       "id": "Mel",
-      "title": "o Reflexo da Alma"
+      "title": "o Reflexo da Alma",
+      "title_en": "the Soul's Reflection"
     },
     "Naafiri": {
       "id": "Naafiri",
-      "title": "Fera das Cem Mordidas"
+      "title": "Fera das Cem Mordidas",
+      "title_en": "the Hound of a Hundred Bites"
     },
     "Orianna": {
       "id": "Orianna",
-      "title": "a Donzela Mecânica"
+      "title": "a Donzela Mecânica",
+      "title_en": "the Lady of Clockwork"
     },
     "Pantheon": {
       "id": "Pantheon",
-      "title": "a Lança Indestrutível"
+      "title": "a Lança Indestrutível",
+      "title_en": "the Unbreakable Spear"
     },
     "Qiyana": {
       "id": "Qiyana",
-      "title": "a Imperatriz dos Elementos"
+      "title": "a Imperatriz dos Elementos",
+      "title_en": "Empress of the Elements"
     },
     "Ryze": {
       "id": "Ryze",
-      "title": "o Mago Rúnico"
+      "title": "o Mago Rúnico",
+      "title_en": "the Rune Mage"
     },
     "Swain": {
       "id": "Swain",
-      "title": "o Grande General Noxiano"
+      "title": "o Grande General Noxiano",
+      "title_en": "the Noxian Grand General"
     },
     "Sylas": {
       "id": "Sylas",
-      "title": "o Abjugado"
+      "title": "o Abjugado",
+      "title_en": "the Unshackled"
     },
     "Syndra": {
       "id": "Syndra",
-      "title": "a Soberana Sombria"
+      "title": "a Soberana Sombria",
+      "title_en": "the Dark Sovereign"
     },
     "Taliyah": {
       "id": "Taliyah",
-      "title": "a Tecelã de Pedras"
+      "title": "a Tecelã de Pedras",
+      "title_en": "the Stoneweaver"
     },
     "Talon": {
       "id": "Talon",
-      "title": "a Sombra da Lâmina"
+      "title": "a Sombra da Lâmina",
+      "title_en": "the Blade's Shadow"
     },
     "Twisted Fate": {
       "id": "TwistedFate",
-      "title": "o Mestre das Cartas"
+      "title": "o Mestre das Cartas",
+      "title_en": "the Card Master"
     },
     "Veigar": {
       "id": "Veigar",
-      "title": "o Pequeno Mestre do Mal"
+      "title": "o Pequeno Mestre do Mal",
+      "title_en": "the Tiny Master of Evil"
     },
     "Vel'Koz": {
       "id": "Velkoz",
-      "title": "o Olho do Vazio"
+      "title": "o Olho do Vazio",
+      "title_en": "the Eye of the Void"
     },
     "Vex": {
       "id": "Vex",
-      "title": "a Melancolista"
+      "title": "a Melancolista",
+      "title_en": "the Gloomist"
     },
     "Viktor": {
       "id": "Viktor",
-      "title": "o Arauto do Arcano"
+      "title": "o Arauto do Arcano",
+      "title_en": "the Herald of the Arcane"
     },
     "Vladimir": {
       "id": "Vladimir",
-      "title": "o Sanguinário Escarlate"
+      "title": "o Sanguinário Escarlate",
+      "title_en": "the Crimson Reaper"
     },
     "Xerath": {
       "id": "Xerath",
-      "title": "o Mago Ascendente"
+      "title": "o Mago Ascendente",
+      "title_en": "the Magus Ascendant"
     },
     "Yasuo": {
       "id": "Yasuo",
-      "title": "o Imperdoável"
+      "title": "o Imperdoável",
+      "title_en": "the Unforgiven"
     },
     "Yone": {
       "id": "Yone",
-      "title": "o Inesquecido"
+      "title": "o Inesquecido",
+      "title_en": "the Unforgotten"
     },
     "Zed": {
       "id": "Zed",
-      "title": "o Mestre das Sombras"
+      "title": "o Mestre das Sombras",
+      "title_en": "the Master of Shadows"
     },
     "Zoe": {
       "id": "Zoe",
-      "title": "o Aspecto do Crepúsculo"
+      "title": "o Aspecto do Crepúsculo",
+      "title_en": "the Aspect of Twilight"
     },
     "Malphite": {
       "id": "Malphite",
-      "title": "o Fragmento do Monolito"
+      "title": "o Fragmento do Monolito",
+      "title_en": "Shard of the Monolith"
     }
   },
   "icons": {
