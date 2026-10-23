@@ -47,7 +47,7 @@ Não é um agregador de estatísticas: é a leitura das notas de um jogador de c
 - Tudo em português do Brasil.
 - Cada guia tem a vibe do seu campeão. Akshan: Sentinelas da Luz (amarelo, branco, dourado e preto). Pedido explícito do dono em 2026-10-22, com a estrutura de seleção de campeões do arthurlanches.com.br como referência (você, anel de inimigos, inimigo, travar o pick).
 - Aviso obrigatório: site de fã, sem ligação com a Riot Games.
-- Elementos de conteúdo que permanecem: o duelo Akshan contra o adversário com as duas splash arts, a lista de campeões com ícones e a marca de "no guia", a linha Runa / Secundária / Feitiço / Bota / Build com ícones do jogo, os termos-chave destacados nos lembretes, e o "Como ler a planilha" no fim.
+- Elementos de conteúdo que permanecem: o duelo Akshan contra o adversário com as duas splash arts, a lista de campeões com ícones e a marca de "no guia", a linha Runa / Secundária / Feitiço / Bota / Build com ícones do jogo e os termos-chave destacados nos lembretes. O "Como ler a planilha" (glossário) foi removido a pedido do dono em 2026-10-22.
 
 ## Evidence on Hand
 

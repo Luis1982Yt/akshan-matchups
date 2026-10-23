@@ -272,9 +272,9 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .pips i.on { background: var(--destaque); box-shadow: none; }
 
 /* Guia */
-.notas, .dicio, .rodape { min-width: 0; }
+.notas, .rodape { min-width: 0; }
 .navega { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 6px 0 12px; }
-.navega h2, .dicio h2 { margin: 0; font: 700 23px/1.2 var(--titulo); letter-spacing: .06em; color: var(--acento-vivo); }
+.navega h2 { margin: 0; font: 700 23px/1.2 var(--titulo); letter-spacing: .06em; color: var(--acento-vivo); }
 .navega div { display: flex; gap: 8px; }
 .navega button { min-height: 44px; padding: 0 14px; display: inline-flex; align-items: center; gap: 8px; cursor: pointer; border-radius: 8px; border: 1px solid var(--linha-forte); background: var(--painel); color: var(--texto); font-weight: 600; font-size: 15px; }
 .navega button:hover { border-color: var(--acento-vivo); }
@@ -295,15 +295,6 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .cds th, .cds td { padding: 9px 12px 9px 0; border-bottom: 1px solid var(--linha); text-align: left; vertical-align: top; }
 .cds th { font-weight: 700; color: var(--texto); white-space: nowrap; }
 .cds td { color: var(--texto-baixo); font-variant-numeric: tabular-nums; }
-.dicio { margin-top: 8px; padding: 4px 20px; border-radius: 12px; background: var(--painel); border: 1px solid var(--linha); }
-.dicio summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 52px; cursor: pointer; list-style: none; }
-.dicio summary::-webkit-details-marker { display: none; }
-.dicio summary h2 { font-size: 18px; }
-.dicio summary::after { content: ""; flex: none; width: 9px; height: 9px; margin-top: -5px; border-right: 2px solid var(--acento); border-bottom: 2px solid var(--acento); transform: rotate(45deg); }
-.dicio[open] summary::after { margin-top: 4px; transform: rotate(-135deg); }
-.dicio dl { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px 28px; margin: 6px 0 18px; }
-.dicio dt { font: 700 17px var(--titulo); letter-spacing: .04em; color: var(--texto); }
-.dicio dd { margin: 4px 0 0; font-size: 15px; color: var(--texto-baixo); }
 .rodape { display: block; margin-top: 16px; font-size: 14px; color: var(--texto-baixo); }
 .rodape p { margin: 0; }
 
@@ -360,7 +351,6 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   .setup-completo { grid-template-columns: minmax(0, 1fr); }
   .navega h2 { font-size: 20px; }
   .lembretes li { font-size: 16px; grid-template-columns: 38px minmax(0, 1fr); padding: 12px 14px; }
-  .dicio { padding: 2px 14px; }
   .secao p, .secoes li { font-size: 16.5px; }
 }
 @media (max-width: 520px) {
@@ -453,21 +443,6 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
         <div id="linhas"></div>
       </section>
 
-      <details class="dicio" data-so-guia="akshan">
-        <summary><h2 id="dt">Como ler a planilha</h2></summary>
-        <dl>
-          <div><dt>Arpel</dt><dd>O E do Akshan, a corda que gira em volta da parede. Fuga, engage e mindgame.</dd></div>
-          <div><dt>Bumerangue</dt><dd>O Q. Acertar alguém com ele ajuda a ganhar o escudo da passiva.</dd></div>
-          <div><dt>PTA e Electro</dt><dd>Pressione o Ataque e Eletrocutar, as duas runas principais da planilha.</dd></div>
-          <div><dt>Osso</dt><dd>Osso Revestido, runa de Determinação para lanes de muito burst.</dd></div>
-          <div><dt>Craquen</dt><dd>Mata-Cráquens, a build que troca de lugar com o crit.</dd></div>
-          <div><dt>Press</dt><dd>Prioridade de lane: quem empurra a wave e chega antes no rio.</dd></div>
-          <div><dt>Skirmish</dt><dd>Luta pequena, 2v2 ou 3v3, normalmente no rio.</dd></div>
-          <div><dt>Stat check</dt><dd>Quando o outro ganha a troca só por ter mais item ou nível.</dd></div>
-          <div><dt>Outscale</dt><dd>Ficar mais forte que você no fim do jogo.</dd></div>
-          <div><dt>100 0</dt><dd>Matar de vida cheia num combo só.</dd></div>
-        </dl>
-      </details>
       <footer class="rodape" id="rodape"></footer>
     </div>
   </div>
@@ -573,7 +548,6 @@ function renderGuia() {
   $("vocTitulo").textContent = eu.titulo;
   $("filtros").innerHTML = filtros.map(f => `<button class="chip" type="button" data-f="${f.id}" aria-pressed="false">${f.icone ? `<img src="${f.icone}" alt="" width="20" height="20">` : ""}${esc(f.rotulo)}</button>`).join("");
   $("nt").textContent = guia.formato === "simples" ? "Lembrete" : "Como jogar";
-  document.querySelectorAll("[data-so-guia]").forEach(el => { el.hidden = el.dataset.soGuia !== guia.id; });
   const links = guia.links.map(l => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.rotulo)}</a>`).join(" · ");
   $("rodape").innerHTML = `<p>${esc(guia.fonte)}${links ? " " + links + "." : ""} Imagens de campeões, runas e itens da Riot Games. Site de fã, sem ligação com a Riot.</p>`;
 }
