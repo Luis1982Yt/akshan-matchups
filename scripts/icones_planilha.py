@@ -13,9 +13,10 @@ import zipfile
 
 # Coluna da planilha (0 = A) -> campo do site.
 CAMPOS = {1: "runa", 2: "sec", 4: "bota", 5: "build"}
-# Cor da célula do campeão -> dificuldade (o Peteruso confirmou o significado de cada cor).
+# Cor da célula do campeão -> dificuldade, como o Peteruso classifica: vermelho escuro muito difícil,
+# vermelho claro difícil, amarelo médio, verde fácil, ciano muito fácil.
 # Fica a cor mais parecida, para um tom um pouco diferente não quebrar a leitura.
-DIFICULDADE = {"34A853": "facil", "FBBC04": "medio", "E06666": "dificil", "980000": "muito_dificil", "00FFFF": "free"}
+DIFICULDADE = {"34A853": "facil", "FBBC04": "medio", "E06666": "dificil", "980000": "muito_dificil", "00FFFF": "muito_facil"}
 
 
 def _cores(z):

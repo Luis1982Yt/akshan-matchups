@@ -291,7 +291,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .pick img { width: 100%; height: 100%; border-radius: 5px; object-fit: cover; }
 .pick:has(img.falhou)::after { content: attr(data-ini); position: absolute; inset: 0; display: grid; place-items: center; font: 700 20px var(--titulo); color: var(--texto-baixo); }
 /* Dificuldade da matchup = a cor da célula do campeão na planilha do Peteruso. */
-:root { --dif-free: #22d3ee; --dif-facil: #34a853; --dif-medio: #fbbc04; --dif-dificil: #e06666; --dif-muito_dificil: #c0281c; }
+:root { --dif-muito_facil: #22d3ee; --dif-facil: #34a853; --dif-medio: #fbbc04; --dif-dificil: #e06666; --dif-muito_dificil: #c0281c; }
 .pick.tem-dif { border: 2px solid var(--dif); }
 .pick .nivel { position: absolute; z-index: 1; right: 2px; bottom: 2px; min-width: 17px; height: 17px; padding: 0 4px; border-radius: 4px; background: rgba(5, 8, 6, .82); color: #f2f6f3; font: 700 11px/17px var(--corpo); text-align: center; }
 .pick:hover { border-color: var(--acento-vivo); }
@@ -622,7 +622,7 @@ const TXT = {
     vazio: "Nenhum campeão com essa busca.", limpar: "Limpar busca e filtros", voce: "Você", inimigo: "Inimigo", duelo: "Duelo",
     travarTit: "Travar o pick", travarContra: "Travar o pick contra ", setup: "Seu setup pro confronto",
     lembrete: "Lembrete", comoJogar: "Como jogar", contra: " contra ", arteDe: "Arte de ",
-    difFree: "Free lane", difFacil: "Fácil", difMedio: "Médio", difDificil: "Difícil", difMuito_dificil: "Muito difícil", dificuldade: "Dificuldade",
+    difMuito_facil: "Muito fácil", difFacil: "Fácil", difMedio: "Médio", difDificil: "Difícil", difMuito_dificil: "Muito difícil", dificuldade: "Dificuldade",
     runa: "Runa", secundaria: "Secundária", feitico: "Feitiço", bota: "Bota", build: "Build", semAnot: "Sem anotação", tantoFaz: "Tanto faz",
     anterior: "Anterior: ", proximo: "Próximo: ",
     legDif: "número = dificuldade (1 fácil, 5 difícil)", legBusca: "busca", legTroca: "troca de matchup",
@@ -644,7 +644,7 @@ const TXT = {
     vazio: "No champion matches this search.", limpar: "Clear search and filters", voce: "You", inimigo: "Enemy", duelo: "Matchup",
     travarTit: "Lock in", travarContra: "Lock in vs ", setup: "Your setup for this matchup",
     lembrete: "Notes", comoJogar: "How to play", contra: " vs ", arteDe: "Art of ",
-    difFree: "Free lane", difFacil: "Easy", difMedio: "Medium", difDificil: "Hard", difMuito_dificil: "Very hard", dificuldade: "Difficulty",
+    difMuito_facil: "Very easy", difFacil: "Easy", difMedio: "Medium", difDificil: "Hard", difMuito_dificil: "Very hard", dificuldade: "Difficulty",
     runa: "Rune", secundaria: "Secondary", feitico: "Spell", bota: "Boots", build: "Build", semAnot: "No note", tantoFaz: "Any",
     anterior: "Previous: ", proximo: "Next: ",
     legDif: "number = difficulty (1 easy, 5 hard)", legBusca: "search", legTroca: "change matchup",
@@ -715,8 +715,8 @@ function textoDe(m) {
   return partes.join(" ");
 }
 
-// Dificuldade (cor da célula do campeão na planilha), da mais tranquila para a pior.
-const DIFS = ["free", "facil", "medio", "dificil", "muito_dificil"];
+// Dificuldade (cor da célula do campeão na planilha), na ordem do Peteruso: da pior para a mais tranquila.
+const DIFS = ["muito_dificil", "dificil", "medio", "facil", "muito_facil"];
 const rotuloDif = d => t("dif" + d.charAt(0).toUpperCase() + d.slice(1));
 // Filtros: dentro do mesmo grupo vale qualquer um; entre grupos, todos.
 const FILTROS = {
