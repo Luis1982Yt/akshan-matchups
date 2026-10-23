@@ -18,21 +18,14 @@ SAIDA.mkdir(parents=True, exist_ok=True)
 
 # chave curta no site -> evento do jogo
 SFX = {
-    "dance_cast": "Dance3D_cast", "dance": "Dance3D_buffactivate", "joke": "Joke3D_buffactivate",
+    "dance_cast": "Dance3D_cast", "dance": "Dance3D_buffactivate",
     "taunt_cast": "Taunt3D_cast", "taunt": "Taunt3D_buffactivate", "laugh": "Laugh3D_buffactivate",
     "recall": "Recall3D_buffactivate",
     "aa1": "AkshanBasicAttack_OnMissileCast", "aa2": "AkshanBasicAttack2_OnMissileCast", "crit": "AkshanCritAttack_OnMissileCast",
-    "q": "AkshanQ_OnCast", "q_voo": "AkshanQ_missilelaunch", "q_pega": "AkshanQ_catch",
-    "w": "AkshanW_OnCast", "w_some": "AkshanWStealth_buffactivate", "w_volta": "AkshanWStealth_buffdeactivate",
-    "e": "AkshanE_OnCast", "e_balanco": "AkshanE_swinging_buffactivate", "e_tiro": "AkshanEAttack_OnMissileCast", "e_idle": "AkshanE_idle",
-    "r": "AkshanR_OnCast", "r_mira": "AkshanRReticle_buffactivate", "r_bala": "AkshanRAmmo_cast",
-    "r_tiro": "AkshanRMissile_OnMissileLaunch", "r_fim": "AkshanR_OnBuffDeactivate",
 }
 VO = {
-    "vo_joke": "Joke3DGeneral", "vo_taunt": "Taunt3DGeneral", "vo_laugh": "Laugh3DGeneral", "vo_recall": "Recall3DGeneral",
+    "vo_taunt": "Taunt3DGeneral", "vo_laugh": "Laugh3DGeneral", "vo_recall": "Recall3DGeneral",
     "vo_aa1": "AkshanBasicAttack_cast3D", "vo_aa2": "AkshanBasicAttack2_cast3D", "vo_crit": "AkshanCritAttack_cast3D",
-    "vo_q": "AkshanQ_cast3D", "vo_w": "AkshanW_cast3D", "vo_w_fim": "Spell3DWEnd", "vo_e": "AkshanE2_cast3D",
-    "vo_r": "AkshanR_cast3D", "vo_r_tiro": "AkshanRMissile_cast3D",
 }
 
 ev_sfx, _ = hirc((PASTA / "akshan_base_sfx_events.bnk").read_bytes())
