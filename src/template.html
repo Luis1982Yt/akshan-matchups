@@ -317,7 +317,6 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .tier-corpo { display: grid; gap: 10px; padding: 16px 20px 20px; }
 .tier-linha { display: grid; grid-template-columns: 150px minmax(0, 1fr); border-radius: 10px; overflow: hidden; border: 1px solid var(--linha); background: var(--painel); }
 .tier-rot { display: flex; align-items: center; justify-content: center; padding: 10px; text-align: center; font: 800 15px var(--titulo); letter-spacing: .06em; text-transform: uppercase; color: #111; background: var(--dif); }
-.tier-rot small { display: block; font: 600 12px var(--corpo); letter-spacing: 0; text-transform: none; opacity: .75; }
 .tier-campeoes { display: flex; flex-wrap: wrap; gap: 8px; padding: 10px; }
 .tier-campeoes button { display: grid; justify-items: center; gap: 4px; width: 64px; padding: 0; border: 0; background: none; color: var(--texto); font: 600 11px/1.2 var(--corpo); cursor: pointer; }
 .tier-campeoes img { width: 52px; height: 52px; border-radius: 6px; border: 2px solid var(--dif); background: var(--painel-alto); }
@@ -327,7 +326,6 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   .tier { width: 100vw; max-width: none; height: 100dvh; max-height: none; margin: 0; border-radius: 0; border: 0; }
   .tier-linha { grid-template-columns: minmax(0, 1fr); }
   .tier-rot { justify-content: flex-start; gap: 8px; padding: 8px 12px; }
-  .tier-rot small { display: inline; margin-left: 8px; }
   .tier-campeoes { gap: 6px; }
 }
 .legenda { margin: 10px 0 0; text-align: center; font-size: 13px; color: var(--texto-baixo); }
@@ -675,7 +673,7 @@ const TXT = {
     linguaRotulo: "Switch to English", linguaBotao: "EN",
     guiaAtual: "Guia atual: ", trocarGuia: ". Trocar de guia", notasDo: "notas do ", matchups: " matchups", aberto: "Aberto",
     facil: "Fácil", medio: "Médio", dificil: "Difícil", resumo: "Resumo", runas: "Runas", itens: "Itens", geral: "Geral",
-    principal: "Principal", fragmentos: "Fragmentos", emote: "Arraste para girar · clique para uma emote", mostra3d: "Mostrar o Akshan 3D", esconde3d: "Esconder o Akshan 3D", carrega3d: "Carregando o Akshan…", tierBotao: "Tier list das matchups", tierTit: "Tier list · {c}", fechar: "Fechar", aoVivo: "Ao vivo", campeoesN: n => `${n} ${n === 1 ? "campeão" : "campeões"}`, acompanhe: "Acompanhe mono {c}s", assistir: "Assistir", devPor: "Site feito por", animacoes: "Animações do Akshan",
+    principal: "Principal", fragmentos: "Fragmentos", emote: "Arraste para girar · clique para uma emote", mostra3d: "Mostrar o Akshan 3D", esconde3d: "Esconder o Akshan 3D", carrega3d: "Carregando o Akshan…", tierBotao: "Tier list das matchups", tierTit: "Tier list · {c}", fechar: "Fechar", aoVivo: "Ao vivo", acompanhe: "Acompanhe mono {c}s", assistir: "Assistir", devPor: "Site feito por", animacoes: "Animações do Akshan",
     a_dance: "Dança", a_taunt: "Provocação", a_laugh: "Risada", a_attack: "Ataque", a_recall: "Recall",
   },
   en: {
@@ -697,7 +695,7 @@ const TXT = {
     linguaRotulo: "Mudar para português", linguaBotao: "PT",
     guiaAtual: "Current guide: ", trocarGuia: ". Change guide", notasDo: "notes by ", matchups: " matchups", aberto: "Open",
     facil: "Easy", medio: "Medium", dificil: "Hard", resumo: "Summary", runas: "Runes", itens: "Items", geral: "Overall",
-    principal: "Primary", fragmentos: "Shards", emote: "Drag to rotate · click for an emote", mostra3d: "Show 3D Akshan", esconde3d: "Hide 3D Akshan", carrega3d: "Loading Akshan…", tierBotao: "Matchup tier list", tierTit: "Tier list · {c}", fechar: "Close", aoVivo: "Live", campeoesN: n => `${n} champion${n === 1 ? "" : "s"}`, acompanhe: "Watch {c} one-tricks", assistir: "Watch", devPor: "Site by", animacoes: "Akshan animations",
+    principal: "Primary", fragmentos: "Shards", emote: "Drag to rotate · click for an emote", mostra3d: "Show 3D Akshan", esconde3d: "Hide 3D Akshan", carrega3d: "Loading Akshan…", tierBotao: "Matchup tier list", tierTit: "Tier list · {c}", fechar: "Close", aoVivo: "Live", acompanhe: "Watch {c} one-tricks", assistir: "Watch", devPor: "Site by", animacoes: "Akshan animations",
     a_dance: "Dance", a_taunt: "Taunt", a_laugh: "Laugh", a_attack: "Attack", a_recall: "Recall",
   },
 };
@@ -1344,7 +1342,7 @@ function abreTier() {
     const cs = guia.lista.filter(c => c.dif === d).sort((a, b) => a.nome.localeCompare(b.nome));
     if (!cs.length) return "";
     return `<section class="tier-linha" style="--dif: var(--dif-${d})" aria-label="${esc(rotuloDif(d))}">
-      <div class="tier-rot"><div>${esc(rotuloDif(d))}<small>${t("campeoesN", cs.length)}</small></div></div>
+      <div class="tier-rot">${esc(rotuloDif(d))}</div>
       <div class="tier-campeoes">${cs.map(c => `<button type="button" data-id="${c.slug}" title="${esc(c.nome)}"><img src="${sq(c.id)}" alt="" width="52" height="52"><span>${esc(c.nome)}</span></button>`).join("")}</div>
     </section>`;
   }).join("");
