@@ -461,5 +461,239 @@
     "Letalidade": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3179.png",
     "Scaling": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/7202_Sorcery.png",
     "Terminus": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3302.png"
+  },
+  "pecas": {
+    "3008": {
+      "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3008.png",
+      "nome": "Grevas Vorazes",
+      "nome_en": "Gluttonous Greaves"
+    },
+    "3009": {
+      "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3009.png",
+      "nome": "Botas da Rapidez",
+      "nome_en": "Boots of Swiftness"
+    },
+    "3031": {
+      "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3031.png",
+      "nome": "Gume do Infinito",
+      "nome_en": "Infinity Edge"
+    },
+    "3033": {
+      "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3033.png",
+      "nome": "Lembrete Mortal",
+      "nome_en": "Mortal Reminder"
+    },
+    "3047": {
+      "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3047.png",
+      "nome": "Botas Galvanizadas de Aço",
+      "nome_en": "Plated Steelcaps"
+    },
+    "3095": {
+      "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3095.png",
+      "nome": "Chuva de Canivete",
+      "nome_en": "Stormrazor"
+    },
+    "3111": {
+      "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3111.png",
+      "nome": "Passos de Mercúrio",
+      "nome_en": "Mercury's Treads"
+    },
+    "3173": {
+      "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3173.png",
+      "nome": "Esmagadores Acorrentados",
+      "nome_en": "Chainlaced Crushers"
+    },
+    "3174": {
+      "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3174.png",
+      "nome": "Mobilização Blindada",
+      "nome_en": "Armored Advance"
+    },
+    "3179": {
+      "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3179.png",
+      "nome": "Glaive Sombria",
+      "nome_en": "Umbral Glaive"
+    },
+    "3302": {
+      "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3302.png",
+      "nome": "Terminus",
+      "nome_en": "Terminus"
+    },
+    "6672": {
+      "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/6672.png",
+      "nome": "Mata-Cráquens",
+      "nome_en": "Kraken Slayer"
+    },
+    "6673": {
+      "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/6673.png",
+      "nome": "Arco-escudo Imortal",
+      "nome_en": "Immortal Shieldbow"
+    },
+    "6676": {
+      "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/6676.png",
+      "nome": "A Coletora",
+      "nome_en": "The Collector"
+    },
+    "AbsoluteFocus": {
+      "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/AbsoluteFocus/AbsoluteFocus.png",
+      "runa": true,
+      "nome": "Foco Absoluto",
+      "nome_en": "Absolute Focus"
+    },
+    "BonePlating": {
+      "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/BonePlating/BonePlating.png",
+      "runa": true,
+      "nome": "Osso Revestido",
+      "nome_en": "Bone Plating"
+    },
+    "CashBack": {
+      "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/CashBack/CashBack2.png",
+      "runa": true,
+      "nome": "Reembolso",
+      "nome_en": "Cash Back"
+    },
+    "CutDown": {
+      "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/CutDown/CutDown.png",
+      "runa": true,
+      "nome": "Dilacerar",
+      "nome_en": "Cut Down"
+    },
+    "Electrocute": {
+      "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/Electrocute/Electrocute.png",
+      "runa": true,
+      "nome": "Eletrocutar",
+      "nome_en": "Electrocute"
+    },
+    "GatheringStorm": {
+      "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/GatheringStorm/GatheringStorm.png",
+      "runa": true,
+      "nome": "Tempestade Crescente",
+      "nome_en": "Gathering Storm"
+    },
+    "PerfectTiming": {
+      "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/PerfectTiming/AlchemistCabinet.png",
+      "runa": true,
+      "nome": "Tônico Triplo",
+      "nome_en": "Triple Tonic"
+    },
+    "PresenceOfMind": {
+      "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png",
+      "runa": true,
+      "nome": "Presença de Espírito",
+      "nome_en": "Presence of Mind"
+    },
+    "PressTheAttack": {
+      "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+      "runa": true,
+      "nome": "Pressione o Ataque",
+      "nome_en": "Press the Attack"
+    },
+    "ShieldBash": {
+      "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/MirrorShell/MirrorShell.png",
+      "runa": true,
+      "nome": "Golpe de Escudo",
+      "nome_en": "Shield Bash"
+    },
+    "SuddenImpact": {
+      "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/SuddenImpact/SuddenImpact.png",
+      "runa": true,
+      "nome": "Impacto Repentino",
+      "nome_en": "Sudden Impact"
+    },
+    "TreasureHunter": {
+      "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/TreasureHunter/TreasureHunter.png",
+      "runa": true,
+      "nome": "Caçador de Tesouros",
+      "nome_en": "Treasure Hunter"
+    },
+    "Unflinching": {
+      "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/Unflinching/Unflinching.png",
+      "runa": true,
+      "nome": "Inabalável",
+      "nome_en": "Unflinching"
+    }
+  },
+  "texto_pecas": {
+    "pta": [
+      "PressTheAttack"
+    ],
+    "electro": [
+      "Electrocute"
+    ],
+    "impacto repentino": [
+      "SuddenImpact",
+      "TreasureHunter"
+    ],
+    "osso revestido": [
+      "BonePlating",
+      "ShieldBash"
+    ],
+    "inspiração": [
+      "CashBack",
+      "PerfectTiming"
+    ],
+    "precisão": [
+      "PresenceOfMind",
+      "CutDown"
+    ],
+    "scaling": [
+      "AbsoluteFocus",
+      "GatheringStorm"
+    ],
+    "mercs": [
+      "3111"
+    ],
+    "tabi": [
+      "3047"
+    ],
+    "tabis": [
+      "3047"
+    ],
+    "rapidez": [
+      "3009"
+    ],
+    "vamps": [
+      "3008"
+    ],
+    "craquen": [
+      "6672"
+    ],
+    "crit": [
+      "6676",
+      "3031"
+    ],
+    "letalidade": [
+      "3179"
+    ],
+    "terminus": [
+      "3302"
+    ]
+  },
+  "imagens": {
+    "d358fd8b8c5a14695cd4bbbc8db06736": "3008",
+    "3a2d555fbb857b0c48d2f4a33444cf41": "3111",
+    "cd2b302ea63650ec2919cc8decc64c6e": "3047",
+    "2d1f73ae5feea3edb7fb07c1c7da9eab": "SuddenImpact",
+    "e32bdae25215b7ea67b3e0cadfe8094c": "BonePlating",
+    "1a2325e73db2fecc1d688a26249684e1": "ShieldBash",
+    "1f11eb57cd4c3f96093ddef2a36d404a": "PressTheAttack",
+    "c4e897f448747eeed313f571935d835e": "3173",
+    "6f3742b8e2a17a00dcd8b347d57eff51": "CashBack",
+    "224fb4aecd15780a58ca11e321bdec8e": "PresenceOfMind",
+    "28e4e001392040729cbd48f2a2a98257": "3174",
+    "868f5571c5f1604fcbd559a0447be84c": "PerfectTiming",
+    "8eb8f81b32ffc35dbf4337cf31c930cf": "TreasureHunter",
+    "5b4a61aba84e05260e43f81e7b794936": "CutDown",
+    "284944bc9167bd2e6608e21dff162e1d": "GatheringStorm",
+    "c10417ba84d0e3dd60303c0a936d48ae": "6673",
+    "2b7cbd4f03a2119e6205e7db37107a7c": "Unflinching",
+    "a375324ddd3e45d241dee585bb411a48": "AbsoluteFocus",
+    "334e5400d5d72b8dda1a77f85b301251": "Electrocute",
+    "e874ad5c162fd1261fdd9f984aaa374a": "3095",
+    "8bfd0e8a67030b8aa2a584ca9d9d7bf6": "6676",
+    "9bc420775fb513af2393e245403e419f": "3033",
+    "f388cdb570445eac7169d3a0a781b26e": "3179",
+    "26fac1a3e008e5d310a43019bd5896e2": "3031",
+    "c74ef59fcaaf0658b4cb65663f110fda": "6672",
+    "26af74366540757f4c01ea5baf085b47": "3009"
   }
 }

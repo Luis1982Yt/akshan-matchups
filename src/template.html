@@ -265,7 +265,15 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .soquete { width: 36px; height: 36px; flex: none; display: grid; place-items: center; border-radius: 6px; border: 1px solid var(--linha-forte); background: var(--painel-alto); }
 .peca .soquete { width: 32px; height: 32px; }
 .soquete::before { content: ""; width: 12px; height: 2px; border-radius: 1px; background: var(--acento); opacity: .7; }
-.opt .rush { font: 700 11px/1 var(--titulo); letter-spacing: .1em; text-transform: uppercase; padding: 4px 7px; border-radius: 4px; background: var(--destaque); color: var(--tinta-botao); }
+.celula { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; min-width: 0; font-weight: 700; font-size: 16px; line-height: 1.2; color: var(--texto); }
+.celula .icones { display: flex; gap: 6px; flex: none; }
+.celula img { width: 36px; height: 36px; border-radius: 6px; border: 1px solid var(--linha-forte); background: var(--painel-alto); }
+.celula img.runa { border-radius: 50%; background: #15130f; }
+.celula > span { min-width: 0; overflow-wrap: anywhere; }
+.celula .livre { font-weight: 400; }
+/* Desktop: ícones em cima e o texto da célula embaixo, como na planilha. */
+.slot .celula, .slot .opt { flex-direction: column; align-items: flex-start; gap: 8px; }
+.celula .rush, .opt .rush { font: 700 11px/1 var(--titulo); letter-spacing: .1em; text-transform: uppercase; padding: 4px 7px; border-radius: 4px; background: var(--destaque); color: var(--tinta-botao); }
 .livre { display: flex; align-items: center; min-height: 36px; font-style: italic; color: var(--texto-baixo); }
 /* Setup completo: runas, itens com condições e dificuldade */
 .setup-completo { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); grid-template-rows: auto 1fr; gap: 20px 32px; align-items: start; }
@@ -382,7 +390,9 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   .slot dt { margin: 0; }
   .slot dd { display: flex; flex-wrap: wrap; gap: 8px 14px; }
   .opt { font-size: 15px; }
-  .opt img, .opt .soquete { width: 32px; height: 32px; }
+  .opt img, .opt .soquete, .celula img { width: 32px; height: 32px; }
+  .celula { font-size: 15px; }
+  .slot .celula, .slot .opt { flex-direction: row; align-items: center; gap: 8px 12px; }
   .setup { padding: 16px; }
   .setup-completo { grid-template-columns: minmax(0, 1fr); }
   .navega h2 { font-size: 20px; }
@@ -850,16 +860,7 @@ const miraDe = id => { const c = guia.champs && Object.values(guia.champs).find(
 new ResizeObserver(() => enquadraTudo()).observe($("artEle").parentElement);
 
 /* ---------- Formato simples (planilha do Akshan) ---------- */
-const ICON = [
-  [/^pta$/i, "PTA", "runa"], [/^electro$/i, "Electro", "runa"],
-  [/^impacto repentino$/i, "Impacto repentino", "runa"], [/^osso revestido$/i, "Osso revestido", "runa"],
-  [/^inspira/i, "Inspiração", "runa"], [/^precis/i, "Precisão", "runa"],
-  [/^ignite$/i, "Ignite"], [/^tp$/i, "TP"], [/^exhaust$/i, "Exhaust"],
-  [/^mercs/i, "Mercs"], [/^tabis?/i, "Tabis"], [/^rapidez$/i, "Rapidez"], [/^craquen$/i, "Craquen"],
-  [/^vamps$/i, "Vamps", "", "Grevas Vorazes", "Gluttonous Greaves"], [/^crit$/i, "Crit", "", "A Coletora", "The Collector"],
-  [/^letalidade$/i, "Letalidade", "", "Glaive Sombria", "Umbral Glaive"], [/^scaling$/i, "Scaling", "runa", "Feitiçaria", "Sorcery"],
-  [/^terminus$/i, "Terminus"],
-];
+const ICON = [[/^ignite$/i, "Ignite"], [/^tp$/i, "TP"], [/^exhaust$/i, "Exhaust"]];
 function opt(raw) {
   const rush = /rush/i.test(raw);
   const word = raw.replace(/rush/i, "").replace(/!+/g, "").trim();
@@ -869,11 +870,35 @@ function opt(raw) {
   const icon = hit ? `<img src="${guia.icones[hit[1]]}" alt="" width="36" height="36">` : '<span class="soquete" aria-hidden="true"></span>';
   return `<div class="opt${hit && hit[2] ? " " + hit[2] : ""}"${hit && hit[3] ? ` title="${esc((L === "en" && hit[4]) || hit[3])}"` : ""}>${icon}<span>${esc(label)}</span>${rush ? '<span class="rush">rush</span>' : ""}</div>`;
 }
-function slot(label, val) {
+// Ícones da célula como estão na planilha (icones_planilha.json). Se o texto mudou depois da
+// última leitura das imagens, ou a célula não tem imagem, usa as peças de cada palavra.
+function pecasDe(c, campo, val) {
+  const p = guia.icones_planilha && guia.icones_planilha[c.nome] && guia.icones_planilha[c.nome][campo];
+  if (p && p.texto === val && p.pecas.length) return p.pecas;
+  const chaves = val.replace(/rush/i, "").replace(/!+/g, "").split(/\s*[\/,]\s*/)
+    .flatMap(w => (guia.texto_pecas || {})[w.trim().toLowerCase()] || []);
+  return [...new Set(chaves)];
+}
+function celula(c, campo, val) {
+  const rush = /rush/i.test(val);
+  let texto = /^tanto faz$/i.test(val) ? `<span class="livre">${t("tantoFaz")}</span>` : "";
+  if (!texto) {
+    const limpo = val.replace(/rush/i, "").replace(/!+/g, "").trim();
+    const partes = limpo.split(/\s*\/\s*/).map(w => (rush ? w.charAt(0) + w.slice(1).toLowerCase() : w))
+      .map(w => (L === "en" && guia.traducao && guia.traducao.celulas[w]) || w);
+    texto = `<span>${esc(partes.join(" / "))}</span>${rush ? '<span class="rush">rush</span>' : ""}`;
+  }
+  const icones = pecasDe(c, campo, val).map(k => guia.pecas[k]).filter(Boolean).map(p => {
+    const nome = esc((L === "en" && p.nome_en) || p.nome);
+    return `<img src="${p.icone}" alt="${nome}" title="${nome}" width="36" height="36"${p.runa ? ' class="runa"' : ""}>`;
+  }).join("");
+  return `<div class="celula">${icones ? `<span class="icones">${icones}</span>` : ""}${texto}</div>`;
+}
+function slot(label, val, c, campo) {
   let body;
   if (!val) body = `<span class="livre">${t("semAnot")}</span>`;
+  else if (campo) body = celula(c, campo, val);
   else if (/^tanto faz$/i.test(val)) body = `<span class="livre">${t("tantoFaz")}</span>`;
-  else if (/,/.test(val)) body = opt(val);
   else body = val.split(/\s*\/\s*/).map(opt).join("");
   return `<div class="slot"><dt>${label}</dt><dd>${body}</dd></div>`;
 }
@@ -951,7 +976,7 @@ function renderDetalhe(animar) {
   }
   $("travarNome").textContent = t("travarContra") + c.nome;
   if (guia.formato === "simples") {
-    $("carga").innerHTML = `<dl class="carga">${slot(t("runa"), c.runa) + slot(t("secundaria"), c.sec) + slot(t("feitico"), c.spell) + slot(t("bota"), c.bota) + slot(t("build"), c.build)}</dl>`;
+    $("carga").innerHTML = `<dl class="carga">${slot(t("runa"), c.runa, c, "runa") + slot(t("secundaria"), c.sec, c, "sec") + slot(t("feitico"), c.spell) + slot(t("bota"), c.bota, c, "bota") + slot(t("build"), c.build, c, "build")}</dl>`;
     $("linhas").innerHTML = `<ol class="lembretes"${L === "en" ? ' lang="en"' : ""}>${c.linhas.map(l => `<li><span>${linhaNaLingua(l)}</span></li>`).join("")}</ol>`;
   } else {
     $("carga").innerHTML = setupCompleto(c);

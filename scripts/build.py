@@ -33,8 +33,11 @@ def guia_simples(cfg, pasta):
     meta = json.loads((pasta / "meta.json").read_text(encoding="utf-8"))
     eu = meta["champs"][cfg["campeao"]]
     traducao = pasta / "traducao_en.json"
+    planilha = pasta / "icones_planilha.json"
     return {"campeao": {"id": eu["id"], "nome": cfg["campeao"], "titulo": eu["title"], "titulo_en": eu.get("title_en", "")},
             "champs": meta["champs"], "icones": meta["icons"], "matchups": rows,
+            "pecas": meta.get("pecas", {}), "texto_pecas": meta.get("texto_pecas", {}),
+            "icones_planilha": json.loads(planilha.read_text(encoding="utf-8")) if planilha.exists() else {},
             "traducao": json.loads(traducao.read_text(encoding="utf-8")) if traducao.exists() else None}
 
 

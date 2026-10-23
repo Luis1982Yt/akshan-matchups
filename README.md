@@ -24,7 +24,8 @@ Guias atuais:
 - `src/template.html`: HTML, CSS e JS do site. É aqui que se edita. Os marcadores `/*FONTS*/` e `/*GUIAS*/` recebem as fontes e os dados.
 - `src/guias.json`: a lista de guias (ordem do menu, autor, créditos, formato e pasta dos dados).
 - `src/guias/akshan/`: `rows.js` no formato `[campeão, runa, secundária, feitiço, bota, build, lembrete, noGuia(1/0)]`, `meta.json` com ids, títulos (pt e en), ícones e `mira` (ponto do splash, em % de largura e altura, onde fica o centro da mira do card; escolhido à mão para pegar rosto + corpo. Campeão novo sem `mira` usa 50, 38), e `traducao_en.json`.
-- `scripts/atualizar_akshan.py`: baixa a planilha do Peteruso para a cópia embutida (a que aparece sem internet), acrescenta campeões novos e lista linhas sem tradução. Depois rode o build.
+- `scripts/atualizar_akshan.py`: baixa a planilha do Peteruso para a cópia embutida (a que aparece sem internet), lê os ícones de cada célula, acrescenta campeões novos e lista linhas sem tradução. Depois rode o build.
+- `scripts/icones_planilha.py` e `src/guias/akshan/icones_planilha.json`: os ícones de runa, secundária, bota e build saem das imagens coladas na planilha (só vêm no xlsx; o CSV traz só o texto). Cada imagem é reconhecida pelo md5 em `meta.json > imagens` e vira uma peça de `meta.json > pecas` (nome em pt e en). Se o Peteruso mudar o texto de uma célula, o site usa `texto_pecas` até a próxima leitura; imagem nova aparece na saída do script para cadastrar.
 - `src/guias/mordekaiser/`: `planilha.csv` (cópia da planilha) e `matchups.json` (a planilha separada em runas, itens, dificuldade e seções).
 - `src/fonts/`: Cinzel e Hanken Grotesk (subconjunto latino), embutidas no HTML pelo build.
 - `scripts/build.py`: gera o `index.html`. Rode `python scripts/build.py` depois de qualquer mudança.

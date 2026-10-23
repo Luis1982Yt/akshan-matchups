@@ -1,0 +1,1286 @@
+{
+ "Ahri": {
+  "runa": {
+   "texto": "PTA",
+   "pecas": [
+    "PressTheAttack"
+   ]
+  },
+  "sec": {
+   "texto": "Impacto repentino",
+   "pecas": [
+    "SuddenImpact",
+    "TreasureHunter"
+   ]
+  },
+  "bota": {
+   "texto": "Mercs / Vamps",
+   "pecas": [
+    "3111",
+    "3008"
+   ]
+  },
+  "build": {
+   "texto": "Crit",
+   "pecas": [
+    "6676",
+    "3031"
+   ]
+  }
+ },
+ "Akali": {
+  "runa": {
+   "texto": "PTA / Electro",
+   "pecas": [
+    "PressTheAttack"
+   ]
+  },
+  "sec": {
+   "texto": "Scaling",
+   "pecas": [
+    "AbsoluteFocus",
+    "GatheringStorm"
+   ]
+  },
+  "bota": {
+   "texto": "Mercs",
+   "pecas": [
+    "3111"
+   ]
+  },
+  "build": {
+   "texto": "Crit",
+   "pecas": [
+    "6676",
+    "3031"
+   ]
+  }
+ },
+ "Anivia": {
+  "runa": {
+   "texto": "PTA",
+   "pecas": [
+    "PressTheAttack"
+   ]
+  },
+  "sec": {
+   "texto": "Inspiração",
+   "pecas": [
+    "CashBack",
+    "PerfectTiming"
+   ]
+  },
+  "bota": {
+   "texto": "Mercs / Rapidez",
+   "pecas": [
+    "3111",
+    "3009"
+   ]
+  },
+  "build": {
+   "texto": "Tanto faz",
+   "pecas": []
+  }
+ },
+ "Annie": {
+  "runa": {
+   "texto": "PTA",
+   "pecas": [
+    "PressTheAttack"
+   ]
+  },
+  "sec": {
+   "texto": "Osso revestido",
+   "pecas": [
+    "BonePlating",
+    "Unflinching"
+   ]
+  },
+  "bota": {
+   "texto": "MERCS RUSH !!!",
+   "pecas": [
+    "3173"
+   ]
+  },
+  "build": {
+   "texto": "Tanto faz",
+   "pecas": []
+  }
+ },
+ "Aurelion Sol": {
+  "runa": {
+   "texto": "PTA / Electro",
+   "pecas": [
+    "PressTheAttack",
+    "Electrocute"
+   ]
+  },
+  "sec": {
+   "texto": "Impacto repentino",
+   "pecas": [
+    "SuddenImpact",
+    "TreasureHunter"
+   ]
+  },
+  "bota": {
+   "texto": "Tanto faz",
+   "pecas": []
+  },
+  "build": {
+   "texto": "Craquen / Crit",
+   "pecas": [
+    "6672",
+    "6676"
+   ]
+  }
+ },
+ "Aurora": {
+  "runa": {
+   "texto": "Electro",
+   "pecas": [
+    "Electrocute"
+   ]
+  },
+  "sec": {
+   "texto": "Precisão",
+   "pecas": [
+    "PresenceOfMind",
+    "CutDown"
+   ]
+  },
+  "bota": {
+   "texto": "Mercs",
+   "pecas": [
+    "3111"
+   ]
+  },
+  "build": {
+   "texto": "Crit",
+   "pecas": [
+    "6676",
+    "3031"
+   ]
+  }
+ },
+ "Azir": {
+  "runa": {
+   "texto": "PTA",
+   "pecas": [
+    "PressTheAttack"
+   ]
+  },
+  "sec": {
+   "texto": "Impacto repentino",
+   "pecas": [
+    "SuddenImpact",
+    "TreasureHunter"
+   ]
+  },
+  "bota": {
+   "texto": "Mercs / Rapidez",
+   "pecas": [
+    "3111",
+    "3009"
+   ]
+  },
+  "build": {
+   "texto": "Tanto faz",
+   "pecas": []
+  }
+ },
+ "Brand": {
+  "runa": {
+   "texto": "PTA",
+   "pecas": [
+    "PressTheAttack"
+   ]
+  },
+  "sec": {
+   "texto": "Inspiração",
+   "pecas": [
+    "CashBack",
+    "PerfectTiming"
+   ]
+  },
+  "bota": {
+   "texto": "Mercs",
+   "pecas": [
+    "3111"
+   ]
+  },
+  "build": {
+   "texto": "Tanto faz",
+   "pecas": []
+  }
+ },
+ "Cassiopeia": {
+  "runa": {
+   "texto": "PTA",
+   "pecas": [
+    "PressTheAttack"
+   ]
+  },
+  "sec": {
+   "texto": "Inspiração",
+   "pecas": [
+    "CashBack",
+    "PerfectTiming"
+   ]
+  },
+  "bota": {
+   "texto": "Mercs / Rapidez",
+   "pecas": [
+    "3111",
+    "3009"
+   ]
+  },
+  "build": {
+   "texto": "Crit",
+   "pecas": [
+    "3095",
+    "3031",
+    "3033"
+   ]
+  }
+ },
+ "Diana": {
+  "runa": {
+   "texto": "PTA",
+   "pecas": [
+    "PressTheAttack"
+   ]
+  },
+  "sec": {
+   "texto": "Osso revestido",
+   "pecas": [
+    "BonePlating",
+    "ShieldBash"
+   ]
+  },
+  "bota": {
+   "texto": "Mercs / Vamps",
+   "pecas": [
+    "3111",
+    "3008"
+   ]
+  },
+  "build": {
+   "texto": "Craquen",
+   "pecas": [
+    "6672",
+    "6673"
+   ]
+  }
+ },
+ "Ekko": {
+  "runa": {
+   "texto": "PTA",
+   "pecas": [
+    "PressTheAttack"
+   ]
+  },
+  "sec": {
+   "texto": "Osso revestido",
+   "pecas": [
+    "BonePlating",
+    "ShieldBash"
+   ]
+  },
+  "bota": {
+   "texto": "Mercs",
+   "pecas": [
+    "3111"
+   ]
+  },
+  "build": {
+   "texto": "Tanto faz",
+   "pecas": []
+  }
+ },
+ "Fizz": {
+  "runa": {
+   "texto": "PTA",
+   "pecas": [
+    "PressTheAttack"
+   ]
+  },
+  "sec": {
+   "texto": "Osso revestido",
+   "pecas": [
+    "BonePlating",
+    "ShieldBash"
+   ]
+  },
+  "bota": {
+   "texto": "Mercs",
+   "pecas": [
+    "3111"
+   ]
+  },
+  "build": {
+   "texto": "Crit",
+   "pecas": [
+    "3095",
+    "3031",
+    "6673"
+   ]
+  }
+ },
+ "Galio": {
+  "runa": {
+   "texto": "PTA",
+   "pecas": [
+    "PressTheAttack"
+   ]
+  },
+  "sec": {
+   "texto": "Scaling",
+   "pecas": [
+    "AbsoluteFocus",
+    "GatheringStorm"
+   ]
+  },
+  "bota": {
+   "texto": "Mercs / Rapidez",
+   "pecas": [
+    "3111",
+    "3009"
+   ]
+  },
+  "build": {
+   "texto": "Crit",
+   "pecas": [
+    "3095",
+    "3031"
+   ]
+  }
+ },
+ "Hwei": {
+  "runa": {
+   "texto": "PTA / Electro",
+   "pecas": [
+    "PressTheAttack",
+    "Electrocute"
+   ]
+  },
+  "sec": {
+   "texto": "Impacto repentino",
+   "pecas": [
+    "SuddenImpact",
+    "TreasureHunter"
+   ]
+  },
+  "bota": {
+   "texto": "Mercs / Vamps",
+   "pecas": [
+    "3111",
+    "3009",
+    "3008"
+   ]
+  },
+  "build": {
+   "texto": "Crit",
+   "pecas": [
+    "6676",
+    "3031"
+   ]
+  }
+ },
+ "Irelia": {
+  "runa": {
+   "texto": "PTA",
+   "pecas": [
+    "PressTheAttack"
+   ]
+  },
+  "sec": {
+   "texto": "Osso revestido",
+   "pecas": [
+    "BonePlating",
+    "Unflinching"
+   ]
+  },
+  "bota": {
+   "texto": "TABI RUSH !!!!",
+   "pecas": [
+    "3174"
+   ]
+  },
+  "build": {
+   "texto": "Craquen / Crit",
+   "pecas": [
+    "6672",
+    "3033"
+   ]
+  }
+ },
+ "Jayce": {
+  "runa": {
+   "texto": "PTA",
+   "pecas": [
+    "PressTheAttack"
+   ]
+  },
+  "sec": {
+   "texto": "Impacto repentino",
+   "pecas": [
+    "SuddenImpact",
+    "TreasureHunter"
+   ]
+  },
+  "bota": {
+   "texto": "Tabis / Vamps",
+   "pecas": [
+    "3008",
+    "3047"
+   ]
+  },
+  "build": {
+   "texto": "Tanto faz",
+   "pecas": []
+  }
+ },
+ "Kassadin": {
+  "runa": {
+   "texto": "PTA",
+   "pecas": [
+    "PressTheAttack"
+   ]
+  },
+  "sec": {
+   "texto": "Impacto repentino",
+   "pecas": [
+    "SuddenImpact",
+    "TreasureHunter"
+   ]
+  },
+  "bota": {
+   "texto": "Tanto faz",
+   "pecas": []
+  },
+  "build": {
+   "texto": "Tanto faz",
+   "pecas": []
+  }
+ },
+ "Katarina": {
+  "runa": {
+   "texto": "PTA",
+   "pecas": [
+    "PressTheAttack"
+   ]
+  },
+  "sec": {
+   "texto": "Impacto repentino",
+   "pecas": [
+    "SuddenImpact",
+    "TreasureHunter"
+   ]
+  },
+  "bota": {
+   "texto": "Tanto faz",
+   "pecas": []
+  },
+  "build": {
+   "texto": "Craquen",
+   "pecas": [
+    "6672",
+    "6673"
+   ]
+  }
+ },
+ "Kayle": {
+  "runa": {
+   "texto": "PTA",
+   "pecas": [
+    "PressTheAttack"
+   ]
+  },
+  "sec": {
+   "texto": "Impacto repentino",
+   "pecas": [
+    "SuddenImpact",
+    "TreasureHunter"
+   ]
+  },
+  "bota": {
+   "texto": "Tanto faz",
+   "pecas": []
+  },
+  "build": {
+   "texto": "Tanto faz",
+   "pecas": []
+  }
+ },
+ "Kog'Maw": {
+  "runa": {
+   "texto": "PTA",
+   "pecas": [
+    "PressTheAttack"
+   ]
+  },
+  "sec": {
+   "texto": "Impacto repentino",
+   "pecas": [
+    "SuddenImpact",
+    "TreasureHunter"
+   ]
+  },
+  "bota": {
+   "texto": "Tanto faz",
+   "pecas": []
+  },
+  "build": {
+   "texto": "Tanto faz",
+   "pecas": []
+  }
+ },
+ "LeBlanc": {
+  "runa": {
+   "texto": "PTA",
+   "pecas": [
+    "PressTheAttack"
+   ]
+  },
+  "sec": {
+   "texto": "Impacto repentino",
+   "pecas": [
+    "SuddenImpact",
+    "TreasureHunter"
+   ]
+  },
+  "bota": {
+   "texto": "Mercs",
+   "pecas": [
+    "3111"
+   ]
+  },
+  "build": {
+   "texto": "Craquen",
+   "pecas": [
+    "6672",
+    "6676"
+   ]
+  }
+ },
+ "Lissandra": {
+  "runa": {
+   "texto": "PTA",
+   "pecas": [
+    "PressTheAttack"
+   ]
+  },
+  "sec": {
+   "texto": "Scaling",
+   "pecas": [
+    "AbsoluteFocus",
+    "GatheringStorm"
+   ]
+  },
+  "bota": {
+   "texto": "Mercs",
+   "pecas": [
+    "3111"
+   ]
+  },
+  "build": {
+   "texto": "Tanto faz",
+   "pecas": []
+  }
+ },
+ "Locke": {
+  "runa": {
+   "texto": "PTA",
+   "pecas": [
+    "PressTheAttack"
+   ]
+  },
+  "sec": {
+   "texto": "Osso revestido",
+   "pecas": [
+    "BonePlating",
+    "Unflinching"
+   ]
+  },
+  "bota": {
+   "texto": "Mercs",
+   "pecas": [
+    "3111"
+   ]
+  },
+  "build": {
+   "texto": "Craquen / Crit",
+   "pecas": [
+    "6672",
+    "3095"
+   ]
+  }
+ },
+ "Lux": {
+  "runa": {
+   "texto": "PTA / Electro",
+   "pecas": [
+    "PressTheAttack",
+    "Electrocute"
+   ]
+  },
+  "sec": {
+   "texto": "Tanto faz",
+   "pecas": [
+    "CashBack",
+    "PerfectTiming"
+   ]
+  },
+  "bota": {
+   "texto": "Mercs / Vamps",
+   "pecas": [
+    "3111",
+    "3008"
+   ]
+  },
+  "build": {
+   "texto": "Tanto faz",
+   "pecas": []
+  }
+ },
+ "Malzahar": {
+  "runa": {
+   "texto": "PTA / Electro",
+   "pecas": [
+    "PressTheAttack",
+    "Electrocute"
+   ]
+  },
+  "sec": {
+   "texto": "Scaling",
+   "pecas": [
+    "AbsoluteFocus",
+    "GatheringStorm"
+   ]
+  },
+  "bota": {
+   "texto": "Mercs / Vamps",
+   "pecas": [
+    "3111",
+    "3008"
+   ]
+  },
+  "build": {
+   "texto": "Tanto faz",
+   "pecas": []
+  }
+ },
+ "Malphite": {
+  "runa": {
+   "texto": "PTA",
+   "pecas": []
+  },
+  "sec": {
+   "texto": "Scaling",
+   "pecas": []
+  },
+  "bota": {
+   "texto": "Mercs / Vamps",
+   "pecas": []
+  },
+  "build": {
+   "texto": "Terminus / Crit",
+   "pecas": []
+  }
+ },
+ "Mel": {
+  "runa": {
+   "texto": "PTA",
+   "pecas": [
+    "PressTheAttack"
+   ]
+  },
+  "sec": {
+   "texto": "Tanto faz",
+   "pecas": [
+    "CashBack",
+    "PerfectTiming"
+   ]
+  },
+  "bota": {
+   "texto": "Mercs / Vamps",
+   "pecas": [
+    "3111",
+    "3008"
+   ]
+  },
+  "build": {
+   "texto": "Tanto faz",
+   "pecas": []
+  }
+ },
+ "Naafiri": {
+  "runa": {
+   "texto": "PTA",
+   "pecas": [
+    "PressTheAttack"
+   ]
+  },
+  "sec": {
+   "texto": "Tanto faz",
+   "pecas": [
+    "CashBack",
+    "PerfectTiming"
+   ]
+  },
+  "bota": {
+   "texto": "Tabis",
+   "pecas": [
+    "3047"
+   ]
+  },
+  "build": {
+   "texto": "Craquen / Crit",
+   "pecas": [
+    "6672",
+    "6676"
+   ]
+  }
+ },
+ "Orianna": {
+  "runa": {
+   "texto": "PTA",
+   "pecas": [
+    "PressTheAttack"
+   ]
+  },
+  "sec": {
+   "texto": "Impacto repentino",
+   "pecas": [
+    "SuddenImpact",
+    "TreasureHunter"
+   ]
+  },
+  "bota": {
+   "texto": "Mercs",
+   "pecas": [
+    "3111"
+   ]
+  },
+  "build": {
+   "texto": "Tanto faz",
+   "pecas": []
+  }
+ },
+ "Pantheon": {
+  "runa": {
+   "texto": "PTA",
+   "pecas": [
+    "PressTheAttack"
+   ]
+  },
+  "sec": {
+   "texto": "Osso revestido",
+   "pecas": [
+    "BonePlating",
+    "Unflinching"
+   ]
+  },
+  "bota": {
+   "texto": "TABI RUSH !!!!",
+   "pecas": [
+    "3174"
+   ]
+  },
+  "build": {
+   "texto": "Craquen / Crit",
+   "pecas": [
+    "6672",
+    "6676"
+   ]
+  }
+ },
+ "Qiyana": {
+  "runa": {
+   "texto": "PTA",
+   "pecas": [
+    "PressTheAttack"
+   ]
+  },
+  "sec": {
+   "texto": "Osso revestido",
+   "pecas": [
+    "BonePlating",
+    "ShieldBash"
+   ]
+  },
+  "bota": {
+   "texto": "Tabis",
+   "pecas": [
+    "3047"
+   ]
+  },
+  "build": {
+   "texto": "Crit",
+   "pecas": [
+    "6676",
+    "3031"
+   ]
+  }
+ },
+ "Ryze": {
+  "runa": {
+   "texto": "PTA",
+   "pecas": [
+    "PressTheAttack"
+   ]
+  },
+  "sec": {
+   "texto": "Scaling",
+   "pecas": [
+    "ShieldBash",
+    "Unflinching"
+   ]
+  },
+  "bota": {
+   "texto": "Mercs",
+   "pecas": [
+    "3111"
+   ]
+  },
+  "build": {
+   "texto": "Tanto faz",
+   "pecas": []
+  }
+ },
+ "Swain": {
+  "runa": {
+   "texto": "PTA",
+   "pecas": [
+    "PressTheAttack"
+   ]
+  },
+  "sec": {
+   "texto": "Inspiração",
+   "pecas": [
+    "CashBack",
+    "PerfectTiming"
+   ]
+  },
+  "bota": {
+   "texto": "Mercs / Rapidez",
+   "pecas": [
+    "3111",
+    "3009"
+   ]
+  },
+  "build": {
+   "texto": "Crit",
+   "pecas": [
+    "3095",
+    "3031"
+   ]
+  }
+ },
+ "Sylas": {
+  "runa": {
+   "texto": "PTA",
+   "pecas": [
+    "PressTheAttack"
+   ]
+  },
+  "sec": {
+   "texto": "Osso revestido",
+   "pecas": [
+    "BonePlating",
+    "ShieldBash"
+   ]
+  },
+  "bota": {
+   "texto": "Mercs",
+   "pecas": [
+    "3111"
+   ]
+  },
+  "build": {
+   "texto": "Craquen",
+   "pecas": [
+    "6672",
+    "3033"
+   ]
+  }
+ },
+ "Syndra": {
+  "runa": {
+   "texto": "PTA / Electro",
+   "pecas": [
+    "PressTheAttack",
+    "Electrocute"
+   ]
+  },
+  "sec": {
+   "texto": "Impacto repentino",
+   "pecas": [
+    "SuddenImpact",
+    "TreasureHunter"
+   ]
+  },
+  "bota": {
+   "texto": "Mercs",
+   "pecas": [
+    "3111"
+   ]
+  },
+  "build": {
+   "texto": "Tanto faz",
+   "pecas": []
+  }
+ },
+ "Taliyah": {
+  "runa": {
+   "texto": "PTA",
+   "pecas": [
+    "PressTheAttack"
+   ]
+  },
+  "sec": {
+   "texto": "Impacto repentino",
+   "pecas": [
+    "SuddenImpact",
+    "TreasureHunter"
+   ]
+  },
+  "bota": {
+   "texto": "Mercs",
+   "pecas": [
+    "3111"
+   ]
+  },
+  "build": {
+   "texto": "Craquen / Crit",
+   "pecas": [
+    "6672",
+    "6676"
+   ]
+  }
+ },
+ "Talon": {
+  "runa": {
+   "texto": "Electro",
+   "pecas": [
+    "Electrocute"
+   ]
+  },
+  "sec": {
+   "texto": "Precisão",
+   "pecas": [
+    "PresenceOfMind",
+    "CutDown"
+   ]
+  },
+  "bota": {
+   "texto": "Tabis / Vamps",
+   "pecas": [
+    "3008",
+    "3047"
+   ]
+  },
+  "build": {
+   "texto": "Letalidade / Crit",
+   "pecas": [
+    "3179",
+    "6676"
+   ]
+  }
+ },
+ "Twisted Fate": {
+  "runa": {
+   "texto": "PTA / Electro",
+   "pecas": [
+    "PressTheAttack",
+    "Electrocute"
+   ]
+  },
+  "sec": {
+   "texto": "Impacto repentino",
+   "pecas": [
+    "SuddenImpact",
+    "TreasureHunter"
+   ]
+  },
+  "bota": {
+   "texto": "Mercs, 100%",
+   "pecas": [
+    "3111"
+   ]
+  },
+  "build": {
+   "texto": "Tanto faz",
+   "pecas": []
+  }
+ },
+ "Veigar": {
+  "runa": {
+   "texto": "PTA",
+   "pecas": [
+    "PressTheAttack"
+   ]
+  },
+  "sec": {
+   "texto": "Scaling",
+   "pecas": [
+    "AbsoluteFocus",
+    "GatheringStorm"
+   ]
+  },
+  "bota": {
+   "texto": "Mercs / Vamps",
+   "pecas": [
+    "3111",
+    "3008"
+   ]
+  },
+  "build": {
+   "texto": "Tanto faz",
+   "pecas": []
+  }
+ },
+ "Vel'Koz": {
+  "runa": {
+   "texto": "PTA",
+   "pecas": [
+    "PressTheAttack"
+   ]
+  },
+  "sec": {
+   "texto": "Inspiração",
+   "pecas": [
+    "CashBack",
+    "PerfectTiming"
+   ]
+  },
+  "bota": {
+   "texto": "Mercs / Vamps",
+   "pecas": [
+    "3111",
+    "3008"
+   ]
+  },
+  "build": {
+   "texto": "Tanto faz",
+   "pecas": []
+  }
+ },
+ "Vex": {
+  "runa": {
+   "texto": "PTA / Electro",
+   "pecas": [
+    "PressTheAttack",
+    "Electrocute"
+   ]
+  },
+  "sec": {
+   "texto": "Osso revestido",
+   "pecas": [
+    "BonePlating",
+    "Unflinching"
+   ]
+  },
+  "bota": {
+   "texto": "MERCS RUSH !!!",
+   "pecas": [
+    "3173"
+   ]
+  },
+  "build": {
+   "texto": "Tanto faz",
+   "pecas": []
+  }
+ },
+ "Viktor": {
+  "runa": {
+   "texto": "PTA",
+   "pecas": [
+    "PressTheAttack"
+   ]
+  },
+  "sec": {
+   "texto": "Scaling",
+   "pecas": [
+    "AbsoluteFocus",
+    "GatheringStorm"
+   ]
+  },
+  "bota": {
+   "texto": "Mercs",
+   "pecas": [
+    "3111"
+   ]
+  },
+  "build": {
+   "texto": "Tanto faz",
+   "pecas": []
+  }
+ },
+ "Vladimir": {
+  "runa": {
+   "texto": "PTA",
+   "pecas": [
+    "PressTheAttack"
+   ]
+  },
+  "sec": {
+   "texto": "Tanto faz",
+   "pecas": [
+    "CashBack",
+    "PerfectTiming"
+   ]
+  },
+  "bota": {
+   "texto": "Mercs / Rapidez",
+   "pecas": [
+    "3111",
+    "3009"
+   ]
+  },
+  "build": {
+   "texto": "Craquen / Crit",
+   "pecas": [
+    "3095",
+    "3031"
+   ]
+  }
+ },
+ "Xerath": {
+  "runa": {
+   "texto": "PTA",
+   "pecas": [
+    "PressTheAttack"
+   ]
+  },
+  "sec": {
+   "texto": "Impacto repentino",
+   "pecas": [
+    "SuddenImpact",
+    "TreasureHunter"
+   ]
+  },
+  "bota": {
+   "texto": "Tanto faz",
+   "pecas": []
+  },
+  "build": {
+   "texto": "Crit",
+   "pecas": [
+    "3095",
+    "3031"
+   ]
+  }
+ },
+ "Yasuo": {
+  "runa": {
+   "texto": "PTA",
+   "pecas": [
+    "PressTheAttack"
+   ]
+  },
+  "sec": {
+   "texto": "Osso revestido",
+   "pecas": [
+    "BonePlating",
+    "ShieldBash"
+   ]
+  },
+  "bota": {
+   "texto": "Tabi",
+   "pecas": [
+    "3047"
+   ]
+  },
+  "build": {
+   "texto": "Crit",
+   "pecas": [
+    "3095",
+    "3031"
+   ]
+  }
+ },
+ "Yone": {
+  "runa": {
+   "texto": "PTA",
+   "pecas": [
+    "PressTheAttack"
+   ]
+  },
+  "sec": {
+   "texto": "Tanto faz",
+   "pecas": [
+    "CashBack",
+    "PerfectTiming"
+   ]
+  },
+  "bota": {
+   "texto": "Tanto faz",
+   "pecas": [
+    "3047"
+   ]
+  },
+  "build": {
+   "texto": "Craquen / Crit",
+   "pecas": [
+    "6672",
+    "3095"
+   ]
+  }
+ },
+ "Zed": {
+  "runa": {
+   "texto": "PTA / Electro",
+   "pecas": [
+    "PressTheAttack",
+    "Electrocute"
+   ]
+  },
+  "sec": {
+   "texto": "Impacto repentino",
+   "pecas": [
+    "SuddenImpact",
+    "TreasureHunter"
+   ]
+  },
+  "bota": {
+   "texto": "Tabis / Vamps",
+   "pecas": [
+    "3008",
+    "3047"
+   ]
+  },
+  "build": {
+   "texto": "Letalidade / Crit",
+   "pecas": [
+    "3179",
+    "6676"
+   ]
+  }
+ },
+ "Zoe": {
+  "runa": {
+   "texto": "PTA",
+   "pecas": [
+    "PressTheAttack"
+   ]
+  },
+  "sec": {
+   "texto": "Inspiração",
+   "pecas": [
+    "CashBack",
+    "PerfectTiming"
+   ]
+  },
+  "bota": {
+   "texto": "Mercs",
+   "pecas": [
+    "3111"
+   ]
+  },
+  "build": {
+   "texto": "Tanto faz",
+   "pecas": []
+  }
+ }
+}

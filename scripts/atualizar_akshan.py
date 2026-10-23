@@ -1,8 +1,9 @@
 """Atualiza a cópia embutida do guia do Akshan a partir da planilha do Peteruso.
 
 O site já lê a planilha ao vivo quando abre; esta cópia é o que aparece sem internet
-ou antes da planilha responder. Grava src/guias/akshan/rows.js, acrescenta campeões
-novos em meta.json e lista as linhas que ainda não têm tradução em traducao_en.json
+ou antes da planilha responder. Grava src/guias/akshan/rows.js, os ícones de cada célula
+(icones_planilha.json, lidos das imagens da planilha), acrescenta campeões novos em meta.json
+e lista as linhas que ainda não têm tradução em traducao_en.json
 (no modo EN elas aparecem em português). Depois rode `python scripts/build.py`.
 """
 import csv
@@ -12,15 +13,18 @@ import pathlib
 import re
 import urllib.request
 
+from icones_planilha import icones_da_planilha
+
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 PASTA = ROOT / "src" / "guias" / "akshan"
 GUIA = next(g for g in json.loads((ROOT / "src" / "guias.json").read_text(encoding="utf-8")) if g["id"] == "akshan")
 VER = "16.20.1"
 
 
-def baixar(url):
+def baixar(url, binario=False):
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-    return urllib.request.urlopen(req).read().decode("utf-8")
+    dados = urllib.request.urlopen(req).read()
+    return dados if binario else dados.decode("utf-8")
 
 
 def chave(s):
@@ -77,3 +81,13 @@ if traducao_path.exists():
         print(f"Sem tradução em inglês ({len(faltam)}); acrescente em traducao_en.json > linhas:")
         for nome, l in faltam:
             print(f"  {nome}: {l}")
+
+# Ícones de cada célula: só vêm no xlsx (o CSV traz apenas o texto).
+xlsx = baixar(f"https://docs.google.com/spreadsheets/d/{planilha['id']}/export?format=xlsx", binario=True)
+icones, desconhecidas = icones_da_planilha(xlsx, meta.get("imagens", {}))
+(PASTA / "icones_planilha.json").write_text(json.dumps(icones, ensure_ascii=False, indent=1) + "\n", encoding="utf-8", newline="\n")
+print(f"Ícones lidos de {len(icones)} campeões.")
+if desconhecidas:
+    print("Imagens novas na planilha que ainda não estão em meta.json > imagens (md5 -> peça):")
+    for nome, campo, md5 in desconhecidas:
+        print(f"  {nome} ({campo}): {md5}")
