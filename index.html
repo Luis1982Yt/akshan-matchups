@@ -380,20 +380,21 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   /* A lista gruda só dentro da primeira linha (sticky numa grade prende à grade inteira). */
   .col-lista { grid-column: 1; grid-row: 1; align-self: stretch; min-width: 0; }
   .detalhe { grid-column: 2; grid-row: 1; }
-  .acompanhe { grid-column: 1; grid-row: 2; margin-top: 40px; }
-  .rodape { grid-column: 2; grid-row: 2; margin-top: 40px; align-self: end; }
+  .acompanhe { grid-column: 1; grid-row: 2; align-self: end; }
+  .rodape { grid-column: 2; grid-row: 2; align-self: end; }
   :root.com-3d[data-guia="akshan"] .akshan3d { grid-column: 3; grid-row: 1 / span 2; }
 }
-.acompanhe { padding: 18px 20px 16px; border-radius: 12px; background: var(--painel); border: 1px solid var(--linha); }
-.acompanhe h2 { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 0 0 14px; font: 700 15px var(--titulo); letter-spacing: .14em; text-transform: uppercase; color: var(--acento-vivo); }
-.acompanhe ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
-.acompanhe .canal { display: flex; align-items: center; gap: 12px; min-height: 52px; padding: 8px 12px; border-radius: 10px; border: 1px solid var(--linha); background: var(--painel-alto); color: var(--texto); text-decoration: none; }
+.acompanhe { padding: 14px 16px 12px; border-radius: 12px; background: var(--painel); border: 1px solid var(--linha); }
+.acompanhe h2 { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 0 0 10px; font: 700 14px var(--titulo); letter-spacing: .14em; text-transform: uppercase; color: var(--acento-vivo); }
+.acompanhe ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.acompanhe .canal { display: flex; align-items: center; gap: 10px; min-height: 48px; padding: 6px 10px; border-radius: 10px; border: 1px solid var(--linha); background: var(--painel-alto); color: var(--texto); text-decoration: none; }
 .acompanhe .canal:hover { border-color: var(--acento-vivo); }
 .acompanhe .canal svg { flex: none; color: var(--acento-vivo); }
-.acompanhe .canal b { display: block; font-size: 15px; }
-.acompanhe .canal small { display: block; font-size: 12px; color: var(--texto-baixo); }
-.acompanhe .canal .ir { margin-left: auto; font-size: 13px; font-weight: 700; color: var(--acento-vivo); white-space: nowrap; }
-.acompanhe .dev { margin: 14px 0 0; text-align: center; font-size: 13px; color: var(--texto-baixo); }
+.acompanhe .canal b { display: block; font-size: 15px; line-height: 1.3; }
+.acompanhe .canal > span { min-width: 0; }
+.acompanhe .canal small { display: block; font-size: 12px; line-height: 1.3; color: var(--texto-baixo); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.acompanhe .canal .ir { margin-left: auto; flex: none; font-size: 16px; font-weight: 700; color: var(--acento-vivo); }
+.acompanhe .dev { margin: 10px 0 0; text-align: center; font-size: 13px; color: var(--texto-baixo); }
 .acompanhe .dev b { color: var(--texto); }
 .rodape p { margin: 0; }
 .rodape a { display: inline-block; padding: 10px 0; margin: -10px 0; }
@@ -849,7 +850,7 @@ function renderGuia() {
   const losango = '<svg width="12" height="12" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1l6 6-6 6-6-6z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>';
   const twitch = '<svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 2.5L3 6.3v13.2h4.5V22h2.6l2.5-2.5h3.7l4.7-4.7V2.5zm14.6 11.4l-2.8 2.8h-4.5L9.4 19.1v-2.4H5.6V4.3h13.5zM16.2 7.2h-1.8v5.4h1.8zm-4.8 0H9.6v5.4h1.8z" fill="currentColor"/></svg>';
   $("acompanhe").innerHTML = ac.length ? `<h2 id="acompanheTit">${losango}<span>${esc(t("acompanhe").replace("{c}", guia.campeao.nome))}</span>${losango}</h2>
-    <ul>${ac.map(x => `<li><a class="canal" href="${esc(x.url)}" target="_blank" rel="noopener">${twitch}<span><b>${esc(x.nome)}</b><small>${esc(x.canal)}</small></span><span class="ir">${t("assistir")} →</span></a></li>`).join("")}</ul>
+    <ul>${ac.map(x => `<li><a class="canal" href="${esc(x.url)}" target="_blank" rel="noopener">${twitch}<span><b>${esc(x.nome)}</b><small>Twitch</small></span><span class="ir" aria-hidden="true">→</span><span class="sr">, ${t("assistir")}</span></a></li>`).join("")}</ul>
     <p class="dev">${t("devPor")} <b>Luis1982</b></p>` : "";
   $("rodape").innerHTML = `<p>${esc((L === "en" && guia.fonte_en) || guia.fonte)}${links ? " " + links + "." : ""} ${t("rodapeRiot")}</p><p id="estadoPlanilha" class="estado-planilha" role="status"></p>`;
   mostraPlanilha(guia);
