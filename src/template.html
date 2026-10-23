@@ -6,7 +6,7 @@
 <title>Guias de matchup</title>
 <link rel="icon" type="image/png" sizes="64x64" href="/*ICONE*/">
 <link rel="apple-touch-icon" href="/*ICONE_APPLE*/">
-<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
 <script>
 try {
   const t = localStorage.getItem("tema"); if (t === "claro") document.documentElement.dataset.tema = t;
@@ -14,6 +14,14 @@ try {
   document.documentElement.dataset.guia = ids.includes(h) ? h : ids.includes(g) ? g : ids[0];
   const l = localStorage.getItem("lingua") || ((navigator.language || "").toLowerCase().startsWith("pt") ? "pt" : "en");
   document.documentElement.lang = l === "en" ? "en" : "pt-BR";
+  if (location.protocol !== "file:" && matchMedia("(min-width: 1720px)").matches && document.documentElement.dataset.guia === "akshan" && localStorage.getItem("akshan3d") !== "0") {
+    [["modulepreload", "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js"], ["modulepreload", "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/loaders/GLTFLoader.js"], ["modulepreload", "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/utils/BufferGeometryUtils.js"],
+     ["preload", "modelo/akshan.glb"]].forEach(([rel, href]) => {
+      const k = document.createElement("link"); k.rel = rel; k.href = href;
+      if (rel === "preload") { k.as = "fetch"; k.crossOrigin = "anonymous"; }
+      document.head.appendChild(k);
+    });
+  }
 } catch (e) {}
 </script>
 <style>
@@ -175,6 +183,10 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .akshan3d canvas { display: block; width: 100%; height: 100%; min-height: 0; cursor: grab; touch-action: none; opacity: 0; transition: opacity .8s ease; }
 .akshan3d canvas.girando { cursor: grabbing; }
 .akshan3d.pronto canvas, .akshan3d.pronto .anim3d { opacity: 1; }
+.carrega3d { position: absolute; left: 0; right: 0; top: 45%; margin: 0; text-align: center; font: 600 13px var(--corpo); letter-spacing: .08em; color: var(--texto-baixo); animation: pulsa3d 1.4s ease-in-out infinite alternate; }
+.akshan3d.pronto .carrega3d { display: none; }
+@keyframes pulsa3d { from { opacity: .35; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .carrega3d { animation: none; } }
 .anim3d { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; opacity: 0; transition: opacity .8s ease; }
 .anim3d button { min-height: 36px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--linha-forte); background: var(--painel); color: var(--texto); font: 700 13px var(--corpo); cursor: pointer; }
 .anim3d button.tecla { min-width: 36px; padding: 0; font-family: var(--titulo); }
@@ -531,7 +543,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 
       <footer class="rodape" id="rodape"></footer>
     </div>
-    <aside class="akshan3d" id="akshan3d" aria-label="Akshan 3D"><button class="fecha3d" type="button" id="fecha3d" data-t-aria="esconde3d" data-t-title="esconde3d"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button><canvas id="cena3d" aria-hidden="true" data-t-title="emote"></canvas><div class="anim3d" id="anim3d" role="group" data-t-aria="animacoes"></div></aside>
+    <aside class="akshan3d" id="akshan3d" aria-label="Akshan 3D"><button class="fecha3d" type="button" id="fecha3d" data-t-aria="esconde3d" data-t-title="esconde3d"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button><canvas id="cena3d" aria-hidden="true" data-t-title="emote"></canvas><div class="anim3d" id="anim3d" role="group" data-t-aria="animacoes"></div><p class="carrega3d" data-t="carrega3d">Carregando o Akshan…</p></aside>
   </div>
 </main>
 
@@ -579,7 +591,7 @@ const TXT = {
     linguaRotulo: "Switch to English", linguaBotao: "EN",
     guiaAtual: "Guia atual: ", trocarGuia: ". Trocar de guia", notasDo: "notas do ", matchups: " matchups", aberto: "Aberto",
     facil: "Fácil", medio: "Médio", dificil: "Difícil", resumo: "Resumo", runas: "Runas", itens: "Itens", geral: "Geral",
-    principal: "Principal", fragmentos: "Fragmentos", emote: "Arraste para girar · clique para uma emote", mostra3d: "Mostrar o Akshan 3D", esconde3d: "Esconder o Akshan 3D", animacoes: "Animações do Akshan",
+    principal: "Principal", fragmentos: "Fragmentos", emote: "Arraste para girar · clique para uma emote", mostra3d: "Mostrar o Akshan 3D", esconde3d: "Esconder o Akshan 3D", carrega3d: "Carregando o Akshan…", animacoes: "Animações do Akshan",
     a_dance: "Dança", a_taunt: "Provocação", a_laugh: "Risada", a_attack: "Ataque", a_recall: "Recall",
   },
   en: {
@@ -601,7 +613,7 @@ const TXT = {
     linguaRotulo: "Mudar para português", linguaBotao: "PT",
     guiaAtual: "Current guide: ", trocarGuia: ". Change guide", notasDo: "notes by ", matchups: " matchups", aberto: "Open",
     facil: "Easy", medio: "Medium", dificil: "Hard", resumo: "Summary", runas: "Runes", itens: "Items", geral: "Overall",
-    principal: "Primary", fragmentos: "Shards", emote: "Drag to rotate · click for an emote", mostra3d: "Show 3D Akshan", esconde3d: "Hide 3D Akshan", animacoes: "Akshan animations",
+    principal: "Primary", fragmentos: "Shards", emote: "Drag to rotate · click for an emote", mostra3d: "Show 3D Akshan", esconde3d: "Hide 3D Akshan", carrega3d: "Loading Akshan…", animacoes: "Akshan animations",
     a_dance: "Dance", a_taunt: "Taunt", a_laugh: "Laugh", a_attack: "Attack", a_recall: "Recall",
   },
 };
@@ -798,7 +810,7 @@ function renderGuia() {
       <span><b>${esc(g.campeao.nome)}</b><small><span class="sr">, </span>${g.rota ? esc(g.rota) + " · " : ""}${t("notasDo")}${esc(g.autor)} · ${g.matchups.length}${t("matchups")}</small></span>
       ${g === guia ? `<span class="atual">${t("aberto")}</span>` : ""}
     </button></li>`).join("");
-  $("artVoce").innerHTML = `<img src="${cena(eu.id)}" alt="${t("arteDe")}${esc(eu.nome)}">`;
+  $("artVoce").innerHTML = `<img src="${cena(eu.id)}" alt="${t("arteDe")}${esc(eu.nome)}" fetchpriority="high">`;
   $("vocNome").textContent = eu.nome;
   $("vocNome").classList.toggle("longo", eu.nome.length > 9);
   $("vocTitulo").textContent = tituloDe(eu);
@@ -840,13 +852,14 @@ function renderLista() {
   shown = avaliados.map(x => x[0]);
   const soNota = new Set(termo ? avaliados.filter(x => x[1] === 1).map(x => x[0]) : []);
   const foco = shown.includes(current) ? current : shown[0];
-  lista.innerHTML = shown.map(c => {
+  // Os primeiros retratos (o que aparece sem rolar) vêm na hora; o resto só quando chegar perto da tela.
+  lista.innerHTML = shown.map((c, i) => {
     const marca = guia.formato === "simples"
       ? (c.guia ? '<span class="ponto" aria-hidden="true"></span>' : "")
       : (c.dificuldade.overall ? `<span class="nivel" aria-hidden="true">${c.dificuldade.overall}</span>` : "");
     const extra = guia.formato === "simples" ? (c.guia ? t("srNoGuia") : "") : (c.dificuldade.overall ? t("srDif", c.dificuldade.overall) : "");
     return `<button type="button" class="pick${soNota.has(c) ? " so-nota" : ""}" data-id="${c.slug}" data-ini="${esc(c.nome.charAt(0))}" aria-current="${c === current}" tabindex="${c === foco ? 0 : -1}" title="${esc(c.nome)}${soNota.has(c) ? t("titNotas") : ""}">
-      <img src="${sq(c.id)}" alt="" width="56" height="56">${marca}<span class="sr">${esc(c.nome)}${extra}${soNota.has(c) ? t("srNotas") : ""}</span></button>`;
+      <img src="${sq(c.id)}" alt="" width="56" height="56"${i < 25 ? "" : ' loading="lazy"'} decoding="async">${marca}<span class="sr">${esc(c.nome)}${extra}${soNota.has(c) ? t("srNotas") : ""}</span></button>`;
   }).join("");
   $("vazio").hidden = shown.length > 0;
   $("contagem").textContent = `${shown.length}/${guia.lista.length}`;
@@ -991,7 +1004,7 @@ function notasCompleto(c) {
 /* ---------- Detalhe do matchup ---------- */
 function renderDetalhe(animar) {
   const c = current, eu = guia.campeao;
-  $("artEle").innerHTML = `<img src="${cena(c.id)}" alt="${t("arteDe")}${esc(c.nome)}">`;
+  $("artEle").innerHTML = `<img src="${cena(c.id)}" alt="${t("arteDe")}${esc(c.nome)}" fetchpriority="high">`;
   enquadraTudo();
   $("eleNome").textContent = c.nome;
   $("eleNome").classList.toggle("longo", c.nome.length > 9);
@@ -1029,7 +1042,8 @@ function atualizaVizinhos() {
   $("prox").setAttribute("aria-label", t("proximo") + n.nome);
   $("miraAnt").setAttribute("aria-label", t("anterior") + p.nome);
   $("miraProx").setAttribute("aria-label", t("proximo") + n.nome);
-  [p, n].forEach(x => { const im = new Image(); im.src = cena(x.id); });
+  const adianta = () => [p, n].forEach(x => { const im = new Image(); im.src = cena(x.id); });
+  if (document.readyState === "complete") adianta(); else addEventListener("load", adianta, { once: true });
 }
 
 // Rola só a lista (não a página) até o rosto escolhido.
@@ -1294,9 +1308,11 @@ async function iniciaAkshan3d() {
   estado3d = "carregando";
   const box = $("akshan3d"), canvas = $("cena3d");
   try {
-    const THREE = await import("three");
-    const { GLTFLoader } = await import("three/addons/loaders/GLTFLoader.js");
-    const gltf = await new GLTFLoader().loadAsync("modelo/akshan.glb");
+    const [THREE, { GLTFLoader }, bytes] = await Promise.all([
+      import("three"), import("three/addons/loaders/GLTFLoader.js"),
+      fetch("modelo/akshan.glb").then(r => { if (!r.ok) throw new Error("modelo " + r.status); return r.arrayBuffer(); }),
+    ]);
+    const gltf = await new GLTFLoader().parseAsync(bytes, "");
     const r = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
     r.setClearColor(0x000000, 0);
     r.outputColorSpace = THREE.SRGBColorSpace;
@@ -1397,8 +1413,7 @@ async function iniciaAkshan3d() {
     atualiza3d();
   }
 }
-const depois = window.requestIdleCallback || (f => setTimeout(f, 1200));
-addEventListener("load", () => depois(atualiza3d));
+setTimeout(atualiza3d, 50);  // logo depois de montar a página, sem esperar as imagens
 TELA_3D.addEventListener("change", atualiza3d);
 </script>
 
