@@ -128,6 +128,66 @@ try {
   --sombra: 0 10px 30px rgba(20, 40, 90, .14);
   color-scheme: light;
 }
+/* Rosa de Cristal (Akshan_10): noite índigo do baile, rosas azul-violeta, menta da gola; no claro, o perolado da arte. */
+:root[data-guia="akshan"][data-skin="rosa-de-cristal"] {
+  --fundo: #0f1220; --painel: #171b2e; --painel-alto: #20263d;
+  --linha: rgba(160, 170, 230, .24); --linha-forte: rgba(160, 170, 230, .5);
+  --acento: #9ea8f0; --acento-vivo: #c9cffb; --destaque: #9ff0cd;
+  --texto: #e8ecf8; --texto-baixo: #9ba3c4; --tinta-botao: #0d1a14;
+  --luz: rgba(222, 234, 220, .12); --sombra: 0 10px 30px rgba(0, 0, 0, .5);
+  --sobre-arte: #eef6ff; --destaque-arte: #b8f5d8; --botao-1: #f4f8f2; --botao-2: #ace7c6;
+  --brilho: rgba(222, 234, 220, .55); --brilho-2: rgba(84, 94, 168, .22);
+  --mira: #c9cffb; --mira-brilho: rgba(172, 231, 198, .8);
+  color-scheme: dark;
+}
+:root[data-guia="akshan"][data-skin="rosa-de-cristal"][data-tema="claro"] {
+  --fundo: #f1f5ee; --painel: #fbfdf9; --painel-alto: #e3ebe0;
+  --linha: rgba(70, 80, 150, .26); --linha-forte: rgba(70, 80, 150, .55);
+  --acento: #4651a3; --acento-vivo: #343d85; --destaque: #2f8f6b;
+  --texto: #161a2b; --texto-baixo: #4d5470; --tinta-botao: #ffffff;
+  --luz: rgba(172, 231, 198, .22); --sombra: 0 10px 30px rgba(40, 50, 110, .14);
+  color-scheme: light;
+}
+/* Três Honras (Akshan_20): ameixa do entardecer, armadura de bronze dourado, energia violeta e magenta. */
+:root[data-guia="akshan"][data-skin="tres-honras"] {
+  --fundo: #120a10; --painel: #1b1018; --painel-alto: #261722;
+  --linha: rgba(196, 140, 98, .26); --linha-forte: rgba(196, 140, 98, .55);
+  --acento: #d29a6e; --acento-vivo: #f0c39a; --destaque: #c98bf0;
+  --texto: #f0e4e6; --texto-baixo: #ad98a2; --tinta-botao: #1a0a1a;
+  --luz: rgba(164, 82, 163, .18); --sombra: 0 10px 30px rgba(0, 0, 0, .5);
+  --sobre-arte: #ffe9d6; --destaque-arte: #e0b0ff; --botao-1: #f6d3b0; --botao-2: #c48a5a;
+  --brilho: rgba(242, 215, 213, .5); --brilho-2: rgba(164, 82, 163, .25);
+  --mira: #e0b0ff; --mira-brilho: rgba(201, 139, 240, .8);
+  color-scheme: dark;
+}
+:root[data-guia="akshan"][data-skin="tres-honras"][data-tema="claro"] {
+  --fundo: #f7efef; --painel: #fffafa; --painel-alto: #eedfe2;
+  --linha: rgba(130, 70, 60, .26); --linha-forte: rgba(130, 70, 60, .55);
+  --acento: #8a4a2e; --acento-vivo: #6b351e; --destaque: #8b3fa8;
+  --texto: #241519; --texto-baixo: #6a5058; --tinta-botao: #ffffff;
+  --luz: rgba(164, 82, 163, .12); --sombra: 0 10px 30px rgba(90, 40, 60, .14);
+  color-scheme: light;
+}
+/* Velho Oeste (Akshan_21): saloon esfumaçado, branco-osso do sobretudo, brasa do revólver. */
+:root[data-guia="akshan"][data-skin="velho-oeste"] {
+  --fundo: #100c0a; --painel: #1a1410; --painel-alto: #241c16;
+  --linha: rgba(239, 229, 203, .2); --linha-forte: rgba(239, 229, 203, .45);
+  --acento: #e7d8bb; --acento-vivo: #fff3dc; --destaque: #ff7a3d;
+  --texto: #efe6da; --texto-baixo: #a8998a; --tinta-botao: #1a0c05;
+  --luz: rgba(255, 110, 50, .14); --sombra: 0 10px 30px rgba(0, 0, 0, .55);
+  --sobre-arte: #fff1dc; --destaque-arte: #ff8c4d; --botao-1: #ffc39a; --botao-2: #e0552a;
+  --brilho: rgba(255, 190, 140, .55); --brilho-2: rgba(183, 65, 41, .25);
+  --mira: #ffb07a; --mira-brilho: rgba(255, 106, 43, .85);
+  color-scheme: dark;
+}
+:root[data-guia="akshan"][data-skin="velho-oeste"][data-tema="claro"] {
+  --fundo: #f4eee4; --painel: #fffbf4; --painel-alto: #e9dfd0;
+  --linha: rgba(120, 70, 40, .26); --linha-forte: rgba(120, 70, 40, .55);
+  --acento: #7a4524; --acento-vivo: #5c3117; --destaque: #c2410c;
+  --texto: #22170f; --texto-baixo: #66574a; --tinta-botao: #ffffff;
+  --luz: rgba(255, 110, 50, .12); --sombra: 0 10px 30px rgba(80, 40, 10, .14);
+  color-scheme: light;
+}
 /* Mordekaiser: ferro e o verde do Reino da Morte. */
 :root[data-guia="mordekaiser"] {
   --fundo: #0a0d0c;
@@ -702,7 +762,15 @@ const sq = id => `${DD}${VER}/img/champion/${id}.png`;
 const cena = id => `${DD}img/champion/centered/${id}_0.jpg`;
 // Skins do Akshan com paleta própria (num = número da skin no Data Dragon).
 // Cada skin tem o modelo 3D (modelo/akshan-<id>.glb) e os efeitos sonoros (sons/akshan3d/<id>/) dela; a voz é a do Akshan.
-const SKINS = [{ id: "", num: 0, nome: "Padrão", nome_en: "Default" }, { id: "ciberpop", num: 1, nome: "Ciberpop", nome_en: "Cyber Pop" }];
+// "sons": variações de efeito que mudam em relação ao padrão (a Velho Oeste tem 2 tiros, não 3).
+// "revisar": paleta esperando o dono aprovar; fica fora do seletor até lá.
+const SKINS = [
+  { id: "", num: 0, nome: "Padrão", nome_en: "Default" },
+  { id: "ciberpop", num: 1, nome: "Ciberpop", nome_en: "Cyber Pop" },
+  { id: "rosa-de-cristal", num: 10, nome: "Rosa de Cristal", nome_en: "Crystal Rose", revisar: true },
+  { id: "tres-honras", num: 20, nome: "Três Honras", nome_en: "Three Honors", revisar: true },
+  { id: "velho-oeste", num: 21, nome: "Velho Oeste", nome_en: "High Noon", sons: { aa1: 2, aa2: 2 }, revisar: true },
+].filter(k => !k.revisar);
 const modeloSkin = k => (k.id ? `modelo/akshan-${k.id}.glb` : "modelo/akshan.glb");
 const skinAtual = () => SKINS.find(k => k.id === (document.documentElement.dataset.skin || "")) || SKINS[0];
 const cenaSkin = (id, num) => `${DD}img/champion/centered/${id}_${num}.jpg`;
@@ -1520,7 +1588,7 @@ function tocaSons3d(lista) {
   lista.forEach(item => {
     const repete = item.endsWith("~");
     const [nome, atraso] = item.replace("~", "").split("@");
-    const n = VARIACOES_3D[nome];
+    const k0 = skinAtual(), n = (k0.id && !nome.startsWith("vo_") && k0.sons && k0.sons[nome]) || VARIACOES_3D[nome];
     if (!n) return;
     const vai = () => {
       const k = skinAtual(), pasta = k.id && !nome.startsWith("vo_") ? k.id + "/" : "";

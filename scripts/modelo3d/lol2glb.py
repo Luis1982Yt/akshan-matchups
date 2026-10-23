@@ -288,6 +288,13 @@ def main():
     UV = v["uv"].astype("<f4")
     J = np.array(influencias, dtype=np.uint16)[v["inf"]].astype("<u2")
     W = v["w"].astype("<f4"); W /= np.maximum(W.sum(axis=1, keepdims=True), 1e-8)
+    # Só os vértices das submalhas visíveis: as escondidas (árvore do recall etc.) não pesam nem
+    # entram na caixa do modelo, que o site usa para enquadrar o Akshan.
+    visiveis = [sm for sm in subs if sm["nome"] not in ESCONDER]
+    usados = np.unique(np.concatenate([idx[sm["is"]:sm["is"] + sm["ic"]] for sm in visiveis]))
+    novo = np.full(len(P), -1, dtype=np.int64); novo[usados] = np.arange(len(usados))
+    P, N, UV, J, W = P[usados], N[usados], UV[usados], J[usados], W[usados]
+    idx = novo[idx]
     a_p = g.acc(P, "VEC3", 5126, 34962, minmax=True)
     a_n = g.acc(N, "VEC3", 5126, 34962)
     a_uv = g.acc(UV, "VEC2", 5126, 34962)
