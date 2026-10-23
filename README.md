@@ -15,6 +15,7 @@ Guias atuais:
 ## Como navegar
 
 - Com mais de um guia visível, o nome do campeão no topo abre o menu de guias.
+- Teclado: `/` vai para a busca; ← → trocam para o matchup anterior/próximo; ↑ ↓ andam uma linha na grade de campeões (no celular, um campeão).
 - O site sempre abre no último guia usado (fica salvo no navegador).
 - Cada guia e cada matchup tem link próprio: `index.html#mordekaiser`, `index.html#mordekaiser/aatrox`. Links antigos do Akshan (`#ahri`) continuam funcionando.
 

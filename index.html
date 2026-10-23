@@ -764,7 +764,7 @@ function renderGuia() {
   $("filtros").innerHTML = filtros.map(f => `<button class="chip" type="button" data-f="${f.id}" aria-pressed="${ativos.has(f.id)}">${f.icone ? `<img src="${f.icone}" alt="" width="20" height="20">` : ""}${esc(f.chave ? t(f.chave) : f.rotulo)}</button>`).join("");
   $("nt").textContent = t(guia.formato === "simples" ? "lembrete" : "comoJogar");
   const marcas = guia.formato === "simples" ? `<span class="ponto-leg" aria-hidden="true"></span>${t("legNoGuia")}` : t("legDif");
-  $("legenda").innerHTML = `${marcas}<span class="atalhos"> · <kbd>/</kbd> ${t("legBusca")} · <kbd>←</kbd> <kbd>→</kbd> ${t("legTroca")}</span>`;
+  $("legenda").innerHTML = `${marcas}<span class="atalhos"> · <kbd>/</kbd> ${t("legBusca")} · <kbd>←</kbd> <kbd>→</kbd> <kbd>↑</kbd> <kbd>↓</kbd> ${t("legTroca")}</span>`;
   const links = guia.links.map(l => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc((L === "en" && l.rotulo_en) || l.rotulo)}</a>`).join(" · ");
   $("rodape").innerHTML = `<p>${esc((L === "en" && guia.fonte_en) || guia.fonte)}${links ? " " + links + "." : ""} ${t("rodapeRiot")}</p><p id="estadoPlanilha" class="estado-planilha" role="status"></p>`;
   mostraPlanilha(guia);
@@ -1132,6 +1132,20 @@ document.addEventListener("keydown", e => {
   if (e.target.closest && e.target.closest("input, textarea, select, .lista")) return;
   if (e.key === "ArrowRight") { toca("avanca"); select(vizinhos([1])[0]); }
   if (e.key === "ArrowLeft") { toca("volta"); select(vizinhos([-1])[0]); }
+  // Cima/baixo andam uma linha da grade (na faixa de uma linha só, um campeão).
+  if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+    const picks = [...lista.querySelectorAll(".pick")];
+    if (!picks.length) return;
+    e.preventDefault();
+    const linha = picks.filter(x => x.offsetTop === picks[0].offsetTop).length;
+    const cols = linha < picks.length ? linha : 1, desce = e.key === "ArrowDown";
+    const i = Math.max(0, shown.indexOf(current)), n = i + (desce ? cols : -cols);
+    // Na borda da grade fica onde está; na faixa dá a volta, como os lados.
+    const c = n >= 0 && n < shown.length ? shown[n] : cols === 1 ? vizinhos([desce ? 1 : -1])[0] : null;
+    if (!c) return;
+    toca(desce ? "avanca" : "volta");
+    select(c);
+  }
 });
 
 /* ---------- Começo: link com guia (#mordekaiser/aatrox), link antigo do Akshan (#ahri) ou o último guia usado ---------- */
