@@ -378,9 +378,11 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   /* A lista gruda só dentro da primeira linha (sticky numa grade prende à grade inteira). */
   .col-lista { grid-column: 1; grid-row: 1; align-self: stretch; min-width: 0; }
   .detalhe { grid-column: 2; grid-row: 1; }
-  .acompanhe { grid-column: 1; grid-row: 2; align-self: end; }
+  .acompanhe { grid-column: 1; grid-row: 2; }
   .rodape { grid-column: 2; grid-row: 2; align-self: end; }
   :root.com-3d[data-guia="akshan"] .akshan3d { grid-column: 3; grid-row: 1 / span 2; }
+  /* A sobra de altura da coluna 3D vai para a linha de baixo: a de cima fica do tamanho do conteúdo. */
+  :root.com-3d[data-guia="akshan"] .palco { grid-template-rows: auto 1fr; }
 }
 .acompanhe { padding: 14px 16px 12px; border-radius: 12px; background: var(--painel); border: 1px solid var(--linha); }
 .acompanhe h2 { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 0 0 10px; font: 700 14px var(--titulo); letter-spacing: .14em; text-transform: uppercase; color: var(--acento-vivo); }
