@@ -1105,6 +1105,7 @@ marcaTema();
 $("som").addEventListener("click", () => {
   somLigado = !somLigado;
   try { localStorage.setItem("som", somLigado ? "ligado" : "desligado"); } catch (e) {}
+  if (!somLigado) paraSons3d();
   marcaSom();
   toca("clique");
 });
@@ -1238,6 +1239,48 @@ const SEQ_3D = {
   recall: [["recall", 1]],
 };
 const EMOTES_3D = ["dance", "joke", "taunt", "laugh"];
+// Sons tirados dos bancos do jogo (sons/akshan3d, gerados por scripts/modelo3d/sons3d.py): quantas variações
+// cada um tem (o jogo sorteia uma) e o que toca quando cada clipe começa. "nome@0.3" = 0,3 s depois;
+// "nome~" repete até a sequência acabar (a música da dança).
+const VARIACOES_3D = { dance_cast: 1, dance: 1, joke: 1, taunt_cast: 1, taunt: 8, laugh: 1, recall: 1, aa1: 3, aa2: 3, crit: 3,
+  q: 1, q_voo: 1, q_pega: 1, w: 1, w_some: 1, w_volta: 1, e: 1, e_balanco: 4, e_tiro: 3, e_idle: 1, r: 1, r_mira: 1, r_bala: 5,
+  r_tiro: 4, r_fim: 1, vo_joke: 1, vo_taunt: 1, vo_laugh: 1, vo_recall: 5, vo_aa1: 4, vo_aa2: 4, vo_crit: 4, vo_q: 5, vo_w: 5,
+  vo_w_fim: 10, vo_e: 6, vo_r: 4, vo_r_tiro: 4 };
+const SONS_CLIPE_3D = {
+  dance_intro: ["dance_cast"], dance: ["dance~"], joke: ["joke", "vo_joke"], taunt_intro: ["taunt_cast", "vo_taunt"], taunt: ["taunt"],
+  laugh: ["laugh", "vo_laugh"], recall: ["recall", "vo_recall"],
+  attack1: ["aa1@.15", "vo_aa1"], attack2: ["aa2@.15", "vo_aa2"], crit: ["crit@.2", "vo_crit"],
+  q: ["q", "vo_q", "q_voo@.35"], q_catch: ["q_pega"],
+  w_intro: ["w", "w_some", "vo_w"], w_exit: ["w_volta", "vo_w_fim"],
+  e: ["e"], e_swing: ["e_balanco", "e_tiro@.1", "vo_e"], e_to_idle: ["e_idle"],
+  r_cast: ["r", "r_mira", "vo_r"], r: ["r_bala@.4", "r_bala@1.2", "r_bala@2", "r_bala@2.7"],
+  r_last: ["r_tiro", "r_tiro@.08", "r_tiro@.16", "vo_r_tiro"], r_to_idle: ["r_fim"],
+};
+const SONS_VOLTA_3D = { taunt: ["taunt"], e_swing: ["e_tiro@.1"] };  // tocam de novo a cada repetição do clipe
+let sons3d = [];
+// Ao voltar para o idle, só os sons que repetem param; falas e efeitos terminam sozinhos.
+function paraRepeticoes3d() { sons3d.forEach(x => { if (x.loop) x.pause(); }); }
+function paraSons3d() {
+  sons3d.forEach(x => (x.pause ? x.pause() : clearTimeout(x)));
+  sons3d = [];
+}
+function tocaSons3d(lista) {
+  if (!somLigado || !lista) return;
+  lista.forEach(item => {
+    const repete = item.endsWith("~");
+    const [nome, atraso] = item.replace("~", "").split("@");
+    const n = VARIACOES_3D[nome];
+    if (!n) return;
+    const vai = () => {
+      const a = new Audio(`sons/akshan3d/${nome}-${Math.floor(Math.random() * n)}.ogg`);
+      a.volume = nome.startsWith("vo_") ? .8 : nome === "dance" ? .45 : .5;
+      a.loop = repete;
+      a.play().catch(() => {});
+      sons3d.push(a);
+    };
+    if (atraso) sons3d.push(setTimeout(vai, parseFloat(atraso) * 1000)); else vai();
+  });
+}
 let estado3d = "";  // "" ainda não tentou, "carregando", "pronto" ou "falhou"
 let ligado3d = true;
 try { ligado3d = localStorage.getItem("akshan3d") !== "0"; } catch (e) {}
@@ -1250,6 +1293,7 @@ function atualiza3d() {
 }
 function liga3d(sim) {
   ligado3d = sim;
+  if (!sim) paraSons3d();
   try { localStorage.setItem("akshan3d", sim ? "1" : "0"); } catch (e) {}
   toca(sim ? "abre" : "fecha");
   atualiza3d();
@@ -1305,17 +1349,18 @@ async function iniciaAkshan3d() {
     const idle = acao("idle");
     const parado = matchMedia("(prefers-reduced-motion: reduce)").matches;
     let atual = idle, fila = [], emote = null, ultima = "", voltas = 0;
-    const tocaClipe = a => { a.reset().play(); if (atual !== a) a.crossFadeFrom(atual, .25, false); atual = a; };
+    const tocaClipe = a => { a.reset().play(); if (atual !== a) a.crossFadeFrom(atual, .25, false); atual = a; tocaSons3d(SONS_CLIPE_3D[a.getClip().name]); };
     const marcaBotoes = () => $("anim3d").querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", b.dataset.anim === emote));
     const proximo = () => {
       if (fila.length) { const [n, v] = fila.shift(); tocaClipe(acao(n, v)); return; }
-      emote = null; marcaBotoes(); tocaClipe(idle);
+      emote = null; marcaBotoes(); paraRepeticoes3d(); tocaClipe(idle);
     };
-    const anima = nome => { emote = nome; fila = SEQ_3D[nome].slice(); marcaBotoes(); proximo(); };
+    const anima = nome => { paraSons3d(); emote = nome; fila = SEQ_3D[nome].slice(); marcaBotoes(); proximo(); };
     mixer.addEventListener("finished", proximo);
     // De tempos em tempos o idle troca pela variação.
     mixer.addEventListener("loop", e => {
-      if (e.action !== idle || emote || parado) return;
+      if (e.action !== idle) { tocaSons3d(SONS_VOLTA_3D[e.action.getClip().name]); return; }
+      if (emote || parado) return;
       if (++voltas % 3 === 0) { emote = "var"; fila = [["idle_var", 1]]; proximo(); }
     });
     if (parado) idle.paused = true;  // com "reduzir movimento" o idle fica parado; os botões ainda funcionam
