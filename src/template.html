@@ -940,7 +940,9 @@ function marcaSom() {
 function prepara(g) {
   if (g.formato === "simples") {
     g.lista = g.matchups.map(([nome, runa, sec, spell, bota, build, notas, guia]) => ({
-      nome, runa, sec, spell, bota, build, guia: !!guia,
+      nome, runa, sec, bota, build, guia: !!guia,
+      // Feitiço extra combinado com o dono do site (meta.json > feitico_extra), somado ao da planilha.
+      spell: g.feitico_extra && g.feitico_extra[nome] && !new RegExp(g.feitico_extra[nome], "i").test(spell) ? `${spell} / ${g.feitico_extra[nome]}` : spell,
       id: g.champs[nome].id, titulo: g.champs[nome].title, titulo_en: g.champs[nome].title_en, mira: g.champs[nome].mira, slug: slug(nome),
       dif: (g.icones_planilha && g.icones_planilha[nome] && g.icones_planilha[nome].dificuldade) || null,
       linhas: notas.split("\n").map(l => l.trim().replace(/\s{2,}/g, " ")).filter(Boolean),
@@ -966,7 +968,7 @@ const rotuloDif = d => t("dif" + d.charAt(0).toUpperCase() + d.slice(1));
 const FILTROS = {
   simples: g => [
     ...DIFS.map(d => ({ id: "dif_" + d, grupo: "dif", cor: d, teste: c => c.dif === d })),
-    ...["Ignite", "TP", "Exhaust"].map(s => ({ id: s, grupo: "feitico", rotulo: s, icone: g.icones[s], teste: c => c.spell === s })),
+    ...["Ignite", "TP", "Exhaust"].map(s => ({ id: s, grupo: "feitico", rotulo: s, icone: g.icones[s], teste: c => c.spell.split(/\s*\/\s*/).includes(s) })),
     { id: "Electro", grupo: "runa", rotulo: "Electro", icone: g.icones.Electro, teste: c => /electro/i.test(c.runa) },
   ],
   completo: () => [
@@ -1214,7 +1216,7 @@ const miraDe = id => { const c = guia.champs && Object.values(guia.champs).find(
 new ResizeObserver(() => enquadraTudo()).observe($("artEle").parentElement);
 
 /* ---------- Formato simples (planilha do Akshan) ---------- */
-const ICON = [[/^ignite$/i, "Ignite"], [/^tp$/i, "TP"], [/^exhaust$/i, "Exhaust"]];
+const ICON = [[/^ignite$/i, "Ignite"], [/^tp$/i, "TP"], [/^exhaust$/i, "Exhaust"], [/^cleanse$/i, "Cleanse"]];
 function opt(raw) {
   const rush = /rush/i.test(raw);
   const word = raw.replace(/rush/i, "").replace(/!+/g, "").trim();
