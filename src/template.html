@@ -1584,13 +1584,22 @@ $("skinBtn").addEventListener("click", () => abreSkins($("skinMenu").hidden));
 // Falas do Akshan (sons/vo/akshan, dublagem pt-BR, de scripts/modelo3d/falas.py): uma sorteada a cada troca de skin.
 // Uma pasta por língua: sons/vo/akshan (dublagem pt-BR) e sons/vo/akshan-en (voz original em inglês).
 const FALAS_SKIN = { pt: 38, en: 38 };
-let ultimaFala = -1;
+let ultimaFala = -1, falaTocando = null, esperaFala;
+// Só fala quando a pessoa para de trocar (0,6 s depois da última troca), e corta a fala anterior:
+// passar várias skins rápido não empilha vozes.
 function falaSkin() {
-  const n = FALAS_SKIN[L] || FALAS_SKIN.pt;
-  let i;
-  do { i = Math.floor(Math.random() * n); } while (i === ultimaFala && n > 1);
-  ultimaFala = i;
-  toca("vo", `sons/vo/akshan${L === "en" ? "-en" : ""}/fala-${i}.ogg`);
+  clearTimeout(esperaFala);
+  if (falaTocando) { falaTocando.pause(); falaTocando = null; }
+  esperaFala = setTimeout(() => {
+    if (!somLigado) return;
+    const n = FALAS_SKIN[L] || FALAS_SKIN.pt;
+    let i;
+    do { i = Math.floor(Math.random() * n); } while (i === ultimaFala && n > 1);
+    ultimaFala = i;
+    falaTocando = new Audio(`sons/vo/akshan${L === "en" ? "-en" : ""}/fala-${i}.ogg`);
+    falaTocando.volume = VOLUME.vo;
+    falaTocando.play().catch(() => {});
+  }, 600);
 }
 function usaSkin(id) {
   if (id === skinAtual().id) return;
