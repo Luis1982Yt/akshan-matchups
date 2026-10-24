@@ -587,11 +587,24 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 @media (prefers-reduced-motion: reduce) { .acompanhe .canal.ao-vivo small::before { animation: none; } }
 .acompanhe .dev { margin: 10px 0 0; text-align: center; font-size: 13px; color: var(--texto-baixo); }
 .acompanhe .dev b { color: var(--texto); }
-/* Link do app da seleção de campeões: só no desktop (é um programa para Windows). */
-.acompanhe .baixa-app { display: none; margin: 6px 0 0; text-align: center; font-size: 13px; }
-.acompanhe .baixa-app a { color: var(--texto-baixo); text-underline-offset: 3px; }
-.acompanhe .baixa-app a:hover { color: var(--acento-vivo); }
+/* App da seleção de campeões: só no desktop (é um programa para Windows). O botão abre a explicação. */
+.acompanhe .baixa-app { display: none; margin: 10px 0 0; }
+.acompanhe .baixa-app button { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; min-height: 44px; padding: 0 14px; border-radius: 10px; border: 1px dashed var(--linha-forte); background: none; color: var(--texto); font: 700 13px var(--corpo); cursor: pointer; }
+.acompanhe .baixa-app button:hover { border-style: solid; border-color: var(--acento-vivo); }
+.acompanhe .baixa-app svg { color: var(--acento-vivo); flex: none; }
 @media (min-width: 901px) { .acompanhe .baixa-app { display: block; } }
+.app-info { width: min(620px, calc(100vw - 32px)); }
+.app-corpo { display: grid; gap: 16px; padding: 18px 22px 22px; font-size: 15px; line-height: 1.6; }
+.app-corpo p { margin: 0; }
+.app-corpo .lead { font-size: 16px; color: var(--texto); }
+.app-corpo ol { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; counter-reset: passo; }
+.app-corpo ol li { position: relative; padding-left: 40px; counter-increment: passo; }
+.app-corpo ol li::before { content: counter(passo); position: absolute; left: 0; top: -1px; width: 28px; height: 28px; display: grid; place-items: center; border-radius: 50%; background: var(--destaque); color: var(--tinta-botao); font: 700 14px var(--titulo); }
+.app-corpo .nota { padding: 12px 14px; border-radius: 10px; border: 1px solid var(--linha); background: var(--painel); font-size: 14px; color: var(--texto-baixo); }
+.app-corpo .nota b { color: var(--texto); }
+.app-corpo .baixar { display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; border-radius: 999px; background: var(--destaque); color: var(--tinta-botao); font: 700 15px var(--corpo); text-decoration: none; }
+.app-corpo .baixar:hover { filter: brightness(1.08); }
+.app-corpo .baixar small { font-weight: 600; opacity: .75; }
 .rodape p { margin: 0; }
 .rodape a { display: inline-block; padding: 10px 0; margin: -10px 0; }
 .estado-planilha:not(:empty) { margin-top: 6px; font-size: 13px; }
@@ -776,6 +789,10 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 </main>
 
 <div class="trava" id="trava" hidden aria-hidden="true"></div>
+<dialog class="tier app-info" id="appInfo" aria-labelledby="appTit">
+  <div class="tier-topo"><h2 id="appTit" data-t="appTit">App para PC</h2><button class="tier-fecha" type="button" id="appFecha" data-t-aria="fechar"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button></div>
+  <div class="app-corpo" id="appCorpo"></div>
+</dialog>
 <dialog class="tier" id="tier" aria-labelledby="tierTit">
   <div class="tier-topo"><h2 id="tierTit"></h2><button class="tier-fecha" type="button" id="tierFecha" data-t-aria="fechar"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button></div>
   <div class="tier-corpo" id="tierCorpo"></div>
@@ -848,7 +865,12 @@ const TXT = {
     linguaRotulo: "Switch to English", linguaBotao: "EN",
     guiaAtual: "Guia atual: ", trocarGuia: ". Trocar de guia", notasDo: "notas do ", matchups: " matchups", aberto: "Aberto",
     facil: "Fácil", medio: "Médio", dificil: "Difícil", resumo: "Resumo", runas: "Runas", itens: "Itens", geral: "Geral",
-    principal: "Principal", fragmentos: "Fragmentos", emote: "Arraste para girar · clique para uma emote", mostra3d: "Mostrar o Akshan 3D", skins: "Skins do Akshan", skinAnt: "Skin anterior", copiar: "Copiar link", copiado: "Link copiado!", copiarLink: "Copiar o link desta matchup", skinProx: "Próxima skin", chromas: "Chromas", semChroma: "Sem chroma", esconde3d: "Esconder o Akshan 3D", carrega3d: "Carregando o Akshan…", tierBotao: "Tier list das matchups", tierTit: "Tier list · {c}", fechar: "Fechar", aoVivo: "Ao vivo", acompanhe: "Acompanhe mono {c}s", assistir: "Assistir", devPor: "Site feito por", baixarApp: "Baixar o app para PC", baixarAppTit: "Programa para Windows que abre a matchup sozinho na seleção de campeões", animacoes: "Animações do Akshan",
+    principal: "Principal", fragmentos: "Fragmentos", emote: "Arraste para girar · clique para uma emote", mostra3d: "Mostrar o Akshan 3D", skins: "Skins do Akshan", skinAnt: "Skin anterior", copiar: "Copiar link", copiado: "Link copiado!", copiarLink: "Copiar o link desta matchup", skinProx: "Próxima skin", chromas: "Chromas", semChroma: "Sem chroma", esconde3d: "Esconder o Akshan 3D", carrega3d: "Carregando o Akshan…", tierBotao: "Tier list das matchups", tierTit: "Tier list · {c}", fechar: "Fechar", aoVivo: "Ao vivo", acompanhe: "Acompanhe mono {c}s", assistir: "Assistir", devPor: "Site feito por", baixarApp: "App para PC: abre a matchup sozinho",
+    appTit: "App para PC", appLead: "Um programinha para Windows que abre esta página sozinho na hora certa: quando você pega Akshan na seleção de campeões, ele descobre o mid inimigo e abre a matchup dele aqui, sem você procurar.",
+    appPassos: ["Baixe e abra o <b>AkshanMatchups.exe</b>. Ele fica no canto da barra de tarefas, perto do relógio, e já liga junto com o Windows (dá para desligar no menu do ícone).", "Entre numa partida e escolha o <b>Akshan</b>. Nas outras partidas o app fica quieto.", "Quando o mid inimigo travar o campeão, a matchup abre no navegador. Se ele errar o mid, troque aqui no site ou pelo menu do ícone (\"Inimigos agora\")."],
+    appSeguro: "<b>Seguro:</b> o app só lê a seleção de campeões pelo próprio cliente do LoL. Nunca escolhe, bane nem aceita fila por você.",
+    appAviso: "<b>Aviso do Windows:</b> como o programa não tem assinatura digital, na primeira vez o Windows pode mostrar um alerta azul. Clique em <b>Mais informações</b> e depois em <b>Executar assim mesmo</b>.",
+    appBaixar: "Baixar o app", appTam: "Windows · grátis", baixarAppTit: "Programa para Windows que abre a matchup sozinho na seleção de campeões", animacoes: "Animações do Akshan",
     a_dance: "Dança", a_taunt: "Provocação", a_laugh: "Risada", a_attack: "Ataque", a_recall: "Recall",
   },
   en: {
@@ -870,7 +892,12 @@ const TXT = {
     linguaRotulo: "Mudar para português", linguaBotao: "PT",
     guiaAtual: "Current guide: ", trocarGuia: ". Change guide", notasDo: "notes by ", matchups: " matchups", aberto: "Open",
     facil: "Easy", medio: "Medium", dificil: "Hard", resumo: "Summary", runas: "Runes", itens: "Items", geral: "Overall",
-    principal: "Primary", fragmentos: "Shards", emote: "Drag to rotate · click for an emote", mostra3d: "Show 3D Akshan", skins: "Akshan skins", skinAnt: "Previous skin", copiar: "Copy link", copiado: "Link copied!", copiarLink: "Copy this matchup's link", skinProx: "Next skin", chromas: "Chromas", semChroma: "No chroma", esconde3d: "Hide 3D Akshan", carrega3d: "Loading Akshan…", tierBotao: "Matchup tier list", tierTit: "Tier list · {c}", fechar: "Close", aoVivo: "Live", acompanhe: "Watch {c} one-tricks", assistir: "Watch", devPor: "Site by", baixarApp: "Download the PC app", baixarAppTit: "Windows app that opens the matchup by itself in champion select", animacoes: "Akshan animations",
+    principal: "Primary", fragmentos: "Shards", emote: "Drag to rotate · click for an emote", mostra3d: "Show 3D Akshan", skins: "Akshan skins", skinAnt: "Previous skin", copiar: "Copy link", copiado: "Link copied!", copiarLink: "Copy this matchup's link", skinProx: "Next skin", chromas: "Chromas", semChroma: "No chroma", esconde3d: "Hide 3D Akshan", carrega3d: "Loading Akshan…", tierBotao: "Matchup tier list", tierTit: "Tier list · {c}", fechar: "Close", aoVivo: "Live", acompanhe: "Watch {c} one-tricks", assistir: "Watch", devPor: "Site by", baixarApp: "PC app: opens the matchup by itself",
+    appTit: "PC app", appLead: "A small Windows program that opens this page by itself at the right time: when you pick Akshan in champion select, it figures out the enemy mid and opens that matchup here, no searching needed.",
+    appPassos: ["Download and open <b>AkshanMatchups.exe</b>. It sits in the taskbar corner, next to the clock, and starts with Windows (you can turn that off in the icon menu).", "Join a game and pick <b>Akshan</b>. In other games the app stays quiet.", "When the enemy mid locks in, the matchup opens in your browser. If it guesses the wrong mid, switch here on the site or in the icon menu (\"Enemies now\")."],
+    appSeguro: "<b>Safe:</b> the app only reads champion select through the LoL client itself. It never picks, bans or accepts queue for you.",
+    appAviso: "<b>Windows warning:</b> since the program isn't digitally signed, Windows may show a blue alert the first time. Click <b>More info</b> and then <b>Run anyway</b>.",
+    appBaixar: "Download the app", appTam: "Windows · free", baixarAppTit: "Windows app that opens the matchup by itself in champion select", animacoes: "Akshan animations",
     a_dance: "Dance", a_taunt: "Taunt", a_laugh: "Laugh", a_attack: "Attack", a_recall: "Recall",
   },
 };
@@ -1093,7 +1120,7 @@ function renderGuia() {
   const twitch = '<svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 2.5L3 6.3v13.2h4.5V22h2.6l2.5-2.5h3.7l4.7-4.7V2.5zm14.6 11.4l-2.8 2.8h-4.5L9.4 19.1v-2.4H5.6V4.3h13.5zM16.2 7.2h-1.8v5.4h1.8zm-4.8 0H9.6v5.4h1.8z" fill="currentColor"/></svg>';
   $("acompanhe").innerHTML = ac.length ? `<h2 id="acompanheTit">${losango}<span>${esc(t("acompanhe").replace("{c}", guia.campeao.nome))}</span>${losango}</h2>
     <ul>${ac.map(x => `<li><a class="canal" href="${esc(x.url)}" target="_blank" rel="noopener">${twitch}<span><b>${esc(x.nome)}</b><small>Twitch</small></span><span class="ir" aria-hidden="true">→</span><span class="sr">, ${t("assistir")}</span></a></li>`).join("")}</ul>
-    <p class="dev">${t("devPor")} <b>Luis1982</b></p>${guia.id === "akshan" ? `<p class="baixa-app"><a href="${APP_URL}" target="_blank" rel="noopener" title="${esc(t("baixarAppTit"))}">${esc(t("baixarApp"))}</a></p>` : ""}` : "";
+    <p class="dev">${t("devPor")} <b>Luis1982</b></p>${guia.id === "akshan" ? `<p class="baixa-app"><button type="button" id="verApp"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 20h8M12 16v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>${esc(t("baixarApp"))}</button></p>` : ""}` : "";
   $("verTier").hidden = !(guia.lista && guia.lista.some(c => c.dif));
   if (typeof marcaAoVivo === "function" && document.readyState === "complete") marcaAoVivo();
   $("rodape").innerHTML = `<p>${esc((L === "en" && guia.fonte_en) || guia.fonte)}${links ? " " + links + "." : ""} ${t("rodapeRiot")}</p><p id="estadoPlanilha" class="estado-planilha" role="status"></p>`;
@@ -1620,6 +1647,22 @@ $("copiar").addEventListener("click", async () => {
   clearTimeout(voltaCopiar);
   voltaCopiar = setTimeout(() => { b.classList.remove("ok"); $("copiarTxt").textContent = t("copiar"); }, 1800);
 });
+
+/* ---------- App para PC: explica o que é antes de mandar para o download ---------- */
+function abreApp() {
+  $("appTit").textContent = t("appTit");
+  $("appCorpo").innerHTML = `<p class="lead">${esc(t("appLead"))}</p>
+    <ol>${t("appPassos").map(x => `<li>${x}</li>`).join("")}</ol>
+    <p class="nota">${t("appSeguro")}</p>
+    <p class="nota">${t("appAviso")}</p>
+    <a class="baixar" href="${APP_URL}" target="_blank" rel="noopener">${esc(t("appBaixar"))} <small>${esc(t("appTam"))}</small></a>`;
+  toca("abre");
+  $("appInfo").showModal();
+}
+$("acompanhe").addEventListener("click", e => { if (e.target.closest("#verApp")) abreApp(); });
+$("appFecha").addEventListener("click", () => $("appInfo").close());
+$("appInfo").addEventListener("close", () => toca("fecha"));
+$("appInfo").addEventListener("click", e => { if (e.target === $("appInfo")) $("appInfo").close(); });
 
 /* ---------- Tier list: os campeões agrupados pela dificuldade da planilha ---------- */
 function abreTier() {
