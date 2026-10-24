@@ -610,6 +610,11 @@
       "runa": true,
       "nome": "Inabalável",
       "nome_en": "Unflinching"
+    },
+    "3006": {
+      "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3006.png",
+      "nome": "Grevas do Berserker",
+      "nome_en": "Berserker's Greaves"
     }
   },
   "texto_pecas": {
@@ -666,6 +671,24 @@
     ],
     "terminus": [
       "3302"
+    ],
+    "mercúrio": [
+      "3111"
+    ],
+    "mercurio": [
+      "3111"
+    ],
+    "vampíricas": [
+      "3008"
+    ],
+    "vampiricas": [
+      "3008"
+    ],
+    "berserker": [
+      "3006"
+    ],
+    "berserkers": [
+      "3006"
     ]
   },
   "imagens": {

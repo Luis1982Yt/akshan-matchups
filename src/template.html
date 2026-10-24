@@ -327,12 +327,13 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .card .selo { position: absolute; z-index: 2; top: 12px; left: 12px; padding: 3px 10px; border-radius: 4px; font: 700 12px/1.4 var(--titulo); letter-spacing: .12em; text-transform: uppercase; background: var(--destaque-arte); color: #111; }
 .skin-btn { position: absolute; z-index: 3; top: 10px; right: 10px; display: flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 12px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, .35); background: rgba(10, 10, 14, .62); color: var(--branco-arte, #f6f3ea); font: 700 12px var(--corpo); letter-spacing: .04em; cursor: pointer; backdrop-filter: blur(4px); }
 .skin-btn[hidden] { display: none; }
-@media (max-width: 900px) { .skin-btn { width: 32px; padding: 0; justify-content: center; } .skin-btn span { display: none; } .skin-menu { top: 48px; left: 8px; right: 8px; min-width: 0; } }
+@media (max-width: 900px) { .skin-btn { width: 32px; padding: 0; justify-content: center; } .skin-btn span { display: none; } }
 .skin-btn:hover { border-color: var(--destaque-arte); }
 .skin-btn svg { color: var(--destaque-arte); }
 /* Toque: a área do botão cresce até 44px sem mudar o desenho. */
 .skin-btn::after { content: ""; position: absolute; inset: -6px; }
-.skin-menu { position: absolute; z-index: 4; top: 50px; right: 10px; display: grid; gap: 4px; min-width: 210px; padding: 6px; border-radius: 12px; border: 1px solid var(--linha-forte); background: var(--painel); box-shadow: var(--sombra); }
+/* O menu fica preso à tela (fixed), não ao card: o card corta o que passa da borda dele. A posição vem do JS. */
+.skin-menu { position: fixed; z-index: 30; display: grid; align-content: start; gap: 4px; width: min(240px, calc(100vw - 24px)); overflow-y: auto; overscroll-behavior: contain; padding: 6px; border-radius: 12px; border: 1px solid var(--linha-forte); background: var(--painel); box-shadow: var(--sombra); }
 .skin-menu[hidden] { display: none; }
 .skin-menu button { display: flex; align-items: center; gap: 10px; min-height: 48px; padding: 4px 10px 4px 4px; border-radius: 8px; border: 0; background: none; color: var(--texto); font: 600 14px var(--corpo); text-align: left; cursor: pointer; }
 .skin-menu button:hover, .skin-menu button[aria-pressed="true"] { background: var(--painel-alto); }
@@ -1484,6 +1485,14 @@ function abreSkins(abrir) {
     m.innerHTML = SKINS.map(k => `<button type="button" data-skin="${k.id}" aria-pressed="${k === atual}"><img src="${tileSkin(guia.campeao.id, k.num)}" alt="" width="40" height="40">${esc((L === "en" && k.nome_en) || k.nome)}</button>`).join("");
   }
   m.hidden = !abrir;
+  if (abrir) {
+    // Logo abaixo do botão, alinhado à direita dele, sem sair da tela; se não couber, rola por dentro.
+    const b = $("skinBtn").getBoundingClientRect(), largura = m.offsetWidth;
+    const topo = b.bottom + 6;
+    m.style.top = topo + "px";
+    m.style.left = Math.max(12, Math.min(b.right - largura, innerWidth - largura - 12)) + "px";
+    m.style.maxHeight = Math.max(160, innerHeight - topo - 12) + "px";
+  }
   $("skinBtn").setAttribute("aria-expanded", abrir);
   toca(abrir ? "abre" : "fecha");
   if (abrir) (m.querySelector('[aria-pressed="true"]') || m.querySelector("button")).focus();
@@ -1503,6 +1512,10 @@ $("skinMenu").addEventListener("click", e => {
 });
 document.addEventListener("click", e => { if (!$("skinMenu").hidden && !e.target.closest("#skinMenu, #skinBtn")) abreSkins(false); });
 document.addEventListener("keydown", e => { if (e.key === "Escape" && !$("skinMenu").hidden) { abreSkins(false); $("skinBtn").focus(); } });
+// Preso à tela, o menu fecharia descolado do botão se a página rolasse ou mudasse de tamanho.
+addEventListener("resize", () => { if (!$("skinMenu").hidden) abreSkins(false); });
+// Só a rolagem da página (a faixa de rostos e o próprio menu rolam sem fechar).
+addEventListener("scroll", () => { if (!$("skinMenu").hidden) abreSkins(false); });
 
 /* ---------- Tier list: os campeões agrupados pela dificuldade da planilha ---------- */
 function abreTier() {

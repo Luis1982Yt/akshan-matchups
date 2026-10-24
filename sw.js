@@ -1,7 +1,7 @@
 // Service worker: deixa o site abrir sem internet (com a última versão vista) e instalável no celular.
 // A página sempre tenta a rede primeiro, então quem tem conexão vê a versão nova na hora.
 // A planilha (docs.google.com) não passa por aqui: o site já guarda a última cópia sozinho.
-const CACHE = "akshan-v1";
+const CACHE = "akshan-v2";
 const BASE = ["/", "/manifest.webmanifest", "/icones/icone-192.png", "/icones/icone-512.png"];
 
 self.addEventListener("install", e => {
@@ -31,7 +31,9 @@ self.addEventListener("fetch", e => {
 
   // Página: rede primeiro; sem internet, a última versão guardada.
   if (req.mode === "navigate") {
-    e.respondWith(fetch(req).then(res => guarda("/", res)).catch(() => caches.match("/")));
+    // Só a página do site (/ ou /index.html) vira a cópia para abrir sem internet.
+    const principal = url.pathname === "/" || url.pathname === "/index.html";
+    e.respondWith(fetch(req).then(res => (principal ? guarda("/", res) : res)).catch(() => caches.match("/")));
     return;
   }
   // Imagens do Data Dragon, three.js, sons e o modelo 3D: responde do cache e atualiza por trás.
