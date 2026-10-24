@@ -28,6 +28,7 @@ self.addEventListener("fetch", e => {
   if (req.method !== "GET" || req.headers.has("range")) return;
   const url = new URL(req.url);
   if (url.hostname === "docs.google.com" || url.hostname === "decapi.me") return;
+  if (url.pathname.startsWith("/_vercel/")) return;  // contador de visitas: sempre direto da rede
 
   // Página: rede primeiro; sem internet, a última versão guardada.
   if (req.mode === "navigate") {

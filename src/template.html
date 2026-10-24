@@ -1849,6 +1849,11 @@ async function iniciaAkshan3d() {
 }
 setTimeout(atualiza3d, 50);
 // App instalável e abrindo sem internet (sw.js); aberto como arquivo não tem como.
+// Contador de visitas da Vercel (Web Analytics): sem cookies, só no site publicado.
+if (location.hostname.endsWith("vercel.app")) {
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  const sv = document.createElement("script"); sv.defer = true; sv.src = "/_vercel/insights/script.js"; document.head.appendChild(sv);
+}
 if ("serviceWorker" in navigator && location.protocol !== "file:") {
   addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
 }  // logo depois de montar a página, sem esperar as imagens
