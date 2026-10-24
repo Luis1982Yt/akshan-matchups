@@ -830,7 +830,8 @@ const tileSkin = (id, num) => `${DD}img/champion/tiles/${id}_${num}.jpg`;
 // Arte de carregamento do campeão do guia na skin escolhida (a do VS de travar o pick).
 const artePropria = () => `${DD}img/champion/loading/${guia.campeao.id}_${guia.id === "akshan" ? skinAtual().num : 0}.jpg`;
 // App de bandeja (pasta app/ do repositório), publicado nas releases do GitHub.
-const APP_URL = "https://github.com/Luis1982Yt/akshan-matchups/releases/latest";
+// Endereço que baixa o .exe direto (o GitHub responde como anexo), sem abrir a página da release.
+const APP_URL = "https://github.com/Luis1982Yt/akshan-matchups/releases/latest/download/AkshanMatchups.exe";
 
 const slug = s => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/['’.]/g, "").replace(/\s+/g, "-");
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -872,7 +873,7 @@ const TXT = {
     appSeguro: "<b>Seguro:</b> o app só lê a seleção de campeões pelo próprio cliente do LoL. Nunca escolhe, bane nem aceita fila por você.",
     appAviso: "<b>Aviso do Windows:</b> como o programa não tem assinatura digital, na primeira vez o Windows pode mostrar um alerta azul. Clique em <b>Mais informações</b> e depois em <b>Executar assim mesmo</b>.",
     appOpcional: "Se você não se sentir confortável em baixar, tudo continua funcionando aqui no site. O app é só uma forma de deixar o uso mais prático.",
-    appBaixar: "Baixar o app", appTam: "Windows · grátis", baixarAppTit: "Programa para Windows que abre a matchup sozinho na seleção de campeões", animacoes: "Animações do Akshan",
+    appBaixar: "Baixar o app", appTam: "Windows · grátis · 21 MB", baixarAppTit: "Programa para Windows que abre a matchup sozinho na seleção de campeões", animacoes: "Animações do Akshan",
     a_dance: "Dança", a_taunt: "Provocação", a_laugh: "Risada", a_attack: "Ataque", a_recall: "Recall",
   },
   en: {
@@ -900,7 +901,7 @@ const TXT = {
     appSeguro: "<b>Safe:</b> the app only reads champion select through the LoL client itself. It never picks, bans or accepts queue for you.",
     appAviso: "<b>Windows warning:</b> since the program isn't digitally signed, Windows may show a blue alert the first time. Click <b>More info</b> and then <b>Run anyway</b>.",
     appOpcional: "If you don't feel comfortable downloading it, everything still works right here on the site. The app is just a way to make it more convenient.",
-    appBaixar: "Download the app", appTam: "Windows · free", baixarAppTit: "Windows app that opens the matchup by itself in champion select", animacoes: "Akshan animations",
+    appBaixar: "Download the app", appTam: "Windows · free · 21 MB", baixarAppTit: "Windows app that opens the matchup by itself in champion select", animacoes: "Akshan animations",
     a_dance: "Dance", a_taunt: "Taunt", a_laugh: "Laugh", a_attack: "Attack", a_recall: "Recall",
   },
 };
@@ -1659,7 +1660,7 @@ function abreApp() {
     <p class="nota">${t("appSeguro")}</p>
     <p class="nota">${t("appAviso")}</p>
     <p class="opcional">${esc(t("appOpcional"))}</p>
-    <a class="baixar" href="${APP_URL}" target="_blank" rel="noopener">${esc(t("appBaixar"))} <small>${esc(t("appTam"))}</small></a>`;
+    <a class="baixar" href="${APP_URL}" download>${esc(t("appBaixar"))} <small>${esc(t("appTam"))}</small></a>`;
   toca("abre");
   $("appInfo").showModal();
 }
