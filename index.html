@@ -1561,11 +1561,13 @@ function abreSkins(abrir) {
     const ch = chromaAtual();
     m.innerHTML = SKINS.map(k => {
       const linha = `<button type="button" data-skin="${k.id}" aria-pressed="${k === atual}"><img src="${tileSkin(guia.campeao.id, k.num)}" alt="" width="40" height="40">${esc((L === "en" && k.nome_en) || k.nome)}</button>`;
-      const cs = k === atual ? CHROMAS[k.id] || [] : [];
+      // Chromas de todas as skins à vista: um clique na bolinha já troca skin + chroma e fecha.
+      const cs = CHROMAS[k.id] || [];
       if (!cs.length) return linha;
-      return linha + `<div class="skin-chromas" role="group" aria-label="${t("chromas")}"><button type="button" class="base" data-chroma="0" aria-pressed="${!ch}" aria-label="${t("semChroma")}" title="${t("semChroma")}">–</button>${cs.map(c => {
+      const skinNome = (L === "en" && k.nome_en) || k.nome;
+      return linha + `<div class="skin-chromas" role="group" aria-label="${esc(t("chromas") + " · " + skinNome)}">${cs.map(c => {
         const nome = esc((L === "en" && c.nome_en) || c.nome);
-        return `<button type="button" data-chroma="${c.num}" aria-pressed="${ch === c}" aria-label="${nome}" title="${nome}" style="--c1: ${c.cores[0] || "#888"}; --c2: ${c.cores[1] || c.cores[0] || "#888"}"></button>`;
+        return `<button type="button" data-chroma="${c.num}" data-mae="${k.id}" aria-pressed="${k === atual && ch === c}" aria-label="${esc(skinNome)} · ${nome}" title="${nome}" style="--c1: ${c.cores[0] || "#888"}; --c2: ${c.cores[1] || c.cores[0] || "#888"}"></button>`;
       }).join("")}</div>`;
     }).join("");
   }
@@ -1582,7 +1584,7 @@ function abreSkins(abrir) {
   abreSkins.aberto = abrir;
   $("skinBtn").setAttribute("aria-expanded", abrir);
   if (!jaAberto) toca(abrir ? "abre" : "fecha");
-  if (abrir) (m.querySelector('.skin-chromas [aria-pressed="true"]') || m.querySelector('[aria-pressed="true"]') || m.querySelector("button")).focus();
+  if (abrir) (m.querySelector('[aria-pressed="true"]') || m.querySelector("button")).focus();
 }
 $("skinBtn").addEventListener("click", () => abreSkins($("skinMenu").hidden));
 // Falas do Akshan (sons/vo/akshan, dublagem pt-BR, de scripts/modelo3d/falas.py): uma sorteada a cada troca de skin.
@@ -1624,13 +1626,16 @@ function usaChroma(num) {
 $("skinMenu").addEventListener("click", e => {
   e.stopPropagation();  // o menu se redesenha; sem isso o clique "de fora" fecharia ele
   const c = e.target.closest("[data-chroma]");
-  if (c) { toca("chip"); usaChroma(+c.dataset.chroma); abreSkins(true); return; }
   const b = e.target.closest("[data-skin]");
-  if (!b) return;
-  const mesma = b.dataset.skin === skinAtual().id;
-  usaSkin(b.dataset.skin);
-  // Escolheu outra skin com chromas: o menu continua aberto para mostrar as cores dela.
-  if (!mesma && (CHROMAS[b.dataset.skin] || []).length) { abreSkins(true); return; }
+  if (!c && !b) return;
+  if (c) {
+    toca("chip");
+    usaSkin(c.dataset.mae);
+    usaChroma(+c.dataset.chroma);
+  } else {
+    usaSkin(b.dataset.skin);
+    if (chromaNum) usaChroma(0);  // clicar no nome da skin = ela sem chroma
+  }
   abreSkins(false);
   $("skinBtn").focus();
 });
