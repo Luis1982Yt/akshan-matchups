@@ -42,6 +42,14 @@ Guias atuais:
 - `scripts/atualizar_mordekaiser.py`: baixa de novo a planilha do Meowdekaiser e os dados do Data Dragon e refaz o `matchups.json` (precisa de internet). Depois rode o build.
 - `PRODUCT.md` e `DESIGN.md`: o que o produto é e o sistema visual.
 
+## App da seleção de campeões (Windows)
+
+`app/` tem um programa de bandeja para Windows: quando o jogador está de Akshan na seleção de campeões, ele adivinha o mid inimigo (entre os inimigos que estão no guia, o que mais joga mid) e abre o site direto na matchup (`#akshan/<slug>`). Só lê a sessão pela API local do cliente; nunca escolhe, bane nem aceita fila. Inicia com o Windows (dá para desligar no menu da bandeja).
+
+- Download: [releases do GitHub](https://github.com/Luis1982Yt/akshan-matchups/releases/latest) (`AkshanMatchups.exe`, um arquivo só, não precisa de Python). O link "Baixar o app para PC" fica no card "Acompanhe", só no desktop (`APP_URL` no template).
+- Código, testes e como gerar o .exe: `app/README.md` (`python app/gerar_exe.py`; testes com `python -m unittest app/test_akshan_app.py`).
+- A pasta `app/` não vai para a Vercel (`.vercelignore`).
+
 ## Adicionar um guia novo
 
 1. Coloque os dados em `src/guias/<campeão>/`. Planilhas no formato do Akshan usam `"formato": "simples"`; planilhas grandes como a do Meowdekaiser usam `"formato": "completo"` com um `matchups.json` (copie o `atualizar_mordekaiser.py` e ajuste as colunas).

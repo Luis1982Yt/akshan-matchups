@@ -589,6 +589,11 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 @media (prefers-reduced-motion: reduce) { .acompanhe .canal.ao-vivo small::before { animation: none; } }
 .acompanhe .dev { margin: 10px 0 0; text-align: center; font-size: 13px; color: var(--texto-baixo); }
 .acompanhe .dev b { color: var(--texto); }
+/* Link do app da seleção de campeões: só no desktop (é um programa para Windows). */
+.acompanhe .baixa-app { display: none; margin: 6px 0 0; text-align: center; font-size: 13px; }
+.acompanhe .baixa-app a { color: var(--texto-baixo); text-underline-offset: 3px; }
+.acompanhe .baixa-app a:hover { color: var(--acento-vivo); }
+@media (min-width: 901px) { .acompanhe .baixa-app { display: block; } }
 .rodape p { margin: 0; }
 .rodape a { display: inline-block; padding: 10px 0; margin: -10px 0; }
 .estado-planilha:not(:empty) { margin-top: 6px; font-size: 13px; }
@@ -808,6 +813,9 @@ const cenaSkin = (id, num) => `${DD}img/champion/centered/${id}_${num}.jpg`;
 const tileSkin = (id, num) => `${DD}img/champion/tiles/${id}_${num}.jpg`;
 // Arte de carregamento do campeão do guia na skin escolhida (a do VS de travar o pick).
 const artePropria = () => `${DD}img/champion/loading/${guia.campeao.id}_${guia.id === "akshan" ? skinAtual().num : 0}.jpg`;
+// App de bandeja (pasta app/ do repositório), publicado nas releases do GitHub.
+const APP_URL = "https://github.com/Luis1982Yt/akshan-matchups/releases/latest";
+
 const slug = s => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/['’.]/g, "").replace(/\s+/g, "-");
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const $ = id => document.getElementById(id);
@@ -842,7 +850,7 @@ const TXT = {
     linguaRotulo: "Switch to English", linguaBotao: "EN",
     guiaAtual: "Guia atual: ", trocarGuia: ". Trocar de guia", notasDo: "notas do ", matchups: " matchups", aberto: "Aberto",
     facil: "Fácil", medio: "Médio", dificil: "Difícil", resumo: "Resumo", runas: "Runas", itens: "Itens", geral: "Geral",
-    principal: "Principal", fragmentos: "Fragmentos", emote: "Arraste para girar · clique para uma emote", mostra3d: "Mostrar o Akshan 3D", skins: "Skins do Akshan", skinAnt: "Skin anterior", copiar: "Copiar link", copiado: "Link copiado!", copiarLink: "Copiar o link desta matchup", skinProx: "Próxima skin", chromas: "Chromas", semChroma: "Sem chroma", esconde3d: "Esconder o Akshan 3D", carrega3d: "Carregando o Akshan…", tierBotao: "Tier list das matchups", tierTit: "Tier list · {c}", fechar: "Fechar", aoVivo: "Ao vivo", acompanhe: "Acompanhe mono {c}s", assistir: "Assistir", devPor: "Site feito por", animacoes: "Animações do Akshan",
+    principal: "Principal", fragmentos: "Fragmentos", emote: "Arraste para girar · clique para uma emote", mostra3d: "Mostrar o Akshan 3D", skins: "Skins do Akshan", skinAnt: "Skin anterior", copiar: "Copiar link", copiado: "Link copiado!", copiarLink: "Copiar o link desta matchup", skinProx: "Próxima skin", chromas: "Chromas", semChroma: "Sem chroma", esconde3d: "Esconder o Akshan 3D", carrega3d: "Carregando o Akshan…", tierBotao: "Tier list das matchups", tierTit: "Tier list · {c}", fechar: "Fechar", aoVivo: "Ao vivo", acompanhe: "Acompanhe mono {c}s", assistir: "Assistir", devPor: "Site feito por", baixarApp: "Baixar o app para PC", baixarAppTit: "Programa para Windows que abre a matchup sozinho na seleção de campeões", animacoes: "Animações do Akshan",
     a_dance: "Dança", a_taunt: "Provocação", a_laugh: "Risada", a_attack: "Ataque", a_recall: "Recall",
   },
   en: {
@@ -864,7 +872,7 @@ const TXT = {
     linguaRotulo: "Mudar para português", linguaBotao: "PT",
     guiaAtual: "Current guide: ", trocarGuia: ". Change guide", notasDo: "notes by ", matchups: " matchups", aberto: "Open",
     facil: "Easy", medio: "Medium", dificil: "Hard", resumo: "Summary", runas: "Runes", itens: "Items", geral: "Overall",
-    principal: "Primary", fragmentos: "Shards", emote: "Drag to rotate · click for an emote", mostra3d: "Show 3D Akshan", skins: "Akshan skins", skinAnt: "Previous skin", copiar: "Copy link", copiado: "Link copied!", copiarLink: "Copy this matchup's link", skinProx: "Next skin", chromas: "Chromas", semChroma: "No chroma", esconde3d: "Hide 3D Akshan", carrega3d: "Loading Akshan…", tierBotao: "Matchup tier list", tierTit: "Tier list · {c}", fechar: "Close", aoVivo: "Live", acompanhe: "Watch {c} one-tricks", assistir: "Watch", devPor: "Site by", animacoes: "Akshan animations",
+    principal: "Primary", fragmentos: "Shards", emote: "Drag to rotate · click for an emote", mostra3d: "Show 3D Akshan", skins: "Akshan skins", skinAnt: "Previous skin", copiar: "Copy link", copiado: "Link copied!", copiarLink: "Copy this matchup's link", skinProx: "Next skin", chromas: "Chromas", semChroma: "No chroma", esconde3d: "Hide 3D Akshan", carrega3d: "Loading Akshan…", tierBotao: "Matchup tier list", tierTit: "Tier list · {c}", fechar: "Close", aoVivo: "Live", acompanhe: "Watch {c} one-tricks", assistir: "Watch", devPor: "Site by", baixarApp: "Download the PC app", baixarAppTit: "Windows app that opens the matchup by itself in champion select", animacoes: "Akshan animations",
     a_dance: "Dance", a_taunt: "Taunt", a_laugh: "Laugh", a_attack: "Attack", a_recall: "Recall",
   },
 };
@@ -1087,7 +1095,7 @@ function renderGuia() {
   const twitch = '<svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 2.5L3 6.3v13.2h4.5V22h2.6l2.5-2.5h3.7l4.7-4.7V2.5zm14.6 11.4l-2.8 2.8h-4.5L9.4 19.1v-2.4H5.6V4.3h13.5zM16.2 7.2h-1.8v5.4h1.8zm-4.8 0H9.6v5.4h1.8z" fill="currentColor"/></svg>';
   $("acompanhe").innerHTML = ac.length ? `<h2 id="acompanheTit">${losango}<span>${esc(t("acompanhe").replace("{c}", guia.campeao.nome))}</span>${losango}</h2>
     <ul>${ac.map(x => `<li><a class="canal" href="${esc(x.url)}" target="_blank" rel="noopener">${twitch}<span><b>${esc(x.nome)}</b><small>Twitch</small></span><span class="ir" aria-hidden="true">→</span><span class="sr">, ${t("assistir")}</span></a></li>`).join("")}</ul>
-    <p class="dev">${t("devPor")} <b>Luis1982</b></p>` : "";
+    <p class="dev">${t("devPor")} <b>Luis1982</b></p>${guia.id === "akshan" ? `<p class="baixa-app"><a href="${APP_URL}" target="_blank" rel="noopener" title="${esc(t("baixarAppTit"))}">${esc(t("baixarApp"))}</a></p>` : ""}` : "";
   $("verTier").hidden = !(guia.lista && guia.lista.some(c => c.dif));
   if (typeof marcaAoVivo === "function" && document.readyState === "complete") marcaAoVivo();
   $("rodape").innerHTML = `<p>${esc((L === "en" && guia.fonte_en) || guia.fonte)}${links ? " " + links + "." : ""} ${t("rodapeRiot")}</p><p id="estadoPlanilha" class="estado-planilha" role="status"></p>`;
