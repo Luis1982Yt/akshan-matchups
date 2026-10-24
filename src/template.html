@@ -602,6 +602,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .app-corpo ol li::before { content: counter(passo); position: absolute; left: 0; top: -1px; width: 28px; height: 28px; display: grid; place-items: center; border-radius: 50%; background: var(--destaque); color: var(--tinta-botao); font: 700 14px var(--titulo); }
 .app-corpo .nota { padding: 12px 14px; border-radius: 10px; border: 1px solid var(--linha); background: var(--painel); font-size: 14px; color: var(--texto-baixo); }
 .app-corpo .nota b { color: var(--texto); }
+.app-corpo .opcional { text-align: center; font-size: 14px; color: var(--texto-baixo); }
 .app-corpo .baixar { display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; border-radius: 999px; background: var(--destaque); color: var(--tinta-botao); font: 700 15px var(--corpo); text-decoration: none; }
 .app-corpo .baixar:hover { filter: brightness(1.08); }
 .app-corpo .baixar small { font-weight: 600; opacity: .75; }
@@ -870,6 +871,7 @@ const TXT = {
     appPassos: ["Baixe e abra o <b>AkshanMatchups.exe</b>. Ele fica no canto da barra de tarefas, perto do relógio, e já liga junto com o Windows (dá para desligar no menu do ícone).", "Entre numa partida e escolha o <b>Akshan</b>. Nas outras partidas o app fica quieto.", "Quando o mid inimigo travar o campeão, a matchup abre no navegador. Se ele errar o mid, troque aqui no site ou pelo menu do ícone (\"Inimigos agora\")."],
     appSeguro: "<b>Seguro:</b> o app só lê a seleção de campeões pelo próprio cliente do LoL. Nunca escolhe, bane nem aceita fila por você.",
     appAviso: "<b>Aviso do Windows:</b> como o programa não tem assinatura digital, na primeira vez o Windows pode mostrar um alerta azul. Clique em <b>Mais informações</b> e depois em <b>Executar assim mesmo</b>.",
+    appOpcional: "Se você não se sentir confortável em baixar, tudo continua funcionando aqui no site. O app é só uma forma de deixar o uso mais prático.",
     appBaixar: "Baixar o app", appTam: "Windows · grátis", baixarAppTit: "Programa para Windows que abre a matchup sozinho na seleção de campeões", animacoes: "Animações do Akshan",
     a_dance: "Dança", a_taunt: "Provocação", a_laugh: "Risada", a_attack: "Ataque", a_recall: "Recall",
   },
@@ -897,6 +899,7 @@ const TXT = {
     appPassos: ["Download and open <b>AkshanMatchups.exe</b>. It sits in the taskbar corner, next to the clock, and starts with Windows (you can turn that off in the icon menu).", "Join a game and pick <b>Akshan</b>. In other games the app stays quiet.", "When the enemy mid locks in, the matchup opens in your browser. If it guesses the wrong mid, switch here on the site or in the icon menu (\"Enemies now\")."],
     appSeguro: "<b>Safe:</b> the app only reads champion select through the LoL client itself. It never picks, bans or accepts queue for you.",
     appAviso: "<b>Windows warning:</b> since the program isn't digitally signed, Windows may show a blue alert the first time. Click <b>More info</b> and then <b>Run anyway</b>.",
+    appOpcional: "If you don't feel comfortable downloading it, everything still works right here on the site. The app is just a way to make it more convenient.",
     appBaixar: "Download the app", appTam: "Windows · free", baixarAppTit: "Windows app that opens the matchup by itself in champion select", animacoes: "Akshan animations",
     a_dance: "Dance", a_taunt: "Taunt", a_laugh: "Laugh", a_attack: "Attack", a_recall: "Recall",
   },
@@ -1655,6 +1658,7 @@ function abreApp() {
     <ol>${t("appPassos").map(x => `<li>${x}</li>`).join("")}</ol>
     <p class="nota">${t("appSeguro")}</p>
     <p class="nota">${t("appAviso")}</p>
+    <p class="opcional">${esc(t("appOpcional"))}</p>
     <a class="baixar" href="${APP_URL}" target="_blank" rel="noopener">${esc(t("appBaixar"))} <small>${esc(t("appTam"))}</small></a>`;
   toca("abre");
   $("appInfo").showModal();
