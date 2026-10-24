@@ -778,6 +778,8 @@ const modeloSkin = k => (k.id ? `modelo/akshan-${k.id}.glb` : "modelo/akshan.glb
 const skinAtual = () => SKINS.find(k => k.id === (document.documentElement.dataset.skin || "")) || SKINS[0];
 const cenaSkin = (id, num) => `${DD}img/champion/centered/${id}_${num}.jpg`;
 const tileSkin = (id, num) => `${DD}img/champion/tiles/${id}_${num}.jpg`;
+// Arte de carregamento do campeão do guia na skin escolhida (a do VS de travar o pick).
+const artePropria = () => `${DD}img/champion/loading/${guia.campeao.id}_${guia.id === "akshan" ? skinAtual().num : 0}.jpg`;
 const slug = s => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/['’.]/g, "").replace(/\s+/g, "-");
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const $ = id => document.getElementById(id);
@@ -1317,7 +1319,7 @@ function travar() {
   // Só rola se o setup não estiver à vista (no celular, por exemplo).
   const desce = () => { const st = $("st").parentElement; if (st.getBoundingClientRect().top > innerHeight * .6) st.scrollIntoView({ behavior: semMovimento() ? "auto" : "smooth", block: "start" }); };
   if (semMovimento()) { desce(); return; }
-  t.innerHTML = `<figure class="eu"><img src="${arte(guia.campeao.id)}" alt=""><figcaption>${esc(guia.campeao.nome)}</figcaption></figure>
+  t.innerHTML = `<figure class="eu"><img src="${artePropria()}" alt=""><figcaption>${esc(guia.campeao.nome)}</figcaption></figure>
     <figure class="ele"><img src="${arte(current.id)}" alt=""><figcaption>${esc(current.nome)}</figcaption></figure><span class="vs">VS</span>`;
   t.hidden = false; t.classList.remove("on"); void t.offsetWidth; t.classList.add("on");
   const fecha = () => { clearTimeout(fechaTrava); t.hidden = true; t.classList.remove("on"); t.onclick = null; desce(); };
