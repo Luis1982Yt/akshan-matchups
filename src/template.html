@@ -538,6 +538,8 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .navega button { min-height: 44px; padding: 0 14px; display: inline-flex; align-items: center; gap: 8px; cursor: pointer; border-radius: 8px; border: 1px solid var(--linha-forte); background: var(--painel); color: var(--texto); font-weight: 600; font-size: 15px; }
 .navega button:hover { border-color: var(--acento-vivo); }
 .navega img { width: 24px; height: 24px; border-radius: 4px; }
+.navega .copiar svg { color: var(--acento-vivo); flex: none; }
+.navega .copiar.ok { border-color: var(--acento-vivo); color: var(--acento-vivo); }
 .lembretes { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; counter-reset: n; }
 .lembretes li { display: grid; grid-template-columns: 44px minmax(0, 1fr); align-items: start; padding: 12px 16px; border-radius: 10px; background: var(--painel); border: 1px solid var(--linha); font-size: 17px; line-height: 1.6; counter-increment: n; }
 .lembretes li::before { content: counter(n); width: 30px; height: 30px; margin-top: 1px; display: grid; place-items: center; border-radius: 50%; background: var(--destaque); color: var(--tinta-botao); font: 800 15px/1 var(--titulo); }
@@ -753,6 +755,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
         <div class="navega">
           <h2 id="nt"></h2>
           <div>
+            <button type="button" class="copiar" id="copiar" data-t-aria="copiarLink" data-t-title="copiarLink"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4.5 4.5 0 0 0 6.4 0l3.2-3.2a4.5 4.5 0 0 0-6.4-6.4l-1.1 1.1M14 10a4.5 4.5 0 0 0-6.4 0l-3.2 3.2a4.5 4.5 0 0 0 6.4 6.4l1.1-1.1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="lbl" id="copiarTxt" data-t="copiar">Copiar link</span></button>
             <button type="button" id="ant"></button>
             <button type="button" id="prox"></button>
           </div>
@@ -837,7 +840,7 @@ const TXT = {
     linguaRotulo: "Switch to English", linguaBotao: "EN",
     guiaAtual: "Guia atual: ", trocarGuia: ". Trocar de guia", notasDo: "notas do ", matchups: " matchups", aberto: "Aberto",
     facil: "Fácil", medio: "Médio", dificil: "Difícil", resumo: "Resumo", runas: "Runas", itens: "Itens", geral: "Geral",
-    principal: "Principal", fragmentos: "Fragmentos", emote: "Arraste para girar · clique para uma emote", mostra3d: "Mostrar o Akshan 3D", skins: "Skins do Akshan", skinAnt: "Skin anterior", skinProx: "Próxima skin", chromas: "Chromas", semChroma: "Sem chroma", esconde3d: "Esconder o Akshan 3D", carrega3d: "Carregando o Akshan…", tierBotao: "Tier list das matchups", tierTit: "Tier list · {c}", fechar: "Fechar", aoVivo: "Ao vivo", acompanhe: "Acompanhe mono {c}s", assistir: "Assistir", devPor: "Site feito por", animacoes: "Animações do Akshan",
+    principal: "Principal", fragmentos: "Fragmentos", emote: "Arraste para girar · clique para uma emote", mostra3d: "Mostrar o Akshan 3D", skins: "Skins do Akshan", skinAnt: "Skin anterior", copiar: "Copiar link", copiado: "Link copiado!", copiarLink: "Copiar o link desta matchup", skinProx: "Próxima skin", chromas: "Chromas", semChroma: "Sem chroma", esconde3d: "Esconder o Akshan 3D", carrega3d: "Carregando o Akshan…", tierBotao: "Tier list das matchups", tierTit: "Tier list · {c}", fechar: "Fechar", aoVivo: "Ao vivo", acompanhe: "Acompanhe mono {c}s", assistir: "Assistir", devPor: "Site feito por", animacoes: "Animações do Akshan",
     a_dance: "Dança", a_taunt: "Provocação", a_laugh: "Risada", a_attack: "Ataque", a_recall: "Recall",
   },
   en: {
@@ -859,7 +862,7 @@ const TXT = {
     linguaRotulo: "Mudar para português", linguaBotao: "PT",
     guiaAtual: "Current guide: ", trocarGuia: ". Change guide", notasDo: "notes by ", matchups: " matchups", aberto: "Open",
     facil: "Easy", medio: "Medium", dificil: "Hard", resumo: "Summary", runas: "Runes", itens: "Items", geral: "Overall",
-    principal: "Primary", fragmentos: "Shards", emote: "Drag to rotate · click for an emote", mostra3d: "Show 3D Akshan", skins: "Akshan skins", skinAnt: "Previous skin", skinProx: "Next skin", chromas: "Chromas", semChroma: "No chroma", esconde3d: "Hide 3D Akshan", carrega3d: "Loading Akshan…", tierBotao: "Matchup tier list", tierTit: "Tier list · {c}", fechar: "Close", aoVivo: "Live", acompanhe: "Watch {c} one-tricks", assistir: "Watch", devPor: "Site by", animacoes: "Akshan animations",
+    principal: "Primary", fragmentos: "Shards", emote: "Drag to rotate · click for an emote", mostra3d: "Show 3D Akshan", skins: "Akshan skins", skinAnt: "Previous skin", copiar: "Copy link", copiado: "Link copied!", copiarLink: "Copy this matchup's link", skinProx: "Next skin", chromas: "Chromas", semChroma: "No chroma", esconde3d: "Hide 3D Akshan", carrega3d: "Loading Akshan…", tierBotao: "Matchup tier list", tierTit: "Tier list · {c}", fechar: "Close", aoVivo: "Live", acompanhe: "Watch {c} one-tricks", assistir: "Watch", devPor: "Site by", animacoes: "Akshan animations",
     a_dance: "Dance", a_taunt: "Taunt", a_laugh: "Laugh", a_attack: "Attack", a_recall: "Recall",
   },
 };
@@ -1538,8 +1541,18 @@ function abreSkins(abrir) {
   if (abrir) (m.querySelector('.skin-chromas [aria-pressed="true"]') || m.querySelector('[aria-pressed="true"]') || m.querySelector("button")).focus();
 }
 $("skinBtn").addEventListener("click", () => abreSkins($("skinMenu").hidden));
+// Falas do Akshan (sons/vo/akshan, dublagem pt-BR, de scripts/modelo3d/falas.py): uma sorteada a cada troca de skin.
+const FALAS_SKIN = 38;
+let ultimaFala = -1;
+function falaSkin() {
+  let i;
+  do { i = Math.floor(Math.random() * FALAS_SKIN); } while (i === ultimaFala && FALAS_SKIN > 1);
+  ultimaFala = i;
+  toca("vo", `sons/vo/akshan/fala-${i}.ogg`);
+}
 function usaSkin(id) {
   if (id === skinAtual().id) return;
+  falaSkin();
   if (id) document.documentElement.dataset.skin = id; else delete document.documentElement.dataset.skin;
   chromaNum = 0;
   try { id ? localStorage.setItem("skin", id) : localStorage.removeItem("skin"); localStorage.removeItem("chroma"); } catch (e) {}
@@ -1580,6 +1593,22 @@ document.addEventListener("keydown", e => { if (e.key === "Escape" && !$("skinMe
 addEventListener("resize", () => { if (!$("skinMenu").hidden) abreSkins(false); });
 // Só a rolagem da página (a faixa de rostos e o próprio menu rolam sem fechar).
 addEventListener("scroll", () => { if (!$("skinMenu").hidden) abreSkins(false); });
+
+/* ---------- Copiar o link da matchup aberta (para mandar no WhatsApp ou no Discord) ---------- */
+let voltaCopiar;
+$("copiar").addEventListener("click", async () => {
+  const link = location.protocol === "file:" ? `https://akshan-matchups.vercel.app/${location.hash}` : location.href;
+  try { await navigator.clipboard.writeText(link); } catch (e) {
+    // Sem permissão de área de transferência: copia por um campo escondido.
+    const c = document.createElement("textarea"); c.value = link; c.style.cssText = "position:fixed;opacity:0"; document.body.appendChild(c); c.select();
+    try { document.execCommand("copy"); } catch (e2) {}
+    c.remove();
+  }
+  toca("clique");
+  const b = $("copiar"); b.classList.add("ok"); $("copiarTxt").textContent = t("copiado"); anuncia(t("copiado"));
+  clearTimeout(voltaCopiar);
+  voltaCopiar = setTimeout(() => { b.classList.remove("ok"); $("copiarTxt").textContent = t("copiar"); }, 1800);
+});
 
 /* ---------- Tier list: os campeões agrupados pela dificuldade da planilha ---------- */
 function abreTier() {

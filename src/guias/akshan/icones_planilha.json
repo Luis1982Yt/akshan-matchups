@@ -14,7 +14,7 @@
    ]
   },
   "bota": {
-   "texto": "Mercs / Vamps",
+   "texto": "Mercúrio / Vampíricas",
    "pecas": [
     "3111",
     "3008"
@@ -44,7 +44,7 @@
    ]
   },
   "bota": {
-   "texto": "Mercs",
+   "texto": "Mercúrio",
    "pecas": [
     "3111"
    ]
@@ -73,7 +73,7 @@
    ]
   },
   "bota": {
-   "texto": "Mercs / Rapidez",
+   "texto": "Mercúrio / Rapidez",
    "pecas": [
     "3111",
     "3009"
@@ -100,7 +100,7 @@
    ]
   },
   "bota": {
-   "texto": "MERCS RUSH !!!",
+   "texto": "Mercúrio RUSH !!!",
    "pecas": [
     "3173"
    ]
@@ -154,7 +154,7 @@
    ]
   },
   "bota": {
-   "texto": "Mercs",
+   "texto": "Mercúrio",
    "pecas": [
     "3111"
    ]
@@ -183,7 +183,7 @@
    ]
   },
   "bota": {
-   "texto": "Mercs / Rapidez",
+   "texto": "Mercúrio / Rapidez",
    "pecas": [
     "3111",
     "3009"
@@ -210,7 +210,7 @@
    ]
   },
   "bota": {
-   "texto": "Mercs",
+   "texto": "Mercúrio",
    "pecas": [
     "3111"
    ]
@@ -236,7 +236,7 @@
    ]
   },
   "bota": {
-   "texto": "Mercs / Rapidez",
+   "texto": "Mercúrio / Rapidez",
    "pecas": [
     "3111",
     "3009"
@@ -267,7 +267,7 @@
    ]
   },
   "bota": {
-   "texto": "Mercs / Vamps",
+   "texto": "Mercúrio / Vampíricas",
    "pecas": [
     "3111",
     "3008"
@@ -297,7 +297,7 @@
    ]
   },
   "bota": {
-   "texto": "Mercs",
+   "texto": "Mercúrio",
    "pecas": [
     "3111"
    ]
@@ -323,7 +323,7 @@
    ]
   },
   "bota": {
-   "texto": "Mercs",
+   "texto": "Mercúrio",
    "pecas": [
     "3111"
    ]
@@ -353,7 +353,7 @@
    ]
   },
   "bota": {
-   "texto": "Mercs / Rapidez",
+   "texto": "Mercúrio / Rapidez",
    "pecas": [
     "3111",
     "3009"
@@ -384,7 +384,7 @@
    ]
   },
   "bota": {
-   "texto": "Mercs / Vamps",
+   "texto": "Mercúrio / Vampíricas",
    "pecas": [
     "3111",
     "3009",
@@ -444,7 +444,7 @@
    ]
   },
   "bota": {
-   "texto": "Tabis / Vamps",
+   "texto": "Tabis / Vampíricas",
    "pecas": [
     "3008",
     "3047"
@@ -570,7 +570,7 @@
    ]
   },
   "bota": {
-   "texto": "Mercs",
+   "texto": "Mercúrio",
    "pecas": [
     "3111"
    ]
@@ -599,7 +599,7 @@
    ]
   },
   "bota": {
-   "texto": "Mercs",
+   "texto": "Mercúrio",
    "pecas": [
     "3111"
    ]
@@ -625,7 +625,7 @@
    ]
   },
   "bota": {
-   "texto": "Mercs",
+   "texto": "Mercúrio",
    "pecas": [
     "3111"
    ]
@@ -655,7 +655,7 @@
    ]
   },
   "bota": {
-   "texto": "Mercs / Vamps",
+   "texto": "Mercúrio / Vampíricas",
    "pecas": [
     "3111",
     "3008"
@@ -683,7 +683,7 @@
    ]
   },
   "bota": {
-   "texto": "Mercs / Vamps",
+   "texto": "Mercúrio / Vampíricas",
    "pecas": [
     "3111",
     "3008"
@@ -705,7 +705,7 @@
    "pecas": []
   },
   "bota": {
-   "texto": "Mercs / Vamps",
+   "texto": "Mercúrio / Vampíricas",
    "pecas": []
   },
   "build": {
@@ -729,15 +729,18 @@
    ]
   },
   "bota": {
-   "texto": "Mercs / Vamps",
+   "texto": "Mercúrio / Vampíricas",
    "pecas": [
     "3111",
     "3008"
    ]
   },
   "build": {
-   "texto": "Tanto faz",
-   "pecas": []
+   "texto": "Crit",
+   "pecas": [
+    "3095",
+    "3031"
+   ]
   },
   "dificuldade": "muito_dificil"
  },
@@ -785,7 +788,7 @@
    ]
   },
   "bota": {
-   "texto": "Mercs",
+   "texto": "Mercúrio",
    "pecas": [
     "3111"
    ]
@@ -869,7 +872,7 @@
    ]
   },
   "bota": {
-   "texto": "Mercs",
+   "texto": "Mercúrio",
    "pecas": [
     "3111"
    ]
@@ -895,7 +898,7 @@
    ]
   },
   "bota": {
-   "texto": "Mercs / Rapidez",
+   "texto": "Mercúrio / Rapidez",
    "pecas": [
     "3111",
     "3009"
@@ -925,9 +928,10 @@
    ]
   },
   "bota": {
-   "texto": "Mercs",
+   "texto": "Mercúrio / Vampíricas",
    "pecas": [
-    "3111"
+    "3111",
+    "3008"
    ]
   },
   "build": {
@@ -955,7 +959,7 @@
    ]
   },
   "bota": {
-   "texto": "Mercs",
+   "texto": "Mercúrio",
    "pecas": [
     "3111"
    ]
@@ -981,7 +985,7 @@
    ]
   },
   "bota": {
-   "texto": "Mercs",
+   "texto": "Mercúrio",
    "pecas": [
     "3111"
    ]
@@ -990,7 +994,7 @@
    "texto": "Craquen / Crit",
    "pecas": [
     "6672",
-    "6676"
+    "3095"
    ]
   },
   "dificuldade": "medio"
@@ -1010,17 +1014,17 @@
    ]
   },
   "bota": {
-   "texto": "Tabis / Vamps",
+   "texto": "Tabis / Vampíricas",
    "pecas": [
     "3008",
     "3047"
    ]
   },
   "build": {
-   "texto": "Letalidade / Crit",
+   "texto": "Crit",
    "pecas": [
-    "3179",
-    "6676"
+    "6676",
+    "3031"
    ]
   },
   "dificuldade": "facil"
@@ -1041,7 +1045,7 @@
    ]
   },
   "bota": {
-   "texto": "Mercs, 100%",
+   "texto": "Mercúrio, 100%",
    "pecas": [
     "3111"
    ]
@@ -1067,7 +1071,7 @@
    ]
   },
   "bota": {
-   "texto": "Mercs / Vamps",
+   "texto": "Mercúrio / Vampíricas",
    "pecas": [
     "3111",
     "3008"
@@ -1094,10 +1098,11 @@
    ]
   },
   "bota": {
-   "texto": "Mercs / Vamps",
+   "texto": "Mercúrio / Vampíricas",
    "pecas": [
     "3111",
-    "3008"
+    "3008",
+    "3006"
    ]
   },
   "build": {
@@ -1122,7 +1127,7 @@
    ]
   },
   "bota": {
-   "texto": "MERCS RUSH !!!",
+   "texto": "Mercúrio RUSH !!!",
    "pecas": [
     "3173"
    ]
@@ -1148,7 +1153,7 @@
    ]
   },
   "bota": {
-   "texto": "Mercs",
+   "texto": "Mercúrio",
    "pecas": [
     "3111"
    ]
@@ -1174,7 +1179,7 @@
    ]
   },
   "bota": {
-   "texto": "Mercs / Rapidez",
+   "texto": "Mercúrio / Rapidez",
    "pecas": [
     "3111",
     "3009"
@@ -1204,14 +1209,17 @@
    ]
   },
   "bota": {
-   "texto": "Tanto faz",
-   "pecas": []
+   "texto": "Mercúrio / Berserker",
+   "pecas": [
+    "3111",
+    "3006"
+   ]
   },
   "build": {
-   "texto": "Crit",
+   "texto": "Craquen / Crit",
    "pecas": [
-    "3095",
-    "3031"
+    "6672",
+    "3095"
    ]
   },
   "dificuldade": "facil"
@@ -1237,7 +1245,7 @@
    ]
   },
   "build": {
-   "texto": "Crit",
+   "texto": "Crit / Move speed",
    "pecas": [
     "3095",
     "3031"
@@ -1260,7 +1268,7 @@
    ]
   },
   "bota": {
-   "texto": "Tanto faz",
+   "texto": "Tabi",
    "pecas": [
     "3047"
    ]
@@ -1290,17 +1298,16 @@
    ]
   },
   "bota": {
-   "texto": "Tabis / Vamps",
+   "texto": "Tabi",
    "pecas": [
-    "3008",
     "3047"
    ]
   },
   "build": {
-   "texto": "Letalidade / Crit",
+   "texto": "Crit",
    "pecas": [
-    "3179",
-    "6676"
+    "6676",
+    "3031"
    ]
   },
   "dificuldade": "medio"
@@ -1320,7 +1327,7 @@
    ]
   },
   "bota": {
-   "texto": "Mercs",
+   "texto": "Mercúrio",
    "pecas": [
     "3111"
    ]
