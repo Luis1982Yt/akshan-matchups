@@ -767,9 +767,9 @@ const cena = id => `${DD}img/champion/centered/${id}_0.jpg`;
 const SKINS = [
   { id: "", num: 0, nome: "Padrão", nome_en: "Default" },
   { id: "ciberpop", num: 1, nome: "Ciberpop", nome_en: "Cyber Pop" },
-  { id: "rosa-de-cristal", num: 10, nome: "Rosa de Cristal", nome_en: "Crystal Rose", revisar: true },
-  { id: "tres-honras", num: 20, nome: "Três Honras", nome_en: "Three Honors", revisar: true },
-  { id: "velho-oeste", num: 21, nome: "Velho Oeste", nome_en: "High Noon", sons: { aa1: 2, aa2: 2 }, revisar: true },
+  { id: "rosa-de-cristal", num: 10, nome: "Rosa de Cristal", nome_en: "Crystal Rose" },
+  { id: "tres-honras", num: 20, nome: "Três Honras", nome_en: "Three Honors" },
+  { id: "velho-oeste", num: 21, nome: "Velho Oeste", nome_en: "High Noon", sons: { aa1: 2, aa2: 2 } },
 ].filter(k => !k.revisar);
 const modeloSkin = k => (k.id ? `modelo/akshan-${k.id}.glb` : "modelo/akshan.glb");
 const skinAtual = () => SKINS.find(k => k.id === (document.documentElement.dataset.skin || "")) || SKINS[0];
