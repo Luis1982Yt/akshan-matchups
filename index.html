@@ -329,6 +329,24 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .card .selo { position: absolute; z-index: 2; top: 12px; left: 12px; padding: 3px 10px; border-radius: 4px; font: 700 12px/1.4 var(--titulo); letter-spacing: .12em; text-transform: uppercase; background: var(--destaque-arte); color: #111; }
 .skin-btn { position: absolute; z-index: 3; top: 10px; right: 10px; display: flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 12px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, .35); background: rgba(10, 10, 14, .62); color: var(--branco-arte, #f6f3ea); font: 700 12px var(--corpo); letter-spacing: .04em; cursor: pointer; backdrop-filter: blur(4px); }
 .skin-btn[hidden] { display: none; }
+/* Setas de trocar skin, como na seleção de campeões do jogo; a da direita fica longe do círculo VS. */
+.skin-seta { position: absolute; z-index: 3; top: 50%; width: 44px; height: 56px; margin-top: -28px; display: grid; place-items: center; padding: 0; border: 0; background: none; color: var(--destaque-arte); cursor: pointer; filter: drop-shadow(0 1px 3px rgba(0, 0, 0, .85)); opacity: .85; transition: opacity .15s, transform .15s; }
+.skin-seta[hidden] { display: none; }
+.skin-seta:hover { opacity: 1; }
+.skin-seta.ant { left: 4px; }
+.skin-seta.ant svg { transform: scaleX(-1); }
+.skin-seta.prox { right: 40px; }
+.skin-seta.ant:active { transform: translateX(-2px); }
+.skin-seta.prox:active { transform: translateX(2px); }
+@media (max-width: 900px) { .skin-seta { width: 32px; } .skin-seta svg { width: 16px; height: 28px; } .skin-seta.prox { right: 26px; } }
+/* Chromas: bolinhas com as cores do chroma, embaixo da skin escolhida no menu. */
+.skin-chromas { display: flex; flex-wrap: wrap; gap: 6px; padding: 2px 6px 8px 54px; }
+.skin-menu .skin-chromas button { width: 26px; min-height: 26px; height: 26px; padding: 0; border-radius: 50%; border: 2px solid var(--linha-forte); background: linear-gradient(135deg, var(--c1) 50%, var(--c2) 50%); }
+.skin-menu .skin-chromas button[aria-pressed="true"] { border-color: var(--acento-vivo); box-shadow: 0 0 0 2px var(--painel), 0 0 0 4px var(--acento-vivo); }
+.skin-menu .skin-chromas button.base { background: var(--painel-alto); display: grid; place-items: center; color: var(--texto-baixo); font: 700 11px var(--corpo); }
+/* Toque: área de 44px sem mudar o desenho. */
+.skin-menu .skin-chromas button { position: relative; }
+.skin-menu .skin-chromas button::after { content: ""; position: absolute; inset: -9px; }
 @media (max-width: 900px) { .skin-btn { width: 32px; padding: 0; justify-content: center; } .skin-btn span { display: none; } }
 .skin-btn:hover { border-color: var(--destaque-arte); }
 .skin-btn svg { color: var(--destaque-arte); }
@@ -711,6 +729,8 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
           <span class="selo" data-t="voce">Você</span>
           <button class="skin-btn" type="button" id="skinBtn" aria-expanded="false" aria-controls="skinMenu" hidden><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1l6 6-6 6-6-6z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span id="skinNome"></span></button>
           <div class="skin-menu" id="skinMenu" role="group" data-t-aria="skins" hidden></div>
+          <button class="skin-seta ant" type="button" id="skinAnt" data-t-aria="skinAnt" data-t-title="skinAnt" hidden><svg width="22" height="36" viewBox="0 0 22 36" aria-hidden="true"><path d="M5 3l13 15-13 15" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/></svg></button>
+          <button class="skin-seta prox" type="button" id="skinProx" data-t-aria="skinProx" data-t-title="skinProx" hidden><svg width="22" height="36" viewBox="0 0 22 36" aria-hidden="true"><path d="M5 3l13 15-13 15" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/></svg></button>
           <div class="quem"><p class="n" id="vocNome"></p><p class="t" id="vocTitulo"></p></div>
         </article>
         <button class="travar" type="button" id="travar" title="Travar o pick" data-t-title="travarTit"><span aria-hidden="true">VS</span><span class="sr" id="travarNome"></span></button>
@@ -775,6 +795,11 @@ const SKINS = [
   { id: "velho-oeste", num: 21, nome: "Velho Oeste", nome_en: "High Noon", sons: { aa1: 2, aa2: 2 } },
 ].filter(k => !k.revisar);
 const modeloSkin = k => (k.id ? `modelo/akshan-${k.id}.glb` : "modelo/akshan.glb");
+// Chromas (scripts/modelo3d/chromas.py): mesma malha da skin-mãe, só as texturas trocam (PNGs do CommunityDragon).
+const CHROMAS = {"ciberpop":[{"num":2,"nome":"Rubi","nome_en":"Ruby","cores":["#D33528","#D33528"],"texturas":{"main":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin02/akshan_skin02_body_tx_cm.png","akshan_skin1_gun_tx_cm":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin02/akshan_skin02_gun_tx_cm.png"}},{"num":3,"nome":"Olho de Gato","nome_en":"Catseye","cores":["#FFEE59","#FFEE59"],"texturas":{"main":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin03/akshan_skin03_body_tx_cm.png","akshan_skin1_gun_tx_cm":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin03/akshan_skin03_gun_tx_cm.png"}},{"num":4,"nome":"Esmeralda","nome_en":"Emerald","cores":["#2DA130","#2DA130"],"texturas":{"main":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin04/akshan_skin04_body_tx_cm.png","akshan_skin1_gun_tx_cm":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin04/akshan_skin04_gun_tx_cm.png"}},{"num":5,"nome":"Safira","nome_en":"Sapphire","cores":["#2756CE","#2756CE"],"texturas":{"main":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin05/akshan_skin05_body_tx_cm.png","akshan_skin1_gun_tx_cm":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin05/akshan_skin05_gun_tx_cm.png"}},{"num":6,"nome":"Tanzanita","nome_en":"Tanzanite","cores":["#54209B","#54209B"],"texturas":{"main":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin06/akshan_skin06_body_tx_cm.png","akshan_skin1_gun_tx_cm":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin06/akshan_skin06_gun_tx_cm.png"}},{"num":7,"nome":"Quartzo-rosa","nome_en":"Rose Quartz","cores":["#E58BA5","#E58BA5"],"texturas":{"main":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin07/akshan_skin07_body_tx_cm.png","akshan_skin1_gun_tx_cm":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin07/akshan_skin07_gun_tx_cm.png"}},{"num":8,"nome":"Pérola","nome_en":"Pearl","cores":["#ECF9F8","#ECF9F8"],"texturas":{"main":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin08/akshan_skin08_body_tx_cm.png","akshan_skin1_gun_tx_cm":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin08/akshan_skin08_gun_tx_cm.png"}},{"num":9,"nome":"Obsidiana","nome_en":"Obsidian","cores":["#27211C","#27211C"],"texturas":{"main":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin09/akshan_skin09_body_tx_cm.png","akshan_skin1_gun_tx_cm":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin09/akshan_skin09_gun_tx_cm.png"}}],"rosa-de-cristal":[{"num":11,"nome":"Rubi","nome_en":"Ruby","cores":["#D33528","#D33528"],"texturas":{"main":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin11/akshan_skin11_tx_cm.png","akshan_skin10_gun_tx_cm":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin11/akshan_skin11_gun_tx_cm.png"}},{"num":12,"nome":"Água-marinha","nome_en":"Aquamarine","cores":["#6ABBEE","#6ABBEE"],"texturas":{"main":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin12/akshan_skin12_tx_cm.png","akshan_skin10_gun_tx_cm":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin12/akshan_skin12_gun_tx_cm.png"}},{"num":13,"nome":"Esmeralda","nome_en":"Emerald","cores":["#2DA130","#2DA130"],"texturas":{"main":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin13/akshan_skin13_tx_cm.png","akshan_skin10_gun_tx_cm":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin13/akshan_skin13_gun_tx_cm.png"}},{"num":14,"nome":"Quartzo-rosa","nome_en":"Rose Quartz","cores":["#E58BA5","#E58BA5"],"texturas":{"main":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin14/akshan_skin14_tx_cm.png","akshan_skin10_gun_tx_cm":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin14/akshan_skin14_gun_tx_cm.png"}},{"num":15,"nome":"Olho de Gato","nome_en":"Catseye","cores":["#FFEE59","#FFEE59"],"texturas":{"main":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin15/akshan_skin15_tx_cm.png","akshan_skin10_gun_tx_cm":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin15/akshan_skin15_gun_tx_cm.png"}},{"num":16,"nome":"Ametista","nome_en":"Amethyst","cores":["#9C68D7","#9C68D7"],"texturas":{"main":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin16/akshan_skin16_tx_cm.png","akshan_skin10_gun_tx_cm":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin16/akshan_skin16_gun_tx_cm.png"}},{"num":17,"nome":"Obsidiana","nome_en":"Obsidian","cores":["#27211C","#27211C"],"texturas":{"main":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin17/akshan_skin17_tx_cm.png","akshan_skin10_gun_tx_cm":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin17/akshan_skin17_gun_tx_cm.png"}},{"num":18,"nome":"Pérola","nome_en":"Pearl","cores":["#ECF9F8","#ECF9F8"],"texturas":{"main":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin18/akshan_skin18_tx_cm.png","akshan_skin10_gun_tx_cm":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin18/akshan_skin18_gun_tx_cm.png"}},{"num":19,"nome":"Tiffany & Co.","nome_en":"Tiffany & Co.","cores":["#6ECFCC","#ECF9F8"],"texturas":{"main":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin19/akshan_skin19_tx_cm.png","akshan_skin10_gun_tx_cm":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin19/akshan_skin19_gun_tx_cm.png"}}],"velho-oeste":[{"num":22,"nome":"Rubi","nome_en":"Ruby","cores":["#D33528","#D33528"],"texturas":{"main":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin22/akshan_skin22_tx_cm.png","akshan_skin21_weapon_tx_cm":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin22/akshan_skin22_weapon_tx_cm.png"}},{"num":23,"nome":"Olho de Gato","nome_en":"Catseye","cores":["#FFEE59","#FFEE59"],"texturas":{"main":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin23/akshan_skin23_tx_cm.png","akshan_skin21_weapon_tx_cm":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin23/akshan_skin23_weapon_tx_cm.png"}},{"num":24,"nome":"Esmeralda","nome_en":"Emerald","cores":["#2DA130","#2DA130"],"texturas":{"main":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin24/akshan_skin24_tx_cm.png","akshan_skin21_weapon_tx_cm":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin24/akshan_skin24_weapon_tx_cm.png"}},{"num":25,"nome":"Tanzanita","nome_en":"Tanzanite","cores":["#54209B","#54209B"],"texturas":{"main":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin25/akshan_skin25_tx_cm.png","akshan_skin21_weapon_tx_cm":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin25/akshan_skin25_weapon_tx_cm.png"}},{"num":26,"nome":"Pérola","nome_en":"Pearl","cores":["#ECF9F8","#ECF9F8"],"texturas":{"main":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin26/akshan_skin26_tx_cm.png","akshan_skin21_weapon_tx_cm":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin26/akshan_skin26_weapon_tx_cm.png"}},{"num":27,"nome":"Safira","nome_en":"Sapphire","cores":["#2756CE","#2756CE"],"texturas":{"main":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin27/akshan_skin27_tx_cm.png","akshan_skin21_weapon_tx_cm":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin27/akshan_skin27_weapon_tx_cm.png"}},{"num":28,"nome":"Quartzo-rosa","nome_en":"Rose Quartz","cores":["#E58BA5","#E58BA5"],"texturas":{"main":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin28/akshan_skin28_tx_cm.png","akshan_skin21_weapon_tx_cm":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin28/akshan_skin28_weapon_tx_cm.png"}},{"num":29,"nome":"Obsidiana","nome_en":"Obsidian","cores":["#27211C","#27211C"],"texturas":{"main":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin29/akshan_skin29_tx_cm.png","akshan_skin21_weapon_tx_cm":"https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/skin29/akshan_skin29_weapon_tx_cm.png"}}]};
+let chromaNum = 0;
+try { chromaNum = +localStorage.getItem("chroma") || 0; } catch (e) {}
+const chromaAtual = () => (CHROMAS[skinAtual().id] || []).find(c => c.num === chromaNum) || null;
 const skinAtual = () => SKINS.find(k => k.id === (document.documentElement.dataset.skin || "")) || SKINS[0];
 const cenaSkin = (id, num) => `${DD}img/champion/centered/${id}_${num}.jpg`;
 const tileSkin = (id, num) => `${DD}img/champion/tiles/${id}_${num}.jpg`;
@@ -814,7 +839,7 @@ const TXT = {
     linguaRotulo: "Switch to English", linguaBotao: "EN",
     guiaAtual: "Guia atual: ", trocarGuia: ". Trocar de guia", notasDo: "notas do ", matchups: " matchups", aberto: "Aberto",
     facil: "Fácil", medio: "Médio", dificil: "Difícil", resumo: "Resumo", runas: "Runas", itens: "Itens", geral: "Geral",
-    principal: "Principal", fragmentos: "Fragmentos", emote: "Arraste para girar · clique para uma emote", mostra3d: "Mostrar o Akshan 3D", skins: "Skins do Akshan", esconde3d: "Esconder o Akshan 3D", carrega3d: "Carregando o Akshan…", tierBotao: "Tier list das matchups", tierTit: "Tier list · {c}", fechar: "Fechar", aoVivo: "Ao vivo", acompanhe: "Acompanhe mono {c}s", assistir: "Assistir", devPor: "Site feito por", animacoes: "Animações do Akshan",
+    principal: "Principal", fragmentos: "Fragmentos", emote: "Arraste para girar · clique para uma emote", mostra3d: "Mostrar o Akshan 3D", skins: "Skins do Akshan", skinAnt: "Skin anterior", skinProx: "Próxima skin", chromas: "Chromas", semChroma: "Sem chroma", esconde3d: "Esconder o Akshan 3D", carrega3d: "Carregando o Akshan…", tierBotao: "Tier list das matchups", tierTit: "Tier list · {c}", fechar: "Fechar", aoVivo: "Ao vivo", acompanhe: "Acompanhe mono {c}s", assistir: "Assistir", devPor: "Site feito por", animacoes: "Animações do Akshan",
     a_dance: "Dança", a_taunt: "Provocação", a_laugh: "Risada", a_attack: "Ataque", a_recall: "Recall",
   },
   en: {
@@ -836,7 +861,7 @@ const TXT = {
     linguaRotulo: "Mudar para português", linguaBotao: "PT",
     guiaAtual: "Current guide: ", trocarGuia: ". Change guide", notasDo: "notes by ", matchups: " matchups", aberto: "Open",
     facil: "Easy", medio: "Medium", dificil: "Hard", resumo: "Summary", runas: "Runes", itens: "Items", geral: "Overall",
-    principal: "Primary", fragmentos: "Shards", emote: "Drag to rotate · click for an emote", mostra3d: "Show 3D Akshan", skins: "Akshan skins", esconde3d: "Hide 3D Akshan", carrega3d: "Loading Akshan…", tierBotao: "Matchup tier list", tierTit: "Tier list · {c}", fechar: "Close", aoVivo: "Live", acompanhe: "Watch {c} one-tricks", assistir: "Watch", devPor: "Site by", animacoes: "Akshan animations",
+    principal: "Primary", fragmentos: "Shards", emote: "Drag to rotate · click for an emote", mostra3d: "Show 3D Akshan", skins: "Akshan skins", skinAnt: "Previous skin", skinProx: "Next skin", chromas: "Chromas", semChroma: "No chroma", esconde3d: "Hide 3D Akshan", carrega3d: "Loading Akshan…", tierBotao: "Matchup tier list", tierTit: "Tier list · {c}", fechar: "Close", aoVivo: "Live", acompanhe: "Watch {c} one-tricks", assistir: "Watch", devPor: "Site by", animacoes: "Akshan animations",
     a_dance: "Dance", a_taunt: "Taunt", a_laugh: "Laugh", a_attack: "Attack", a_recall: "Recall",
   },
 };
@@ -1041,7 +1066,9 @@ function renderGuia() {
   const sk = guia.id === "akshan" ? skinAtual() : SKINS[0];
   $("artVoce").innerHTML = `<img src="${cenaSkin(eu.id, sk.num)}" alt="${t("arteDe")}${esc(eu.nome)}" fetchpriority="high">`;
   $("skinBtn").hidden = guia.id !== "akshan";
-  $("skinNome").textContent = (L === "en" && sk.nome_en) || sk.nome;
+  $("skinAnt").hidden = $("skinProx").hidden = guia.id !== "akshan" || SKINS.length < 2;
+  const ch = guia.id === "akshan" ? chromaAtual() : null;
+  $("skinNome").textContent = ((L === "en" && sk.nome_en) || sk.nome) + (ch ? ` · ${(L === "en" && ch.nome_en) || ch.nome}` : "");
   $("skinBtn").setAttribute("aria-label", `${t("skins")}: ${$("skinNome").textContent}`);
   $("vocNome").textContent = eu.nome;
   $("vocNome").classList.toggle("longo", eu.nome.length > 9);
@@ -1486,7 +1513,16 @@ function abreSkins(abrir) {
   const m = $("skinMenu");
   if (abrir) {
     const atual = skinAtual();
-    m.innerHTML = SKINS.map(k => `<button type="button" data-skin="${k.id}" aria-pressed="${k === atual}"><img src="${tileSkin(guia.campeao.id, k.num)}" alt="" width="40" height="40">${esc((L === "en" && k.nome_en) || k.nome)}</button>`).join("");
+    const ch = chromaAtual();
+    m.innerHTML = SKINS.map(k => {
+      const linha = `<button type="button" data-skin="${k.id}" aria-pressed="${k === atual}"><img src="${tileSkin(guia.campeao.id, k.num)}" alt="" width="40" height="40">${esc((L === "en" && k.nome_en) || k.nome)}</button>`;
+      const cs = k === atual ? CHROMAS[k.id] || [] : [];
+      if (!cs.length) return linha;
+      return linha + `<div class="skin-chromas" role="group" aria-label="${t("chromas")}"><button type="button" class="base" data-chroma="0" aria-pressed="${!ch}" aria-label="${t("semChroma")}" title="${t("semChroma")}">–</button>${cs.map(c => {
+        const nome = esc((L === "en" && c.nome_en) || c.nome);
+        return `<button type="button" data-chroma="${c.num}" aria-pressed="${ch === c}" aria-label="${nome}" title="${nome}" style="--c1: ${c.cores[0] || "#888"}; --c2: ${c.cores[1] || c.cores[0] || "#888"}"></button>`;
+      }).join("")}</div>`;
+    }).join("");
   }
   m.hidden = !abrir;
   if (abrir) {
@@ -1497,24 +1533,50 @@ function abreSkins(abrir) {
     m.style.left = Math.max(12, Math.min(b.right - largura, innerWidth - largura - 12)) + "px";
     m.style.maxHeight = Math.max(160, innerHeight - topo - 12) + "px";
   }
+  const jaAberto = abreSkins.aberto === abrir;
+  abreSkins.aberto = abrir;
   $("skinBtn").setAttribute("aria-expanded", abrir);
-  toca(abrir ? "abre" : "fecha");
-  if (abrir) (m.querySelector('[aria-pressed="true"]') || m.querySelector("button")).focus();
+  if (!jaAberto) toca(abrir ? "abre" : "fecha");
+  if (abrir) (m.querySelector('.skin-chromas [aria-pressed="true"]') || m.querySelector('[aria-pressed="true"]') || m.querySelector("button")).focus();
 }
 $("skinBtn").addEventListener("click", () => abreSkins($("skinMenu").hidden));
-$("skinMenu").addEventListener("click", e => {
-  const b = e.target.closest("[data-skin]");
-  if (!b) return;
-  const id = b.dataset.skin;
+function usaSkin(id) {
+  if (id === skinAtual().id) return;
   if (id) document.documentElement.dataset.skin = id; else delete document.documentElement.dataset.skin;
-  try { id ? localStorage.setItem("skin", id) : localStorage.removeItem("skin"); } catch (e) {}
-  abreSkins(false);
+  chromaNum = 0;
+  try { id ? localStorage.setItem("skin", id) : localStorage.removeItem("skin"); localStorage.removeItem("chroma"); } catch (e) {}
   renderGuia();
   enquadraTudo();
   recarrega3d();
+}
+function usaChroma(num) {
+  chromaNum = num;
+  try { num ? localStorage.setItem("chroma", num) : localStorage.removeItem("chroma"); } catch (e) {}
+  renderGuia();
+  if (typeof chroma3d === "function") chroma3d();
+}
+$("skinMenu").addEventListener("click", e => {
+  e.stopPropagation();  // o menu se redesenha; sem isso o clique "de fora" fecharia ele
+  const c = e.target.closest("[data-chroma]");
+  if (c) { toca("chip"); usaChroma(+c.dataset.chroma); abreSkins(true); return; }
+  const b = e.target.closest("[data-skin]");
+  if (!b) return;
+  const mesma = b.dataset.skin === skinAtual().id;
+  usaSkin(b.dataset.skin);
+  // Escolheu outra skin com chromas: o menu continua aberto para mostrar as cores dela.
+  if (!mesma && (CHROMAS[b.dataset.skin] || []).length) { abreSkins(true); return; }
+  abreSkins(false);
   $("skinBtn").focus();
 });
-document.addEventListener("click", e => { if (!$("skinMenu").hidden && !e.target.closest("#skinMenu, #skinBtn")) abreSkins(false); });
+function passaSkin(passo) {
+  const i = SKINS.indexOf(skinAtual()), n = SKINS.length;
+  toca(passo > 0 ? "avanca" : "volta");
+  if (!$("skinMenu").hidden) abreSkins(false);
+  usaSkin(SKINS[((i + passo) % n + n) % n].id);
+}
+$("skinAnt").addEventListener("click", () => passaSkin(-1));
+$("skinProx").addEventListener("click", () => passaSkin(1));
+document.addEventListener("click", e => { if (!$("skinMenu").hidden && !e.target.closest("#skinMenu, #skinBtn, .skin-seta")) abreSkins(false); });
 document.addEventListener("keydown", e => { if (e.key === "Escape" && !$("skinMenu").hidden) { abreSkins(false); $("skinBtn").focus(); } });
 // Preso à tela, o menu fecharia descolado do botão se a página rolasse ou mudasse de tamanho.
 addEventListener("resize", () => { if (!$("skinMenu").hidden) abreSkins(false); });
@@ -1639,7 +1701,7 @@ function liga3d(sim) {
 $("fecha3d").addEventListener("click", () => liga3d(false));
 $("abre3d").addEventListener("click", () => liga3d(true));
 
-let geracao3d = 0, desmonta3d = null;
+let geracao3d = 0, desmonta3d = null, chroma3d = null;
 // Troca de skin com o 3D aberto: desmonta a cena atual e carrega o modelo da skin nova.
 function recarrega3d() {
   if (!estado3d || estado3d === "falhou") return;
@@ -1671,6 +1733,25 @@ async function iniciaAkshan3d() {
     const m = gltf.scene;
     // O jogo dá luz própria à textura (selfIllumination 0.7): emissivo com o mesmo mapa.
     m.traverse(o => { if (o.isMesh) { const mt = o.material; mt.emissive = new THREE.Color(0xffffff); mt.emissiveMap = mt.map; mt.emissiveIntensity = .55; o.frustumCulled = false; } });
+    // Chroma: troca o mapa de cor dos materiais (nome do material = chave da textura) e guarda o original.
+    const mats = new Map(), carregador = new THREE.TextureLoader().setCrossOrigin("anonymous");
+    m.traverse(o => { if (o.isMesh && !mats.has(o.material.name)) mats.set(o.material.name, { mt: [], orig: o.material.map }); if (o.isMesh) mats.get(o.material.name).mt.push(o.material); });
+    const aplicaMapa = (chave, mapa) => (mats.get(chave) || { mt: [] }).mt.forEach(mt => { mt.map = mapa; mt.emissiveMap = mapa; mt.needsUpdate = true; });
+    chroma3d = () => {
+      const ch = chromaAtual();
+      mats.forEach((v, chave) => aplicaMapa(chave, v.orig));
+      if (!ch) return;
+      Object.entries(ch.texturas).forEach(([chave, url]) => {
+        if (!mats.has(chave)) return;
+        carregador.load(url, tx => {
+          if (chromaAtual() !== ch) { tx.dispose(); return; }  // trocaram de novo enquanto baixava
+          const orig = mats.get(chave).orig;
+          tx.flipY = orig.flipY; tx.colorSpace = orig.colorSpace; tx.wrapS = orig.wrapS; tx.wrapT = orig.wrapT;
+          aplicaMapa(chave, tx);
+        });
+      });
+    };
+    chroma3d();
     m.rotation.y = -.35;  // de leve virado para o conteúdo, à esquerda
     cena.add(m);
     const caixa = new THREE.Box3().setFromObject(m), centro = caixa.getCenter(new THREE.Vector3()), alt = caixa.getSize(new THREE.Vector3()).y;
@@ -1755,6 +1836,7 @@ async function iniciaAkshan3d() {
     mixer.update(0);
     quadro();
     desmonta3d = () => {
+      chroma3d = null;
       fim.abort(); ro.disconnect(); io.disconnect(); paraSons3d(); mixer.stopAllAction();
       cena.traverse(o => { if (o.isMesh) { o.geometry.dispose(); [].concat(o.material).forEach(mt => { mt.map && mt.map.dispose(); mt.dispose(); }); } });
       r.dispose();
