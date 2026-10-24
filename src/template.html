@@ -1342,7 +1342,8 @@ function select(c) {
 let fechaTrava, travadas = 0;
 function travar() {
   toca("travar");
-  setTimeout(() => toca("vo", `sons/vo/${guia.campeao.id}.ogg`), 180);
+  // Fala de escolha na língua do site (a em inglês vem do cliente em en_US, pelo CommunityDragon).
+  setTimeout(() => toca("vo", `sons/vo/${L === "en" ? "en/" : ""}${guia.campeao.id}.ogg`), 180);
   const t = $("trava");
   // Só rola se o setup não estiver à vista (no celular, por exemplo).
   const desce = () => { const st = $("st").parentElement; if (st.getBoundingClientRect().top > innerHeight * .6) st.scrollIntoView({ behavior: semMovimento() ? "auto" : "smooth", block: "start" }); };
@@ -1542,13 +1543,15 @@ function abreSkins(abrir) {
 }
 $("skinBtn").addEventListener("click", () => abreSkins($("skinMenu").hidden));
 // Falas do Akshan (sons/vo/akshan, dublagem pt-BR, de scripts/modelo3d/falas.py): uma sorteada a cada troca de skin.
-const FALAS_SKIN = 38;
+// Uma pasta por língua: sons/vo/akshan (dublagem pt-BR) e sons/vo/akshan-en (voz original em inglês).
+const FALAS_SKIN = { pt: 38, en: 38 };
 let ultimaFala = -1;
 function falaSkin() {
+  const n = FALAS_SKIN[L] || FALAS_SKIN.pt;
   let i;
-  do { i = Math.floor(Math.random() * FALAS_SKIN); } while (i === ultimaFala && FALAS_SKIN > 1);
+  do { i = Math.floor(Math.random() * n); } while (i === ultimaFala && n > 1);
   ultimaFala = i;
-  toca("vo", `sons/vo/akshan/fala-${i}.ogg`);
+  toca("vo", `sons/vo/akshan${L === "en" ? "-en" : ""}/fala-${i}.ogg`);
 }
 function usaSkin(id) {
   if (id === skinAtual().id) return;
@@ -1681,7 +1684,9 @@ const SONS_CLIPE_3D = {
   laugh: ["laugh", "vo_laugh"], recall: ["recall", "vo_recall"],
   attack1: ["aa1@.15", "vo_aa1"], attack2: ["aa2@.15", "vo_aa2"], crit: ["crit@.2", "vo_crit"],
 };
-const SONS_VOLTA_3D = { taunt: ["taunt"] };  // tocam de novo a cada repetição do clipe
+const SONS_VOLTA_3D = { taunt: ["taunt"] };
+// Variações das falas em inglês, quando diferem das em português.
+const VARIACOES_VO_EN = {};  // tocam de novo a cada repetição do clipe
 let sons3d = [];
 // Ao voltar para o idle, só os sons que repetem param; falas e efeitos terminam sozinhos.
 function paraRepeticoes3d() { sons3d.forEach(x => { if (x.loop) x.pause(); }); }
@@ -1694,10 +1699,12 @@ function tocaSons3d(lista) {
   lista.forEach(item => {
     const repete = item.endsWith("~");
     const [nome, atraso] = item.replace("~", "").split("@");
-    const k0 = skinAtual(), n = (k0.id && !nome.startsWith("vo_") && k0.sons && k0.sons[nome]) || VARIACOES_3D[nome];
+    const vo = nome.startsWith("vo_"), k0 = skinAtual();
+    const n = (vo && L === "en" && VARIACOES_VO_EN[nome]) || (k0.id && !vo && k0.sons && k0.sons[nome]) || VARIACOES_3D[nome];
     if (!n) return;
     const vai = () => {
-      const k = skinAtual(), pasta = k.id && !nome.startsWith("vo_") ? k.id + "/" : "";
+      // Efeitos: pasta da skin. Falas: pasta da língua (sons/akshan3d/en/ no modo inglês).
+      const k = skinAtual(), pasta = vo ? (L === "en" ? "en/" : "") : (k.id ? k.id + "/" : "");
       const a = new Audio(`sons/akshan3d/${pasta}${nome}-${Math.floor(Math.random() * n)}.ogg`);
       a.volume = nome.startsWith("vo_") ? .8 : nome === "dance" ? .45 : .5;
       a.loop = repete;
