@@ -471,7 +471,7 @@
    ]
   },
   "bota": {
-   "texto": "Tanto faz",
+   "texto": "Berserker / Vampíricas",
    "pecas": []
   },
   "build": {
@@ -546,8 +546,10 @@
    ]
   },
   "bota": {
-   "texto": "Tanto faz",
-   "pecas": []
+   "texto": "Berserker / Vampíricas",
+   "pecas": [
+    "3008"
+   ]
   },
   "build": {
    "texto": "Tanto faz",
@@ -625,15 +627,17 @@
    ]
   },
   "bota": {
-   "texto": "Mercúrio",
+   "texto": "Mercúrio / Vampíricas",
    "pecas": [
-    "3111"
+    "3111",
+    "3008"
    ]
   },
   "build": {
    "texto": "Craquen / Crit",
    "pecas": [
     "6672",
+    "3033",
     "3095"
    ]
   },
@@ -648,10 +652,10 @@
    ]
   },
   "sec": {
-   "texto": "Tanto faz",
+   "texto": "Inspiração / Scaling",
    "pecas": [
     "CashBack",
-    "PerfectTiming"
+    "GatheringStorm"
    ]
   },
   "bota": {
@@ -698,15 +702,24 @@
  "Malphite": {
   "runa": {
    "texto": "PTA",
-   "pecas": []
+   "pecas": [
+    "PressTheAttack"
+   ]
   },
   "sec": {
    "texto": "Scaling",
-   "pecas": []
+   "pecas": [
+    "AbsoluteFocus",
+    "GatheringStorm"
+   ]
   },
   "bota": {
-   "texto": "Mercúrio / Vampíricas",
-   "pecas": []
+   "texto": "Mercúrio / Rapidez / Vampíricas",
+   "pecas": [
+    "3111",
+    "3009",
+    "3008"
+   ]
   },
   "build": {
    "texto": "Terminus / Crit",
