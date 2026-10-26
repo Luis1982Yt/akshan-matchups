@@ -114,7 +114,8 @@ descricao = ("Guias de matchup de League of Legends com as notas de quem joga: "
              + em_lista([f"{g['campeao']['nome']} {(g.get('rota') or '').lower()} ({g['autor']})" for g in guias])
              + ". Runas, build, cooldowns e como jogar cada confronto, em português e inglês.")
 titulo_og = "Guias de matchup · " + em_lista([g["campeao"]["nome"] for g in guias])
-template = template.replace("/*DESCRICAO*/", html_lib.escape(descricao)).replace("/*TITULO_OG*/", html_lib.escape(titulo_og)).replace(
+og_alt = "Faixas das splash arts de " + em_lista([g["campeao"]["nome"] for g in guias]) + " ao lado do título Guias de matchup"
+template = template.replace("/*DESCRICAO*/", html_lib.escape(descricao)).replace("/*TITULO_OG*/", html_lib.escape(titulo_og)).replace("/*OG_ALT*/", html_lib.escape(og_alt)).replace(
     "/*VER_DD*/", (SRC / "versao_dd.txt").read_text(encoding="utf-8").strip())
 
 html = template.replace("/*ICONE*/", icone("icone-64.png")).replace("/*ICONE_APPLE*/", icone("apple-180.png")).replace("/*IDS*/", json.dumps([g["id"] for g in guias])).replace("/*FONTS*/", font_faces()).replace(

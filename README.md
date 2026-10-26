@@ -40,7 +40,7 @@ Um guia pode ser escondido com `"oculto": true` em `src/guias.json` (os dados co
 - Tier list: botão embaixo da lista, agrupa os campeões pela dificuldade (cor da planilha). Ao vivo: o card "Acompanhe" consulta o decapi.me a cada 5 min e marca quem está em live na Twitch.
 - `meta.json > feitico_extra`: feitiço somado ao da planilha numa matchup, combinado com o dono do site (hoje Zoe: + Cleanse). Some sozinho se a planilha passar a ter esse feitiço.
 - `meta.json > pecas_manuais`: ícones escolhidos à mão para célula sem imagem na planilha (hoje a build do Malphite: Terminus + Gume do Infinito); vale enquanto o texto da célula for o mesmo.
-- `og.jpg` e `scripts/og.py`: a imagem da prévia quando o link é compartilhado (WhatsApp, Discord, X). Rode `python scripts/og.py` se mudar a arte ou o número de matchups.
+- `og.jpg` e `scripts/og.py`: a imagem da prévia quando o link é compartilhado (WhatsApp, Discord, X), com uma faixa da splash de cada guia. Rode `python scripts/og.py` quando entrar ou sair um guia e aumente o `?v=` do `og:image` no template (as redes guardam a prévia antiga pelo endereço).
 - `src/icone/`: ícone da aba (`icone-64.png`) e da tela inicial do celular (`apple-180.png`), também embutidos pelo build; `original.webp` é a arte de origem.
 - `scripts/build.py`: gera o `index.html`. Rode `python scripts/build.py` depois de qualquer mudança.
 - `src/versao_dd.txt` e `scripts/versao_dd.py`: a versão do Data Dragon (patch do LoL) de ícones, nomes e cooldowns, a mesma para o site e para os scripts. O workflow diário troca para o patch mais novo sozinho; à mão, `python scripts/versao_dd.py` e depois os `atualizar_*.py`.
