@@ -4963,7 +4963,16 @@
         [
          "Ult",
          "3"
-        ],
+        ]
+       ]
+      },
+      {
+       "tipo": "p",
+       "texto": "- Spiderling form"
+      },
+      {
+       "tipo": "tabela",
+       "linhas": [
         [
          "Q (Bite)",
          "6"
@@ -4981,10 +4990,6 @@
          "3"
         ]
        ]
-      },
-      {
-       "tipo": "p",
-       "texto": "- Spiderling form"
       }
      ]
     },
@@ -9615,6 +9620,10 @@
      "titulo": "Enemy Cooldowns",
      "blocos": [
       {
+       "tipo": "p",
+       "texto": "- Melee form"
+      },
+      {
        "tipo": "tabela",
        "linhas": [
         [
@@ -9654,10 +9663,6 @@
          "6"
         ]
        ]
-      },
-      {
-       "tipo": "p",
-       "texto": "- Melee form"
       }
      ]
     },
@@ -14984,10 +14989,19 @@
          "140 / 120 / 100"
         ]
        ]
-      },
+      }
+     ]
+    },
+    {
+     "titulo": "Early Game",
+     "blocos": [
       {
-       "tipo": "p",
-       "texto": "Early Game - Try to get priority of the lane without getting hit by Mordekaiser's Q, you can do this by tethering in and out of his Q range and baiting it. - Level 2, level up your W, and keep trying to bait out his abilities. If he uses Q now, walk up aggressively so that you can land yours and potentially snag a shield bash procc. - Level 3, keep playing cautious and try to only use your abilities to whiff punish his abilities."
+       "tipo": "lista",
+       "itens": [
+        "Try to get priority of the lane without getting hit by Mordekaiser's Q, you can do this by tethering in and out of his Q range and baiting it.",
+        "Level 2, level up your W, and keep trying to bait out his abilities. If he uses Q now, walk up aggressively so that you can land yours and potentially snag a shield bash procc.",
+        "Level 3, keep playing cautious and try to only use your abilities to whiff punish his abilities."
+       ]
       }
      ]
     },
@@ -16248,7 +16262,16 @@
         [
          "Ult",
          "3"
-        ],
+        ]
+       ]
+      },
+      {
+       "tipo": "p",
+       "texto": "- Cougar form"
+      },
+      {
+       "tipo": "tabela",
+       "linhas": [
         [
          "Q (Empowered AA / Execute)",
          "6"
@@ -16262,10 +16285,6 @@
          "6"
         ]
        ]
-      },
-      {
-       "tipo": "p",
-       "texto": "- Cougar form"
       }
      ]
     },
@@ -18227,7 +18246,16 @@
         [
          "Ult",
          "120 / 100 / 80"
-        ],
+        ]
+       ]
+      },
+      {
+       "tipo": "p",
+       "texto": "- Burrowed form"
+      },
+      {
+       "tipo": "tabela",
+       "linhas": [
         [
          "Q (Poke tool)",
          "10"
@@ -18245,10 +18273,6 @@
          "120 / 100 / 80"
         ]
        ]
-      },
-      {
-       "tipo": "p",
-       "texto": "- Burrowed form"
       }
      ]
     },

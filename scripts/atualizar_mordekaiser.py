@@ -135,8 +135,10 @@ def ler_secoes(texto):
     secoes, atual = [], None
     for l in texto.split("\n"):
         t = l.strip()
-        if t.endswith(":") and t[:-1] in SECOES:
-            atual = {"titulo": t[:-1], "linhas": []}
+        # "Early Game:" sozinho na linha (no espelho do Mordekaiser vem sem os dois pontos) ou "Early Game - texto".
+        cab = re.match(r"^(" + "|".join(map(re.escape, SECOES)) + r")(?::?\s*$|\s+-\s+(.+)$)", t)
+        if cab:
+            atual = {"titulo": cab.group(1), "linhas": [cab.group(2)] if cab.group(2) else []}
             secoes.append(atual)
         elif atual is None:
             atual = {"titulo": "", "linhas": [l]}
@@ -148,22 +150,29 @@ def ler_secoes(texto):
 
 def blocos(linhas, tabela):
     if tabela:
-        rows, extra = [], []
+        # Na ordem da planilha: uma linha solta entre as habilidades ("- Spiderling form") fica onde está.
+        out = []
+
+        def tabela_atual():
+            if not out or out[-1]["tipo"] != "tabela":
+                out.append({"tipo": "tabela", "linhas": []})
+            return out[-1]["linhas"]
         for l in linhas:
             t = l.strip()
             if not t:
                 continue
             m = re.match(r"^(.+?):\s*(.+)$", t)
             if m:
-                rows.append([m.group(1).strip(), m.group(2).strip()])
+                tabela_atual().append([m.group(1).strip(), m.group(2).strip()])
             elif t.endswith(":"):
-                rows.append([t[:-1], ""])
-            elif rows and not rows[-1][1]:
-                rows[-1][1] = t
+                tabela_atual().append([t[:-1], ""])
+            elif out and out[-1]["tipo"] == "tabela" and not out[-1]["linhas"][-1][1]:
+                out[-1]["linhas"][-1][1] = t
+            elif out and out[-1]["tipo"] == "p":
+                out[-1]["texto"] += " " + t
             else:
-                extra.append(t)
-        out = [{"tipo": "tabela", "linhas": rows}] if rows else []
-        return out + ([{"tipo": "p", "texto": " ".join(extra)}] if extra else [])
+                out.append({"tipo": "p", "texto": t})
+        return out
     out, grupo = [], []
 
     def fecha_grupo():
