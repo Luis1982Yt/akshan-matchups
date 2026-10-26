@@ -394,13 +394,16 @@ def inicia_com_windows(ligar):
 
 class Janela:
     """Uma janela só, criada escondida; abrir uma matchup troca o endereço dentro dela e traz para a frente.
-    Fechar no X esconde (o app continua na bandeja); só "Sair" fecha de verdade."""
+    Fechar no X esconde (o app continua na bandeja); só "Sair" fecha de verdade.
+
+    Tudo o que mexe na janela vai para a fila da thread dela (BeginInvoke) e o app segue sem esperar.
+    As chamadas do pywebview (evaluate_js, show, load_url...) esperam a resposta da janela, e quando
+    duas dessas esperas se cruzam o processo inteiro congela; foi o que travava a troca de guia."""
 
     def __init__(self, cfg, salva):
         self.cfg, self.salva = cfg, salva
         self.w = None
         self.saindo = False
-        self.pronta = threading.Event()
 
     def cria(self, webview):
         x, y = self.cfg.get("janela_x"), self.cfg.get("janela_y")
@@ -414,52 +417,79 @@ class Janela:
             NOME_APP, SITE, width=self.cfg.get("janela_l", JANELA_LARGURA), height=self.cfg.get("janela_a", JANELA_ALTURA),
             x=x, y=y, min_size=(360, 560), hidden=True, on_top=bool(self.cfg.get("por_cima")), background_color="#0c0b09")
         self.w.events.closing += self._fechando
-        self.w.events.loaded += lambda: self.pronta.set()
 
-    def _guarda_tamanho(self):
+    def _form(self):
+        from webview.platforms.winforms import BrowserView
+        return BrowserView.instances.get(self.w.uid) if self.w else None
+
+    def _na_janela(self, fn):
+        """Põe fn na fila da thread da janela e volta na hora."""
+        from System import Action
+        f = self._form()
+        if f is None:
+            return False
+
+        def seguro():
+            try:
+                fn(f)
+            except Exception:
+                log.exception("janela")
+        f.BeginInvoke(Action(seguro))
+        return True
+
+    def _guarda_tamanho(self, f):
         try:
-            self.cfg.update(janela_l=self.w.width, janela_a=self.w.height, janela_x=self.w.x, janela_y=self.w.y)
-            self.salva(self.cfg)
+            if f.WindowState.ToString() == "Normal":
+                self.cfg.update(janela_l=f.Width, janela_a=f.Height, janela_x=f.Left, janela_y=f.Top)
+                self.salva(self.cfg)
         except Exception:
             pass
 
     def _fechando(self):
         if self.saindo:
             return True
-        self._guarda_tamanho()
-        threading.Thread(target=self.w.hide, daemon=True).start()
+        self._na_janela(lambda f: (self._guarda_tamanho(f), f.Hide()))
         return False  # cancela o fechamento: só esconde
 
     def mostra(self, url=None):
         if not self.w:
             return
-        if url:
-            alvo = url.split("#", 1)[1] if "#" in url else ""
-            try:
-                atual = self.w.get_current_url() or ""
-            except Exception:
-                atual = ""
-            if atual.startswith(SITE) and self.pronta.is_set():
-                # Já está no site: troca só o #, sem recarregar (o site escuta a mudança).
-                self.w.evaluate_js(f"location.hash = {json.dumps('#' + alvo)}")
-            else:
-                self.w.load_url(url)
-        self.w.show()
-        self.w.restore()
-        if not self.cfg.get("por_cima"):
-            # Traz para a frente sem deixar fixo por cima.
-            self.w.on_top = True
-            self.w.on_top = False
+
+        def faz(f):
+            from System import Uri
+            from System.Windows.Forms import FormWindowState
+            wv = f.browser.webview
+            if url:
+                atual = str(wv.Source) if wv.Source is not None else ""
+                if atual.startswith(SITE) and wv.CoreWebView2 is not None:
+                    # Já está no site: troca só o #, sem recarregar (o site escuta a mudança).
+                    alvo = url.split("#", 1)[1] if "#" in url else ""
+                    wv.CoreWebView2.ExecuteScriptAsync(f"location.hash = {json.dumps('#' + alvo)}")
+                elif wv.CoreWebView2 is not None:
+                    wv.Source = Uri(url)
+                else:
+                    self.w.real_url = url  # o WebView2 ainda está iniciando: abre direto nesse endereço
+            f.Show()
+            if f.WindowState == FormWindowState.Minimized:
+                f.WindowState = FormWindowState.Normal
+            f.Activate()
+            if not self.cfg.get("por_cima"):
+                # Traz para a frente sem deixar fixo por cima.
+                f.TopMost = True
+                f.TopMost = False
+        self._na_janela(faz)
 
     def por_cima(self, ligar):
-        if self.w:
-            self.w.on_top = ligar
+        self._na_janela(lambda f: setattr(f, "TopMost", bool(ligar)))
 
     def fecha(self):
         self.saindo = True
         if self.w:
-            self._guarda_tamanho()
-            self.w.destroy()
+            def faz(f):
+                self._guarda_tamanho(f)
+                f.Close()
+            if not self._na_janela(faz):
+                self.w.destroy()
 
 
 # ---------- Bandeja ----------
@@ -484,20 +514,24 @@ def main():
                  len(d.taxas), Lcu().sessao()[0], os.path.exists(os.path.join(pasta_recursos(), "icone-64.png")))
         return
     if "--testar-janela" in sys.argv:
-        # Confere a janela própria no .exe: abre numa matchup, troca de matchup e fecha sozinho (sem bandeja nem registro).
+        # Confere a janela própria no .exe: abre numa matchup, troca de guia duas vezes e fecha sozinho (sem bandeja nem registro).
         jt = Janela({}, lambda c: None)
+
+        def endereco():
+            ok = threading.Event()
+            lido = []
+            jt._na_janela(lambda f: (lido.append(str(f.browser.webview.Source)), ok.set()))
+            ok.wait(5)
+            return lido[0] if lido else "(sem resposta)"
 
         def roteiro():
             try:
                 log.info("teste janela: começou")
-                time.sleep(2)
-                jt.mostra(url_matchup("akshan", "ahri"))
-                log.info("teste janela: mostrou ahri")
-                time.sleep(6)
-                jt.mostra(url_matchup("illaoi", "darius"))
-                log.info("teste janela: trocou para illaoi/darius")
-                time.sleep(3)
-                log.info("teste janela: %s | %s", jt.w.get_current_url(), jt.w.evaluate_js("document.title"))
+                time.sleep(4)
+                for g, s_ in (("akshan", "ahri"), ("illaoi", "darius"), ("mordekaiser", "aatrox"), ("akshan", "zoe")):
+                    jt.mostra(url_matchup(g, s_))
+                    time.sleep(4)
+                    log.info("teste janela: %s/%s -> %s", g, s_, endereco())
             except Exception:
                 log.exception("teste janela falhou")
             finally:
