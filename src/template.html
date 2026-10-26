@@ -358,6 +358,34 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .skin-menu button[aria-pressed="true"] { color: var(--acento-vivo); }
 .skin-menu img { width: 40px; height: 40px; border-radius: 6px; object-fit: cover; border: 1px solid var(--linha-forte); }
 .card.inimigo .selo { left: auto; right: 12px; background: #f6f3ea; color: #111; }
+/* Cooldowns do inimigo: botão no card dele, painel logo abaixo dos cards (rola junto com a página) */
+.cd-btn { position: absolute; z-index: 3; top: 10px; left: 10px; display: flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 12px 0 9px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, .35); background: rgba(10, 10, 14, .62); color: #f6f3ea; font: 700 12px var(--corpo); letter-spacing: .04em; cursor: pointer; backdrop-filter: blur(4px); }
+.cd-btn[hidden] { display: none; }
+.cd-btn::after { content: ""; position: absolute; inset: -6px; }
+.cd-btn:hover, .cd-btn[aria-expanded="true"] { border-color: var(--destaque-arte); }
+.cd-btn svg { flex: none; color: var(--destaque-arte); }
+.cds-painel { position: absolute; z-index: 20; top: calc(100% + 8px); right: 0; width: min(420px, 100%); max-height: min(70vh, 560px); overflow-y: auto; overscroll-behavior: contain; padding: 0 14px 8px; border-radius: 12px; border: 1px solid var(--linha-forte); background: var(--painel); box-shadow: var(--sombra); }
+.cds-painel[hidden] { display: none; }
+.cds-topo { position: sticky; top: 0; z-index: 1; display: flex; align-items: center; gap: 10px; margin: 0 -14px; padding: 8px 6px 8px 14px; background: var(--painel); border-bottom: 1px solid var(--linha); }
+.cds-topo h3 { flex: 1; margin: 0; font: 700 14px var(--titulo); letter-spacing: .1em; text-transform: uppercase; color: var(--acento-vivo); }
+.cds-topo button { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 8px; border: 0; background: none; color: var(--texto-baixo); cursor: pointer; }
+.cds-topo button:hover { color: var(--texto); background: var(--painel-alto); }
+.cds-painel ul { list-style: none; margin: 0; padding: 0; }
+.cds-painel li { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 2px 12px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--linha); }
+.cds-painel li:last-child { border-bottom: 0; }
+.cds-painel .hab { position: relative; grid-row: span 2; width: 40px; height: 40px; border-radius: 8px; overflow: hidden; background: var(--painel-alto); box-shadow: inset 0 0 0 1px var(--linha-forte); }
+.cds-painel .hab img { display: block; width: 100%; height: 100%; }
+.cds-painel .hab b { position: absolute; right: 0; bottom: 0; min-width: 16px; padding: 0 3px; border-radius: 4px 0 0 0; background: rgba(8, 8, 6, .85); color: #f6f3ea; font: 800 11px/16px var(--corpo); text-align: center; }
+.cds-painel .hab.so-letra { display: grid; place-items: center; }
+.cds-painel .hab.so-letra b { position: static; background: none; color: var(--acento-vivo); font-size: 16px; }
+.cds-painel .nome { min-width: 0; font-size: 13px; line-height: 1.3; color: var(--texto-baixo); }
+.cds-painel .nome strong { margin-right: 6px; font-size: 14px; color: var(--texto); }
+.cds-painel .tempo { font: 700 16px/1.3 var(--corpo); color: var(--texto); font-variant-numeric: tabular-nums; }
+.cds-painel .tempo i { font-style: normal; font-weight: 400; color: var(--texto-baixo); padding: 0 3px; }
+.cds-painel .obs { grid-column: 2; margin: 2px 0 0; font-size: 13px; line-height: 1.4; color: var(--texto-baixo); font-style: italic; }
+.cds-painel li.forma { display: block; padding: 12px 0 2px; border-bottom: 0; font: 700 12px var(--corpo); letter-spacing: .08em; text-transform: uppercase; color: var(--acento-vivo); }
+.cds-painel li.nota { display: block; font-size: 14px; line-height: 1.45; color: var(--texto-baixo); }
+@media (max-width: 520px) { .cd-btn .lbl { display: none; } .cd-btn { padding: 0 8px; } }
 .card .quem { position: absolute; z-index: 2; left: 0; right: 0; bottom: 0; padding: 0 16px 14px; color: #f6f3ea; }
 .card.inimigo .quem { text-align: right; }
 .quem .t { margin: 4px 0 0; font-size: 14px; line-height: 1.3; color: #e4ddcf; }
@@ -767,8 +795,10 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
             <path class="setas-alvo" d="M-4 45L3 50l-7 5z M104 45L97 50l7 5z"/>
           </svg>
           <span class="selo" data-t="inimigo">Inimigo</span>
+          <button class="cd-btn" type="button" id="cdBtn" aria-expanded="false" aria-controls="cdsPainel" data-t-title="cdsTit" hidden><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h12M6 22h12M7 2v4.5L12 12l5-5.5V2M7 22v-4.5L12 12l5 5.5V22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="lbl" data-t="cds">Cooldowns</span></button>
           <div class="quem"><p class="n" id="eleNome"></p><p class="t" id="eleTitulo"></p><span class="guia" id="guia"></span></div>
         </article>
+        <div class="cds-painel" id="cdsPainel" role="region" aria-labelledby="cdsTit" hidden></div>
       </section>
 
       <section class="setup" aria-labelledby="st">
@@ -873,7 +903,7 @@ const TXT = {
     linguaRotulo: "Switch to English", linguaBotao: "EN",
     guiaAtual: "Guia atual: ", trocarGuia: ". Trocar de guia", notasDo: "notas do ", matchups: " matchups", aberto: "Aberto",
     facil: "Fácil", medio: "Médio", dificil: "Difícil", resumo: "Resumo", runas: "Runas", itens: "Itens", geral: "Geral",
-    principal: "Principal", fragmentos: "Fragmentos", ou: "ou", emote: "Arraste para girar · clique para uma emote", mostra3d: "Mostrar o Akshan 3D", skins: "Skins do Akshan", skinAnt: "Skin anterior", copiar: "Copiar link", copiado: "Link copiado!", copiarLink: "Copiar o link desta matchup", skinProx: "Próxima skin", chromas: "Chromas", semChroma: "Sem chroma", esconde3d: "Esconder o Akshan 3D", carrega3d: "Carregando o Akshan…", tierBotao: "Tier list das matchups", tierTit: "Tier list · {c}", fechar: "Fechar", aoVivo: "Ao vivo", acompanhe: "Acompanhe mono {c}s", assistir: "Assistir", opggDe: "OP.GG do ", devPor: "Site feito por", baixarApp: "App para PC: abre a matchup sozinho",
+    principal: "Principal", fragmentos: "Fragmentos", ou: "ou", cds: "Cooldowns", cdsTit: "Cooldowns do inimigo", cdsDe: "Cooldowns · {c}", passiva: "Passiva", cdsBase: "Cooldowns base de cada nível da habilidade, sem aceleração de habilidade.", emote: "Arraste para girar · clique para uma emote", mostra3d: "Mostrar o Akshan 3D", skins: "Skins do Akshan", skinAnt: "Skin anterior", copiar: "Copiar link", copiado: "Link copiado!", copiarLink: "Copiar o link desta matchup", skinProx: "Próxima skin", chromas: "Chromas", semChroma: "Sem chroma", esconde3d: "Esconder o Akshan 3D", carrega3d: "Carregando o Akshan…", tierBotao: "Tier list das matchups", tierTit: "Tier list · {c}", fechar: "Fechar", aoVivo: "Ao vivo", acompanhe: "Acompanhe mono {c}s", assistir: "Assistir", opggDe: "OP.GG do ", devPor: "Site feito por", baixarApp: "App para PC: abre a matchup sozinho",
     appTit: "App para PC", appLead: "Um app para Windows com o guia numa janela própria, que se abre sozinha na hora certa: quando você pega Akshan na seleção de campeões, ele descobre o mid inimigo e já mostra a matchup dele, sem você procurar.",
     appPassos: ["Baixe e abra o <b>AkshanMatchups.exe</b>. Ele fica no canto da barra de tarefas, perto do relógio, e já liga junto com o Windows (dá para desligar no menu do ícone).", "Entre numa partida e escolha o <b>Akshan</b>. Nas outras partidas o app fica quieto.", "Quando o mid inimigo travar o campeão, a janela do app aparece com a matchup dele. Se ele errar o mid, troque na própria janela ou pelo menu do ícone (\"Inimigos agora\"). Fechar a janela só esconde: ela volta na próxima partida."],
     appSeguro: "<b>Seguro:</b> o app só lê a seleção de campeões pelo próprio cliente do LoL. Nunca escolhe, bane nem aceita fila por você.",
@@ -901,7 +931,7 @@ const TXT = {
     linguaRotulo: "Mudar para português", linguaBotao: "PT",
     guiaAtual: "Current guide: ", trocarGuia: ". Change guide", notasDo: "notes by ", matchups: " matchups", aberto: "Open",
     facil: "Easy", medio: "Medium", dificil: "Hard", resumo: "Summary", runas: "Runes", itens: "Items", geral: "Overall",
-    principal: "Primary", fragmentos: "Shards", ou: "or", emote: "Drag to rotate · click for an emote", mostra3d: "Show 3D Akshan", skins: "Akshan skins", skinAnt: "Previous skin", copiar: "Copy link", copiado: "Link copied!", copiarLink: "Copy this matchup's link", skinProx: "Next skin", chromas: "Chromas", semChroma: "No chroma", esconde3d: "Hide 3D Akshan", carrega3d: "Loading Akshan…", tierBotao: "Matchup tier list", tierTit: "Tier list · {c}", fechar: "Close", aoVivo: "Live", acompanhe: "Watch {c} mains", assistir: "Watch", opggDe: "OP.GG of ", devPor: "Site by", baixarApp: "PC app: opens the matchup by itself",
+    principal: "Primary", fragmentos: "Shards", ou: "or", cds: "Cooldowns", cdsTit: "Enemy cooldowns", cdsDe: "Cooldowns · {c}", passiva: "Passive", cdsBase: "Base cooldowns per ability rank, without ability haste.", emote: "Drag to rotate · click for an emote", mostra3d: "Show 3D Akshan", skins: "Akshan skins", skinAnt: "Previous skin", copiar: "Copy link", copiado: "Link copied!", copiarLink: "Copy this matchup's link", skinProx: "Next skin", chromas: "Chromas", semChroma: "No chroma", esconde3d: "Hide 3D Akshan", carrega3d: "Loading Akshan…", tierBotao: "Matchup tier list", tierTit: "Tier list · {c}", fechar: "Close", aoVivo: "Live", acompanhe: "Watch {c} mains", assistir: "Watch", opggDe: "OP.GG of ", devPor: "Site by", baixarApp: "PC app: opens the matchup by itself",
     appTit: "PC app", appLead: "A Windows app with the guide in its own window that shows up by itself at the right time: when you pick Akshan in champion select, it figures out the enemy mid and shows that matchup, no searching needed.",
     appPassos: ["Download and open <b>AkshanMatchups.exe</b>. It sits in the taskbar corner, next to the clock, and starts with Windows (you can turn that off in the icon menu).", "Join a game and pick <b>Akshan</b>. In other games the app stays quiet.", "When the enemy mid locks in, the app window shows up with that matchup. If it guesses the wrong mid, switch in the window itself or in the icon menu (\"Current enemies\"). Closing the window just hides it: it comes back next game."],
     appSeguro: "<b>Safe:</b> the app only reads champion select through the LoL client itself. It never picks, bans or accepts queue for you.",
@@ -1317,8 +1347,64 @@ function blocoTexto(b) {
 }
 function notasCompleto(c) {
   const resumo = c.tldr.length ? `<section class="resumo"><h3>${t("resumo")}</h3><ul>${c.tldr.map(t => `<li>${esc(t)}</li>`).join("")}</ul></section>` : "";
-  return `<div class="secoes" lang="en">${resumo}${c.secoes.map(s => `<section class="secao">${s.titulo ? (L === "en" ? `<h3>${esc(s.titulo)}</h3>` : `<h3 lang="pt-BR">${esc(TITULOS[s.titulo] || s.titulo)}</h3>`) : ""}${s.blocos.map(blocoTexto).join("")}</section>`).join("")}</div>`;
+  return `<div class="secoes" lang="en">${resumo}${c.secoes.filter(s => s.titulo !== "Enemy Cooldowns").map(s => `<section class="secao">${s.titulo ? (L === "en" ? `<h3>${esc(s.titulo)}</h3>` : `<h3 lang="pt-BR">${esc(TITULOS[s.titulo] || s.titulo)}</h3>`) : ""}${s.blocos.map(blocoTexto).join("")}</section>`).join("")}</div>`;
 }
+
+/* ---------- Cooldowns do inimigo, num painel do card dele ----------
+   Vem da seção "Enemy Cooldowns" da planilha quando o autor escreveu; nos outros guias, dos valores base do jogo (Data Dragon). */
+const habilidades = {};  // ícones e nomes das habilidades, por campeão e língua (Data Dragon)
+function carregaHabilidades(id) {
+  const k = id + L;
+  if (!habilidades[k]) habilidades[k] = fetch(`${DD}${VER}/data/${L === "en" ? "en_US" : "pt_BR"}/champion/${id}.json`).then(r => r.json()).then(j => {
+    const c = j.data[id];
+    const h = { P: { nome: c.passive.name, icone: `${DD}${VER}/img/passive/${c.passive.image.full}` } };
+    "QWER".split("").forEach((l, i) => { const s = c.spells[i]; if (s) h[l] = { nome: s.name, cd: s.cooldownBurn, icone: `${DD}${VER}/img/spell/${s.image.full}` }; });
+    return h;
+  }).catch(() => ({}));
+  return habilidades[k];
+}
+const secaoCds = c => (c.secoes || []).find(s => s.titulo === "Enemy Cooldowns");
+// "Q (Poke tool)" → letra Q + "Poke tool"; "Mounted Q (Bear Trap)" → Q + "Mounted · Bear Trap"; "Ult" → R.
+function lerChaveCd(k) {
+  const m = k.match(/^(?:(\w+)\s+)?(Passive|Ult|[QWER])\b\s*(.*)$/i);
+  if (!m || (m[1] && !/^(mounted|dismounted)$/i.test(m[1]))) return null;
+  const letra = /^passive$/i.test(m[2]) ? "P" : /^ult$/i.test(m[2]) ? "R" : m[2].toUpperCase();
+  const desc = m[3].replace(/^\(\s*/, "").replace(/\s*\)?;?\s*$/, "").replace(/;$/, "");
+  return { letra, desc: [m[1], desc].filter(Boolean).join(" · ") };
+}
+function linhaCd([k, v], hab, nomeJogo) {
+  const ch = lerChaveCd(k);
+  // Sem descrição do autor, mostra o nome da habilidade no jogo.
+  if (ch && (nomeJogo || !ch.desc) && hab[ch.letra]) ch.desc = nomeJogo || hab[ch.letra].nome;
+  if (!ch) return v ? `<li class="nota"><strong>${esc(k)}:</strong> ${esc(v)}</li>` : `<li class="forma">${esc(k.replace(/^-\s*/, ""))}</li>`;
+  const h = hab[ch.letra];
+  const icone = h ? `<span class="hab" title="${esc(h.nome)}"><img src="${h.icone}" alt="" width="40" height="40"><b>${ch.letra}</b></span>` : `<span class="hab so-letra"><b>${ch.letra}</b></span>`;
+  const m = v.match(/^(.*?)\s*(\(.*\))\s*$/);
+  const tempo = m && m[1] ? m[1] : v, obs = m && m[1] ? m[2] : "";
+  const rotulo = ch.letra === "P" ? t("passiva") : ch.letra;
+  return `<li>${icone}<span class="nome"><strong>${esc(rotulo)}</strong>${esc(ch.desc)}</span><span class="tempo">${esc(tempo).replace(/\s*\/\s*/g, "<i>/</i>")}</span>${obs ? `<p class="obs">${esc(obs)}</p>` : ""}</li>`;
+}
+// Sem a seção na planilha: Q W E R com o nome da habilidade e o cooldown base de cada nível.
+const linhasJogo = hab => "QWER".split("").filter(l => hab[l]).map(l => linhaCd([l, hab[l].cd || ""], hab, hab[l].nome)).join("")
+  + (hab.Q ? `<li class="nota">${esc(t("cdsBase"))}</li>` : "");
+async function mostraCds() {
+  const c = current, sec = secaoCds(c), p = $("cdsPainel");
+  const linhas = hab => !sec ? linhasJogo(hab) : sec.blocos.map(b => b.tipo === "tabela" ? b.linhas.map(l => linhaCd(l, hab)).join("") : `<li class="${/^-\s/.test(b.texto) ? "forma" : "nota"}">${esc(b.texto.replace(/^-\s*/, ""))}</li>`).join("");
+  const topo = `<div class="cds-topo"><h3 id="cdsTit">${esc(t("cdsDe").replace("{c}", c.nome))}</h3><button type="button" id="cdsFecha" aria-label="${esc(t("fechar"))}"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button></div>`;
+  const ul = hab => `<ul${sec ? ' lang="en"' : ""}>${linhas(hab)}</ul>`;
+  p.innerHTML = topo + ul({});
+  const hab = await carregaHabilidades(c.id);
+  if (current === c && !p.hidden) p.innerHTML = topo + ul(hab);
+}
+function abreCds(abrir) {
+  $("cdsPainel").hidden = !abrir;
+  $("cdBtn").setAttribute("aria-expanded", abrir);
+  if (abrir) { toca("abre"); mostraCds(); }
+}
+$("cdBtn").addEventListener("click", () => abreCds($("cdsPainel").hidden));
+$("cdsPainel").addEventListener("click", e => { if (e.target.closest("#cdsFecha")) { abreCds(false); $("cdBtn").focus(); } });
+document.addEventListener("click", e => { if (!$("cdsPainel").hidden && !e.target.closest("#cdsPainel, #cdBtn")) abreCds(false); });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && !$("cdsPainel").hidden) { abreCds(false); $("cdBtn").focus(); } });
 
 /* ---------- Detalhe do matchup ---------- */
 function renderDetalhe(animar) {
@@ -1341,6 +1427,9 @@ function renderDetalhe(animar) {
     g.innerHTML = c.dificuldade.overall ? `${pips(c.dificuldade.overall)}${t("dificuldade")} ${c.dificuldade.overall}/5` : "";
   }
   $("travarNome").textContent = t("travarContra") + c.nome;
+  // Se o painel de cooldowns estiver aberto, acompanha a troca de matchup.
+  $("cdBtn").hidden = false;
+  if (!$("cdsPainel").hidden) mostraCds();
   if (guia.formato === "simples") {
     $("carga").innerHTML = `<dl class="carga">${slot(t("runa"), c.runa, c, "runa") + slot(t("secundaria"), c.sec, c, "sec") + slot(t("feitico"), c.spell) + slot(t("bota"), c.bota, c, "bota") + slot(t("build"), c.build, c, "build")}</dl>`;
     $("linhas").innerHTML = `<ol class="lembretes"${L === "en" ? ' lang="en"' : ""}>${c.linhas.map(l => `<li><span>${linhaNaLingua(l)}</span></li>`).join("")}</ol>`;
