@@ -1135,6 +1135,11 @@ function marcaSom() {
 }
 
 /* ---------- Dados de cada guia ---------- */
+// Runa, secundária, bota e build entram na busca com o nome de cada peça em PT e EN ("kraken", "mata-cráquens").
+const nomesDasPecas = (g, nome) => ["runa", "sec", "bota", "build"].flatMap(campo => {
+  const p = g.icones_planilha && g.icones_planilha[nome] && g.icones_planilha[nome][campo];
+  return p ? p.pecas.map(k => g.pecas[k]).filter(Boolean).flatMap(x => [x.nome, x.nome_en || ""]) : [];
+});
 function prepara(g) {
   if (g.formato === "simples") {
     g.lista = g.matchups.map(([nome, runa, sec, spell, bota, build, notas, guia]) => ({
@@ -1144,7 +1149,8 @@ function prepara(g) {
       id: g.champs[nome].id, titulo: g.champs[nome].title, titulo_en: g.champs[nome].title_en, mira: g.champs[nome].mira, slug: slug(nome),
       dif: (g.icones_planilha && g.icones_planilha[nome] && g.icones_planilha[nome].dificuldade) || null,
       linhas: notas.split("\n").map(l => l.trim().replace(/\s{2,}/g, " ")).filter(Boolean),
-      hay: (nome + " " + notas + " " + notas.split("\n").map(l => (g.traducao && g.traducao.linhas[l.trim().replace(/\s{2,}/g, " ")]) || "").join(" ")).toLowerCase(),
+      hay: (nome + " " + notas + " " + notas.split("\n").map(l => (g.traducao && g.traducao.linhas[l.trim().replace(/\s{2,}/g, " ")]) || "").join(" ")
+        + " " + [runa, sec, spell, bota, build].join(" ") + " " + nomesDasPecas(g, nome).join(" ")).toLowerCase(),
     }));
     g.lista.forEach(c => { c.hayN = normal(c.hay); });
   } else {
