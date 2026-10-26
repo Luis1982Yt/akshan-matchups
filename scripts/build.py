@@ -49,11 +49,18 @@ def guia_simples(cfg, pasta):
 def guia_completo(cfg, pasta):
     """Planilha já separada por scripts/atualizar_<campeão>.py em matchups.json."""
     dados = json.loads((pasta / "matchups.json").read_text(encoding="utf-8"))
+    # Camada em português (scripts/traducao_pt.py): frases traduzidas, nomes do cliente em PT e títulos em inglês.
+    arq = pasta / "traducao_pt.json"
+    camada = json.loads(arq.read_text(encoding="utf-8")) if arq.exists() else {}
+    titulos_en = camada.get("titulos_en", {})
+    for m in dados["matchups"]:
+        m["titulo_en"] = titulos_en.get(m["id"], "")
     eu = next((m for m in dados["matchups"] if m["id"] == cfg["campeao"]), None)
     # Sem o espelho na planilha, o título vem do guias.json.
     campeao = {"id": cfg["campeao"], "nome": eu["nome"] if eu else cfg["campeao"], "titulo": eu["titulo"] if eu else cfg.get("titulo", ""),
-               "titulo_en": cfg.get("titulo_en", "")}
-    return {"campeao": campeao, "matchups": dados["matchups"]}
+               "titulo_en": cfg.get("titulo_en") or titulos_en.get(cfg["campeao"], "")}
+    return {"campeao": campeao, "matchups": dados["matchups"],
+            "traducao_pt": {"textos": camada.get("textos", {}), "nomes": camada.get("nomes", {})} if camada else None}
 
 
 template = (SRC / "template.html").read_text(encoding="utf-8")

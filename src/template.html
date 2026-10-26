@@ -1054,7 +1054,7 @@ const TXT = {
     facil: "Fácil", medio: "Médio", dificil: "Difícil", resumo: "Resumo", runas: "Runas", itens: "Itens", geral: "Geral",
     principal: "Principal", fragmentos: "Fragmentos", ou: "ou", opcao: "Opção", cds: "Cooldowns", cdsTit: "Cooldowns do inimigo", cdsDe: "Cooldowns · {c}", passiva: "Passiva", cdsBase: "Cooldowns base de cada nível da habilidade, sem aceleração de habilidade.",
     paginasGuia: "Páginas do guia", pgMatchups: "Matchups", pgSobre: "Sobre", pgItens: "Itens", pgRunas: "Runas", pgSetups: "Setups alternativos", pgCriadores: "Criadores", pgGeral: "Geral", pgDicas: "Dicas",
-    pgOriginal: "Texto do autor, em inglês como na planilha.", estagios: ["1º item", "2º item", "3º item", "4º item+"], estViavel: "dá para fazer nesse momento da build", estSo: "só comentário",
+    pgOriginal: "Texto do autor, em inglês como na planilha.", pgTraduzido: "Texto do autor, traduzido da planilha original em inglês.", outraBuild: "Outra build", estagios: ["1º item", "2º item", "3º item", "4º item+"], estViavel: "dá para fazer nesse momento da build", estSo: "só comentário",
     lerMais: "Ler mais", lerMenos: "Ler menos", semComentario: "Sem comentário", arvores: { Precision: "Precisão", Domination: "Dominação", Sorcery: "Feitiçaria", Resolve: "Determinação", Inspiration: "Inspiração" },
     setRunas: "Runas", setItens: "Itens", setExemplo: "Exemplo", setComentario: "Comentário", ultimaMudanca: "Última mudança do campeão", emote: "Arraste para girar · clique para uma emote", mostra3d: "Mostrar o {c} 3D", skins: "Skins do Akshan", skinAnt: "Skin anterior", copiar: "Copiar link", copiado: "Link copiado!", copiarLink: "Copiar o link desta matchup", skinProx: "Próxima skin", chromas: "Chromas", semChroma: "Sem chroma", esconde3d: "Esconder o {c} 3D", carrega3d: "Carregando {c}…", tierBotao: "Tier list das matchups", tierTit: "Tier list · {c}", fechar: "Fechar", aoVivo: "Ao vivo", acompanhe: "Acompanhe mono {c}s", assistir: "Assistir", opggDe: "OP.GG do ", devPor: "Site feito por", baixarApp: "App para PC: abre a matchup sozinho",
     appTit: "App para PC", appWip: "Em desenvolvimento (WIP): ainda pode ter bugs e vai mudar bastante.", appLead: "Um app para Windows com o guia numa janela própria, que se abre sozinha na hora certa: quando você pega Akshan na seleção de campeões, ele descobre o mid inimigo e já mostra a matchup dele, sem você procurar.",
@@ -1086,7 +1086,7 @@ const TXT = {
     facil: "Easy", medio: "Medium", dificil: "Hard", resumo: "Summary", runas: "Runes", itens: "Items", geral: "Overall",
     principal: "Primary", fragmentos: "Shards", ou: "or", opcao: "Option", cds: "Cooldowns", cdsTit: "Enemy cooldowns", cdsDe: "Cooldowns · {c}", passiva: "Passive", cdsBase: "Base cooldowns per ability rank, without ability haste.",
     paginasGuia: "Guide pages", pgMatchups: "Matchups", pgSobre: "About", pgItens: "Items", pgRunas: "Runes", pgSetups: "Alternative setups", pgCriadores: "Creators", pgGeral: "General", pgDicas: "Tips",
-    pgOriginal: "The author's own text, as in the spreadsheet.", estagios: ["1st item", "2nd item", "3rd item", "4th+ item"], estViavel: "viable at this point of the build", estSo: "comment only",
+    pgOriginal: "The author's own text, as in the spreadsheet.", outraBuild: "Other build", estagios: ["1st item", "2nd item", "3rd item", "4th+ item"], estViavel: "viable at this point of the build", estSo: "comment only",
     lerMais: "Read more", lerMenos: "Read less", semComentario: "No comment", arvores: { Precision: "Precision", Domination: "Domination", Sorcery: "Sorcery", Resolve: "Resolve", Inspiration: "Inspiration" },
     setRunas: "Runes", setItens: "Items", setExemplo: "Example", setComentario: "Comments", ultimaMudanca: "Latest champion change", emote: "Drag to rotate · click for an emote", mostra3d: "Show 3D {c}", skins: "Akshan skins", skinAnt: "Previous skin", copiar: "Copy link", copiado: "Link copied!", copiarLink: "Copy this matchup's link", skinProx: "Next skin", chromas: "Chromas", semChroma: "No chroma", esconde3d: "Hide 3D {c}", carrega3d: "Loading {c}…", tierBotao: "Matchup tier list", tierTit: "Tier list · {c}", fechar: "Close", aoVivo: "Live", acompanhe: "Watch {c} mains", assistir: "Watch", opggDe: "OP.GG of ", devPor: "Site by", baixarApp: "PC app: opens the matchup by itself",
     appTit: "PC app", appWip: "Work in progress: it may still have bugs and will change a lot.", appLead: "A Windows app with the guide in its own window that shows up by itself at the right time: when you pick Akshan in champion select, it figures out the enemy mid and shows that matchup, no searching needed.",
@@ -1143,15 +1143,17 @@ function prepara(g) {
     }));
     g.lista.forEach(c => { c.hayN = normal(c.hay); });
   } else {
-    g.lista = g.matchups.map(m => ({ ...m, slug: slug(m.nome), dif: DIF_NOTA[m.dificuldade.overall] || null, hay: textoDe(m).toLowerCase() }));
+    g.lista = g.matchups.map(m => ({ ...m, slug: slug(m.nome), dif: DIF_NOTA[m.dificuldade.overall] || null, hay: textoDe(m, g).toLowerCase() }));
     g.lista.forEach(c => { c.hayN = normal(c.hay); });
   }
 }
-function textoDe(m) {
+function textoDe(m, g) {
   const partes = [m.nome, m.planilha, ...m.tldr];
   m.itens.forEach(gr => { partes.push(gr.rotulo); gr.linhas.forEach(l => partes.push(l.texto || "", l.motivo || "")); });
   m.secoes.forEach(s => { partes.push(s.titulo); s.blocos.forEach(b => partes.push(...(b.itens || (b.linhas ? b.linhas.flat() : [b.texto])))); });
-  return partes.join(" ");
+  // A busca acha pela frase original e pela tradução em português.
+  const pt = g.traducao_pt ? partes.map(p => g.traducao_pt.textos[p] || "") : [];
+  return [...partes, ...pt].join(" ");
 }
 
 // Dificuldade (cor da célula do campeão na planilha), na ordem do Peteruso: da pior para a mais tranquila.
@@ -1472,11 +1474,21 @@ function linhaNaLingua(l) {
 
 /* ---------- Formato completo (runas, itens, dificuldade e seções) ---------- */
 const TITULOS = { "Enemy Cooldowns": "Cooldowns do inimigo", "Early Game": "Early game", "How to trade": "Como trocar", "What to watch out for": "Cuidado com", "Tips": "Dicas", "Mini Rant": "Desabafo" };
-const KW_EN = /\b(level \d+|lvl \d+)\b/gi;
+const KW_EN = /\b(level \d+|lvl \d+|nível \d+)\b/gi;
 const marcaEn = t => esc(t).replace(KW_EN, m => `<span class="kw">${m}</span>`);
+// Guias escritos em inglês têm uma camada em português (src/guias/<guia>/traducao_pt.json, de scripts/traducao_pt.py):
+// no modo PT vale a frase traduzida; frase nova da planilha que ainda não tem tradução aparece como está.
+const tr = x => (L !== "en" && x && guia.traducao_pt && guia.traducao_pt.textos[x]) || x;
+// Só o texto que continua em inglês no modo PT (guia sem a camada) leva lang="en".
+const langOrig = () => (L !== "en" && !guia.traducao_pt ? ' lang="en"' : "");
+// Item ou runa com ícone: no modo PT, o nome do cliente em português (o "rush" da planilha continua).
+const nomePeca = p => {
+  const pt = L !== "en" && p.icone && guia.traducao_pt && guia.traducao_pt.nomes[p.icone];
+  return pt ? pt + (/\brush\b/i.test(p.nome) ? " (rush)" : "") : tr(p.nome);
+};
 const notaTexto = t => { const m = t.match(/^(\d)(?:\s*\/\s*(\d))?\s*(.*)$/); return m ? `${m[1]}${m[2] ? "–" + m[2] : ""}/5${m[3] ? " " + m[3] : ""}` : t; };
 const pips = n => `<span class="pips" aria-hidden="true">${[1, 2, 3, 4, 5].map(i => `<i${i <= n ? ' class="on"' : ""}></i>`).join("")}</span>`;
-const peca = (p, runa) => `<span class="peca${runa ? " runa" : ""}">${p.icone ? `<img src="${p.icone}" alt="" width="32" height="32">` : '<span class="soquete" aria-hidden="true"></span>'}<span>${esc(p.nome)}</span></span>`;
+const peca = (p, runa) => `<span class="peca${runa ? " runa" : ""}">${p.icone ? `<img src="${p.icone}" alt="" width="32" height="32">` : '<span class="soquete" aria-hidden="true"></span>'}<span>${esc(nomePeca(p))}</span></span>`;
 
 // Abas pequenas (condições da build, opções de runas, seções do "Como jogar"): uma à mostra por vez.
 // O site lembra a última escolhida de cada grupo ao trocar de matchup (por rótulo, quando ele existir na outra).
@@ -1505,10 +1517,10 @@ document.addEventListener("click", e => {
 
 function linhaItem(l, motivoExtra) {
   if (l.tipo === "sep") return '<li class="sep" aria-hidden="true"></li>';
-  if (l.tipo === "rotulo") return `<li class="sub">${esc(l.texto)}</li>`;
-  if (l.tipo === "nota") return `<li class="nota">${esc(l.texto)}</li>`;
+  if (l.tipo === "rotulo") return `<li class="sub">${esc(tr(l.texto))}</li>`;
+  if (l.tipo === "nota") return `<li class="nota">${esc(tr(l.texto))}</li>`;
   const passos = l.passos.map(alts => alts.map(p => peca(p)).join(`<span class="ou">${t("ou")}</span>`)).join(SETA_PASSO);
-  const motivo = [l.motivo, motivoExtra].filter(Boolean).join(" ");
+  const motivo = [l.motivo, motivoExtra].filter(Boolean).map(tr).join(" ");
   // O motivo fica guardado: aparece passando o mouse ou tocando no item (o "i" avisa que tem).
   return motivo ? `<li class="tem-motivo" tabindex="0" title="${esc(motivo)}"><div class="pecas">${passos}<span class="porque" aria-hidden="true">i</span></div><p class="motivo">${esc(motivo)}</p></li>`
     : `<li><div class="pecas">${passos}</div></li>`;
@@ -1529,16 +1541,16 @@ const rotuloRuna = r => ({ Principal: t("principal"), "Secundária": t("secundar
 function setupCompleto(c) {
   // Mais de uma página de runas: "Opção 1 / Opção 2" em vez de uma embaixo da outra.
   const runas = abas("runas", c.runas.map((_, i) => t("opcao") + " " + (i + 1)), c.runas.map(bloco => bloco.map(l => l.rotulo === "Fragmentos"
-    ? `<div class="linha-runa"><span class="rot">${esc(rotuloRuna(l.rotulo))}</span><p class="frag">${l.pecas.map(p => esc(p.nome)).join(" · ")}</p></div>`
+    ? `<div class="linha-runa"><span class="rot">${esc(rotuloRuna(l.rotulo))}</span><p class="frag">${l.pecas.map(p => esc(nomePeca(p))).join(" · ")}</p></div>`
     : `<div class="linha-runa"><span class="rot">${esc(rotuloRuna(l.rotulo))}</span><div class="pecas">${l.pecas.map(p => peca(p, true)).join("")}</div></div>`).join("")));
   // Builds condicionais ("If Aatrox rushes Hex Drinker" / "If he doesn't"): uma aba por condição.
-  const conds = c.itens.map((g, i) => (g.rotulo && g.rotulo !== "Items vs." ? g.rotulo.replace(/:\s*$/, "") : i ? "Other build" : "Build"));
-  const listas = c.itens.map(g => `<ol lang="en">${linhasItens(g.linhas)}</ol>`);
-  const itens = c.itens.length > 1 ? `<div lang="en">${abas("itens", conds, listas)}</div>`
-    : listas.map((ol, i) => `<div class="grupo">${conds[i] !== "Build" ? `<p class="cond" lang="en">${esc(conds[i])}</p>` : ""}${ol}</div>`).join("");
+  const conds = c.itens.map((g, i) => (g.rotulo && g.rotulo !== "Items vs." ? tr(g.rotulo).replace(/:\s*$/, "") : i ? t("outraBuild") : "Build"));
+  const listas = c.itens.map(g => `<ol${langOrig()}>${linhasItens(g.linhas)}</ol>`);
+  const itens = c.itens.length > 1 ? `<div${langOrig()}>${abas("itens", conds, listas)}</div>`
+    : listas.map((ol, i) => `<div class="grupo">${conds[i] !== "Build" ? `<p class="cond"${langOrig()}>${esc(conds[i])}</p>` : ""}${ol}</div>`).join("");
   const dif = [["early", "Early"], ["mid", "Mid"], ["late", "Late"], ["overall", "Geral"]]
     .filter(([k]) => k === "overall" || c.dificuldade[k] != null)
-    .map(([k, r]) => `<div><dt>${k === "overall" ? t("geral") : r}</dt><dd aria-label="${c.dificuldade[k] ? t("srDif", c.dificuldade[k]).replace(/^, /, "") : t("semAnot")}">${pips(c.dificuldade[k])}<b>${k === "overall" && c.dificuldade.texto ? esc(notaTexto(c.dificuldade.texto)) : (c.dificuldade[k] ?? "–") + "/5"}</b></dd></div>`).join("");
+    .map(([k, r]) => `<div><dt>${k === "overall" ? t("geral") : r}</dt><dd aria-label="${c.dificuldade[k] ? t("srDif", c.dificuldade[k]).replace(/^, /, "") : t("semAnot")}">${pips(c.dificuldade[k])}<b>${k === "overall" && c.dificuldade.texto ? esc(notaTexto(tr(c.dificuldade.texto))) : (c.dificuldade[k] ?? "–") + "/5"}</b></dd></div>`).join("");
   return `<div class="setup-completo">
     <section class="bloco"><h3>${t("runas")}</h3>${runas || `<p class="livre">${t("semAnot")}</p>`}</section>
     <section class="bloco build"><h3>${t("itens")}</h3>${itens || `<p class="livre">${t("semAnot")}</p>`}</section>
@@ -1547,24 +1559,24 @@ function setupCompleto(c) {
 }
 
 function blocoTexto(b) {
-  if (b.tipo === "tabela") return `<table class="cds"><tbody>${b.linhas.map(([k, v]) => `<tr><th scope="row">${esc(k)}</th><td>${esc(v)}</td></tr>`).join("")}</tbody></table>`;
-  if (b.tipo === "lista") return `<ul>${b.itens.map(t => `<li>${marcaEn(t)}</li>`).join("")}</ul>`;
-  return `<p>${marcaEn(b.texto)}</p>`;
+  if (b.tipo === "tabela") return `<table class="cds"><tbody>${b.linhas.map(([k, v]) => `<tr><th scope="row">${esc(tr(k))}</th><td>${esc(tr(v))}</td></tr>`).join("")}</tbody></table>`;
+  if (b.tipo === "lista") return `<ul>${b.itens.map(x => `<li>${marcaEn(tr(x))}</li>`).join("")}</ul>`;
+  return `<p>${marcaEn(tr(b.texto))}</p>`;
 }
 // "Como jogar": resumo e cada seção numa aba, em vez de um texto enorme.
 function notasCompleto(c) {
-  const titulo = s => (L === "en" ? s.titulo : TITULOS[s.titulo] || s.titulo) || t("comoJogar");
+  const titulo = s => (L === "en" ? s.titulo : TITULOS[s.titulo] || tr(s.titulo)) || t("comoJogar");
   const secoes = c.secoes.filter(s => s.titulo !== "Enemy Cooldowns");
   const rotulos = [...(c.tldr.length ? [t("resumo")] : []), ...secoes.map(titulo)];
   const paineis = [
-    ...(c.tldr.length ? [`<section class="resumo"><ul>${c.tldr.map(x => `<li>${esc(x)}</li>`).join("")}</ul></section>`] : []),
+    ...(c.tldr.length ? [`<section class="resumo"><ul>${c.tldr.map(x => `<li>${esc(tr(x))}</li>`).join("")}</ul></section>`] : []),
     ...secoes.map(s => `<section class="secao">${s.blocos.map(blocoTexto).join("")}</section>`),
   ];
-  return `<div class="secoes" lang="en">${abas("jogar", rotulos, paineis)}</div>`;
+  return `<div class="secoes"${langOrig()}>${abas("jogar", rotulos, paineis)}</div>`;
 }
 
 /* ---------- Páginas do guia (as outras abas da planilha do autor) ----------
-   Texto em inglês como no original; só os rótulos do site mudam de língua. */
+   Texto do autor como no original no modo EN; no modo PT, a camada traduzida (tr e nomePeca). */
 const NOME_PAGINA = { sobre: "pgSobre", itens: "pgItens", runas: "pgRunas", setups: "pgSetups", criadores: "pgCriadores", geral: "pgGeral", dicas: "pgDicas" };
 const ICONE_PAGINA = {
   matchups: '<path d="M6 4l12 16M18 4L6 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>',
@@ -1590,10 +1602,11 @@ function fluxo(txt) {
 // Texto da célula com os links dela no lugar (o texto do link aparece no meio da frase).
 function comLinks(c) {
   if (!c) return "";
-  let h = esc(fluxo(c.texto));
+  let h = esc(fluxo(tr(c.texto)));
   (c.links || []).forEach(l => {
-    const a = `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.texto || l.url)}</a>`;
-    const alvo = esc(l.texto || "");
+    const texto = tr(l.texto || "");
+    const a = `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(texto || l.url)}</a>`;
+    const alvo = esc(texto);
     h = alvo && h.includes(alvo) ? h.replace(alvo, a) : h + (h ? " " : "") + a;
   });
   return h;
@@ -1602,45 +1615,46 @@ const textoLongo = (txt, cls = "texto") => txt.length > 320
   ? `<p class="${cls} curto">${txt}</p><button type="button" class="mais" data-mais>${t("lerMais")}</button>` : `<p class="${cls}">${txt}</p>`;
 
 const BLOCOS = {
-  texto: b => `<section class="pg-bloco">${b.titulo ? `<h3>${esc(b.titulo)}</h3>` : ""}<p lang="en">${comLinks(b)}</p></section>`,
-  aviso: b => `<section class="pg-bloco aviso"><p lang="en">${esc(b.texto)}</p></section>`,
-  lista: b => `<section class="pg-bloco"><h3 lang="en">${comLinks(b)}</h3><ul class="pg-lista" lang="en">${b.itens.map(i => `<li>${comLinks(i)}</li>`).join("")}</ul></section>`,
+  texto: b => `<section class="pg-bloco">${b.titulo ? `<h3${langOrig()}>${esc(tr(b.titulo))}</h3>` : ""}<p${langOrig()}>${comLinks(b)}</p></section>`,
+  aviso: b => `<section class="pg-bloco aviso"><p${langOrig()}>${esc(tr(b.texto))}</p></section>`,
+  lista: b => `<section class="pg-bloco"><h3${langOrig()}>${comLinks(b)}</h3><ul class="pg-lista"${langOrig()}>${b.itens.map(i => `<li>${comLinks(i)}</li>`).join("")}</ul></section>`,
   patch: b => `<section class="pg-bloco pg-patch"><h3>${esc(t("ultimaMudanca"))}${b.versao ? `<span class="versao">${esc(b.versao)}</span>` : ""}</h3>
-    <dl lang="en">${b.mudancas.map(m => `<div><dt>${esc(m.nome)}</dt>${m.linhas.map(l => `<dd>${esc(l)}</dd>`).join("")}</div>`).join("")}</dl>
-    ${(b.links || []).map(l => `<p><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(b.texto.replace(/:.*$/, "") + " · " + l.texto)}</a></p>`).join("")}</section>`,
-  itens: b => `<p class="legenda-estagios"><i></i>${esc(t("estViavel"))}</p>` + b.grupos.map(g => `<section class="pg-grupo">${g.titulo ? `<h3 lang="en">${esc(g.titulo)}</h3>` : ""}<div class="pg-cards">${g.itens.map(it => {
+    <dl${langOrig()}>${b.mudancas.map(m => `<div><dt>${esc(tr(m.nome))}</dt>${m.linhas.map(l => `<dd>${esc(tr(l))}</dd>`).join("")}</div>`).join("")}</dl>
+    ${(b.links || []).map(l => `<p><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(tr(b.texto).replace(/:.*$/, "") + " · " + tr(l.texto))}</a></p>`).join("")}</section>`,
+  itens: b => `<p class="legenda-estagios"><i></i>${esc(t("estViavel"))}</p>` + b.grupos.map(g => `<section class="pg-grupo">${g.titulo ? `<h3${langOrig()}>${esc(tr(g.titulo))}</h3>` : ""}<div class="pg-cards">${g.itens.map(it => {
       const ini = it.estagios.findIndex(e => e && e.texto);
-      return `<article class="pg-card item-card" data-item="${esc(it.id)}"><div class="topo"><img src="${iconeItem(it.id)}" alt="" width="44" height="44" loading="lazy"><b lang="en">${esc(it.nome)}</b></div>
-        <div class="estagios" role="group" aria-label="${esc(it.nome)}">${it.estagios.map((e, i) => `<button type="button" data-est="${i}" class="${e && e.id ? "viavel" : ""}" aria-pressed="${i === ini}"${e && e.texto ? "" : " disabled"} title="${esc(e && e.id ? t("estViavel") : e ? t("estSo") : "")}">${e && e.id && e.id !== it.id ? `<img src="${iconeItem(e.id)}" alt="${esc(e.nome)}" width="20" height="20" loading="lazy">` : ""}${esc(t("estagios")[i])}</button>`).join("")}</div>
-        ${it.estagios.map((e, i) => e && e.texto ? `<div class="est-texto" data-est="${i}"${i === ini ? "" : " hidden"} lang="en">${textoLongo(esc(fluxo(e.texto)))}</div>` : "").join("")}</article>`;
+      const nome = nomePeca({ nome: it.nome, icone: iconeItem(it.id) });
+      return `<article class="pg-card item-card" data-item="${esc(it.id)}"><div class="topo"><img src="${iconeItem(it.id)}" alt="" width="44" height="44" loading="lazy"><b${langOrig()}>${esc(nome)}</b></div>
+        <div class="estagios" role="group" aria-label="${esc(nome)}">${it.estagios.map((e, i) => `<button type="button" data-est="${i}" class="${e && e.id ? "viavel" : ""}" aria-pressed="${i === ini}"${e && e.texto ? "" : " disabled"} title="${esc(e && e.id ? t("estViavel") : e ? t("estSo") : "")}">${e && e.id && e.id !== it.id ? `<img src="${iconeItem(e.id)}" alt="${esc(nomePeca({ nome: e.nome, icone: iconeItem(e.id) }))}" width="20" height="20" loading="lazy">` : ""}${esc(t("estagios")[i])}</button>`).join("")}</div>
+        ${it.estagios.map((e, i) => e && e.texto ? `<div class="est-texto" data-est="${i}"${i === ini ? "" : " hidden"}${langOrig()}>${textoLongo(esc(fluxo(tr(e.texto))))}</div>` : "").join("")}</article>`;
     }).join("")}</div></section>`).join(""),
   runas: b => b.arvores.map(a => `<section class="pg-bloco arvore"><h3><img src="https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/${ARVORE_ICONE[a.chave] || ""}.png" alt="" width="28" height="28">${esc((t("arvores") || {})[a.chave] || a.chave)}</h3>
-    ${a.linhas.map(l => `<div class="nivel">${l.map(r => `<article class="pg-card${r.texto ? "" : " sem-texto"}"><div class="topo runa"><img src="${r.icone}" alt="" width="44" height="44" loading="lazy"><b lang="en">${esc(r.nome)}</b></div>${r.texto ? `<div lang="en">${textoLongo(esc(fluxo(r.texto)))}</div>` : ""}</article>`).join("")}</div>`).join("")}</section>`).join(""),
-  setups: b => b.grupos.map(g => `<section class="pg-grupo">${g.titulo ? `<h3 lang="en">${esc(g.titulo)}</h3>` : ""}<div class="pg-cards">${g.setups.map(x => `<article class="pg-card setup-alt" lang="en"><div class="topo"><b>${esc(x.nome.replace(/\s*\n\s*/g, " ").trim())}</b></div><dl>
+    ${a.linhas.map(l => `<div class="nivel">${l.map(r => `<article class="pg-card${r.texto ? "" : " sem-texto"}"><div class="topo runa"><img src="${r.icone}" alt="" width="44" height="44" loading="lazy"><b${langOrig()}>${esc(nomePeca(r))}</b></div>${r.texto ? `<div${langOrig()}>${textoLongo(esc(fluxo(tr(r.texto))))}</div>` : ""}</article>`).join("")}</div>`).join("")}</section>`).join(""),
+  setups: b => b.grupos.map(g => `<section class="pg-grupo">${g.titulo ? `<h3${langOrig()}>${esc(tr(g.titulo))}</h3>` : ""}<div class="pg-cards">${g.setups.map(x => `<article class="pg-card setup-alt"${langOrig()}><div class="topo"><b>${esc(tr(x.nome).replace(/\s*\n\s*/g, " ").trim())}</b></div><dl>
       ${[["setRunas", x.runas], ["setItens", x.itens], ["setExemplo", x.exemplo], ["setComentario", x.comentario]].filter(([, v]) => v).map(([k, v]) => `<div><dt lang="${L === "en" ? "en" : "pt-BR"}">${esc(t(k))}</dt><dd>${comLinks(v)}</dd></div>`).join("")}</dl></article>`).join("")}</div></section>`).join(""),
   // Tabela com coluna "Name" (criadores, planilhas, vídeos): um cartão por linha, links viram botões.
   tabela: b => {
     const iNome = b.colunas.indexOf("Name");
     if (iNome < 0) return BLOCOS.tabelaCrua(b);
     const meta = ["Region", "Peak Rank"].map(n => b.colunas.indexOf(n)).filter(i => i >= 0);
-    return `<section class="pg-grupo">${b.titulo ? `<h3 lang="en">${esc(b.titulo)}</h3>` : ""}<div class="pg-cards pessoas" lang="en">${b.linhas.map(l => {
+    return `<section class="pg-grupo">${b.titulo ? `<h3${langOrig()}>${esc(tr(b.titulo))}</h3>` : ""}<div class="pg-cards pessoas"${langOrig()}>${b.linhas.map(l => {
       const nome = l[iNome];
       const extra = l.map((c, i) => [c, b.colunas[i]]).filter(([c], i) => c && i !== iNome && !meta.includes(i));
-      return `<article class="pg-card pessoa"><div class="topo"><b>${esc(nome ? nome.texto : "—")}</b>${meta.map(i => l[i] ? `<span class="selo-meta">${esc(l[i].texto)}</span>` : "").join("")}</div>
+      return `<article class="pg-card pessoa"><div class="topo"><b>${esc(nome ? nome.texto : "—")}</b>${meta.map(i => l[i] ? `<span class="selo-meta">${esc(tr(l[i].texto))}</span>` : "").join("")}</div>
         ${extra.length ? `<ul class="pessoa-links">${extra.map(([c, col]) => c.links && c.links.length
-          ? c.links.map(k => `<li><a href="${esc(k.url)}" target="_blank" rel="noopener"><span>${esc(col.startsWith("Title") ? k.texto : col)}</span></a></li>`).join("")
-          : `<li class="so-texto"><span>${esc(col)}:</span> ${esc(c.texto)}</li>`).join("")}</ul>` : ""}</article>`;
+          ? c.links.map(k => `<li><a href="${esc(k.url)}" target="_blank" rel="noopener"><span>${esc(col.startsWith("Title") ? tr(k.texto) : tr(col))}</span></a></li>`).join("")
+          : `<li class="so-texto"><span>${esc(tr(col))}:</span> ${esc(tr(c.texto))}</li>`).join("")}</ul>` : ""}</article>`;
     }).join("")}</div></section>`;
   },
   // Criadores com descrição e links (página Geral da Illaoi).
-  pessoas: b => `<section class="pg-grupo">${b.titulo ? `<h3 lang="en">${esc(b.titulo)}</h3>` : ""}<div class="pg-cards pessoas" lang="en">${b.pessoas.map(x => `<article class="pg-card pessoa"><div class="topo"><b>${esc(x.nome)}</b></div>
-    ${x.texto ? `<p class="texto">${esc(x.texto)}</p>` : ""}${x.links.length ? `<ul class="pessoa-links">${x.links.map(k => `<li><a href="${esc(k.url)}" target="_blank" rel="noopener"><span>${esc(k.texto)}</span></a></li>`).join("")}</ul>` : ""}</article>`).join("")}</div></section>`,
+  pessoas: b => `<section class="pg-grupo">${b.titulo ? `<h3${langOrig()}>${esc(tr(b.titulo))}</h3>` : ""}<div class="pg-cards pessoas"${langOrig()}>${b.pessoas.map(x => `<article class="pg-card pessoa"><div class="topo"><b>${esc(x.nome)}</b></div>
+    ${x.texto ? `<p class="texto">${esc(tr(x.texto))}</p>` : ""}${x.links.length ? `<ul class="pessoa-links">${x.links.map(k => `<li><a href="${esc(k.url)}" target="_blank" rel="noopener"><span>${esc(tr(k.texto))}</span></a></li>`).join("")}</ul>` : ""}</article>`).join("")}</div></section>`,
   // Listas de itens com ícone e explicação (Itens da Illaoi).
-  pecas: b => b.grupos.map(g => `<section class="pg-grupo">${g.titulo ? `<h3 lang="en">${esc(g.titulo)}</h3>` : ""}<div class="pg-cards${g.itens.some(i => i.texto) ? "" : " pecas-soltas"}" lang="en">${g.itens.map(i => `<article class="pg-card${i.texto ? "" : " sem-texto"}"><div class="topo">${i.icone ? `<img src="${i.icone}" alt="" width="44" height="44" loading="lazy">` : ""}<b>${esc(i.nome)}</b></div>${i.texto ? textoLongo(esc(fluxo(i.texto))) : ""}</article>`).join("")}</div></section>`).join(""),
-  imagens: b => `<section class="pg-bloco">${b.titulo ? `<h3 lang="en">${esc(b.titulo)}</h3>` : ""}<div class="pg-imagens">${b.imagens.map(i => `<a href="${esc(i.src)}" target="_blank" rel="noopener"><img src="${esc(i.src)}" alt="" width="${i.largura}" height="${i.altura}" loading="lazy"></a>`).join("")}</div></section>`,
+  pecas: b => b.grupos.map(g => `<section class="pg-grupo">${g.titulo ? `<h3${langOrig()}>${esc(tr(g.titulo))}</h3>` : ""}<div class="pg-cards${g.itens.some(i => i.texto) ? "" : " pecas-soltas"}"${langOrig()}>${g.itens.map(i => `<article class="pg-card${i.texto ? "" : " sem-texto"}"><div class="topo">${i.icone ? `<img src="${i.icone}" alt="" width="44" height="44" loading="lazy">` : ""}<b>${esc(nomePeca(i))}</b></div>${i.texto ? textoLongo(esc(fluxo(tr(i.texto)))) : ""}</article>`).join("")}</div></section>`).join(""),
+  imagens: b => `<section class="pg-bloco">${b.titulo ? `<h3${langOrig()}>${esc(tr(b.titulo))}</h3>` : ""}<div class="pg-imagens">${b.imagens.map(i => `<a href="${esc(i.src)}" target="_blank" rel="noopener"><img src="${esc(i.src)}" alt="" width="${i.largura}" height="${i.altura}" loading="lazy"></a>`).join("")}</div></section>`,
   // Dicas e mecânicas: título (link do vídeo, quando tem) e explicação.
-  dicas: b => `<div class="pg-cards" lang="en">${b.itens.map(d => `<article class="pg-card"><div class="topo"><b>${comLinks(d.titulo)}</b></div>${textoLongo(comLinks(d.texto))}</article>`).join("")}</div>`,
-  tabelaCrua: b => `<section class="pg-bloco">${b.titulo ? `<h3 lang="en">${esc(b.titulo)}</h3>` : ""}<div class="pg-tabela"><table lang="en"><thead><tr>${b.colunas.map(c => `<th scope="col">${esc(c)}</th>`).join("")}</tr></thead>
+  dicas: b => `<div class="pg-cards"${langOrig()}>${b.itens.map(d => `<article class="pg-card"><div class="topo"><b>${comLinks(d.titulo)}</b></div>${textoLongo(comLinks(d.texto))}</article>`).join("")}</div>`,
+  tabelaCrua: b => `<section class="pg-bloco">${b.titulo ? `<h3${langOrig()}>${esc(tr(b.titulo))}</h3>` : ""}<div class="pg-tabela"><table${langOrig()}><thead><tr>${b.colunas.map(c => `<th scope="col">${esc(tr(c))}</th>`).join("")}</tr></thead>
     <tbody>${b.linhas.map(l => `<tr>${l.map(c => c ? `<td>${comLinks(c)}</td>` : '<td class="vazio">—</td>').join("")}</tr>`).join("")}</tbody></table></div></section>`,
 };
 
@@ -1658,7 +1672,7 @@ function renderPaginas() {
   if (ativa) { const ul = $("paginasLista"); ul.scrollLeft = ativa.offsetLeft - (ul.clientWidth - ativa.offsetWidth) / 2; }
   if (!paginaAtual) return;
   const pg = ps.find(p => p.id === paginaAtual);
-  $("pagina").innerHTML = `<h2>${esc(t(NOME_PAGINA[pg.id] || pg.id))}</h2><p class="lead">${esc(guia.autor)} · ${esc(t("pgOriginal"))}</p>` + pg.blocos.map(b => (BLOCOS[b.tipo] || (() => ""))(b)).join("")
+  $("pagina").innerHTML = `<h2>${esc(t(NOME_PAGINA[pg.id] || pg.id))}</h2><p class="lead">${esc(guia.autor)} · ${esc(t(L !== "en" && guia.traducao_pt ? "pgTraduzido" : "pgOriginal"))}</p>` + pg.blocos.map(b => (BLOCOS[b.tipo] || (() => ""))(b)).join("")
     + `<footer class="rodape">${$("rodape").innerHTML}</footer>`;
 }
 function mostraPagina(id) {
@@ -1712,11 +1726,20 @@ function lerChaveCd(k) {
   const desc = m[3].replace(/^\(\s*/, "").replace(/\s*\)?;?\s*$/, "").replace(/;$/, "");
   return { letra, desc: [m[1], desc].filter(Boolean).join(" · ") };
 }
+// A letra sai da chave original; no modo PT, a descrição vem da chave traduzida ("Q montado (armadilha de urso)").
+function descNaLingua(k, desc) {
+  const kt = tr(k);
+  if (kt === k) return desc;
+  const m = kt.match(/^(?:Passiva|Passive|Ult|[QWER])\b\s*(montado|desmontado)?\s*\(?\s*(.*?)\s*\)?;?\s*$/i);
+  return m ? [m[1], m[2]].filter(Boolean).join(" · ") : desc;
+}
 function linhaCd([k, v], hab, nomeJogo) {
   const ch = lerChaveCd(k);
+  if (ch) ch.desc = descNaLingua(k, ch.desc);
   // Sem descrição do autor, mostra o nome da habilidade no jogo.
   if (ch && (nomeJogo || !ch.desc) && hab[ch.letra]) ch.desc = nomeJogo || hab[ch.letra].nome;
-  if (!ch) return v ? `<li class="nota"><strong>${esc(k)}:</strong> ${esc(v)}</li>` : `<li class="forma">${esc(k.replace(/^-\s*/, ""))}</li>`;
+  v = tr(v);
+  if (!ch) return v ? `<li class="nota"><strong>${esc(tr(k))}:</strong> ${esc(v)}</li>` : `<li class="forma">${esc(tr(k).replace(/^-\s*/, ""))}</li>`;
   const h = hab[ch.letra];
   const icone = h ? `<span class="hab" title="${esc(h.nome)}"><img src="${h.icone}" alt="" width="40" height="40"><b>${ch.letra}</b></span>` : `<span class="hab so-letra"><b>${ch.letra}</b></span>`;
   const m = v.match(/^(.*?)\s*(\(.*\))\s*$/);
@@ -1729,9 +1752,9 @@ const linhasJogo = hab => "QWER".split("").filter(l => hab[l]).map(l => linhaCd(
   + (hab.Q ? `<li class="nota">${esc(t("cdsBase"))}</li>` : "");
 async function mostraCds() {
   const c = current, sec = secaoCds(c), p = $("cdsPainel");
-  const linhas = hab => !sec ? linhasJogo(hab) : sec.blocos.map(b => b.tipo === "tabela" ? b.linhas.map(l => linhaCd(l, hab)).join("") : `<li class="${/^-\s/.test(b.texto) ? "forma" : "nota"}">${esc(b.texto.replace(/^-\s*/, ""))}</li>`).join("");
+  const linhas = hab => !sec ? linhasJogo(hab) : sec.blocos.map(b => b.tipo === "tabela" ? b.linhas.map(l => linhaCd(l, hab)).join("") : `<li class="${/^-\s/.test(b.texto) ? "forma" : "nota"}">${esc(tr(b.texto).replace(/^-\s*/, ""))}</li>`).join("");
   const topo = `<div class="cds-topo"><h3 id="cdsTit">${esc(t("cdsDe").replace("{c}", c.nome))}</h3><button type="button" id="cdsFecha" aria-label="${esc(t("fechar"))}"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button></div>`;
-  const ul = hab => `<ul${sec ? ' lang="en"' : ""}>${linhas(hab)}</ul>`;
+  const ul = hab => `<ul${sec ? langOrig() : ""}>${linhas(hab)}</ul>`;
   p.innerHTML = topo + ul({});
   const hab = await carregaHabilidades(c.id);
   if (current === c && !p.hidden) p.innerHTML = topo + ul(hab);
