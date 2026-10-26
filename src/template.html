@@ -1511,14 +1511,14 @@ function abas(grupo, rotulos, paineis) {
   if (paineis.length < 2) return paineis.join("");
   const i0 = Math.max(0, rotulos.indexOf(abaLembrada[grupo]));
   return `<div class="com-abas" data-grupo="${grupo}"><div class="abas-mini" role="tablist">${rotulos.map((r, i) =>
-    `<button type="button" role="tab" data-aba="${i}" aria-selected="${i === i0}">${esc(r)}</button>`).join("")}</div>
+    `<button type="button" role="tab" data-aba="${i}" aria-selected="${i === i0}" tabindex="${i === i0 ? 0 : -1}">${esc(r)}</button>`).join("")}</div>
     ${paineis.map((p, i) => `<div class="aba-painel" role="tabpanel" data-painel="${i}"${i === i0 ? "" : " hidden"}>${p}</div>`).join("")}</div>`;
 }
 document.addEventListener("click", e => {
   const b = e.target.closest(".com-abas > .abas-mini [data-aba]");
   if (b) {
     const caixa = b.closest(".com-abas");
-    caixa.querySelectorAll(":scope > .abas-mini [data-aba]").forEach(x => x.setAttribute("aria-selected", x === b));
+    caixa.querySelectorAll(":scope > .abas-mini [data-aba]").forEach(x => { x.setAttribute("aria-selected", x === b); x.tabIndex = x === b ? 0 : -1; });
     caixa.querySelectorAll(":scope > .aba-painel").forEach(pn => { pn.hidden = pn.dataset.painel !== b.dataset.aba; });
     abaLembrada[caixa.dataset.grupo] = b.textContent;
     toca("chip");
@@ -1527,6 +1527,17 @@ document.addEventListener("click", e => {
   // Toque num item com motivo mostra/esconde o motivo (no mouse ele já aparece ao passar por cima).
   const li = e.target.closest(".build li.tem-motivo");
   if (li) li.classList.toggle("aberto");
+});
+// Teclado nas abas: ← → trocam de aba (Home/End vão para a primeira/última), como nas abas do sistema.
+document.addEventListener("keydown", e => {
+  const b = e.target.closest && e.target.closest(".abas-mini [data-aba]");
+  if (!b || e.altKey || e.ctrlKey || e.metaKey) return;
+  const todas = [...b.parentElement.querySelectorAll("[data-aba]")], i = todas.indexOf(b);
+  const j = { ArrowRight: (i + 1) % todas.length, ArrowLeft: (i - 1 + todas.length) % todas.length, Home: 0, End: todas.length - 1 }[e.key];
+  if (j == null) return;
+  e.preventDefault();
+  todas[j].focus();
+  todas[j].click();
 });
 
 function linhaItem(l, motivoExtra) {
@@ -1992,7 +2003,7 @@ document.addEventListener("keydown", e => {
     if (e.key === "Escape") { q.value = ""; renderLista(); q.blur(); }
     return;
   }
-  if (e.target.closest && e.target.closest("input, textarea, select, .lista")) return;
+  if (e.target.closest && e.target.closest("input, textarea, select, .lista, [role=tablist]")) return;
   if (e.key === "ArrowRight") { toca("avanca"); select(vizinhos([1])[0]); }
   if (e.key === "ArrowLeft") { toca("volta"); select(vizinhos([-1])[0]); }
   // Cima/baixo andam uma linha da grade (na faixa de uma linha só, um campeão).
