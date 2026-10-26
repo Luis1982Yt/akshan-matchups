@@ -18,9 +18,8 @@ os.makedirs(os.path.dirname(ico), exist_ok=True)
 Image.open(os.path.join(SRC, "icone", "original.webp")).convert("RGBA").save(
     ico, sizes=[(16, 16), (24, 24), (32, 32), (48, 48), (64, 64), (128, 128), (256, 256)])
 
-# Cópias embutidas do guia (usadas se o GitHub não responder) e o ícone da bandeja.
-dados = [os.path.join(SRC, "guias", "akshan", "rows.js"), os.path.join(SRC, "guias", "akshan", "meta.json"),
-         os.path.join(SRC, "icone", "icone-64.png")]
+# Cópia embutida da lista de guias (usada se o site não responder; gere antes com scripts/build.py) e o ícone da bandeja.
+dados = [os.path.join(RAIZ, "guias-app.json"), os.path.join(SRC, "icone", "icone-64.png")]
 subprocess.run([
     sys.executable, "-m", "PyInstaller", "--noconfirm", "--onefile", "--windowed",
     "--name", "AkshanMatchups", "--icon", ico,

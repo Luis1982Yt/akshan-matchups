@@ -1,8 +1,9 @@
 """Akshan Matchups: app de bandeja para a seleção de campeões.
 
 Lê a sessão da seleção de campeões pela API local do cliente do LoL (LCU) e,
-quando o jogador está de Akshan, abre o site direto na matchup contra o mid
-inimigo mais provável. Só faz leitura: nunca escolhe, bane nem aceita nada.
+quando o jogador está de um campeão que tem guia no site (Akshan, Mordekaiser,
+Illaoi...), abre o guia dele direto na matchup contra o inimigo mais provável
+da mesma rota. Só faz leitura: nunca escolhe, bane nem aceita nada.
 """
 
 import ctypes
@@ -24,13 +25,12 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 NOME_APP = "Akshan Matchups"
 SITE = "https://akshan-matchups.vercel.app/"
-AKSHAN = 166
 INTERVALO_POLL = 1.5        # segundos entre leituras na seleção
 INTERVALO_SEM_CLIENTE = 4   # segundos entre tentativas de achar o cliente
 INTERVALO_MIN_ABRIR = 5     # segundos mínimos entre duas trocas automáticas de matchup
 JANELA_LARGURA, JANELA_ALTURA = 460, 900  # janela lateral estreita: o site mostra o formato compacto
 
-URL_DADOS = "https://raw.githubusercontent.com/Luis1982Yt/akshan-matchups/main/src/guias/akshan/"
+URL_GUIAS = SITE + "guias-app.json"  # gerado pelo scripts/build.py: guias, rota e matchups
 URL_VERSOES = "https://ddragon.leagueoflegends.com/api/versions.json"
 URL_CAMPEOES = "https://ddragon.leagueoflegends.com/cdn/{v}/data/pt_BR/champion.json"
 VERSAO_DDRAGON = "16.20.1"
@@ -49,8 +49,8 @@ TXT = {
     "pt": {
         "sem_cliente": "Aguardando o cliente do LoL",
         "fora": "Fora da seleção de campeões",
-        "outro": "Na seleção (sem Akshan)",
-        "akshan": "Na seleção de Akshan",
+        "outro": "Na seleção (campeão sem guia)",
+        "guia": "Na seleção de {c}",
         "alvo": "Matchup aberta: {c}",
         "abrir_site": "Abrir a janela",
         "navegador": "Abrir no navegador",
@@ -64,8 +64,8 @@ TXT = {
     "en": {
         "sem_cliente": "Waiting for the LoL client",
         "fora": "Not in champion select",
-        "outro": "In champ select (not Akshan)",
-        "akshan": "In champ select as Akshan",
+        "outro": "In champ select (no guide for your pick)",
+        "guia": "In champ select as {c}",
         "alvo": "Matchup open: {c}",
         "abrir_site": "Open the window",
         "navegador": "Open in the browser",
@@ -95,49 +95,29 @@ def slug(nome):
     return re.sub(r"\s+", "-", s)
 
 
-def url_matchup(s):
-    return f"{SITE}#akshan/{s}"
+def url_matchup(guia, s):
+    return f"{SITE}#{guia}/{s}"
 
 
-# ---------- Dados: guia, Data Dragon e taxa de mid ----------
+# ---------- Dados: guias do site, Data Dragon e taxa de cada rota ----------
 
 def pasta_recursos():
-    """Pasta com as cópias embutidas (no .exe) ou o src/ do repositório."""
+    """Pasta com as cópias embutidas (no .exe) ou a raiz do repositório."""
     if getattr(sys, "frozen", False):
         return os.path.join(sys._MEIPASS, "dados")
-    return os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "src", "guias", "akshan")
+    return os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 
 
-def le_rows(texto):
-    # rows.js é um array JS com vírgula sobrando no fim.
-    return json.loads(re.sub(r",\s*\]\s*$", "]", texto.strip()))
+def carrega_guias():
+    guias = requests.get(URL_GUIAS, timeout=10).json()["guias"]
+    if not guias:
+        raise ValueError("lista de guias vazia")
+    return guias
 
 
-def monta_guia(rows, meta):
-    """Lista na ordem do guia: [(nome, id do Data Dragon), ...]."""
-    champs = meta.get("champs", {})
-    return [(r[0], champs.get(r[0], {}).get("id", r[0].replace("'", "").replace(" ", ""))) for r in rows]
-
-
-def carrega_guia():
-    try:
-        rows = le_rows(requests.get(URL_DADOS + "rows.js", timeout=10).text)
-        meta = requests.get(URL_DADOS + "meta.json", timeout=10).json()
-        guia = monta_guia(rows, meta)
-        if guia:
-            return guia
-    except Exception as e:
-        log.warning("guia online falhou: %s", e)
-    return carrega_guia_local()
-
-
-def carrega_guia_local():
-    p = pasta_recursos()
-    with open(os.path.join(p, "rows.js"), encoding="utf-8") as f:
-        rows = le_rows(f.read())
-    with open(os.path.join(p, "meta.json"), encoding="utf-8") as f:
-        meta = json.load(f)
-    return monta_guia(rows, meta)
+def carrega_guias_local():
+    with open(os.path.join(pasta_recursos(), "guias-app.json"), encoding="utf-8") as f:
+        return json.load(f)["guias"]
 
 
 def carrega_ids():
@@ -151,24 +131,24 @@ def carrega_ids():
 
 
 def carrega_taxas():
-    """{championId: fração das partidas do campeão que são no mid}."""
+    """{championId: {rota: fração das partidas do campeão nessa rota}} (TOP, JUNGLE, MIDDLE, BOTTOM, UTILITY)."""
     dados = requests.get(URL_TAXAS, timeout=15).json()["data"]
     taxas = {}
     for k, rotas in dados.items():
         total = sum(r.get("playRate", 0) for r in rotas.values())
         if total > 0:
-            taxas[int(k)] = rotas.get("MIDDLE", {}).get("playRate", 0) / total
+            taxas[int(k)] = {rota: r.get("playRate", 0) / total for rota, r in rotas.items()}
     return taxas
 
 
-def com_cache(nome, carregar):
+def com_cache(nome, carregar, chaves_int=True):
     """Busca na internet; se falhar, usa a última cópia salva."""
     caminho = os.path.join(PASTA_CONFIG, f"cache-{nome}.json")
     try:
         dados = carregar()
         try:
             with open(caminho, "w", encoding="utf-8") as f:
-                json.dump(dados if not isinstance(dados, dict) else {str(k): v for k, v in dados.items()}, f, ensure_ascii=False)
+                json.dump({str(k): v for k, v in dados.items()} if isinstance(dados, dict) else dados, f, ensure_ascii=False)
         except OSError:
             pass
         return dados
@@ -177,60 +157,66 @@ def com_cache(nome, carregar):
         try:
             with open(caminho, encoding="utf-8") as f:
                 d = json.load(f)
-            return {int(k): v for k, v in d.items()} if isinstance(d, dict) else [tuple(x) for x in d]
+            return {int(k): v for k, v in d.items()} if isinstance(d, dict) and chaves_int else d
         except Exception:
             return None
 
 
 class Dados:
-    def __init__(self, guia, ids, taxas):
-        self.guia = guia or []
+    def __init__(self, guias, ids, taxas):
+        self.guias = guias or []
         self.ids = ids or {}
         self.taxas = taxas or {}
-        self.ordem = {did: i for i, (_, did) in enumerate(self.guia)}
-        self.nome_guia = {did: nome for nome, did in self.guia}
+        self.por_chave = {g["chave"]: g for g in self.guias if g.get("chave")}
 
-    def inimigo(self, cid):
+    def guia_de(self, *cids):
+        """Guia do campeão escolhido (ou só marcado), se o site tiver um."""
+        return next((self.por_chave[c] for c in cids if c in self.por_chave), None)
+
+    def inimigo(self, cid, guia):
         did = self.ids.get(cid)
-        nome = self.nome_guia.get(did)
+        lista = guia["matchups"] if guia else []
+        achado = next(((i, m) for i, m in enumerate(lista) if m[1] == did), None)
+        rota = (guia or {}).get("rota") or "MIDDLE"
+        taxa = self.taxas.get(cid)
         return {
             "cid": cid,
-            "nome": nome or did or f"#{cid}",
-            "slug": slug(nome) if nome else None,
-            "prob": self.taxas.get(cid),
-            "ordem": self.ordem.get(did, 999),
+            "nome": achado[1][0] if achado else (did or f"#{cid}"),
+            "slug": achado[1][2] if achado else None,
+            "prob": taxa.get(rota, 0) if isinstance(taxa, dict) else None,
+            "ordem": achado[0] if achado else 999,
         }
 
 
-# ---------- Leitura da sessão e escolha do mid ----------
+# ---------- Leitura da sessão e escolha do inimigo da rota ----------
 
 def le_sessao(sessao, dados):
-    """Devolve (eh_akshan, inimigos). inimigos: dicts de Dados.inimigo()."""
+    """Devolve (guia ou None, inimigos). inimigos: dicts de Dados.inimigo()."""
     eu_cell = sessao.get("localPlayerCellId")
     eu = next((p for p in sessao.get("myTeam", []) if p.get("cellId") == eu_cell), None)
-    eh_akshan = bool(eu) and AKSHAN in (eu.get("championId"), eu.get("championPickIntent"))
+    guia = dados.guia_de(eu.get("championId"), eu.get("championPickIntent")) if eu else None
     vistos, inimigos = set(), []
     for p in sessao.get("theirTeam", []):
         cid = p.get("championId") or 0
         if cid > 0 and cid not in vistos:
             vistos.add(cid)
-            inimigos.append(dados.inimigo(cid))
-    return eh_akshan, inimigos
+            inimigos.append(dados.inimigo(cid, guia))
+    return guia, inimigos
 
 
-def chave_mid(i):
-    # Maior chance de mid primeiro; sem taxa, vale a ordem do guia.
+def chave_rota(i):
+    # Maior chance de jogar na rota do guia primeiro; sem taxa, vale a ordem do guia.
     return (i["prob"] if i["prob"] is not None else -1, -i["ordem"])
 
 
-def escolhe_mid(inimigos, atual=None):
-    """Slug do inimigo no guia com mais cara de mid. Fica no atual se ninguém o superar."""
+def escolhe_inimigo(inimigos, atual=None):
+    """Slug do inimigo no guia com mais cara de jogar na rota. Fica no atual se ninguém o superar."""
     no_guia = [i for i in inimigos if i["slug"]]
     if not no_guia:
         return None
-    melhor = max(no_guia, key=chave_mid)
+    melhor = max(no_guia, key=chave_rota)
     ainda = next((i for i in no_guia if i["slug"] == atual), None)
-    if ainda and chave_mid(melhor) <= chave_mid(ainda):
+    if ainda and chave_rota(melhor) <= chave_rota(ainda):
         return atual
     return melhor["slug"]
 
@@ -332,34 +318,45 @@ class Monitor:
         self.agora = agora
         self.ao_mudar = ao_mudar or (lambda: None)
         self.estado = "sem_cliente"
+        self.guia = None  # guia do campeão que o jogador pegou
         self.inimigos = []
         self.alvo = None
         self.ultimo_abrir = None
 
     def passo(self):
         status, sessao = self.busca_sessao()
-        antes = (self.estado, [i["cid"] for i in self.inimigos], self.alvo)
+        antes = (self.estado, self.id_guia(), [i["cid"] for i in self.inimigos], self.alvo)
         if status != "ok":
-            self.estado, self.inimigos, self.alvo = status, [], None
+            self.estado, self.guia, self.inimigos, self.alvo = status, None, [], None
         else:
-            eh_akshan, self.inimigos = le_sessao(sessao, self.dados)
-            if not eh_akshan:
-                self.estado, self.alvo = "outro", None
+            guia, self.inimigos = le_sessao(sessao, self.dados)
+            if not guia:
+                self.estado, self.guia, self.alvo = "outro", None, None
             else:
-                self.estado = "akshan"
-                novo = escolhe_mid(self.inimigos, self.alvo)
+                if self.id_guia() != guia["id"]:
+                    self.alvo = None  # trocou de campeão: outra lista de matchups
+                self.estado, self.guia = "guia", guia
+                novo = escolhe_inimigo(self.inimigos, self.alvo)
                 if novo and novo != self.alvo and self._pode_abrir():
-                    log.info("abrindo matchup: %s", novo)
-                    self.abre(url_matchup(novo))
+                    log.info("abrindo matchup: %s/%s", guia["id"], novo)
+                    self.abre(url_matchup(guia["id"], novo))
                     self.alvo, self.ultimo_abrir = novo, self.agora()
-        if antes != (self.estado, [i["cid"] for i in self.inimigos], self.alvo):
+        if antes != (self.estado, self.id_guia(), [i["cid"] for i in self.inimigos], self.alvo):
             self.ao_mudar()
+
+    def id_guia(self):
+        return self.guia["id"] if self.guia else None
+
+    def url_alvo(self):
+        return url_matchup(self.guia["id"], self.alvo) if self.guia and self.alvo else None
 
     def _pode_abrir(self):
         return self.ultimo_abrir is None or self.agora() - self.ultimo_abrir >= INTERVALO_MIN_ABRIR
 
     def abre_manual(self, s):
-        self.abre(url_matchup(s))
+        if not self.guia:
+            return
+        self.abre(url_matchup(self.guia["id"], s))
         self.alvo, self.ultimo_abrir = s, self.agora()
         self.ao_mudar()
 
@@ -482,8 +479,8 @@ def main():
 
     if "--testar" in sys.argv:
         # Confere o .exe sem bandeja e sem mexer no registro: lê dados e uma sessão e anota no log.
-        d = Dados(carrega_guia(), carrega_ids(), carrega_taxas())
-        log.info("teste: %d no guia, %d campeões, %d taxas, sessão: %s, ícone: %s", len(d.guia), len(d.ids),
+        d = Dados(carrega_guias(), carrega_ids(), carrega_taxas())
+        log.info("teste: guias %s, %d campeões, %d taxas, sessão: %s, ícone: %s", [g["id"] for g in d.guias], len(d.ids),
                  len(d.taxas), Lcu().sessao()[0], os.path.exists(os.path.join(pasta_recursos(), "icone-64.png")))
         return
     if "--testar-janela" in sys.argv:
@@ -494,11 +491,11 @@ def main():
             try:
                 log.info("teste janela: começou")
                 time.sleep(2)
-                jt.mostra(url_matchup("ahri"))
+                jt.mostra(url_matchup("akshan", "ahri"))
                 log.info("teste janela: mostrou ahri")
                 time.sleep(6)
-                jt.mostra(url_matchup("zoe"))
-                log.info("teste janela: trocou para zoe")
+                jt.mostra(url_matchup("illaoi", "darius"))
+                log.info("teste janela: trocou para illaoi/darius")
                 time.sleep(3)
                 log.info("teste janela: %s | %s", jt.w.get_current_url(), jt.w.evaluate_js("document.title"))
             except Exception:
@@ -529,11 +526,11 @@ def main():
     monitor = Monitor(dados, lcu.sessao, abre=janela.mostra, ao_mudar=lambda: icone and icone.update_menu())
 
     def carrega():
-        guia = com_cache("guia", carrega_guia)
+        guias = com_cache("guias", carrega_guias, chaves_int=False) or carrega_guias_local()
         ids = com_cache("ids", carrega_ids)
-        taxas = com_cache("taxas", carrega_taxas)
-        monitor.dados = Dados(guia, ids, taxas)
-        log.info("dados: %d no guia, %d campeões, %d taxas", len(monitor.dados.guia), len(monitor.dados.ids), len(monitor.dados.taxas))
+        taxas = com_cache("taxas-rotas", carrega_taxas)
+        monitor.dados = Dados(guias, ids, taxas)
+        log.info("dados: guias %s, %d campeões, %d taxas", [g["id"] for g in monitor.dados.guias], len(monitor.dados.ids), len(monitor.dados.taxas))
 
     def laco():
         carrega()
@@ -545,10 +542,11 @@ def main():
             parar.wait(INTERVALO_SEM_CLIENTE if monitor.estado == "sem_cliente" else INTERVALO_POLL)
 
     def texto_estado(_):
-        return T[monitor.estado]
+        return T[monitor.estado].format(c=monitor.guia["campeao"] if monitor.guia else "")
 
     def texto_alvo(_):
-        nome = next((n for n, _ in monitor.dados.guia if slug(n) == monitor.alvo), monitor.alvo)
+        lista = monitor.guia["matchups"] if monitor.guia else []
+        nome = next((m[0] for m in lista if m[2] == monitor.alvo), monitor.alvo)
         return T["alvo"].format(c=nome)
 
     def itens_inimigos():
@@ -583,9 +581,9 @@ def main():
         pystray.MenuItem(texto_estado, None, enabled=False),
         pystray.MenuItem(texto_alvo, None, enabled=False, visible=lambda _: bool(monitor.alvo)),
         pystray.Menu.SEPARATOR,
-        pystray.MenuItem(T["abrir_site"], lambda: janela.mostra(url_matchup(monitor.alvo) if monitor.alvo else None), default=True),
+        pystray.MenuItem(T["abrir_site"], lambda: janela.mostra(monitor.url_alvo()), default=True),
         pystray.MenuItem(T["inimigos"], pystray.Menu(itens_inimigos)),
-        pystray.MenuItem(T["navegador"], lambda: webbrowser.open(url_matchup(monitor.alvo) if monitor.alvo else SITE)),
+        pystray.MenuItem(T["navegador"], lambda: webbrowser.open(monitor.url_alvo() or SITE)),
         pystray.Menu.SEPARATOR,
         pystray.MenuItem(T["por_cima"], alterna_por_cima, checked=lambda _: bool(cfg.get("por_cima"))),
         pystray.MenuItem(T["iniciar"], alterna_iniciar, checked=lambda _: cfg["iniciar"]),

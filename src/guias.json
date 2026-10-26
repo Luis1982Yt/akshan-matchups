@@ -32,7 +32,8 @@
         "canal": "twitch.tv/phantasm__",
         "opgg": "https://op.gg/pt/lol/summoners/euw/Phanta-107"
       }
-    ]
+    ],
+    "chave": 166
   },
   {
     "id": "mordekaiser",
@@ -63,7 +64,8 @@
         "url": "https://www.twitch.tv/meowdekaiser_",
         "canal": "twitch.tv/meowdekaiser_"
       }
-    ]
+    ],
+    "chave": 82
   },
   {
     "id": "illaoi",
@@ -97,6 +99,7 @@
         "url": "https://www.twitch.tv/hachiragi",
         "canal": "twitch.tv/hachiragi"
       }
-    ]
+    ],
+    "chave": 420
   }
 ]

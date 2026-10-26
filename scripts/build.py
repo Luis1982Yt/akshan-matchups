@@ -73,6 +73,30 @@ for cfg in json.loads((SRC / "guias.json").read_text(encoding="utf-8")):
         g["paginas"] = json.loads((pasta / "paginas.json").read_text(encoding="utf-8"))
     guias.append(g)
 
+# Lista para o app da seleção de campeões (app/akshan_app.py): de qual campeão é cada guia, a rota
+# e as matchups com o mesmo slug do site. O app baixa este arquivo, então guia novo já funciona nele.
+ROTA_LCU = {"top": "TOP", "jungle": "JUNGLE", "mid": "MIDDLE", "adc": "BOTTOM", "bot": "BOTTOM", "sup": "UTILITY", "support": "UTILITY"}
+
+
+def slug(nome):
+    """A mesma regra da função slug() do src/template.html."""
+    import unicodedata
+    s = unicodedata.normalize("NFD", nome.lower())
+    s = re.sub("[̀-ͯ]", "", s)
+    s = re.sub("['’.]", "", s)
+    return re.sub(r"\s+", "-", s)
+
+
+def matchups_app(g):
+    if g["formato"] == "simples":
+        return [[r[0], g["champs"][r[0]]["id"], slug(r[0])] for r in g["matchups"]]
+    return [[m["nome"], m["id"], slug(m["nome"])] for m in g["matchups"]]
+
+
+app = {"guias": [{"id": g["id"], "campeao": g["campeao"]["nome"], "chave": g.get("chave"), "rota": ROTA_LCU.get((g.get("rota") or "").lower()),
+                  "matchups": matchups_app(g)} for g in guias]}
+(ROOT / "guias-app.json").write_text(json.dumps(app, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8", newline="\n")
+
 html = template.replace("/*ICONE*/", icone("icone-64.png")).replace("/*ICONE_APPLE*/", icone("apple-180.png")).replace("/*IDS*/", json.dumps([g["id"] for g in guias])).replace("/*FONTS*/", font_faces()).replace(
     "/*GUIAS*/", json.dumps(guias, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
 )
