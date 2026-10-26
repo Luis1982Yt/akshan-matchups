@@ -1,4 +1,4 @@
-# Uma vez por dia baixa as planilhas dos guias (Akshan do Peteruso, Mordekaiser do Meowdekaiser), atualiza a cópia embutida no site,
+# Uma vez por dia baixa as planilhas dos guias (Akshan do Peteruso, Mordekaiser do Meowdekaiser, Illaoi do Hachiragi), atualiza a cópia embutida no site,
 # gera o index.html e, se algo mudou, faz o commit. A Vercel publica sozinha a cada push.
 # Para rodar na hora: aba Actions do GitHub > "Atualizar planilhas dos guias" > Run workflow.
 # Para desligar: apague este arquivo (ou desative o workflow na aba Actions).
@@ -23,10 +23,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Pillow (capturas de runas da Illaoi)
+        run: python3 -m pip install --quiet pillow
+
       - name: Baixa a planilha e gera o site
         run: |
           python3 scripts/atualizar_akshan.py
           python3 scripts/atualizar_mordekaiser.py
+          python3 scripts/atualizar_illaoi.py
           python3 scripts/build.py
 
       - name: Commit, se mudou algo
@@ -37,6 +41,6 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A src/guias/akshan src/guias/mordekaiser index.html
+          git add -A src/guias/akshan src/guias/mordekaiser src/guias/illaoi imagens index.html
           git commit -m "Atualiza a cópia das planilhas dos guias"
           git push

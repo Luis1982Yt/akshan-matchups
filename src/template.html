@@ -227,6 +227,45 @@ try {
   --sombra: 0 10px 30px rgba(10, 60, 30, .14);
   color-scheme: light;
 }
+/* Illaoi: o verde-água de Nagakabouros e o dourado do ídolo. */
+:root[data-guia="illaoi"] {
+  --fundo: #080d0d;
+  --painel: #101818;
+  --painel-alto: #172222;
+  --linha: rgba(96, 214, 196, .22);
+  --linha-forte: rgba(96, 214, 196, .48);
+  --acento: #4fbfae;
+  --acento-vivo: #8ee8da;
+  --destaque: #e6b54e;
+  --texto: #dfe8e6;
+  --texto-baixo: #93a6a2;
+  --tinta-botao: #141006;
+  --luz: rgba(80, 210, 190, .12);
+  --sombra: 0 10px 30px rgba(0, 0, 0, .5);
+  --sobre-arte: #fff1cf;
+  --destaque-arte: #f0c060;
+  --botao-1: #ffe3a0;
+  --botao-2: #c9922c;
+  --brilho: rgba(255, 236, 190, .5);
+  --brilho-2: rgba(80, 210, 190, .18);
+  color-scheme: dark;
+}
+:root[data-guia="illaoi"][data-tema="claro"] {
+  --fundo: #ecf2f1;
+  --painel: #fbfdfd;
+  --painel-alto: #dce8e6;
+  --linha: rgba(20, 105, 95, .26);
+  --linha-forte: rgba(20, 105, 95, .56);
+  --acento: #19776b;
+  --acento-vivo: #0f5c52;
+  --destaque: #b07a12;
+  --texto: #142120;
+  --texto-baixo: #4a5e5b;
+  --tinta-botao: #ffffff;
+  --luz: rgba(40, 160, 145, .14);
+  --sombra: 0 10px 30px rgba(10, 60, 55, .14);
+  color-scheme: light;
+}
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
 html { scrollbar-color: var(--linha-forte) var(--fundo); }
@@ -306,7 +345,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .pagina > h2 { margin: 4px 0 0; font: 800 clamp(24px, 3vw, 34px)/1.1 var(--titulo); letter-spacing: .03em; color: var(--acento-vivo); }
 .pagina .lead { margin: -8px 0 0; font-size: 15px; color: var(--texto-baixo); }
 .pg-bloco { min-width: 0; padding: 20px 22px; border-radius: 12px; background: var(--painel); border: 1px solid var(--linha); }
-.pg-bloco > h3, .pg-grupo > h3 { margin: 0 0 12px; font: 700 15px var(--titulo); letter-spacing: .12em; text-transform: uppercase; color: var(--acento-vivo); }
+.pg-bloco > h3, .pg-grupo > h3 { overflow-wrap: anywhere; margin: 0 0 12px; font: 700 15px var(--titulo); letter-spacing: .12em; text-transform: uppercase; color: var(--acento-vivo); }
 .pg-bloco p { margin: 0; font-size: 16px; line-height: 1.6; white-space: pre-line; overflow-wrap: anywhere; }
 .pg-bloco a, .pg-card a, .pg-tabela a { color: var(--acento-vivo); text-underline-offset: 3px; overflow-wrap: anywhere; }
 .pg-bloco.aviso { background: none; border-style: dashed; }
@@ -357,6 +396,9 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .pg-tabela th, .pg-tabela td { padding: 9px 14px 9px 0; border-bottom: 1px solid var(--linha); text-align: left; vertical-align: top; white-space: nowrap; }
 .pg-tabela th { font: 700 12px var(--corpo); letter-spacing: .08em; text-transform: uppercase; color: var(--texto-baixo); }
 .pg-tabela td.vazio { color: var(--texto-baixo); }
+.pecas-soltas { grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); }
+.pg-imagens { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); }
+.pg-imagens img { width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--linha); }
 .pessoas { grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
 .pessoa .topo { flex-wrap: wrap; gap: 6px 10px; }
 .pessoa .topo b { margin-right: auto; }
@@ -639,7 +681,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 /* Guia */
 .notas, .rodape { min-width: 0; }
 .navega { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 6px 0 12px; }
-.navega h2 { margin: 0; font: 700 23px/1.2 var(--titulo); letter-spacing: .06em; color: var(--acento-vivo); }
+.navega h2 { margin: 0; white-space: nowrap; font: 700 23px/1.2 var(--titulo); letter-spacing: .06em; color: var(--acento-vivo); }
 .navega div { display: flex; gap: 8px; }
 .navega button { min-height: 44px; padding: 0 14px; display: inline-flex; align-items: center; gap: 8px; cursor: pointer; border-radius: 8px; border: 1px solid var(--linha-forte); background: var(--painel); color: var(--texto); font-weight: 600; font-size: 15px; }
 .navega button:hover { border-color: var(--acento-vivo); }
@@ -1405,6 +1447,7 @@ function linhaNaLingua(l) {
 const TITULOS = { "Enemy Cooldowns": "Cooldowns do inimigo", "Early Game": "Early game", "How to trade": "Como trocar", "What to watch out for": "Cuidado com", "Tips": "Dicas", "Mini Rant": "Desabafo" };
 const KW_EN = /\b(level \d+|lvl \d+)\b/gi;
 const marcaEn = t => esc(t).replace(KW_EN, m => `<span class="kw">${m}</span>`);
+const notaTexto = t => { const m = t.match(/^(\d)(?:\s*\/\s*(\d))?\s*(.*)$/); return m ? `${m[1]}${m[2] ? "–" + m[2] : ""}/5${m[3] ? " " + m[3] : ""}` : t; };
 const pips = n => `<span class="pips" aria-hidden="true">${[1, 2, 3, 4, 5].map(i => `<i${i <= n ? ' class="on"' : ""}></i>`).join("")}</span>`;
 const peca = (p, runa) => `<span class="peca${runa ? " runa" : ""}">${p.icone ? `<img src="${p.icone}" alt="" width="32" height="32">` : '<span class="soquete" aria-hidden="true"></span>'}<span>${esc(p.nome)}</span></span>`;
 
@@ -1428,7 +1471,8 @@ function setupCompleto(c) {
     return `<details class="grupo"><summary><span lang="en">${esc(cond || "Other build")}</span></summary>${ol}</details>`;
   }).join("");
   const dif = [["early", "Early"], ["mid", "Mid"], ["late", "Late"], ["overall", "Geral"]]
-    .map(([k, r]) => `<div><dt>${k === "overall" ? t("geral") : r}</dt><dd aria-label="${c.dificuldade[k] ? t("srDif", c.dificuldade[k]).replace(/^, /, "") : t("semAnot")}">${pips(c.dificuldade[k])}<b>${c.dificuldade[k] ?? "–"}/5</b></dd></div>`).join("");
+    .filter(([k]) => k === "overall" || c.dificuldade[k] != null)
+    .map(([k, r]) => `<div><dt>${k === "overall" ? t("geral") : r}</dt><dd aria-label="${c.dificuldade[k] ? t("srDif", c.dificuldade[k]).replace(/^, /, "") : t("semAnot")}">${pips(c.dificuldade[k])}<b>${k === "overall" && c.dificuldade.texto ? esc(notaTexto(c.dificuldade.texto)) : (c.dificuldade[k] ?? "–") + "/5"}</b></dd></div>`).join("");
   return `<div class="setup-completo">
     <section class="bloco"><h3>${t("runas")}</h3>${runas || `<p class="livre">${t("semAnot")}</p>`}</section>
     <section class="bloco build"><h3>${t("itens")}</h3>${itens || `<p class="livre">${t("semAnot")}</p>`}</section>
@@ -1515,6 +1559,14 @@ const BLOCOS = {
           : `<li class="so-texto"><span>${esc(col)}:</span> ${esc(c.texto)}</li>`).join("")}</ul>` : ""}</article>`;
     }).join("")}</div></section>`;
   },
+  // Criadores com descrição e links (página Geral da Illaoi).
+  pessoas: b => `<section class="pg-grupo">${b.titulo ? `<h3 lang="en">${esc(b.titulo)}</h3>` : ""}<div class="pg-cards pessoas" lang="en">${b.pessoas.map(x => `<article class="pg-card pessoa"><div class="topo"><b>${esc(x.nome)}</b></div>
+    ${x.texto ? `<p class="texto">${esc(x.texto)}</p>` : ""}${x.links.length ? `<ul class="pessoa-links">${x.links.map(k => `<li><a href="${esc(k.url)}" target="_blank" rel="noopener"><span>${esc(k.texto)}</span></a></li>`).join("")}</ul>` : ""}</article>`).join("")}</div></section>`,
+  // Listas de itens com ícone e explicação (Itens da Illaoi).
+  pecas: b => b.grupos.map(g => `<section class="pg-grupo">${g.titulo ? `<h3 lang="en">${esc(g.titulo)}</h3>` : ""}<div class="pg-cards${g.itens.some(i => i.texto) ? "" : " pecas-soltas"}" lang="en">${g.itens.map(i => `<article class="pg-card${i.texto ? "" : " sem-texto"}"><div class="topo">${i.icone ? `<img src="${i.icone}" alt="" width="44" height="44" loading="lazy">` : ""}<b>${esc(i.nome)}</b></div>${i.texto ? textoLongo(esc(fluxo(i.texto))) : ""}</article>`).join("")}</div></section>`).join(""),
+  imagens: b => `<section class="pg-bloco">${b.titulo ? `<h3 lang="en">${esc(b.titulo)}</h3>` : ""}<div class="pg-imagens">${b.imagens.map(i => `<a href="${esc(i.src)}" target="_blank" rel="noopener"><img src="${esc(i.src)}" alt="" width="${i.largura}" height="${i.altura}" loading="lazy"></a>`).join("")}</div></section>`,
+  // Dicas e mecânicas: título (link do vídeo, quando tem) e explicação.
+  dicas: b => `<div class="pg-cards" lang="en">${b.itens.map(d => `<article class="pg-card"><div class="topo"><b>${comLinks(d.titulo)}</b></div>${textoLongo(comLinks(d.texto))}</article>`).join("")}</div>`,
   tabelaCrua: b => `<section class="pg-bloco">${b.titulo ? `<h3 lang="en">${esc(b.titulo)}</h3>` : ""}<div class="pg-tabela"><table lang="en"><thead><tr>${b.colunas.map(c => `<th scope="col">${esc(c)}</th>`).join("")}</tr></thead>
     <tbody>${b.linhas.map(l => `<tr>${l.map(c => c ? `<td>${comLinks(c)}</td>` : '<td class="vazio">—</td>').join("")}</tr>`).join("")}</tbody></table></div></section>`,
 };
@@ -1638,7 +1690,7 @@ function renderDetalhe(animar) {
     g.innerHTML = c.dif ? `<i></i>${rotuloDif(c.dif)}` : "";
   } else {
     g.className = "guia";
-    g.innerHTML = c.dificuldade.overall ? `${pips(c.dificuldade.overall)}${t("dificuldade")} ${c.dificuldade.overall}/5` : "";
+    g.innerHTML = c.dificuldade.overall ? `${pips(c.dificuldade.overall)}${t("dificuldade")} ${c.dificuldade.texto ? esc(notaTexto(c.dificuldade.texto).replace(/\s*\(.*$/, "")) : c.dificuldade.overall + "/5"}` : "";
   }
   $("travarNome").textContent = t("travarContra") + c.nome;
   // Se o painel de cooldowns estiver aberto, acompanha a troca de matchup.

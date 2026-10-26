@@ -64,5 +64,39 @@
         "canal": "twitch.tv/meowdekaiser_"
       }
     ]
+  },
+  {
+    "id": "illaoi",
+    "campeao": "Illaoi",
+    "rota": "Top",
+    "autor": "Hachiragi",
+    "formato": "completo",
+    "dados": "guias/illaoi",
+    "titulo": "a Sacerdotisa Cráquem",
+    "titulo_en": "the Kraken Priestess",
+    "fonte": "Notas da planilha de matchups do Hachiragi (em inglês, como no original).",
+    "fonte_en": "Notes from Hachiragi's Illaoi matchup spreadsheet.",
+    "links": [
+      {
+        "rotulo": "Ver a planilha original",
+        "rotulo_en": "See the original spreadsheet",
+        "url": "https://docs.google.com/spreadsheets/d/1EuXpzDMShjT4s3NSScWqnzUxiqccPv-3kHufHNCEkTA/edit?gid=0"
+      },
+      {
+        "rotulo": "Twitch",
+        "url": "https://www.twitch.tv/hachiragi"
+      },
+      {
+        "rotulo": "YouTube",
+        "url": "https://youtube.com/@hachiragi5138"
+      }
+    ],
+    "acompanhe": [
+      {
+        "nome": "Hachiragi",
+        "url": "https://www.twitch.tv/hachiragi",
+        "canal": "twitch.tv/hachiragi"
+      }
+    ]
   }
 ]

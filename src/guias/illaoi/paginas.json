@@ -1,0 +1,550 @@
+[
+ {
+  "id": "geral",
+  "blocos": [
+   {
+    "tipo": "texto",
+    "titulo": "Illaoi Matchup Sheet/Mechanics/Tips/Content Creators (Will Be Updated)",
+    "texto": "Hello My name is Hachiragi and Im a high elo Illaoi player ranked between Masters and Grandmasters. I made this sheet to help the community on how to play some matchups, items, and tips&tricks against specific champions. I started league in season 12 as a Sona main however I switched to top and decided to play Illaoi and fell in love with the champion. I got to gold 4 in my first season and quickly climbed the ranks to get masters in the end of my 2nd season. This matchup sheet takes into consideration that both players are equal level and equal experience because matchups all depend on the person piloting the champions. Some people might find the Mordekaiser matchup easy some people will perma ban it, so this is a general sheet to just help people on how the matchup should go and help newer players.",
+    "links": []
+   },
+   {
+    "tipo": "lista",
+    "texto": "Socials",
+    "links": [],
+    "itens": [
+     {
+      "texto": "League ID: Hachiragi#MT1",
+      "links": []
+     },
+     {
+      "texto": "Discord: Hachiragi#2427",
+      "links": []
+     },
+     {
+      "texto": "Youtube",
+      "links": [
+       {
+        "texto": "Youtube",
+        "url": "https://youtube.com/@hachiragi5138?si=nsdPhETquhafttRX"
+       }
+      ]
+     },
+     {
+      "texto": "Twitch",
+      "links": [
+       {
+        "texto": "Twitch",
+        "url": "https://www.twitch.tv/hachiragi"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "tipo": "texto",
+    "titulo": "Matchups Explanation",
+    "texto": "I wanna say that all matchups are dependant on the players that are piloting their respective champs, this sheet is assuming that both players are both equal level and I might have a little bit bias on how some meatchups are because people play alot different in high elo than low elo. I will try to make the sheet better on adding how the matchup can go depending on the Elo.",
+    "links": []
+   },
+   {
+    "tipo": "pessoas",
+    "titulo": "Illaoi Content Creators",
+    "pessoas": [
+     {
+      "nome": "Dirtymobs",
+      "texto": "Dirtymobs is the biggest illaoi content creator if we are not counting Tyler 1. His videos are very informational and very helpful as he will explain why he chooses his runes, items, and macro definitely check him out.",
+      "links": [
+       {
+        "texto": "Youtube",
+        "url": "https://www.youtube.com/@DirtyMobs"
+       },
+       {
+        "texto": "Twitch",
+        "url": "https://www.twitch.tv/dirtymobs"
+       }
+      ]
+     },
+     {
+      "nome": "Illaking",
+      "texto": "Illaking is a consistent challenger illaoi player in the korean server. His videos are certainly helpful if you like more aggressive type of style and runes. He is currently in Mandatory Military Service in Korea but his videos will still help you alot.",
+      "links": [
+       {
+        "texto": "Youtube",
+        "url": "https://www.youtube.com/@yue99/community"
+       },
+       {
+        "texto": "Stream",
+        "url": "https://chzzk.naver.com/ae478c42ec35330e06d86779b6035861"
+       }
+      ]
+     },
+     {
+      "nome": "Tyler 1",
+      "texto": "Do I even have to explain Tyler 1.",
+      "links": [
+       {
+        "texto": "Youtube",
+        "url": "https://www.youtube.com/channel/UCwV_0HmQkRrTcrReaMxPeDw"
+       },
+       {
+        "texto": "Twitch",
+        "url": "https://www.twitch.tv/loltyler1"
+       }
+      ]
+     },
+     {
+      "nome": "일라빠돌이",
+      "texto": "Upcoming korean Illaoi youtuber who almost uploads daily and always cooks some builds up.",
+      "links": [
+       {
+        "texto": "Youtube",
+        "url": "https://www.youtube.com/@illbba"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "itens",
+  "blocos": [
+   {
+    "tipo": "texto",
+    "titulo": "Items",
+    "texto": "Illaoi this season actually has alot of items that she can build or rush. The usual 2 main items that people build 1st is Spear of Shojin and Sundered Sky. I have not decided on what item I like better right now since Illaoi is getting changed alot and her damage got nerfed so we might have to go Shojin for the damage but than you are losing out on Sundered Sky healing so just pick whatever feels the best for you and your playstyle.",
+    "links": []
+   },
+   {
+    "tipo": "texto",
+    "titulo": "Itemization",
+    "texto": "Illaoi has actually very flexible in itemization even though it may not seem like it. She is able to build most bruiser and tank items since she is a juggernaut. When itemizing we have to look at the enemy teams champions and what their identities are. For example you would not go iceborn first into teemo since it gives you armor while teemo does magic damage or you wouldn't go black cleaver to a Kayle since she doesn't build armor. Illaoi is also able to build some lethality items like voltaic cyclosword but these items are very situational or for fun.",
+    "links": []
+   },
+   {
+    "tipo": "pecas",
+    "grupos": [
+     {
+      "titulo": "Starter Items",
+      "itens": [
+       {
+        "nome": "Dorans Shield",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/1054.png",
+        "texto": "Most consistent and the best starter item for Illaoi since the item overall is just pretty broken."
+       },
+       {
+        "nome": "Tear of Goddess",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3070.png",
+        "texto": "Tear is good into tanks that need more mana to kill however the higher elo you go the harder people will punish you for it."
+       }
+      ]
+     },
+     {
+      "titulo": "Good Items",
+      "itens": [
+       {
+        "nome": "Iceborn Gauntlet",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/226662.png",
+        "texto": ""
+       },
+       {
+        "nome": "Spear of Shojin",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223161.png",
+        "texto": ""
+       },
+       {
+        "nome": "Sundered Sky",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/226610.png",
+        "texto": ""
+       },
+       {
+        "nome": "Black Cleaver",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223071.png",
+        "texto": ""
+       },
+       {
+        "nome": "Steraks Gage",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223053.png",
+        "texto": ""
+       },
+       {
+        "nome": "Kaenic Rookern",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222504.png",
+        "texto": ""
+       },
+       {
+        "nome": "Jak'sho",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/226665.png",
+        "texto": ""
+       }
+      ]
+     },
+     {
+      "titulo": "Situational Items",
+      "itens": [
+       {
+        "nome": "Hullbreaker",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223181.png",
+        "texto": ""
+       },
+       {
+        "nome": "Deaths Dance",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/226333.png",
+        "texto": ""
+       },
+       {
+        "nome": "Maw Of Malmortious",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223156.png",
+        "texto": ""
+       },
+       {
+        "nome": "Frozen Heart",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223110.png",
+        "texto": ""
+       },
+       {
+        "nome": "Randuins Omen",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223143.png",
+        "texto": ""
+       },
+       {
+        "nome": "Spirit Visage",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223065.png",
+        "texto": ""
+       },
+       {
+        "nome": "Fimbulwinter",
+        "icone": null,
+        "texto": ""
+       },
+       {
+        "nome": "Anathemas Chains",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/228001.png",
+        "texto": ""
+       }
+      ]
+     },
+     {
+      "titulo": "Fun Items",
+      "itens": [
+       {
+        "nome": "Voltaic Cyclosword",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/226699.png",
+        "texto": ""
+       },
+       {
+        "nome": "Heartsteel",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223084.png",
+        "texto": ""
+       },
+       {
+        "nome": "Unending Despair",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222502.png",
+        "texto": ""
+       },
+       {
+        "nome": "Lethality Items",
+        "icone": null,
+        "texto": ""
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "tipo": "pecas",
+    "grupos": [
+     {
+      "titulo": "Core items",
+      "itens": [
+       {
+        "nome": "Sundered Sky",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/226610.png",
+        "texto": "Sundered Sky makes your first auto crit and heal you for it. The passive also works on your spirit resulting in 2 sundered sky procs which is very strong on Illaoi. This item synergizes very well with Illaoi's kit and it greatly enhances her 1v2 or 1v3 abilities by a lot. The items build path is not bad and you can pretty much go into any matchup you want. This item is the most meta item for Illaoi in high elo. The only downside is that you gonna need a little bit more attack damage after you finish the item to oneshot the backline with your tentacles."
+       },
+       {
+        "nome": "Black Cleaver",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223071.png",
+        "texto": "Black Cleaver is the good old reliable anti-tank item that you can build into tanks. The items build path is very nice and the passive allows you to remove 30% armor from an enemy and the passive also grants you 20 movement speed when dealing physical damage. Overall very solid item that you can always build into tanks if you wanna do more damage rather than sustain like sundered sky."
+       },
+       {
+        "nome": "Sterak's Gage",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223053.png",
+        "texto": "Steraks Gage is a Offensive Lifeline item that gives you a huge shield when your hp drops below 30%. The item attack damage scales with the users level since it is 50% of your base attack damage. Since Illaoi has the 2nd highest base Attack Damage in the game, you get a whopping 71 AD at level 18. This item synergizes very well with Illaoi due to her always being low hp during fights and the shield allows her to have a little bit more uptime that can help Illaoi sustain her hp back, This item is great for champions that have execute ultimates like Garen, Darius, or Urgot and more. Sundered Sky with Steraks is just an insane combo which forces Illaoi's enemies into a war of attrition which they will most likely lose."
+       },
+       {
+        "nome": "Spear of Shojin",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223161.png",
+        "texto": "Spear of Shojin is the maximum damage item you would go if you wanted to. This item increase your spells damage by 3% in total to 12% for each of your abilities. The item is good if you want to do alot of damage but if you went Black Cleaver it would be probabaly better."
+       },
+       {
+        "nome": "Iceborn Gauntlet",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/226662.png",
+        "texto": "Iceborn Gauntlet is a tank sheen item that allows you to slow your opponents and help you hitting your E on the enemy. This item is great on Illaoi since the slow helps her alot to sticking enemies and since she is a slow juggernaut who has a hard time against mobile and range characters. While this item was a lot better in season 13 due to the slow being alot more oppressive, this season the cost of the item went down resulting the slow being nerfed a little bit. The item is great against champions that you have hard time hitting your E's against and it helps you with tentacles hitting the enemies. I do not really recommend rushing this item like last season because Illaoi's damage this season is very low and with iceborn Gauntlet not providing any Attack Damage you have very low damage output. I would build this item either 2nd or 3rd or 4th depending on the enemy team comp. This item is also great for ranged characters like Akshan or Quinn."
+       },
+       {
+        "nome": "Spirit Visage",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223065.png",
+        "texto": "Spirit Visage is a tank Magic Resist item that has a passive that increase your healing and shielding power you cast or receive by 25%. This item is very insane on Illaoi this season due to her healing being reverted from 4.5% missing hp from tentacles to 5% and her meta build being Sundered Sky and Steraks which both benefit from Spirit Visages passive. Overall very good item that you would build 3rd or 4th item that helps Illaois gameplan by a lot."
+       }
+      ]
+     },
+     {
+      "titulo": "Situational items",
+      "itens": [
+       {
+        "nome": "Hullbreaker",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223181.png",
+        "texto": "Hullbreaker is a split push item that makes your every 5th auto attack do more damage to champions and towers. While this item used to be very good last season due to the insane amount of stats it gave, this season the armor and magic resist has been removed from it. While the every 5 auto attack passive is nice, Illaoi doesn't auto attack alot so it takes a bit of time to stack so its not very efficient. You can still build it if you just want to split push."
+       },
+       {
+        "nome": "Trinity Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223078.png",
+        "texto": "Trinity Force is a great overall item that gives every stat that a bruiser could wan't unfortuantely the attack speed kinda gets wasted on Illaoi. The item is also very expensive which results in delaying your power spike. If you want to play more towards a splitpush / W peope you mgiht like this item."
+       },
+       {
+        "nome": "Death's Dance",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/226333.png",
+        "texto": "Deaths Dance is an anti burst item that negates 30% of damage when its dealt and instead it damages you overtime in 3 seconds. This item is very good into heavy Attack Damage Comps where you need more survivability and need some damage. Overall very good item that is very expensive and very situational"
+       },
+       {
+        "nome": "Kaenic Rookern",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222504.png",
+        "texto": "Kaenic Rookern is a tank Magic Resist item that gives you a magic shield which recharges every 15 seconds. This item is great against poke magic damage comps and into most magic damage comps. You can build this over Spirit Visage if you are not going Sundered Sky or Steraks since the Spirit Visage passive would not be as good as Kaenic Rookern."
+       },
+       {
+        "nome": "Jak'Sho, The Protean",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/226665.png",
+        "texto": "Jak'sho is a tank item that gives u both armor and magic resist and icnrease your bonus resists by 30% after 5 seconds. This item is great if you need a tank item against both magic and physical types of damage. Overall great item towards the end of your build."
+       },
+       {
+        "nome": "Frozen Heart",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223110.png",
+        "texto": "Frozen Heart is a Tank Armor Item that has a passive which redcues people attacks speed close to you. This item is great for champions that auto attack alot like Trynda, Yone, Urgot and more."
+       },
+       {
+        "nome": "Randuin's Omen",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223143.png",
+        "texto": "Randuin's Omen is a Tank Armor Item that reduces critical strike damage on you. Very great agains comps that have alot of crit users."
+       },
+       {
+        "nome": "Fimbulwinter / Winter's Approach",
+        "icone": null,
+        "texto": "Fimbulwinter / Winter's Approach is a tank item that gives both mana and health and also grants you a shield whenever you slow and enemy. This item is very cheap and the shield is pretty nice, hwoever you should only build this item with Iceborn Gauntlet since you don't have a consistent slow in your kit."
+       },
+       {
+        "nome": "Voltaic Cyclosword",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/226699.png",
+        "texto": "This is an assasin item that makes your energized auto slow a person for 99% for a very short time. This is item is basically if you want to go full damage while having the same utility as Iceborne Gauntlet."
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "runas",
+  "blocos": [
+   {
+    "tipo": "texto",
+    "titulo": "Runes",
+    "texto": "Runes are a little bit complicated since everyone has their preferences and there is no right rune setup that you can go for every matchup. The runes below are my personal runes that might seem different that usual illaoi runes like celerity, scorch, and movement speed shard. I like the sorcery tree alot since it can heavily change some matchups like kayle if you go grasp, scorch or celerity and tier 1 boots into aatrox to dodge his Q's and stuff. If you don't like the sorcery tree just switch it out for Precision tree for Presence of mind than either Legend Tenacity or Last Stand.",
+    "links": []
+   },
+   {
+    "tipo": "imagens",
+    "titulo": "General Runes",
+    "imagens": [
+     {
+      "src": "imagens/illaoi/runas-gerais-1-3ba49044.jpg",
+      "largura": 993,
+      "altura": 641
+     },
+     {
+      "src": "imagens/illaoi/runas-gerais-2-b700482e.jpg",
+      "largura": 998,
+      "altura": 638
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "dicas",
+  "blocos": [
+   {
+    "tipo": "texto",
+    "titulo": "Illaoi Mechanics and Tips",
+    "texto": "",
+    "links": []
+   },
+   {
+    "tipo": "dicas",
+    "itens": [
+     {
+      "titulo": {
+       "texto": "Mana Trick",
+       "links": [
+        {
+         "texto": "Mana Trick",
+         "url": "https://youtu.be/FbRrOZJq0IU?si=ECIs5fkFE0DJ-WJu"
+        }
+       ]
+      },
+      "texto": {
+       "texto": "When you are low on mana with Illaoi, you can actually cast 2 spells while not having enough mana for both spells. All of Illaois spells have a cast time except W which results in her abilities only using the mana when the cast time is finished. Let's say you have 40 mana and enemy toplaner sees that you have so little mana that he is going to engage on you. You can cast your Q, E, R and immediately press W which will result you in using the button you pressed and W. The way this works is that your Q, E, and R only use mana when the ability is finished casting, ultimately making you use 2 abilities when you have only mana for 1 ability.",
+       "links": []
+      }
+     },
+     {
+      "titulo": {
+       "texto": "Q-E / W-E Trick",
+       "links": [
+        {
+         "texto": "Q-E / W-E Trick",
+         "url": "https://youtu.be/FbRrOZJq0IU?si=Hxzmtn2qD79zt15J&t=54"
+        }
+       ]
+      },
+      "texto": {
+       "texto": "When an enemy is hiding behind minions you can press Q to kill the minions and immediately press E to hide the animation. Same thing with W. This will catch a lot of people of since they are focused on dodging the tentacles which results in them not expecting the E.",
+       "links": []
+      }
+     },
+     {
+      "titulo": {
+       "texto": "Ctrl 3 Trick",
+       "links": [
+        {
+         "texto": "Ctrl 3 Trick",
+         "url": "https://youtu.be/FbRrOZJq0IU?si=F8gTYrA_vNwTdOn6&t=14"
+        }
+       ]
+      },
+      "texto": {
+       "texto": "You can press Ctrl+3 to emote that makes it seem like you are throwing your E which will result in them using their abilities to dodge it like Riven E or Gwen W and more dashes.",
+       "links": []
+      }
+     },
+     {
+      "titulo": {
+       "texto": "Tentacle Slam Time",
+       "links": [
+        {
+         "texto": "Tentacle Slam Time",
+         "url": "https://youtu.be/FbRrOZJq0IU?si=Lifa7Mn7eyiKa2BQ&t=25"
+        }
+       ]
+      },
+      "texto": {
+       "texto": "When you pull someone's spirit between level 1-5, the the tentacles will only slam 1 time automatically. At level 6 very rarely that the tentacles will slam 2 times automatically. At level 7 the tentacles will always slam 2 times.",
+       "links": []
+      }
+     },
+     {
+      "titulo": {
+       "texto": "Interactions with the Spirit",
+       "links": []
+      },
+      "texto": {
+       "texto": "Some Items and runes will also work on your spirit and here are some examples. You can proc both Sundered Sky and Heartsteel on the spirit and the champion. First Strike and Dark Harvest also work on the spirit but currently there is a bug with illaoi that first striker reduces your damage for some reason.",
+       "links": []
+      }
+     },
+     {
+      "titulo": {
+       "texto": "W after flash",
+       "links": []
+      },
+      "texto": {
+       "texto": "If you W someone and they flash but the animation goes of for your W than it will hit even though they flashed it.",
+       "links": []
+      }
+     },
+     {
+      "titulo": {
+       "texto": "Ult to dodge CC",
+       "links": []
+      },
+      "texto": {
+       "texto": "Your ult makes you unstoppable while you are casting it so you can use it to dodge alot of Crowd Control abilities here are some of many examples. Yone R, Gragas R, Ornn R, Ornn E, Lillia Ult, Zoe E, Blitzcrank Q, Mordekaiser R and many more.",
+       "links": []
+      }
+     },
+     {
+      "titulo": {
+       "texto": "Hit the Spirit or Champion",
+       "links": []
+      },
+      "texto": {
+       "texto": "So this is a question that gets asked alot whether to hit the spirit or the champion, and Im sorry to tell you but its very situational dependant. However here is some tip, if you can kill the spirit while the enemy is fighting, the tentacles will automatically slam them making it very annoying for them. If you know you can't kill the spirit and you can get a safe damage onto the enemy than attack them. Still this is a very situational thing and you will learn more as you play more.",
+       "links": []
+      }
+     },
+     {
+      "titulo": {
+       "texto": "Tentacle Amount",
+       "links": []
+      },
+      "texto": {
+       "texto": "When you ult you will spawn tentacles depending on how many champions are under your ult, max you can spawn in your ult is 6 tentacles. Make sure to position correctly and try to ult as many people as you can while having someone soul pulled since the tentacles will automatically slam the spirit.",
+       "links": []
+      }
+     },
+     {
+      "titulo": {
+       "texto": "Ulted Tentacles",
+       "links": []
+      },
+      "texto": {
+       "texto": "When you ult your tentacles become invulnerable, slam 50% faster and have no range indicators. You can pull an enemy’s soul and if they are very low you can ult after you kill the spirit for a surprise fast tentacles that the enemy might not expect.",
+       "links": []
+      }
+     },
+     {
+      "titulo": {
+       "texto": "Dirty Dive",
+       "links": []
+      },
+      "texto": {
+       "texto": "If the enemy is low enough you can bait enemis by walking under their tower and making the enemy feel that they are safe from you. You pull their soul and ult them and W them and walk back. Here is a good example by Dirtymobs- Video",
+       "links": [
+        {
+         "texto": "Video",
+         "url": "https://www.youtube.com/shorts/9YjKeg3BFQE"
+        }
+       ]
+      }
+     },
+     {
+      "titulo": {
+       "texto": "Flash R",
+       "links": []
+      },
+      "texto": {
+       "texto": "Make sure that you ult and flash immediately since its faster than flashing an ulting. You can pull an enemies soul and make it low and make it seem like you are backing off and make the enemy walk up and R flash onto them.",
+       "links": []
+      }
+     },
+     {
+      "titulo": {
+       "texto": "Tentacle Placement",
+       "links": []
+      },
+      "texto": {
+       "texto": "Watch this Amazing Video by Dirtymobs-Video",
+       "links": [
+        {
+         "texto": "Video",
+         "url": "https://www.youtube.com/watch?v=iCcmkUHfxFA"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ }
+]

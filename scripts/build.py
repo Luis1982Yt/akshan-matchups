@@ -50,7 +50,9 @@ def guia_completo(cfg, pasta):
     """Planilha já separada por scripts/atualizar_<campeão>.py em matchups.json."""
     dados = json.loads((pasta / "matchups.json").read_text(encoding="utf-8"))
     eu = next((m for m in dados["matchups"] if m["id"] == cfg["campeao"]), None)
-    campeao = {"id": cfg["campeao"], "nome": eu["nome"] if eu else cfg["campeao"], "titulo": eu["titulo"] if eu else ""}
+    # Sem o espelho na planilha, o título vem do guias.json.
+    campeao = {"id": cfg["campeao"], "nome": eu["nome"] if eu else cfg["campeao"], "titulo": eu["titulo"] if eu else cfg.get("titulo", ""),
+               "titulo_en": cfg.get("titulo_en", "")}
     return {"campeao": campeao, "matchups": dados["matchups"]}
 
 
