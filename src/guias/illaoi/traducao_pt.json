@@ -1,6 +1,5 @@
 {
 "textos": {
-"Legend Tenacity": "Lenda: Tenacidade",
 "Adp force": "Força Adaptativa",
 "Scaling Health": "Vida por nível",
 "Movement Speed Shard": "Fragmento de Velocidade de Movimento",
@@ -169,6 +168,7 @@
 "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3155.png": "Hexdrinker",
 "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/Conqueror/Conqueror.png": "Conquistador",
 "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/FleetFootwork/FleetFootwork.png": "Agilidade nos Pés",
+"https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendTenacity/LegendTenacity.png": "Lenda: Tenacidade",
 "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png": "Presença de Espírito",
 "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/BonePlating/BonePlating.png": "Osso Revestido",
 "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/Conditioning/Conditioning.png": "Condicionamento",

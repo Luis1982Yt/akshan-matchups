@@ -63,15 +63,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Movement Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
        },
        {
         "nome": "Flat Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
        }
       ]
      }
@@ -422,15 +422,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Tenacity / Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -635,15 +635,15 @@
       "pecas": [
        {
         "nome": "Ability Haste",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsCDRScalingIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -850,15 +850,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -1058,15 +1058,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Flat Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
        }
       ]
      }
@@ -1282,15 +1282,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Tenacity/Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -1500,11 +1500,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Tenacity / Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -1703,11 +1703,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Tenacity / Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -1894,11 +1894,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -2109,11 +2109,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -2307,15 +2307,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Flat Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
        }
       ]
      }
@@ -2533,11 +2533,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Tenacity / Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -2735,11 +2735,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -2970,15 +2970,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -3173,15 +3173,15 @@
       "pecas": [
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Movement Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
        },
        {
         "nome": "Tenacity / Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -3410,15 +3410,15 @@
       "pecas": [
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Movement Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -3597,15 +3597,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -3798,15 +3798,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Flat Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
        }
       ]
      }
@@ -4038,15 +4038,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -4244,15 +4244,15 @@
       "pecas": [
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Movement Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -4450,15 +4450,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -4661,7 +4661,7 @@
       "pecas": [
        {
         "nome": "Double Adaptive -> Flat Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        }
       ]
      }
@@ -4873,15 +4873,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Tenacity / Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -5122,15 +5122,15 @@
       "pecas": [
        {
         "nome": "Ability Haste",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsCDRScalingIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -5326,15 +5326,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -5530,11 +5530,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Tenacity/Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -5745,15 +5745,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Flat Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
        }
       ]
      }
@@ -5964,15 +5964,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Flat Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
        }
       ]
      }
@@ -6174,15 +6174,15 @@
       "pecas": [
        {
         "nome": "Ability Haste",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsCDRScalingIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -6387,15 +6387,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -6597,15 +6597,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -6795,15 +6795,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -7020,15 +7020,15 @@
       "pecas": [
        {
         "nome": "Ability Haste",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsCDRScalingIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Tenacity / Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -7222,15 +7222,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Flat Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
        }
       ]
      }
@@ -7425,15 +7425,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Flat Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
        }
       ]
      }
@@ -7650,15 +7650,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -7858,15 +7858,15 @@
       "pecas": [
        {
         "nome": "Ability Haste",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsCDRScalingIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -8080,15 +8080,15 @@
       "pecas": [
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Movement Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
        },
        {
         "nome": "Tenacity / Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -8295,11 +8295,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Flat Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
        }
       ]
      }
@@ -8526,15 +8526,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -8738,11 +8738,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Tenacity / Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -8939,15 +8939,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -9133,11 +9133,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Flat Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
        }
       ]
      }
@@ -9335,11 +9335,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Tenacity / Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -9551,15 +9551,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -9793,15 +9793,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Tenacity / Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -10003,15 +10003,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -10222,15 +10222,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -10444,15 +10444,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Tenacity / Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -10651,11 +10651,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -10867,15 +10867,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -11093,15 +11093,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Flat Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
        }
       ]
      }
@@ -11339,15 +11339,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -11392,15 +11392,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Flat Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
        }
       ]
      }
@@ -11766,15 +11766,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Tenacity / Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -11964,15 +11964,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Flat Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
        }
       ]
      }
@@ -12183,15 +12183,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -12385,15 +12385,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Tenacity / Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -12598,15 +12598,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Flat Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
        }
       ]
      }
@@ -12792,11 +12792,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Tenacity / Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -12981,15 +12981,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Flat Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
        }
       ]
      }
@@ -13199,15 +13199,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -13414,11 +13414,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Tenacity / Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -13607,11 +13607,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Tenacity / Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -13818,15 +13818,15 @@
       "pecas": [
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Movement Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -14023,11 +14023,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -14217,15 +14217,15 @@
       "pecas": [
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Movement Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
        },
        {
         "nome": "Tenacity/Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -14433,15 +14433,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Flat Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
        }
       ]
      }
@@ -14656,15 +14656,15 @@
       "pecas": [
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Movement Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
        },
        {
         "nome": "Tenacity / Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -14875,11 +14875,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Flat Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
        }
       ]
      }
@@ -15113,15 +15113,15 @@
       "pecas": [
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Movement Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
        },
        {
         "nome": "Tenacity / Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -15333,15 +15333,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Flat Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
        }
       ]
      }
@@ -15551,11 +15551,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Tenacity/Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -15756,15 +15756,15 @@
       "pecas": [
        {
         "nome": "Ability Haste",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsCDRScalingIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -15964,11 +15964,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Tenacity / Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -16176,15 +16176,15 @@
       "pecas": [
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Movement Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -16426,15 +16426,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -16638,15 +16638,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Flat Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
        }
       ]
      }
@@ -16890,15 +16890,15 @@
       "pecas": [
        {
         "nome": "Ability Haste",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsCDRScalingIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -17115,15 +17115,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Flat Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
        }
       ]
      }
@@ -17323,15 +17323,15 @@
       "pecas": [
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Movement Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -17524,15 +17524,15 @@
       "pecas": [
        {
         "nome": "Ability Haste",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsCDRScalingIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -17731,11 +17731,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -17941,15 +17941,15 @@
       "pecas": [
        {
         "nome": "Ability Haste",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsCDRScalingIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -18160,15 +18160,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Flat Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
        }
       ]
      }
@@ -18384,15 +18384,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Tenacity/Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -18637,15 +18637,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Flat Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
        }
       ]
      }
@@ -18852,11 +18852,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Flat Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
        }
       ]
      }
@@ -19070,15 +19070,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -19295,15 +19295,15 @@
       "pecas": [
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Movement Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
        },
        {
         "nome": "Tenacity / Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -19504,15 +19504,15 @@
       "pecas": [
        {
         "nome": "Ability Haste",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsCDRScalingIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -19721,15 +19721,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -19958,15 +19958,15 @@
       "pecas": [
        {
         "nome": "Ability Haste",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsCDRScalingIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Tenacity / Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -20172,11 +20172,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Flat Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
        }
       ]
      }
@@ -20394,15 +20394,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -20590,15 +20590,15 @@
       "pecas": [
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Movement Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
        },
        {
         "nome": "Tenacity/Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -20834,15 +20834,15 @@
       "pecas": [
        {
         "nome": "Ability Haste",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsCDRScalingIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -21072,15 +21072,15 @@
       "pecas": [
        {
         "nome": "Ability Haste",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsCDRScalingIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -21280,11 +21280,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -21476,11 +21476,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Tenacity / Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -21680,15 +21680,15 @@
       "pecas": [
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Movement Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
        },
        {
         "nome": "Tenacity/Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -21887,15 +21887,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Flat Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
        }
       ]
      }
@@ -22123,11 +22123,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Tenacity / Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -22327,15 +22327,15 @@
       "pecas": [
        {
         "nome": "Ability Haste",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsCDRScalingIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -22543,11 +22543,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Tenacity / Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -22737,7 +22737,7 @@
       "pecas": [
        {
         "nome": "Double Adaptive -> Flat Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        }
       ]
      }
@@ -22932,11 +22932,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Tenacity/Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -23175,15 +23175,15 @@
       "pecas": [
        {
         "nome": "Ability Haste",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsCDRScalingIcon.png"
        },
        {
         "nome": "Adapative Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Tenacity/Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -23385,15 +23385,15 @@
       "pecas": [
        {
         "nome": "Ability Haste",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsCDRScalingIcon.png"
        },
        {
         "nome": "Adapative Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Tenacity/Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -23606,11 +23606,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -23815,11 +23815,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Flat Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
        }
       ]
      }
@@ -24013,11 +24013,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Flat Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
        }
       ]
      }
@@ -24267,11 +24267,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Tenacity / Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -24481,11 +24481,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -24671,15 +24671,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -25035,15 +25035,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Tenacity / Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -25282,15 +25282,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -25503,15 +25503,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -25715,11 +25715,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -25924,15 +25924,15 @@
       "pecas": [
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Movement Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
        },
        {
         "nome": "Tenacity / Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -26145,11 +26145,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Tenacity / Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -26336,15 +26336,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -26560,15 +26560,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -26783,11 +26783,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Tenacity / Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -26996,15 +26996,15 @@
       "pecas": [
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Movement Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -27221,11 +27221,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Flat Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
        }
       ]
      }
@@ -27444,11 +27444,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -27672,15 +27672,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -27892,15 +27892,15 @@
       "pecas": [
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Movement Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
        },
        {
         "nome": "Tenacity / Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -28106,15 +28106,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -28312,15 +28312,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -28514,15 +28514,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Flat Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
        }
       ]
      }
@@ -28704,15 +28704,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -28950,11 +28950,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -29147,11 +29147,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -29356,15 +29356,15 @@
       "pecas": [
        {
         "nome": "Attack Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
        },
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -29575,15 +29575,15 @@
       "pecas": [
        {
         "nome": "Adaptive Force",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Movement Speed",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
        },
        {
         "nome": "Tenacity / Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -29798,11 +29798,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Tenacity / Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -29999,11 +29999,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Tenacity / Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }
@@ -30200,11 +30200,11 @@
       "pecas": [
        {
         "nome": "Double Adaptive",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Tenacity / Slow Resist",
-        "icone": null
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
        }
       ]
      }

@@ -658,7 +658,10 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .pecas .seta { flex: none; color: var(--acento); }
 .ou { font-size: 13px; font-style: italic; color: var(--texto-baixo); }
 .ou-bloco { margin: 14px 0 10px; font-size: 13px; font-style: italic; color: var(--texto-baixo); }
-.frag { margin: 0; font-size: 15px; font-weight: 600; }
+.frag { margin: 0; display: flex; flex-wrap: wrap; gap: 8px 14px; font-size: 15px; font-weight: 600; }
+/* Fragmentos com o ícone do jogo, num círculo escuro como no cliente. */
+.frag-peca { display: inline-flex; align-items: center; gap: 7px; min-width: 0; }
+.frag-peca img { width: 26px; height: 26px; flex: none; padding: 3px; border-radius: 50%; border: 1px solid var(--linha-forte); background: #15130f; }
 .build .grupo + .grupo { margin-top: 18px; }
 .build .cond { margin: 0 0 10px; font-weight: 700; font-size: 15px; color: var(--acento-vivo); }
 .build details.grupo summary { display: flex; align-items: center; gap: 10px; min-height: 44px; cursor: pointer; list-style: none; font-weight: 700; font-size: 15px; color: var(--acento-vivo); }
@@ -1542,7 +1545,7 @@ const rotuloRuna = r => ({ Principal: t("principal"), "Secundária": t("secundar
 function setupCompleto(c) {
   // Mais de uma página de runas: "Opção 1 / Opção 2" em vez de uma embaixo da outra.
   const runas = abas("runas", c.runas.map((_, i) => t("opcao") + " " + (i + 1)), c.runas.map(bloco => bloco.map(l => l.rotulo === "Fragmentos"
-    ? `<div class="linha-runa"><span class="rot">${esc(rotuloRuna(l.rotulo))}</span><p class="frag">${l.pecas.map(p => esc(nomePeca(p))).join(" · ")}</p></div>`
+    ? `<div class="linha-runa"><span class="rot">${esc(rotuloRuna(l.rotulo))}</span><p class="frag">${l.pecas.map(p => `<span class="frag-peca">${p.icone ? `<img src="${p.icone}" alt="" width="26" height="26">` : ""}${esc(nomePeca(p))}</span>`).join("")}</p></div>`
     : `<div class="linha-runa"><span class="rot">${esc(rotuloRuna(l.rotulo))}</span><div class="pecas">${l.pecas.map(p => peca(p, true)).join("")}</div></div>`).join("")));
   // Builds condicionais ("If Aatrox rushes Hex Drinker" / "If he doesn't"): uma aba por condição.
   const conds = c.itens.map((g, i) => (g.rotulo && g.rotulo !== "Items vs." ? tr(g.rotulo).replace(/:\s*$/, "") : i ? t("outraBuild") : "Build"));

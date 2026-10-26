@@ -42,7 +42,8 @@ def textos_do_guia(guia):
                 anda(y, chave)
         elif isinstance(x, dict):
             # Peça com ícone (ou item com id) usa o nome do jogo (nomes), não precisa de tradução escrita.
-            nome_do_jogo = x.get("icone") or x.get("id") and "estagios" in x or x.get("id") and "nome" in x and len(x) <= 3
+            # Fragmento tem ícone mas o nome é o que o autor escreveu ("Double Adaptive"): esse é traduzido.
+            nome_do_jogo = (x.get("icone") and "/StatMods/" not in x["icone"]) or x.get("id") and "estagios" in x or x.get("id") and "nome" in x and len(x) <= 3
             for k, v in x.items():
                 if nivel_matchup and k in PULA_MATCHUP:
                     continue
@@ -85,7 +86,8 @@ def baixa(caminho):
 def nomes_pt(icones):
     itens = baixa(f"{VER}/data/pt_BR/item.json")["data"]
     runas = {}
-    for arvore in baixa(f"{VER}/data/pt_BR/runesReforged.json"):
+    # A versão antiga entra primeiro: runas que saíram do jogo (Lenda: Tenacidade, Ímpeto Gradual) ainda têm nome.
+    for arvore in baixa("13.24.1/data/pt_BR/runesReforged.json") + baixa(f"{VER}/data/pt_BR/runesReforged.json"):
         runas["perk-images/" + arvore["icon"].split("perk-images/", 1)[-1]] = arvore["name"]
         for s in arvore["slots"]:
             for r in s["runes"]:

@@ -42,12 +42,27 @@ def chave(s):
     return re.sub(r"[^a-z0-9]", "", s.lower().replace("&", "and"))
 
 
+IMG_RUNA = "https://ddragon.leagueoflegends.com/cdn/img/perk-images/"
+# Runas que saíram do jogo mas ainda aparecem nas planilhas (o Data Dragon guarda a imagem).
+RUNAS_ANTIGAS = {"legendtenacity": IMG_RUNA + "Styles/Precision/LegendTenacity/LegendTenacity.png",
+                 "phaserush": IMG_RUNA + "Styles/Sorcery/PhaseRush/PhaseRush.png"}
+# Fragmentos (não vêm no runesReforged): o primeiro padrão que bater no nome escrito na planilha.
+FRAGMENTOS = [(r"adap|adp", "StatModsAdaptiveForceIcon"), (r"attack\s*speed", "StatModsAttackSpeedIcon"),
+              (r"ability\s*haste|cdr", "StatModsCDRScalingIcon"), (r"move(ment)?\s*speed|\bms\b", "StatModsMovementSpeedIcon"),
+              (r"scaling\s*health|health\s*scaling", "StatModsHealthScalingIcon"), (r"tenacity|slow\s*resist", "StatModsTenacityIcon"),
+              (r"health|\bhp\b", "StatModsHealthPlusIcon")]
+
+
+def icone_fragmento(nome):
+    return next((f"{IMG_RUNA}StatMods/{arq}.png" for padrao, arq in FRAGMENTOS if re.search(padrao, nome, re.I)), None)
+
+
 def montar_icones(itens, runas):
     por_item = {}
     for k, v in itens.items():
         if v.get("gold", {}).get("purchasable"):
             por_item.setdefault(chave(v["name"]), (v["name"], f"{DD}/img/item/{k}.png"))
-    por_runa = {}
+    por_runa = dict(RUNAS_ANTIGAS)
     for arvore in runas:
         for slot in arvore["slots"]:
             for r in slot["runes"]:
@@ -126,7 +141,7 @@ def ler_runas(texto, por_runa):
             pecas = [q.strip() for p in pecas for q in re.split(r"\s*\+\s*", p) if q.strip()]
         out.append({
             "rotulo": nomes[i] if i < len(nomes) else "",
-            "pecas": [{"nome": p, "icone": por_runa.get(chave(p))} for p in pecas],
+            "pecas": [{"nome": p, "icone": icone_fragmento(p) if i == 2 else por_runa.get(chave(p))} for p in pecas],
         })
     return out
 

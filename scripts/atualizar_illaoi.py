@@ -11,7 +11,7 @@ import pathlib
 import re
 import urllib.request
 
-from atualizar_mordekaiser import chave, montar_icones
+from atualizar_mordekaiser import chave, icone_fragmento, montar_icones
 from planilha_xlsx import Planilha, publicado
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -124,7 +124,7 @@ def runas(texto, por_runa):
         for p in [x.strip(" .") for x in g["texto"].split(",") if x.strip(" .")]:
             for alt in [a.strip() for a in p.split("/") if a.strip()]:
                 for nome in ([alt] if rotulo == "Fragmentos" else separa_runas(alt, por_runa)):
-                    pecas.append({"nome": nome, "icone": None if rotulo == "Fragmentos" else runa_conhecida(nome, por_runa)})
+                    pecas.append({"nome": nome, "icone": icone_fragmento(nome) if rotulo == "Fragmentos" else runa_conhecida(nome, por_runa)})
         out.append({"rotulo": rotulo, "pecas": pecas})
     return out
 
