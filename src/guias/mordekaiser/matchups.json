@@ -1,5 +1,5 @@
 {
- "versao": "16.20.1",
+ "versao": "16.21.1",
  "fonte": {
   "planilha": "https://docs.google.com/spreadsheets/d/1BVH44IPxZNBQshDf90XZRJbfKvavVCUIIo_boyBVF8o/edit?gid=1560260169",
   "twitch": "https://www.twitch.tv/meowdekaiser_",
@@ -88,13 +88,13 @@
         [
          {
           "nome": "Bramble Vest Rush",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3076.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3076.png"
          }
         ],
         [
          {
           "nome": "Boots",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/1001.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1001.png"
          }
         ]
        ]
@@ -113,7 +113,7 @@
         [
          {
           "nome": "Cosmic Drive",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224629.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224629.png"
          }
         ]
        ],
@@ -126,7 +126,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -139,7 +139,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -152,11 +152,11 @@
         [
          {
           "nome": "Bloodletter's Curse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/4010.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/4010.png"
          },
          {
           "nome": "Liandry's",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/6653.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6653.png"
          },
          {
           "nome": "Flex Items",
@@ -178,13 +178,13 @@
         [
          {
           "nome": "Bramble Vest Rush",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3076.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3076.png"
          }
         ],
         [
          {
           "nome": "Boots",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/1001.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1001.png"
          }
         ]
        ]
@@ -196,7 +196,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -209,7 +209,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -222,7 +222,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -235,11 +235,11 @@
         [
          {
           "nome": "Bloodletter's Curse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/4010.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/4010.png"
          },
          {
           "nome": "Liandry's",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/6653.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6653.png"
          },
          {
           "nome": "Flex Items",
@@ -447,7 +447,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -460,7 +460,7 @@
         [
          {
           "nome": "Mercury's Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
          }
         ]
        ],
@@ -473,11 +473,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -660,7 +660,7 @@
         [
          {
           "nome": "Cosmic Drive",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224629.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224629.png"
          }
         ]
        ],
@@ -673,7 +673,7 @@
         [
          {
           "nome": "Gluttonous Greaves",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223008.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223008.png"
          }
         ]
        ],
@@ -686,7 +686,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -875,7 +875,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -888,7 +888,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -901,11 +901,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -1087,7 +1087,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -1100,11 +1100,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Nashor's Tooth",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223115.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223115.png"
          }
         ]
        ],
@@ -1117,7 +1117,7 @@
         [
          {
           "nome": "Experimental Hexplate",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223073.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223073.png"
          }
         ]
        ],
@@ -1307,7 +1307,7 @@
         [
          {
           "nome": "Mercury's Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
          }
         ]
        ],
@@ -1320,7 +1320,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -1333,11 +1333,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -1521,7 +1521,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -1534,7 +1534,7 @@
         [
          {
           "nome": "Mercury's Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
          }
         ]
        ],
@@ -1547,11 +1547,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -1724,7 +1724,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -1737,7 +1737,7 @@
         [
          {
           "nome": "Gluttonous Greaves",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223008.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223008.png"
          }
         ]
        ],
@@ -1750,11 +1750,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -1915,7 +1915,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -1928,7 +1928,7 @@
         [
          {
           "nome": "Gluttonous Greaves",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223008.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223008.png"
          }
         ]
        ],
@@ -1941,11 +1941,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -2130,7 +2130,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -2143,7 +2143,7 @@
         [
          {
           "nome": "Gluttonous Greaves",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223008.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223008.png"
          }
         ]
        ],
@@ -2156,11 +2156,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -2332,7 +2332,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -2345,7 +2345,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -2358,11 +2358,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Nashor's Tooth",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223115.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223115.png"
          }
         ]
        ],
@@ -2375,7 +2375,7 @@
         [
          {
           "nome": "Experimental Hexplate",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223073.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223073.png"
          }
         ]
        ],
@@ -2554,7 +2554,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -2567,7 +2567,7 @@
         [
          {
           "nome": "Mercury's Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
          }
         ]
        ],
@@ -2580,11 +2580,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -2756,11 +2756,11 @@
         [
          {
           "nome": "Oblivion Orb",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3916.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3916.png"
          },
          {
           "nome": "Bramble Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3076.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3076.png"
          }
         ]
        ],
@@ -2773,7 +2773,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -2786,7 +2786,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -2799,7 +2799,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -2995,7 +2995,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -3008,7 +3008,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -3021,7 +3021,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -3198,7 +3198,7 @@
         [
          {
           "nome": "Negatron Cloak",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/1057.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1057.png"
          }
         ]
        ],
@@ -3211,7 +3211,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -3224,11 +3224,11 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          },
          {
           "nome": "Force Of Nature",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224401.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224401.png"
          }
         ]
        ],
@@ -3241,11 +3241,11 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          },
          {
           "nome": "Force Of Nature",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224401.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224401.png"
          }
         ]
        ],
@@ -3435,7 +3435,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -3452,7 +3452,7 @@
         [
          {
           "nome": "Cosmic Drive",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224629.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224629.png"
          }
         ]
        ],
@@ -3622,7 +3622,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -3635,7 +3635,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -3648,11 +3648,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -3823,7 +3823,7 @@
         [
          {
           "nome": "Bramble Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3076.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3076.png"
          }
         ]
        ],
@@ -3836,7 +3836,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -3849,7 +3849,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -3862,11 +3862,11 @@
         [
          {
           "nome": "Liandry's",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/6653.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6653.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -4063,7 +4063,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -4080,7 +4080,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -4269,7 +4269,7 @@
         [
          {
           "nome": "Rylai's",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223116.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223116.png"
          }
         ]
        ],
@@ -4286,7 +4286,7 @@
         [
          {
           "nome": "Oblivion Orb",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3916.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3916.png"
          }
         ]
        ],
@@ -4299,7 +4299,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -4475,7 +4475,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -4488,7 +4488,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -4501,11 +4501,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Nashor's Tooth",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223115.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223115.png"
          }
         ]
        ],
@@ -4518,7 +4518,7 @@
         [
          {
           "nome": "Experimental Hexplate",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223073.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223073.png"
          }
         ]
        ],
@@ -4678,7 +4678,7 @@
         [
          {
           "nome": "Hextech Gunblade",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223146.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223146.png"
          }
         ]
        ],
@@ -4695,7 +4695,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -4708,11 +4708,11 @@
         [
          {
           "nome": "Kaenic Rookern",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222504.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222504.png"
          },
          {
           "nome": "Spirit's Visage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223065.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223065.png"
          }
         ]
        ],
@@ -4898,7 +4898,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -4911,7 +4911,7 @@
         [
          {
           "nome": "Mercury's Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
          }
         ]
        ],
@@ -4924,11 +4924,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -5147,7 +5147,7 @@
         [
          {
           "nome": "Cosmic Drive",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224629.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224629.png"
          }
         ]
        ],
@@ -5160,7 +5160,7 @@
         [
          {
           "nome": "Mercury's Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
          }
         ]
        ],
@@ -5173,7 +5173,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -5351,7 +5351,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -5364,7 +5364,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -5377,7 +5377,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -5551,7 +5551,7 @@
         [
          {
           "nome": "Mercury Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
          }
         ]
        ],
@@ -5564,7 +5564,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -5577,11 +5577,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -5770,7 +5770,7 @@
         [
          {
           "nome": "Bramble Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3076.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3076.png"
          }
         ]
        ],
@@ -5783,7 +5783,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -5796,7 +5796,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -5809,11 +5809,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Nashor's Tooth",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223115.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223115.png"
          }
         ]
        ],
@@ -5989,7 +5989,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -6006,11 +6006,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Nashor's Tooth",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223115.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223115.png"
          }
         ]
        ],
@@ -6023,7 +6023,7 @@
         [
          {
           "nome": "Experimental Hexplate",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223073.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223073.png"
          }
         ]
        ],
@@ -6199,7 +6199,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -6216,11 +6216,11 @@
         [
          {
           "nome": "Liandry's",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/6653.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6653.png"
          },
          {
           "nome": "Cosmic Drive",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224629.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224629.png"
          }
         ]
        ],
@@ -6233,7 +6233,7 @@
         [
          {
           "nome": "Bloodletter's Curse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/4010.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/4010.png"
          }
         ]
        ],
@@ -6412,7 +6412,7 @@
         [
          {
           "nome": "Plated Steelcaps Rush",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -6425,7 +6425,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -6438,7 +6438,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -6622,7 +6622,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -6635,7 +6635,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -6648,7 +6648,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -6820,7 +6820,7 @@
         [
          {
           "nome": "Plated Steelcaps Rush",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -6833,7 +6833,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -6846,7 +6846,7 @@
         [
          {
           "nome": "Experimental Hexplate",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223073.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223073.png"
          }
         ]
        ],
@@ -6859,11 +6859,11 @@
         [
          {
           "nome": "Liandry's",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/6653.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6653.png"
          },
          {
           "nome": "Bloodletter's Curse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/4010.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/4010.png"
          }
         ]
        ],
@@ -7045,7 +7045,7 @@
         [
          {
           "nome": "Cosmic Drive",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224629.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224629.png"
          }
         ]
        ],
@@ -7058,7 +7058,7 @@
         [
          {
           "nome": "Mecury's Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
          }
         ]
        ],
@@ -7071,7 +7071,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -7247,7 +7247,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -7260,7 +7260,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -7273,11 +7273,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Nashor's Tooth",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223115.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223115.png"
          }
         ]
        ],
@@ -7450,7 +7450,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -7463,7 +7463,7 @@
         [
          {
           "nome": "Gluttonous Greaves",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223008.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223008.png"
          }
         ]
        ],
@@ -7476,7 +7476,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -7489,11 +7489,11 @@
         [
          {
           "nome": "Kaenic Rookern",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222504.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222504.png"
          },
          {
           "nome": "Spirit's Visage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223065.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223065.png"
          }
         ]
        ],
@@ -7675,7 +7675,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -7688,7 +7688,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -7701,7 +7701,7 @@
         [
          {
           "nome": "Rylai's Crystal Scepter",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223116.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223116.png"
          }
         ]
        ],
@@ -7883,7 +7883,7 @@
         [
          {
           "nome": "Mercury Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
          }
         ]
        ],
@@ -7896,7 +7896,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -7909,11 +7909,11 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          },
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -8105,7 +8105,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -8118,7 +8118,7 @@
         [
          {
           "nome": "Mercury Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
          }
         ]
        ],
@@ -8131,7 +8131,7 @@
         [
          {
           "nome": "Rylai's",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223116.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223116.png"
          }
         ]
        ],
@@ -8316,7 +8316,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -8329,7 +8329,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -8342,7 +8342,7 @@
         [
          {
           "nome": "Oblivion Orb",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3916.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3916.png"
          }
         ]
        ],
@@ -8355,7 +8355,7 @@
         [
          {
           "nome": "Liandry's",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/6653.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6653.png"
          }
         ]
        ],
@@ -8551,7 +8551,7 @@
         [
          {
           "nome": "Bramble Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3076.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3076.png"
          }
         ]
        ],
@@ -8564,7 +8564,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -8577,7 +8577,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -8590,7 +8590,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -8759,7 +8759,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -8772,7 +8772,7 @@
         [
          {
           "nome": "Mercury's Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
          }
         ]
        ],
@@ -8785,11 +8785,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -8964,7 +8964,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -8977,7 +8977,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -8990,7 +8990,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -9154,7 +9154,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -9167,7 +9167,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -9180,7 +9180,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -9356,7 +9356,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -9369,7 +9369,7 @@
         [
          {
           "nome": "Plated steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -9382,11 +9382,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -9576,7 +9576,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -9589,7 +9589,7 @@
         [
          {
           "nome": "Plated steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -9602,11 +9602,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -9818,7 +9818,7 @@
         [
          {
           "nome": "Bloodletter's Curse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/4010.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/4010.png"
          }
         ]
        ],
@@ -9831,7 +9831,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -9844,7 +9844,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -10028,7 +10028,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -10041,7 +10041,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -10054,11 +10054,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Nashor's Tooth",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223115.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223115.png"
          }
         ]
        ],
@@ -10071,7 +10071,7 @@
         [
          {
           "nome": "Experimental Hexplate",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223073.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223073.png"
          }
         ]
        ],
@@ -10247,7 +10247,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -10260,7 +10260,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -10273,7 +10273,7 @@
         [
          {
           "nome": "Experimental Hexplate",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223073.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223073.png"
          }
         ]
        ],
@@ -10286,11 +10286,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Nashor's Tooth",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223115.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223115.png"
          }
         ]
        ],
@@ -10469,7 +10469,7 @@
         [
          {
           "nome": "Mercury's Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
          }
         ]
        ],
@@ -10482,7 +10482,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -10495,11 +10495,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -10672,7 +10672,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -10685,7 +10685,7 @@
         [
          {
           "nome": "Gluttonous Greaves",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223008.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223008.png"
          }
         ]
        ],
@@ -10698,11 +10698,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -10892,7 +10892,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -10905,7 +10905,7 @@
         [
          {
           "nome": "Gluttonous Greaves",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223008.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223008.png"
          }
         ]
        ],
@@ -10918,7 +10918,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -10931,11 +10931,11 @@
         [
          {
           "nome": "Kaenic Rookern",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222504.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222504.png"
          },
          {
           "nome": "Spirit's Visage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223065.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223065.png"
          }
         ]
        ],
@@ -11118,7 +11118,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -11131,7 +11131,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -11144,11 +11144,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Nashor's Tooth",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223115.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223115.png"
          }
         ]
        ],
@@ -11161,7 +11161,7 @@
         [
          {
           "nome": "Experimental Hexplate",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223073.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223073.png"
          }
         ]
        ],
@@ -11417,7 +11417,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -11434,11 +11434,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -11460,7 +11460,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -11473,7 +11473,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -11493,7 +11493,7 @@
         [
          {
           "nome": "Liandry's Torment",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/6653.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6653.png"
          }
         ]
        ],
@@ -11509,7 +11509,7 @@
         [
          {
           "nome": "Zhonya's Hourglass",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223157.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223157.png"
          }
         ]
        ]
@@ -11791,7 +11791,7 @@
         [
          {
           "nome": "Mercury's Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
          }
         ]
        ],
@@ -11804,7 +11804,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -11817,11 +11817,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -11989,7 +11989,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -12002,7 +12002,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -12015,7 +12015,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -12208,11 +12208,11 @@
         [
          {
           "nome": "Boots",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/1001.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1001.png"
          },
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -12225,7 +12225,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -12238,11 +12238,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -12410,7 +12410,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -12423,7 +12423,7 @@
         [
          {
           "nome": "Mercury's Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
          }
         ]
        ],
@@ -12436,11 +12436,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -12623,7 +12623,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -12636,7 +12636,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -12649,7 +12649,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -12813,7 +12813,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -12826,7 +12826,7 @@
         [
          {
           "nome": "Mercury's Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
          }
         ]
        ],
@@ -12839,11 +12839,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -13006,7 +13006,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -13019,11 +13019,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Nashor's Tooth",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223115.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223115.png"
          }
         ]
        ],
@@ -13036,11 +13036,11 @@
         [
          {
           "nome": "Kaenic Rookern",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222504.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222504.png"
          },
          {
           "nome": "Spirit's Visage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223065.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223065.png"
          }
         ]
        ],
@@ -13224,7 +13224,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -13237,7 +13237,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -13250,7 +13250,7 @@
         [
          {
           "nome": "Experimental Hexplate",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223073.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223073.png"
          }
         ]
        ],
@@ -13263,11 +13263,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Nashor's Tooth",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223115.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223115.png"
          }
         ]
        ],
@@ -13435,7 +13435,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -13448,7 +13448,7 @@
         [
          {
           "nome": "Mercury's Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
          }
         ]
        ],
@@ -13461,11 +13461,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -13628,7 +13628,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -13641,7 +13641,7 @@
         [
          {
           "nome": "Mercury's Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
          }
         ]
        ],
@@ -13654,11 +13654,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -13843,7 +13843,7 @@
         [
          {
           "nome": "Rylai's Crystal Scepter",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223116.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223116.png"
          }
         ]
        ],
@@ -13856,7 +13856,7 @@
         [
          {
           "nome": "Boots Of Swiftness",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223009.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223009.png"
          }
         ]
        ],
@@ -13869,7 +13869,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -14044,7 +14044,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -14061,11 +14061,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -14242,7 +14242,7 @@
         [
          {
           "nome": "Rylai's",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223116.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223116.png"
          }
         ]
        ],
@@ -14255,7 +14255,7 @@
         [
          {
           "nome": "Mercury's Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
          }
         ]
        ],
@@ -14268,7 +14268,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -14458,7 +14458,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -14471,7 +14471,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -14484,11 +14484,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Nashor's Tooth",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223115.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223115.png"
          }
         ]
        ],
@@ -14501,7 +14501,7 @@
         [
          {
           "nome": "Experimental Hexplate",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223073.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223073.png"
          }
         ]
        ],
@@ -14681,7 +14681,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -14694,7 +14694,7 @@
         [
          {
           "nome": "Mercury Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
          }
         ]
        ],
@@ -14707,7 +14707,7 @@
         [
          {
           "nome": "Rylai's Crystal Scepter",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223116.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223116.png"
          }
         ]
        ],
@@ -14896,7 +14896,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -14909,7 +14909,7 @@
         [
          {
           "nome": "Gluttonous Greaves",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223008.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223008.png"
          }
         ]
        ],
@@ -14922,7 +14922,7 @@
         [
          {
           "nome": "Liandry's",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/6653.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6653.png"
          }
         ]
        ],
@@ -14935,11 +14935,11 @@
         [
          {
           "nome": "Kaenic Rookern",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222504.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222504.png"
          },
          {
           "nome": "Force Of Nature",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224401.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224401.png"
          }
         ]
        ],
@@ -14952,11 +14952,11 @@
         [
          {
           "nome": "Spirit Visage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223065.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223065.png"
          },
          {
           "nome": "Bloodletter's Curse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/4010.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/4010.png"
          }
         ]
        ],
@@ -15138,7 +15138,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -15151,7 +15151,7 @@
         [
          {
           "nome": "Mercury Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
          }
         ]
        ],
@@ -15164,7 +15164,7 @@
         [
          {
           "nome": "Rylai's Crystal Scepter",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223116.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223116.png"
          }
         ]
        ],
@@ -15358,7 +15358,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -15371,7 +15371,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -15384,11 +15384,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Nashor's Tooth",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223115.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223115.png"
          }
         ]
        ],
@@ -15401,7 +15401,7 @@
         [
          {
           "nome": "Experimental Hexplate",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223073.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223073.png"
          }
         ]
        ],
@@ -15572,7 +15572,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -15585,7 +15585,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -15598,7 +15598,7 @@
         [
          {
           "nome": "Oblivion Orb",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3916.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3916.png"
          }
         ]
        ],
@@ -15611,7 +15611,7 @@
         [
          {
           "nome": "Liandry's",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/6653.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6653.png"
          }
         ]
        ],
@@ -15781,7 +15781,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -15794,11 +15794,11 @@
         [
          {
           "nome": "Liandry's",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/6653.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6653.png"
          },
          {
           "nome": "Cosmic Drive",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224629.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224629.png"
          }
         ]
        ],
@@ -15811,7 +15811,7 @@
         [
          {
           "nome": "Bloodletter's Curse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/4010.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/4010.png"
          }
         ]
        ],
@@ -15985,7 +15985,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -15998,7 +15998,7 @@
         [
          {
           "nome": "Mercury's Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
          }
         ]
        ],
@@ -16011,11 +16011,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -16201,7 +16201,7 @@
         [
          {
           "nome": "Rylai's Crystal Scepter",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223116.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223116.png"
          }
         ]
        ],
@@ -16214,7 +16214,7 @@
         [
          {
           "nome": "Boots Of Swiftness",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223009.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223009.png"
          }
         ]
        ],
@@ -16227,7 +16227,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -16451,7 +16451,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -16464,7 +16464,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -16477,11 +16477,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Nashor's Tooth",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223115.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223115.png"
          }
         ]
        ],
@@ -16494,7 +16494,7 @@
         [
          {
           "nome": "Experimental Hexplate",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223073.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223073.png"
          }
         ]
        ],
@@ -16663,7 +16663,7 @@
         [
          {
           "nome": "Bramble Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3076.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3076.png"
          }
         ]
        ],
@@ -16676,7 +16676,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -16689,7 +16689,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -16702,7 +16702,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -16715,7 +16715,7 @@
         [
          {
           "nome": "Zhonya's Hourglass",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223157.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223157.png"
          }
         ]
        ],
@@ -16915,7 +16915,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -16932,11 +16932,11 @@
         [
          {
           "nome": "Liandry's",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/6653.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6653.png"
          },
          {
           "nome": "Cosmic Drive",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224629.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224629.png"
          }
         ]
        ],
@@ -16949,7 +16949,7 @@
         [
          {
           "nome": "Bloodletter's Curse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/4010.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/4010.png"
          }
         ]
        ],
@@ -17140,7 +17140,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -17153,7 +17153,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -17166,7 +17166,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -17348,7 +17348,7 @@
         [
          {
           "nome": "Rylai's",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223116.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223116.png"
          }
         ]
        ],
@@ -17361,11 +17361,11 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          },
          {
           "nome": "Boots Of Swiftness",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223009.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223009.png"
          }
         ]
        ],
@@ -17378,7 +17378,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -17549,7 +17549,7 @@
         [
          {
           "nome": "Cosmic Drive",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224629.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224629.png"
          }
         ]
        ],
@@ -17562,7 +17562,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -17575,7 +17575,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -17752,7 +17752,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -17765,7 +17765,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -17778,11 +17778,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -17966,7 +17966,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -17979,11 +17979,11 @@
         [
          {
           "nome": "Liandry's",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/6653.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6653.png"
          },
          {
           "nome": "Cosmic Drive",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224629.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224629.png"
          }
         ]
        ],
@@ -17996,7 +17996,7 @@
         [
          {
           "nome": "Bloodletter's Curse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/4010.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/4010.png"
          }
         ]
        ],
@@ -18185,7 +18185,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -18198,7 +18198,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -18211,7 +18211,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -18409,7 +18409,7 @@
         [
          {
           "nome": "Bramble Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3076.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3076.png"
          }
         ]
        ],
@@ -18422,11 +18422,11 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          },
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -18439,7 +18439,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -18452,11 +18452,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          },
          {
           "nome": "Flex",
@@ -18662,7 +18662,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -18675,7 +18675,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -18688,7 +18688,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -18873,7 +18873,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -18886,7 +18886,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -18899,7 +18899,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -19095,7 +19095,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -19108,7 +19108,7 @@
         [
          {
           "nome": "Gluttonous Greaves",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223008.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223008.png"
          }
         ]
        ],
@@ -19121,11 +19121,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -19320,7 +19320,7 @@
         [
          {
           "nome": "Rylai's",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223116.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223116.png"
          }
         ]
        ],
@@ -19333,7 +19333,7 @@
         [
          {
           "nome": "Mercury's Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
          }
         ]
        ],
@@ -19346,11 +19346,11 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          },
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -19529,7 +19529,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -19546,11 +19546,11 @@
         [
          {
           "nome": "Liandry's",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/6653.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6653.png"
          },
          {
           "nome": "Cosmic Drive",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224629.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224629.png"
          }
         ]
        ],
@@ -19563,7 +19563,7 @@
         [
          {
           "nome": "Bloodletter's Curse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/4010.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/4010.png"
          }
         ]
        ],
@@ -19746,7 +19746,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -19759,7 +19759,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -19776,7 +19776,7 @@
         [
          {
           "nome": "Zhonya's",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223157.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223157.png"
          }
         ]
        ],
@@ -19983,7 +19983,7 @@
         [
          {
           "nome": "Cosmic Drive",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224629.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224629.png"
          }
         ]
        ],
@@ -19996,11 +19996,11 @@
         [
          {
           "nome": "Mecury's Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
          },
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -20013,7 +20013,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -20193,7 +20193,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -20206,7 +20206,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -20219,7 +20219,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -20419,7 +20419,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -20436,7 +20436,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -20615,7 +20615,7 @@
         [
          {
           "nome": "Cull",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/1083.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1083.png"
          }
         ]
        ],
@@ -20628,7 +20628,7 @@
         [
          {
           "nome": "Rylai's Crystal Scepter",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223116.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223116.png"
          }
         ]
        ],
@@ -20641,7 +20641,7 @@
         [
          {
           "nome": "Boots Of Swiftness",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223009.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223009.png"
          }
         ]
        ],
@@ -20654,11 +20654,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Force Of Nature",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224401.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224401.png"
          }
         ]
        ],
@@ -20671,11 +20671,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Force Of Nature",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224401.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224401.png"
          }
         ]
        ],
@@ -20859,7 +20859,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -20876,11 +20876,11 @@
         [
          {
           "nome": "Liandry's",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/6653.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6653.png"
          },
          {
           "nome": "Cosmic Drive",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224629.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224629.png"
          }
         ]
        ],
@@ -20893,7 +20893,7 @@
         [
          {
           "nome": "Bloodletter's Curse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/4010.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/4010.png"
          }
         ]
        ],
@@ -21097,7 +21097,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -21114,11 +21114,11 @@
         [
          {
           "nome": "Liandry's",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/6653.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6653.png"
          },
          {
           "nome": "Cosmic Drive",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224629.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224629.png"
          }
         ]
        ],
@@ -21131,7 +21131,7 @@
         [
          {
           "nome": "Bloodletter's Curse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/4010.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/4010.png"
          }
         ]
        ],
@@ -21301,7 +21301,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -21314,7 +21314,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -21327,11 +21327,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ]
@@ -21497,7 +21497,7 @@
         [
          {
           "nome": "Oblivion Orb",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3916.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3916.png"
          }
         ]
        ],
@@ -21510,7 +21510,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -21523,7 +21523,7 @@
         [
          {
           "nome": "Mercury's Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
          }
         ]
        ],
@@ -21536,11 +21536,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -21705,7 +21705,7 @@
         [
          {
           "nome": "Rylai's Crystal Scepter",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223116.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223116.png"
          }
         ]
        ],
@@ -21718,7 +21718,7 @@
         [
          {
           "nome": "Oblivion Orb",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3916.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3916.png"
          }
         ]
        ],
@@ -21735,7 +21735,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -21912,7 +21912,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -21929,11 +21929,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Nashor's Tooth",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223115.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223115.png"
          }
         ]
        ],
@@ -21946,7 +21946,7 @@
         [
          {
           "nome": "Experimental Hexplate",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223073.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223073.png"
          }
         ]
        ],
@@ -22144,7 +22144,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -22157,7 +22157,7 @@
         [
          {
           "nome": "Mercury's Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
          }
         ]
        ],
@@ -22170,11 +22170,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -22352,7 +22352,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -22369,11 +22369,11 @@
         [
          {
           "nome": "Liandry's",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/6653.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6653.png"
          },
          {
           "nome": "Cosmic Drive",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224629.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224629.png"
          }
         ]
        ],
@@ -22386,7 +22386,7 @@
         [
          {
           "nome": "Bloodletter's Curse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/4010.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/4010.png"
          }
         ]
        ],
@@ -22564,7 +22564,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -22577,7 +22577,7 @@
         [
          {
           "nome": "Mercury's Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
          }
         ]
        ],
@@ -22590,11 +22590,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -22754,7 +22754,7 @@
         [
          {
           "nome": "Hextech Gunblade",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223146.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223146.png"
          }
         ]
        ],
@@ -22767,7 +22767,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -22780,7 +22780,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -22953,7 +22953,7 @@
         [
          {
           "nome": "Oblivion Orb",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3916.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3916.png"
          }
         ]
        ],
@@ -22966,7 +22966,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -22979,7 +22979,7 @@
         [
          {
           "nome": "Mercury's Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
          }
         ]
        ],
@@ -22992,11 +22992,11 @@
         [
          {
           "nome": "Liandry's",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/6653.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6653.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -23009,7 +23009,7 @@
         [
          {
           "nome": "Bloodletter's Curse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/4010.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/4010.png"
          }
         ]
        ],
@@ -23200,7 +23200,7 @@
         [
          {
           "nome": "Mercury's Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
          }
         ]
        ],
@@ -23213,7 +23213,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -23226,7 +23226,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -23410,11 +23410,11 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          },
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -23427,11 +23427,11 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          },
          {
           "nome": "Mecury's Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
          }
         ]
        ],
@@ -23444,11 +23444,11 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          },
          {
           "nome": "Cosmic Drive",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224629.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224629.png"
          }
         ]
        ],
@@ -23627,7 +23627,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -23640,7 +23640,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -23653,11 +23653,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -23836,7 +23836,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -23849,7 +23849,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -23862,7 +23862,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -24034,7 +24034,7 @@
         [
          {
           "nome": "Warden's Mail",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3082.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3082.png"
          }
         ]
        ],
@@ -24047,7 +24047,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -24060,7 +24060,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -24073,7 +24073,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -24288,11 +24288,11 @@
         [
          {
           "nome": "Mercury Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
          },
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -24305,7 +24305,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -24318,11 +24318,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -24502,7 +24502,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -24519,11 +24519,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -24696,11 +24696,11 @@
         [
          {
           "nome": "Dark Seal",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/1082.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1082.png"
          },
          {
           "nome": "Boots",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/1001.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1001.png"
          }
         ]
        ],
@@ -24713,7 +24713,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -24726,7 +24726,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -24739,7 +24739,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -24757,11 +24757,11 @@
         [
          {
           "nome": "Dark Seal",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/1082.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1082.png"
          },
          {
           "nome": "Boots",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/1001.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1001.png"
          }
         ]
        ],
@@ -24774,7 +24774,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -24787,7 +24787,7 @@
         [
          {
           "nome": "Oblivion Orb",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3916.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3916.png"
          }
         ]
        ],
@@ -24800,11 +24800,11 @@
         [
          {
           "nome": "Liandry's",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/6653.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6653.png"
          },
          {
           "nome": "Cosmic Drive",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224629.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224629.png"
          }
         ]
        ],
@@ -24817,7 +24817,7 @@
         [
          {
           "nome": "Bloodletter's Curse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/4010.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/4010.png"
          }
         ]
        ],
@@ -25060,7 +25060,7 @@
         [
          {
           "nome": "Warden's Mail",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3082.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3082.png"
          }
         ]
        ],
@@ -25073,7 +25073,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -25086,7 +25086,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -25307,7 +25307,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -25320,11 +25320,11 @@
         [
          {
           "nome": "Mercury Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
          },
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -25337,11 +25337,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Nashor's Tooth",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223115.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223115.png"
          }
         ]
        ],
@@ -25354,11 +25354,11 @@
         [
          {
           "nome": "Kaenic Rookern",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222504.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222504.png"
          },
          {
           "nome": "Experimental Hexplate",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223073.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223073.png"
          }
         ]
        ],
@@ -25528,7 +25528,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -25541,7 +25541,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -25554,7 +25554,7 @@
         [
          {
           "nome": "Experimental Hexplate",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223073.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223073.png"
          }
         ]
        ],
@@ -25567,11 +25567,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Nashor's Tooth",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223115.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223115.png"
          }
         ]
        ],
@@ -25736,7 +25736,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -25749,7 +25749,7 @@
         [
          {
           "nome": "Mercury's Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
          }
         ]
        ],
@@ -25762,11 +25762,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -25949,7 +25949,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -25962,7 +25962,7 @@
         [
          {
           "nome": "Mercury Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
          }
         ]
        ],
@@ -25975,7 +25975,7 @@
         [
          {
           "nome": "Rylai's",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223116.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223116.png"
          }
         ]
        ],
@@ -26166,7 +26166,7 @@
         [
          {
           "nome": "Mercury Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
          }
         ]
        ],
@@ -26179,7 +26179,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -26192,11 +26192,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -26361,7 +26361,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -26374,7 +26374,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -26387,7 +26387,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -26585,7 +26585,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -26598,7 +26598,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -26611,7 +26611,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -26804,7 +26804,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -26817,7 +26817,7 @@
         [
          {
           "nome": "Mercury's Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
          }
         ]
        ],
@@ -26830,11 +26830,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -27021,7 +27021,7 @@
         [
          {
           "nome": "Negatron Cloak",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/1057.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1057.png"
          }
         ]
        ],
@@ -27034,7 +27034,7 @@
         [
          {
           "nome": "Oblivion Orb",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3916.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3916.png"
          }
         ]
        ],
@@ -27047,7 +27047,7 @@
         [
          {
           "nome": "Rylai's",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223116.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223116.png"
          }
         ]
        ],
@@ -27060,7 +27060,7 @@
         [
          {
           "nome": "Boots of Swiftness",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223009.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223009.png"
          }
         ]
        ],
@@ -27073,11 +27073,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -27242,7 +27242,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -27259,7 +27259,7 @@
         [
          {
           "nome": "Oblivion Orb",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3916.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3916.png"
          }
         ]
        ],
@@ -27272,7 +27272,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -27465,11 +27465,11 @@
         [
          {
           "nome": "Bramble Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3076.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3076.png"
          },
          {
           "nome": "Oblivion Orb",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3916.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3916.png"
          }
         ]
        ],
@@ -27482,7 +27482,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -27495,7 +27495,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -27697,7 +27697,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -27710,7 +27710,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -27723,7 +27723,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -27917,7 +27917,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -27930,7 +27930,7 @@
         [
          {
           "nome": "Mercury Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
          }
         ]
        ],
@@ -27943,7 +27943,7 @@
         [
          {
           "nome": "Rylai's",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223116.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223116.png"
          }
         ]
        ],
@@ -28131,7 +28131,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -28144,7 +28144,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -28157,7 +28157,7 @@
         [
          {
           "nome": "Oblivion Orb",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3916.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3916.png"
          }
         ]
        ],
@@ -28170,7 +28170,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -28337,7 +28337,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -28350,7 +28350,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -28363,7 +28363,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -28539,7 +28539,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -28552,7 +28552,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -28565,7 +28565,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -28729,7 +28729,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -28742,7 +28742,7 @@
         [
          {
           "nome": "Plated steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -28755,11 +28755,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -28971,7 +28971,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -28984,7 +28984,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -28997,7 +28997,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -29168,7 +29168,7 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          }
         ]
        ],
@@ -29185,7 +29185,7 @@
         [
          {
           "nome": "Oblivion Orb",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/3916.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3916.png"
          }
         ]
        ],
@@ -29198,7 +29198,7 @@
         [
          {
           "nome": "Liandry's",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/6653.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6653.png"
          }
         ]
        ],
@@ -29381,7 +29381,7 @@
         [
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -29394,7 +29394,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
          }
         ]
        ],
@@ -29407,7 +29407,7 @@
         [
          {
           "nome": "Experimental Hexplate",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223073.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223073.png"
          }
         ]
        ],
@@ -29420,7 +29420,7 @@
         [
          {
           "nome": "Zhonya's Hourglass",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223157.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223157.png"
          }
         ]
        ],
@@ -29600,7 +29600,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -29613,7 +29613,7 @@
         [
          {
           "nome": "Mercury Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
          }
         ]
        ],
@@ -29626,7 +29626,7 @@
         [
          {
           "nome": "Rylai's",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223116.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223116.png"
          }
         ]
        ],
@@ -29819,7 +29819,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -29832,7 +29832,7 @@
         [
          {
           "nome": "Mercury's Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
          }
         ]
        ],
@@ -29845,11 +29845,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -30020,7 +30020,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -30033,7 +30033,7 @@
         [
          {
           "nome": "Mercury's Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
          }
         ]
        ],
@@ -30046,11 +30046,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],
@@ -30221,7 +30221,7 @@
         [
          {
           "nome": "Rocketbelt",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223152.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223152.png"
          }
         ]
        ],
@@ -30234,7 +30234,7 @@
         [
          {
           "nome": "Mercury's Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
          }
         ]
        ],
@@ -30247,11 +30247,11 @@
         [
          {
           "nome": "Riftmaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/224633.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/224633.png"
          },
          {
           "nome": "Dusk & Dawn",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/222510.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222510.png"
          }
         ]
        ],

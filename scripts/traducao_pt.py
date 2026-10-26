@@ -22,7 +22,8 @@ import urllib.request
 
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
 GUIAS = RAIZ / "src" / "guias"
-VER = re.search(r'VER = "([\d.]+)"', (RAIZ / "src" / "template.html").read_text(encoding="utf-8")).group(1)
+sys.path.insert(0, str(RAIZ / "scripts"))
+from versao_dd import VER  # noqa: E402
 DD = "https://ddragon.leagueoflegends.com/cdn/"
 # Chaves que não são texto para traduzir (endereços, ícones, ids) e os campos do campeão da matchup.
 PULA = {"url", "icone", "id", "src", "versao", "fonte", "chave", "largura", "altura", "tipo"}

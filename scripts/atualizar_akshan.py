@@ -18,7 +18,7 @@ from icones_planilha import icones_da_planilha
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 PASTA = ROOT / "src" / "guias" / "akshan"
 GUIA = next(g for g in json.loads((ROOT / "src" / "guias.json").read_text(encoding="utf-8")) if g["id"] == "akshan")
-VER = "16.20.1"
+from versao_dd import VER  # noqa: E402  (src/versao_dd.txt)
 
 
 def baixar(url, binario=False):

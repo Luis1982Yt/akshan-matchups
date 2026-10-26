@@ -65,7 +65,7 @@ def guia_completo(cfg, pasta):
 
 
 template = (SRC / "template.html").read_text(encoding="utf-8")
-for marker in ("/*GUIAS*/", "/*FONTS*/", "/*IDS*/", "/*ICONE*/", "/*ICONE_APPLE*/", "/*TITULO_OG*/"):
+for marker in ("/*GUIAS*/", "/*FONTS*/", "/*IDS*/", "/*ICONE*/", "/*ICONE_APPLE*/", "/*TITULO_OG*/", "/*VER_DD*/"):
     if template.count(marker) != 1:
         raise SystemExit(f"O template precisa ter exatamente um {marker}")
 
@@ -114,7 +114,8 @@ descricao = ("Guias de matchup de League of Legends com as notas de quem joga: "
              + em_lista([f"{g['campeao']['nome']} {(g.get('rota') or '').lower()} ({g['autor']})" for g in guias])
              + ". Runas, build, cooldowns e como jogar cada confronto, em português e inglês.")
 titulo_og = "Guias de matchup · " + em_lista([g["campeao"]["nome"] for g in guias])
-template = template.replace("/*DESCRICAO*/", html_lib.escape(descricao)).replace("/*TITULO_OG*/", html_lib.escape(titulo_og))
+template = template.replace("/*DESCRICAO*/", html_lib.escape(descricao)).replace("/*TITULO_OG*/", html_lib.escape(titulo_og)).replace(
+    "/*VER_DD*/", (SRC / "versao_dd.txt").read_text(encoding="utf-8").strip())
 
 html = template.replace("/*ICONE*/", icone("icone-64.png")).replace("/*ICONE_APPLE*/", icone("apple-180.png")).replace("/*IDS*/", json.dumps([g["id"] for g in guias])).replace("/*FONTS*/", font_faces()).replace(
     "/*GUIAS*/", json.dumps(guias, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")

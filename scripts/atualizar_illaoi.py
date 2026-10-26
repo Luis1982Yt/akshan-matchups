@@ -19,7 +19,7 @@ DEST = ROOT / "src" / "guias" / "illaoi"
 IMAGENS = ROOT / "imagens" / "illaoi"  # publicadas junto com o site (ver .vercelignore)
 PLANILHA = "1EuXpzDMShjT4s3NSScWqnzUxiqccPv-3kHufHNCEkTA"
 ABAS = {"geral": 1789019044, "matchups": 0, "itens": 1905273951, "runas": 88247813, "dicas": 200779566}
-VER = "16.20.1"
+from versao_dd import VER  # noqa: E402  (src/versao_dd.txt)
 DD = f"https://ddragon.leagueoflegends.com/cdn/{VER}"
 
 # Como o Hachiragi escreve os itens e runas -> nome no Data Dragon.

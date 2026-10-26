@@ -15,7 +15,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 DEST = ROOT / "src" / "guias" / "mordekaiser"
 PLANILHA = "1BVH44IPxZNBQshDf90XZRJbfKvavVCUIIo_boyBVF8o"
 ABA_MATCHUPS = "1560260169"
-VER = "16.20.1"
+from versao_dd import VER  # noqa: E402  (src/versao_dd.txt)
 DD = f"https://ddragon.leagueoflegends.com/cdn/{VER}"
 
 # Nomes da planilha que não batem direto com o Data Dragon.

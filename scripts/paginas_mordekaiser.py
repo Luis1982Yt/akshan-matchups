@@ -17,7 +17,7 @@ DEST = ROOT / "src" / "guias" / "mordekaiser"
 PLANILHA = "1BVH44IPxZNBQshDf90XZRJbfKvavVCUIIo_boyBVF8o"
 ABAS = {"sobre": 848078357, "itens": 1054535084, "runas": 779082056, "setups": 2121273139, "criadores": 225968364}
 DDI = "https://ddragon.leagueoflegends.com/cdn/img/"
-VER = "16.20.1"
+from versao_dd import VER  # noqa: E402  (src/versao_dd.txt)
 
 
 def baixar(url):

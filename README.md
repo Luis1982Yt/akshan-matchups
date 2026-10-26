@@ -43,6 +43,7 @@ Um guia pode ser escondido com `"oculto": true` em `src/guias.json` (os dados co
 - `og.jpg` e `scripts/og.py`: a imagem da prévia quando o link é compartilhado (WhatsApp, Discord, X). Rode `python scripts/og.py` se mudar a arte ou o número de matchups.
 - `src/icone/`: ícone da aba (`icone-64.png`) e da tela inicial do celular (`apple-180.png`), também embutidos pelo build; `original.webp` é a arte de origem.
 - `scripts/build.py`: gera o `index.html`. Rode `python scripts/build.py` depois de qualquer mudança.
+- `src/versao_dd.txt` e `scripts/versao_dd.py`: a versão do Data Dragon (patch do LoL) de ícones, nomes e cooldowns, a mesma para o site e para os scripts. O workflow diário troca para o patch mais novo sozinho; à mão, `python scripts/versao_dd.py` e depois os `atualizar_*.py`.
 - `sons/`: sons do cliente do LoL (seleção de campeões) e a fala de escolha de cada campeão de guia, carregados só quando tocam. `scripts/baixar_sons.py` baixa de novo do CommunityDragon (rode quando entrar um guia novo). O botão de som no topo desliga tudo.
 - `scripts/atualizar_mordekaiser.py` e `scripts/atualizar_illaoi.py`: baixam de novo a planilha de cada guia e os dados do Data Dragon e refazem o `matchups.json` e o `paginas.json` (precisa de internet). Depois rode `scripts/traducao_pt.py` e o build. O workflow diário roda tudo isso.
 - `PRODUCT.md` e `DESIGN.md`: o que o produto é e o sistema visual.
