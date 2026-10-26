@@ -1772,7 +1772,7 @@ $("menuLista").addEventListener("click", e => {
   const b = e.target.closest("[data-guia]");
   if (!b) return;
   abreMenu(false);
-  if (b.dataset.guia !== guia.id) { escolheGuia(b.dataset.guia); scrollTo({ top: 0 }); }
+  if (b.dataset.guia !== guia.id) { escolheGuia(b.dataset.guia); atualiza3d(); scrollTo({ top: 0 }); }
   $("trocar").focus();
 });
 document.addEventListener("click", e => { if (!$("menuGuias").hidden && !e.target.closest(".guias")) abreMenu(false); });
@@ -1910,7 +1910,8 @@ function lerHash() {
 }
 addEventListener("hashchange", () => {
   const [g, i] = lerHash();
-  if (g !== guia.id) return escolheGuia(g, i);
+  // Trocar de guia liga ou desliga o Akshan 3D (antes ele só carregava se o site abrisse no Akshan).
+  if (g !== guia.id) { escolheGuia(g, i); return atualiza3d(); }
   if (i && i[0] === "@") return mostraPagina(i.slice(1));
   if (paginaAtual) mostraPagina("");
   if (i !== current.slug) select(guia.lista.find(c => c.slug === i));
