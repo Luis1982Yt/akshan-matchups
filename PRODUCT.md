@@ -12,13 +12,13 @@ Site estático sem dependências: `src/template.html` (HTML, CSS e JS num arquiv
 
 ## Users
 
-Jogadores de League of Legends em português do Brasil que jogam com o campeão de um dos guias (hoje Akshan mid, a prioridade; o Mordekaiser está pronto mas escondido). O site também tem versão em inglês. Usam em dois momentos que importam igual:
+Jogadores de League of Legends em português do Brasil que jogam com o campeão de um dos guias (hoje Akshan mid, a prioridade, Mordekaiser top e Illaoi top). O site também tem versão em inglês. Usam em dois momentos que importam igual:
 - na seleção de campeões, no celular, nos segundos antes do jogo: bater o olho em runa, secundária, feitiço, bota, build e no lembrete do matchup;
 - fora da partida, estudando com calma: ler os lembretes inteiros e comparar matchups.
 
 ## Product Purpose
 
-Transformar planilhas de matchup de jogadores numa consulta rápida e agradável de ler, uma por campeão: "Akshan Matchups - Peteruso" (48 matchups) e a planilha de matchups do Meowdekaiser para Mordekaiser (139 matchups). Novos campeões entram como novos guias, sem perder o acesso rápido ao guia de sempre. Sucesso: achar o adversário em segundos e sair sabendo o que levar e como jogar a lane.
+Transformar planilhas de matchup de jogadores numa consulta rápida e agradável de ler, uma por campeão: "Akshan Matchups - Peteruso" (48 matchups), a planilha de matchups do Meowdekaiser para Mordekaiser (139 matchups) e a do Hachiragi para Illaoi (57 matchups). Novos campeões entram como novos guias, sem perder o acesso rápido ao guia de sempre. Sucesso: achar o adversário em segundos e sair sabendo o que levar e como jogar a lane.
 
 ## Positioning
 
@@ -28,7 +28,7 @@ Não é um agregador de estatísticas: é a leitura das notas de um jogador de c
 
 - Projeto de fã do dono do site, usando as notas públicas das planilhas do Peteruso e do Meowdekaiser. Cada autor aparece como fonte (com os links públicos dele), sem o site parecer oficial deles.
 - Interface em português ou inglês (botão PT/EN). As notas do Akshan em inglês são uma tradução mantida à parte; o texto original da planilha nunca muda, e linha sem tradução aparece em português.
-- A planilha do Meowdekaiser é em inglês e o texto fica em inglês. Por enquanto entra só a aba de matchups; os outros guias da planilha ficam para depois.
+- As planilhas do Meowdekaiser e do Hachiragi são em inglês: o modo EN mostra o original e o modo PT mostra uma tradução mantida à parte (`traducao_pt.json`), com itens e runas pelo nome do cliente em português. As outras abas dessas planilhas entram como páginas do guia.
 - Imagens de campeões, runas, feitiços e itens vêm do Data Dragon da Riot.
 - Akshan: cada matchup tem runa principal, secundária, feitiço, bota, build (com os ícones exatos colados na planilha), lembrete (itens separados por quebra de linha) e a dificuldade, que é a cor da célula do campeão na planilha (classificação do Peteruso: vermelho escuro muito difícil, vermelho claro difícil, amarelo médio, verde fácil, ciano muito fácil). A marca "no guia" saiu do site a pedido do dono.
 - Mordekaiser: cada matchup tem runas, itens (com builds condicionais), dificuldade early/mid/late/geral de 1 a 5, às vezes um TL;DR, e as seções Enemy Cooldowns, Early Game, How to trade, What to watch out for e Tips.

@@ -1,5 +1,6 @@
 """Gera o index.html juntando src/template.html, os guias de src/guias.json e as fontes de src/fonts."""
 import base64
+import html as html_lib
 import json
 import pathlib
 import re
@@ -64,7 +65,7 @@ def guia_completo(cfg, pasta):
 
 
 template = (SRC / "template.html").read_text(encoding="utf-8")
-for marker in ("/*GUIAS*/", "/*FONTS*/", "/*IDS*/", "/*ICONE*/", "/*ICONE_APPLE*/"):
+for marker in ("/*GUIAS*/", "/*FONTS*/", "/*IDS*/", "/*ICONE*/", "/*ICONE_APPLE*/", "/*TITULO_OG*/"):
     if template.count(marker) != 1:
         raise SystemExit(f"O template precisa ter exatamente um {marker}")
 
@@ -103,6 +104,17 @@ def matchups_app(g):
 app = {"guias": [{"id": g["id"], "campeao": g["campeao"]["nome"], "chave": g.get("chave"), "rota": ROTA_LCU.get((g.get("rota") or "").lower()),
                   "matchups": matchups_app(g)} for g in guias]}
 (ROOT / "guias-app.json").write_text(json.dumps(app, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8", newline="\n")
+
+# Descrição para buscadores e para a prévia do link (WhatsApp, Discord, X), com todos os guias publicados.
+def em_lista(itens):
+    return itens[0] if len(itens) == 1 else ", ".join(itens[:-1]) + " e " + itens[-1]
+
+
+descricao = ("Guias de matchup de League of Legends com as notas de quem joga: "
+             + em_lista([f"{g['campeao']['nome']} {(g.get('rota') or '').lower()} ({g['autor']})" for g in guias])
+             + ". Runas, build, cooldowns e como jogar cada confronto, em português e inglês.")
+titulo_og = "Guias de matchup · " + em_lista([g["campeao"]["nome"] for g in guias])
+template = template.replace("/*DESCRICAO*/", html_lib.escape(descricao)).replace("/*TITULO_OG*/", html_lib.escape(titulo_og))
 
 html = template.replace("/*ICONE*/", icone("icone-64.png")).replace("/*ICONE_APPLE*/", icone("apple-180.png")).replace("/*IDS*/", json.dumps([g["id"] for g in guias])).replace("/*FONTS*/", font_faces()).replace(
     "/*GUIAS*/", json.dumps(guias, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")

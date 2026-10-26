@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Guias de matchup</title>
-<meta name="description" content="Guia de matchups do Akshan mid com as notas do Peteruso: runa, secundária, feitiço, bota, build e o lembrete de cada confronto.">
+<meta name="description" content="Guias de matchup de League of Legends com as notas de quem joga: Akshan mid (Peteruso), Mordekaiser top (Meowdekaiser) e Illaoi top (Hachiragi). Runas, build, cooldowns e como jogar cada confronto, em português e inglês.">
 <meta name="theme-color" content="#0e0d0b">
 <!-- Prévia do link (WhatsApp, Discord, X): a imagem precisa de endereço completo. -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Akshan Matchups">
-<meta property="og:title" content="Akshan · Guia de matchups">
-<meta property="og:description" content="Guia de matchups do Akshan mid com as notas do Peteruso: runa, secundária, feitiço, bota, build e o lembrete de cada confronto.">
+<meta property="og:title" content="Guias de matchup · Akshan, Mordekaiser e Illaoi">
+<meta property="og:description" content="Guias de matchup de League of Legends com as notas de quem joga: Akshan mid (Peteruso), Mordekaiser top (Meowdekaiser) e Illaoi top (Hachiragi). Runas, build, cooldowns e como jogar cada confronto, em português e inglês.">
 <meta property="og:url" content="https://akshan-matchups.vercel.app/">
 <meta property="og:image" content="https://akshan-matchups.vercel.app/og.jpg">
 <meta property="og:image:width" content="1200">
@@ -1321,8 +1321,9 @@ function renderGuia() {
   $("vocTitulo").textContent = tituloDe(eu);
   $("filtros").innerHTML = filtros.map(f => `<button class="chip" type="button" data-f="${f.id}" aria-pressed="${ativos.has(f.id)}">${f.icone ? `<img src="${f.icone}" alt="" width="20" height="20">` : ""}${f.cor ? `<i class="cor-dif" style="--dif: var(--dif-${f.cor})" aria-hidden="true"></i>` : ""}${esc(f.cor ? rotuloDif(f.cor) : f.chave ? t(f.chave) : f.rotulo)}</button>`).join("");
   $("nt").textContent = t(guia.formato === "simples" ? "lembrete" : "comoJogar");
-  const marcas = guia.formato === "simples" ? "" : t("legDif") + " · ";
-  $("legenda").innerHTML = `${marcas}<span class="atalhos"><kbd>/</kbd> ${t("legBusca")} · <kbd>←</kbd> <kbd>→</kbd> <kbd>↑</kbd> <kbd>↓</kbd> ${t("legTroca")}</span>`;
+  // O separador fica junto dos atalhos: no celular eles somem e não sobra um "·" solto.
+  const marcas = guia.formato === "simples" ? "" : t("legDif");
+  $("legenda").innerHTML = `${marcas}<span class="atalhos">${marcas ? " · " : ""}<kbd>/</kbd> ${t("legBusca")} · <kbd>←</kbd> <kbd>→</kbd> <kbd>↑</kbd> <kbd>↓</kbd> ${t("legTroca")}</span>`;
   const links = guia.links.map(l => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc((L === "en" && l.rotulo_en) || l.rotulo)}</a>`).join(" · ");
   const ac = guia.acompanhe || [];
   $("acompanhe").hidden = !ac.length;

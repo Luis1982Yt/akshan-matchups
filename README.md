@@ -4,13 +4,17 @@ Site de fã com guias de matchup de vários campeões, cada um feito a partir da
 
 Guias atuais:
 - **Akshan mid**: 48 matchups da planilha "Akshan Matchups - Peteruso", lida ao vivo no site publicado.
-- **Mordekaiser** (escondido por enquanto, com `"oculto": true` em `src/guias.json`): 139 matchups da planilha do Meowdekaiser. Os dados continuam no repositório; é só tirar o `oculto` para voltar.
+- **Mordekaiser top**: 139 matchups da planilha do Meowdekaiser, mais as outras abas dela (sobre, itens, runas, setups, criadores) como páginas do guia.
+- **Illaoi top**: 57 matchups da planilha do Hachiragi, mais as páginas geral, itens, runas e dicas.
+
+Um guia pode ser escondido com `"oculto": true` em `src/guias.json` (os dados continuam no repositório).
 
 ## Português e inglês
 
 - O botão PT/EN no topo troca a língua do site inteiro e fica salvo no navegador. Na primeira visita vale a língua do navegador.
 - As notas do Akshan em inglês ficam em `src/guias/akshan/traducao_en.json` (`linhas`: cada linha da planilha → tradução; `celulas`: nomes de runas e itens das colunas de setup).
 - Quando o Peteruso muda uma linha, ela aparece em português no modo EN até ganhar tradução. `python scripts/atualizar_akshan.py` lista essas linhas.
+- Os guias escritos em inglês (Mordekaiser, Illaoi) têm o caminho inverso em `src/guias/<guia>/traducao_pt.json`: `textos` (cada frase da planilha → português, inclusive cooldowns e páginas), `nomes` (ícone → nome do item ou runa no cliente em português) e `titulos_en` (título de cada campeão em inglês). `python scripts/traducao_pt.py` atualiza os nomes e os títulos e diz quantas frases estão sem tradução; com `--faltando` lista quais. Frase nova aparece em inglês no modo PT até ganhar tradução.
 
 ## Como navegar
 
@@ -40,7 +44,7 @@ Guias atuais:
 - `src/icone/`: ícone da aba (`icone-64.png`) e da tela inicial do celular (`apple-180.png`), também embutidos pelo build; `original.webp` é a arte de origem.
 - `scripts/build.py`: gera o `index.html`. Rode `python scripts/build.py` depois de qualquer mudança.
 - `sons/`: sons do cliente do LoL (seleção de campeões) e a fala de escolha de cada campeão de guia, carregados só quando tocam. `scripts/baixar_sons.py` baixa de novo do CommunityDragon (rode quando entrar um guia novo). O botão de som no topo desliga tudo.
-- `scripts/atualizar_mordekaiser.py`: baixa de novo a planilha do Meowdekaiser e os dados do Data Dragon e refaz o `matchups.json` (precisa de internet). Depois rode o build.
+- `scripts/atualizar_mordekaiser.py` e `scripts/atualizar_illaoi.py`: baixam de novo a planilha de cada guia e os dados do Data Dragon e refazem o `matchups.json` e o `paginas.json` (precisa de internet). Depois rode `scripts/traducao_pt.py` e o build. O workflow diário roda tudo isso.
 - `PRODUCT.md` e `DESIGN.md`: o que o produto é e o sistema visual.
 
 ## App da seleção de campeões (Windows)

@@ -1,7 +1,7 @@
 {
-  "name": "Akshan · Guia de matchups",
-  "short_name": "Akshan",
-  "description": "Guia de matchups do Akshan mid com as notas do Peteruso.",
+  "name": "Guias de matchup",
+  "short_name": "Matchups",
+  "description": "Guias de matchup de LoL: Akshan, Mordekaiser e Illaoi, com as notas de quem joga.",
   "lang": "pt-BR",
   "start_url": "/",
   "scope": "/",
