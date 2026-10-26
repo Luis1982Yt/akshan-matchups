@@ -27,7 +27,8 @@ SITE = "https://akshan-matchups.vercel.app/"
 AKSHAN = 166
 INTERVALO_POLL = 1.5        # segundos entre leituras na seleção
 INTERVALO_SEM_CLIENTE = 4   # segundos entre tentativas de achar o cliente
-INTERVALO_MIN_ABRIR = 5     # segundos mínimos entre duas aberturas do navegador
+INTERVALO_MIN_ABRIR = 5     # segundos mínimos entre duas trocas automáticas de matchup
+JANELA_LARGURA, JANELA_ALTURA = 460, 900  # janela lateral estreita: o site mostra o formato compacto
 
 URL_DADOS = "https://raw.githubusercontent.com/Luis1982Yt/akshan-matchups/main/src/guias/akshan/"
 URL_VERSOES = "https://ddragon.leagueoflegends.com/api/versions.json"
@@ -51,7 +52,9 @@ TXT = {
         "outro": "Na seleção (sem Akshan)",
         "akshan": "Na seleção de Akshan",
         "alvo": "Matchup aberta: {c}",
-        "abrir_site": "Abrir o site",
+        "abrir_site": "Abrir a janela",
+        "navegador": "Abrir no navegador",
+        "por_cima": "Sempre por cima",
         "inimigos": "Inimigos agora",
         "nenhum": "Nenhum inimigo escolhido ainda",
         "sem_guia": "{c} (sem guia)",
@@ -64,7 +67,9 @@ TXT = {
         "outro": "In champ select (not Akshan)",
         "akshan": "In champ select as Akshan",
         "alvo": "Matchup open: {c}",
-        "abrir_site": "Open the site",
+        "abrir_site": "Open the window",
+        "navegador": "Open in the browser",
+        "por_cima": "Always on top",
         "inimigos": "Current enemies",
         "nenhum": "No enemy picked yet",
         "sem_guia": "{c} (no guide)",
@@ -388,6 +393,78 @@ def inicia_com_windows(ligar):
                 pass
 
 
+# ---------- Janela própria: o site dentro do app (WebView2 do Windows, via pywebview) ----------
+
+class Janela:
+    """Uma janela só, criada escondida; abrir uma matchup troca o endereço dentro dela e traz para a frente.
+    Fechar no X esconde (o app continua na bandeja); só "Sair" fecha de verdade."""
+
+    def __init__(self, cfg, salva):
+        self.cfg, self.salva = cfg, salva
+        self.w = None
+        self.saindo = False
+        self.pronta = threading.Event()
+
+    def cria(self, webview):
+        x, y = self.cfg.get("janela_x"), self.cfg.get("janela_y")
+        if x is None:
+            try:  # primeira vez: encostada na direita da tela principal
+                tela = webview.screens[0]
+                x, y = max(0, tela.width - JANELA_LARGURA - 24), max(0, (tela.height - JANELA_ALTURA) // 2)
+            except Exception:
+                x = y = None
+        self.w = webview.create_window(
+            NOME_APP, SITE, width=self.cfg.get("janela_l", JANELA_LARGURA), height=self.cfg.get("janela_a", JANELA_ALTURA),
+            x=x, y=y, min_size=(360, 560), hidden=True, on_top=bool(self.cfg.get("por_cima")), background_color="#0c0b09")
+        self.w.events.closing += self._fechando
+        self.w.events.loaded += lambda: self.pronta.set()
+
+    def _guarda_tamanho(self):
+        try:
+            self.cfg.update(janela_l=self.w.width, janela_a=self.w.height, janela_x=self.w.x, janela_y=self.w.y)
+            self.salva(self.cfg)
+        except Exception:
+            pass
+
+    def _fechando(self):
+        if self.saindo:
+            return True
+        self._guarda_tamanho()
+        threading.Thread(target=self.w.hide, daemon=True).start()
+        return False  # cancela o fechamento: só esconde
+
+    def mostra(self, url=None):
+        if not self.w:
+            return
+        if url:
+            alvo = url.split("#", 1)[1] if "#" in url else ""
+            try:
+                atual = self.w.get_current_url() or ""
+            except Exception:
+                atual = ""
+            if atual.startswith(SITE) and self.pronta.is_set():
+                # Já está no site: troca só o #, sem recarregar (o site escuta a mudança).
+                self.w.evaluate_js(f"location.hash = {json.dumps('#' + alvo)}")
+            else:
+                self.w.load_url(url)
+        self.w.show()
+        self.w.restore()
+        if not self.cfg.get("por_cima"):
+            # Traz para a frente sem deixar fixo por cima.
+            self.w.on_top = True
+            self.w.on_top = False
+
+    def por_cima(self, ligar):
+        if self.w:
+            self.w.on_top = ligar
+
+    def fecha(self):
+        self.saindo = True
+        if self.w:
+            self._guarda_tamanho()
+            self.w.destroy()
+
+
 # ---------- Bandeja ----------
 
 def uma_instancia():
@@ -400,6 +477,7 @@ def main():
     logging.basicConfig(filename=os.path.join(PASTA_CONFIG, "log.txt"), filemode="w", encoding="utf-8", level=logging.INFO,
                         format="%(asctime)s %(levelname)s %(message)s")
     import pystray
+    import webview
     from PIL import Image
 
     if "--testar" in sys.argv:
@@ -407,6 +485,29 @@ def main():
         d = Dados(carrega_guia(), carrega_ids(), carrega_taxas())
         log.info("teste: %d no guia, %d campeões, %d taxas, sessão: %s, ícone: %s", len(d.guia), len(d.ids),
                  len(d.taxas), Lcu().sessao()[0], os.path.exists(os.path.join(pasta_recursos(), "icone-64.png")))
+        return
+    if "--testar-janela" in sys.argv:
+        # Confere a janela própria no .exe: abre numa matchup, troca de matchup e fecha sozinho (sem bandeja nem registro).
+        jt = Janela({}, lambda c: None)
+
+        def roteiro():
+            try:
+                log.info("teste janela: começou")
+                time.sleep(2)
+                jt.mostra(url_matchup("ahri"))
+                log.info("teste janela: mostrou ahri")
+                time.sleep(6)
+                jt.mostra(url_matchup("zoe"))
+                log.info("teste janela: trocou para zoe")
+                time.sleep(3)
+                log.info("teste janela: %s | %s", jt.w.get_current_url(), jt.w.evaluate_js("document.title"))
+            except Exception:
+                log.exception("teste janela falhou")
+            finally:
+                jt.fecha()
+        jt.cria(webview)
+        webview.start(lambda: threading.Thread(target=roteiro, daemon=True).start(), private_mode=False,
+                      storage_path=os.path.join(PASTA_CONFIG, "janela-teste"), gui="edgechromium")
         return
     if not uma_instancia():
         return
@@ -424,7 +525,8 @@ def main():
     lcu = Lcu()
     dados = Dados([], {}, {})
     icone = None
-    monitor = Monitor(dados, lcu.sessao, ao_mudar=lambda: icone and icone.update_menu())
+    janela = Janela(cfg, salva_config)
+    monitor = Monitor(dados, lcu.sessao, abre=janela.mostra, ao_mudar=lambda: icone and icone.update_menu())
 
     def carrega():
         guia = com_cache("guia", carrega_guia)
@@ -467,17 +569,25 @@ def main():
         except OSError as e:
             log.warning("registro: %s", e)
 
+    def alterna_por_cima(_icone, _item):
+        cfg["por_cima"] = not cfg.get("por_cima")
+        salva_config(cfg)
+        janela.por_cima(cfg["por_cima"])
+
     def sair(icone_, _item):
         parar.set()
         icone_.stop()
+        janela.fecha()
 
     menu = pystray.Menu(
         pystray.MenuItem(texto_estado, None, enabled=False),
         pystray.MenuItem(texto_alvo, None, enabled=False, visible=lambda _: bool(monitor.alvo)),
         pystray.Menu.SEPARATOR,
-        pystray.MenuItem(T["abrir_site"], lambda: webbrowser.open(url_matchup(monitor.alvo) if monitor.alvo else SITE), default=True),
+        pystray.MenuItem(T["abrir_site"], lambda: janela.mostra(url_matchup(monitor.alvo) if monitor.alvo else None), default=True),
         pystray.MenuItem(T["inimigos"], pystray.Menu(itens_inimigos)),
+        pystray.MenuItem(T["navegador"], lambda: webbrowser.open(url_matchup(monitor.alvo) if monitor.alvo else SITE)),
         pystray.Menu.SEPARATOR,
+        pystray.MenuItem(T["por_cima"], alterna_por_cima, checked=lambda _: bool(cfg.get("por_cima"))),
         pystray.MenuItem(T["iniciar"], alterna_iniciar, checked=lambda _: cfg["iniciar"]),
         pystray.MenuItem(T["sair"], sair),
     )
@@ -485,8 +595,11 @@ def main():
         else Image.open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "src", "icone", "icone-64.png"))
     icone = pystray.Icon("akshan-matchups", imagem, NOME_APP, menu)
     parar = threading.Event()
-    threading.Thread(target=laco, daemon=True).start()
-    icone.run()
+    threading.Thread(target=icone.run, daemon=True).start()
+    # Guarda skin, tema, língua etc. do site entre uma abertura e outra (o padrão do pywebview é modo anônimo).
+    janela.cria(webview)
+    webview.start(lambda: threading.Thread(target=laco, daemon=True).start(), private_mode=False,
+                  storage_path=os.path.join(PASTA_CONFIG, "janela"), gui="edgechromium")
 
 
 if __name__ == "__main__":

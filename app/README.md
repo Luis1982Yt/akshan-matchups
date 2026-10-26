@@ -1,6 +1,8 @@
 # App da seleção de campeões (Windows)
 
-Programa de bandeja que acompanha a seleção de campeões do LoL. Quando você está de Akshan (escolhido ou só marcado), ele abre o site direto na matchup contra o mid inimigo mais provável.
+Programa de bandeja que acompanha a seleção de campeões do LoL. Quando você está de Akshan (escolhido ou só marcado), ele mostra o guia numa janela própria, direto na matchup contra o mid inimigo mais provável.
+
+**Janela própria (v2):** o site roda dentro do app pelo WebView2 do Windows (pywebview), numa janela lateral estreita (460×900, encostada na direita na primeira vez; tamanho e posição ficam salvos). Trocar de matchup muda só o `#` do endereço, sem recarregar. Fechar no X esconde a janela; "Sair" no menu fecha o app. "Sempre por cima" no menu fixa a janela na frente do cliente. Skin, tema e língua do site ficam salvos em `%APPDATA%\AkshanMatchups\janela`. "Abrir no navegador" continua no menu. `AkshanMatchups.exe --testar-janela` abre a janela numa matchup, troca e fecha sozinho (anota no `log.txt`).
 
 ## Como funciona
 
