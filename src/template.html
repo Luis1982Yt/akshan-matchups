@@ -1154,8 +1154,12 @@ function textoDe(m, g) {
   const partes = [m.nome, m.planilha, ...m.tldr];
   m.itens.forEach(gr => { partes.push(gr.rotulo); gr.linhas.forEach(l => partes.push(l.texto || "", l.motivo || "")); });
   m.secoes.forEach(s => { partes.push(s.titulo); s.blocos.forEach(b => partes.push(...(b.itens || (b.linhas ? b.linhas.flat() : [b.texto])))); });
-  // A busca acha pela frase original e pela tradução em português.
+  // Runas e itens entram pelo nome (busca "conqueror", "bramble"...).
+  const pecas = [...m.runas.flat().flatMap(l => l.pecas || []), ...m.itens.flatMap(gr => gr.linhas.flatMap(l => (l.passos || []).flat()))];
+  pecas.forEach(p => partes.push(p.nome));
+  // A busca acha pela frase original e pela tradução em português (inclusive o nome em PT de cada item e runa).
   const pt = g.traducao_pt ? partes.map(p => g.traducao_pt.textos[p] || "") : [];
+  if (g.traducao_pt) pecas.forEach(p => pt.push(g.traducao_pt.nomes[p.icone] || ""));
   return [...partes, ...pt].join(" ");
 }
 
