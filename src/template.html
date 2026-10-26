@@ -2350,15 +2350,20 @@ async function iniciaAkshan3d() {
     };
     chroma3d();
     m.rotation.y = cf.giro ?? -.35;  // de leve virado para o conteúdo, à esquerda
+    // Partes que aparecem e somem durante um clipe (guitarra do Mordekaiser na dança): eventos do jogo,
+    // guardados no .glb por scripts/modelo3d (nós "parte:Nome" e gltf.scene.userData.eventos).
+    const partes = [], eventos = gltf.scene.userData.eventos || {};
+    m.traverse(o => { if (o.userData && o.userData.parte) { partes.push({ obj: o, nome: o.userData.parte.toLowerCase(), inicial: !!o.userData.inicial }); o.visible = !!o.userData.inicial; } });
     cena.add(m);
     // Caixa do modelo: a da pose de montagem (Akshan) ou a da pose de idle, para quem guarda partes longe
     // do corpo na montagem (os tentáculos da Illaoi ficam metros para trás).
     const caixa = (() => {
-      if (!cf.caixaPose) return new THREE.Box3().setFromObject(m);
+      // Só o que está à mostra (a guitarra escondida não conta).
+      const caixaVisivel = precisa => { const b = new THREE.Box3(); m.updateMatrixWorld(true); m.traverse(o => { if (o.isMesh && o.visible) b.expandByObject(o, precisa); }); return b; };
+      if (!cf.caixaPose) return caixaVisivel(false);
       const mx = new THREE.AnimationMixer(m), ini = gltf.animations.find(a => a.name === "idle");
       if (ini) { mx.clipAction(ini).play(); mx.update(.01); }
-      m.updateMatrixWorld(true);
-      const b = new THREE.Box3().setFromObject(m, true);
+      const b = caixaVisivel(true);
       b.min.y = Math.max(b.min.y, 0);  // o que passa do chão (tentáculo) não conta
       mx.stopAllAction(); mx.uncacheRoot(m);
       return b;
@@ -2441,7 +2446,18 @@ async function iniciaAkshan3d() {
     const quadro = () => {
       if (fim.signal.aborted) return;
       const dt = relogio.getDelta();
-      if (!document.hidden && visivel && box.offsetParent) { mixer.update(Math.min(dt, .1)); r.render(cena, cam); }
+      if (!document.hidden && visivel && box.offsetParent) {
+        mixer.update(Math.min(dt, .1));
+        if (partes.length) {
+          const evs = eventos[atual.getClip().name] || [], tm = atual.time;
+          partes.forEach(pt => {
+            let v = pt.inicial;
+            evs.forEach(e => { if (tm >= e.ini && (e.fim == null || tm < e.fim)) { if (e.mostra.some(n => n.toLowerCase() === pt.nome)) v = true; if (e.esconde.some(n => n.toLowerCase() === pt.nome)) v = false; } });
+            pt.obj.visible = v;
+          });
+        }
+        r.render(cena, cam);
+      }
       requestAnimationFrame(quadro);
     };
     mixer.update(0);

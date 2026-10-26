@@ -37,6 +37,12 @@ if len(sys.argv) > 3:
     ESCONDER = set(_cfg["esconder"])
     TEXTURA = _cfg["submesh_textura"]
     ANIMACOES = [tuple(a) for a in _cfg["animacoes"]]
+    EVENTOS = _cfg.get("eventos", {})
+else:
+    EVENTOS = {}
+# Partes citadas nos eventos dos clipes usados: entram no arquivo como nós próprios ("parte:Nome"), para o
+# site mostrar e esconder na hora certa. As que só aparecem por evento começam escondidas.
+ALTERNA = {n for evs in EVENTOS.values() for e in evs for n in e["mostra"] + e["esconde"]}
 TOL_POS, TOL_ROT, TOL_ESC = 0.02, 0.0004, 0.001  # erro aceito ao tirar quadros (unidades do jogo, 1-|dot|, escala)
 
 
@@ -290,7 +296,8 @@ def main():
     W = v["w"].astype("<f4"); W /= np.maximum(W.sum(axis=1, keepdims=True), 1e-8)
     # Só os vértices das submalhas visíveis: as escondidas (árvore do recall etc.) não pesam nem
     # entram na caixa do modelo, que o site usa para enquadrar o Akshan.
-    visiveis = [sm for sm in subs if sm["nome"] not in ESCONDER]
+    alterna = {sm["nome"] for sm in subs if sm["nome"].lower() in {x.lower() for x in ALTERNA}}
+    visiveis = [sm for sm in subs if sm["nome"] not in ESCONDER or sm["nome"] in alterna]
     usados = np.unique(np.concatenate([idx[sm["is"]:sm["is"] + sm["ic"]] for sm in visiveis]))
     novo = np.full(len(P), -1, dtype=np.int64); novo[usados] = np.arange(len(usados))
     P, N, UV, J, W = P[usados], N[usados], UV[usados], J[usados], W[usados]
@@ -303,7 +310,7 @@ def main():
 
     materiais = {}
     # Só entram as texturas de submalhas visíveis (as escondidas, como as telas do recall, não pesam no arquivo).
-    usadas = {TEXTURA.get(sm["nome"], "main") for sm in subs if sm["nome"] not in ESCONDER}
+    usadas = {TEXTURA.get(sm["nome"], "main") for sm in visiveis}
     for chave, (arquivo, jpeg) in TEXTURAS.items():
         if chave not in usadas:
             continue
@@ -319,21 +326,27 @@ def main():
                                  "metallicFactor": 0, "roughnessFactor": 1}, "alphaMode": "MASK", "alphaCutoff": 0.3,
                                  "doubleSided": True})
         materiais[chave] = len(g.g["materials"]) - 1
-    prims = []
-    for s in subs:
-        if s["nome"] in ESCONDER:
-            continue
+    def prim(s):
         tri = idx[s["is"]:s["is"] + s["ic"]].reshape(-1, 3)[:, ::-1]  # espelhar inverte a ordem dos triângulos
         a_i = g.acc(tri.reshape(-1).astype("<u4"), "SCALAR", 5125, 34963)
-        prims.append({"attributes": {"POSITION": a_p, "NORMAL": a_n, "TEXCOORD_0": a_uv, "JOINTS_0": a_j, "WEIGHTS_0": a_w},
-                      "indices": a_i, "material": materiais[TEXTURA.get(s["nome"], "main")]})
-    g.g["meshes"].append({"name": "Akshan", "primitives": prims})
+        return {"attributes": {"POSITION": a_p, "NORMAL": a_n, "TEXCOORD_0": a_uv, "JOINTS_0": a_j, "WEIGHTS_0": a_w},
+                "indices": a_i, "material": materiais[TEXTURA.get(s["nome"], "main")]}
+    g.g["meshes"].append({"name": "Corpo", "primitives": [prim(s) for s in visiveis if s["nome"] not in alterna]})
     g.g["skins"].append({"joints": list(range(len(joints))), "inverseBindMatrices": g.acc(ibm, "MAT4", 5126), "skeleton": raizes[0]})
-    malha = len(g.g["nodes"])
-    g.g["nodes"].append({"name": "AkshanMesh", "mesh": 0, "skin": 0})
+    malhas = [len(g.g["nodes"])]
+    g.g["nodes"].append({"name": "CorpoMesh", "mesh": 0, "skin": 0})
+    for s in visiveis:
+        if s["nome"] in alterna:
+            g.g["meshes"].append({"name": s["nome"], "primitives": [prim(s)]})
+            malhas.append(len(g.g["nodes"]))
+            g.g["nodes"].append({"name": "parte:" + s["nome"], "mesh": len(g.g["meshes"]) - 1, "skin": 0,
+                                 "extras": {"parte": s["nome"], "inicial": s["nome"] not in ESCONDER}})
     raiz = len(g.g["nodes"])
-    g.g["nodes"].append({"name": "Akshan", "children": raizes + [malha]})
-    g.g["scenes"].append({"nodes": [raiz]})
+    g.g["nodes"].append({"name": "Modelo", "children": raizes + malhas})
+    # Eventos por clipe: {clipe: [{mostra, esconde, ini, fim}]} (o site lê em gltf.scene.userData).
+    g.g["scenes"].append({"nodes": [raiz], "extras": {"eventos": {c: e for c, e in EVENTOS.items() if c in {a for a, _ in ANIMACOES}}}})
+    if alterna:
+        print("partes que alternam:", sorted(alterna))
 
     # Animações.
     por_hash = {elf(j["nome"]): i for i, j in enumerate(joints)}

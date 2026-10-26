@@ -95,6 +95,22 @@ por_nome = {}
 for c in caminhos_anm:
     por_nome.setdefault(c.lower().split("/")[-1], c)
 
+# Partes que aparecem e somem durante um clipe (a guitarra do Mordekaiser na dança, no lugar da maça):
+# eventos SubmeshVisibilityEventData do grafo de animação, em segundos (o jogo conta quadros a 30 por segundo).
+grafo = json.loads(anims)
+mapa_clipes = next((v["mClipDataMap"] for v in grafo.values() if isinstance(v, dict) and "mClipDataMap" in v), {})
+eventos = {}
+for dados_clipe in mapa_clipes.values():
+    arq = (dados_clipe.get("mAnimationResourceData") or {}).get("mAnimationFilePath", "").lower().split("/")[-1]
+    nossos = [c for c, a in CLIPES.items() if a == arq]
+    for ev in (dados_clipe.get("mEventDataMap") or {}).values():
+        if not isinstance(ev, dict) or ev.get("__type") != "SubmeshVisibilityEventData":
+            continue
+        item = {"mostra": ev.get("mShowSubmeshList", []), "esconde": ev.get("mHideSubmeshList", []),
+                "ini": ev.get("mStartFrame", 0) / 30, "fim": ev["mEndFrame"] / 30 if "mEndFrame" in ev else None}
+        for c in nossos:
+            eventos.setdefault(c, []).append(item)
+
 f, ent = ler_wad(WAD)
 extrair = {props["skeleton"]: None, props["simpleSkin"]: None}
 animacoes = []
@@ -113,6 +129,7 @@ for caminho in extrair:
 config = {
     "skl": props["skeleton"].lower().split("/")[-1], "skn": props["simpleSkin"].lower().split("/")[-1],
     "texturas": texturas, "submesh_textura": submesh_textura, "esconder": esconder, "animacoes": animacoes,
+    "eventos": eventos,
 }
 (PASTA / "config.json").write_text(json.dumps(config, ensure_ascii=False, indent=1), encoding="utf-8")
 print(json.dumps(config, ensure_ascii=False)[:600])
