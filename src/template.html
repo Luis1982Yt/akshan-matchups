@@ -1759,7 +1759,9 @@ function linhaCd([k, v], hab, nomeJogo) {
   const m = v.match(/^(.*?)\s*(\(.*\))\s*$/);
   const tempo = m && m[1] ? m[1] : v, obs = m && m[1] ? m[2] : "";
   const rotulo = ch.letra === "P" ? t("passiva") : ch.letra;
-  return `<li>${icone}<span class="nome"><strong>${esc(rotulo)}</strong>${esc(ch.desc)}</span><span class="tempo">${esc(tempo).replace(/\s*\/\s*/g, "<i>/</i>")}</span>${obs ? `<p class="obs">${esc(obs)}</p>` : ""}</li>`;
+  // Descrição com inicial maiúscula, como o nome da habilidade no jogo ("correntes" → "Correntes").
+  const desc = ch.desc.charAt(0).toUpperCase() + ch.desc.slice(1);
+  return `<li>${icone}<span class="nome"><strong>${esc(rotulo)}</strong>${esc(desc)}</span><span class="tempo">${esc(tempo).replace(/\s*\/\s*/g, "<i>/</i>")}</span>${obs ? `<p class="obs">${esc(obs)}</p>` : ""}</li>`;
 }
 // Sem a seção na planilha: Q W E R com o nome da habilidade e o cooldown base de cada nível.
 const linhasJogo = hab => "QWER".split("").filter(l => hab[l]).map(l => linhaCd([l, hab[l].cd || ""], hab, hab[l].nome)).join("")
