@@ -37,7 +37,7 @@
   {
     "id": "mordekaiser",
     "campeao": "Mordekaiser",
-    "rota": "",
+    "rota": "Top",
     "autor": "Meowdekaiser",
     "formato": "completo",
     "dados": "guias/mordekaiser",
@@ -57,6 +57,12 @@
         "url": "https://x.com/Meowdekaiser"
       }
     ],
-    "oculto": true
+    "acompanhe": [
+      {
+        "nome": "Meowdekaiser",
+        "url": "https://www.twitch.tv/meowdekaiser_",
+        "canal": "twitch.tv/meowdekaiser_"
+      }
+    ]
   }
 ]

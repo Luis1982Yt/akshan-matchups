@@ -680,6 +680,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 }
 @media (max-width: 520px) {
   .trocar b { font-size: 18px; }
+  .trocar b.longo { font-size: 14px; letter-spacing: 0; }  /* Mordekaiser cabe sem reticências */
   .navega .lbl { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -872,7 +873,7 @@ const TXT = {
     linguaRotulo: "Switch to English", linguaBotao: "EN",
     guiaAtual: "Guia atual: ", trocarGuia: ". Trocar de guia", notasDo: "notas do ", matchups: " matchups", aberto: "Aberto",
     facil: "Fácil", medio: "Médio", dificil: "Difícil", resumo: "Resumo", runas: "Runas", itens: "Itens", geral: "Geral",
-    principal: "Principal", fragmentos: "Fragmentos", emote: "Arraste para girar · clique para uma emote", mostra3d: "Mostrar o Akshan 3D", skins: "Skins do Akshan", skinAnt: "Skin anterior", copiar: "Copiar link", copiado: "Link copiado!", copiarLink: "Copiar o link desta matchup", skinProx: "Próxima skin", chromas: "Chromas", semChroma: "Sem chroma", esconde3d: "Esconder o Akshan 3D", carrega3d: "Carregando o Akshan…", tierBotao: "Tier list das matchups", tierTit: "Tier list · {c}", fechar: "Fechar", aoVivo: "Ao vivo", acompanhe: "Acompanhe mono {c}s", assistir: "Assistir", opggDe: "OP.GG do ", devPor: "Site feito por", baixarApp: "App para PC: abre a matchup sozinho",
+    principal: "Principal", fragmentos: "Fragmentos", ou: "ou", emote: "Arraste para girar · clique para uma emote", mostra3d: "Mostrar o Akshan 3D", skins: "Skins do Akshan", skinAnt: "Skin anterior", copiar: "Copiar link", copiado: "Link copiado!", copiarLink: "Copiar o link desta matchup", skinProx: "Próxima skin", chromas: "Chromas", semChroma: "Sem chroma", esconde3d: "Esconder o Akshan 3D", carrega3d: "Carregando o Akshan…", tierBotao: "Tier list das matchups", tierTit: "Tier list · {c}", fechar: "Fechar", aoVivo: "Ao vivo", acompanhe: "Acompanhe mono {c}s", assistir: "Assistir", opggDe: "OP.GG do ", devPor: "Site feito por", baixarApp: "App para PC: abre a matchup sozinho",
     appTit: "App para PC", appLead: "Um app para Windows com o guia numa janela própria, que se abre sozinha na hora certa: quando você pega Akshan na seleção de campeões, ele descobre o mid inimigo e já mostra a matchup dele, sem você procurar.",
     appPassos: ["Baixe e abra o <b>AkshanMatchups.exe</b>. Ele fica no canto da barra de tarefas, perto do relógio, e já liga junto com o Windows (dá para desligar no menu do ícone).", "Entre numa partida e escolha o <b>Akshan</b>. Nas outras partidas o app fica quieto.", "Quando o mid inimigo travar o campeão, a janela do app aparece com a matchup dele. Se ele errar o mid, troque na própria janela ou pelo menu do ícone (\"Inimigos agora\"). Fechar a janela só esconde: ela volta na próxima partida."],
     appSeguro: "<b>Seguro:</b> o app só lê a seleção de campeões pelo próprio cliente do LoL. Nunca escolhe, bane nem aceita fila por você.",
@@ -900,7 +901,7 @@ const TXT = {
     linguaRotulo: "Mudar para português", linguaBotao: "PT",
     guiaAtual: "Current guide: ", trocarGuia: ". Change guide", notasDo: "notes by ", matchups: " matchups", aberto: "Open",
     facil: "Easy", medio: "Medium", dificil: "Hard", resumo: "Summary", runas: "Runes", itens: "Items", geral: "Overall",
-    principal: "Primary", fragmentos: "Shards", emote: "Drag to rotate · click for an emote", mostra3d: "Show 3D Akshan", skins: "Akshan skins", skinAnt: "Previous skin", copiar: "Copy link", copiado: "Link copied!", copiarLink: "Copy this matchup's link", skinProx: "Next skin", chromas: "Chromas", semChroma: "No chroma", esconde3d: "Hide 3D Akshan", carrega3d: "Loading Akshan…", tierBotao: "Matchup tier list", tierTit: "Tier list · {c}", fechar: "Close", aoVivo: "Live", acompanhe: "Watch {c} mains", assistir: "Watch", opggDe: "OP.GG of ", devPor: "Site by", baixarApp: "PC app: opens the matchup by itself",
+    principal: "Primary", fragmentos: "Shards", ou: "or", emote: "Drag to rotate · click for an emote", mostra3d: "Show 3D Akshan", skins: "Akshan skins", skinAnt: "Previous skin", copiar: "Copy link", copiado: "Link copied!", copiarLink: "Copy this matchup's link", skinProx: "Next skin", chromas: "Chromas", semChroma: "No chroma", esconde3d: "Hide 3D Akshan", carrega3d: "Loading Akshan…", tierBotao: "Matchup tier list", tierTit: "Tier list · {c}", fechar: "Close", aoVivo: "Live", acompanhe: "Watch {c} mains", assistir: "Watch", opggDe: "OP.GG of ", devPor: "Site by", baixarApp: "PC app: opens the matchup by itself",
     appTit: "PC app", appLead: "A Windows app with the guide in its own window that shows up by itself at the right time: when you pick Akshan in champion select, it figures out the enemy mid and shows that matchup, no searching needed.",
     appPassos: ["Download and open <b>AkshanMatchups.exe</b>. It sits in the taskbar corner, next to the clock, and starts with Windows (you can turn that off in the icon menu).", "Join a game and pick <b>Akshan</b>. In other games the app stays quiet.", "When the enemy mid locks in, the app window shows up with that matchup. If it guesses the wrong mid, switch in the window itself or in the icon menu (\"Current enemies\"). Closing the window just hides it: it comes back next game."],
     appSeguro: "<b>Safe:</b> the app only reads champion select through the LoL client itself. It never picks, bans or accepts queue for you.",
@@ -955,7 +956,7 @@ function prepara(g) {
     }));
     g.lista.forEach(c => { c.hayN = normal(c.hay); });
   } else {
-    g.lista = g.matchups.map(m => ({ ...m, slug: slug(m.nome), hay: textoDe(m).toLowerCase() }));
+    g.lista = g.matchups.map(m => ({ ...m, slug: slug(m.nome), dif: DIF_NOTA[m.dificuldade.overall] || null, hay: textoDe(m).toLowerCase() }));
     g.lista.forEach(c => { c.hayN = normal(c.hay); });
   }
 }
@@ -968,6 +969,8 @@ function textoDe(m) {
 
 // Dificuldade (cor da célula do campeão na planilha), na ordem do Peteruso: da pior para a mais tranquila.
 const DIFS = ["muito_dificil", "dificil", "medio", "facil", "muito_facil"];
+// Guias com nota de 1 a 5 (formato completo) usam as mesmas cores: 1 = muito fácil … 5 = muito difícil.
+const DIF_NOTA = [null, "muito_facil", "facil", "medio", "dificil", "muito_dificil"];
 const rotuloDif = d => t("dif" + d.charAt(0).toUpperCase() + d.slice(1));
 // Filtros: dentro do mesmo grupo vale qualquer um; entre grupos, todos.
 const FILTROS = {
@@ -976,11 +979,7 @@ const FILTROS = {
     ...["Ignite", "TP", "Exhaust"].map(s => ({ id: s, grupo: "feitico", rotulo: s, icone: g.icones[s], teste: c => c.spell.split(/\s*\/\s*/).includes(s) })),
     { id: "Electro", grupo: "runa", rotulo: "Electro", icone: g.icones.Electro, teste: c => /electro/i.test(c.runa) },
   ],
-  completo: () => [
-    { id: "facil", grupo: "dif", chave: "facil", teste: c => c.dificuldade.overall <= 2 },
-    { id: "medio", grupo: "dif", chave: "medio", teste: c => c.dificuldade.overall === 3 },
-    { id: "dificil", grupo: "dif", chave: "dificil", teste: c => c.dificuldade.overall >= 4 },
-  ],
+  completo: () => DIFS.map(d => ({ id: "dif_" + d, grupo: "dif", cor: d, teste: c => c.dif === d })),
 };
 
 /* ---------- Planilha ao vivo: o guia lê a planilha do autor quando abre ---------- */
@@ -1100,6 +1099,7 @@ function renderGuia() {
   const skt = guia.id === "akshan" ? skinAtual() : SKINS[0];
   $("trocarImg").innerHTML = `<img src="${skt.num ? tileSkin(eu.id, skt.num) : sq(eu.id)}" alt="" width="38" height="38">`;
   $("trocarNome").textContent = eu.nome;
+  $("trocarNome").classList.toggle("longo", eu.nome.length > 9);
   $("trocarSub").textContent = sub;
   $("trocarSub").hidden = !sub;
   $("trocar").disabled = GUIAS.length < 2;
@@ -1172,7 +1172,7 @@ function renderLista() {
     const marca = guia.formato === "simples" ? ""
       : (c.dificuldade.overall ? `<span class="nivel" aria-hidden="true">${c.dificuldade.overall}</span>` : "");
     const extra = guia.formato === "simples" ? (c.dif ? ", " + rotuloDif(c.dif) : "") : (c.dificuldade.overall ? t("srDif", c.dificuldade.overall) : "");
-    const dif = guia.formato === "simples" && c.dif ? ` tem-dif" style="--dif: var(--dif-${c.dif})` : "";
+    const dif = c.dif ? ` tem-dif" style="--dif: var(--dif-${c.dif})` : "";
     return `<button type="button" class="pick${soNota.has(c) ? " so-nota" : ""}${dif}" data-id="${c.slug}" data-ini="${esc(c.nome.charAt(0))}" aria-current="${c === current}" tabindex="${c === foco ? 0 : -1}" title="${esc(c.nome)}${soNota.has(c) ? t("titNotas") : ""}">
       <img src="${sq(c.id)}" alt="" width="56" height="56"${i < 25 ? "" : ' loading="lazy"'} decoding="async">${marca}<span class="sr">${esc(c.nome)}${extra}${soNota.has(c) ? t("srNotas") : ""}</span></button>`;
   }).join("");
@@ -1286,14 +1286,15 @@ function linhaItem(l) {
   if (l.tipo === "sep") return '<li class="sep" aria-hidden="true"></li>';
   if (l.tipo === "rotulo") return `<li class="sub">${esc(l.texto)}</li>`;
   if (l.tipo === "nota") return `<li class="nota">${esc(l.texto)}</li>`;
-  const passos = l.passos.map(alts => alts.map(p => peca(p)).join('<span class="ou">ou</span>')).join(SETA_PASSO);
+  const passos = l.passos.map(alts => alts.map(p => peca(p)).join(`<span class="ou">${t("ou")}</span>`)).join(SETA_PASSO);
   return `<li><div class="pecas">${passos}</div>${l.motivo ? `<p class="motivo">${esc(l.motivo)}</p>` : ""}</li>`;
 }
 
+const rotuloRuna = r => ({ Principal: t("principal"), "Secundária": t("secundaria"), Fragmentos: t("fragmentos") })[r] || r;
 function setupCompleto(c) {
-  const runas = c.runas.map((bloco, i) => (i ? '<p class="ou-bloco">ou</p>' : "") + bloco.map(l => l.rotulo === "Fragmentos"
-    ? `<div class="linha-runa"><span class="rot">${esc(l.rotulo)}</span><p class="frag">${l.pecas.map(p => esc(p.nome)).join(" · ")}</p></div>`
-    : `<div class="linha-runa"><span class="rot">${esc(l.rotulo)}</span><div class="pecas">${l.pecas.map(p => peca(p, true)).join("")}</div></div>`).join("")).join("");
+  const runas = c.runas.map((bloco, i) => (i ? `<p class="ou-bloco">${t("ou")}</p>` : "") + bloco.map(l => l.rotulo === "Fragmentos"
+    ? `<div class="linha-runa"><span class="rot">${esc(rotuloRuna(l.rotulo))}</span><p class="frag">${l.pecas.map(p => esc(p.nome)).join(" · ")}</p></div>`
+    : `<div class="linha-runa"><span class="rot">${esc(rotuloRuna(l.rotulo))}</span><div class="pecas">${l.pecas.map(p => peca(p, true)).join("")}</div></div>`).join("")).join("");
   const itens = c.itens.map((g, i) => {
     const ol = `<ol lang="en">${g.linhas.map(linhaItem).join("")}</ol>`;
     const cond = g.rotulo && g.rotulo !== "Items vs." ? g.rotulo : "";
@@ -1301,10 +1302,10 @@ function setupCompleto(c) {
     return `<details class="grupo"><summary><span lang="en">${esc(cond || "Other build")}</span></summary>${ol}</details>`;
   }).join("");
   const dif = [["early", "Early"], ["mid", "Mid"], ["late", "Late"], ["overall", "Geral"]]
-    .map(([k, r]) => `<div><dt>${k === "overall" ? t("geral") : r}</dt><dd aria-label="${c.dificuldade[k] ?? "sem nota"} de 5">${pips(c.dificuldade[k])}<b>${c.dificuldade[k] ?? "–"}/5</b></dd></div>`).join("");
+    .map(([k, r]) => `<div><dt>${k === "overall" ? t("geral") : r}</dt><dd aria-label="${c.dificuldade[k] ? t("srDif", c.dificuldade[k]).replace(/^, /, "") : t("semAnot")}">${pips(c.dificuldade[k])}<b>${c.dificuldade[k] ?? "–"}/5</b></dd></div>`).join("");
   return `<div class="setup-completo">
-    <section class="bloco"><h3>${t("runas")}</h3>${runas || '<p class="livre">Sem anotação</p>'}</section>
-    <section class="bloco build"><h3>${t("itens")}</h3>${itens || '<p class="livre">Sem anotação</p>'}</section>
+    <section class="bloco"><h3>${t("runas")}</h3>${runas || `<p class="livre">${t("semAnot")}</p>`}</section>
+    <section class="bloco build"><h3>${t("itens")}</h3>${itens || `<p class="livre">${t("semAnot")}</p>`}</section>
     <section class="bloco dif"><h3>${t("dificuldade")}</h3><dl>${dif}</dl></section>
   </div>`;
 }

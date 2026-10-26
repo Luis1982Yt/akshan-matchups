@@ -1,6 +1,6 @@
 """Baixa do CommunityDragon os sons do cliente do LoL usados no site e as falas de escolha de cada campeão de guia.
 
-Grava em sons/ui/ e sons/vo/<id do campeão>.ogg (ao lado do index.html). Rode de novo se entrar um guia novo.
+Grava em sons/ui/ e sons/vo/<id do campeão>.ogg (inglês em sons/vo/en/) (ao lado do index.html). Rode de novo se entrar um guia novo.
 Os sons são da Riot Games; o site é de fã, sem ligação com a Riot.
 """
 import json
@@ -11,6 +11,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 CD = "https://raw.communitydragon.org/latest/plugins"
 UI = f"{CD}/rcp-fe-lol-champ-select/global/default/sounds"
 VO = f"{CD}/rcp-be-lol-game-data/global/pt_br/v1/champion-choose-vo"
+VO_EN = f"{CD}/rcp-be-lol-game-data/global/default/v1/champion-choose-vo"  # voz original em inglês
 
 SONS_UI = {
     "grade": "sfx-uikit-grid-click",
@@ -41,5 +42,6 @@ for guia in json.loads((ROOT / "src" / "guias.json").read_text(encoding="utf-8")
     campeao = guia["campeao"]
     if campeao in CHAVE:
         baixar(f"{VO}/{CHAVE[campeao]}.ogg", ROOT / "sons" / "vo" / f"{campeao}.ogg")
+        baixar(f"{VO_EN}/{CHAVE[campeao]}.ogg", ROOT / "sons" / "vo" / "en" / f"{campeao}.ogg")
     else:
         print(f"Sem id numérico para {campeao}: acrescente em CHAVE para ter a fala de escolha.")
