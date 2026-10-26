@@ -266,6 +266,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .menu li img { width: 42px; height: 42px; flex: none; border-radius: 50%; }
 .menu li b { display: block; font: 700 17px/1.2 var(--titulo); color: var(--texto); }
 .menu li small { display: block; font-size: 13px; color: var(--texto-baixo); }
+.menu li.rota-tit { margin: 8px 10px 2px; font: 700 11px var(--corpo); letter-spacing: .14em; text-transform: uppercase; color: var(--acento-vivo); }
 .menu li .atual { margin-left: auto; flex: none; font-size: 12px; font-weight: 700; color: var(--acento-vivo); }
 .dica { margin: 6px 10px 4px; padding-top: 8px; border-top: 1px solid var(--linha); font-size: 13px; color: var(--texto-baixo); }
 .acoes { margin-left: auto; display: flex; gap: 8px; }
@@ -288,6 +289,83 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   display: grid; gap: 24px; grid-template-columns: 440px minmax(0, 1fr); align-items: start;
 }
 .detalhe { min-width: 0; display: grid; gap: 16px; }
+/* Páginas do guia (as outras abas da planilha): barra de abas embaixo do topo e o conteúdo no lugar das matchups. */
+.paginas { max-width: 1320px; margin: 0 auto; padding: 14px var(--borda) 0; }
+.paginas[hidden] { display: none; }
+.paginas ul { position: relative; list-style: none; margin: 0; padding: 0 0 2px; display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; }
+.paginas ul::-webkit-scrollbar { display: none; }
+.paginas button { flex: none; white-space: nowrap; display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid var(--linha); background: var(--painel); color: var(--texto-baixo); font: 700 14px var(--corpo); cursor: pointer; }
+.paginas button:hover { color: var(--texto); border-color: var(--linha-forte); }
+.paginas button[aria-current="page"] { color: var(--acento-vivo); border-color: var(--acento-vivo); background: var(--painel-alto); }
+.paginas button svg { color: currentColor; }
+:root.em-pagina .palco { display: none; }
+.pagina { max-width: 1320px; margin: 0 auto; padding: 20px var(--borda) 64px; display: grid; gap: 20px; }
+.pagina[hidden] { display: none; }
+.pagina { grid-template-columns: minmax(0, 1fr); }
+.pagina > .rodape { grid-column: auto; grid-row: auto; margin-top: 12px; }
+.pagina > h2 { margin: 4px 0 0; font: 800 clamp(24px, 3vw, 34px)/1.1 var(--titulo); letter-spacing: .03em; color: var(--acento-vivo); }
+.pagina .lead { margin: -8px 0 0; font-size: 15px; color: var(--texto-baixo); }
+.pg-bloco { min-width: 0; padding: 20px 22px; border-radius: 12px; background: var(--painel); border: 1px solid var(--linha); }
+.pg-bloco > h3, .pg-grupo > h3 { margin: 0 0 12px; font: 700 15px var(--titulo); letter-spacing: .12em; text-transform: uppercase; color: var(--acento-vivo); }
+.pg-bloco p { margin: 0; font-size: 16px; line-height: 1.6; white-space: pre-line; overflow-wrap: anywhere; }
+.pg-bloco a, .pg-card a, .pg-tabela a { color: var(--acento-vivo); text-underline-offset: 3px; overflow-wrap: anywhere; }
+.pg-bloco.aviso { background: none; border-style: dashed; }
+.pg-bloco.aviso p { color: var(--texto-baixo); font-size: 15px; }
+.pg-lista { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.pg-lista li { font-size: 16px; line-height: 1.5; }
+.pg-patch { display: grid; gap: 14px; }
+.pg-patch .versao { display: inline-block; margin-left: 8px; padding: 2px 10px; border-radius: 999px; background: var(--painel-alto); border: 1px solid var(--linha-forte); font: 700 13px var(--corpo); color: var(--texto); vertical-align: 2px; letter-spacing: 0; text-transform: none; }
+.pg-patch dl { margin: 0; display: grid; gap: 10px; }
+.pg-patch dt { font-weight: 700; font-size: 16px; }
+.pg-patch dd { margin: 2px 0 0; font-size: 15px; line-height: 1.5; color: var(--texto-baixo); }
+.pg-duas { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); align-items: start; }
+.pg-grupo { display: grid; gap: 12px; }
+.pg-grupo > h3 { margin: 8px 0 0; }
+.pg-cards { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr)); align-items: start; }
+.pg-card { min-width: 0; padding: 14px 16px; border-radius: 12px; background: var(--painel); border: 1px solid var(--linha); }
+.pg-card .topo { display: flex; align-items: center; gap: 12px; }
+.pg-card .topo img { width: 44px; height: 44px; flex: none; border-radius: 8px; box-shadow: 0 0 0 1px var(--linha-forte); }
+.pg-card .topo.runa img { border-radius: 50%; box-shadow: none; background: #0b0b0b; }
+.pg-card .topo b { font-size: 17px; line-height: 1.25; }
+.pg-card .texto { margin: 10px 0 0; font-size: 15px; line-height: 1.55; white-space: pre-line; color: var(--texto); }
+.pg-card .texto.curto { overflow: hidden; display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical; }
+.pg-card .mais { margin-top: 6px; min-height: 36px; padding: 0; border: 0; background: none; color: var(--acento-vivo); font: 700 14px var(--corpo); cursor: pointer; }
+.pg-card.sem-texto { padding: 10px 14px; background: none; }
+.pg-card.sem-texto .topo img { width: 34px; height: 34px; }
+.pg-card.sem-texto .topo b { font-size: 15px; color: var(--texto-baixo); font-weight: 600; }
+/* Itens: um cartão por item, com o momento da build (1º, 2º, 3º, 4º+) em abas */
+.estagios { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; margin: 12px 0 0; }
+.estagios button { display: flex; align-items: center; justify-content: center; gap: 5px; min-width: 0; min-height: 36px; padding: 0 6px; white-space: nowrap; border-radius: 999px; border: 1px solid var(--linha-forte); background: none; color: var(--texto); font: 700 13px var(--corpo); cursor: pointer; }
+.estagios button.viavel::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--acento-vivo); }
+.estagios button[aria-pressed="true"] { background: var(--painel-alto); border-color: var(--acento-vivo); color: var(--acento-vivo); }
+.estagios button:disabled { opacity: .35; cursor: default; border-style: dashed; }
+.estagios img { width: 20px; height: 20px; border-radius: 4px; }
+.legenda-estagios { margin: 0; font-size: 14px; color: var(--texto-baixo); display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.legenda-estagios i { width: 8px; height: 8px; border-radius: 50%; background: var(--acento-vivo); }
+/* Runas: uma seção por árvore, uma linha por nível */
+.arvore > h3 { display: flex; align-items: center; gap: 10px; }
+.arvore > h3 img { width: 28px; height: 28px; }
+.nivel { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); align-items: start; }
+.nivel + .nivel { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--linha); }
+/* Setups alternativos */
+.setup-alt dl { margin: 12px 0 0; display: grid; gap: 10px; }
+.setup-alt dt { font: 700 12px var(--corpo); letter-spacing: .1em; text-transform: uppercase; color: var(--texto-baixo); }
+.setup-alt dd { margin: 2px 0 0; font-size: 15px; line-height: 1.5; white-space: pre-line; }
+/* Tabelas (criadores): rolam por dentro no celular, a página não */
+.pg-tabela { overflow-x: auto; }
+.pg-tabela table { width: 100%; border-collapse: collapse; font-size: 15px; }
+.pg-tabela th, .pg-tabela td { padding: 9px 14px 9px 0; border-bottom: 1px solid var(--linha); text-align: left; vertical-align: top; white-space: nowrap; }
+.pg-tabela th { font: 700 12px var(--corpo); letter-spacing: .08em; text-transform: uppercase; color: var(--texto-baixo); }
+.pg-tabela td.vazio { color: var(--texto-baixo); }
+.pessoas { grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
+.pessoa .topo { flex-wrap: wrap; gap: 6px 10px; }
+.pessoa .topo b { margin-right: auto; }
+.selo-meta { padding: 2px 9px; border-radius: 999px; border: 1px solid var(--linha-forte); font-size: 12px; font-weight: 700; color: var(--texto-baixo); white-space: nowrap; }
+.pessoa-links { list-style: none; margin: 12px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.pessoa-links a { display: flex; align-items: center; min-height: 36px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--linha-forte); background: var(--painel-alto); color: var(--texto); font-size: 13px; font-weight: 700; text-decoration: none; }
+.pessoa-links a:hover { border-color: var(--acento-vivo); color: var(--acento-vivo); }
+.pessoa-links .so-texto { width: 100%; font-size: 14px; color: var(--texto); }
+.pessoa-links .so-texto span { color: var(--texto-baixo); }
 /* Akshan 3D: só em tela larga, numa terceira coluna à direita, sobre o fundo do próprio site. */
 .akshan3d { display: none; }
 @media (min-width: 1720px) {
@@ -750,6 +828,8 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 <main>
   <h1 class="sr" id="titulo"></h1>
   <p class="sr" id="anuncio" aria-live="polite"></p>
+  <nav class="paginas" id="paginas" data-t-aria="paginasGuia" hidden><ul id="paginasLista"></ul></nav>
+  <div class="pagina" id="pagina" hidden></div>
   <div class="palco">
     <div class="col-lista">
     <nav class="anel" aria-labelledby="escolhe">
@@ -903,7 +983,11 @@ const TXT = {
     linguaRotulo: "Switch to English", linguaBotao: "EN",
     guiaAtual: "Guia atual: ", trocarGuia: ". Trocar de guia", notasDo: "notas do ", matchups: " matchups", aberto: "Aberto",
     facil: "Fácil", medio: "Médio", dificil: "Difícil", resumo: "Resumo", runas: "Runas", itens: "Itens", geral: "Geral",
-    principal: "Principal", fragmentos: "Fragmentos", ou: "ou", cds: "Cooldowns", cdsTit: "Cooldowns do inimigo", cdsDe: "Cooldowns · {c}", passiva: "Passiva", cdsBase: "Cooldowns base de cada nível da habilidade, sem aceleração de habilidade.", emote: "Arraste para girar · clique para uma emote", mostra3d: "Mostrar o Akshan 3D", skins: "Skins do Akshan", skinAnt: "Skin anterior", copiar: "Copiar link", copiado: "Link copiado!", copiarLink: "Copiar o link desta matchup", skinProx: "Próxima skin", chromas: "Chromas", semChroma: "Sem chroma", esconde3d: "Esconder o Akshan 3D", carrega3d: "Carregando o Akshan…", tierBotao: "Tier list das matchups", tierTit: "Tier list · {c}", fechar: "Fechar", aoVivo: "Ao vivo", acompanhe: "Acompanhe mono {c}s", assistir: "Assistir", opggDe: "OP.GG do ", devPor: "Site feito por", baixarApp: "App para PC: abre a matchup sozinho",
+    principal: "Principal", fragmentos: "Fragmentos", ou: "ou", cds: "Cooldowns", cdsTit: "Cooldowns do inimigo", cdsDe: "Cooldowns · {c}", passiva: "Passiva", cdsBase: "Cooldowns base de cada nível da habilidade, sem aceleração de habilidade.",
+    paginasGuia: "Páginas do guia", pgMatchups: "Matchups", pgSobre: "Sobre", pgItens: "Itens", pgRunas: "Runas", pgSetups: "Setups alternativos", pgCriadores: "Criadores", pgGeral: "Geral", pgDicas: "Dicas",
+    pgOriginal: "Texto do autor, em inglês como na planilha.", estagios: ["1º item", "2º item", "3º item", "4º item+"], estViavel: "dá para fazer nesse momento da build", estSo: "só comentário",
+    lerMais: "Ler mais", lerMenos: "Ler menos", semComentario: "Sem comentário", arvores: { Precision: "Precisão", Domination: "Dominação", Sorcery: "Feitiçaria", Resolve: "Determinação", Inspiration: "Inspiração" },
+    setRunas: "Runas", setItens: "Itens", setExemplo: "Exemplo", setComentario: "Comentário", ultimaMudanca: "Última mudança do campeão", emote: "Arraste para girar · clique para uma emote", mostra3d: "Mostrar o Akshan 3D", skins: "Skins do Akshan", skinAnt: "Skin anterior", copiar: "Copiar link", copiado: "Link copiado!", copiarLink: "Copiar o link desta matchup", skinProx: "Próxima skin", chromas: "Chromas", semChroma: "Sem chroma", esconde3d: "Esconder o Akshan 3D", carrega3d: "Carregando o Akshan…", tierBotao: "Tier list das matchups", tierTit: "Tier list · {c}", fechar: "Fechar", aoVivo: "Ao vivo", acompanhe: "Acompanhe mono {c}s", assistir: "Assistir", opggDe: "OP.GG do ", devPor: "Site feito por", baixarApp: "App para PC: abre a matchup sozinho",
     appTit: "App para PC", appLead: "Um app para Windows com o guia numa janela própria, que se abre sozinha na hora certa: quando você pega Akshan na seleção de campeões, ele descobre o mid inimigo e já mostra a matchup dele, sem você procurar.",
     appPassos: ["Baixe e abra o <b>AkshanMatchups.exe</b>. Ele fica no canto da barra de tarefas, perto do relógio, e já liga junto com o Windows (dá para desligar no menu do ícone).", "Entre numa partida e escolha o <b>Akshan</b>. Nas outras partidas o app fica quieto.", "Quando o mid inimigo travar o campeão, a janela do app aparece com a matchup dele. Se ele errar o mid, troque na própria janela ou pelo menu do ícone (\"Inimigos agora\"). Fechar a janela só esconde: ela volta na próxima partida."],
     appSeguro: "<b>Seguro:</b> o app só lê a seleção de campeões pelo próprio cliente do LoL. Nunca escolhe, bane nem aceita fila por você.",
@@ -931,7 +1015,11 @@ const TXT = {
     linguaRotulo: "Mudar para português", linguaBotao: "PT",
     guiaAtual: "Current guide: ", trocarGuia: ". Change guide", notasDo: "notes by ", matchups: " matchups", aberto: "Open",
     facil: "Easy", medio: "Medium", dificil: "Hard", resumo: "Summary", runas: "Runes", itens: "Items", geral: "Overall",
-    principal: "Primary", fragmentos: "Shards", ou: "or", cds: "Cooldowns", cdsTit: "Enemy cooldowns", cdsDe: "Cooldowns · {c}", passiva: "Passive", cdsBase: "Base cooldowns per ability rank, without ability haste.", emote: "Drag to rotate · click for an emote", mostra3d: "Show 3D Akshan", skins: "Akshan skins", skinAnt: "Previous skin", copiar: "Copy link", copiado: "Link copied!", copiarLink: "Copy this matchup's link", skinProx: "Next skin", chromas: "Chromas", semChroma: "No chroma", esconde3d: "Hide 3D Akshan", carrega3d: "Loading Akshan…", tierBotao: "Matchup tier list", tierTit: "Tier list · {c}", fechar: "Close", aoVivo: "Live", acompanhe: "Watch {c} mains", assistir: "Watch", opggDe: "OP.GG of ", devPor: "Site by", baixarApp: "PC app: opens the matchup by itself",
+    principal: "Primary", fragmentos: "Shards", ou: "or", cds: "Cooldowns", cdsTit: "Enemy cooldowns", cdsDe: "Cooldowns · {c}", passiva: "Passive", cdsBase: "Base cooldowns per ability rank, without ability haste.",
+    paginasGuia: "Guide pages", pgMatchups: "Matchups", pgSobre: "About", pgItens: "Items", pgRunas: "Runes", pgSetups: "Alternative setups", pgCriadores: "Creators", pgGeral: "General", pgDicas: "Tips",
+    pgOriginal: "The author's own text, as in the spreadsheet.", estagios: ["1st item", "2nd item", "3rd item", "4th+ item"], estViavel: "viable at this point of the build", estSo: "comment only",
+    lerMais: "Read more", lerMenos: "Read less", semComentario: "No comment", arvores: { Precision: "Precision", Domination: "Domination", Sorcery: "Sorcery", Resolve: "Resolve", Inspiration: "Inspiration" },
+    setRunas: "Runes", setItens: "Items", setExemplo: "Example", setComentario: "Comments", ultimaMudanca: "Latest champion change", emote: "Drag to rotate · click for an emote", mostra3d: "Show 3D Akshan", skins: "Akshan skins", skinAnt: "Previous skin", copiar: "Copy link", copiado: "Link copied!", copiarLink: "Copy this matchup's link", skinProx: "Next skin", chromas: "Chromas", semChroma: "No chroma", esconde3d: "Hide 3D Akshan", carrega3d: "Loading Akshan…", tierBotao: "Matchup tier list", tierTit: "Tier list · {c}", fechar: "Close", aoVivo: "Live", acompanhe: "Watch {c} mains", assistir: "Watch", opggDe: "OP.GG of ", devPor: "Site by", baixarApp: "PC app: opens the matchup by itself",
     appTit: "PC app", appLead: "A Windows app with the guide in its own window that shows up by itself at the right time: when you pick Akshan in champion select, it figures out the enemy mid and shows that matchup, no searching needed.",
     appPassos: ["Download and open <b>AkshanMatchups.exe</b>. It sits in the taskbar corner, next to the clock, and starts with Windows (you can turn that off in the icon menu).", "Join a game and pick <b>Akshan</b>. In other games the app stays quiet.", "When the enemy mid locks in, the app window shows up with that matchup. If it guesses the wrong mid, switch in the window itself or in the icon menu (\"Current enemies\"). Closing the window just hides it: it comes back next game."],
     appSeguro: "<b>Safe:</b> the app only reads champion select through the LoL client itself. It never picks, bans or accepts queue for you.",
@@ -1100,11 +1188,13 @@ async function sincroniza(g) {
 
 /* ---------- Estado ---------- */
 const lista = $("lista"), q = $("q");
-let guia, filtros = [], current, shown = [];
+let guia, filtros = [], current, shown = [], paginaAtual = "";
 const ativos = new Set();
 
 function escolheGuia(id, inimigo) {
   guia = GUIAS.find(g => g.id === id) || GUIAS[0];
+  // "#mordekaiser/@itens" abre uma página do guia em vez de uma matchup.
+  paginaAtual = inimigo && inimigo[0] === "@" && (guia.paginas || []).some(p => p.id === inimigo.slice(1)) ? inimigo.slice(1) : "";
   if (!guia.lista) { if (!guia.sincronia) usaCopiaSalva(guia); prepara(guia); }
   raiz.dataset.guia = guia.id;
   try { localStorage.setItem("guia", guia.id); } catch (e) {}
@@ -1114,15 +1204,18 @@ function escolheGuia(id, inimigo) {
   renderGuia();
   renderLista();
   renderDetalhe(false);
+  renderPaginas();
   marcaHash();
   sincroniza(guia);
 }
 
 function marcaHash() {
-  try { history.replaceState(null, "", `#${guia.id}/${current.slug}`); } catch (e) {}
+  try { history.replaceState(null, "", `#${guia.id}/${paginaAtual ? "@" + paginaAtual : current.slug}`); } catch (e) {}
 }
 
 /* ---------- Partes que mudam com o guia ---------- */
+const ROTAS = ["top", "jungle", "jg", "mid", "adc", "bot", "sup", "support"];
+const ordemRota = r => { const i = ROTAS.indexOf((r || "").toLowerCase()); return i < 0 ? 99 : i; };
 function renderGuia() {
   const eu = guia.campeao;
   const sub = guia.rota || "";
@@ -1134,7 +1227,10 @@ function renderGuia() {
   $("trocarSub").hidden = !sub;
   $("trocar").disabled = GUIAS.length < 2;
   $("trocar").setAttribute("aria-label", GUIAS.length < 2 ? `${eu.nome}${sub ? ", " + sub : ""}` : `${t("guiaAtual")}${eu.nome}${sub ? ", " + sub : ""}${t("trocarGuia")}`);
-  $("menuLista").innerHTML = GUIAS.map(g => `
+  // Agrupado por rota (Top, Jungle, Mid, ADC, Sup), para caber mais de um guia na mesma lane.
+  const rotas = [...new Set(GUIAS.map(g => g.rota || ""))].sort((a, b) => ordemRota(a) - ordemRota(b));
+  const porRota = rotas.flatMap(r => GUIAS.filter(g => (g.rota || "") === r));
+  $("menuLista").innerHTML = porRota.map((g, i) => `${rotas.length > 1 && (i === 0 || porRota[i - 1].rota !== g.rota) ? `<li class="rota-tit" aria-hidden="true">${esc(g.rota || "—")}</li>` : ""}
     <li><button type="button" data-guia="${g.id}" aria-current="${g === guia}">
       <img src="${sq(g.campeao.id)}" alt="" width="42" height="42">
       <span><b>${esc(g.campeao.nome)}</b><small><span class="sr">, </span>${g.rota ? esc(g.rota) + " · " : ""}${t("notasDo")}${esc(g.autor)} · ${g.matchups.length}${t("matchups")}</small></span>
@@ -1350,6 +1446,124 @@ function notasCompleto(c) {
   return `<div class="secoes" lang="en">${resumo}${c.secoes.filter(s => s.titulo !== "Enemy Cooldowns").map(s => `<section class="secao">${s.titulo ? (L === "en" ? `<h3>${esc(s.titulo)}</h3>` : `<h3 lang="pt-BR">${esc(TITULOS[s.titulo] || s.titulo)}</h3>`) : ""}${s.blocos.map(blocoTexto).join("")}</section>`).join("")}</div>`;
 }
 
+/* ---------- Páginas do guia (as outras abas da planilha do autor) ----------
+   Texto em inglês como no original; só os rótulos do site mudam de língua. */
+const NOME_PAGINA = { sobre: "pgSobre", itens: "pgItens", runas: "pgRunas", setups: "pgSetups", criadores: "pgCriadores", geral: "pgGeral", dicas: "pgDicas" };
+const ICONE_PAGINA = {
+  matchups: '<path d="M6 4l12 16M18 4L6 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>',
+  sobre: '<circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 11v6M12 7.5v.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>',
+  itens: '<path d="M5 8h14l-1.5 11h-11z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8V6a3 3 0 0 1 6 0v2" fill="none" stroke="currentColor" stroke-width="1.8"/>',
+  runas: '<path d="M12 3l7 9-7 9-7-9z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="12" r="2.2" fill="currentColor"/>',
+  setups: '<path d="M4 6h16M4 12h16M4 18h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>',
+  criadores: '<circle cx="9" cy="9" r="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0M16 7.5a3 3 0 0 1 0 6M17.5 19a5 5 0 0 0-2-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>',
+};
+ICONE_PAGINA.geral = ICONE_PAGINA.sobre; ICONE_PAGINA.dicas = ICONE_PAGINA.setups;
+const ARVORE_ICONE = { Domination: "7200_Domination", Precision: "7201_Precision", Sorcery: "7202_Sorcery", Inspiration: "7203_Whimsy", Resolve: "7204_Resolve" };
+const iconeItem = id => `${DD}${VER}/img/item/${id}.png`;
+// A planilha quebra a linha no meio da frase para caber na célula: junta essas quebras e mantém
+// os parágrafos (linha em branco) e as listas ("- ", "1.", "->" no começo).
+function fluxo(txt) {
+  return (txt || "").split("\n").map(l => l.trim()).reduce((acc, l, i, ls) => {
+    if (!i) return l;
+    const ant = ls[i - 1];
+    const quebra = !l || !ant || /^([-•*]|\d+[.)]|\[|->)/.test(l);
+    return acc + (quebra ? "\n" : " ") + l;
+  }, "");
+}
+// Texto da célula com os links dela no lugar (o texto do link aparece no meio da frase).
+function comLinks(c) {
+  if (!c) return "";
+  let h = esc(fluxo(c.texto));
+  (c.links || []).forEach(l => {
+    const a = `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.texto || l.url)}</a>`;
+    const alvo = esc(l.texto || "");
+    h = alvo && h.includes(alvo) ? h.replace(alvo, a) : h + (h ? " " : "") + a;
+  });
+  return h;
+}
+const textoLongo = (txt, cls = "texto") => txt.length > 320
+  ? `<p class="${cls} curto">${txt}</p><button type="button" class="mais" data-mais>${t("lerMais")}</button>` : `<p class="${cls}">${txt}</p>`;
+
+const BLOCOS = {
+  texto: b => `<section class="pg-bloco">${b.titulo ? `<h3>${esc(b.titulo)}</h3>` : ""}<p lang="en">${comLinks(b)}</p></section>`,
+  aviso: b => `<section class="pg-bloco aviso"><p lang="en">${esc(b.texto)}</p></section>`,
+  lista: b => `<section class="pg-bloco"><h3 lang="en">${comLinks(b)}</h3><ul class="pg-lista" lang="en">${b.itens.map(i => `<li>${comLinks(i)}</li>`).join("")}</ul></section>`,
+  patch: b => `<section class="pg-bloco pg-patch"><h3>${esc(t("ultimaMudanca"))}${b.versao ? `<span class="versao">${esc(b.versao)}</span>` : ""}</h3>
+    <dl lang="en">${b.mudancas.map(m => `<div><dt>${esc(m.nome)}</dt>${m.linhas.map(l => `<dd>${esc(l)}</dd>`).join("")}</div>`).join("")}</dl>
+    ${(b.links || []).map(l => `<p><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(b.texto.replace(/:.*$/, "") + " · " + l.texto)}</a></p>`).join("")}</section>`,
+  itens: b => `<p class="legenda-estagios"><i></i>${esc(t("estViavel"))}</p>` + b.grupos.map(g => `<section class="pg-grupo">${g.titulo ? `<h3 lang="en">${esc(g.titulo)}</h3>` : ""}<div class="pg-cards">${g.itens.map(it => {
+      const ini = it.estagios.findIndex(e => e && e.texto);
+      return `<article class="pg-card item-card" data-item="${esc(it.id)}"><div class="topo"><img src="${iconeItem(it.id)}" alt="" width="44" height="44" loading="lazy"><b lang="en">${esc(it.nome)}</b></div>
+        <div class="estagios" role="group" aria-label="${esc(it.nome)}">${it.estagios.map((e, i) => `<button type="button" data-est="${i}" class="${e && e.id ? "viavel" : ""}" aria-pressed="${i === ini}"${e && e.texto ? "" : " disabled"} title="${esc(e && e.id ? t("estViavel") : e ? t("estSo") : "")}">${e && e.id && e.id !== it.id ? `<img src="${iconeItem(e.id)}" alt="${esc(e.nome)}" width="20" height="20" loading="lazy">` : ""}${esc(t("estagios")[i])}</button>`).join("")}</div>
+        ${it.estagios.map((e, i) => e && e.texto ? `<div class="est-texto" data-est="${i}"${i === ini ? "" : " hidden"} lang="en">${textoLongo(esc(fluxo(e.texto)))}</div>` : "").join("")}</article>`;
+    }).join("")}</div></section>`).join(""),
+  runas: b => b.arvores.map(a => `<section class="pg-bloco arvore"><h3><img src="https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/${ARVORE_ICONE[a.chave] || ""}.png" alt="" width="28" height="28">${esc((t("arvores") || {})[a.chave] || a.chave)}</h3>
+    ${a.linhas.map(l => `<div class="nivel">${l.map(r => `<article class="pg-card${r.texto ? "" : " sem-texto"}"><div class="topo runa"><img src="${r.icone}" alt="" width="44" height="44" loading="lazy"><b lang="en">${esc(r.nome)}</b></div>${r.texto ? `<div lang="en">${textoLongo(esc(fluxo(r.texto)))}</div>` : ""}</article>`).join("")}</div>`).join("")}</section>`).join(""),
+  setups: b => b.grupos.map(g => `<section class="pg-grupo">${g.titulo ? `<h3 lang="en">${esc(g.titulo)}</h3>` : ""}<div class="pg-cards">${g.setups.map(x => `<article class="pg-card setup-alt" lang="en"><div class="topo"><b>${esc(x.nome.replace(/\s*\n\s*/g, " ").trim())}</b></div><dl>
+      ${[["setRunas", x.runas], ["setItens", x.itens], ["setExemplo", x.exemplo], ["setComentario", x.comentario]].filter(([, v]) => v).map(([k, v]) => `<div><dt lang="${L === "en" ? "en" : "pt-BR"}">${esc(t(k))}</dt><dd>${comLinks(v)}</dd></div>`).join("")}</dl></article>`).join("")}</div></section>`).join(""),
+  // Tabela com coluna "Name" (criadores, planilhas, vídeos): um cartão por linha, links viram botões.
+  tabela: b => {
+    const iNome = b.colunas.indexOf("Name");
+    if (iNome < 0) return BLOCOS.tabelaCrua(b);
+    const meta = ["Region", "Peak Rank"].map(n => b.colunas.indexOf(n)).filter(i => i >= 0);
+    return `<section class="pg-grupo">${b.titulo ? `<h3 lang="en">${esc(b.titulo)}</h3>` : ""}<div class="pg-cards pessoas" lang="en">${b.linhas.map(l => {
+      const nome = l[iNome];
+      const extra = l.map((c, i) => [c, b.colunas[i]]).filter(([c], i) => c && i !== iNome && !meta.includes(i));
+      return `<article class="pg-card pessoa"><div class="topo"><b>${esc(nome ? nome.texto : "—")}</b>${meta.map(i => l[i] ? `<span class="selo-meta">${esc(l[i].texto)}</span>` : "").join("")}</div>
+        ${extra.length ? `<ul class="pessoa-links">${extra.map(([c, col]) => c.links && c.links.length
+          ? c.links.map(k => `<li><a href="${esc(k.url)}" target="_blank" rel="noopener"><span>${esc(col.startsWith("Title") ? k.texto : col)}</span></a></li>`).join("")
+          : `<li class="so-texto"><span>${esc(col)}:</span> ${esc(c.texto)}</li>`).join("")}</ul>` : ""}</article>`;
+    }).join("")}</div></section>`;
+  },
+  tabelaCrua: b => `<section class="pg-bloco">${b.titulo ? `<h3 lang="en">${esc(b.titulo)}</h3>` : ""}<div class="pg-tabela"><table lang="en"><thead><tr>${b.colunas.map(c => `<th scope="col">${esc(c)}</th>`).join("")}</tr></thead>
+    <tbody>${b.linhas.map(l => `<tr>${l.map(c => c ? `<td>${comLinks(c)}</td>` : '<td class="vazio">—</td>').join("")}</tr>`).join("")}</tbody></table></div></section>`,
+};
+
+function renderPaginas() {
+  const ps = guia.paginas || [];
+  $("paginas").hidden = !ps.length;
+  raiz.classList.toggle("em-pagina", !!paginaAtual);
+  document.title = paginaAtual ? `${guia.campeao.nome} · ${t(NOME_PAGINA[paginaAtual] || paginaAtual)}` : `${guia.campeao.nome} vs ${current.nome}`;
+  $("pagina").hidden = !paginaAtual;
+  if (!ps.length) return;
+  const abas = [{ id: "" }, ...ps];
+  $("paginasLista").innerHTML = abas.map(p => `<li><button type="button" data-pagina="${p.id}" aria-current="${p.id === paginaAtual ? "page" : "false"}"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">${ICONE_PAGINA[p.id || "matchups"] || ICONE_PAGINA.sobre}</svg>${esc(t(p.id ? NOME_PAGINA[p.id] || p.id : "pgMatchups"))}</button></li>`).join("");
+  const ativa = $("paginasLista").querySelector('[aria-current="page"]');
+  if (ativa) { const ul = $("paginasLista"); ul.scrollLeft = ativa.offsetLeft - (ul.clientWidth - ativa.offsetWidth) / 2; }
+  if (!paginaAtual) return;
+  const pg = ps.find(p => p.id === paginaAtual);
+  $("pagina").innerHTML = `<h2>${esc(t(NOME_PAGINA[pg.id] || pg.id))}</h2><p class="lead">${esc(guia.autor)} · ${esc(t("pgOriginal"))}</p>` + pg.blocos.map(b => (BLOCOS[b.tipo] || (() => ""))(b)).join("")
+    + `<footer class="rodape">${$("rodape").innerHTML}</footer>`;
+}
+function mostraPagina(id) {
+  paginaAtual = (guia.paginas || []).some(p => p.id === id) ? id : "";
+  renderPaginas();
+  marcaHash();
+  scrollTo({ top: 0 });
+}
+$("paginasLista").addEventListener("click", e => {
+  const b = e.target.closest("[data-pagina]");
+  if (!b || b.dataset.pagina === paginaAtual) return;
+  toca("chip");
+  mostraPagina(b.dataset.pagina);
+});
+$("pagina").addEventListener("click", e => {
+  const est = e.target.closest(".estagios [data-est]");
+  if (est) {
+    const card = est.closest(".item-card");
+    card.querySelectorAll(".estagios button").forEach(b => b.setAttribute("aria-pressed", b === est));
+    card.querySelectorAll(".est-texto").forEach(d => { d.hidden = d.dataset.est !== est.dataset.est; });
+    toca("chip");
+    return;
+  }
+  const mais = e.target.closest("[data-mais]");
+  if (mais) {
+    const p = mais.previousElementSibling, abrir = p.classList.contains("curto");
+    p.classList.toggle("curto", !abrir);
+    mais.textContent = t(abrir ? "lerMenos" : "lerMais");
+  }
+});
+
 /* ---------- Cooldowns do inimigo, num painel do card dele ----------
    Vem da seção "Enemy Cooldowns" da planilha quando o autor escreveu; nos outros guias, dos valores base do jogo (Data Dragon). */
 const habilidades = {};  // ícones e nomes das habilidades, por campeão e língua (Data Dragon)
@@ -1546,6 +1760,7 @@ $("lingua").addEventListener("click", () => {
   renderGuia();
   renderLista();
   renderDetalhe(false);
+  renderPaginas();
 });
 
 /* ---------- Eventos ---------- */
@@ -1604,6 +1819,7 @@ document.addEventListener("keydown", e => {
   if (e.altKey || e.ctrlKey || e.metaKey) return;
   if (!$("trava").hidden) { if (e.key === "Escape" || e.key === "Enter") { e.preventDefault(); $("trava").onclick(); } return; }
   if (!$("menuGuias").hidden) { if (e.key === "Escape") { abreMenu(false); $("trocar").focus(); } return; }
+  if (paginaAtual) return;  // atalhos de matchup só na página de matchups
   if (e.key === "/" && document.activeElement !== q) { e.preventDefault(); q.focus(); return; }
   if (document.activeElement === q) {
     if (e.key === "Enter" && shown[0]) { toca("grade"); select(shown[0]); q.blur(); }
@@ -1640,8 +1856,10 @@ function lerHash() {
 }
 addEventListener("hashchange", () => {
   const [g, i] = lerHash();
-  if (g === guia.id && i === current.slug) return;
-  if (g === guia.id) select(guia.lista.find(c => c.slug === i)); else escolheGuia(g, i);
+  if (g !== guia.id) return escolheGuia(g, i);
+  if (i && i[0] === "@") return mostraPagina(i.slice(1));
+  if (paginaAtual) mostraPagina("");
+  if (i !== current.slug) select(guia.lista.find(c => c.slug === i));
 });
 aplicaTextos();
 escolheGuia(...lerHash());

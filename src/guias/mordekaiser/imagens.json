@@ -1,0 +1,477 @@
+{
+ "83db2cf43eebe4585fb0308766dcde73": {
+  "tipo": "item",
+  "id": "1082",
+  "nome": "Dark Seal"
+ },
+ "e85763b3766728fa0d04bcfec59e0047": {
+  "tipo": "item",
+  "id": "3152",
+  "nome": "Hextech Rocketbelt"
+ },
+ "c9e69269869e45e136df8c9d2c1c2214": {
+  "tipo": "item",
+  "id": "3116",
+  "nome": "Rylai's Crystal Scepter"
+ },
+ "4deea4669808e138630fef23440b502b": {
+  "tipo": "item",
+  "id": "4629",
+  "nome": "Cosmic Drive"
+ },
+ "3ac509d8234221a0469e404052d714ee": {
+  "tipo": "item",
+  "id": "2510",
+  "nome": "Dusk and Dawn"
+ },
+ "62e46dc50b28de42d7c265af05614554": {
+  "tipo": "item",
+  "id": "3115",
+  "nome": "Nashor's Tooth"
+ },
+ "ed0bad7e8eae1ce40c6d2cff791f07a2": {
+  "tipo": "item",
+  "id": "4633",
+  "nome": "Riftmaker"
+ },
+ "21547fc908bc8689051bffdf78076601": {
+  "tipo": "item",
+  "id": "8010",
+  "nome": "Bloodletter's Curse"
+ },
+ "59bb556b7ebae961020d566ae0daed55": {
+  "tipo": "item",
+  "id": "6653",
+  "nome": "Liandry's Torment"
+ },
+ "e58236510f3895aa9d6349ee216eba19": {
+  "tipo": "item",
+  "id": "3146",
+  "nome": "Hextech Gunblade"
+ },
+ "96bbe9e47a12ce7aee1bccfde11b1902": {
+  "tipo": "item",
+  "id": "3073",
+  "nome": "Experimental Hexplate"
+ },
+ "f3a9992377cd297d28bba0504f05be67": {
+  "tipo": "item",
+  "id": "3116",
+  "nome": "Rylai's Crystal Scepter"
+ },
+ "cefead3355a0004cdeeed3c7bc39632c": {
+  "tipo": "item",
+  "id": "2504",
+  "nome": "Kaenic Rookern"
+ },
+ "dbc80ef78c20460c9d67c88cbe29cfb7": {
+  "tipo": "item",
+  "id": "6333",
+  "nome": "Death's Dance"
+ },
+ "a72465dd905799fd50039c4bdc43d54c": {
+  "tipo": "item",
+  "id": "3053",
+  "nome": "Sterak's Gage"
+ },
+ "4c4a3e03c02151955d9c0f8d587ab7cf": {
+  "tipo": "item",
+  "id": "3157",
+  "nome": "Zhonya's Hourglass"
+ },
+ "8142fe6e596fcb0b4a880d7a86286f15": {
+  "tipo": "item",
+  "id": "3065",
+  "nome": "Spirit Visage"
+ },
+ "1c3aa7c3b0a6bca08d8109a0c5c80bf7": {
+  "tipo": "item",
+  "id": "3143",
+  "nome": "Randuin's Omen"
+ },
+ "481377156fb557507ab561c4fa450434": {
+  "tipo": "item",
+  "id": "4401",
+  "nome": "Force of Nature"
+ },
+ "2b5a33e071d0c0719651ebb41953dcee": {
+  "tipo": "item",
+  "id": "3110",
+  "nome": "Frozen Heart"
+ },
+ "88fbc0dc075da7c8aad8c6d04831c680": {
+  "tipo": "item",
+  "id": "6665",
+  "nome": "Jak'Sho, The Protean"
+ },
+ "523a69fe943faa73d774d12115c365b2": {
+  "tipo": "item",
+  "id": "2502",
+  "nome": "Unending Despair"
+ },
+ "100c20742483b4c100321ca5d89c3a7b": {
+  "tipo": "item",
+  "id": "8020",
+  "nome": "Abyssal Mask"
+ },
+ "5973d79933c1ab5a0124ccfb90089447": {
+  "tipo": "item",
+  "id": "3742",
+  "nome": "Dead Man's Plate"
+ },
+ "ab3058d687e01f77e6b85f5a3eccaaea": {
+  "tipo": "item",
+  "id": "3041",
+  "nome": "Mejai's Soulstealer"
+ },
+ "d8ec1f13ba69033403b86d57ce88dfb3": {
+  "tipo": "item",
+  "id": "3916",
+  "nome": "Oblivion Orb"
+ },
+ "59110a54a8ddd29034f6c75e0865ed7a": {
+  "tipo": "item",
+  "id": "3076",
+  "nome": "Bramble Vest"
+ },
+ "ca799c40fd5d15a95e310871469ee2b7": {
+  "tipo": "item",
+  "id": "3075",
+  "nome": "Thornmail"
+ },
+ "4a8719955775b6c728fc240d0bb1eee0": {
+  "tipo": "item",
+  "id": "6695",
+  "nome": "Serpent's Fang"
+ },
+ "6ac60373fdfeac2b9dae10af7d0a8e0b": {
+  "tipo": "item",
+  "id": "8001",
+  "nome": "Anathema's Chains"
+ },
+ "16f7286ef772380429ee2d7df083c410": {
+  "tipo": "item",
+  "id": "4632",
+  "nome": "Verdant Barrier"
+ },
+ "275cfd5a161970b9c14dcd86c19f736d": {
+  "tipo": "item",
+  "id": "3047",
+  "nome": "Plated Steelcaps"
+ },
+ "26c9a08ed4b2511c8b1ca86af2c99041": {
+  "tipo": "item",
+  "id": "3111",
+  "nome": "Mercury's Treads"
+ },
+ "d2dfe38ab0e60b56d905f3848723557b": {
+  "tipo": "item",
+  "id": "3020",
+  "nome": "Sorcerer's Shoes"
+ },
+ "d959c5c7972950927ed121b3083e41a4": {
+  "tipo": "item",
+  "id": "3009",
+  "nome": "Boots of Swiftness"
+ },
+ "69a723dec7abad71a8ca89a367506219": {
+  "tipo": "runa",
+  "chave": "GraspOfTheUndying",
+  "nome": "Grasp of the Undying",
+  "icone": "perk-images/Styles/Resolve/GraspOfTheUndying/GraspOfTheUndying.png"
+ },
+ "5cb02058fd5abd6261aa11a00d2d9408": {
+  "tipo": "runa",
+  "chave": "Aftershock",
+  "nome": "Aftershock",
+  "icone": "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png"
+ },
+ "473d420d7304bfb3e07bcae7135a9de7": {
+  "tipo": "runa",
+  "chave": "Guardian",
+  "nome": "Guardian",
+  "icone": "perk-images/Styles/Resolve/Guardian/Guardian.png"
+ },
+ "e1b993063f516204ce9b6722f6a3c954": {
+  "tipo": "runa",
+  "chave": "Demolish",
+  "nome": "Demolish",
+  "icone": "perk-images/Styles/Resolve/Demolish/Demolish.png"
+ },
+ "4658a6125809662ecf8f367256c89ef8": {
+  "tipo": "runa",
+  "chave": "FontOfLife",
+  "nome": "Font of Life",
+  "icone": "perk-images/Styles/Resolve/FontOfLife/FontOfLife.png"
+ },
+ "d6b5b152ac3bf50df63e47f2c88dc991": {
+  "tipo": "runa",
+  "chave": "ShieldBash",
+  "nome": "Shield Bash",
+  "icone": "perk-images/Styles/Resolve/MirrorShell/MirrorShell.png"
+ },
+ "9afe6bab7b236b4e4d3a928acc712251": {
+  "tipo": "runa",
+  "chave": "Conditioning",
+  "nome": "Conditioning",
+  "icone": "perk-images/Styles/Resolve/Conditioning/Conditioning.png"
+ },
+ "0aebda7c354691e9c24f9f9824746cb8": {
+  "tipo": "runa",
+  "chave": "SecondWind",
+  "nome": "Second Wind",
+  "icone": "perk-images/Styles/Resolve/SecondWind/SecondWind.png"
+ },
+ "f375e19de5ffcf55c498907ccf5c8671": {
+  "tipo": "runa",
+  "chave": "BonePlating",
+  "nome": "Bone Plating",
+  "icone": "perk-images/Styles/Resolve/BonePlating/BonePlating.png"
+ },
+ "bda356ec9d4f5e8e6b127173ebd94364": {
+  "tipo": "runa",
+  "chave": "Overgrowth",
+  "nome": "Overgrowth",
+  "icone": "perk-images/Styles/Resolve/Overgrowth/Overgrowth.png"
+ },
+ "ac3be31856cd0b90d7bfb3b8e6077d10": {
+  "tipo": "runa",
+  "chave": "Revitalize",
+  "nome": "Revitalize",
+  "icone": "perk-images/Styles/Resolve/Revitalize/Revitalize.png"
+ },
+ "a6f99b5da881cb81fbcd68a3ddb56508": {
+  "tipo": "runa",
+  "chave": "Unflinching",
+  "nome": "Unflinching",
+  "icone": "perk-images/Styles/Sorcery/Unflinching/Unflinching.png"
+ },
+ "21b12582b21e153b0d4b75005a535e31": {
+  "tipo": "runa",
+  "chave": "PressTheAttack",
+  "nome": "Press the Attack",
+  "icone": "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png"
+ },
+ "d1474a33c06a7dc8e72e67683d477dfa": {
+  "tipo": "runa",
+  "chave": "Conqueror",
+  "nome": "Conqueror",
+  "icone": "perk-images/Styles/Precision/Conqueror/Conqueror.png"
+ },
+ "de05a233045c5b09919372402d7b6868": {
+  "tipo": "runa",
+  "chave": "FleetFootwork",
+  "nome": "Fleet Footwork",
+  "icone": "perk-images/Styles/Precision/FleetFootwork/FleetFootwork.png"
+ },
+ "4ae8e2d878715f181e6f3f4b56325ee0": {
+  "tipo": "runa",
+  "chave": "LethalTempo",
+  "nome": "Lethal Tempo",
+  "icone": "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png"
+ },
+ "8d38e377dd3c45807108edcd0143c457": {
+  "tipo": "runa",
+  "chave": "AbsorbLife",
+  "nome": "Absorb Life",
+  "icone": "perk-images/Styles/Precision/AbsorbLife/AbsorbLife.png"
+ },
+ "21c6385addc8708c73c90aa27f6c961c": {
+  "tipo": "runa",
+  "chave": "Triumph",
+  "nome": "Triumph",
+  "icone": "perk-images/Styles/Precision/Triumph.png"
+ },
+ "1ab79e6cc58317c9b5e8ac225a89a040": {
+  "tipo": "runa",
+  "chave": "PresenceOfMind",
+  "nome": "Presence of Mind",
+  "icone": "perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+ },
+ "14374649a6143aa94d92d275cf7bcfd9": {
+  "tipo": "runa",
+  "chave": "LegendAlacrity",
+  "nome": "Legend: Alacrity",
+  "icone": "perk-images/Styles/Precision/LegendAlacrity/LegendAlacrity.png"
+ },
+ "53fd47a94f9bcd4c055466820d7a7ce9": {
+  "tipo": "runa",
+  "chave": "LegendHaste",
+  "nome": "Legend: Haste",
+  "icone": "perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+ },
+ "5789883a898c6f03065493e1de75eb9e": {
+  "tipo": "runa",
+  "chave": "LegendBloodline",
+  "nome": "Legend: Bloodline",
+  "icone": "perk-images/Styles/Precision/LegendBloodline/LegendBloodline.png"
+ },
+ "a1e26117ff6e0fae85fa5f5a59b98a84": {
+  "tipo": "runa",
+  "chave": "CoupDeGrace",
+  "nome": "Coup de Grace",
+  "icone": "perk-images/Styles/Precision/CoupDeGrace/CoupDeGrace.png"
+ },
+ "c9c9a98b9669e1b6d3c77b6b12ac6376": {
+  "tipo": "runa",
+  "chave": "CutDown",
+  "nome": "Cut Down",
+  "icone": "perk-images/Styles/Precision/CutDown/CutDown.png"
+ },
+ "fd4663935287e122b709030573ec3750": {
+  "tipo": "runa",
+  "chave": "LastStand",
+  "nome": "Last Stand",
+  "icone": "perk-images/Styles/Sorcery/LastStand/LastStand.png"
+ },
+ "3016714fd854e062228635a72c23a81f": {
+  "tipo": "runa",
+  "chave": "SummonAery",
+  "nome": "Summon Aery",
+  "icone": "perk-images/Styles/Sorcery/SummonAery/SummonAery.png"
+ },
+ "081419c0ff2d6cdbfe920795ae6a9e64": {
+  "tipo": "runa",
+  "chave": "ArcaneComet",
+  "nome": "Arcane Comet",
+  "icone": "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png"
+ },
+ "71cc8478b9c4f8f3316eaa370cdc1446": {
+  "tipo": "runa",
+  "chave": "PhaseRush",
+  "nome": "Stormraider's Surge",
+  "icone": "perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png"
+ },
+ "f5b0daeb1ef13d32ca359d3ed68520c1": {
+  "tipo": "runa",
+  "chave": "DeathfireTouch",
+  "nome": "Deathfire Touch",
+  "icone": "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png"
+ },
+ "93ab0248a7f3c9fe20bf902cca79248f": {
+  "tipo": "runa",
+  "chave": "NullifyingOrb",
+  "nome": "Axiom Arcanist",
+  "icone": "perk-images/Styles/Sorcery/NullifyingOrb/Axiom_Arcanist.png"
+ },
+ "3cd57c1ce7f855f1fb46ccac588ef9fc": {
+  "tipo": "runa",
+  "chave": "ManaflowBand",
+  "nome": "Manaflow Band",
+  "icone": "perk-images/Styles/Sorcery/ManaflowBand/ManaflowBand.png"
+ },
+ "ab2a4cd8bf85f6f597e8b808cc04dd30": {
+  "tipo": "runa",
+  "chave": "NimbusCloak",
+  "nome": "Nimbus Cloak",
+  "icone": "perk-images/Styles/Sorcery/NimbusCloak/6361.png"
+ },
+ "8bc184501979a3e2fbeb86006c2c3642": {
+  "tipo": "runa",
+  "chave": "Transcendence",
+  "nome": "Transcendence",
+  "icone": "perk-images/Styles/Sorcery/Transcendence/Transcendence.png"
+ },
+ "bb8f57dac61df03123fe9c8da4c0584e": {
+  "tipo": "runa",
+  "chave": "Celerity",
+  "nome": "Celerity",
+  "icone": "perk-images/Styles/Sorcery/Celerity/CelerityTemp.png"
+ },
+ "c620cb968d8a7bf918417b4074564482": {
+  "tipo": "runa",
+  "chave": "AbsoluteFocus",
+  "nome": "Absolute Focus",
+  "icone": "perk-images/Styles/Sorcery/AbsoluteFocus/AbsoluteFocus.png"
+ },
+ "19fe1d856ee2d91c141a63f6fd221954": {
+  "tipo": "runa",
+  "chave": "Scorch",
+  "nome": "Scorch",
+  "icone": "perk-images/Styles/Sorcery/Scorch/Scorch.png"
+ },
+ "2cd8a196393a12b0607f144d044704fc": {
+  "tipo": "runa",
+  "chave": "Waterwalking",
+  "nome": "Waterwalking",
+  "icone": "perk-images/Styles/Sorcery/Waterwalking/Waterwalking.png"
+ },
+ "924f25a201455d75bb54036650ce550a": {
+  "tipo": "runa",
+  "chave": "GatheringStorm",
+  "nome": "Gathering Storm",
+  "icone": "perk-images/Styles/Sorcery/GatheringStorm/GatheringStorm.png"
+ },
+ "6f9960d67264bdbac0096fb401683307": {
+  "tipo": "runa",
+  "chave": "GlacialAugment",
+  "nome": "Glacial Augment",
+  "icone": "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png"
+ },
+ "3877393a36cc759771d94058a8e679e4": {
+  "tipo": "runa",
+  "chave": "UnsealedSpellbook",
+  "nome": "Unsealed Spellbook",
+  "icone": "perk-images/Styles/Inspiration/UnsealedSpellbook/UnsealedSpellbook.png"
+ },
+ "7e73009edd6fc07b0b690d9995dce8b6": {
+  "tipo": "runa",
+  "chave": "FirstStrike",
+  "nome": "First Strike",
+  "icone": "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png"
+ },
+ "b3628b8d0301ff9472b43ca9d9475e92": {
+  "tipo": "runa",
+  "chave": "HextechFlashtraption",
+  "nome": "Hextech Flashtraption",
+  "icone": "perk-images/Styles/Inspiration/HextechFlashtraption/HextechFlashtraption.png"
+ },
+ "16e3ce82bcfbeec15ce71eff5c20f18d": {
+  "tipo": "runa",
+  "chave": "MagicalFootwear",
+  "nome": "Magical Footwear",
+  "icone": "perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png"
+ },
+ "3c23f556f8786149c8f6a6458a748007": {
+  "tipo": "runa",
+  "chave": "CashBack",
+  "nome": "Cash Back",
+  "icone": "perk-images/Styles/Inspiration/CashBack/CashBack2.png"
+ },
+ "2f471591860957cbd944d4ff2becc6ff": {
+  "tipo": "runa",
+  "chave": "PerfectTiming",
+  "nome": "Triple Tonic",
+  "icone": "perk-images/Styles/Inspiration/PerfectTiming/AlchemistCabinet.png"
+ },
+ "91ca6f1684e195ca3421781d5a57321c": {
+  "tipo": "runa",
+  "chave": "TimeWarpTonic",
+  "nome": "Time Warp Tonic",
+  "icone": "perk-images/Styles/Inspiration/TimeWarpTonic/TimeWarpTonic.png"
+ },
+ "fdd24a34006e612221daf726ed14eb82": {
+  "tipo": "runa",
+  "chave": "BiscuitDelivery",
+  "nome": "Biscuit Delivery",
+  "icone": "perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
+ },
+ "1be9c22552f967060445c26cce81fac9": {
+  "tipo": "runa",
+  "chave": "CosmicInsight",
+  "nome": "Cosmic Insight",
+  "icone": "perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png"
+ },
+ "d21ce5ae91ba9c3ca5f28f67cfc40fdd": {
+  "tipo": "runa",
+  "chave": "ApproachVelocity",
+  "nome": "Approach Velocity",
+  "icone": "perk-images/Styles/Resolve/ApproachVelocity/ApproachVelocity.png"
+ },
+ "f2d87dc25314dfd832907508e6209295": {
+  "tipo": "runa",
+  "chave": "JackOfAllTrades",
+  "nome": "Jack Of All Trades",
+  "icone": "perk-images/Styles/Inspiration/JackOfAllTrades/JackofAllTrades2.png"
+ }
+}

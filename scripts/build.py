@@ -65,7 +65,11 @@ for cfg in json.loads((SRC / "guias.json").read_text(encoding="utf-8")):
         continue  # guia guardado, fora do site por enquanto
     pasta = SRC / cfg["dados"]
     montar = guia_simples if cfg["formato"] == "simples" else guia_completo
-    guias.append({**{k: v for k, v in cfg.items() if k != "dados"}, **montar(cfg, pasta)})
+    g = {**{k: v for k, v in cfg.items() if k != "dados"}, **montar(cfg, pasta)}
+    # Outras abas da planilha do autor (itens, runas, criadores...), gravadas por scripts/paginas_<campeão>.py.
+    if (pasta / "paginas.json").exists():
+        g["paginas"] = json.loads((pasta / "paginas.json").read_text(encoding="utf-8"))
+    guias.append(g)
 
 html = template.replace("/*ICONE*/", icone("icone-64.png")).replace("/*ICONE_APPLE*/", icone("apple-180.png")).replace("/*IDS*/", json.dumps([g["id"] for g in guias])).replace("/*FONTS*/", font_faces()).replace(
     "/*GUIAS*/", json.dumps(guias, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")

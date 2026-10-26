@@ -1,6 +1,7 @@
 """Baixa a planilha de matchups do Meowdekaiser e os dados do Data Dragon e gera src/guias/mordekaiser/matchups.json.
 
 Precisa de internet. Rode `python scripts/atualizar_mordekaiser.py` e depois `python scripts/build.py`.
+As outras abas da planilha viram páginas do guia (scripts/paginas_mordekaiser.py -> paginas.json).
 O texto das notas não é alterado: só é separado em partes (runas, itens, seções) para mostrar melhor.
 """
 import csv
@@ -279,6 +280,13 @@ def main():
     if sem_id:
         print("Sem campeão no Data Dragon:", sem_id)
     print("Itens sem ícone:", sem_icone)
+    # Outras abas da planilha (introdução, itens, runas, setups, criadores) viram páginas do guia.
+    import paginas_mordekaiser
+    paginas, desconhecidas = paginas_mordekaiser.gerar()
+    (DEST / "paginas.json").write_text(json.dumps(paginas, ensure_ascii=False, indent=1) + "\n", encoding="utf-8", newline="\n")
+    print("Páginas:", ", ".join(p["id"] for p in paginas))
+    if desconhecidas:
+        print("Imagens sem identificação (acrescente em src/guias/mordekaiser/imagens.json):", desconhecidas)
 
 
 if __name__ == "__main__":
