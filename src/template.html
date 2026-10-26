@@ -2114,19 +2114,33 @@ const TELA_3D = matchMedia("(min-width: 1720px)");
 // [nome no .glb, quantas vezes]. luz: céu, chão, luz principal e contorno; brilho: cor do círculo no chão.
 const CONF_3D = {
   akshan: {
-    modelo: () => modeloSkin(skinAtual()), sons: true,
+    modelo: () => modeloSkin(skinAtual()), skins: true, voEn: true,
+    sons: "akshan3d", variacoes: () => VARIACOES_3D, clipe: () => SONS_CLIPE_3D, volta: () => SONS_VOLTA_3D,
     seq: { dance: [["dance_intro", 1], ["dance", 2]], taunt: [["taunt_intro", 1], ["taunt", 3]], laugh: [["laugh", 1]],
       attack: [["attack1", 1], ["attack2", 1], ["crit", 1], ["crit_to_idle", 1]], recall: [["recall", 1]] },
     luz: [0xfff4d6, 0x221a0c, 0xffd66b, 0xffc24a], brilho: "255,200,90", emissivo: .55,
   },
   mordekaiser: {
     modelo: () => "modelo/mordekaiser.glb",
+    // Sons em sons/mordekaiser3d (scripts/modelo3d/sons3d.py mordekaiser); só dublagem pt-BR.
+    sons: "mordekaiser3d",
+    variacoes: () => ({ dance_cast: 3, dance: 1, taunt: 1, laugh: 1, recall: 1, aa1: 4, aa2: 4, hit1: 4, hit2: 4,
+      vo_taunt: 1, vo_laugh: 2, vo_recall: 3, vo_aa1: 4, vo_aa2: 4 }),
+    clipe: () => ({ dance_intro: ["dance_cast"], dance: ["dance~"], taunt: ["taunt", "vo_taunt"], laugh: ["laugh", "vo_laugh"],
+      recall: ["recall", "vo_recall"], attack1: ["aa1@.2", "vo_aa1", "hit1@.6"], attack2: ["aa2@.2", "vo_aa2", "hit2@.6"] }),
     seq: { dance: [["dance_intro", 1], ["dance", 2]], taunt: [["taunt", 1]], laugh: [["laugh", 1]],
       attack: [["attack1", 1], ["attack2", 1]], recall: [["recall", 1]] },
     luz: [0xdffff0, 0x0c1a12, 0x9dffc8, 0x3fe08a], brilho: "90,230,150", emissivo: .8, caixaPose: true, giro: .55,
   },
   illaoi: {
     modelo: () => "modelo/illaoi.glb",
+    sons: "illaoi3d",
+    variacoes: () => ({ dance_cast: 1, dance: 6, taunt: 1, laugh: 1, recall: 1, aa1: 5, aa2: 4, crit: 5, hit1: 4, hit2: 4, hit_crit: 4,
+      vo_taunt: 6, vo_laugh: 4, vo_recall: 5, vo_aa1: 8, vo_aa2: 8, vo_crit: 8 }),
+    clipe: () => ({ dance_intro: ["dance_cast"], dance: ["dance"], taunt: ["taunt", "vo_taunt"], laugh: ["laugh", "vo_laugh"],
+      recall: ["recall", "vo_recall"], attack1: ["aa1@.15", "vo_aa1", "hit1@.45"], attack2: ["aa2@.15", "vo_aa2", "hit2@.45"],
+      crit: ["crit@.15", "vo_crit", "hit_crit@.45"] }),
+    volta: () => ({ dance: ["dance"] }),  // o tambor da dança toca de novo a cada volta
     seq: { dance: [["dance_intro", 1], ["dance", 3]], taunt: [["taunt", 1]], laugh: [["laugh", 1]],
       attack: [["attack1", 1], ["attack2", 1], ["crit", 1]], recall: [["recall", 1]] },
     luz: [0xfff6dc, 0x0c1a18, 0xffe2a0, 0x5fe0cc], brilho: "240,190,90", emissivo: .45, caixaPose: true,
@@ -2155,18 +2169,20 @@ function paraSons3d() {
   sons3d = [];
 }
 function tocaSons3d(lista) {
-  if (!somLigado || !lista || !conf3d || !conf3d.sons) return;
+  const cf = conf3d;
+  if (!somLigado || !lista || !cf || !cf.sons) return;
   lista.forEach(item => {
     const repete = item.endsWith("~");
     const [nome, atraso] = item.replace("~", "").split("@");
-    const vo = nome.startsWith("vo_"), k0 = skinAtual();
-    const n = (vo && L === "en" && VARIACOES_VO_EN[nome]) || (k0.id && !vo && k0.sons && k0.sons[nome]) || VARIACOES_3D[nome];
+    const vo = nome.startsWith("vo_"), k0 = cf.skins ? skinAtual() : {};
+    if (vo && L === "en" && !cf.voEn) return;  // sem a dublagem em inglês desse campeão: só os efeitos
+    const n = (vo && L === "en" && cf.skins && VARIACOES_VO_EN[nome]) || (k0.id && !vo && k0.sons && k0.sons[nome]) || cf.variacoes()[nome];
     if (!n) return;
     const vai = () => {
       // Efeitos: pasta da skin. Falas: pasta da língua (sons/akshan3d/en/ no modo inglês).
-      const k = skinAtual(), pasta = vo ? (L === "en" ? "en/" : "") : (k.id ? k.id + "/" : "");
-      const a = new Audio(`sons/akshan3d/${pasta}${nome}-${Math.floor(Math.random() * n)}.ogg`);
-      a.volume = nome.startsWith("vo_") ? .8 : nome === "dance" ? .45 : .5;
+      const k = cf.skins ? skinAtual() : {}, pasta = vo ? (L === "en" ? "en/" : "") : (k.id ? k.id + "/" : "");
+      const a = new Audio(`sons/${cf.sons}/${pasta}${nome}-${Math.floor(Math.random() * n)}.ogg`);
+      a.volume = vo ? .8 : nome === "dance" ? .45 : nome.startsWith("hit") ? .35 : .5;
       a.loop = repete;
       a.play().catch(() => {});
       sons3d.push(a);
@@ -2306,7 +2322,7 @@ async function iniciaAkshan3d() {
     const idle = acao("idle");
     const parado = matchMedia("(prefers-reduced-motion: reduce)").matches;
     let atual = idle, fila = [], emote = null, ultima = "", voltas = 0;
-    const tocaClipe = a => { a.reset().play(); if (atual !== a) a.crossFadeFrom(atual, .25, false); atual = a; tocaSons3d(SONS_CLIPE_3D[a.getClip().name]); };
+    const tocaClipe = a => { a.reset().play(); if (atual !== a) a.crossFadeFrom(atual, .25, false); atual = a; tocaSons3d((cf.clipe ? cf.clipe() : {})[a.getClip().name]); };
     const marcaBotoes = () => $("anim3d").querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", b.dataset.anim === emote));
     const proximo = () => {
       if (fila.length) { const [n, v] = fila.shift(); tocaClipe(acao(n, v)); return; }
@@ -2316,7 +2332,7 @@ async function iniciaAkshan3d() {
     mixer.addEventListener("finished", proximo);
     // De tempos em tempos o idle troca pela variação.
     mixer.addEventListener("loop", e => {
-      if (e.action !== idle) { tocaSons3d(SONS_VOLTA_3D[e.action.getClip().name]); return; }
+      if (e.action !== idle) { tocaSons3d((cf.volta ? cf.volta() : {})[e.action.getClip().name]); return; }
       if (emote || parado) return;
       if (++voltas % 3 === 0 && clipe("idle_var")) { emote = "var"; fila = [["idle_var", 1]]; proximo(); }
     });
