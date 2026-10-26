@@ -419,7 +419,8 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   :root.com-3d .akshan3d {
     display: grid; grid-template-rows: minmax(0, 1fr) auto; gap: 12px;
     position: sticky; top: calc(env(safe-area-inset-top, 0px) + var(--barra) + 16px);
-    height: calc(100vh - var(--barra) - 48px); min-height: 560px;
+    /* Desconta a barra de páginas do guia (Matchups, Sobre, Itens...), quando ela aparece. */
+    height: calc(100vh - var(--barra) - 48px - var(--abas, 0px)); min-height: 560px;
   }
 }
 .akshan3d canvas { display: block; width: 100%; height: 100%; min-height: 0; cursor: grab; touch-action: none; opacity: 0; transition: opacity .8s ease; }
@@ -710,10 +711,14 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .rodape { display: block; font-size: 14px; color: var(--texto-baixo); }
 /* Fim da página: quem acompanhar (embaixo da lista) e as notas da fonte (embaixo do matchup), mais afastados. */
 @media (min-width: 901px) {
-  /* A lista gruda só dentro da primeira linha (sticky numa grade prende à grade inteira). */
+  /* A lista e o card dos monos grudam juntos, só dentro da primeira linha (sticky numa grade prende à grade inteira).
+     Se não couberem na altura da tela, rolam por dentro. */
   .col-lista { grid-column: 1; grid-row: 1; align-self: stretch; min-width: 0; }
+  .gruda { position: sticky; top: calc(env(safe-area-inset-top, 0px) + var(--barra) + 16px); display: grid; gap: 16px;
+    max-height: calc(100vh - var(--barra) - 32px); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: none; }
+  .gruda::-webkit-scrollbar { display: none; }
+  .gruda .anel { position: static; }
   .detalhe { grid-column: 2; grid-row: 1; }
-  .acompanhe { grid-column: 1; grid-row: 2; }
   .rodape { grid-column: 2; grid-row: 2; align-self: end; }
   :root.com-3d .akshan3d { grid-column: 3; grid-row: 1 / span 2; }
   /* A sobra de altura da coluna 3D vai para a linha de baixo: a de cima fica do tamanho do conteúdo. */
@@ -795,6 +800,11 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   .palco { padding: 12px var(--borda) 48px; gap: 14px; grid-template-columns: minmax(0, 1fr); }
   .anel { position: static; padding: 12px 12px 4px; }
   .anel h2 { font-size: 16px; margin-bottom: 10px; }
+  /* No celular a lista e o card dos monos voltam a ser itens soltos: o card fica no fim, depois do matchup. */
+  .col-lista, .gruda { display: contents; }
+  .detalhe { order: 1; }
+  .acompanhe { order: 2; }
+  .rodape { order: 3; }
   .filtros { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; scrollbar-width: none; max-width: none; margin: 8px -12px 0; padding: 4px 12px; }
   .filtros::-webkit-scrollbar, .lista::-webkit-scrollbar { display: none; }
   .chip { flex: none; }
@@ -879,6 +889,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   <div class="pagina" id="pagina" hidden></div>
   <div class="palco">
     <div class="col-lista">
+    <div class="gruda">
     <nav class="anel" aria-labelledby="escolhe">
       <h2 id="escolhe"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1l6 6-6 6-6-6z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span data-t="escolhe">Escolha o inimigo</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1l6 6-6 6-6-6z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></h2>
       <label class="busca" for="q">
@@ -900,6 +911,8 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
       <button class="ver-tier" type="button" id="verTier" hidden><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 3h12M2 8h12M2 13h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span data-t="tierBotao">Tier list das matchups</span></button>
       <p class="legenda" id="legenda"></p>
     </nav>
+    <section class="acompanhe" id="acompanhe" aria-labelledby="acompanheTit" hidden></section>
+    </div>
     </div>
 
     <div class="detalhe" id="matchup" tabindex="-1">
@@ -946,7 +959,6 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
       </section>
 
     </div>
-    <section class="acompanhe" id="acompanhe" aria-labelledby="acompanheTit" hidden></section>
     <footer class="rodape" id="rodape"></footer>
     <aside class="akshan3d" id="akshan3d" aria-label="3D"><button class="fecha3d" type="button" id="fecha3d"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button><canvas id="cena3d" aria-hidden="true" data-t-title="emote"></canvas><div class="anim3d" id="anim3d" role="group" data-t-aria="animacoes"></div><p class="carrega3d" id="carrega3d">Carregando…</p></aside>
   </div>
@@ -1582,9 +1594,10 @@ function renderPaginas() {
   raiz.classList.toggle("em-pagina", !!paginaAtual);
   document.title = paginaAtual ? `${guia.campeao.nome} · ${t(NOME_PAGINA[paginaAtual] || paginaAtual)}` : `${guia.campeao.nome} vs ${current.nome}`;
   $("pagina").hidden = !paginaAtual;
-  if (!ps.length) return;
+  if (!ps.length) { raiz.style.setProperty("--abas", "0px"); return; }
   const abas = [{ id: "" }, ...ps];
   $("paginasLista").innerHTML = abas.map(p => `<li><button type="button" data-pagina="${p.id}" aria-current="${p.id === paginaAtual ? "page" : "false"}"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">${ICONE_PAGINA[p.id || "matchups"] || ICONE_PAGINA.sobre}</svg>${esc(t(p.id ? NOME_PAGINA[p.id] || p.id : "pgMatchups"))}</button></li>`).join("");
+  raiz.style.setProperty("--abas", $("paginas").offsetHeight + "px");  // a coluna 3D desconta essa altura
   const ativa = $("paginasLista").querySelector('[aria-current="page"]');
   if (ativa) { const ul = $("paginasLista"); ul.scrollLeft = ativa.offsetLeft - (ul.clientWidth - ativa.offsetWidth) / 2; }
   if (!paginaAtual) return;
