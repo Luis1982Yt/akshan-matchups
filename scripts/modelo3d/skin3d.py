@@ -1,6 +1,7 @@
-"""Gera o .glb de uma skin do Akshan direto dos dados do jogo.
+"""Gera o .glb de uma skin de um campeão (Akshan, Mordekaiser, Illaoi...) direto dos dados do jogo.
 
-Uso: python skin3d.py <número da skin> <Akshan.wad.client> <pasta de trabalho> <saida.glb>
+Uso: python skin3d.py [campeão] <número da skin> <Campeão.wad.client> <pasta de trabalho> <saida.glb>
+(sem o campeão, vale o Akshan, como antes)
 
 Lê a configuração da skin (skinN.bin.json) e das animações (animations/skinN.bin.json) no
 CommunityDragon, extrai esqueleto, malha e animações do .wad da instalação do LoL, baixa as
@@ -17,16 +18,31 @@ import xxhash
 
 from wad import extrai, ler_wad
 
-N, WAD, PASTA, SAIDA = int(sys.argv[1]), sys.argv[2], pathlib.Path(sys.argv[3]), pathlib.Path(sys.argv[4])
+args = sys.argv[1:]
+CAMPEAO = "akshan" if args[0].isdigit() else args.pop(0).lower()
+N, WAD, PASTA, SAIDA = int(args[0]), args[1], pathlib.Path(args[2]), pathlib.Path(args[3])
 PASTA.mkdir(parents=True, exist_ok=True)
 CD = "https://raw.communitydragon.org/latest/game/"
 
-# Clipe no site -> nome do arquivo de animação no jogo.
-CLIPES = {
-    "idle": "akshan_idle1.anm", "idle_var": "idle1_var1.anm", "dance_intro": "dance_intro.anm", "dance": "dance_loop.anm",
-    "laugh": "laugh.anm", "taunt_intro": "taunt_intro.anm", "taunt": "taunt_cycle.anm", "attack1": "attack1.anm",
-    "attack2": "attack2.anm", "crit": "akshan_base_crit.anm", "crit_to_idle": "crit_to_idle.anm", "recall": "recall.anm",
+# Clipe no site -> nome do arquivo de animação no jogo, por campeão.
+CLIPES_POR_CAMPEAO = {
+    "akshan": {
+        "idle": "akshan_idle1.anm", "idle_var": "idle1_var1.anm", "dance_intro": "dance_intro.anm", "dance": "dance_loop.anm",
+        "laugh": "laugh.anm", "taunt_intro": "taunt_intro.anm", "taunt": "taunt_cycle.anm", "attack1": "attack1.anm",
+        "attack2": "attack2.anm", "crit": "akshan_base_crit.anm", "crit_to_idle": "crit_to_idle.anm", "recall": "recall.anm",
+    },
+    "mordekaiser": {
+        "idle": "idle.anm", "idle_var": "battle_idle_1.anm", "dance_intro": "dance_intro.anm", "dance": "dance_loop.anm",
+        "laugh": "mordekaiser_laugh.anm", "taunt": "taunt.anm", "attack1": "autoattack1.anm", "attack2": "autoattack2.anm",
+        "recall": "recall.anm",
+    },
+    "illaoi": {
+        "idle": "illaoi_idle1.anm", "idle_var": "illaoi_idle2.anm", "dance_intro": "illaoi_dance_in.anm", "dance": "illaoi_dance.anm",
+        "laugh": "illaoi_laugh.anm", "taunt": "illaoi_taunt.anm", "attack1": "illaoi_attack1.anm", "attack2": "illaoi_attack2.anm",
+        "crit": "illaoi_crit.anm", "recall": "illaoi_recall.anm",
+    },
 }
+CLIPES = CLIPES_POR_CAMPEAO[CAMPEAO]
 
 
 def baixa(url, binario=False):
@@ -34,8 +50,8 @@ def baixa(url, binario=False):
     return dados if binario else dados.decode("utf-8")
 
 
-skin = json.loads(baixa(f"{CD}data/characters/akshan/skins/skin{N}.bin.json"))
-anims = baixa(f"{CD}data/characters/akshan/animations/skin{N}.bin.json")
+skin = json.loads(baixa(f"{CD}data/characters/{CAMPEAO}/skins/skin{N}.bin.json"))
+anims = baixa(f"{CD}data/characters/{CAMPEAO}/animations/skin{N}.bin.json")
 
 props = next(v["skinMeshProperties"] for v in skin.values() if isinstance(v, dict) and "skinMeshProperties" in v)
 materiais = {k: v for k, v in skin.items() if isinstance(v, dict) and v.get("__type") == "StaticMaterialDef"}

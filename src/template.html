@@ -32,9 +32,10 @@ try {
   if (location.protocol !== "file:") {
     const m = document.createElement("link"); m.rel = "manifest"; m.href = "manifest.webmanifest"; document.head.appendChild(m);
   }
-  if (location.protocol !== "file:" && matchMedia("(min-width: 1720px)").matches && document.documentElement.dataset.guia === "akshan" && localStorage.getItem("akshan3d") !== "0") {
+  const gd = document.documentElement.dataset.guia, modelo3d = { akshan: sk ? `modelo/akshan-${sk}.glb` : "modelo/akshan.glb", mordekaiser: "modelo/mordekaiser.glb", illaoi: "modelo/illaoi.glb" }[gd];
+  if (location.protocol !== "file:" && matchMedia("(min-width: 1720px)").matches && modelo3d && localStorage.getItem("akshan3d") !== "0") {
     [["modulepreload", "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js"], ["modulepreload", "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/loaders/GLTFLoader.js"], ["modulepreload", "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/utils/BufferGeometryUtils.js"],
-     ["preload", sk ? `modelo/akshan-${sk}.glb` : "modelo/akshan.glb"]].forEach(([rel, href]) => {
+     ["preload", modelo3d]].forEach(([rel, href]) => {
       const k = document.createElement("link"); k.rel = rel; k.href = href;
       if (rel === "preload") { k.as = "fetch"; k.crossOrigin = "anonymous"; }
       document.head.appendChild(k);
@@ -408,12 +409,12 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .pessoa-links a:hover { border-color: var(--acento-vivo); color: var(--acento-vivo); }
 .pessoa-links .so-texto { width: 100%; font-size: 14px; color: var(--texto); }
 .pessoa-links .so-texto span { color: var(--texto-baixo); }
-/* Akshan 3D: só em tela larga, numa terceira coluna à direita, sobre o fundo do próprio site. */
+/* Campeão 3D (Akshan, Mordekaiser, Illaoi): só em tela larga, numa terceira coluna à direita, sobre o fundo do próprio site. */
 .akshan3d { display: none; }
 @media (min-width: 1720px) {
-  :root.com-3d[data-guia="akshan"] .bar-in { max-width: 1760px; }
-  :root.com-3d[data-guia="akshan"] .palco { max-width: 1760px; grid-template-columns: 440px minmax(0, 1fr) 380px; }
-  :root.com-3d[data-guia="akshan"] .akshan3d {
+  :root.com-3d .bar-in { max-width: 1760px; }
+  :root.com-3d .palco { max-width: 1760px; grid-template-columns: 440px minmax(0, 1fr) 380px; }
+  :root.com-3d .akshan3d {
     display: grid; grid-template-rows: minmax(0, 1fr) auto; gap: 12px;
     position: sticky; top: calc(env(safe-area-inset-top, 0px) + var(--barra) + 16px);
     height: calc(100vh - var(--barra) - 48px); min-height: 560px;
@@ -712,9 +713,9 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   .detalhe { grid-column: 2; grid-row: 1; }
   .acompanhe { grid-column: 1; grid-row: 2; }
   .rodape { grid-column: 2; grid-row: 2; align-self: end; }
-  :root.com-3d[data-guia="akshan"] .akshan3d { grid-column: 3; grid-row: 1 / span 2; }
+  :root.com-3d .akshan3d { grid-column: 3; grid-row: 1 / span 2; }
   /* A sobra de altura da coluna 3D vai para a linha de baixo: a de cima fica do tamanho do conteúdo. */
-  :root.com-3d[data-guia="akshan"] .palco { grid-template-rows: auto 1fr; }
+  :root.com-3d .palco { grid-template-rows: auto 1fr; }
 }
 .acompanhe { padding: 14px 16px 12px; border-radius: 12px; background: var(--painel); border: 1px solid var(--linha); }
 .acompanhe h2 { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 0 0 10px; font: 700 14px var(--titulo); letter-spacing: .14em; text-transform: uppercase; color: var(--acento-vivo); }
@@ -945,7 +946,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
     </div>
     <section class="acompanhe" id="acompanhe" aria-labelledby="acompanheTit" hidden></section>
     <footer class="rodape" id="rodape"></footer>
-    <aside class="akshan3d" id="akshan3d" aria-label="Akshan 3D"><button class="fecha3d" type="button" id="fecha3d" data-t-aria="esconde3d" data-t-title="esconde3d"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button><canvas id="cena3d" aria-hidden="true" data-t-title="emote"></canvas><div class="anim3d" id="anim3d" role="group" data-t-aria="animacoes"></div><p class="carrega3d" data-t="carrega3d">Carregando o Akshan…</p></aside>
+    <aside class="akshan3d" id="akshan3d" aria-label="3D"><button class="fecha3d" type="button" id="fecha3d"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button><canvas id="cena3d" aria-hidden="true" data-t-title="emote"></canvas><div class="anim3d" id="anim3d" role="group" data-t-aria="animacoes"></div><p class="carrega3d" id="carrega3d">Carregando…</p></aside>
   </div>
 </main>
 
@@ -958,7 +959,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   <div class="tier-topo"><h2 id="tierTit"></h2><button class="tier-fecha" type="button" id="tierFecha" data-t-aria="fechar"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button></div>
   <div class="tier-corpo" id="tierCorpo"></div>
 </dialog>
-<button class="abre3d" type="button" id="abre3d" data-t-aria="mostra3d" hidden>Akshan 3D</button>
+<button class="abre3d" type="button" id="abre3d" hidden>3D</button>
 
 <script>
 const GUIAS = /*GUIAS*/;
@@ -1031,7 +1032,7 @@ const TXT = {
     paginasGuia: "Páginas do guia", pgMatchups: "Matchups", pgSobre: "Sobre", pgItens: "Itens", pgRunas: "Runas", pgSetups: "Setups alternativos", pgCriadores: "Criadores", pgGeral: "Geral", pgDicas: "Dicas",
     pgOriginal: "Texto do autor, em inglês como na planilha.", estagios: ["1º item", "2º item", "3º item", "4º item+"], estViavel: "dá para fazer nesse momento da build", estSo: "só comentário",
     lerMais: "Ler mais", lerMenos: "Ler menos", semComentario: "Sem comentário", arvores: { Precision: "Precisão", Domination: "Dominação", Sorcery: "Feitiçaria", Resolve: "Determinação", Inspiration: "Inspiração" },
-    setRunas: "Runas", setItens: "Itens", setExemplo: "Exemplo", setComentario: "Comentário", ultimaMudanca: "Última mudança do campeão", emote: "Arraste para girar · clique para uma emote", mostra3d: "Mostrar o Akshan 3D", skins: "Skins do Akshan", skinAnt: "Skin anterior", copiar: "Copiar link", copiado: "Link copiado!", copiarLink: "Copiar o link desta matchup", skinProx: "Próxima skin", chromas: "Chromas", semChroma: "Sem chroma", esconde3d: "Esconder o Akshan 3D", carrega3d: "Carregando o Akshan…", tierBotao: "Tier list das matchups", tierTit: "Tier list · {c}", fechar: "Fechar", aoVivo: "Ao vivo", acompanhe: "Acompanhe mono {c}s", assistir: "Assistir", opggDe: "OP.GG do ", devPor: "Site feito por", baixarApp: "App para PC: abre a matchup sozinho",
+    setRunas: "Runas", setItens: "Itens", setExemplo: "Exemplo", setComentario: "Comentário", ultimaMudanca: "Última mudança do campeão", emote: "Arraste para girar · clique para uma emote", mostra3d: "Mostrar o {c} 3D", skins: "Skins do Akshan", skinAnt: "Skin anterior", copiar: "Copiar link", copiado: "Link copiado!", copiarLink: "Copiar o link desta matchup", skinProx: "Próxima skin", chromas: "Chromas", semChroma: "Sem chroma", esconde3d: "Esconder o {c} 3D", carrega3d: "Carregando {c}…", tierBotao: "Tier list das matchups", tierTit: "Tier list · {c}", fechar: "Fechar", aoVivo: "Ao vivo", acompanhe: "Acompanhe mono {c}s", assistir: "Assistir", opggDe: "OP.GG do ", devPor: "Site feito por", baixarApp: "App para PC: abre a matchup sozinho",
     appTit: "App para PC", appWip: "Em desenvolvimento (WIP): ainda pode ter bugs e vai mudar bastante.", appLead: "Um app para Windows com o guia numa janela própria, que se abre sozinha na hora certa: quando você pega Akshan na seleção de campeões, ele descobre o mid inimigo e já mostra a matchup dele, sem você procurar.",
     appPassos: ["Baixe e abra o <b>AkshanMatchups.exe</b>. Ele fica no canto da barra de tarefas, perto do relógio, e já liga junto com o Windows (dá para desligar no menu do ícone).", "Entre numa partida e escolha o <b>Akshan</b>. Nas outras partidas o app fica quieto.", "Quando o mid inimigo travar o campeão, a janela do app aparece com a matchup dele. Se ele errar o mid, troque na própria janela ou pelo menu do ícone (\"Inimigos agora\"). Fechar a janela só esconde: ela volta na próxima partida."],
     appSeguro: "<b>Seguro:</b> o app só lê a seleção de campeões pelo próprio cliente do LoL. Nunca escolhe, bane nem aceita fila por você.",
@@ -1063,7 +1064,7 @@ const TXT = {
     paginasGuia: "Guide pages", pgMatchups: "Matchups", pgSobre: "About", pgItens: "Items", pgRunas: "Runes", pgSetups: "Alternative setups", pgCriadores: "Creators", pgGeral: "General", pgDicas: "Tips",
     pgOriginal: "The author's own text, as in the spreadsheet.", estagios: ["1st item", "2nd item", "3rd item", "4th+ item"], estViavel: "viable at this point of the build", estSo: "comment only",
     lerMais: "Read more", lerMenos: "Read less", semComentario: "No comment", arvores: { Precision: "Precision", Domination: "Domination", Sorcery: "Sorcery", Resolve: "Resolve", Inspiration: "Inspiration" },
-    setRunas: "Runes", setItens: "Items", setExemplo: "Example", setComentario: "Comments", ultimaMudanca: "Latest champion change", emote: "Drag to rotate · click for an emote", mostra3d: "Show 3D Akshan", skins: "Akshan skins", skinAnt: "Previous skin", copiar: "Copy link", copiado: "Link copied!", copiarLink: "Copy this matchup's link", skinProx: "Next skin", chromas: "Chromas", semChroma: "No chroma", esconde3d: "Hide 3D Akshan", carrega3d: "Loading Akshan…", tierBotao: "Matchup tier list", tierTit: "Tier list · {c}", fechar: "Close", aoVivo: "Live", acompanhe: "Watch {c} mains", assistir: "Watch", opggDe: "OP.GG of ", devPor: "Site by", baixarApp: "PC app: opens the matchup by itself",
+    setRunas: "Runes", setItens: "Items", setExemplo: "Example", setComentario: "Comments", ultimaMudanca: "Latest champion change", emote: "Drag to rotate · click for an emote", mostra3d: "Show 3D {c}", skins: "Akshan skins", skinAnt: "Previous skin", copiar: "Copy link", copiado: "Link copied!", copiarLink: "Copy this matchup's link", skinProx: "Next skin", chromas: "Chromas", semChroma: "No chroma", esconde3d: "Hide 3D {c}", carrega3d: "Loading {c}…", tierBotao: "Matchup tier list", tierTit: "Tier list · {c}", fechar: "Close", aoVivo: "Live", acompanhe: "Watch {c} mains", assistir: "Watch", opggDe: "OP.GG of ", devPor: "Site by", baixarApp: "PC app: opens the matchup by itself",
     appTit: "PC app", appWip: "Work in progress: it may still have bugs and will change a lot.", appLead: "A Windows app with the guide in its own window that shows up by itself at the right time: when you pick Akshan in champion select, it figures out the enemy mid and shows that matchup, no searching needed.",
     appPassos: ["Download and open <b>AkshanMatchups.exe</b>. It sits in the taskbar corner, next to the clock, and starts with Windows (you can turn that off in the icon menu).", "Join a game and pick <b>Akshan</b>. In other games the app stays quiet.", "When the enemy mid locks in, the app window shows up with that matchup. If it guesses the wrong mid, switch in the window itself or in the icon menu (\"Current enemies\"). Closing the window just hides it: it comes back next game."],
     appSeguro: "<b>Safe:</b> the app only reads champion select through the LoL client itself. It never picks, bans or accepts queue for you.",
@@ -1815,6 +1816,7 @@ $("lingua").addEventListener("click", () => {
   renderLista();
   renderDetalhe(false);
   renderPaginas();
+  atualiza3d();
 });
 
 /* ---------- Eventos ---------- */
@@ -2108,12 +2110,30 @@ setInterval(marcaAoVivo, 5 * 60 * 1000);
    publicado (aberto como arquivo o navegador bloqueia o .glb), depois que o resto da página abriu.
    O X da caixa esconde e centraliza tudo de novo (vem ligado); a alça na borda direita traz de volta. */
 const TELA_3D = matchMedia("(min-width: 1720px)");
-// Cada botão toca uma sequência de clipes: [nome no .glb, quantas vezes].
-const SEQ_3D = {
-  dance: [["dance_intro", 1], ["dance", 2]], taunt: [["taunt_intro", 1], ["taunt", 3]], laugh: [["laugh", 1]],
-  attack: [["attack1", 1], ["attack2", 1], ["crit", 1], ["crit_to_idle", 1]], recall: [["recall", 1]],
+// Um modelo por guia (scripts/modelo3d/skin3d.py <campeão>). Cada botão toca uma sequência de clipes:
+// [nome no .glb, quantas vezes]. luz: céu, chão, luz principal e contorno; brilho: cor do círculo no chão.
+const CONF_3D = {
+  akshan: {
+    modelo: () => modeloSkin(skinAtual()), sons: true,
+    seq: { dance: [["dance_intro", 1], ["dance", 2]], taunt: [["taunt_intro", 1], ["taunt", 3]], laugh: [["laugh", 1]],
+      attack: [["attack1", 1], ["attack2", 1], ["crit", 1], ["crit_to_idle", 1]], recall: [["recall", 1]] },
+    luz: [0xfff4d6, 0x221a0c, 0xffd66b, 0xffc24a], brilho: "255,200,90", emissivo: .55,
+  },
+  mordekaiser: {
+    modelo: () => "modelo/mordekaiser.glb",
+    seq: { dance: [["dance_intro", 1], ["dance", 2]], taunt: [["taunt", 1]], laugh: [["laugh", 1]],
+      attack: [["attack1", 1], ["attack2", 1]], recall: [["recall", 1]] },
+    luz: [0xdffff0, 0x0c1a12, 0x9dffc8, 0x3fe08a], brilho: "90,230,150", emissivo: .8, caixaPose: true, giro: .55,
+  },
+  illaoi: {
+    modelo: () => "modelo/illaoi.glb",
+    seq: { dance: [["dance_intro", 1], ["dance", 3]], taunt: [["taunt", 1]], laugh: [["laugh", 1]],
+      attack: [["attack1", 1], ["attack2", 1], ["crit", 1]], recall: [["recall", 1]] },
+    luz: [0xfff6dc, 0x0c1a18, 0xffe2a0, 0x5fe0cc], brilho: "240,190,90", emissivo: .45, caixaPose: true,
+  },
 };
 const EMOTES_3D = ["dance", "taunt", "laugh"];
+let conf3d = null, guia3d = null;  // configuração e guia do modelo carregado agora
 // Sons tirados dos bancos do jogo (sons/akshan3d, gerados por scripts/modelo3d/sons3d.py): quantas variações
 // cada um tem (o jogo sorteia uma) e o que toca quando cada clipe começa. "nome@0.3" = 0,3 s depois;
 // "nome~" repete até a sequência acabar (a música da dança).
@@ -2135,7 +2155,7 @@ function paraSons3d() {
   sons3d = [];
 }
 function tocaSons3d(lista) {
-  if (!somLigado || !lista) return;
+  if (!somLigado || !lista || !conf3d || !conf3d.sons) return;
   lista.forEach(item => {
     const repete = item.endsWith("~");
     const [nome, atraso] = item.replace("~", "").split("@");
@@ -2159,10 +2179,24 @@ let ligado3d = true;
 try { ligado3d = localStorage.getItem("akshan3d") !== "0"; } catch (e) {}
 
 function atualiza3d() {
-  const pode = location.protocol !== "file:" && TELA_3D.matches && guia && guia.id === "akshan" && estado3d !== "falhou";
+  const pode = location.protocol !== "file:" && TELA_3D.matches && guia && CONF_3D[guia.id] && (estado3d !== "falhou" || guia3d !== guia.id);
+  const nome = guia ? guia.campeao.nome : "";
   $("abre3d").hidden = !(pode && !ligado3d);
-  document.documentElement.classList.toggle("com-3d", pode && ligado3d);
-  if (pode && ligado3d && !estado3d) iniciaAkshan3d();
+  $("abre3d").textContent = `${nome} 3D`;
+  $("abre3d").setAttribute("aria-label", t("mostra3d").replace("{c}", nome));
+  $("fecha3d").setAttribute("aria-label", t("esconde3d").replace("{c}", nome));
+  $("fecha3d").title = t("esconde3d").replace("{c}", nome);
+  $("carrega3d").textContent = t("carrega3d").replace("{c}", nome);
+  $("akshan3d").setAttribute("aria-label", `${nome} 3D`);
+  document.documentElement.classList.toggle("com-3d", !!(pode && ligado3d));
+  if (!(pode && ligado3d)) { paraSons3d(); return; }
+  // Trocou de guia: desmonta o modelo do outro campeão e carrega o deste.
+  if (estado3d && guia3d !== guia.id) {
+    geracao3d++;
+    if (desmonta3d) { desmonta3d(); desmonta3d = null; }
+    estado3d = "";
+  }
+  if (!estado3d) iniciaAkshan3d();
 }
 function liga3d(sim) {
   ligado3d = sim;
@@ -2186,13 +2220,15 @@ function recarrega3d() {
 }
 async function iniciaAkshan3d() {
   estado3d = "carregando";
+  guia3d = guia.id;
+  const cf = conf3d = CONF_3D[guia.id];
   const geracao = ++geracao3d;
   const box = $("akshan3d"), canvas = $("cena3d");
   box.classList.remove("pronto");
   try {
     const [THREE, { GLTFLoader }, bytes] = await Promise.all([
       import("three"), import("three/addons/loaders/GLTFLoader.js"),
-      fetch(modeloSkin(skinAtual())).then(r => { if (!r.ok) throw new Error("modelo " + r.status); return r.arrayBuffer(); }),
+      fetch(cf.modelo()).then(r => { if (!r.ok) throw new Error("modelo " + r.status); return r.arrayBuffer(); }),
     ]);
     const gltf = await new GLTFLoader().parseAsync(bytes, "");
     if (geracao !== geracao3d) return;  // trocaram de skin enquanto baixava
@@ -2201,18 +2237,18 @@ async function iniciaAkshan3d() {
     r.setClearColor(0x000000, 0);
     r.outputColorSpace = THREE.SRGBColorSpace;
     const cena = new THREE.Scene(), cam = new THREE.PerspectiveCamera(26, 1, 10, 4000);
-    cena.add(new THREE.HemisphereLight(0xfff4d6, 0x221a0c, 1.1));
-    const luz = new THREE.DirectionalLight(0xffd66b, 2.2); luz.position.set(200, 400, 300); cena.add(luz);
-    const contorno = new THREE.DirectionalLight(0xffc24a, 3); contorno.position.set(-300, 250, -400); cena.add(contorno);
+    cena.add(new THREE.HemisphereLight(cf.luz[0], cf.luz[1], 1.1));
+    const luz = new THREE.DirectionalLight(cf.luz[2], 2.2); luz.position.set(200, 400, 300); cena.add(luz);
+    const contorno = new THREE.DirectionalLight(cf.luz[3], 3); contorno.position.set(-300, 250, -400); cena.add(contorno);
     const m = gltf.scene;
     // O jogo dá luz própria à textura (selfIllumination 0.7): emissivo com o mesmo mapa.
-    m.traverse(o => { if (o.isMesh) { const mt = o.material; mt.emissive = new THREE.Color(0xffffff); mt.emissiveMap = mt.map; mt.emissiveIntensity = .55; o.frustumCulled = false; } });
+    m.traverse(o => { if (o.isMesh) { const mt = o.material; mt.emissive = new THREE.Color(0xffffff); mt.emissiveMap = mt.map; mt.emissiveIntensity = cf.emissivo; o.frustumCulled = false; } });
     // Chroma: troca o mapa de cor dos materiais (nome do material = chave da textura) e guarda o original.
     const mats = new Map(), carregador = new THREE.TextureLoader().setCrossOrigin("anonymous");
     m.traverse(o => { if (o.isMesh && !mats.has(o.material.name)) mats.set(o.material.name, { mt: [], orig: o.material.map }); if (o.isMesh) mats.get(o.material.name).mt.push(o.material); });
     const aplicaMapa = (chave, mapa) => (mats.get(chave) || { mt: [] }).mt.forEach(mt => { mt.map = mapa; mt.emissiveMap = mapa; mt.needsUpdate = true; });
     chroma3d = () => {
-      const ch = chromaAtual();
+      const ch = guia3d === "akshan" ? chromaAtual() : null;  // chromas só do Akshan
       mats.forEach((v, chave) => aplicaMapa(chave, v.orig));
       if (!ch) return;
       Object.entries(ch.texturas).forEach(([chave, url]) => {
@@ -2226,13 +2262,25 @@ async function iniciaAkshan3d() {
       });
     };
     chroma3d();
-    m.rotation.y = -.35;  // de leve virado para o conteúdo, à esquerda
+    m.rotation.y = cf.giro ?? -.35;  // de leve virado para o conteúdo, à esquerda
     cena.add(m);
-    const caixa = new THREE.Box3().setFromObject(m), centro = caixa.getCenter(new THREE.Vector3()), alt = caixa.getSize(new THREE.Vector3()).y;
+    // Caixa do modelo: a da pose de montagem (Akshan) ou a da pose de idle, para quem guarda partes longe
+    // do corpo na montagem (os tentáculos da Illaoi ficam metros para trás).
+    const caixa = (() => {
+      if (!cf.caixaPose) return new THREE.Box3().setFromObject(m);
+      const mx = new THREE.AnimationMixer(m), ini = gltf.animations.find(a => a.name === "idle");
+      if (ini) { mx.clipAction(ini).play(); mx.update(.01); }
+      m.updateMatrixWorld(true);
+      const b = new THREE.Box3().setFromObject(m, true);
+      b.min.y = Math.max(b.min.y, 0);  // o que passa do chão (tentáculo) não conta
+      mx.stopAllAction(); mx.uncacheRoot(m);
+      return b;
+    })();
+    const centro = caixa.getCenter(new THREE.Vector3()), tam = caixa.getSize(new THREE.Vector3()), alt = tam.y;
     // Brilho dourado no chão, embaixo dos pés (círculo com degradê, desenhado num canvas 2D).
     const tela = document.createElement("canvas"); tela.width = tela.height = 128;
     const g2 = tela.getContext("2d"), grad = g2.createRadialGradient(64, 64, 0, 64, 64, 64);
-    grad.addColorStop(0, "rgba(255,200,90,.55)"); grad.addColorStop(1, "rgba(255,200,90,0)");
+    grad.addColorStop(0, `rgba(${cf.brilho},.55)`); grad.addColorStop(1, `rgba(${cf.brilho},0)`);
     g2.fillStyle = grad; g2.fillRect(0, 0, 128, 128);
     const chao = new THREE.Mesh(new THREE.PlaneGeometry(alt * .75, alt * .75),
       new THREE.MeshBasicMaterial({ map: new THREE.CanvasTexture(tela), transparent: true, depthWrite: false }));
@@ -2244,7 +2292,9 @@ async function iniciaAkshan3d() {
       if (!w || !h) return;
       r.setPixelRatio(Math.min(devicePixelRatio, 2)); r.setSize(w, h, false);
       cam.aspect = w / h;
-      const dist = (alt * 1.25 / 2) / Math.tan(THREE.MathUtils.degToRad(cam.fov / 2)) / Math.min(1, cam.aspect / .55);
+      const tg = Math.tan(THREE.MathUtils.degToRad(cam.fov / 2));
+      // Cabe a altura (com folga para as emotes) e também a largura (a maça do Mordekaiser é comprida).
+      const dist = Math.max((alt * 1.25 / 2) / tg / Math.min(1, cam.aspect / .55), (tam.x * 1.1 / 2) / tg / cam.aspect);
       cam.position.set(centro.x, centro.y + alt * .04, centro.z + dist); cam.lookAt(centro.x, centro.y + alt * .04, centro.z);
       cam.updateProjectionMatrix();
     };
@@ -2262,17 +2312,17 @@ async function iniciaAkshan3d() {
       if (fila.length) { const [n, v] = fila.shift(); tocaClipe(acao(n, v)); return; }
       emote = null; marcaBotoes(); paraRepeticoes3d(); tocaClipe(idle);
     };
-    const anima = nome => { paraSons3d(); emote = nome; fila = SEQ_3D[nome].slice(); marcaBotoes(); proximo(); };
+    const anima = nome => { paraSons3d(); emote = nome; fila = cf.seq[nome].slice(); marcaBotoes(); proximo(); };
     mixer.addEventListener("finished", proximo);
     // De tempos em tempos o idle troca pela variação.
     mixer.addEventListener("loop", e => {
       if (e.action !== idle) { tocaSons3d(SONS_VOLTA_3D[e.action.getClip().name]); return; }
       if (emote || parado) return;
-      if (++voltas % 3 === 0) { emote = "var"; fila = [["idle_var", 1]]; proximo(); }
+      if (++voltas % 3 === 0 && clipe("idle_var")) { emote = "var"; fila = [["idle_var", 1]]; proximo(); }
     });
     if (parado) idle.paused = true;  // com "reduzir movimento" o idle fica parado; os botões ainda funcionam
 
-    $("anim3d").innerHTML = Object.keys(SEQ_3D).map(n => n.length === 1
+    $("anim3d").innerHTML = Object.keys(cf.seq).map(n => n.length === 1
       ? `<button type="button" class="tecla" data-anim="${n}" aria-pressed="false">${n.toUpperCase()}</button>`
       : `<button type="button" data-anim="${n}" data-t="a_${n}" aria-pressed="false">${t("a_" + n)}</button>`).join("");
     $("anim3d").addEventListener("click", e => { const b = e.target.closest("[data-anim]"); if (b) anima(b.dataset.anim); }, ouve);
@@ -2318,7 +2368,7 @@ async function iniciaAkshan3d() {
     box.classList.add("pronto");
     estado3d = "pronto";
   } catch (e) {
-    console.warn("Akshan 3D não carregou:", e);
+    console.warn("3D não carregou:", e);
     estado3d = "falhou";
     atualiza3d();
   }
