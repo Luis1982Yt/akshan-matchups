@@ -1,9 +1,10 @@
 """Akshan Matchups: app de bandeja para a seleção de campeões.
 
 Lê a sessão da seleção de campeões pela API local do cliente do LoL (LCU) e,
-quando o jogador está de um campeão que tem guia no site (Akshan, Mordekaiser,
+quando o jogador trava um campeão que tem guia no site (Akshan, Mordekaiser,
 Illaoi...), abre o guia dele direto na matchup contra o inimigo mais provável
-da mesma rota. Só faz leitura: nunca escolhe, bane nem aceita nada.
+da mesma rota. Nunca aparece durante a partida: quando o jogo começa, a janela
+some. Só faz leitura: nunca escolhe, bane nem aceita nada.
 """
 
 import ctypes
@@ -28,7 +29,8 @@ SITE = "https://akshan-matchups.vercel.app/"
 INTERVALO_POLL = 1.5        # segundos entre leituras na seleção
 INTERVALO_SEM_CLIENTE = 4   # segundos entre tentativas de achar o cliente
 INTERVALO_MIN_ABRIR = 5     # segundos mínimos entre duas trocas automáticas de matchup
-JANELA_LARGURA, JANELA_ALTURA = 460, 900  # janela lateral estreita: o site mostra o formato compacto
+JANELA_LARGURA, JANELA_ALTURA = 460, 900
+FASES_JOGO = ("GameStart", "InProgress", "Reconnect")  # partida carregando ou rolando: a janela não aparece  # janela lateral estreita: o site mostra o formato compacto
 
 URL_GUIAS = SITE + "guias-app.json"  # gerado pelo scripts/build.py: guias, rota e matchups
 URL_VERSOES = "https://ddragon.leagueoflegends.com/api/versions.json"
@@ -49,7 +51,8 @@ TXT = {
     "pt": {
         "sem_cliente": "Aguardando o cliente do LoL",
         "fora": "Fora da seleção de campeões",
-        "outro": "Na seleção (campeão sem guia)",
+        "outro": "Na seleção (sem campeão com guia travado)",
+        "jogo": "Em partida",
         "guia": "Na seleção de {c}",
         "alvo": "Matchup aberta: {c}",
         "abrir_site": "Abrir a janela",
@@ -64,7 +67,8 @@ TXT = {
     "en": {
         "sem_cliente": "Waiting for the LoL client",
         "fora": "Not in champion select",
-        "outro": "In champ select (no guide for your pick)",
+        "outro": "In champ select (no locked pick with a guide)",
+        "jogo": "In game",
         "guia": "In champ select as {c}",
         "alvo": "Matchup open: {c}",
         "abrir_site": "Open the window",
@@ -190,11 +194,21 @@ class Dados:
 
 # ---------- Leitura da sessão e escolha do inimigo da rota ----------
 
+def campeao_travado(sessao):
+    """Campeão que o jogador travou (lock-in), ou 0. Passar o mouse ou só marcar não conta.
+    Nos modos com turnos de escolha vale a ação "pick" concluída; sem turnos (ARAM etc.), o campeão recebido."""
+    eu_cell = sessao.get("localPlayerCellId")
+    picks = [a for turno in sessao.get("actions", []) for a in turno if a.get("type") == "pick" and a.get("actorCellId") == eu_cell]
+    if picks:
+        feito = next((a for a in picks if a.get("completed")), None)
+        return (feito.get("championId") or 0) if feito else 0
+    eu = next((p for p in sessao.get("myTeam", []) if p.get("cellId") == eu_cell), None)
+    return (eu.get("championId") or 0) if eu else 0
+
+
 def le_sessao(sessao, dados):
     """Devolve (guia ou None, inimigos). inimigos: dicts de Dados.inimigo()."""
-    eu_cell = sessao.get("localPlayerCellId")
-    eu = next((p for p in sessao.get("myTeam", []) if p.get("cellId") == eu_cell), None)
-    guia = dados.guia_de(eu.get("championId"), eu.get("championPickIntent")) if eu else None
+    guia = dados.guia_de(campeao_travado(sessao))
     vistos, inimigos = set(), []
     for p in sessao.get("theirTeam", []):
         cid = p.get("championId") or 0
@@ -305,16 +319,27 @@ class Lcu:
         if r.status_code in (401, 403):
             self.porta = None
             return "sem_cliente", None
+        if self.fase() in FASES_JOGO:
+            return "jogo", None
         return "fora", None
+
+    def fase(self):
+        """Fase do cliente (Lobby, ChampSelect, InProgress...). Só GET."""
+        try:
+            r = self.http.get(f"https://127.0.0.1:{self.porta}/lol-gameflow/v1/gameflow-phase", timeout=3)
+            return r.json() if r.status_code == 200 else None
+        except (requests.RequestException, ValueError):
+            return None
 
 
 # ---------- Monitor: decide quando abrir o navegador ----------
 
 class Monitor:
-    def __init__(self, dados, busca_sessao, abre=webbrowser.open, agora=time.monotonic, ao_mudar=None):
+    def __init__(self, dados, busca_sessao, abre=webbrowser.open, agora=time.monotonic, ao_mudar=None, esconde=None):
         self.dados = dados
         self.busca_sessao = busca_sessao
         self.abre = abre
+        self.esconde = esconde or (lambda: None)
         self.agora = agora
         self.ao_mudar = ao_mudar or (lambda: None)
         self.estado = "sem_cliente"
@@ -326,6 +351,9 @@ class Monitor:
     def passo(self):
         status, sessao = self.busca_sessao()
         antes = (self.estado, self.id_guia(), [i["cid"] for i in self.inimigos], self.alvo)
+        if status == "jogo" and self.estado != "jogo":
+            log.info("partida começou: escondendo a janela")
+            self.esconde()
         if status != "ok":
             self.estado, self.guia, self.inimigos, self.alvo = status, None, [], None
         else:
@@ -445,10 +473,36 @@ class Janela:
         except Exception:
             pass
 
+    def _poupa(self, f, poupar):
+        """Escondida, o navegador da janela fica em modo de pouca memória (e suspenso, se o WebView2 deixar)."""
+        try:
+            from Microsoft.Web.WebView2.Core import CoreWebView2MemoryUsageTargetLevel as Nivel
+            core = f.browser.webview.CoreWebView2
+            if core is None:
+                return
+            if poupar:
+                core.MemoryUsageTargetLevel = Nivel.Low
+                core.TrySuspendAsync()
+            else:
+                if core.IsSuspended:
+                    core.Resume()
+                core.MemoryUsageTargetLevel = Nivel.Normal
+        except Exception as e:
+            log.debug("memória da janela: %s", e)
+
+    def _some(self, f):
+        if f.Visible:
+            self._guarda_tamanho(f)
+            f.Hide()
+        self._poupa(f, True)
+
+    def esconde(self):
+        self._na_janela(self._some)
+
     def _fechando(self):
         if self.saindo:
             return True
-        self._na_janela(lambda f: (self._guarda_tamanho(f), f.Hide()))
+        self._na_janela(self._some)
         return False  # cancela o fechamento: só esconde
 
     def mostra(self, url=None):
@@ -459,6 +513,7 @@ class Janela:
             from System import Uri
             from System.Windows.Forms import FormWindowState
             wv = f.browser.webview
+            self._poupa(f, False)
             if url:
                 atual = str(wv.Source) if wv.Source is not None else ""
                 if atual.startswith(SITE) and wv.CoreWebView2 is not None:
@@ -532,6 +587,16 @@ def main():
                     jt.mostra(url_matchup(g, s_))
                     time.sleep(4)
                     log.info("teste janela: %s/%s -> %s", g, s_, endereco())
+                jt.esconde()  # como quando a partida começa
+                time.sleep(3)
+                ok, estado = threading.Event(), []
+                jt._na_janela(lambda f: (estado.append((f.Visible, f.browser.webview.CoreWebView2.MemoryUsageTargetLevel.ToString(),
+                                                        f.browser.webview.CoreWebView2.IsSuspended)), ok.set()))
+                ok.wait(5)
+                log.info("teste janela: escondida (visível, memória, suspensa) = %s", estado)
+                jt.mostra(url_matchup("illaoi", "aatrox"))
+                time.sleep(3)
+                log.info("teste janela: voltou -> %s", endereco())
             except Exception:
                 log.exception("teste janela falhou")
             finally:
@@ -557,7 +622,7 @@ def main():
     dados = Dados([], {}, {})
     icone = None
     janela = Janela(cfg, salva_config)
-    monitor = Monitor(dados, lcu.sessao, abre=janela.mostra, ao_mudar=lambda: icone and icone.update_menu())
+    monitor = Monitor(dados, lcu.sessao, abre=janela.mostra, ao_mudar=lambda: icone and icone.update_menu(), esconde=janela.esconde)
 
     def carrega():
         guias = com_cache("guias", carrega_guias, chaves_int=False) or carrega_guias_local()
@@ -573,7 +638,8 @@ def main():
                 monitor.passo()
             except Exception:
                 log.exception("erro no passo")
-            parar.wait(INTERVALO_SEM_CLIENTE if monitor.estado == "sem_cliente" else INTERVALO_POLL)
+            # Na partida e sem cliente, olha com menos frequência.
+            parar.wait(INTERVALO_SEM_CLIENTE if monitor.estado in ("sem_cliente", "jogo") else INTERVALO_POLL)
 
     def texto_estado(_):
         return T[monitor.estado].format(c=monitor.guia["campeao"] if monitor.guia else "")

@@ -1,6 +1,10 @@
 # App da seleção de campeões (Windows)
 
-Programa de bandeja que acompanha a seleção de campeões do LoL. Quando você está de um campeão que tem guia no site (Akshan, Mordekaiser, Illaoi..., escolhido ou só marcado), ele mostra o guia dele numa janela própria, direto na matchup contra o inimigo mais provável da mesma rota.
+Programa de bandeja que acompanha a seleção de campeões do LoL. Quando você **trava** um campeão que tem guia no site (Akshan, Mordekaiser, Illaoi...), ele mostra o guia dele numa janela própria, direto na matchup contra o inimigo mais provável da mesma rota. Passar o mouse ou só marcar o campeão não conta.
+
+**Nunca durante a partida:** o app lê a fase do cliente (`/lol-gameflow/v1/gameflow-phase`); quando a partida começa (GameStart/InProgress) a janela some e nada abre até a próxima seleção. Escondida, o navegador da janela fica em modo de pouca memória (`MemoryUsageTargetLevel = Low`).
+
+**Sem travar:** tudo o que mexe na janela vai para a fila da thread dela (`BeginInvoke`) sem esperar resposta; as chamadas do pywebview que esperam (`evaluate_js`, `show`...) às vezes se cruzavam e congelavam o app na troca de guia.
 
 **Todos os guias (v3):** a lista de guias vem de `https://akshan-matchups.vercel.app/guias-app.json`, que o `scripts/build.py` gera junto com o site (campeão de cada guia, rota e matchups com o slug do site). Guia novo no site já funciona no app sem gerar outro .exe.
 

@@ -19,12 +19,18 @@ TAXAS = {103: {"MIDDLE": 0.97}, 238: {"MIDDLE": 0.80, "TOP": 0.1}, 157: {"MIDDLE
          122: {"TOP": 0.95}, 266: {"TOP": 0.98}, 36: {"TOP": 0.7, "JUNGLE": 0.3}}
 
 
-def sessao(eu=0, intent=0, inimigos=()):
-    return {
+def sessao(eu=0, intent=0, inimigos=(), travado=True, turnos=True):
+    """Seleção com turnos: a ação "pick" do jogador fica concluída quando ele trava (lock-in).
+    turnos=False imita os modos sem escolha (ARAM), em que o campeão já vem dado."""
+    s = {
         "localPlayerCellId": 2,
         "myTeam": [{"cellId": 0, "championId": 222}, {"cellId": 2, "championId": eu, "championPickIntent": intent}],
         "theirTeam": [{"cellId": 5 + i, "championId": c} for i, c in enumerate(inimigos)],
     }
+    if turnos:
+        s["actions"] = [[{"actorCellId": 0, "type": "pick", "championId": 222, "completed": True}],
+                        [{"actorCellId": 2, "type": "pick", "championId": eu or intent, "completed": travado and bool(eu)}]]
+    return s
 
 
 class Relogio:
@@ -84,9 +90,25 @@ class TestApp(unittest.TestCase):
         self.roda(("ok", sessao(eu=166, inimigos=[222, 412, 103])))
         self.assertEqual(len(self.abertos), 1)
 
-    def test_pick_intent_conta(self):
-        self.roda(("ok", sessao(eu=0, intent=166, inimigos=[238])))
+    def test_so_abre_depois_do_lock(self):
+        # Só marcado ou com o mouse em cima: não abre nada.
+        self.roda(("ok", sessao(intent=166, inimigos=[238])), ("ok", sessao(eu=166, inimigos=[238], travado=False)))
+        self.assertEqual(self.abertos, [])
+        self.assertEqual(self.m.estado, "outro")
+        self.roda(("ok", sessao(eu=166, inimigos=[238])))
         self.assertEqual(self.abertos, ["https://akshan-matchups.vercel.app/#akshan/zed"])
+
+    def test_sem_turnos_vale_o_campeao_recebido(self):
+        self.roda(("ok", sessao(eu=82, inimigos=[122], turnos=False)))
+        self.assertEqual(self.abertos, [app.url_matchup("mordekaiser", "darius")])
+
+    def test_partida_comecou_esconde_e_nao_abre(self):
+        escondidas = []
+        self.m.esconde = lambda: escondidas.append(1)
+        self.roda(("ok", sessao(eu=166, inimigos=[103])), ("jogo", None), ("jogo", None))
+        self.assertEqual(len(escondidas), 1)  # esconde uma vez, quando a partida começa
+        self.assertEqual(self.m.estado, "jogo")
+        self.assertEqual(len(self.abertos), 1)
 
     def test_varios_inimigos_escolhe_maior_taxa_de_mid(self):
         self.roda(("ok", sessao(eu=166, inimigos=[99, 157, 238])))
@@ -102,7 +124,8 @@ class TestApp(unittest.TestCase):
         self.assertEqual(self.abertos, [app.url_matchup("illaoi", "dr-mundo")])
 
     def test_trocar_de_campeao_troca_de_guia(self):
-        self.roda(("ok", sessao(intent=166, inimigos=[157])), ("ok", sessao(intent=82, inimigos=[157])))
+        # Troca de campeão com um aliado (ARAM ou troca no fim da seleção).
+        self.roda(("ok", sessao(eu=166, inimigos=[157], turnos=False)), ("ok", sessao(eu=82, inimigos=[157], turnos=False)))
         self.assertEqual(self.abertos, [app.url_matchup("akshan", "yasuo"), app.url_matchup("mordekaiser", "yasuo")])
 
     def test_aparece_inimigo_com_mais_cara_de_mid(self):
