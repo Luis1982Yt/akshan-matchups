@@ -734,5 +734,15 @@
   },
   "feitico_extra": {
     "Zoe": "Cleanse"
+  },
+  "paginas_padrao": {
+    "Press the Attack": {
+      "linhas": ["Triumph", "Legend: Alacrity", "Coup de Grace"],
+      "fragmentos": ["vel_ataque", "adaptativa", "vida_nivel"]
+    },
+    "Electrocute": {
+      "linhas": ["Sudden Impact", "Grisly Mementos", "Treasure Hunter"],
+      "fragmentos": ["vel_ataque", "adaptativa", "vida_nivel"]
+    }
   }
 }

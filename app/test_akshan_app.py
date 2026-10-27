@@ -174,5 +174,105 @@ class TestApp(unittest.TestCase):
         self.assertEqual(self.m.url_alvo(), app.url_matchup("akshan", "ahri"))
 
 
+class LcuFalso(app.Lcu):
+    """Cliente de mentira: guarda as chamadas e responde como a API do LoL (runas e conjuntos de itens)."""
+
+    def __init__(self, paginas, total=2, conjuntos=None, fechado=False):
+        super().__init__()
+        self.paginas, self.total, self.conjuntos, self.fechado = paginas, total, conjuntos or [], fechado
+        self.chamadas = []
+
+    def _pede(self, metodo, caminho, **kw):
+        if self.fechado:
+            raise RuntimeError("cliente fechado")
+        self.chamadas.append((metodo, caminho))
+        if caminho == "/lol-perks/v1/pages" and metodo == "GET":
+            return self.paginas
+        if caminho == "/lol-perks/v1/inventory":
+            return {"ownedPageCount": self.total}
+        if metodo == "DELETE":
+            self.paginas = [p for p in self.paginas if p["id"] != int(caminho.rsplit("/", 1)[1])]
+            return None
+        if metodo == "POST":
+            nova = {**kw["json"], "id": 900, "isDeletable": True}
+            self.paginas.append(nova)
+            return nova
+        if caminho == "/lol-summoner/v1/current-summoner":
+            return {"summonerId": 7, "accountId": 70}
+        if metodo == "GET":
+            return {"accountId": 70, "itemSets": self.conjuntos, "timestamp": 1}
+        if metodo == "PUT":
+            self.conjuntos = kw["json"]["itemSets"]
+        return None
+
+
+PRESET = {"id": 50, "name": "Padrão", "isDeletable": False}
+
+
+class TestImportar(unittest.TestCase):
+    def setUp(self):
+        self.guias = {g["id"]: g for g in app.carrega_guias_local()}
+
+    def test_dados_de_importacao_no_guias_app(self):
+        aatrox = self.guias["mordekaiser"]["importar"]["aatrox"]
+        self.assertEqual(len(aatrox["runas"][0]["selectedPerkIds"]), 9)
+        self.assertEqual(aatrox["runas"][0]["primaryStyleId"], 8000)  # Conquistador
+        self.assertIn("3076", aatrox["itens"][0]["itens"])  # Colete Espinhoso
+        self.assertEqual(len(self.guias["illaoi"]["importar"]["darius"]["runas"]), 2)  # Opção 1 e Opção 2
+        ahri = self.guias["akshan"]["importar"]["ahri"]["runas"][0]
+        self.assertEqual(ahri["selectedPerkIds"][:4], [8005, 9111, 9104, 8014])  # PTA + página padrão aprovada
+
+    def test_com_espaco_cria_pagina_sem_apagar(self):
+        lcu = LcuFalso([PRESET, {"id": 1, "isDeletable": True, "current": True}], total=2)
+        novo = lcu.grava_runas({"primaryStyleId": 8000}, "Mordekaiser vs Aatrox", None)
+        self.assertEqual(novo, 900)
+        self.assertNotIn("DELETE", [m for m, _ in lcu.chamadas])
+        self.assertTrue(lcu.paginas[-1]["current"])
+
+    def test_cheia_troca_a_pagina_atual(self):
+        lcu = LcuFalso([PRESET, {"id": 1, "isDeletable": True}, {"id": 2, "isDeletable": True, "current": True}], total=2)
+        lcu.grava_runas({"primaryStyleId": 8000}, "x", None)
+        self.assertIn(("DELETE", "/lol-perks/v1/pages/2"), lcu.chamadas)
+
+    def test_reaproveita_a_pagina_do_app(self):
+        lcu = LcuFalso([{"id": 1, "isDeletable": True}, {"id": 9, "isDeletable": True, "current": True}], total=5)
+        lcu.grava_runas({"primaryStyleId": 8000}, "x", 1)
+        self.assertIn(("DELETE", "/lol-perks/v1/pages/1"), lcu.chamadas)
+        self.assertNotIn(("DELETE", "/lol-perks/v1/pages/9"), lcu.chamadas)
+
+    def test_conjunto_troca_so_o_do_app(self):
+        dele = {"uid": "meu-conjunto", "title": "Meu"}
+        velho = {"uid": "akshan-matchups-mordekaiser", "title": "Mordekaiser vs Fiora"}
+        lcu = LcuFalso([], conjuntos=[dele, velho])
+        guia = self.guias["mordekaiser"]
+        lcu.grava_itens(app.conjunto_itens(guia, "Aatrox", guia["importar"]["aatrox"]["itens"], "pt"))
+        self.assertEqual([c["title"] for c in lcu.conjuntos], ["Meu", "Mordekaiser vs Aatrox"])
+        novo = lcu.conjuntos[-1]
+        self.assertEqual(novo["associatedChampions"], [82])
+        self.assertTrue(novo["blocks"][0]["type"].startswith("Se o Aatrox"))  # rótulo em português
+
+    def test_importador_usa_a_opcao_e_guarda_a_pagina(self):
+        lcu, cfg, salvos = LcuFalso([PRESET], total=2), {}, []
+        imp = app.Importador(lcu, cfg, salvos.append, "pt")
+        feito = imp.importa(self.guias["illaoi"], "darius", 1)
+        self.assertEqual(feito, {"runas": True, "itens": True})
+        self.assertEqual(lcu.paginas[-1]["selectedPerkIds"], self.guias["illaoi"]["importar"]["darius"]["runas"][1]["selectedPerkIds"])
+        self.assertEqual(lcu.paginas[-1]["name"], "Illaoi vs Darius")
+        self.assertEqual(cfg["pagina_runas"], 900)
+        self.assertTrue(salvos)
+
+    def test_cliente_fechado_nao_quebra(self):
+        imp = app.Importador(LcuFalso([], fechado=True), {}, lambda c: None, "pt")
+        self.assertEqual(imp.importa(self.guias["mordekaiser"], "aatrox"), {"runas": False, "itens": False})
+
+    def test_monitor_importa_quando_abre_a_matchup(self):
+        importados = []
+        m = app.Monitor(app.Dados(app.carrega_guias_local(), IDS, TAXAS), lambda: ("ok", sessao(eu=82, inimigos=[122])),
+                        abre=lambda u: None, agora=Relogio(), importa=lambda g, s: importados.append((g["id"], s)))
+        m.passo()
+        m.passo()  # mesma matchup: não importa de novo
+        self.assertEqual(importados, [("mordekaiser", "darius")])
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -3,8 +3,9 @@
 Lê a sessão da seleção de campeões pela API local do cliente do LoL (LCU) e,
 quando o jogador trava um campeão que tem guia no site (Akshan, Mordekaiser,
 Illaoi...), abre o guia dele direto na matchup contra o inimigo mais provável
-da mesma rota. Nunca aparece durante a partida: quando o jogo começa, a janela
-some. Só faz leitura: nunca escolhe, bane nem aceita nada.
+da mesma rota e grava no cliente a página de runas e o conjunto de itens dessa
+matchup, como o Porofessor (dá para desligar no menu). Nunca aparece durante a
+partida: quando o jogo começa, a janela some. Nunca escolhe, bane nem aceita nada.
 """
 
 import ctypes
@@ -62,6 +63,8 @@ TXT = {
         "nenhum": "Nenhum inimigo escolhido ainda",
         "sem_guia": "{c} (sem guia)",
         "iniciar": "Iniciar com o Windows",
+        "importar": "Importar runas e itens no lock",
+        "importar_agora": "Importar runas e itens agora",
         "sair": "Sair",
     },
     "en": {
@@ -78,6 +81,8 @@ TXT = {
         "nenhum": "No enemy picked yet",
         "sem_guia": "{c} (no guide)",
         "iniciar": "Start with Windows",
+        "importar": "Import runes and items on lock-in",
+        "importar_agora": "Import runes and items now",
         "sair": "Quit",
     },
 }
@@ -235,6 +240,36 @@ def escolhe_inimigo(inimigos, atual=None):
     return melhor["slug"]
 
 
+# ---------- Importar no cliente: página de runas e conjunto de itens da matchup ----------
+# Os dados de cada matchup vêm prontos no guias-app.json (scripts/importar_lol.py): ids das runas e dos itens.
+
+def pagina_para_apagar(paginas, total, id_meu):
+    """Página a apagar antes de criar a da matchup: a que o app criou da última vez (se ainda existir);
+    senão, com as páginas cheias, a selecionada no cliente (ou a primeira que dá para apagar). None quando há espaço."""
+    editaveis = [p for p in paginas if p.get("isDeletable")]
+    minha = next((p for p in editaveis if p.get("id") == id_meu), None)
+    if minha:
+        return minha["id"]
+    if total is None or len(editaveis) < total:
+        return None
+    atual = next((p for p in editaveis if p.get("current")), None) or (editaveis[0] if editaveis else None)
+    return atual["id"] if atual else None
+
+
+def conjunto_itens(guia, nome_inimigo, blocos, lingua_):
+    """Conjunto de itens da matchup, só para o campeão do guia. O uid fixo por guia faz o novo trocar o anterior."""
+    return {"title": f"{guia['campeao']} vs {nome_inimigo}", "type": "custom", "map": "any", "mode": "any",
+            "associatedChampions": [guia["chave"]], "associatedMaps": [11], "preferredItemSlots": [], "sortrank": 0,
+            "startedFrom": "blank", "uid": f"akshan-matchups-{guia['id']}",
+            "blocks": [{"type": b["tipo_pt"] if lingua_ == "pt" else b["tipo"], "items": [{"id": i, "count": 1} for i in b["itens"]]}
+                       for b in blocos]}
+
+
+def conjuntos_com(conjuntos, novo):
+    """Os conjuntos do jogador com o da matchup no lugar do anterior do app; os dele ficam como estão."""
+    return [c for c in conjuntos if c.get("uid") != novo["uid"]] + [novo]
+
+
 # ---------- LCU (API local do cliente) ----------
 
 def _exe_processos(nome):
@@ -281,6 +316,7 @@ class Lcu:
         self.porta = self.senha = None
         self.http = requests.Session()
         self.http.verify = False  # certificado próprio da Riot
+        self.trava = threading.Lock()  # o laço lê a seleção enquanto o botão da janela pode estar importando
 
     def _pastas(self):
         if self.pasta:
@@ -310,7 +346,8 @@ class Lcu:
         if not self.porta and not self.conecta():
             return "sem_cliente", None
         try:
-            r = self.http.get(f"https://127.0.0.1:{self.porta}/lol-champ-select/v1/session", timeout=3)
+            with self.trava:
+                r = self.http.get(f"https://127.0.0.1:{self.porta}/lol-champ-select/v1/session", timeout=3)
         except requests.RequestException:
             self.porta = None  # cliente fechou ou trocou de porta
             return "sem_cliente", None
@@ -323,20 +360,97 @@ class Lcu:
             return "jogo", None
         return "fora", None
 
+    def _pede(self, metodo, caminho, **kw):
+        if not self.porta and not self.conecta():
+            raise RuntimeError("cliente fechado")
+        with self.trava:
+            r = self.http.request(metodo, f"https://127.0.0.1:{self.porta}{caminho}", timeout=5, **kw)
+        if r.status_code >= 400:
+            raise RuntimeError(f"{metodo} {caminho}: {r.status_code} {r.text[:200]}")
+        return r.json() if r.content else None
+
+    def grava_runas(self, pagina, nome, id_meu):
+        """Cria a página da matchup já selecionada (trocando a do app ou, sem espaço, a atual). Devolve o id dela."""
+        paginas = self._pede("GET", "/lol-perks/v1/pages") or []
+        try:
+            total = (self._pede("GET", "/lol-perks/v1/inventory") or {}).get("ownedPageCount")
+        except RuntimeError:
+            total = None
+        apagar = pagina_para_apagar(paginas, total, id_meu)
+        if apagar is not None:
+            self._pede("DELETE", f"/lol-perks/v1/pages/{apagar}")
+        nova = self._pede("POST", "/lol-perks/v1/pages", json={"name": nome[:25], "current": True, **pagina})
+        return (nova or {}).get("id")
+
+    def grava_itens(self, conjunto):
+        """Põe o conjunto da matchup entre os conjuntos de itens do jogador (troca só o que o app tinha posto)."""
+        eu = self._pede("GET", "/lol-summoner/v1/current-summoner")
+        caminho = f"/lol-item-sets/v1/item-sets/{eu['summonerId']}/sets"
+        atual = self._pede("GET", caminho) or {}
+        self._pede("PUT", caminho, json={"accountId": atual.get("accountId", eu.get("accountId")),
+                                         "itemSets": conjuntos_com(atual.get("itemSets") or [], conjunto),
+                                         "timestamp": int(time.time() * 1000)})
+
     def fase(self):
         """Fase do cliente (Lobby, ChampSelect, InProgress...). Só GET."""
         try:
-            r = self.http.get(f"https://127.0.0.1:{self.porta}/lol-gameflow/v1/gameflow-phase", timeout=3)
+            with self.trava:
+                r = self.http.get(f"https://127.0.0.1:{self.porta}/lol-gameflow/v1/gameflow-phase", timeout=3)
             return r.json() if r.status_code == 200 else None
         except (requests.RequestException, ValueError):
             return None
 
 
+class Importador:
+    """Grava no cliente as runas e os itens da matchup, uma importação por vez (o lock e o botão da janela podem coincidir)."""
+
+    def __init__(self, lcu, cfg, salva, lingua_):
+        self.lcu, self.cfg, self.salva, self.lingua = lcu, cfg, salva, lingua_
+        self.trava = threading.Lock()
+
+    def importa(self, guia, s, opcao=0):
+        """Devolve o que foi gravado: {"runas": bool, "itens": bool}. opcao = Opção 1, 2... das runas na planilha."""
+        dados = (guia.get("importar") or {}).get(s) or {}
+        nome = next((m[0] for m in guia.get("matchups", []) if m[2] == s), s)
+        feito = {"runas": False, "itens": False}
+        with self.trava:
+            paginas = dados.get("runas") or []
+            if paginas:
+                try:
+                    novo = self.lcu.grava_runas(paginas[min(opcao, len(paginas) - 1)], f"{guia['campeao']} vs {nome}",
+                                                self.cfg.get("pagina_runas"))
+                    if novo is not None:
+                        self.cfg["pagina_runas"] = novo  # na próxima, o app troca esta em vez de outra do jogador
+                        self.salva(self.cfg)
+                    feito["runas"] = True
+                except Exception as e:
+                    log.warning("runas: %s", e)
+            if dados.get("itens"):
+                try:
+                    self.lcu.grava_itens(conjunto_itens(guia, nome, dados["itens"], self.lingua))
+                    feito["itens"] = True
+                except Exception as e:
+                    log.warning("itens: %s", e)
+        log.info("importou %s/%s (opção %d): %s", guia["id"], s, opcao + 1, feito)
+        return feito
+
+
+class ApiJanela:
+    """O que o site chama de dentro da janela do app (window.pywebview.api). Atributos com _ não vão para o JS."""
+
+    def __init__(self, importa):
+        self._importa = importa
+
+    def importar(self, guia, s, opcao=0):
+        return self._importa(guia, s, int(opcao or 0))
+
+
 # ---------- Monitor: decide quando abrir o navegador ----------
 
 class Monitor:
-    def __init__(self, dados, busca_sessao, abre=webbrowser.open, agora=time.monotonic, ao_mudar=None, esconde=None):
+    def __init__(self, dados, busca_sessao, abre=webbrowser.open, agora=time.monotonic, ao_mudar=None, esconde=None, importa=None):
         self.dados = dados
+        self.importa = importa or (lambda guia, s: None)
         self.busca_sessao = busca_sessao
         self.abre = abre
         self.esconde = esconde or (lambda: None)
@@ -369,6 +483,7 @@ class Monitor:
                     log.info("abrindo matchup: %s/%s", guia["id"], novo)
                     self.abre(url_matchup(guia["id"], novo))
                     self.alvo, self.ultimo_abrir = novo, self.agora()
+                    self.importa(guia, novo)
         if antes != (self.estado, self.id_guia(), [i["cid"] for i in self.inimigos], self.alvo):
             self.ao_mudar()
 
@@ -386,6 +501,7 @@ class Monitor:
             return
         self.abre(url_matchup(self.guia["id"], s))
         self.alvo, self.ultimo_abrir = s, self.agora()
+        self.importa(self.guia, s)
         self.ao_mudar()
 
 
@@ -428,8 +544,8 @@ class Janela:
     As chamadas do pywebview (evaluate_js, show, load_url...) esperam a resposta da janela, e quando
     duas dessas esperas se cruzam o processo inteiro congela; foi o que travava a troca de guia."""
 
-    def __init__(self, cfg, salva):
-        self.cfg, self.salva = cfg, salva
+    def __init__(self, cfg, salva, api=None):
+        self.cfg, self.salva, self.api = cfg, salva, api
         self.w = None
         self.saindo = False
 
@@ -443,7 +559,8 @@ class Janela:
                 x = y = None
         self.w = webview.create_window(
             NOME_APP, SITE, width=self.cfg.get("janela_l", JANELA_LARGURA), height=self.cfg.get("janela_a", JANELA_ALTURA),
-            x=x, y=y, min_size=(360, 560), hidden=True, on_top=bool(self.cfg.get("por_cima")), background_color="#0c0b09")
+            x=x, y=y, min_size=(360, 560), hidden=True, on_top=bool(self.cfg.get("por_cima")), background_color="#0c0b09",
+            js_api=self.api)
         self.w.events.closing += self._fechando
 
     def _form(self):
@@ -534,6 +651,16 @@ class Janela:
                 f.TopMost = False
         self._na_janela(faz)
 
+    def avisa_importacao(self, feito):
+        """Mostra no site, por uns segundos, o que foi importado sozinho no lock (window.avisoImport do template)."""
+        js = f"window.avisoImport && window.avisoImport({json.dumps(feito)})"
+
+        def faz(f):
+            core = f.browser.webview.CoreWebView2
+            if core is not None and f.Visible:
+                core.ExecuteScriptAsync(js)
+        self._na_janela(faz)
+
     def por_cima(self, ligar):
         self._na_janela(lambda f: setattr(f, "TopMost", bool(ligar)))
 
@@ -570,7 +697,8 @@ def main():
         return
     if "--testar-janela" in sys.argv:
         # Confere a janela própria no .exe: abre numa matchup, troca de guia duas vezes e fecha sozinho (sem bandeja nem registro).
-        jt = Janela({}, lambda c: None)
+        pedidos = []  # o que o site pediu para importar (a API de teste não grava nada no cliente)
+        jt = Janela({}, lambda c: None, api=ApiJanela(lambda g, s_, o: pedidos.append((g, s_, o)) or {"runas": True, "itens": True}))
 
         def endereco():
             ok = threading.Event()
@@ -597,6 +725,14 @@ def main():
                 jt.mostra(url_matchup("illaoi", "aatrox"))
                 time.sleep(3)
                 log.info("teste janela: voltou -> %s", endereco())
+                # O site chama o app como o botão "Importar no LoL" faz, e o resultado volta para a página.
+                jt._na_janela(lambda f: f.browser.webview.CoreWebView2.ExecuteScriptAsync(
+                    'window.pywebview.api.importar("illaoi", "darius", 1).then(r => document.title = "api:" + JSON.stringify(r))'))
+                time.sleep(3)
+                ok, titulo = threading.Event(), []
+                jt._na_janela(lambda f: (titulo.append(f.browser.webview.CoreWebView2.DocumentTitle), ok.set()))
+                ok.wait(5)
+                log.info("teste janela: api importar -> pedidos %s, título %s", pedidos, titulo)
             except Exception:
                 log.exception("teste janela falhou")
             finally:
@@ -613,6 +749,7 @@ def main():
     if "iniciar" not in cfg:
         cfg["iniciar"] = True  # ligado por padrão
         salva_config(cfg)
+    cfg.setdefault("importar", True)  # importar runas e itens no lock: ligado por padrão
     try:
         inicia_com_windows(cfg["iniciar"])
     except OSError as e:
@@ -621,8 +758,19 @@ def main():
     lcu = Lcu()
     dados = Dados([], {}, {})
     icone = None
-    janela = Janela(cfg, salva_config)
-    monitor = Monitor(dados, lcu.sessao, abre=janela.mostra, ao_mudar=lambda: icone and icone.update_menu(), esconde=janela.esconde)
+    importador = Importador(lcu, cfg, salva_config, lingua())
+
+    def importa_no_lock(guia, s):
+        if cfg.get("importar", True):
+            janela.avisa_importacao(importador.importa(guia, s))
+
+    def importa_da_janela(guia_id, s, opcao):
+        guia = next((g for g in monitor.dados.guias if g["id"] == guia_id), None)
+        return importador.importa(guia, s, opcao) if guia else {"runas": False, "itens": False}
+
+    janela = Janela(cfg, salva_config, api=ApiJanela(importa_da_janela))
+    monitor = Monitor(dados, lcu.sessao, abre=janela.mostra, ao_mudar=lambda: icone and icone.update_menu(), esconde=janela.esconde,
+                      importa=importa_no_lock)
 
     def carrega():
         guias = com_cache("guias", carrega_guias, chaves_int=False) or carrega_guias_local()
@@ -667,6 +815,15 @@ def main():
         except OSError as e:
             log.warning("registro: %s", e)
 
+    def importa_agora(_icone, _item):
+        guia, s = monitor.guia, monitor.alvo
+        if guia and s:
+            threading.Thread(target=lambda: janela.avisa_importacao(importador.importa(guia, s)), daemon=True).start()
+
+    def alterna_importar(_icone, _item):
+        cfg["importar"] = not cfg.get("importar", True)
+        salva_config(cfg)
+
     def alterna_por_cima(_icone, _item):
         cfg["por_cima"] = not cfg.get("por_cima")
         salva_config(cfg)
@@ -683,8 +840,10 @@ def main():
         pystray.Menu.SEPARATOR,
         pystray.MenuItem(T["abrir_site"], lambda: janela.mostra(monitor.url_alvo()), default=True),
         pystray.MenuItem(T["inimigos"], pystray.Menu(itens_inimigos)),
+        pystray.MenuItem(T["importar_agora"], importa_agora, enabled=lambda _: bool(monitor.alvo)),
         pystray.MenuItem(T["navegador"], lambda: webbrowser.open(monitor.url_alvo() or SITE)),
         pystray.Menu.SEPARATOR,
+        pystray.MenuItem(T["importar"], alterna_importar, checked=lambda _: cfg.get("importar", True)),
         pystray.MenuItem(T["por_cima"], alterna_por_cima, checked=lambda _: bool(cfg.get("por_cima"))),
         pystray.MenuItem(T["iniciar"], alterna_iniciar, checked=lambda _: cfg["iniciar"]),
         pystray.MenuItem(T["sair"], sair),

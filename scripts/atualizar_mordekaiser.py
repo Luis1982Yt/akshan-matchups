@@ -135,7 +135,7 @@ def ler_runas(texto, por_runa):
     nomes = ["Principal", "Secundária", "Fragmentos"]
     out = []
     for i, g in enumerate(grupos):
-        sep = r"\s*\+\s*|\n" if i >= 2 else r"\s*->\s*|\n"
+        sep = r"\s*\+\s*|\n" if i >= 2 else r"\s*-\s*>\s*|\n"  # a planilha às vezes escreve "- >"
         pecas = [p.strip(" ->+") for p in re.split(sep, g) if p.strip(" ->+")]
         if i == 1:
             pecas = [q.strip() for p in pecas for q in re.split(r"\s*\+\s*", p) if q.strip()]

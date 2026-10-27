@@ -625,6 +625,13 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 
 /* Setup */
 .setup { scroll-margin-top: calc(var(--barra) + 16px); margin: 0; padding: 16px 20px; border-radius: 12px; background: var(--painel); border: 1px solid var(--linha); }
+/* Título do setup com o botão "Importar no LoL" (só aparece dentro do app de PC). */
+.setup-topo { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px 12px; margin: 0 0 12px; }
+.setup-topo h2 { margin: 0 !important; }
+.importar-lol { display: inline-flex; align-items: center; gap: 7px; min-height: 36px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--acento-vivo); background: none; color: var(--acento-vivo); font: 700 13px var(--corpo); cursor: pointer; }
+.importar-lol:hover:not(:disabled) { background: var(--acento-vivo); color: var(--fundo); }
+.importar-lol:disabled { opacity: .6; cursor: progress; }
+.aviso-app { position: fixed; left: 50%; bottom: 24px; z-index: 60; transform: translateX(-50%); max-width: min(92vw, 420px); margin: 0; padding: 10px 16px; border-radius: 10px; border: 1px solid var(--acento-vivo); background: var(--painel-alto); color: var(--texto); font: 600 14px var(--corpo); box-shadow: 0 8px 24px rgba(0, 0, 0, .45); text-align: center; }
 .setup h2 { margin: 0 0 12px; font: 700 16px var(--titulo); letter-spacing: .14em; text-transform: uppercase; color: var(--acento-vivo); }
 .carga { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px 24px; margin: 0; }
 .slot { min-width: 0; }
@@ -899,6 +906,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 <main>
   <h1 class="sr" id="titulo"></h1>
   <p class="sr" id="anuncio" aria-live="polite"></p>
+  <p class="aviso-app" id="avisoApp" hidden></p>
   <nav class="paginas" id="paginas" data-t-aria="paginasGuia" hidden><ul id="paginasLista"></ul></nav>
   <div class="pagina" id="pagina" hidden></div>
   <div class="palco">
@@ -956,7 +964,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
       </section>
 
       <section class="setup" aria-labelledby="st">
-        <h2 id="st" data-t="setup">Seu setup pro confronto</h2>
+        <div class="setup-topo"><h2 id="st" data-t="setup">Seu setup pro confronto</h2><button type="button" class="importar-lol" id="importarLol" data-t-title="importarTit" hidden><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 20h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span id="importarTxt" data-t="importarLol">Importar no LoL</span></button></div>
         <div id="carga"></div>
       </section>
 
@@ -1066,6 +1074,7 @@ const TXT = {
     appSeguro: "<b>Seguro:</b> o app só lê a seleção de campeões pelo próprio cliente do LoL. Nunca escolhe, bane nem aceita fila por você.",
     appAviso: "<b>Aviso do Windows:</b> como o programa não tem assinatura digital, na primeira vez o Windows pode mostrar um alerta azul. Clique em <b>Mais informações</b> e depois em <b>Executar assim mesmo</b>.",
     appOpcional: "Se você não se sentir confortável em baixar, tudo continua funcionando aqui no site. O app é só uma forma de deixar o uso mais prático.",
+    importarLol: "Importar no LoL", importarTit: "Grava a página de runas e o conjunto de itens desta matchup no cliente do LoL", importando: "Importando…", importOk: "Runas e itens importados no LoL", importItens: "Itens importados (essa matchup não tem página de runas completa)", importRunas: "Runas importadas (essa matchup não tem itens)", importFalhou: "Não deu para importar. O cliente do LoL está aberto?",
     appBaixar: "Baixar o app", appTam: "Windows · grátis · 22 MB", baixarAppTit: "Programa para Windows que abre a matchup sozinho na seleção de campeões", animacoes: "Animações do Akshan",
     a_dance: "Dança", a_taunt: "Provocação", a_laugh: "Risada", a_attack: "Ataque", a_recall: "Recall",
   },
@@ -1098,6 +1107,7 @@ const TXT = {
     appSeguro: "<b>Safe:</b> the app only reads champion select through the LoL client itself. It never picks, bans or accepts queue for you.",
     appAviso: "<b>Windows warning:</b> since the program isn't digitally signed, Windows may show a blue alert the first time. Click <b>More info</b> and then <b>Run anyway</b>.",
     appOpcional: "If you don't feel comfortable downloading it, everything still works right here on the site. The app is just a way to make it more convenient.",
+    importarLol: "Import to LoL", importarTit: "Saves this matchup's rune page and item set in the LoL client", importando: "Importing…", importOk: "Runes and items imported to LoL", importItens: "Items imported (this matchup has no complete rune page)", importRunas: "Runes imported (this matchup has no items)", importFalhou: "Couldn't import. Is the LoL client open?",
     appBaixar: "Download the app", appTam: "Windows · free · 22 MB", baixarAppTit: "Windows app that opens the matchup by itself in champion select", animacoes: "Akshan animations",
     a_dance: "Dance", a_taunt: "Taunt", a_laugh: "Laugh", a_attack: "Attack", a_recall: "Recall",
   },
@@ -1293,6 +1303,40 @@ function escolheGuia(id, inimigo) {
   marcaHash();
   sincroniza(guia);
 }
+
+/* ---------- Dentro do app de PC: importar runas e itens no cliente do LoL ----------
+   O app (app/akshan_app.py) abre o site numa janela própria e expõe window.pywebview.api.importar(guia, matchup, opção).
+   No navegador comum o botão não aparece. */
+const apiApp = () => (window.pywebview && window.pywebview.api && window.pywebview.api.importar ? window.pywebview.api : null);
+const marcaApp = () => { $("importarLol").hidden = !apiApp(); };
+window.addEventListener("pywebviewready", marcaApp);
+marcaApp();
+let someAviso;
+// Resultado da importação ({runas, itens}), do botão ou do app quando importa sozinho no lock.
+window.avisoImport = r => {
+  const msg = t(r && r.runas && r.itens ? "importOk" : r && r.itens ? "importItens" : r && r.runas ? "importRunas" : "importFalhou");
+  const a = $("avisoApp");
+  a.textContent = msg;
+  a.hidden = false;
+  anuncia(msg);
+  clearTimeout(someAviso);
+  someAviso = setTimeout(() => { a.hidden = true; }, 4000);
+};
+$("importarLol").addEventListener("click", async () => {
+  const api = apiApp();
+  if (!api || !current) return;
+  const b = $("importarLol");
+  b.disabled = true;
+  $("importarTxt").textContent = t("importando");
+  // A opção de runas aberta (Opção 1, Opção 2...) é a que vai para o cliente.
+  const aba = document.querySelector('.com-abas[data-grupo="runas"] > .abas-mini [aria-selected="true"]');
+  let r = null;
+  try { r = await api.importar(guia.id, current.slug, aba ? +aba.dataset.aba : 0); } catch (e) {}
+  window.avisoImport(r);
+  toca("clique");
+  b.disabled = false;
+  $("importarTxt").textContent = t("importarLol");
+});
 
 function marcaHash() {
   try { history.replaceState(null, "", `#${guia.id}/${paginaAtual ? "@" + paginaAtual : current.slug}`); } catch (e) {}

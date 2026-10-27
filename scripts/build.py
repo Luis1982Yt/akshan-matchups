@@ -101,8 +101,17 @@ def matchups_app(g):
     return [[m["nome"], m["id"], slug(m["nome"])] for m in g["matchups"]]
 
 
+# Página de runas e conjunto de itens de cada matchup para o app importar no cliente (scripts/importar_lol.py).
+PASTAS = {c["id"]: SRC / c["dados"] for c in json.loads((SRC / "guias.json").read_text(encoding="utf-8"))}
+
+
+def importar_app(g):
+    arq = PASTAS[g["id"]] / "importar.json"
+    return json.loads(arq.read_text(encoding="utf-8")) if arq.exists() else {}
+
+
 app = {"guias": [{"id": g["id"], "campeao": g["campeao"]["nome"], "chave": g.get("chave"), "rota": ROTA_LCU.get((g.get("rota") or "").lower()),
-                  "matchups": matchups_app(g)} for g in guias]}
+                  "matchups": matchups_app(g), "importar": importar_app(g)} for g in guias]}
 (ROOT / "guias-app.json").write_text(json.dumps(app, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8", newline="\n")
 
 # Descrição para buscadores e para a prévia do link (WhatsApp, Discord, X), com todos os guias publicados.

@@ -33,6 +33,7 @@ jobs:
           python3 scripts/atualizar_mordekaiser.py
           python3 scripts/atualizar_illaoi.py
           python3 scripts/traducao_pt.py  # nomes em PT e títulos em EN; frase nova fica no original até ser traduzida
+          python3 scripts/importar_lol.py  # runas e itens de cada matchup para o app importar no cliente
           python3 scripts/build.py
 
       - name: Commit, se mudou algo

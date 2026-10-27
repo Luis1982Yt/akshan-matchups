@@ -11937,8 +11937,16 @@
       "rotulo": "Principal",
       "pecas": [
        {
-        "nome": "Conqueror - > Triumph - > Alacrity",
-        "icone": null
+        "nome": "Conqueror",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/Conqueror/Conqueror.png"
+       },
+       {
+        "nome": "Triumph",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/Triumph.png"
+       },
+       {
+        "nome": "Alacrity",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendAlacrity/LegendAlacrity.png"
        },
        {
         "nome": "Coup De Grace",
@@ -12571,8 +12579,16 @@
       "rotulo": "Principal",
       "pecas": [
        {
-        "nome": "Conqueror - > Triumph - > Alacrity",
-        "icone": null
+        "nome": "Conqueror",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/Conqueror/Conqueror.png"
+       },
+       {
+        "nome": "Triumph",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/Triumph.png"
+       },
+       {
+        "nome": "Alacrity",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendAlacrity/LegendAlacrity.png"
        },
        {
         "nome": "Last Stand",
