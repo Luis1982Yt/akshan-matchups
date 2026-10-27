@@ -316,7 +316,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 /* Slot "Você": o campeão marcado, como o do jogador na coluna do time. */
 .sel-voce { grid-area: voce; align-self: start; display: grid; justify-items: center; gap: 6px; padding: 22px 18px 20px; text-align: center; border-radius: 12px;
   background: color-mix(in srgb, var(--painel) 86%, transparent); border: 1px solid var(--linha); }
-.sel-selo { padding: 3px 10px; border-radius: 4px; background: var(--destaque-arte); color: var(--tinta-arte); font: 700 12px/1.4 var(--titulo); letter-spacing: .12em; text-transform: uppercase; }
+.sel-selo { padding: 3px 10px; border-radius: 4px; background: var(--destaque-arte); color: #111; font: 700 12px/1.4 var(--titulo); letter-spacing: .12em; text-transform: uppercase; }
 .sel-retrato { width: 140px; height: 140px; margin: 12px 0 10px; border-radius: 50%; overflow: hidden; background: var(--painel-alto);
   box-shadow: 0 0 0 2px var(--painel), 0 0 0 4px var(--acento), 0 10px 30px rgba(0, 0, 0, .45); }
 .sel-retrato img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.1); }
@@ -354,7 +354,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .sel-acao { grid-area: acao; position: sticky; bottom: 0; z-index: 2; display: grid; justify-items: center; gap: 10px; padding: 18px 0 max(22px, env(safe-area-inset-bottom, 0px));
   background: linear-gradient(transparent, var(--fundo) 42%); }
 .sel-travar { position: relative; display: grid; place-items: center; min-width: 280px; height: 58px; padding: 0 44px; border: 0; background: none; cursor: pointer;
-  color: var(--tinta-arte); font: 800 21px/1 var(--titulo); letter-spacing: .14em; text-transform: uppercase; filter: drop-shadow(0 8px 18px rgba(0, 0, 0, .45)); }
+  color: #111; font: 800 21px/1 var(--titulo); letter-spacing: .14em; text-transform: uppercase; filter: drop-shadow(0 8px 18px rgba(0, 0, 0, .45)); }
 .sel-travar::before, .sel-travar::after { content: ""; position: absolute; clip-path: polygon(22px 0, calc(100% - 22px) 0, 100% 50%, calc(100% - 22px) 100%, 22px 100%, 0 50%); }
 .sel-travar::before { inset: 0; background: var(--botao-2); }
 .sel-travar::after { inset: 2px; background: linear-gradient(var(--botao-1), var(--botao-2)); clip-path: polygon(21px 0, calc(100% - 21px) 0, 100% 50%, calc(100% - 21px) 100%, 21px 100%, 0 50%); }
