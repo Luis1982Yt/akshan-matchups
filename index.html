@@ -302,100 +302,142 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .trocar .txt span { font-size: 13px; color: var(--texto-baixo); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .trocar svg { flex: none; color: var(--acento); transition: transform .2s; }
 .trocar[aria-expanded="true"] svg { transform: rotate(180deg); }
-/* Seleção de guia: tela cheia embaixo do topo, no desenho da seleção de campeões do LoL
-   (posições e busca em cima da grade, o slot "Você" ao lado, a splash do campeão marcado no fundo e o Travar embaixo). */
-.selecao { position: fixed; inset: var(--barra) 0 0; z-index: 25; overflow-y: auto; overscroll-behavior: contain; background: var(--fundo); }
+/* Seleção de guia: o layout da seleção de campeões do cliente (seu time | grade | inimigos, Confirmar embaixo) e as cores dele,
+   azul-escuro com dourado hextech, iguais em todos os guias e nos dois temas (pedido do dono). A splash do campeão marcado cobre a tela. */
+.selecao { --hx-preto: #010a13; --hx-azul: #0a1428; --hx-azul-2: #091428; --hx-ouro-1: #f0e6d2; --hx-ouro-2: #cdbe91; --hx-ouro-3: #c8aa6e;
+  --hx-ouro-5: #785a28; --hx-cinza-1: #a09b8c; --hx-cinza-3: #3c3c41; --hx-ciano: #0ac8b9;
+  position: fixed; inset: var(--barra) 0 0; z-index: 25; overflow-y: auto; overscroll-behavior: contain; background: var(--hx-preto); color: var(--hx-ouro-1); color-scheme: dark; }
+.selecao ::selection { background: var(--hx-ouro-5); color: var(--hx-ouro-1); }
 .sel-fundo { position: fixed; inset: var(--barra) 0 0; overflow: hidden; pointer-events: none; }
-.sel-fundo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; opacity: .34; transition: opacity .45s cubic-bezier(.16, 1, .3, 1), transform 1.2s cubic-bezier(.16, 1, .3, 1); }
+.sel-fundo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; opacity: .72; transition: opacity .45s cubic-bezier(.16, 1, .3, 1), transform 1.2s cubic-bezier(.16, 1, .3, 1); }
 .sel-fundo img.trocando { opacity: 0; }
-.selecao.travando .sel-fundo img { opacity: .62; transform: scale(1.03); }
-.sel-fundo::after { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 30%, transparent, var(--fundo) 92%), linear-gradient(transparent 50%, var(--fundo)); }
-.sel-palco { position: relative; display: grid; grid-template-columns: 300px minmax(0, 1fr); grid-template-rows: auto 1fr auto; grid-template-areas: "tit tit" "voce centro" "acao acao";
-  gap: 28px 32px; max-width: 1180px; min-height: calc(100dvh - var(--barra)); margin: 0 auto; padding: 36px var(--borda) 0; }
-.selecao h2 { grid-area: tit; margin: 0; text-align: center; font: 800 clamp(26px, 3.4vw, 40px)/1.1 var(--titulo); letter-spacing: .06em; text-transform: uppercase; color: var(--acento-vivo); text-wrap: balance; }
-/* Slot "Você": o campeão marcado, como o do jogador na coluna do time. */
-.sel-voce { grid-area: voce; align-self: start; display: grid; justify-items: center; gap: 6px; padding: 22px 18px 20px; text-align: center; border-radius: 12px;
-  background: color-mix(in srgb, var(--painel) 86%, transparent); border: 1px solid var(--linha); }
-.sel-selo { padding: 3px 10px; border-radius: 4px; background: var(--destaque-arte); color: #111; font: 700 12px/1.4 var(--titulo); letter-spacing: .12em; text-transform: uppercase; }
-.sel-retrato { width: 140px; height: 140px; margin: 12px 0 10px; border-radius: 50%; overflow: hidden; background: var(--painel-alto);
-  box-shadow: 0 0 0 2px var(--painel), 0 0 0 4px var(--acento), 0 10px 30px rgba(0, 0, 0, .45); }
-.sel-retrato img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.1); }
-.sel-retrato.sem-campeao { display: grid; place-items: center; box-shadow: none; border: 2px dashed var(--linha-forte); background: none; color: var(--acento); }
-.sel-voce b { font: 800 26px/1.1 var(--titulo); letter-spacing: .03em; color: var(--texto); }
-.sel-voce .sel-titulo { font-size: 14px; color: var(--texto-baixo); }
-.sel-voce .sel-pos { display: inline-flex; align-items: center; gap: 6px; margin-top: 6px; font: 700 13px var(--corpo); letter-spacing: .08em; text-transform: uppercase; color: var(--acento-vivo); }
-.sel-voce .sel-pos svg { width: 20px; height: 20px; }
-.sel-voce .sel-meta { margin: 6px 0 0; font-size: 14px; line-height: 1.5; color: var(--texto-baixo); }
-.sel-voce .sel-meta strong { color: var(--texto); font-weight: 700; }
-.sel-voce .sel-escolha { margin: 0; font-size: 15px; color: var(--texto-baixo); }
-.selecao.travando .sel-retrato { animation: sel-trava .7s cubic-bezier(.16, 1, .3, 1) both; }
-@keyframes sel-trava { 45% { transform: scale(1.06); filter: brightness(1.3); box-shadow: 0 0 0 2px var(--painel), 0 0 0 6px var(--destaque), 0 10px 30px rgba(0, 0, 0, .45); }
-  100% { box-shadow: 0 0 0 2px var(--painel), 0 0 0 4px var(--destaque), 0 10px 30px rgba(0, 0, 0, .45); } }
+.selecao.travando .sel-fundo img { opacity: .95; transform: scale(1.03); }
+.sel-fundo::after { content: ""; position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(1, 10, 19, .94), rgba(1, 10, 19, .45) 26%, rgba(1, 10, 19, .45) 74%, rgba(1, 10, 19, .94)),
+              linear-gradient(rgba(1, 10, 19, .7), transparent 22%, transparent 62%, rgba(1, 10, 19, .96)); }
+.sel-palco { position: relative; display: grid; grid-template-columns: minmax(210px, 260px) minmax(0, 1fr) minmax(210px, 260px); grid-template-rows: auto 1fr auto;
+  grid-template-areas: "cabeca cabeca cabeca" "time centro inimigos" "acao acao acao"; gap: 22px 28px; max-width: 1320px; min-height: calc(100dvh - var(--barra));
+  margin: 0 auto; padding: 26px var(--borda) 0; }
+.sel-cabeca { grid-area: cabeca; display: grid; justify-items: center; gap: 12px; }
+.selecao h2 { margin: 0; font: 700 clamp(24px, 2.8vw, 34px)/1.1 var(--titulo); letter-spacing: .08em; text-transform: uppercase; color: var(--hx-ouro-1); text-align: center; text-wrap: balance;
+  text-shadow: 0 2px 12px rgba(1, 10, 19, .8); }
+/* A linha do timer do cliente, parada: ouro que some nas pontas com o losango da casa no meio. */
+.sel-barra { position: relative; width: min(640px, 100%); height: 2px; background: linear-gradient(90deg, transparent, var(--hx-ouro-5) 18%, var(--hx-ouro-3) 50%, var(--hx-ouro-5) 82%, transparent); }
+.sel-barra i { position: absolute; left: 50%; top: 50%; width: 9px; height: 9px; transform: translate(-50%, -50%) rotate(45deg); background: var(--hx-preto); border: 1.5px solid var(--hx-ouro-3); }
+.sel-time h3, .sel-inimigos h3 { margin: 0 0 12px; font: 700 12px var(--corpo); letter-spacing: .16em; text-transform: uppercase; color: var(--hx-cinza-1); }
+.sel-inimigos h3 { text-align: right; }
+/* Seu time: o seu slot, com o retrato redondo no anel dourado e a faixa clara de quem está escolhendo. */
+.sel-time { grid-area: time; align-self: start; }
+.sel-linha { display: flex; align-items: center; gap: 14px; padding: 12px 14px; border-radius: 4px; border: 1px solid rgba(200, 170, 110, .35);
+  background: linear-gradient(90deg, rgba(200, 170, 110, .2), rgba(10, 20, 40, .55)); }
+.sel-linha.vago { border-color: var(--hx-cinza-3); background: rgba(10, 20, 40, .55); }
+.sel-ret { flex: none; display: grid; place-items: center; width: 72px; height: 72px; border-radius: 50%; overflow: hidden; background: var(--hx-azul);
+  box-shadow: 0 0 0 2px var(--hx-preto), 0 0 0 4px var(--hx-ouro-3), 0 8px 20px rgba(0, 0, 0, .5); color: var(--hx-ouro-5); }
+.sel-ret img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.12); }
+.sel-linha.vago .sel-ret { box-shadow: 0 0 0 2px var(--hx-preto), 0 0 0 3px var(--hx-cinza-3); }
+.sel-linha-txt { display: grid; gap: 3px; min-width: 0; }
+.sel-linha-txt small { font: 700 11px var(--corpo); letter-spacing: .16em; text-transform: uppercase; color: var(--hx-ouro-3); }
+.sel-linha-txt b { font: 700 20px/1.1 var(--titulo); letter-spacing: .04em; text-transform: uppercase; color: var(--hx-ouro-1); }
+.sel-linha-txt b.longo { font-size: 16px; letter-spacing: .02em; }
+.sel-linha-txt .sel-pos { display: inline-flex; align-items: center; gap: 6px; font: 600 13px var(--corpo); color: var(--hx-cinza-1); }
+.sel-linha-txt .sel-pos svg { width: 18px; height: 18px; color: var(--hx-ouro-3); }
+.sel-linha.vago .sel-linha-txt b { font: 600 15px var(--corpo); letter-spacing: 0; text-transform: none; color: var(--hx-cinza-1); }
+.sel-meta { margin: 14px 2px 0; font-size: 14px; line-height: 1.6; color: var(--hx-cinza-1); }
+.sel-meta strong { color: var(--hx-ouro-2); font-weight: 700; }
+.sel-meta .sel-titulo { display: block; color: var(--hx-ouro-2); font-style: italic; }
+.selecao.travando .sel-linha:not(.vago) .sel-ret { animation: sel-trava .75s cubic-bezier(.16, 1, .3, 1) both; }
+@keyframes sel-trava { 45% { transform: scale(1.08); filter: brightness(1.3); box-shadow: 0 0 0 2px var(--hx-preto), 0 0 0 5px var(--hx-ouro-1), 0 8px 20px rgba(0, 0, 0, .5); } }
 /* Grade: posições e busca em cima, retratos quadrados com o nome embaixo. */
-.sel-centro { grid-area: centro; align-self: stretch; min-width: 0; min-height: 320px; padding: 16px 20px 22px; border-radius: 12px; background: color-mix(in srgb, var(--painel) 86%, transparent); border: 1px solid var(--linha); }
-.sel-ferramentas { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding-bottom: 16px; margin-bottom: 18px; border-bottom: 1px solid var(--linha); }
-.sel-posicoes { display: flex; gap: 4px; }
-.sel-pos-btn { display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border-radius: 8px; border: 1px solid transparent; background: none; color: var(--acento); cursor: pointer; }
-.sel-pos-btn svg { width: 28px; height: 28px; }
-.sel-pos-btn:hover { border-color: var(--linha-forte); color: var(--acento-vivo); }
-.sel-pos-btn[aria-pressed="true"] { background: var(--destaque); border-color: var(--destaque); color: var(--tinta-botao); }
-.sel-busca { flex: 0 1 260px; height: 44px; }
-.sel-grade { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, 112px); gap: 20px 16px; }
-.sel-tile { display: grid; gap: 7px; width: 100%; padding: 0; border: 0; background: none; color: var(--texto); cursor: pointer; text-align: center; }
-.sel-tile img { display: block; width: 112px; height: 112px; border-radius: 6px; border: 2px solid var(--linha-forte); background: var(--painel-alto); transition: border-color .15s, filter .15s, transform .2s cubic-bezier(.16, 1, .3, 1); }
-.sel-tile span { font: 600 14px/1.2 var(--corpo); overflow-wrap: anywhere; }
-.sel-tile:hover img { border-color: var(--acento-vivo); filter: brightness(1.1); transform: translateY(-2px); }
-.sel-tile[aria-pressed="true"] img { border-color: var(--destaque); box-shadow: 0 0 0 2px var(--painel), 0 0 0 4px var(--acento); }
-.sel-tile[aria-pressed="true"] span { color: var(--acento-vivo); font-weight: 700; }
+.sel-centro { grid-area: centro; align-self: stretch; min-width: 0; min-height: 300px; padding: 14px 18px 20px; border: 1px solid rgba(120, 90, 40, .9);
+  background: linear-gradient(rgba(1, 10, 19, .82), rgba(1, 10, 19, .72)); box-shadow: inset 0 0 0 1px rgba(1, 10, 19, .8); }
+.sel-ferramentas { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding-bottom: 14px; margin-bottom: 18px;
+  border-bottom: 1px solid rgba(120, 90, 40, .55); }
+.sel-posicoes { display: flex; gap: 2px; }
+.sel-pos-btn { display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 1px solid transparent; border-radius: 2px; background: none; color: var(--hx-cinza-1); cursor: pointer; }
+.sel-pos-btn svg { width: 26px; height: 26px; }
+.sel-pos-btn:hover { color: var(--hx-ouro-1); }
+.sel-pos-btn[aria-pressed="true"] { color: var(--hx-ouro-3); border-color: var(--hx-ouro-5); background: rgba(200, 170, 110, .12); }
+.sel-busca { flex: 0 1 240px; display: flex; align-items: center; gap: 8px; height: 38px; padding: 0 12px; border: 1px solid var(--hx-cinza-3); background: var(--hx-preto); color: var(--hx-cinza-1); }
+.sel-busca:focus-within { border-color: var(--hx-ouro-3); color: var(--hx-ouro-3); }
+.sel-busca input { flex: 1; min-width: 0; height: 100%; border: 0; outline: 0; background: transparent; color: var(--hx-ouro-1); font: 15px var(--corpo); caret-color: var(--hx-ouro-3); }
+.sel-busca input::placeholder { color: var(--hx-cinza-1); }
+.sel-grade { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, 86px); gap: 16px 12px; }
+.sel-tile { display: grid; gap: 6px; width: 100%; padding: 0; border: 0; background: none; color: var(--hx-cinza-1); cursor: pointer; text-align: center; }
+.sel-tile img { display: block; width: 86px; height: 86px; border: 1px solid var(--hx-cinza-3); background: var(--hx-azul); transition: border-color .15s, filter .15s; }
+.sel-tile span { font: 600 13px/1.2 var(--corpo); overflow-wrap: anywhere; }
+.sel-tile:hover img { border-color: var(--hx-ouro-2); filter: brightness(1.15); }
+.sel-tile:hover span { color: var(--hx-ouro-1); }
+.sel-tile[aria-pressed="true"] img { border: 2px solid var(--hx-ouro-3); box-shadow: 0 0 0 1px var(--hx-preto), 0 6px 16px rgba(0, 0, 0, .6); }
+.sel-tile[aria-pressed="true"] span { color: var(--hx-ouro-1); font-weight: 700; }
 .sel-tile:focus-visible { outline: 0; }
-.sel-tile:focus-visible img { outline: 2px solid var(--acento-vivo); outline-offset: 3px; }
-.sel-vazio { margin: 12px 0 4px; font-size: 15px; color: var(--texto-baixo); }
-/* Travar: o metal do botão de travar, com as pontas em seta da casa. */
-.sel-acao { grid-area: acao; position: sticky; bottom: 0; z-index: 2; display: grid; justify-items: center; gap: 10px; padding: 18px 0 max(22px, env(safe-area-inset-bottom, 0px));
-  background: linear-gradient(transparent, var(--fundo) 42%); }
-.sel-travar { position: relative; display: grid; place-items: center; min-width: 280px; height: 58px; padding: 0 44px; border: 0; background: none; cursor: pointer;
-  color: #111; font: 800 21px/1 var(--titulo); letter-spacing: .14em; text-transform: uppercase; filter: drop-shadow(0 8px 18px rgba(0, 0, 0, .45)); }
-.sel-travar::before, .sel-travar::after { content: ""; position: absolute; clip-path: polygon(22px 0, calc(100% - 22px) 0, 100% 50%, calc(100% - 22px) 100%, 22px 100%, 0 50%); }
-.sel-travar::before { inset: 0; background: var(--botao-2); }
-.sel-travar::after { inset: 2px; background: linear-gradient(var(--botao-1), var(--botao-2)); clip-path: polygon(21px 0, calc(100% - 21px) 0, 100% 50%, calc(100% - 21px) 100%, 21px 100%, 0 50%); }
+.sel-tile:focus-visible img { outline: 2px solid var(--hx-ciano); outline-offset: 3px; }
+.sel-vazio { margin: 10px 0 4px; font-size: 15px; color: var(--hx-cinza-1); }
+/* Inimigos: as cinco matchups mais difíceis do guia marcado, espelhadas como o time inimigo; tocar trava e abre a matchup. */
+.sel-inimigos { grid-area: inimigos; align-self: start; }
+.sel-inimigos ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.sel-inimigo { display: flex; align-items: center; justify-content: flex-end; gap: 12px; width: 100%; min-height: 64px; padding: 6px 8px 6px 12px; border: 1px solid transparent; border-radius: 4px;
+  background: rgba(10, 20, 40, .55); color: var(--hx-ouro-1); cursor: pointer; text-align: right; }
+.sel-inimigo:hover { border-color: rgba(200, 170, 110, .45); background: linear-gradient(270deg, rgba(200, 170, 110, .16), rgba(10, 20, 40, .55)); }
+.sel-inimigo:focus-visible { outline: 2px solid var(--hx-ciano); outline-offset: 2px; }
+.sel-inimigo img { flex: none; width: 50px; height: 50px; border-radius: 50%; box-shadow: 0 0 0 2px var(--hx-preto), 0 0 0 3px var(--hx-ouro-5); }
+.sel-inimigo b { display: block; font: 700 15px/1.2 var(--titulo); letter-spacing: .04em; text-transform: uppercase; }
+.sel-inimigo small { display: inline-flex; align-items: center; gap: 6px; font: 600 12.5px var(--corpo); color: var(--hx-cinza-1); }
+.sel-inimigo small i { width: 9px; height: 9px; border-radius: 50%; background: var(--cor); }
+.sel-inimigo.vago { cursor: default; background: rgba(10, 20, 40, .4); }
+.sel-inimigo.vago span.sel-vago-ret { flex: none; width: 50px; height: 50px; border-radius: 50%; border: 1px dashed var(--hx-cinza-3); }
+.sel-ini-nota { margin: 10px 2px 0; font-size: 13px; line-height: 1.5; text-align: right; color: var(--hx-cinza-1); }
+/* Confirmar: o botão de travar do cliente, moldura dourada em degradê, fundo azul-escuro e as pontas em seta da casa. */
+.sel-acao { grid-area: acao; position: sticky; bottom: 0; z-index: 2; display: grid; justify-items: center; gap: 10px; padding: 16px 0 max(20px, env(safe-area-inset-bottom, 0px));
+  background: linear-gradient(transparent, rgba(1, 10, 19, .92) 45%); }
+.sel-travar { position: relative; display: grid; place-items: center; min-width: 260px; height: 54px; padding: 0 44px; border: 0; background: none; cursor: pointer;
+  color: var(--hx-ouro-2); font: 700 19px/1 var(--titulo); letter-spacing: .14em; text-transform: uppercase; filter: drop-shadow(0 8px 18px rgba(0, 0, 0, .55)); transition: color .15s; }
+.sel-travar::before, .sel-travar::after { content: ""; position: absolute; }
+.sel-travar::before { inset: 0; background: linear-gradient(var(--hx-ouro-3), var(--hx-ouro-5)); clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 50%, calc(100% - 20px) 100%, 20px 100%, 0 50%); }
+.sel-travar::after { inset: 2px; background: linear-gradient(#1e2328, var(--hx-azul)); clip-path: polygon(19px 0, calc(100% - 19px) 0, 100% 50%, calc(100% - 19px) 100%, 19px 100%, 0 50%); transition: background .2s; }
 .sel-travar span { position: relative; z-index: 1; }
-.sel-travar:hover:not(:disabled) { filter: drop-shadow(0 8px 18px rgba(0, 0, 0, .45)) brightness(1.08); }
+.sel-travar:hover:not(:disabled) { color: var(--hx-ouro-1); }
+.sel-travar:hover:not(:disabled)::after { background: linear-gradient(#2a3036, #10233f); }
 .sel-travar:active:not(:disabled) { transform: scale(.97); }
-.sel-travar:focus-visible { outline: 2px solid var(--acento-vivo); outline-offset: 4px; border-radius: 6px; }
-.sel-travar:disabled { cursor: not-allowed; color: var(--texto-baixo); filter: none; font-size: 17px; letter-spacing: .1em; }
-.sel-travar:disabled::before { background: var(--linha-forte); }
-.sel-travar:disabled::after { background: var(--painel); }
-.selecao.travando .sel-travar::after { animation: sel-clarao .7s cubic-bezier(.16, 1, .3, 1); }
-@keyframes sel-clarao { 40% { filter: brightness(1.35); } }
-.sel-dica { max-width: 460px; margin: 0; font-size: 13.5px; line-height: 1.5; text-align: center; color: var(--texto-baixo); }
+.sel-travar:focus-visible { outline: 2px solid var(--hx-ciano); outline-offset: 4px; border-radius: 4px; }
+.sel-travar:disabled { cursor: not-allowed; color: #5b5a56; filter: none; font-size: 16px; letter-spacing: .1em; }
+.sel-travar:disabled::before { background: var(--hx-cinza-3); }
+.sel-travar:disabled::after { background: var(--hx-preto); }
+.selecao.travando .sel-travar { color: var(--hx-ouro-1); }
+.selecao.travando .sel-travar::after { animation: sel-clarao .75s cubic-bezier(.16, 1, .3, 1); }
+@keyframes sel-clarao { 40% { background: linear-gradient(#5a4a2a, #1e2a3e); } }
+.sel-dica { max-width: 460px; margin: 0; font-size: 13.5px; line-height: 1.5; text-align: center; color: var(--hx-cinza-1); }
 .selecao:not(.primeira) .sel-dica { display: none; }
 .sel-fecha { position: fixed; top: calc(var(--barra) + 14px); right: 16px; z-index: 3; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%;
-  border: 1px solid var(--linha-forte); background: var(--painel); color: var(--texto); cursor: pointer; }
-.sel-fecha:hover { border-color: var(--acento-vivo); color: var(--acento-vivo); }
+  border: 1px solid var(--hx-ouro-5); background: var(--hx-preto); color: var(--hx-ouro-2); cursor: pointer; }
+.sel-fecha:hover { border-color: var(--hx-ouro-3); color: var(--hx-ouro-1); }
+.sel-fecha:focus-visible { outline: 2px solid var(--hx-ciano); outline-offset: 3px; }
 .selecao.primeira .sel-fecha { display: none; }
 body.sem-rolar { overflow: hidden; }
-@media (max-width: 899px) {
-  .sel-palco { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto auto 1fr; grid-template-areas: "tit" "voce" "centro" "acao"; gap: 14px; padding-top: 22px; }
-  .selecao h2 { font-size: 24px; padding: 0 44px; }
-  .sel-voce { grid-template-columns: auto minmax(0, 1fr); justify-items: start; align-items: center; gap: 2px 14px; padding: 12px 14px; text-align: left; }
-  .sel-voce > * { grid-column: 2; }
-  .sel-voce .sel-retrato { grid-column: 1; grid-row: 1 / span 5; width: 72px; height: 72px; margin: 0; }
-  .sel-voce .sel-selo { font-size: 11px; padding: 2px 8px; }
-  .sel-voce b { font-size: 21px; }
-  .sel-voce .sel-pos { margin-top: 2px; }
-  .sel-voce .sel-meta { margin-top: 2px; font-size: 13px; }
+@media (max-width: 999px) {
+  .sel-palco { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto auto auto 1fr; grid-template-areas: "cabeca" "time" "centro" "inimigos" "acao"; gap: 16px; padding-top: 20px; }
+  .selecao h2 { font-size: 22px; padding: 0 44px; }
+  .sel-ret { width: 60px; height: 60px; }
+  .sel-linha-txt b { font-size: 19px; }
+  .sel-meta { margin-top: 10px; font-size: 13px; }
   .sel-centro { min-height: 0; padding: 12px 12px 16px; }
   .sel-ferramentas { gap: 10px; padding-bottom: 12px; margin-bottom: 14px; }
-  .sel-busca { flex: 1 1 100%; }
+  .sel-busca { flex: 1 1 100%; height: 44px; }
   .sel-posicoes { width: 100%; justify-content: space-between; }
   .sel-grade { grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); gap: 14px 10px; }
   .sel-tile img { width: 100%; height: auto; aspect-ratio: 1; }
   .sel-tile span { font-size: 12px; }
-  .sel-travar { min-width: min(100%, 320px); height: 54px; font-size: 19px; }
+  .sel-inimigos h3, .sel-ini-nota { text-align: left; }
+  .sel-inimigos ul { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; scrollbar-width: thin; }
+  .sel-inimigos li { flex: 0 0 auto; }
+  .sel-inimigo { flex-direction: column-reverse; justify-content: flex-start; gap: 6px; width: 86px; min-height: 0; padding: 10px 4px; text-align: center; }
+  .sel-inimigo b { font-size: 12px; }
+  .sel-inimigo small { font-size: 11px; justify-content: center; }
+  .sel-travar { min-width: min(100%, 320px); }
+  .sel-dica { display: none; }  /* na barra fixa do celular ela cobriria os inimigos */
 }
 @media (prefers-reduced-motion: reduce) {
-  .sel-fundo img, .sel-tile img { transition: none; }
-  .selecao.travando .sel-retrato, .selecao.travando .sel-travar::after { animation: none; }
+  .sel-fundo img, .sel-tile img, .sel-travar, .sel-travar::after { transition: none; }
+  .selecao.travando .sel-ret, .selecao.travando .sel-travar::after { animation: none; }
   .selecao.travando .sel-fundo img { transform: none; }
 }
 .dica { margin: 6px 10px 4px; padding-top: 8px; border-top: 1px solid var(--linha); font-size: 13px; color: var(--texto-baixo); }
@@ -987,20 +1029,31 @@ body.sem-rolar { overflow: hidden; }
   </div>
 </header>
 
-<!-- Seleção de guia, no desenho da seleção de campeões do LoL: aparece na primeira visita e quando se toca no campeão do topo. -->
+<!-- Seleção de guia, no layout da seleção de campeões do cliente do LoL: aparece na primeira visita e quando se toca no campeão do topo. -->
 <section class="selecao" id="selecao" role="dialog" aria-labelledby="selTit" hidden>
   <div class="sel-fundo" id="selFundo" aria-hidden="true"></div>
   <div class="sel-palco">
-    <h2 id="selTit" data-t="selTit">Escolha seu campeão</h2>
-    <aside class="sel-voce" id="selVoce" aria-live="polite"></aside>
+    <header class="sel-cabeca">
+      <h2 id="selTit" data-t="selTit">Escolha seu campeão!</h2>
+      <span class="sel-barra" aria-hidden="true"><i></i></span>
+    </header>
+    <aside class="sel-time" aria-labelledby="selTimeTit">
+      <h3 id="selTimeTit" data-t="selTime">Seu time</h3>
+      <div id="selVoce" aria-live="polite"></div>
+    </aside>
     <div class="sel-centro">
       <div class="sel-ferramentas">
         <div class="sel-posicoes" id="selPosicoes" role="group" data-t-aria="selPosicoes"></div>
-        <label class="busca sel-busca" for="selBusca"><svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M11 11l3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><input id="selBusca" type="search" autocomplete="off" spellcheck="false" data-t-placeholder="selBusca" data-t-aria="selBusca"></label>
+        <label class="sel-busca" for="selBusca"><svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M11 11l3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><input id="selBusca" type="search" autocomplete="off" spellcheck="false" data-t-placeholder="selBusca" data-t-aria="selBusca"></label>
       </div>
       <ul class="sel-grade" id="selGrade"></ul>
       <p class="sel-vazio" id="selVazio" role="status" hidden></p>
     </div>
+    <aside class="sel-inimigos" aria-labelledby="selIniTit">
+      <h3 id="selIniTit" data-t="selInimigos">Matchups mais difíceis</h3>
+      <ul id="selInimigos"></ul>
+      <p class="sel-ini-nota" id="selIniNota"></p>
+    </aside>
     <div class="sel-acao">
       <button type="button" class="sel-travar" id="selTravar" disabled><span id="selTravarTxt"></span></button>
       <p class="sel-dica" data-t="selDica"></p>
@@ -1152,7 +1205,7 @@ document.addEventListener("load", e => { if (e.target.tagName === "IMG") e.targe
 /* ---------- Língua da interface (pt-BR ou inglês) ---------- */
 const TXT = {
   pt: {
-    pular: "Pular para o matchup", guiasTit: "Guias de matchup", selTit: "Escolha seu campeão", selDica: "O site guarda a sua escolha e abre direto nela da próxima vez. Para trocar, toque no campeão lá em cima.", selBusca: "Buscar campeão", selPosicoes: "Filtrar por posição", selEscolha: "Escolha um campeão", selTravar: "Travar", selTravarDe: "Travar {c}", selVazio: "Nenhum guia com essa busca.", selSemPos: "Ainda não tem guia de {p}. Os próximos guias vão aparecendo aqui.", pos_top: "Top", pos_jungle: "Jungle", pos_mid: "Mid", pos_bot: "ADC", pos_sup: "Suporte",
+    pular: "Pular para o matchup", guiasTit: "Guias de matchup", selTit: "Escolha seu campeão!", selTime: "Seu time", selInimigos: "Matchups mais difíceis", selEscolhendo: "Escolhendo…", selInimigosNota: "Toque num inimigo para travar e já abrir a matchup.", selInimigosVazio: "Marque um campeão para ver as matchups mais difíceis dele.", selAbrirMatchup: "Travar {c} e abrir a matchup contra {e}", selDica: "O site guarda a sua escolha e abre direto nela da próxima vez. Para trocar, toque no campeão lá em cima.", selBusca: "Buscar campeão", selPosicoes: "Filtrar por posição", selEscolha: "Escolha um campeão", selTravar: "Confirmar", selTravarDe: "Confirmar {c}", selVazio: "Nenhum guia com essa busca.", selSemPos: "Ainda não tem guia de {p}. Os próximos guias vão aparecendo aqui.", pos_top: "Top", pos_jungle: "Jungle", pos_mid: "Mid", pos_bot: "ADC", pos_sup: "Suporte",
     escolhe: "Escolha o inimigo", busca: "Campeão ou palavra", buscaRotulo: "Procurar matchup", filtros: "Filtros", campeoes: "Campeões",
     vazio: "Nenhum campeão com essa busca.", limpar: "Limpar busca e filtros", voce: "Você", inimigo: "Inimigo", duelo: "Duelo",
     travarTit: "Travar o pick", travarContra: "Travar o pick contra ", setup: "Seu setup pro confronto",
@@ -1185,7 +1238,7 @@ const TXT = {
     a_dance: "Dança", a_taunt: "Provocação", a_laugh: "Risada", a_attack: "Ataque", a_recall: "Recall",
   },
   en: {
-    pular: "Skip to matchup", guiasTit: "Matchup guides", selTit: "Choose your champion", selDica: "The site remembers your pick and opens straight to it next time. To switch, tap the champion at the top.", selBusca: "Search champion", selPosicoes: "Filter by position", selEscolha: "Choose a champion", selTravar: "Lock in", selTravarDe: "Lock in {c}", selVazio: "No guide matches this search.", selSemPos: "No {p} guide yet. New guides will show up here.", pos_top: "Top", pos_jungle: "Jungle", pos_mid: "Mid", pos_bot: "Bot", pos_sup: "Support",
+    pular: "Skip to matchup", guiasTit: "Matchup guides", selTit: "Choose your champion!", selTime: "Your team", selInimigos: "Hardest matchups", selEscolhendo: "Picking…", selInimigosNota: "Tap an enemy to lock in and open that matchup.", selInimigosVazio: "Pick a champion to see their hardest matchups.", selAbrirMatchup: "Lock in {c} and open the matchup against {e}", selDica: "The site remembers your pick and opens straight to it next time. To switch, tap the champion at the top.", selBusca: "Search champion", selPosicoes: "Filter by position", selEscolha: "Choose a champion", selTravar: "Lock in", selTravarDe: "Lock in {c}", selVazio: "No guide matches this search.", selSemPos: "No {p} guide yet. New guides will show up here.", pos_top: "Top", pos_jungle: "Jungle", pos_mid: "Mid", pos_bot: "Bot", pos_sup: "Support",
     escolhe: "Choose your enemy", busca: "Champion or keyword", buscaRotulo: "Search matchup", filtros: "Filters", campeoes: "Champions",
     vazio: "No champion matches this search.", limpar: "Clear search and filters", voce: "You", inimigo: "Enemy", duelo: "Matchup",
     travarTit: "Lock in", travarContra: "Lock in vs ", setup: "Your setup for this matchup",
@@ -2024,10 +2077,11 @@ function travar() {
   t.onclick = fecha;
 }
 
-/* ---------- Seleção de guia: a escolha do campeão, no desenho da seleção de campeões do LoL ----------
+/* ---------- Seleção de guia: a escolha do campeão, no layout da seleção de campeões do cliente do LoL ----------
    Aparece na primeira visita (sem guia salvo nem link de guia) e quando se toca no campeão do topo.
-   Um toque marca o campeão (o slot "Você", a splash no fundo e a paleta do guia mudam); Travar (ou dois toques) abre o guia. */
-// Ícones de posição do cliente (CommunityDragon, rcp-fe-lol-static-assets/svg/position-*.svg), na cor do guia.
+   Um toque marca o campeão (o seu slot, a splash no fundo e os inimigos mais difíceis mudam); Confirmar (ou dois toques) abre o guia;
+   tocar num inimigo trava o campeão e já abre aquela matchup. */
+// Ícones de posição do cliente (CommunityDragon, rcp-fe-lol-static-assets/svg/position-*.svg).
 const ICONE_POS = {
   top: '<path opacity=".45" fill="currentColor" fill-rule="evenodd" d="M21,14H14v7h7V14Zm5-3V26L11.014,26l-4,4H30V7.016Z"/><polygon fill="currentColor" points="4 4 4.003 28.045 9 23 9 9 23 9 28.045 4.003 4 4"/>',
   jungle: '<path fill="currentColor" fill-rule="evenodd" d="M25,3c-2.128,3.3-5.147,6.851-6.966,11.469A42.373,42.373,0,0,1,20,20a27.7,27.7,0,0,1,1-3C21,12.023,22.856,8.277,25,3ZM13,20c-1.488-4.487-4.76-6.966-9-9,3.868,3.136,4.422,7.52,5,12l3.743,3.312C14.215,27.917,16.527,30.451,17,31c4.555-9.445-3.366-20.8-8-28C11.67,9.573,13.717,13.342,13,20Zm8,5a15.271,15.271,0,0,1,0,2l4-4c0.578-4.48,1.132-8.864,5-12C24.712,13.537,22.134,18.854,21,25Z"/>',
@@ -2047,18 +2101,30 @@ function guiasDaSelecao() {
 function renderGradeSelecao() {
   const gs = guiasDaSelecao();
   $("selGrade").innerHTML = gs.map(g => `<li><button type="button" class="sel-tile" data-guia="${g.id}" aria-pressed="${g.id === selMarcado}"
-    aria-label="${esc(`${g.campeao.nome}${g.rota ? ", " + g.rota : ""}`)}"><img src="${sq(g.campeao.id)}" alt="" width="112" height="112"><span aria-hidden="true">${esc(g.campeao.nome)}</span></button></li>`).join("");
+    aria-label="${esc(`${g.campeao.nome}${g.rota ? ", " + g.rota : ""}`)}"><img src="${sq(g.campeao.id)}" alt="" width="86" height="86"><span aria-hidden="true">${esc(g.campeao.nome)}</span></button></li>`).join("");
   const vazio = !gs.length;
   $("selVazio").hidden = !vazio;
   $("selVazio").textContent = !vazio ? "" : selPos && !$("selBusca").value.trim() ? t("selSemPos").replace("{p}", t("pos_" + selPos)) : t("selVazio");
 }
+// As cinco matchups mais difíceis do guia (a cor da dificuldade é a da planilha).
+function inimigosDificeis(g) {
+  if (!g.lista) prepara(g);
+  const peso = c => (c.dif ? DIFS.length - DIFS.indexOf(c.dif) : 0);
+  return g.lista.filter(c => c.dif).sort((a, b) => peso(b) - peso(a) || a.nome.localeCompare(b.nome)).slice(0, 5);
+}
 function renderVoce() {
   const g = GUIAS.find(x => x.id === selMarcado);
-  $("selVoce").innerHTML = `<span class="sel-selo">${t("voce")}</span>` + (g
-    ? `<div class="sel-retrato"><img src="${sq(g.campeao.id)}" alt=""></div><b>${esc(g.campeao.nome)}</b><span class="sel-titulo">${esc(tituloDe(g.campeao))}</span>
-      ${posDe(g) ? `<span class="sel-pos">${iconePos(posDe(g))}${esc(t("pos_" + posDe(g)))}</span>` : ""}
-      <p class="sel-meta">${t("notasDo")}<strong>${esc(g.autor)}</strong><br>${g.matchups.length}${t("matchups")}</p>`
-    : `<div class="sel-retrato sem-campeao"><svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><path d="M17 5l12 12-12 12L5 17z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></div><p class="sel-escolha">${t("selEscolha")}</p>`);
+  $("selVoce").innerHTML = g
+    ? `<div class="sel-linha"><span class="sel-ret"><img src="${sq(g.campeao.id)}" alt=""></span><span class="sel-linha-txt"><small>${t("voce")}</small><b${g.campeao.nome.length > 9 ? ' class="longo"' : ""}>${esc(g.campeao.nome)}</b>
+        ${posDe(g) ? `<span class="sel-pos">${iconePos(posDe(g))}${esc(t("pos_" + posDe(g)))}</span>` : ""}</span></div>
+      <p class="sel-meta"><span class="sel-titulo">${esc(tituloDe(g.campeao))}</span>${t("notasDo")}<strong>${esc(g.autor)}</strong> · ${g.matchups.length}${t("matchups")}</p>`
+    : `<div class="sel-linha vago"><span class="sel-ret"><svg width="30" height="30" viewBox="0 0 34 34" aria-hidden="true"><path d="M17 5l12 12-12 12L5 17z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span>
+        <span class="sel-linha-txt"><small>${t("voce")}</small><b>${t("selEscolhendo")}</b></span></div>`;
+  $("selInimigos").innerHTML = g
+    ? inimigosDificeis(g).map(c => `<li><button type="button" class="sel-inimigo" data-slug="${c.slug}" aria-label="${esc(t("selAbrirMatchup").replace("{c}", g.campeao.nome).replace("{e}", c.nome))}">
+        <span><b>${esc(c.nome)}</b><small><i style="--cor: var(--difc-${c.dif})"></i>${esc(rotuloDif(c.dif))}</small></span><img src="${sq(c.id)}" alt="" width="50" height="50"></button></li>`).join("")
+    : Array.from({ length: 5 }, () => `<li><div class="sel-inimigo vago" aria-hidden="true"><span class="sel-vago-ret"></span></div></li>`).join("");
+  $("selIniNota").textContent = t(g ? "selInimigosNota" : "selInimigosVazio");
   const b = $("selTravar");
   b.disabled = !g;
   $("selTravarTxt").textContent = t(g ? "selTravar" : "selEscolha");
@@ -2070,7 +2136,7 @@ function renderSelecao() {
   renderGradeSelecao();
   renderVoce();
 }
-// A splash do campeão marcado no fundo, como no cliente.
+// A splash do campeão marcado cobre a tela, como no cliente.
 function fundoSelecao(id) {
   const caixa = $("selFundo");
   if (!id) { caixa.innerHTML = ""; return; }
@@ -2081,21 +2147,19 @@ function fundoSelecao(id) {
   img.classList.add("trocando");
   setTimeout(() => { img.src = src; img.onload = () => img.classList.remove("trocando"); }, 160);
 }
-// Marcar um campeão: o slot "Você", a splash e a paleta do guia dele (a prévia volta se fechar sem travar).
 function marcaSelecao(id, som) {
   if (!id) return;
   if (som && id !== selMarcado) toca("grade");
   selMarcado = id;
-  raiz.dataset.guia = id;
   $("selGrade").querySelectorAll(".sel-tile").forEach(b => b.setAttribute("aria-pressed", b.dataset.guia === id));
   renderVoce();
   fundoSelecao(id);
 }
 let fechaSelecao;
-function travaSelecao() {
+// Travar: o som e a fala de escolha do campeão; com um inimigo, abre direto aquela matchup.
+function travaSelecao(inimigo) {
   const s = $("selecao"), g = GUIAS.find(x => x.id === selMarcado);
   if (!g || s.classList.contains("travando")) return;
-  // Travar o pick: o som e a fala de escolha do campeão, na língua do site.
   toca("travar");
   setTimeout(() => toca("vo", `sons/vo/${L === "en" ? "en/" : ""}${g.campeao.id}.ogg`), 180);
   s.classList.add("travando");
@@ -2103,7 +2167,8 @@ function travaSelecao() {
   const vai = () => {
     s.classList.remove("travando");
     abreSelecao(false, false, g.id);
-    if (g.id !== guia.id) { escolheGuia(g.id); atualiza3d(); }
+    if (inimigo) location.hash = `#${g.id}/${inimigo}`;
+    else if (g.id !== guia.id) { escolheGuia(g.id); atualiza3d(); }
     scrollTo({ top: 0 });
     $("trocar").focus();
   };
@@ -2134,7 +2199,6 @@ function abreSelecao(abrir, primeira, travado) {
     clearTimeout(fechaSelecao);
     s.hidden = true;
     s.classList.remove("travando");
-    if (!travado) raiz.dataset.guia = guia.id;  // fechou sem travar: volta a paleta do guia aberto
     try { localStorage.setItem("guia", travado || guia.id); } catch (e) {}
   }
 }
@@ -2142,9 +2206,10 @@ $("trocar").addEventListener("click", () => abreSelecao($("selecao").hidden));
 $("selFecha").addEventListener("click", () => { toca("fecha"); abreSelecao(false); $("trocar").focus(); });
 $("selGrade").addEventListener("click", e => { const b = e.target.closest(".sel-tile"); if (b) marcaSelecao(b.dataset.guia, true); });
 $("selGrade").addEventListener("dblclick", e => { const b = e.target.closest(".sel-tile"); if (b) { marcaSelecao(b.dataset.guia); travaSelecao(); } });
+$("selInimigos").addEventListener("click", e => { const b = e.target.closest(".sel-inimigo[data-slug]"); if (b) travaSelecao(b.dataset.slug); });
 let ultimoHoverSel = 0;
-$("selGrade").addEventListener("pointerover", e => {
-  const b = e.target.closest(".sel-tile");
+$("selecao").addEventListener("pointerover", e => {
+  const b = e.target.closest(".sel-tile, .sel-inimigo[data-slug]");
   if (!b || e.pointerType !== "mouse" || b.contains(e.relatedTarget) || performance.now() - ultimoHoverSel < 70) return;
   ultimoHoverSel = performance.now();
   toca("passa");
@@ -2171,7 +2236,7 @@ $("selBusca").addEventListener("keydown", e => {
   const g = guiasDaSelecao()[0];
   if (g) { marcaSelecao(g.id, true); $("selTravar").focus(); }
 });
-$("selTravar").addEventListener("click", travaSelecao);
+$("selTravar").addEventListener("click", () => travaSelecao());
 
 /* ---------- Tema ---------- */
 function marcaTema() {

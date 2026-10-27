@@ -18,7 +18,7 @@ Um guia pode ser escondido com `"oculto": true` em `src/guias.json` (os dados co
 
 ## Como navegar
 
-- Seleção de guia: na primeira visita (sem guia salvo e sem link de guia) o site abre numa tela no desenho da seleção de campeões do LoL: ícones de posição e busca em cima da grade de retratos, o slot "Você" com o campeão marcado (a splash dele no fundo e a paleta do guia já trocando) e o botão Travar, que toca o som e a fala do campeão e abre o guia. Depois ela volta tocando no campeão do topo.
+- Seleção de guia: na primeira visita (sem guia salvo e sem link de guia) o site abre numa tela no layout e nas cores da seleção de campeões do cliente do LoL: seu time à esquerda, a grade com ícones de posição e busca no meio, as cinco matchups mais difíceis do campeão marcado à direita (tocar numa já abre a matchup), a splash dele na tela toda e o Confirmar, que toca o som e a fala do campeão. Depois ela volta tocando no campeão do topo.
 - Teclado: `/` vai para a busca; ← → trocam para o matchup anterior/próximo; ↑ ↓ andam uma linha na grade de campeões (no celular, um campeão).
 - O site sempre abre no último guia usado (fica salvo no navegador).
 - Cada guia e cada matchup tem link próprio: `index.html#mordekaiser`, `index.html#mordekaiser/aatrox`. Links antigos do Akshan (`#ahri`) continuam funcionando.

@@ -241,24 +241,24 @@ components:
     textColor: "{colors.acento-vivo}"
     rounded: "{rounded.pilula}"
   selecao-retrato:
-    backgroundColor: "{colors.painel-alto}"
-    textColor: "{colors.texto}"
-    rounded: "{rounded.icone}"
-    size: "112px"
+    backgroundColor: "#0a1428"
+    textColor: "#a09b8c"
+    rounded: "0"
+    size: "86px"
   selecao-retrato-marcado:
-    backgroundColor: "{colors.painel-alto}"
-    textColor: "{colors.acento-vivo}"
-    rounded: "{rounded.icone}"
-  selecao-posicao-ativa:
-    backgroundColor: "{colors.destaque}"
-    textColor: "{colors.tinta-botao}"
-    rounded: "{rounded.campo}"
-    size: "44px"
-  selecao-travar:
-    backgroundColor: "{colors.botao-2}"
-    textColor: "{colors.tinta-arte}"
+    backgroundColor: "#0a1428"
+    textColor: "#f0e6d2"
+    rounded: "0"
+  selecao-slot-voce:
+    backgroundColor: "#0a1428"
+    textColor: "#f0e6d2"
+    typography: "{typography.marca}"
+    rounded: "4px"
+  selecao-confirmar:
+    backgroundColor: "#0a1428"
+    textColor: "#cdbe91"
     typography: "{typography.button}"
-    height: "58px"
+    height: "54px"
   lembrete:
     backgroundColor: "{colors.painel}"
     textColor: "{colors.texto}"
@@ -346,7 +346,7 @@ A dificuldade de cada matchup é a cor que o Peteruso pinta na célula do campe�
 ### Named Rules
 **A Regra da Cor como Dado.** As cores de dificuldade e o vermelho do ao vivo são dados, não decoração: aparecem só onde dizem a dificuldade de um matchup ou que alguém está em live, e nunca no lugar do destaque do guia.
 
-**A Regra dos Dois Temas.** Todo componente usa os tokens por nome; o tema claro só troca os valores em `:root[data-tema="claro"]`. Cor fixa só é permitida sobre a arte do campeão (nomes, selos, escurecimento do card, o número de dificuldade sobre o ícone, o "VS" do botão de travar, o overlay de travar), onde o fundo é a imagem e não o tema.
+**A Regra dos Dois Temas.** Todo componente usa os tokens por nome; o tema claro só troca os valores em `:root[data-tema="claro"]`. Cor fixa só é permitida sobre a arte do campeão (nomes, selos, escurecimento do card, o número de dificuldade sobre o ícone, o "VS" do botão de travar, o overlay de travar), onde o fundo é a imagem e não o tema, e na seleção de guia, que veste as cores do cliente do LoL a pedido do dono.
 
 **A Regra da Paleta por Guia.** Um guia novo entra redefinindo os mesmos tokens em `:root[data-guia="<id>"]` (base e sobre a arte) e `:root[data-guia="<id>"][data-tema="claro"]` (só os de base). Nenhum componente pergunta qual é o guia para escolher cor; só os marcadores próprios de um campeão (a mira da Punição) dependem de `data-guia`.
 
@@ -391,10 +391,10 @@ A barra é fixa no topo (64px, 60px no celular) com blur e leva o botão de troc
 
 ## Elevation & Depth
 
-Híbrido: a maior parte da profundidade é tonal (fundo, painel, painel alto) com molduras finas na cor do acento, e só os cards de campeão, o retrato do slot Você, o botão Travar e o círculo VS ganham sombra. A luz radial do topo dá a sensação de cena iluminada.
+Híbrido: a maior parte da profundidade é tonal (fundo, painel, painel alto) com molduras finas na cor do acento, e só os cards de campeão, o retrato do seu slot na seleção, o botão Confirmar e o círculo VS ganham sombra. A luz radial do topo dá a sensação de cena iluminada.
 
 ### Shadow Vocabulary
-- **Sombra** (token `--sombra`: `0 10px 30px rgba(0, 0, 0, .45)` no Akshan escuro, `rgba(90, 64, 10, .14)` no claro; `rgba(0, 0, 0, .5)` no Mordekaiser escuro, `rgba(10, 60, 30, .14)` no claro): cards Você e Inimigo. O retrato do slot Você usa `0 10px 30px rgba(0, 0, 0, .45)` e o Travar `drop-shadow(0 8px 18px rgba(0, 0, 0, .45))`, por causa das pontas recortadas.
+- **Sombra** (token `--sombra`: `0 10px 30px rgba(0, 0, 0, .45)` no Akshan escuro, `rgba(90, 64, 10, .14)` no claro; `rgba(0, 0, 0, .5)` no Mordekaiser escuro, `rgba(10, 60, 30, .14)` no claro): cards Você e Inimigo. Na seleção, o retrato do seu slot usa `0 8px 20px rgba(0, 0, 0, .5)` e o Confirmar `drop-shadow(0 8px 18px rgba(0, 0, 0, .55))`, por causa das pontas recortadas.
 - **Relevo do botão** (`box-shadow: inset 0 1px 0 rgba(255, 255, 255, .6), 0 6px 18px rgba(0, 0, 0, .45)`): só o círculo VS, com o brilho de borda em cima.
 - **Brilho da mira** (`filter: drop-shadow(0 0 4px rgba(255, 214, 120, .75)) drop-shadow(0 1px 3px rgba(0, 0, 0, .6))`): o losango que trava no card do inimigo, só no Akshan.
 - **Anel do retrato** (`box-shadow: 0 0 0 2px var(--acento)`): o retrato do campeão do guia no botão de troca.
@@ -448,12 +448,14 @@ A lista, o setup, o Resumo e cada lembrete são painéis com fundo `painel` e bo
 - **Rodapé:** a fonte das notas com o link "Ver a planilha original" (e os outros links do autor), e o crédito da Riot, em texto baixo 14px.
 
 ### Seleção de guia
-A escolha do campeão do guia, no desenho da seleção de campeões do LoL. Tela cheia embaixo do topo (que continua com língua, som e tema), em `fundo`, com a splash centralizada do campeão marcado ao fundo a 34% (enquadrada a 22% do topo e esmaecida para o `fundo` nas bordas). Aparece na primeira visita (sem guia salvo e sem link de guia, sem o X) e quando se toca no campeão do topo (com o X de 44px no canto).
-- **Título:** "Escolha seu campeão" em Cinzel 800, caixa-alta, clamp(26px, 3.4vw, 40px), `acento-vivo`, sem rótulo em cima.
-- **Slot Você (300px, à esquerda):** painel com `painel` a 86% e borda `linha`; selo "Você" (o do card), retrato redondo de 140px com o anel duplo do escolhido, nome em Cinzel 26px, título do campeão, a posição com o ícone do cliente em `acento-vivo` e "notas do autor · N matchups" em texto baixo. Sem campeão marcado: círculo tracejado com o losango da casa e "Escolha um campeão". No celular vira uma linha (retrato de 72px à esquerda).
-- **Grade (o resto da largura, ocupa a altura):** em cima, os cinco ícones de posição do cliente (Top, Jungle, Mid, ADC, Suporte; `rcp-fe-lol-static-assets/svg/position-*.svg`, embutidos com `currentColor`) em botões de 44px, um por vez, ligado no destaque cheio, e a busca (o campo da casa a 44px). Embaixo, os retratos quadrados de 112px (100% da coluna no celular, 4 por linha) com o nome em Hanken 600 14px; marcado com borda no destaque e o anel duplo, nome em `acento-vivo` 700. Posição sem guia mostra "Ainda não tem guia de Jungle"; busca sem resultado, "Nenhum guia com essa busca".
-- **Travar (embaixo, fixo ao rolar):** botão de 58px com as pontas em seta (o losango da casa esticado), o metal do VS (`botao-1` para `botao-2`) com moldura de 2px em `botao-2`, "Travar" em Cinzel 800 21px `tinta-arte`. Sem campeão marcado fica apagado em `painel` com "Escolha um campeão" em texto baixo.
-- **Comportamento:** um toque marca o campeão (som do grid), troca o slot, a splash e já veste a paleta do guia dele; dois toques ou Travar travam (o som de travar, a fala do campeão, o retrato e o botão acendem e a splash sobe para 62%, 0.75s) e abrem o guia. Fechar sem travar (X ou Esc) devolve a paleta do guia aberto. Setas andam pela grade, "/" vai para a busca e Enter na busca marca o primeiro resultado. Com "reduzir movimento", trava na hora, sem animação.
+A escolha do campeão do guia no layout da seleção de campeões do cliente do LoL, e nas cores dele (pedido do dono em 2026-10-27): azul-escuro quase preto com dourado hextech, iguais em todos os guias e nos dois temas. É a exceção de cor fixa da casa, como a arte do campeão: os valores moram em variáveis locais da tela (`--hx-preto` #010a13, `--hx-azul` #0a1428, `--hx-ouro-1` #f0e6d2, `--hx-ouro-2` #cdbe91, `--hx-ouro-3` #c8aa6e, `--hx-ouro-5` #785a28, `--hx-cinza-1` #a09b8c, `--hx-cinza-3` #3c3c41 e `--hx-ciano` #0ac8b9 só no foco de teclado). Tela cheia embaixo do topo (que continua com a paleta do guia aberto, língua, som e tema). Aparece na primeira visita (sem guia salvo e sem link de guia, sem o X) e quando se toca no campeão do topo (com o X de 44px).
+- **Fundo:** a splash centralizada do campeão marcado cobre a tela a 72%, escurecida nas laterais (onde ficam os times) e embaixo.
+- **Cabeça:** "Escolha seu campeão!" em Cinzel 700 caixa-alta clamp(24px, 2.8vw, 34px) `--hx-ouro-1`, e embaixo a linha do timer do cliente, parada: 2px de ouro que some nas pontas, com o losango da casa no meio.
+- **Seu time (à esquerda, 210–260px):** rótulo "Seu time" e o seu slot: faixa de 4px de canto com borda dourada fraca e o degradê claro de quem está escolhendo, retrato redondo de 72px no anel dourado, "Você", o nome em Cinzel 20px (16px se tiver mais de 9 letras) e a posição com o ícone do cliente. Embaixo, o título do campeão em itálico, o autor e o número de matchups. Sem campeão marcado: "Escolhendo…" com o losango num círculo apagado.
+- **Grade (no meio, ocupa a altura):** painel com borda `--hx-ouro-5`; em cima os cinco ícones de posição do cliente (`rcp-fe-lol-static-assets/svg/position-*.svg`, embutidos com `currentColor`) em botões de 44px, um por vez, e a busca de 38px (44px no celular); embaixo os retratos quadrados de 86px (4 por linha no celular) com o nome em Hanken 600 13px. Marcado: borda de 2px `--hx-ouro-3`. Posição sem guia avisa que os próximos aparecem ali.
+- **Matchups mais difíceis (à direita, espelhadas como o time inimigo):** as cinco matchups mais difíceis do guia marcado, com nome em Cinzel, a bolinha da dificuldade na cor da planilha (`--difc-*`) e o retrato redondo à direita. Tocar num inimigo trava o campeão e já abre aquela matchup. No celular viram uma faixa de cartões que rola de lado dentro dela.
+- **Confirmar (embaixo, fixo ao rolar):** 54px com as pontas em seta, moldura de 2px em degradê `--hx-ouro-3` → `--hx-ouro-5` e fundo azul-escuro, "Confirmar" em Cinzel 19px `--hx-ouro-2` (`--hx-ouro-1` no hover). Sem campeão marcado: moldura cinza e "Escolha um campeão".
+- **Comportamento:** um toque marca (som do grid; o slot, a splash e os inimigos trocam); dois toques ou Confirmar travam (som de travar, a fala do campeão, o retrato e o botão acendem e a splash sobe, 0.75s) e abrem o guia. Esc ou X fecham sem trocar. Setas andam pela grade, "/" vai para a busca, Enter na busca marca o primeiro. Com "reduzir movimento", trava na hora.
 
 ### Campeão na lista
 Ícone de 52px ou mais (56px na faixa do celular) com borda `linha-forte` e cantos de 6px. No Akshan, a borda é de 2px na cor da dificuldade, também no escolhido, que se distingue pelo losango pequeno girado em volta; nos outros guias o escolhido ganha borda de 2px no destaque com o anel duplo, e no formato completo cada rosto leva o número de dificuldade num selinho escuro de 17px no canto de baixo (Hanken 700 11px). Os 25 primeiros retratos carregam na hora; os outros, sob demanda.
@@ -494,7 +496,7 @@ Os sons vêm do cliente do LoL, na pasta `sons/` (`sons/ui/` para a interface, `
 - **VS:** o clique de travar e, 180ms depois, a fala de escolha do campeão do guia, em português.
 - **Anterior e próximo:** os cliques de seta, também pelas setas do teclado.
 - **Filtros:** o clique de chip.
-- **Seleção de guia:** abrir e fechar, o hover e o clique do grid nos retratos, o clique de chip nas posições e, ao travar, o som de travar com a fala do campeão.
+- **Seleção de guia:** abrir e fechar, o hover do grid nos retratos e nos inimigos, o clique do grid ao marcar, o clique de chip nas posições e, ao confirmar, o som de travar com a fala do campeão.
 - **Tema e o próprio botão de som:** o clique pequeno.
 - **Akshan 3D:** cada clipe das animações toca os efeitos e a fala do jogo (`SONS_CLIPE_3D`, pasta `sons/akshan3d/`), sorteando a variação; trocar de animação, esconder o 3D ou desligar o som corta o que estiver tocando.
 
