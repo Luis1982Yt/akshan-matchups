@@ -50,9 +50,9 @@ Um guia pode ser escondido com `"oculto": true` em `src/guias.json` (os dados co
 
 ## App da seleção de campeões (Windows)
 
-`app/` tem um programa de bandeja para Windows: quando o jogador está de Akshan na seleção de campeões, ele adivinha o mid inimigo (entre os inimigos que estão no guia, o que mais joga mid) e abre o site direto na matchup (`#akshan/<slug>`). Só lê a sessão pela API local do cliente; nunca escolhe, bane nem aceita fila. Inicia com o Windows (dá para desligar no menu da bandeja).
+`app/` tem um programa de bandeja para Windows: quando o jogador trava um campeão que tem guia no site (lista em `guias-app.json`), ele adivinha o inimigo da mesma rota (entre os inimigos que estão no guia, o que mais joga nela) e mostra o guia numa janela própria, direto na matchup (`#<guia>/<slug>`). A janela some quando a partida começa. Só lê a sessão pela API local do cliente; nunca escolhe, bane nem aceita fila. Inicia com o Windows (dá para desligar no menu da bandeja).
 
-- Download: [releases do GitHub](https://github.com/Luis1982Yt/akshan-matchups/releases/latest) (`AkshanMatchups.exe`, um arquivo só, não precisa de Python). O link "Baixar o app para PC" fica no card "Acompanhe", só no desktop (`APP_URL` no template).
+- Download: [releases do GitHub](https://github.com/Luis1982Yt/akshan-matchups/releases/latest) (`AkshanMatchups.exe`, um arquivo só, não precisa de Python). O botão "App para PC" fica no card "Acompanhe" de todos os guias, só no desktop (`APP_URL` no template aponta para a release mais nova).
 - Código, testes e como gerar o .exe: `app/README.md` (`python app/gerar_exe.py`; testes com `python -m unittest app/test_akshan_app.py`).
 - A pasta `app/` não vai para a Vercel (`.vercelignore`).
 
