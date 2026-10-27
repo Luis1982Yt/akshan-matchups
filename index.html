@@ -563,6 +563,7 @@ body.sem-rolar { overflow: hidden; }
 .pg-imagens img { width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--linha); }
 .aviso-fonte { max-width: 1288px; margin: 12px auto; padding: 10px 16px; border-left: 3px solid var(--acento); background: var(--painel); color: var(--texto-baixo); font-size: 14px; }
 .runa-original { max-width: 100%; width: auto; max-height: 160px; height: auto; display: block; margin: 10px 0; border-radius: 6px; }
+.build li.nota { white-space: pre-line; }
 .feiticos-guia { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--linha); }
 .feiticos-guia p { white-space: pre-line; color: var(--texto-baixo); font-size: 14px; }
 @media (max-width: 600px) { .aviso-fonte { margin: 10px var(--borda); } }
@@ -2048,7 +2049,7 @@ function renderDetalhe(animar) {
     g.innerHTML = c.dif ? `<i></i>${rotuloDif(c.dif)}` : "";
   } else {
     g.className = "guia";
-    g.innerHTML = c.dificuldade.overall ? `${pips(c.dificuldade.overall)}${t("dificuldade")} ${c.dificuldade.texto ? esc(notaTexto(c.dificuldade.texto).replace(/\s*\(.*$/, "")) : c.dificuldade.overall + "/5"}` : "";
+    g.innerHTML = c.dificuldade.overall ? `${pips(c.dificuldade.overall)}${t("dificuldade")} ${c.dificuldade.texto ? esc(notaTexto(tr(c.dificuldade.texto)).replace(/\s*\(.*$/, "")) : c.dificuldade.overall + "/5"}` : "";
   }
   $("travarNome").textContent = t("travarContra") + c.nome;
   // Se o painel de cooldowns estiver aberto, acompanha a troca de matchup.
@@ -2141,7 +2142,7 @@ function guiasDaSelecao() {
 function renderGradeSelecao() {
   const gs = guiasDaSelecao();
   $("selGrade").innerHTML = gs.map(g => `<li><button type="button" class="sel-tile" data-guia="${g.id}" aria-pressed="${g.id === selMarcado}"
-    aria-label="${esc(`${g.campeao.nome}${g.rota ? ", " + g.rota : ""}`)}"><img src="${sq(g.campeao.id)}" alt="" width="86" height="86"><span aria-hidden="true">${esc(g.campeao.nome)}</span></button></li>`).join("");
+    aria-label="${esc(`${g.campeao.nome}${g.rota ? ", " + (g.rotas || [g.rota]).join(" / ") : ""}`)}"><img src="${sq(g.campeao.id)}" alt="" width="86" height="86"><span aria-hidden="true">${esc(g.campeao.nome)}</span></button></li>`).join("");
   const vazio = !gs.length;
   $("selVazio").hidden = !vazio;
   $("selVazio").textContent = !vazio ? "" : selPos && !$("selBusca").value.trim() ? t("selSemPos").replace("{p}", t("pos_" + selPos)) : t("selVazio");
