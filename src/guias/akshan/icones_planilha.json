@@ -14,10 +14,11 @@
    ]
   },
   "bota": {
-   "texto": "Mercúrio / Vampíricas",
+   "texto": "Mercúrio / Vampíricas / Berserker",
    "pecas": [
     "3111",
-    "3008"
+    "3008",
+    "3006"
    ]
   },
   "build": {
@@ -33,11 +34,12 @@
   "runa": {
    "texto": "PTA / Electro",
    "pecas": [
-    "PressTheAttack"
+    "PressTheAttack",
+    "Electrocute"
    ]
   },
   "sec": {
-   "texto": "Scaling",
+   "texto": "Feitiçaria",
    "pecas": [
     "AbsoluteFocus",
     "GatheringStorm"
@@ -66,10 +68,10 @@
    ]
   },
   "sec": {
-   "texto": "Inspiração",
+   "texto": "Osso revestido",
    "pecas": [
-    "CashBack",
-    "PerfectTiming"
+    "BonePlating",
+    "Unflinching"
    ]
   },
   "bota": {
@@ -80,8 +82,11 @@
    ]
   },
   "build": {
-   "texto": "Tanto faz",
-   "pecas": []
+   "texto": "Crit",
+   "pecas": [
+    "3095",
+    "3031"
+   ]
   },
   "dificuldade": "muito_dificil"
  },
@@ -346,7 +351,7 @@
    ]
   },
   "sec": {
-   "texto": "Scaling",
+   "texto": "Feitiçaria",
    "pecas": [
     "AbsoluteFocus",
     "GatheringStorm"
@@ -488,10 +493,10 @@
    ]
   },
   "sec": {
-   "texto": "Impacto repentino",
+   "texto": "Feitiçaria",
    "pecas": [
-    "SuddenImpact",
-    "TreasureHunter"
+    "AbsoluteFocus",
+    "GatheringStorm"
    ]
   },
   "bota": {
@@ -565,10 +570,10 @@
    ]
   },
   "sec": {
-   "texto": "Impacto repentino",
+   "texto": "Osso revestido",
    "pecas": [
-    "SuddenImpact",
-    "TreasureHunter"
+    "BonePlating",
+    "ShieldBash"
    ]
   },
   "bota": {
@@ -594,7 +599,7 @@
    ]
   },
   "sec": {
-   "texto": "Scaling",
+   "texto": "Feitiçaria",
    "pecas": [
     "AbsoluteFocus",
     "GatheringStorm"
@@ -652,7 +657,7 @@
    ]
   },
   "sec": {
-   "texto": "Inspiração / Scaling",
+   "texto": "Inspiração / Feitiçaria",
    "pecas": [
     "CashBack",
     "GatheringStorm"
@@ -680,7 +685,7 @@
    ]
   },
   "sec": {
-   "texto": "Scaling",
+   "texto": "Feitiçaria",
    "pecas": [
     "AbsoluteFocus",
     "GatheringStorm"
@@ -707,7 +712,7 @@
    ]
   },
   "sec": {
-   "texto": "Scaling",
+   "texto": "Feitiçaria",
    "pecas": [
     "AbsoluteFocus",
     "GatheringStorm"
@@ -723,7 +728,9 @@
   },
   "build": {
    "texto": "Terminus / Crit",
-   "pecas": []
+   "pecas": [
+    "3095"
+   ]
   },
   "dificuldade": "medio"
  },
@@ -878,7 +885,7 @@
    ]
   },
   "sec": {
-   "texto": "Scaling",
+   "texto": "Feitiçaria",
    "pecas": [
     "ShieldBash",
     "Unflinching"
@@ -1077,7 +1084,7 @@
    ]
   },
   "sec": {
-   "texto": "Scaling",
+   "texto": "Feitiçaria",
    "pecas": [
     "AbsoluteFocus",
     "GatheringStorm"
@@ -1159,7 +1166,7 @@
    ]
   },
   "sec": {
-   "texto": "Scaling",
+   "texto": "Feitiçaria",
    "pecas": [
     "AbsoluteFocus",
     "GatheringStorm"
