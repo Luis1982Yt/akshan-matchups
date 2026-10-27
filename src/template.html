@@ -13,7 +13,7 @@
 <meta property="og:description" content="/*DESCRICAO*/">
 <meta property="og:url" content="https://akshan-matchups.vercel.app/">
 <!-- O ?v= muda quando a imagem muda: WhatsApp e X guardam a prévia antiga pelo endereço. -->
-<meta property="og:image" content="https://akshan-matchups.vercel.app/og.jpg?v=2">
+<meta property="og:image" content="https://akshan-matchups.vercel.app/og.jpg?v=3">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="/*OG_ALT*/">
@@ -268,6 +268,23 @@ try {
   --sombra: 0 10px 30px rgba(10, 60, 55, .14);
   color-scheme: light;
 }
+/* Kayle: o ouro da armadura, o marfim das asas e o violeta da splash padrão. */
+:root[data-guia="kayle"] {
+  --fundo: #0e0c14; --painel: #17131f; --painel-alto: #211b2c;
+  --linha: rgba(215, 187, 120, .24); --linha-forte: rgba(215, 187, 120, .52);
+  --acento: #d7bb78; --acento-vivo: #f3dfad; --destaque: #eac56c;
+  --texto: #eee8e0; --texto-baixo: #b4a8bb; --tinta-botao: #24192a;
+  --luz: rgba(182, 146, 222, .13); --sobre-arte: #fff5da; --destaque-arte: #f6d384;
+  --botao-1: #f8e5af; --botao-2: #c99c48; --brilho: rgba(255, 236, 190, .5);
+  --brilho-2: rgba(189, 151, 235, .2); color-scheme: dark;
+}
+:root[data-guia="kayle"][data-tema="claro"] {
+  --fundo: #f3eff6; --painel: #fefbff; --painel-alto: #e9e1ee;
+  --linha: rgba(119, 87, 48, .26); --linha-forte: rgba(119, 87, 48, .56);
+  --acento: #8b642c; --acento-vivo: #68451c; --destaque: #986c23;
+  --texto: #2d2334; --texto-baixo: #685b70; --tinta-botao: #24192a;
+  --luz: rgba(137, 99, 181, .12); color-scheme: light;
+}
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
 /* A página nunca rola para o lado: o clip corta sobras de meio pixel sem virar contêiner de rolagem (o sticky continua). */
@@ -319,7 +336,7 @@ body.selecionando .selecao { inset-block-start: 0; padding-top: calc(var(--barra
 body.selecionando .sel-fundo { inset: 0; }
 .selecao ::selection { background: var(--hx-ouro-5); color: var(--hx-ouro-1); }
 .sel-fundo { position: fixed; inset: var(--barra) 0 0; overflow: hidden; pointer-events: none; }
-.sel-fundo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; opacity: .72; transition: opacity .45s cubic-bezier(.16, 1, .3, 1), transform 1.2s cubic-bezier(.16, 1, .3, 1); }
+.sel-fundo img { width: 100%; height: 100%; object-fit: cover; object-position: var(--foco-sel, 50% 20%); opacity: .72; transition: opacity .45s cubic-bezier(.16, 1, .3, 1), transform 1.2s cubic-bezier(.16, 1, .3, 1); }
 .sel-fundo img.trocando { opacity: 0; }
 .selecao.travando .sel-fundo img { opacity: .95; transform: scale(1.03); }
 .sel-fundo::after { content: ""; position: absolute; inset: 0;
@@ -542,6 +559,11 @@ body.sem-rolar { overflow: hidden; }
 .pecas-soltas { grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); }
 .pg-imagens { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); }
 .pg-imagens img { width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--linha); }
+.aviso-fonte { max-width: 1288px; margin: 12px auto; padding: 10px 16px; border-left: 3px solid var(--acento); background: var(--painel); color: var(--texto-baixo); font-size: 14px; }
+.runa-original { max-width: 100%; width: auto; max-height: 160px; height: auto; display: block; margin: 10px 0; border-radius: 6px; }
+.feiticos-guia { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--linha); }
+.feiticos-guia p { white-space: pre-line; color: var(--texto-baixo); font-size: 14px; }
+@media (max-width: 600px) { .aviso-fonte { margin: 10px var(--borda); } }
 .pessoas { grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
 .pessoa .topo { flex-wrap: wrap; gap: 6px 10px; }
 .pessoa .topo b { margin-right: auto; }
@@ -1077,6 +1099,7 @@ body.sem-rolar { overflow: hidden; }
   <p class="sr" id="anuncio" aria-live="polite"></p>
   <p class="aviso-app" id="avisoApp" hidden></p>
   <nav class="paginas" id="paginas" data-t-aria="paginasGuia" hidden><ul id="paginasLista"></ul></nav>
+  <p class="aviso-fonte" id="avisoFonte" hidden></p>
   <div class="pagina" id="pagina" hidden></div>
   <div class="palco">
     <div class="col-lista">
@@ -1227,14 +1250,14 @@ const TXT = {
     rodapeRiot: "Imagens e sons de campeões, runas e itens da Riot Games. Site de fã, sem ligação com a Riot.",
     plOk: "Atualizado agora da planilha.", plArquivo: "Aberto como arquivo: mostrando a cópia salva. O site publicado lê a planilha ao vivo.",
     plFalhou: "Sem conexão com a planilha: mostrando a última cópia salva.", plBusca: "Buscando a versão mais nova da planilha…",
-    srDif: n => `, dificuldade ${n} de 5`, srNotas: ", achado nas notas", titNotas: " (achado nas notas)",
+    srDif: (n, escala = 5) => `, dificuldade ${n} de ${escala}`, srNotas: ", achado nas notas", titNotas: " (achado nas notas)",
     nCampeoes: n => `${n} campeões`, nenhum: "Nenhum campeão com essa busca",
     somOff: "Desligar os sons", somOn: "Ligar os sons", temaEsc: "Usar tema escuro", temaCla: "Usar tema claro",
     linguaRotulo: "Switch to English", linguaBotao: "EN",
     guiaAtual: "Guia atual: ", trocarGuia: ". Trocar de guia", notasDo: "notas do ", matchups: " matchups", aberto: "Aberto",
     facil: "Fácil", medio: "Médio", dificil: "Difícil", resumo: "Resumo", runas: "Runas", itens: "Itens", geral: "Geral",
     principal: "Principal", fragmentos: "Fragmentos", ou: "ou", opcao: "Opção", cds: "Cooldowns", cdsTit: "Cooldowns do inimigo", cdsDe: "Cooldowns · {c}", passiva: "Passiva", cdsBase: "Cooldowns base de cada nível da habilidade, sem aceleração de habilidade.",
-    paginasGuia: "Páginas do guia", pgMatchups: "Matchups", pgSobre: "Sobre", pgItens: "Itens", pgRunas: "Runas", pgSetups: "Setups alternativos", pgCriadores: "Criadores", pgGeral: "Geral", pgDicas: "Dicas",
+    paginasGuia: "Páginas do guia", pgMatchups: "Matchups", pgSobre: "Sobre", pgItens: "Itens", pgRunas: "Runas", pgSetups: "Setups alternativos", pgCriadores: "Criadores", pgGeral: "Geral", pgDicas: "Dicas", pgMacro: "Macro", pgHabilidades: "Habilidades", pgAmeacas: "Ameaças no late", pgInspiracao: "Por que Inspiração", pgNotas: "Notas", runasPlanilha: "Fragmentos da planilha original",
     pgOriginal: "Texto do autor, em inglês como na planilha.", pgTraduzido: "Texto do autor, traduzido da planilha original em inglês.", outraBuild: "Outra build", estagios: ["1º item", "2º item", "3º item", "4º item+"], estViavel: "dá para fazer nesse momento da build", estSo: "só comentário",
     lerMais: "Ler mais", lerMenos: "Ler menos", semComentario: "Sem comentário", arvores: { Precision: "Precisão", Domination: "Dominação", Sorcery: "Feitiçaria", Resolve: "Determinação", Inspiration: "Inspiração" },
     setRunas: "Runas", setItens: "Itens", setExemplo: "Exemplo", setComentario: "Comentário", ultimaMudanca: "Última mudança do campeão", emote: "Arraste para girar · clique para uma emote", mostra3d: "Mostrar o {c} 3D", skins: "Skins do Akshan", skinAnt: "Skin anterior", copiar: "Copiar link", copiado: "Link copiado!", copiarLink: "Copiar o link desta matchup", skinProx: "Próxima skin", chromas: "Chromas", semChroma: "Sem chroma", esconde3d: "Esconder o {c} 3D", carrega3d: "Carregando {c}…", tierBotao: "Tier list das matchups", tierTit: "Tier list · {c}", fechar: "Fechar", aoVivo: "Ao vivo", acompanhe: "Acompanhe mono {c}s", assistir: "Assistir", opggDe: "OP.GG do ", devPor: "Site feito por", baixarApp: "App para PC: abre a matchup sozinho",
@@ -1260,14 +1283,14 @@ const TXT = {
     rodapeRiot: "Champion, rune and item images and sounds by Riot Games. Fan site, not affiliated with Riot.",
     plOk: "Updated just now from the spreadsheet.", plArquivo: "Opened as a file: showing the saved copy. The published site reads the spreadsheet live.",
     plFalhou: "Couldn't reach the spreadsheet: showing the last saved copy.", plBusca: "Fetching the latest version of the spreadsheet…",
-    srDif: n => `, difficulty ${n} of 5`, srNotas: ", found in the notes", titNotas: " (found in the notes)",
+    srDif: (n, escala = 5) => `, difficulty ${n} of ${escala}`, srNotas: ", found in the notes", titNotas: " (found in the notes)",
     nCampeoes: n => `${n} champions`, nenhum: "No champion matches this search",
     somOff: "Turn sounds off", somOn: "Turn sounds on", temaEsc: "Use dark theme", temaCla: "Use light theme",
     linguaRotulo: "Mudar para português", linguaBotao: "PT",
     guiaAtual: "Current guide: ", trocarGuia: ". Change guide", notasDo: "notes by ", matchups: " matchups", aberto: "Open",
     facil: "Easy", medio: "Medium", dificil: "Hard", resumo: "Summary", runas: "Runes", itens: "Items", geral: "Overall",
     principal: "Primary", fragmentos: "Shards", ou: "or", opcao: "Option", cds: "Cooldowns", cdsTit: "Enemy cooldowns", cdsDe: "Cooldowns · {c}", passiva: "Passive", cdsBase: "Base cooldowns per ability rank, without ability haste.",
-    paginasGuia: "Guide pages", pgMatchups: "Matchups", pgSobre: "About", pgItens: "Items", pgRunas: "Runes", pgSetups: "Alternative setups", pgCriadores: "Creators", pgGeral: "General", pgDicas: "Tips",
+    paginasGuia: "Guide pages", pgMatchups: "Matchups", pgSobre: "About", pgItens: "Items", pgRunas: "Runes", pgSetups: "Alternative setups", pgCriadores: "Creators", pgGeral: "General", pgDicas: "Tips", pgMacro: "Macro", pgHabilidades: "Ability order", pgAmeacas: "Late-game threats", pgInspiracao: "Why Inspiration", pgNotas: "Notes", runasPlanilha: "Shards from the original spreadsheet",
     pgOriginal: "The author's own text, as in the spreadsheet.", outraBuild: "Other build", estagios: ["1st item", "2nd item", "3rd item", "4th+ item"], estViavel: "viable at this point of the build", estSo: "comment only",
     lerMais: "Read more", lerMenos: "Read less", semComentario: "No comment", arvores: { Precision: "Precision", Domination: "Domination", Sorcery: "Sorcery", Resolve: "Resolve", Inspiration: "Inspiration" },
     setRunas: "Runes", setItens: "Items", setExemplo: "Example", setComentario: "Comments", ultimaMudanca: "Latest champion change", emote: "Drag to rotate · click for an emote", mostra3d: "Show 3D {c}", skins: "Akshan skins", skinAnt: "Previous skin", copiar: "Copy link", copiado: "Link copied!", copiarLink: "Copy this matchup's link", skinProx: "Next skin", chromas: "Chromas", semChroma: "No chroma", esconde3d: "Hide 3D {c}", carrega3d: "Loading {c}…", tierBotao: "Matchup tier list", tierTit: "Tier list · {c}", fechar: "Close", aoVivo: "Live", acompanhe: "Watch {c} mains", assistir: "Watch", opggDe: "OP.GG of ", devPor: "Site by", baixarApp: "PC app: opens the matchup by itself",
@@ -1516,7 +1539,9 @@ const ROTAS = ["top", "jungle", "jg", "mid", "adc", "bot", "sup", "support"];
 const ordemRota = r => { const i = ROTAS.indexOf((r || "").toLowerCase()); return i < 0 ? 99 : i; };
 function renderGuia() {
   const eu = guia.campeao;
-  const sub = guia.rota || "";
+  const sub = (guia.rotas || [guia.rota]).filter(Boolean).join(" / ");
+  $("avisoFonte").hidden = !guia.aviso;
+  $("avisoFonte").textContent = guia.aviso ? tr(guia.aviso) : "";
   const skt = guia.id === "akshan" ? skinAtual() : SKINS[0];
   $("trocarImg").innerHTML = `<img src="${skt.num ? tileSkin(eu.id, skt.num) : sq(eu.id)}" alt="" width="38" height="38">`;
   $("trocarNome").textContent = eu.nome;
@@ -1538,7 +1563,7 @@ function renderGuia() {
   $("filtros").innerHTML = filtros.map(f => `<button class="chip" type="button" data-f="${f.id}" aria-pressed="${ativos.has(f.id)}">${f.icone ? `<img src="${f.icone}" alt="" width="20" height="20">` : ""}${f.cor ? `<i class="cor-dif" style="--dif: var(--dif-${f.cor})" aria-hidden="true"></i>` : ""}${esc(f.cor ? rotuloDif(f.cor) : f.chave ? t(f.chave) : f.rotulo)}</button>`).join("");
   $("nt").textContent = t(guia.formato === "simples" ? "lembrete" : "comoJogar");
   // O separador fica junto dos atalhos: no celular eles somem e não sobra um "·" solto.
-  const marcas = guia.formato === "simples" ? "" : t("legDif");
+  const marcas = guia.formato === "simples" ? "" : t("legDif").replace(/5/, guia.escala || 5);
   $("legenda").innerHTML = `${marcas}<span class="atalhos">${marcas ? " · " : ""}<kbd>/</kbd> ${t("legBusca")} · <kbd>←</kbd> <kbd>→</kbd> <kbd>↑</kbd> <kbd>↓</kbd> ${t("legTroca")}</span>`;
   const links = guia.links.map(l => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc((L === "en" && l.rotulo_en) || l.rotulo)}</a>`).join(" · ");
   const ac = guia.acompanhe || [];
@@ -1586,8 +1611,8 @@ function renderLista() {
   // Os primeiros retratos (o que aparece sem rolar) vêm na hora; o resto só quando chegar perto da tela.
   lista.innerHTML = shown.map((c, i) => {
     const marca = guia.formato === "simples" ? ""
-      : (c.dificuldade.overall ? `<span class="nivel" aria-hidden="true">${c.dificuldade.overall}</span>` : "");
-    const extra = guia.formato === "simples" ? (c.dif ? ", " + rotuloDif(c.dif) : "") : (c.dificuldade.overall ? t("srDif", c.dificuldade.overall) : "");
+      : (c.dificuldade.overall ? `<span class="nivel" aria-hidden="true">${c.dificuldade.valor ?? c.dificuldade.overall}</span>` : "");
+    const extra = guia.formato === "simples" ? (c.dif ? ", " + rotuloDif(c.dif) : "") : (c.dificuldade.overall ? t("srDif", c.dificuldade.valor ?? c.dificuldade.overall, guia.escala || 5) : "");
     const dif = c.dif ? ` tem-dif" style="--dif: var(--dif-${c.dif})` : "";
     return `<button type="button" class="pick${soNota.has(c) ? " so-nota" : ""}${dif}" data-id="${c.slug}" data-ini="${esc(c.nome.charAt(0))}" aria-current="${c === current}" tabindex="${c === foco ? 0 : -1}" title="${esc(c.nome)}${soNota.has(c) ? t("titNotas") : ""}">
       <img src="${sq(c.id)}" alt="" width="56" height="56"${i < 25 ? "" : ' loading="lazy"'} decoding="async">${marca}<span class="sr">${esc(c.nome)}${extra}${soNota.has(c) ? t("srNotas") : ""}</span></button>`;
@@ -1633,7 +1658,7 @@ function enquadraTudo() {
   $("alvo").style.left = $("alvo").style.top = "";
   enquadra($("artEle").parentElement, current.mira || miraDe(current.id), $("alvo"));
 }
-const miraDe = id => { const c = guia.champs && Object.values(guia.champs).find(x => x.id === id); return c && c.mira; };
+const miraDe = id => { const c = guia.champs && Object.values(guia.champs).find(x => x.id === id); return c && c.mira || (id === guia.campeao.id ? guia.mira : null); };
 new ResizeObserver(() => enquadraTudo()).observe($("artEle").parentElement);
 
 /* ---------- Formato simples (planilha do Akshan) ---------- */
@@ -1705,7 +1730,7 @@ const nomePeca = p => {
   const pt = L !== "en" && p.icone && guia.traducao_pt && guia.traducao_pt.nomes[p.icone];
   return pt ? pt + (/\brush\b/i.test(p.nome) ? " (rush)" : "") : tr(p.nome);
 };
-const notaTexto = t => { const m = t.match(/^(\d)(?:\s*\/\s*(\d))?\s*(.*)$/); return m ? `${m[1]}${m[2] ? "–" + m[2] : ""}/5${m[3] ? " " + m[3] : ""}` : t; };
+const notaTexto = t => { if (guia.escala === 10) return t; const m = t.match(/^(\d)(?:\s*\/\s*(\d))?\s*(.*)$/); return m ? `${m[1]}${m[2] ? "–" + m[2] : ""}/5${m[3] ? " " + m[3] : ""}` : t; };
 const pips = n => `<span class="pips" aria-hidden="true">${[1, 2, 3, 4, 5].map(i => `<i${i <= n ? ' class="on"' : ""}></i>`).join("")}</span>`;
 const peca = (p, runa) => `<span class="peca${runa ? " runa" : ""}">${p.icone ? `<img src="${p.icone}" alt="" width="32" height="32">` : '<span class="soquete" aria-hidden="true"></span>'}<span>${esc(nomePeca(p))}</span></span>`;
 
@@ -1778,11 +1803,13 @@ function setupCompleto(c) {
   const listas = c.itens.map(g => `<ol${langOrig()}>${linhasItens(g.linhas)}</ol>`);
   const itens = c.itens.length > 1 ? `<div${langOrig()}>${abas("itens", conds, listas)}</div>`
     : listas.map((ol, i) => `<div class="grupo">${conds[i] !== "Build" ? `<p class="cond"${langOrig()}>${esc(conds[i])}</p>` : ""}${ol}</div>`).join("");
+  const imagensRunas = (c.imagens_runas || []).map(i => `<img class="runa-original" src="${esc(i.src)}" alt="${esc(tr(i.alt || t("runasPlanilha")))}" width="${i.largura}" height="${i.altura}" loading="lazy">`).join("");
+  const feiticos = c.feiticos_texto ? `<div class="feiticos-guia"><h3>${t("feitico")}</h3><div class="pecas">${(c.feiticos || []).map(p => peca(p)).join("")}</div><p>${esc(tr(c.feiticos_texto))}</p></div>` : "";
   const dif = [["early", "Early"], ["mid", "Mid"], ["late", "Late"], ["overall", "Geral"]]
     .filter(([k]) => k === "overall" || c.dificuldade[k] != null)
-    .map(([k, r]) => `<div><dt>${k === "overall" ? t("geral") : r}</dt><dd aria-label="${c.dificuldade[k] ? t("srDif", c.dificuldade[k]).replace(/^, /, "") : t("semAnot")}">${pips(c.dificuldade[k])}<b>${k === "overall" && c.dificuldade.texto ? esc(notaTexto(tr(c.dificuldade.texto))) : (c.dificuldade[k] ?? "–") + "/5"}</b></dd></div>`).join("");
+    .map(([k, r]) => `<div><dt>${k === "overall" ? t("geral") : r}</dt><dd aria-label="${c.dificuldade[k] ? t("srDif", k === "overall" ? c.dificuldade.valor ?? c.dificuldade[k] : c.dificuldade[k], guia.escala || 5).replace(/^, /, "") : t("semAnot")}">${pips(c.dificuldade[k])}<b>${k === "overall" && c.dificuldade.texto ? esc(notaTexto(tr(c.dificuldade.texto))) : (c.dificuldade[k] ?? "–") + "/5"}</b></dd></div>`).join("");
   return `<div class="setup-completo">
-    <section class="bloco"><h3>${t("runas")}</h3>${runas || `<p class="livre">${t("semAnot")}</p>`}</section>
+    <section class="bloco"><h3>${t("runas")}</h3>${runas || `<p class="livre">${t("semAnot")}</p>`}${imagensRunas}${feiticos}</section>
     <section class="bloco build"><h3>${t("itens")}</h3>${itens || `<p class="livre">${t("semAnot")}</p>`}</section>
     <section class="bloco dif"><h3>${t("dificuldade")}</h3><dl>${dif}</dl></section>
   </div>`;
@@ -1807,7 +1834,7 @@ function notasCompleto(c) {
 
 /* ---------- Páginas do guia (as outras abas da planilha do autor) ----------
    Texto do autor como no original no modo EN; no modo PT, a camada traduzida (tr e nomePeca). */
-const NOME_PAGINA = { sobre: "pgSobre", itens: "pgItens", runas: "pgRunas", setups: "pgSetups", criadores: "pgCriadores", geral: "pgGeral", dicas: "pgDicas" };
+const NOME_PAGINA = { sobre: "pgSobre", itens: "pgItens", runas: "pgRunas", setups: "pgSetups", criadores: "pgCriadores", geral: "pgGeral", dicas: "pgDicas", macro: "pgMacro", habilidades: "pgHabilidades", ameacas: "pgAmeacas", inspiracao: "pgInspiracao", notas: "pgNotas" };
 const ICONE_PAGINA = {
   matchups: '<path d="M6 4l12 16M18 4L6 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>',
   sobre: '<circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 11v6M12 7.5v.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>',
@@ -1881,7 +1908,7 @@ const BLOCOS = {
     ${x.texto ? `<p class="texto">${esc(tr(x.texto))}</p>` : ""}${x.links.length ? `<ul class="pessoa-links">${x.links.map(k => `<li><a href="${esc(k.url)}" target="_blank" rel="noopener"><span>${esc(tr(k.texto))}</span></a></li>`).join("")}</ul>` : ""}</article>`).join("")}</div></section>`,
   // Listas de itens com ícone e explicação (Itens da Illaoi).
   pecas: b => b.grupos.map(g => `<section class="pg-grupo">${g.titulo ? `<h3${langOrig()}>${esc(tr(g.titulo))}</h3>` : ""}<div class="pg-cards${g.itens.some(i => i.texto) ? "" : " pecas-soltas"}"${langOrig()}>${g.itens.map(i => `<article class="pg-card${i.texto ? "" : " sem-texto"}"><div class="topo">${i.icone ? `<img src="${i.icone}" alt="" width="44" height="44" loading="lazy">` : ""}<b>${esc(nomePeca(i))}</b></div>${i.texto ? textoLongo(esc(fluxo(tr(i.texto)))) : ""}</article>`).join("")}</div></section>`).join(""),
-  imagens: b => `<section class="pg-bloco">${b.titulo ? `<h3${langOrig()}>${esc(tr(b.titulo))}</h3>` : ""}<div class="pg-imagens">${b.imagens.map(i => `<a href="${esc(i.src)}" target="_blank" rel="noopener"><img src="${esc(i.src)}" alt="" width="${i.largura}" height="${i.altura}" loading="lazy"></a>`).join("")}</div></section>`,
+  imagens: b => `<section class="pg-bloco">${b.titulo ? `<h3${langOrig()}>${esc(tr(b.titulo))}</h3>` : ""}<div class="pg-imagens">${b.imagens.map(i => `<a href="${esc(i.src)}" target="_blank" rel="noopener"><img src="${esc(i.src)}" alt="${esc(tr(i.alt || b.titulo || ""))}" width="${i.largura}" height="${i.altura}" loading="lazy"></a>`).join("")}</div></section>`,
   // Dicas e mecânicas: título (link do vídeo, quando tem) e explicação.
   dicas: b => `<div class="pg-cards"${langOrig()}>${b.itens.map(d => `<article class="pg-card"><div class="topo"><b>${comLinks(d.titulo)}</b></div>${textoLongo(comLinks(d.texto))}</article>`).join("")}</div>`,
   tabelaCrua: b => `<section class="pg-bloco">${b.titulo ? `<h3${langOrig()}>${esc(tr(b.titulo))}</h3>` : ""}<div class="pg-tabela"><table${langOrig()}><thead><tr>${b.colunas.map(c => `<th scope="col">${esc(tr(c))}</th>`).join("")}</tr></thead>
@@ -2102,10 +2129,11 @@ const ICONE_POS = {
 const iconePos = pos => `<svg viewBox="0 0 34 34" aria-hidden="true">${ICONE_POS[pos]}</svg>`;
 const POS_DA_ROTA = { top: "top", jungle: "jungle", jg: "jungle", mid: "mid", adc: "bot", bot: "bot", sup: "sup", support: "sup" };
 const posDe = g => POS_DA_ROTA[(g.rota || "").toLowerCase()] || "";
+const posicoesDe = g => (g.rotas || [g.rota]).map(r => POS_DA_ROTA[(r || "").toLowerCase()]).filter(Boolean);
 let selMarcado = null, selPos = "";
 function guiasDaSelecao() {
   const busca = normal($("selBusca").value.trim());
-  return GUIAS.filter(g => (!selPos || posDe(g) === selPos) && (!busca || normal(g.campeao.nome).includes(busca)))
+  return GUIAS.filter(g => (!selPos || posicoesDe(g).includes(selPos)) && (!busca || normal(g.campeao.nome).includes(busca)))
     .sort((a, b) => a.campeao.nome.localeCompare(b.campeao.nome));
 }
 function renderGradeSelecao() {
@@ -2120,13 +2148,13 @@ function renderGradeSelecao() {
 function inimigosDificeis(g) {
   if (!g.lista) prepara(g);
   const peso = c => (c.dif ? DIFS.length - DIFS.indexOf(c.dif) : 0);
-  return g.lista.filter(c => c.dif).sort((a, b) => peso(b) - peso(a) || a.nome.localeCompare(b.nome)).slice(0, 5);
+  return g.lista.filter(c => c.dif).sort((a, b) => peso(b) - peso(a) || (b.dificuldade?.valor || 0) - (a.dificuldade?.valor || 0) || a.nome.localeCompare(b.nome)).slice(0, 5);
 }
 function renderVoce() {
   const g = GUIAS.find(x => x.id === selMarcado);
   $("selVoce").innerHTML = g
     ? `<div class="sel-linha"><span class="sel-ret"><img src="${sq(g.campeao.id)}" alt=""></span><span class="sel-linha-txt"><small>${t("voce")}</small><b${g.campeao.nome.length > 9 ? ' class="longo"' : ""}>${esc(g.campeao.nome)}</b>
-        ${posDe(g) ? `<span class="sel-pos">${iconePos(posDe(g))}${esc(t("pos_" + posDe(g)))}</span>` : ""}</span></div>
+        ${posDe(g) ? `<span class="sel-pos">${posicoesDe(g).map(pos => iconePos(pos) + esc(t("pos_" + pos))).join(" / ")}</span>` : ""}</span></div>
       <p class="sel-meta"><span class="sel-titulo">${esc(tituloDe(g.campeao))}</span>${t("notasDo")}<strong>${esc(g.autor)}</strong> · ${g.matchups.length}${t("matchups")}</p>`
     : `<div class="sel-linha vago"><span class="sel-ret"><svg width="30" height="30" viewBox="0 0 34 34" aria-hidden="true"><path d="M17 5l12 12-12 12L5 17z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span>
         <span class="sel-linha-txt"><small>${t("voce")}</small><b>${t("selEscolhendo")}</b></span></div>`;
@@ -2150,7 +2178,9 @@ function renderSelecao() {
 function fundoSelecao(id) {
   const caixa = $("selFundo");
   if (!id) { caixa.innerHTML = ""; return; }
-  const src = cena(GUIAS.find(g => g.id === id).campeao.id);
+  const escolhido = GUIAS.find(g => g.id === id);
+  caixa.style.setProperty("--foco-sel", `${escolhido.mira ? escolhido.mira[0] : 50}% 20%`);
+  const src = cena(escolhido.campeao.id);
   let img = caixa.querySelector("img");
   if (img && img.getAttribute("src") === src) return;
   if (!img || semMovimento()) { caixa.innerHTML = `<img src="${src}" alt="">`; return; }

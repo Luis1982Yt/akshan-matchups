@@ -64,3 +64,8 @@ Não é um agregador de estatísticas: é a leitura das notas de um jogador de c
 ## Accessibility & Inclusion
 
 WCAG AA: contraste, foco de teclado visível, alvos de toque de 44 px no celular, respeito a "reduzir movimento".
+
+
+## Guia da Kayle (UJard)
+
+171 matchups para Top e Mid e nove páginas complementares, com inglês original e tradução em português. Os fragmentos e as capturas de build são preservados do Excel; a matchup espelhada não tem fragmentos na fonte. O aviso do autor de setembro de 2026 (planilha desatualizada) permanece visível. O guia usa a escala original de 1 a 10, inclusive quando o autor distingue Top e Mid.

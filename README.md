@@ -6,6 +6,7 @@ Guias atuais:
 - **Akshan mid**: 48 matchups da planilha "Akshan Matchups - Peteruso", lida ao vivo no site publicado.
 - **Mordekaiser top**: 139 matchups da planilha do Meowdekaiser, mais as outras abas dela (sobre, itens, runas, setups, criadores) como páginas do guia.
 - **Illaoi top**: 57 matchups da planilha do Hachiragi, mais as páginas geral, itens, runas e dicas.
+- **Kayle top e mid**: 171 matchups da planilha do UJard, mais nove páginas (geral, runas, builds, macro, dicas, habilidades, ameaças, Inspiração e notas). Escala original de 1 a 10; o aviso do autor de setembro de 2026 sobre a planilha estar desatualizada aparece no guia.
 
 Um guia pode ser escondido com `"oculto": true` em `src/guias.json` (os dados continuam no repositório).
 
@@ -46,6 +47,7 @@ Um guia pode ser escondido com `"oculto": true` em `src/guias.json` (os dados co
 - `scripts/importar_lol.py` e `src/guias/<guia>/importar.json`: a página de runas (ids do jogo, uma por opção da planilha) e os blocos do conjunto de itens de cada matchup, que o build põe no `guias-app.json` para o app importar no cliente. No Akshan a planilha só traz a runa principal e as secundárias; o resto da página vem de `meta.json > paginas_padrao` (aprovado pelo dono do site). Runa que saiu do jogo vira a que ficou no lugar (Lenda: Tenacidade → Lenda: Aceleração). Testes: `python -m unittest scripts/test_importar_lol.py`.
 - `src/versao_dd.txt` e `scripts/versao_dd.py`: a versão do Data Dragon (patch do LoL) de ícones, nomes e cooldowns, a mesma para o site e para os scripts. O workflow diário troca para o patch mais novo sozinho; à mão, `python scripts/versao_dd.py` e depois os `atualizar_*.py`.
 - `sons/`: sons do cliente do LoL (seleção de campeões) e a fala de escolha de cada campeão de guia, carregados só quando tocam. `scripts/baixar_sons.py` baixa de novo do CommunityDragon (rode quando entrar um guia novo). O botão de som no topo desliga tudo.
+- `scripts/atualizar_kayle.py`: lê o Excel original público do UJard (sem converter nem alterar a planilha), preserva os textos e as imagens e gera `src/guias/kayle/` e `imagens/kayle/`. Aceita um caminho `.xlsx` para conferir uma cópia local; testes: `python -m unittest scripts/test_atualizar_kayle.py`. O workflow diário atualiza esse guia também. O app recebe o guia novo por `guias-app.json`; para Kayle importa os itens iniciais, mas não completa uma página de runas quando ela não está inteiramente especificada.
 - `scripts/atualizar_mordekaiser.py` e `scripts/atualizar_illaoi.py`: baixam de novo a planilha de cada guia e os dados do Data Dragon e refazem o `matchups.json` e o `paginas.json` (precisa de internet). Depois rode `scripts/traducao_pt.py` e o build. O workflow diário roda tudo isso.
 - `PRODUCT.md` e `DESIGN.md`: o que o produto é e o sistema visual.
 

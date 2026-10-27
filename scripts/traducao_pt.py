@@ -26,7 +26,7 @@ sys.path.insert(0, str(RAIZ / "scripts"))
 from versao_dd import VER  # noqa: E402
 DD = "https://ddragon.leagueoflegends.com/cdn/"
 # Chaves que não são texto para traduzir (endereços, ícones, ids) e os campos do campeão da matchup.
-PULA = {"url", "icone", "id", "src", "versao", "fonte", "chave", "largura", "altura", "tipo"}
+PULA = {"url", "icone", "id", "src", "versao", "fonte", "chave", "largura", "altura", "tipo", "codigo_importacao"}
 PULA_MATCHUP = {"nome", "planilha", "titulo", "id"}
 
 
@@ -86,6 +86,7 @@ def baixa(caminho):
 
 def nomes_pt(icones):
     itens = baixa(f"{VER}/data/pt_BR/item.json")["data"]
+    feiticos = baixa(f"{VER}/data/pt_BR/summoner.json")["data"]
     runas = {}
     # A versão antiga entra primeiro: runas que saíram do jogo (Lenda: Tenacidade, Ímpeto Gradual) ainda têm nome.
     for arvore in baixa("13.24.1/data/pt_BR/runesReforged.json") + baixa(f"{VER}/data/pt_BR/runesReforged.json"):
@@ -95,6 +96,10 @@ def nomes_pt(icones):
                 runas[r["icon"]] = r["name"]
     nomes = {}
     for url in sorted(icones):
+        m = re.search(r"/img/spell/(Summoner\w+)\.png$", url)
+        if m and m.group(1) in feiticos:
+            nomes[url] = feiticos[m.group(1)]["name"]
+            continue
         m = re.search(r"/img/item/(\d+)\.png$", url)
         if m and m.group(1) in itens:
             nomes[url] = itens[m.group(1)]["name"]

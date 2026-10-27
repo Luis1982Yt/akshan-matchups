@@ -523,3 +523,8 @@ Os sons vêm do cliente do LoL, na pasta `sons/` (`sons/ui/` para a interface, `
 - **Don't** deixar a página rolar para o lado; faixas largas (como a lista e os filtros no celular) rolam dentro do próprio painel.
 - **Don't** deixar o alvo da mira cobrir o nome do inimigo no card.
 - **Don't** usar as cores de dificuldade ou o vermelho do ao vivo como decoração; eles só dizem a dificuldade e a live.
+
+
+## Kayle
+
+Armadura dourada, asas marfim e sombras violetas da splash padrão da Riot. O rosto da Kayle fica em 73% da largura (a arte é compartilhada com Morgana): `mira: [73, 38]`. Os temas usam dourado com violeta escuro ou lavanda clara. As notas de 1 a 10 permanecem no formato original; as cinco cores agrupam pares de notas.

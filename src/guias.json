@@ -102,5 +102,43 @@
       }
     ],
     "chave": 420
+  },
+  {
+    "id": "kayle",
+    "campeao": "Kayle",
+    "rota": "Top",
+    "rotas": [
+      "Top",
+      "Mid"
+    ],
+    "autor": "UJard",
+    "formato": "completo",
+    "dados": "guias/kayle",
+    "chave": 10,
+    "titulo": "a Justa",
+    "titulo_en": "the Righteous",
+    "mira": [
+      73,
+      38
+    ],
+    "escala": 10,
+    "aviso": "September 2026: The spreadsheet is NOT up to date.",
+    "fonte": "Notas da planilha de Kayle do UJard, traduzidas do inglês.",
+    "fonte_en": "Notes from UJard’s Kayle Champion Spreadsheet.",
+    "links": [
+      {
+        "rotulo": "Ver a planilha original",
+        "rotulo_en": "See the original spreadsheet",
+        "url": "https://docs.google.com/spreadsheets/d/1xxu7pVNnshjdwiSmwZrs9K4rEwfhIQL3/edit?gid=777716701#gid=777716701"
+      },
+      {
+        "rotulo": "YouTube",
+        "url": "https://www.youtube.com/c/UJard"
+      },
+      {
+        "rotulo": "Patreon",
+        "url": "https://www.patreon.com/UJard"
+      }
+    ]
   }
 ]

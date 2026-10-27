@@ -17,7 +17,7 @@ SRC = ROOT / "src"
 W, H = 1200, 630
 FUNDO, OURO, CREME, BAIXO = (14, 13, 11), (255, 214, 107), (255, 244, 214), (191, 179, 154)
 # Onde fica o rosto na splash centralizada (fração da largura), para a faixa estreita não cortar a cabeça.
-ROSTO = {"Akshan": .45, "Mordekaiser": .5, "Illaoi": .47}
+ROSTO = {"Akshan": .45, "Mordekaiser": .5, "Illaoi": .47, "Kayle": .73}
 
 
 def fonte(arquivo, tam, peso=None):
