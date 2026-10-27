@@ -240,22 +240,25 @@ components:
     backgroundColor: "{colors.painel}"
     textColor: "{colors.acento-vivo}"
     rounded: "{rounded.pilula}"
-  menu-guias:
-    backgroundColor: "{colors.painel}"
-    textColor: "{colors.texto}"
-    rounded: "{rounded.painel}"
-    padding: "8px"
-    width: "min(340px, calc(100vw - 32px))"
-  menu-guias-item:
-    backgroundColor: "transparent"
-    textColor: "{colors.texto}"
-    rounded: "{rounded.campo}"
-    padding: "8px 10px"
-    height: "60px"
-  menu-guias-item-atual:
+  selecao-retrato:
     backgroundColor: "{colors.painel-alto}"
     textColor: "{colors.texto}"
+    rounded: "{rounded.icone}"
+    size: "112px"
+  selecao-retrato-marcado:
+    backgroundColor: "{colors.painel-alto}"
+    textColor: "{colors.acento-vivo}"
+    rounded: "{rounded.icone}"
+  selecao-posicao-ativa:
+    backgroundColor: "{colors.destaque}"
+    textColor: "{colors.tinta-botao}"
     rounded: "{rounded.campo}"
+    size: "44px"
+  selecao-travar:
+    backgroundColor: "{colors.botao-2}"
+    textColor: "{colors.tinta-arte}"
+    typography: "{typography.button}"
+    height: "58px"
   lembrete:
     backgroundColor: "{colors.painel}"
     textColor: "{colors.texto}"
@@ -289,7 +292,7 @@ O material é preto quente com ouro, amarelo e branco no tema escuro, que é o p
 
 A geometria vem do jogo: losangos, círculos e setas apontando para dentro, tirados da mira da Punição no vídeo oficial da habilidade. Não há raios de sol saindo do centro, e o verde do guia de referência não entra na paleta do Akshan.
 
-O site é multi-guia. A mesma tela de seleção serve a cada guia (hoje Akshan, das notas do Peteruso, e Mordekaiser, das notas do Meowdekaiser); o que muda de um para outro é a paleta, alguns marcadores e o formato do setup e das notas. A seleção das Sentinelas é a expressão do Akshan; o Mordekaiser veste a mesma estrutura de ferro escuro com o verde do Reino da Morte. A troca de guia mora no topo, o site abre no último guia usado, e o crédito do autor fica no rodapé.
+O site é multi-guia. A mesma tela de seleção serve a cada guia (hoje Akshan, das notas do Peteruso, e Mordekaiser, das notas do Meowdekaiser); o que muda de um para outro é a paleta, alguns marcadores e o formato do setup e das notas. A seleção das Sentinelas é a expressão do Akshan; o Mordekaiser veste a mesma estrutura de ferro escuro com o verde do Reino da Morte. A troca de guia é a própria seleção de campeões: na primeira visita o site começa nela, e depois ela volta tocando no campeão do topo; o site abre no último guia usado, e o crédito do autor fica no rodapé.
 
 **Key Characteristics:**
 - Duas colunas no desktop: a lista fixa de 440px à esquerda e o detalhe (duelo, setup, notas, rodapé) à direita; uma coluna no celular, com a lista em faixa horizontal.
@@ -388,10 +391,10 @@ A barra é fixa no topo (64px, 60px no celular) com blur e leva o botão de troc
 
 ## Elevation & Depth
 
-Híbrido: a maior parte da profundidade é tonal (fundo, painel, painel alto) com molduras finas na cor do acento, e só os cards de campeão, o menu de guias e o círculo VS ganham sombra. A luz radial do topo dá a sensação de cena iluminada.
+Híbrido: a maior parte da profundidade é tonal (fundo, painel, painel alto) com molduras finas na cor do acento, e só os cards de campeão, o retrato do slot Você, o botão Travar e o círculo VS ganham sombra. A luz radial do topo dá a sensação de cena iluminada.
 
 ### Shadow Vocabulary
-- **Sombra** (token `--sombra`: `0 10px 30px rgba(0, 0, 0, .45)` no Akshan escuro, `rgba(90, 64, 10, .14)` no claro; `rgba(0, 0, 0, .5)` no Mordekaiser escuro, `rgba(10, 60, 30, .14)` no claro): cards Você e Inimigo e o menu de guias.
+- **Sombra** (token `--sombra`: `0 10px 30px rgba(0, 0, 0, .45)` no Akshan escuro, `rgba(90, 64, 10, .14)` no claro; `rgba(0, 0, 0, .5)` no Mordekaiser escuro, `rgba(10, 60, 30, .14)` no claro): cards Você e Inimigo. O retrato do slot Você usa `0 10px 30px rgba(0, 0, 0, .45)` e o Travar `drop-shadow(0 8px 18px rgba(0, 0, 0, .45))`, por causa das pontas recortadas.
 - **Relevo do botão** (`box-shadow: inset 0 1px 0 rgba(255, 255, 255, .6), 0 6px 18px rgba(0, 0, 0, .45)`): só o círculo VS, com o brilho de borda em cima.
 - **Brilho da mira** (`filter: drop-shadow(0 0 4px rgba(255, 214, 120, .75)) drop-shadow(0 1px 3px rgba(0, 0, 0, .6))`): o losango que trava no card do inimigo, só no Akshan.
 - **Anel do retrato** (`box-shadow: 0 0 0 2px var(--acento)`): o retrato do campeão do guia no botão de troca.
@@ -439,10 +442,18 @@ A lista, o setup, o Resumo e cada lembrete são painéis com fundo `painel` e bo
 
 ### Navegação
 - **Troca de guia:** pílula de 48px com o retrato do campeão do guia (38px, anel de 2px em `acento`), o nome em Cinzel `acento-vivo` e a rota (por exemplo "Mid") em texto baixo 13px, quando houver, mais um chevron em `acento` que gira 180° ao abrir (0.2s). Em repouso não tem borda nem fundo; no hover ou aberto ganha `painel` e borda `linha-forte`.
-- **Menu de guias:** painel de até 340px, cantos de 12px, borda `linha-forte` e sombra, com o título "Guias de matchup" em rótulo, um item de 60px por guia (retrato de 42px, nome em Cinzel 17px, rota, autor e número de matchups) e a nota "O site sempre abre no último guia que você usou". O guia aberto fica em `painel-alto` com "Aberto" em `acento-vivo`. O guia escolhido fica em `localStorage` na chave `guia`, e o endereço vira `#<guia>/<campeão>` (os links antigos `#<campeão>` abrem no Akshan).
+- **Seleção de guia:** ver o componente abaixo. O guia travado fica em `localStorage` na chave `guia`, e o endereço vira `#<guia>/<campeão>` (os links antigos `#<campeão>` abrem no Akshan).
 - **Som e tema:** dois botões redondos de 44px à direita da barra, com borda `linha-forte` e ícone em `acento-vivo`. O de som mostra o alto-falante ligado ou mudo, usa `aria-pressed` e grava a escolha em `localStorage` na chave `som`; o de tema mostra a lua no escuro e o sol no claro e grava na chave `tema`.
 - **Anterior / próximo:** botões de 44px com ícone do campeão e seta ao lado do título das notas; as setas do teclado fazem o mesmo. Abaixo de 520px fica só o ícone.
 - **Rodapé:** a fonte das notas com o link "Ver a planilha original" (e os outros links do autor), e o crédito da Riot, em texto baixo 14px.
+
+### Seleção de guia
+A escolha do campeão do guia, no desenho da seleção de campeões do LoL. Tela cheia embaixo do topo (que continua com língua, som e tema), em `fundo`, com a splash centralizada do campeão marcado ao fundo a 34% (enquadrada a 22% do topo e esmaecida para o `fundo` nas bordas). Aparece na primeira visita (sem guia salvo e sem link de guia, sem o X) e quando se toca no campeão do topo (com o X de 44px no canto).
+- **Título:** "Escolha seu campeão" em Cinzel 800, caixa-alta, clamp(26px, 3.4vw, 40px), `acento-vivo`, sem rótulo em cima.
+- **Slot Você (300px, à esquerda):** painel com `painel` a 86% e borda `linha`; selo "Você" (o do card), retrato redondo de 140px com o anel duplo do escolhido, nome em Cinzel 26px, título do campeão, a posição com o ícone do cliente em `acento-vivo` e "notas do autor · N matchups" em texto baixo. Sem campeão marcado: círculo tracejado com o losango da casa e "Escolha um campeão". No celular vira uma linha (retrato de 72px à esquerda).
+- **Grade (o resto da largura, ocupa a altura):** em cima, os cinco ícones de posição do cliente (Top, Jungle, Mid, ADC, Suporte; `rcp-fe-lol-static-assets/svg/position-*.svg`, embutidos com `currentColor`) em botões de 44px, um por vez, ligado no destaque cheio, e a busca (o campo da casa a 44px). Embaixo, os retratos quadrados de 112px (100% da coluna no celular, 4 por linha) com o nome em Hanken 600 14px; marcado com borda no destaque e o anel duplo, nome em `acento-vivo` 700. Posição sem guia mostra "Ainda não tem guia de Jungle"; busca sem resultado, "Nenhum guia com essa busca".
+- **Travar (embaixo, fixo ao rolar):** botão de 58px com as pontas em seta (o losango da casa esticado), o metal do VS (`botao-1` para `botao-2`) com moldura de 2px em `botao-2`, "Travar" em Cinzel 800 21px `tinta-arte`. Sem campeão marcado fica apagado em `painel` com "Escolha um campeão" em texto baixo.
+- **Comportamento:** um toque marca o campeão (som do grid), troca o slot, a splash e já veste a paleta do guia dele; dois toques ou Travar travam (o som de travar, a fala do campeão, o retrato e o botão acendem e a splash sobe para 62%, 0.75s) e abrem o guia. Fechar sem travar (X ou Esc) devolve a paleta do guia aberto. Setas andam pela grade, "/" vai para a busca e Enter na busca marca o primeiro resultado. Com "reduzir movimento", trava na hora, sem animação.
 
 ### Campeão na lista
 Ícone de 52px ou mais (56px na faixa do celular) com borda `linha-forte` e cantos de 6px. No Akshan, a borda é de 2px na cor da dificuldade, também no escolhido, que se distingue pelo losango pequeno girado em volta; nos outros guias o escolhido ganha borda de 2px no destaque com o anel duplo, e no formato completo cada rosto leva o número de dificuldade num selinho escuro de 17px no canto de baixo (Hanken 700 11px). Os 25 primeiros retratos carregam na hora; os outros, sob demanda.
@@ -483,7 +494,7 @@ Os sons vêm do cliente do LoL, na pasta `sons/` (`sons/ui/` para a interface, `
 - **VS:** o clique de travar e, 180ms depois, a fala de escolha do campeão do guia, em português.
 - **Anterior e próximo:** os cliques de seta, também pelas setas do teclado.
 - **Filtros:** o clique de chip.
-- **Menu de guias:** um som para abrir e outro para fechar.
+- **Seleção de guia:** abrir e fechar, o hover e o clique do grid nos retratos, o clique de chip nas posições e, ao travar, o som de travar com a fala do campeão.
 - **Tema e o próprio botão de som:** o clique pequeno.
 - **Akshan 3D:** cada clipe das animações toca os efeitos e a fala do jogo (`SONS_CLIPE_3D`, pasta `sons/akshan3d/`), sorteando a variação; trocar de animação, esconder o 3D ou desligar o som corta o que estiver tocando.
 
