@@ -30,6 +30,7 @@ SITE = "https://akshan-matchups.vercel.app/"
 INTERVALO_POLL = 1.5        # segundos entre leituras na seleção
 INTERVALO_SEM_CLIENTE = 4   # segundos entre tentativas de achar o cliente
 INTERVALO_MIN_ABRIR = 5     # segundos mínimos entre duas trocas automáticas de matchup
+INTERVALO_RECARREGAR = 600  # segundos entre renovações dos guias (guias-app.json) fora da seleção
 JANELA_LARGURA, JANELA_ALTURA = 460, 900
 FASES_JOGO = ("GameStart", "InProgress", "Reconnect")  # partida carregando ou rolando: a janela não aparece  # janela lateral estreita: o site mostra o formato compacto
 
@@ -781,7 +782,15 @@ def main():
 
     def laco():
         carrega()
+        carregado = time.monotonic()
         while not parar.is_set():
+            # Fora da seleção, renova guias e runas de tempos em tempos: correção no site chega sem reabrir o app.
+            if monitor.estado not in ("guia", "outro") and time.monotonic() - carregado > INTERVALO_RECARREGAR:
+                try:
+                    carrega()
+                except Exception:
+                    log.exception("erro ao recarregar os dados")
+                carregado = time.monotonic()
             try:
                 monitor.passo()
             except Exception:
