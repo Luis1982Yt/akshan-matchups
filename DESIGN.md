@@ -527,4 +527,4 @@ Os sons vêm do cliente do LoL, na pasta `sons/` (`sons/ui/` para a interface, `
 
 ## Kayle
 
-Armadura dourada, asas marfim e sombras violetas da splash padrão da Riot. O rosto da Kayle fica em 73% da largura (a arte é compartilhada com Morgana): `mira: [73, 38]`. Os temas usam dourado com violeta escuro ou lavanda clara. As notas de 1 a 10 permanecem no formato original; as cinco cores agrupam pares de notas.
+Armadura dourada, asas marfim e sombras violetas da splash padrão da Riot. O rosto da Kayle fica em 73% da largura (a arte é compartilhada com Morgana): `mira: [73, 38]`. Paleta própria, para não confundir com o dourado do Akshan: céu noturno índigo (`fundo` #0a0d1c, `painel` #111529), a prata-azulada do celestial nos acentos (`acento` #9fb6e8, `acento-vivo` #dfe8ff) e o laranja do fogo da espada no destaque e no metal do VS (`destaque` #ff9447, `botao-1` #ffd6a3 → `botao-2` #f07a2a); no claro, névoa azul-clara com índigo e laranja queimado (`destaque` #c4561a). As notas de 1 a 10 permanecem no formato original; as cinco cores agrupam pares de notas.
