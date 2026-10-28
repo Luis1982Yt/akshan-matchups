@@ -1,6 +1,6 @@
 """Gera og.jpg (1200x630), a imagem que aparece quando o link do site é compartilhado.
 
-Mostra todos os guias do src/guias.json: uma faixa da splash de cada campeão (Data Dragon) com o nome,
+Marca do BattleMatch (ícone de scripts/icone_marca.py e o nome) à esquerda e todos os guias do src/guias.json: uma faixa da splash de cada campeão (Data Dragon) com o nome,
 a rota e o número de matchups. Precisa de internet para baixar as splashes. Rode de novo quando entrar
 ou sair um guia: python scripts/og.py
 """
@@ -12,10 +12,12 @@ import urllib.request
 
 from PIL import Image, ImageDraw, ImageFont
 
+from icone_marca import FIO, LIMAO, desenha
+
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC = ROOT / "src"
 W, H = 1200, 630
-FUNDO, OURO, CREME, BAIXO = (14, 13, 11), (255, 214, 107), (255, 244, 214), (191, 179, 154)
+FUNDO, CREME, BAIXO = (14, 15, 19), (242, 242, 238), (160, 165, 178)
 # Onde fica o rosto na splash centralizada (fração da largura), para a faixa estreita não cortar a cabeça.
 ROSTO = {"Akshan": .45, "Mordekaiser": .5, "Illaoi": .47, "Kayle": .73}
 
@@ -63,7 +65,7 @@ for i, g in enumerate(guias):
     faixa.paste(Image.new("RGB", (larg, H), FUNDO), (0, 0), sombra)
     img.paste(faixa, (x0 + i * larg, 0))
     if i:
-        d.line([(x0 + i * larg, 0), (x0 + i * larg, H)], fill=(120, 100, 50), width=2)
+        d.line([(x0 + i * larg, 0), (x0 + i * larg, H)], fill=FIO, width=2)
 
 # A primeira faixa some no fundo escuro pela esquerda.
 mascara = Image.new("L", (120, H), 0)
@@ -75,22 +77,26 @@ img.paste(Image.new("RGB", (120, H), FUNDO), (x0, 0), mascara)
 # Nome, rota e número de matchups embaixo de cada faixa (o nome encolhe até caber).
 for i, g in enumerate(guias):
     cx = x0 + i * larg + larg // 2 + (12 if i == 0 else 0)
-    nome, tam = g["campeao"].upper(), 34
-    while d.textlength(nome, font=fonte("Cinzel-normal.woff2", tam, 800)) > larg - 28:
+    nome, tam = g["campeao"], 32
+    while d.textlength(nome, font=fonte("HankenGrotesk-normal.woff2", tam, 800)) > larg - 24:
         tam -= 1
-    d.text((cx, H - 96), nome, font=fonte("Cinzel-normal.woff2", tam, 800), fill=OURO, anchor="ms")
-    d.text((cx, H - 62), f"{g.get('rota', '')} · {n_matchups(g)} matchups", font=fonte("HankenGrotesk-normal.woff2", 20, 600), fill=CREME, anchor="ms")
+    d.text((cx, H - 92), nome, font=fonte("HankenGrotesk-normal.woff2", tam, 800), fill=CREME, anchor="ms")
+    d.text((cx, H - 60), f"{g.get('rota', '')} · {n_matchups(g)}", font=fonte("HankenGrotesk-normal.woff2", 20, 600), fill=LIMAO, anchor="ms")
 
 x = 64
-d.text((x, 118), "LEAGUE OF LEGENDS", font=fonte("HankenGrotesk-normal.woff2", 22, 700), fill=BAIXO)
-d.text((x, 150), "Guias de", font=fonte("Cinzel-normal.woff2", 70, 800), fill=OURO)
-d.text((x, 228), "matchup", font=fonte("Cinzel-normal.woff2", 70, 800), fill=OURO)
-d.line([(x, 330), (x + 120, 330)], fill=OURO, width=3)
-d.text((x, 356), "As notas de quem joga, matchup", font=fonte("HankenGrotesk-normal.woff2", 28, 500), fill=CREME)
-d.text((x, 392), "por matchup: runas, build,", font=fonte("HankenGrotesk-normal.woff2", 28, 500), fill=CREME)
-d.text((x, 428), "cooldowns e como jogar.", font=fonte("HankenGrotesk-normal.woff2", 28, 500), fill=CREME)
-d.text((x, 486), "Português e inglês", font=fonte("HankenGrotesk-normal.woff2", 24, 600), fill=BAIXO)
-d.text((x, H - 58), "battlematch.vercel.app", font=fonte("HankenGrotesk-normal.woff2", 22, 500), fill=(150, 140, 120))
+icone = desenha(72)
+img.paste(icone, (x, 92), icone)
+marca = fonte("HankenGrotesk-normal.woff2", 52, 800)
+d.text((x + 90, 128), "battle", font=marca, fill=(242, 242, 238), anchor="lm")
+d.text((x + 90 + d.textlength("battle", font=marca), 128), "match", font=marca, fill=LIMAO, anchor="lm")
+d.text((x, 196), "Guias de", font=fonte("HankenGrotesk-normal.woff2", 64, 800), fill=CREME)
+d.text((x, 266), "matchup", font=fonte("HankenGrotesk-normal.woff2", 64, 800), fill=CREME)
+d.line([(x, 354), (x + 120, 354)], fill=LIMAO, width=3)
+d.text((x, 374), "As notas de quem joga, matchup", font=fonte("HankenGrotesk-normal.woff2", 28, 500), fill=CREME)
+d.text((x, 410), "por matchup: runas, build,", font=fonte("HankenGrotesk-normal.woff2", 28, 500), fill=CREME)
+d.text((x, 446), "cooldowns e como jogar.", font=fonte("HankenGrotesk-normal.woff2", 28, 500), fill=CREME)
+d.text((x, 502), "League of Legends · português e inglês", font=fonte("HankenGrotesk-normal.woff2", 24, 600), fill=BAIXO)
+d.text((x, H - 58), "battlematch.vercel.app", font=fonte("HankenGrotesk-normal.woff2", 22, 500), fill=BAIXO)
 
 img.save(ROOT / "og.jpg", "JPEG", quality=86, optimize=True, progressive=True)
 print("og.jpg", (ROOT / "og.jpg").stat().st_size // 1024, "KB")

@@ -13,7 +13,7 @@
 <meta property="og:description" content="/*DESCRICAO*/">
 <meta property="og:url" content="https://battlematch.vercel.app/">
 <!-- O ?v= muda quando a imagem muda: WhatsApp e X guardam a prévia antiga pelo endereço. -->
-<meta property="og:image" content="https://battlematch.vercel.app/og.jpg?v=3">
+<meta property="og:image" content="https://battlematch.vercel.app/og.jpg?v=4">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="/*OG_ALT*/">
@@ -309,6 +309,16 @@ a { color: var(--acento-vivo); text-underline-offset: 3px; }
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 20; background: var(--fundo); }
 .bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: color-mix(in oklab, var(--fundo) 90%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 1px solid var(--linha); }
 .bar-in { height: var(--barra); max-width: 1320px; margin: 0 auto; padding: 0 var(--borda); display: flex; align-items: center; gap: 16px; }
+/* Marca do BattleMatch (identidade "Rota", src/icone/marca.svg): fica igual em todos os guias; o nome
+   aparece da tela média para cima, abaixo disso só o ícone. Verde-limão no escuro, oliva no claro (contraste). */
+.marca { display: flex; align-items: center; gap: 9px; flex: none; color: var(--texto); text-decoration: none; font: 800 18px/1 var(--corpo); letter-spacing: -.02em; }
+.marca svg { width: 30px; height: 30px; flex: none; }
+.marca b { font-weight: 800; color: #c6f24e; }
+:root[data-tema="claro"] .marca b { color: #4f7a12; }
+.marca + .guias { padding-left: 14px; border-left: 1px solid var(--linha); }
+@media (max-width: 719px) { .marca-nome { display: none; } .marca + .guias { padding-left: 10px; } .bar-in { gap: 10px; } }
+/* Celular: o nome do campeão tem prioridade no topo; a marca fica no ícone da aba e da tela inicial. */
+@media (max-width: 479px) { .marca { display: none; } .marca + .guias { padding-left: 0; border-left: 0; } }
 .guias { position: relative; min-width: 0; }
 .trocar { display: flex; align-items: center; gap: 12px; min-height: 48px; max-width: 100%; padding: 4px 12px 4px 4px; border-radius: 999px; border: 1px solid transparent; background: none; cursor: pointer; text-align: left; }
 .trocar:hover, .trocar[aria-expanded="true"] { border-color: var(--linha-forte); background: var(--painel); }
@@ -1057,6 +1067,7 @@ body.sem-rolar { overflow: hidden; }
 <a class="pular" href="#matchup" data-t="pular">Pular para o matchup</a>
 <header class="bar">
   <div class="bar-in">
+    <span class="marca" role="img" aria-label="BattleMatch"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#14161c"/><path d="M14 50 L50 14" stroke="#3a3f4b" stroke-width="10" stroke-linecap="round"/><circle cx="21" cy="43" r="8" fill="#c6f24e"/><circle cx="43" cy="21" r="8" fill="none" stroke="#c6f24e" stroke-width="4"/></svg><span class="marca-nome" aria-hidden="true">battle<b>match</b></span></span>
     <div class="guias">
       <button class="trocar" type="button" id="trocar" aria-expanded="false" aria-controls="selecao" aria-haspopup="dialog">
         <span id="trocarImg"></span>

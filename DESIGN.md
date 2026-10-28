@@ -282,6 +282,15 @@ components:
 
 # Design System: Guias de Matchup
 
+## Marca: BattleMatch (identidade "Rota")
+
+Nome do produto desde 2026-10-28; o dono escolheu entre três opções a "Rota": você e o inimigo na mesma rota.
+
+- **Ícone:** quadrado escuro `#14161c` com cantos de 14/64, um fio diagonal `#3a3f4b` (a rota) e duas marcas em verde-limão `#c6f24e`: bolinha cheia embaixo à esquerda (você) e anel em cima à direita (o inimigo). Fonte única em `src/icone/marca.svg`; os PNG (aba, tela inicial, manifest, base do `.ico` do app) saem de `python scripts/icone_marca.py`, que desenha o mesmo ícone.
+- **Nome escrito:** "battle**match**" em minúsculas, Hanken Grotesk 800, "match" em verde-limão (no tema claro, oliva `#4f7a12` por contraste). Fica no topo do site à esquerda do campeão: ícone + nome a partir de 720 px, só o ícone entre 480 e 719 px, e some abaixo de 480 px para o nome do campeão caber.
+- **A marca não troca com o guia:** as paletas por campeão continuam valendo para o resto da página; a marca é a mesma em todos.
+- **Prévia de link (`og.jpg`, `scripts/og.py`):** marca no alto à esquerda, título em branco, detalhes em verde-limão e as faixas das splashes dos guias à direita.
+
 ## Overview
 
 **Creative North Star: "A Seleção das Sentinelas"**

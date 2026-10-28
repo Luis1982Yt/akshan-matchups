@@ -1,13 +1,13 @@
 {
-  "name": "Guias de matchup",
-  "short_name": "Matchups",
-  "description": "Guias de matchup de LoL: Akshan, Mordekaiser e Illaoi, com as notas de quem joga.",
+  "name": "BattleMatch",
+  "short_name": "BattleMatch",
+  "description": "BattleMatch: guias de matchup de LoL com as notas de quem joga (Akshan, Mordekaiser, Illaoi e Kayle).",
   "lang": "pt-BR",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#0e0d0b",
-  "theme_color": "#0e0d0b",
+  "background_color": "#14161c",
+  "theme_color": "#14161c",
   "icons": [
     { "src": "icones/icone-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
     { "src": "icones/icone-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },

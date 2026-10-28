@@ -15,7 +15,7 @@ SRC = os.path.join(RAIZ, "src")
 
 ico = os.path.join(APP, "build", "icone.ico")
 os.makedirs(os.path.dirname(ico), exist_ok=True)
-Image.open(os.path.join(SRC, "icone", "original.webp")).convert("RGBA").save(
+Image.open(os.path.join(SRC, "icone", "original.png")).convert("RGBA").save(
     ico, sizes=[(16, 16), (24, 24), (32, 32), (48, 48), (64, 64), (128, 128), (256, 256)])
 
 # Cópia embutida da lista de guias (usada se o site não responder; gere antes com scripts/build.py) e o ícone da bandeja.

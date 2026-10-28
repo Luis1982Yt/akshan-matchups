@@ -1,7 +1,7 @@
 // Service worker: deixa o site abrir sem internet (com a última versão vista) e instalável no celular.
 // A página sempre tenta a rede primeiro, então quem tem conexão vê a versão nova na hora.
 // A planilha (docs.google.com) não passa por aqui: o site já guarda a última cópia sozinho.
-const CACHE = "akshan-v2";
+const CACHE = "battlematch-v1";
 const BASE = ["/", "/manifest.webmanifest", "/icones/icone-192.png", "/icones/icone-512.png"];
 
 self.addEventListener("install", e => {
