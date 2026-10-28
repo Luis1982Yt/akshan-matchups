@@ -15,7 +15,7 @@ import urllib.request
 
 from PIL import Image
 
-from atualizar_mordekaiser import chave, montar_icones
+from atualizar_mordekaiser import chave, icone_fragmento, montar_icones
 from planilha_xlsx import Planilha
 from versao_dd import VER
 
@@ -78,8 +78,15 @@ def texto_bloco(texto, link=None):
     return {'tipo': 'texto', **celula(texto, link)}
 
 
-def runas(texto_principal, texto_secundario, por_runa):
-    """Somente nomes explicitamente escritos; nunca completa uma página."""
+# Nome em inglês de cada fragmento de paginas_padrao.json (a tradução vem do traducao_pt.json).
+NOME_FRAGMENTO = {'adaptativa': 'Adaptive Force', 'vel_ataque': 'Attack Speed', 'aceleracao': 'Ability Haste',
+                  'vel_movimento': 'Movement Speed', 'vida_nivel': 'Scaling Health', 'vida': 'Health',
+                  'tenacidade': 'Tenacity and Slow Resist'}
+
+
+def runas(texto_principal, texto_secundario, por_runa, padrao=None, imagem=''):
+    """Os nomes escritos na célula. Com padrao (src/guias/kayle/paginas_padrao.json, tirado da aba de runas do UJard),
+    a página fica completa como nos outros guias: as linhas fixas da Precisão e os fragmentos da captura da matchup."""
     if not texto_principal and not texto_secundario:
         return []
     principal = texto_principal.rstrip('.')
@@ -94,9 +101,15 @@ def runas(texto_principal, texto_secundario, por_runa):
         if re.search(r'\b' + re.escape(escrito) + r'\b', texto_secundario):
             if not any(p['nome'] == nome for p in secundarias):
                 secundarias.append({'nome': nome, 'icone': por_runa.get(chave(nome))})
-    return [[{'rotulo': 'Principal', 'pecas': [
-        {'nome': principal, 'icone': por_runa.get(chave(principal))}]},
-        {'rotulo': 'Secundária', 'texto': texto_secundario, 'pecas': secundarias}]]
+    principais = [{'nome': principal, 'icone': por_runa.get(chave(principal))}]
+    linhas = [{'rotulo': 'Principal', 'pecas': principais},
+              {'rotulo': 'Secundária', 'texto': texto_secundario, 'pecas': secundarias}]
+    if padrao:
+        principais += [{'nome': n, 'icone': por_runa.get(chave(n))} for n in padrao['linhas']]
+        frags = padrao['fragmentos_por_imagem'].get(imagem, padrao['fragmentos'])
+        linhas.append({'rotulo': 'Fragmentos', 'pecas': [
+            {'nome': NOME_FRAGMENTO[f], 'icone': icone_fragmento(NOME_FRAGMENTO[f])} for f in frags]})
+    return [linhas]
 
 
 def gerar_matchups(xl, campeoes, por_runa, pasta=IMAGENS):
@@ -113,6 +126,8 @@ def gerar_matchups(xl, campeoes, por_runa, pasta=IMAGENS):
         por_nome[chave(ch['id'])] = ch
     por_nome['wukong'] = por_nome['monkeyking']
     por_nome['nunu'] = por_nome['nunuwillump'] if 'nunuwillump' in por_nome else por_nome['nunu']
+    arq_padrao = DEST / 'paginas_padrao.json'
+    padrao = json.loads(arq_padrao.read_text(encoding='utf-8')) if arq_padrao.exists() else None
     saida = []
     for r in range(6, 177):
         nome = c[r, 2]
@@ -125,7 +140,8 @@ def gerar_matchups(xl, campeoes, por_runa, pasta=IMAGENS):
             'nome': ch['name'], 'planilha': nome, 'id': ch['id'], 'titulo': ch['title'],
             'dificuldade': dificuldade(get(3)), 'dificuldade_texto': get(3),
             'tldr': [], 'feiticos': feiticos, 'feiticos_texto': get(4),
-            'runas': runas(get(5), get(6), por_runa),
+            'runas': runas(get(5), get(6), por_runa, padrao,
+                           imagens[r][0]['src'].rsplit('/', 1)[-1][:-4] if imagens[r] else ''),
             'runas_texto': get(5), 'secundarias_texto': get(6),
             'imagens_runas': imagens[r],
             'itens': [{'rotulo': 'Starting Items', 'linhas': itens_iniciais(get(8))}] if get(8) else [],

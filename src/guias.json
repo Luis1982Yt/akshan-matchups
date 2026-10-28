@@ -114,6 +114,13 @@
     "autor": "UJard",
     "formato": "completo",
     "dados": "guias/kayle",
+    "acompanhe": [
+      {
+        "nome": "UJard",
+        "url": "https://www.twitch.tv/ujard",
+        "canal": "twitch.tv/ujard"
+      }
+    ],
     "chave": 10,
     "titulo": "a Justa",
     "titulo_en": "the Righteous",

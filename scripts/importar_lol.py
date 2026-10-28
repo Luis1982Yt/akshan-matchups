@@ -172,13 +172,21 @@ def guia_completo(pasta, runas_, itens):
     dados = json.loads((pasta / "matchups.json").read_text(encoding="utf-8"))
     trad = pasta / "traducao_pt.json"
     textos = json.loads(trad.read_text(encoding="utf-8"))["textos"] if trad.exists() else {}
+    # Planilha que só traz a runa principal (Kayle): o resto da árvore e os fragmentos vêm de paginas_padrao.json.
+    arq_padrao = pasta / "paginas_padrao.json"
+    padrao = json.loads(arq_padrao.read_text(encoding="utf-8")) if arq_padrao.exists() else None
     saida, falhas = {}, []
     for m in dados["matchups"]:
         paginas = []
         for opcao in m["runas"]:
             parte = {l["rotulo"]: l["pecas"] for l in opcao}
-            pg = pagina([runas_.acha(p) for p in parte.get("Principal", [])], [runas_.acha(p) for p in parte.get("Secundária", [])],
-                        fragmentos([p["nome"] for p in parte.get("Fragmentos", [])]))
+            principais = [runas_.acha(p) for p in parte.get("Principal", [])]
+            frags = fragmentos([p["nome"] for p in parte.get("Fragmentos", [])])
+            if padrao and len(principais) == 1:
+                principais += [runas_.por_nome.get(chave(n)) for n in padrao["linhas"]]
+                imagem = next((i["src"].rsplit("/", 1)[-1].split(".")[0] for i in m.get("imagens_runas", [])), "")
+                frags = [FRAG[f] for f in padrao["fragmentos_por_imagem"].get(imagem, padrao["fragmentos"])]
+            pg = pagina(principais, [runas_.acha(p) for p in parte.get("Secundária", [])], frags)
             if pg:
                 paginas.append(pg)
             else:

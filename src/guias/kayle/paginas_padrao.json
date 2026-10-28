@@ -1,0 +1,16 @@
+{
+  "_fonte": "Aba '2. Kayle Runes' da planilha do UJard: linhas fixas da Precisão (Absorção Vital, Lenda: Espontaneidade, Até a Morte) e os fragmentos de cada matchup, lidos das capturas de 'minor runes' da aba '1. Spreadsheet' (md5 da imagem -> ids).",
+  "linhas": ["Absorb Life", "Legend: Alacrity", "Last Stand"],
+  "fragmentos": ["adaptativa", "adaptativa", "vida_nivel"],
+  "fragmentos_por_imagem": {
+    "f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01": ["adaptativa", "adaptativa", "vida_nivel"],
+    "7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4": ["vel_ataque", "vel_movimento", "tenacidade"],
+    "ec62c8cb0ab55c84a315b47a5855bdcdfab0dc6ddfaabbc6ad403ec4a6aa8414": ["vel_ataque", "adaptativa", "vida_nivel"],
+    "68a54ed0197dfe829e877ce3dabd0e80bcdbe266c8b04efec4bfcbcda3da519d": ["adaptativa", "vida_nivel", "vida_nivel"],
+    "f2e3dffd5d0f9426a7c0a849f2e7ad18fad6bbbc1921d82589d13c5928375930": ["adaptativa", "adaptativa", "vida"],
+    "46611a285dbdd1a23a75ea682af3913159f7ef8aef5099c9f6e384ec58a82a5b": ["adaptativa", "adaptativa", "tenacidade"],
+    "9d4a4b17521f931407b11a239f4ddd4506f31742b3e28bc6c600be67daf80908": ["vel_ataque", "vida_nivel", "vida_nivel"],
+    "f8c37cad645621fb770457805e978c7f47df6861bc12b6f6b7d3bb7785118a50": ["vel_ataque", "adaptativa", "vida"],
+    "a81b1ff9223e2369e65ee966795b884d61a0418b25e2eb6c0b575e9b78126f9a": ["adaptativa", "vida_nivel", "tenacidade"]
+  }
+}
