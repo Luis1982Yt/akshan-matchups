@@ -31,7 +31,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 # "akshan-matchups-*" para o app seguir reaproveitando os conjuntos que já gravou no cliente.
 NOME_APP = "BattleMatch"
 NOMES_ANTIGOS = ("Akshan Matchups", "AkshanMatchups")  # entradas antigas do Run, apagadas pela versão nova
-SITE = "https://akshan-matchups.vercel.app/"
+SITE = "https://battlematch.vercel.app/"
 INTERVALO_POLL = 1.5        # segundos entre leituras na seleção
 INTERVALO_SEM_CLIENTE = 4   # segundos entre tentativas de achar o cliente
 INTERVALO_MIN_ABRIR = 5     # segundos mínimos entre duas trocas automáticas de matchup

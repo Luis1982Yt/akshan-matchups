@@ -96,7 +96,7 @@ class TestApp(unittest.TestCase):
         self.assertEqual(self.abertos, [])
         self.assertEqual(self.m.estado, "outro")
         self.roda(("ok", sessao(eu=166, inimigos=[238])))
-        self.assertEqual(self.abertos, ["https://akshan-matchups.vercel.app/#akshan/zed"])
+        self.assertEqual(self.abertos, ["https://battlematch.vercel.app/#akshan/zed"])
 
     def test_sem_turnos_vale_o_campeao_recebido(self):
         self.roda(("ok", sessao(eu=82, inimigos=[122], turnos=False)))

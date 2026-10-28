@@ -90,7 +90,7 @@ d.text((x, 356), "As notas de quem joga, matchup", font=fonte("HankenGrotesk-nor
 d.text((x, 392), "por matchup: runas, build,", font=fonte("HankenGrotesk-normal.woff2", 28, 500), fill=CREME)
 d.text((x, 428), "cooldowns e como jogar.", font=fonte("HankenGrotesk-normal.woff2", 28, 500), fill=CREME)
 d.text((x, 486), "Português e inglês", font=fonte("HankenGrotesk-normal.woff2", 24, 600), fill=BAIXO)
-d.text((x, H - 58), "akshan-matchups.vercel.app", font=fonte("HankenGrotesk-normal.woff2", 22, 500), fill=(150, 140, 120))
+d.text((x, H - 58), "battlematch.vercel.app", font=fonte("HankenGrotesk-normal.woff2", 22, 500), fill=(150, 140, 120))
 
 img.save(ROOT / "og.jpg", "JPEG", quality=86, optimize=True, progressive=True)
 print("og.jpg", (ROOT / "og.jpg").stat().st_size // 1024, "KB")

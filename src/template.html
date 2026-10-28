@@ -11,9 +11,9 @@
 <meta property="og:site_name" content="BattleMatch">
 <meta property="og:title" content="/*TITULO_OG*/">
 <meta property="og:description" content="/*DESCRICAO*/">
-<meta property="og:url" content="https://akshan-matchups.vercel.app/">
+<meta property="og:url" content="https://battlematch.vercel.app/">
 <!-- O ?v= muda quando a imagem muda: WhatsApp e X guardam a prévia antiga pelo endereço. -->
-<meta property="og:image" content="https://akshan-matchups.vercel.app/og.jpg?v=3">
+<meta property="og:image" content="https://battlematch.vercel.app/og.jpg?v=3">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="/*OG_ALT*/">
@@ -2561,7 +2561,7 @@ addEventListener("scroll", () => { if (!$("skinMenu").hidden) abreSkins(false); 
 /* ---------- Copiar o link da matchup aberta (para mandar no WhatsApp ou no Discord) ---------- */
 let voltaCopiar;
 $("copiar").addEventListener("click", async () => {
-  const link = location.protocol === "file:" ? `https://akshan-matchups.vercel.app/${location.hash}` : location.href;
+  const link = location.protocol === "file:" ? `https://battlematch.vercel.app/${location.hash}` : location.href;
   try { await navigator.clipboard.writeText(link); } catch (e) {
     // Sem permissão de área de transferência: copia por um campo escondido.
     const c = document.createElement("textarea"); c.value = link; c.style.cssText = "position:fixed;opacity:0"; document.body.appendChild(c); c.select();
