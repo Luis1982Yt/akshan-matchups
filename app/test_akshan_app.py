@@ -220,7 +220,7 @@ class TestImportar(unittest.TestCase):
         self.assertIn("3076", aatrox["itens"][0]["itens"])  # Colete Espinhoso
         self.assertEqual(len(self.guias["illaoi"]["importar"]["darius"]["runas"]), 2)  # Opção 1 e Opção 2
         ahri = self.guias["akshan"]["importar"]["ahri"]["runas"][0]
-        self.assertEqual(ahri["selectedPerkIds"][:4], [8005, 9111, 9104, 8014])  # PTA + página padrão aprovada
+        self.assertEqual(ahri["selectedPerkIds"][:4], [8005, 8009, 9104, 8017])  # PTA, Presença de Espírito, Espontaneidade, Dilacerar
 
     def test_com_espaco_cria_pagina_sem_apagar(self):
         lcu = LcuFalso([PRESET, {"id": 1, "isDeletable": True, "current": True}], total=2)

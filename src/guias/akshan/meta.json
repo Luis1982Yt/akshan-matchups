@@ -737,7 +737,7 @@
   },
   "paginas_padrao": {
     "Press the Attack": {
-      "linhas": ["Triumph", "Legend: Alacrity", "Coup de Grace"],
+      "linhas": ["Presence of Mind", "Legend: Alacrity", "Cut Down"],
       "fragmentos": ["vel_ataque", "adaptativa", "vida_nivel"]
     },
     "Electrocute": {
