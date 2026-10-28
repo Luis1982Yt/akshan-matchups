@@ -5,107 +5,61 @@
   "titulo_en": "Overview",
   "blocos": [
    {
-    "tipo": "texto",
-    "texto": "September 2026: The spreadsheet is NOT up to date.",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Current bans: Toplane:  Jax/Malphite    Midlane: Hwei.",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "This spreadsheet was made by UJard, a high Grandmaster-low Challenger Rank 1 Kayle OTP",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "To show your support to UJard and keep this spreadsheet up to date and free, please remove adblock",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Champion",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Difficulty (easy=1, insane=10)",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Summoner Spell",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Rune Setup\n (check sheet 2 below, I have an explaination for every rune choice and will guide you when you should change your minor runes from the ones listed here)",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Starting Items",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Tips Against the Matchup",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Keystones",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Secondary\nWhy inspiration Secondary?",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Minor Runes",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "CHECK IN CHAMP SELECT",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "CHECK IN GAME LOADING SCREEN",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Hey guys, currently editing \nsome things, so the layout might \nfeel wonky for some days",
-    "links": []
-   },
-   {
-    "tipo": "lista",
-    "texto": "UJard",
-    "links": [],
-    "itens": [
+    "tipo": "secao",
+    "titulo": "",
+    "partes": [
      {
-      "texto": "YouTube: UJard",
-      "links": [
-       {
-        "texto": "YouTube: UJard",
-        "url": "https://www.youtube.com/c/UJard"
-       }
-      ]
+      "tipo": "p",
+      "texto": "September 2026: The spreadsheet is NOT up to date.",
+      "links": []
      },
      {
-      "texto": "Patreon: UJard",
-      "links": [
-       {
-        "texto": "Patreon: UJard",
-        "url": "https://www.patreon.com/UJard"
-       }
-      ]
+      "tipo": "p",
+      "texto": "Current bans: Toplane:  Jax/Malphite    Midlane: Hwei.",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "This spreadsheet was made by UJard, a high Grandmaster-low Challenger Rank 1 Kayle OTP",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "To show your support to UJard and keep this spreadsheet up to date and free, please remove adblock",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "Hey guys, currently editing \nsome things, so the layout might \nfeel wonky for some days",
+      "links": []
+     },
+     {
+      "tipo": "bloco",
+      "bloco": {
+       "tipo": "lista",
+       "texto": "UJard",
+       "links": [],
+       "itens": [
+        {
+         "texto": "YouTube: UJard",
+         "links": [
+          {
+           "texto": "YouTube: UJard",
+           "url": "https://www.youtube.com/c/UJard"
+          }
+         ]
+        },
+        {
+         "texto": "Patreon: UJard",
+         "links": [
+          {
+           "texto": "Patreon: UJard",
+           "url": "https://www.patreon.com/UJard"
+          }
+         ]
+        }
+       ]
+      }
      }
     ]
    }
@@ -117,214 +71,172 @@
   "titulo_en": "Runes",
   "blocos": [
    {
-    "tipo": "texto",
-    "texto": "KAYLE RUNES",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Yellow Blocks are runes you should ALWAYS TAKE",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Green Blocks are runes where you have to make a decision EVERY game",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "RUNE DECISIONS",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Precision",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "The decision between the Precision KEYSTONES are in the section \"1. Spreadsheet\". It's always stated whether to take PtA or Fleet.",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Resolve",
-    "links": []
-   },
-   {
-    "tipo": "imagens",
-    "imagens": [
+    "tipo": "secao",
+    "titulo": "KAYLE RUNES",
+    "partes": [
      {
-      "src": "imagens/kayle/4e44ea5b1bbfa48353818763245ce73eea3de55becd008bdee72426a78d1f379.png",
-      "alt": "Runes — UJard",
-      "largura": 64,
-      "altura": 64
+      "tipo": "sub",
+      "texto": "Yellow Blocks are runes you should ALWAYS TAKE"
+     },
+     {
+      "tipo": "p",
+      "texto": "Green Blocks are runes where you have to make a decision EVERY game",
+      "links": []
      }
     ]
    },
    {
-    "tipo": "imagens",
-    "imagens": [
+    "tipo": "secao",
+    "titulo": "RUNE DECISIONS",
+    "partes": [
      {
-      "src": "imagens/kayle/d04bf9920f4112088e72b997b86dec9cb290965d8376b70528b36d2887f81440.png",
-      "alt": "Runes — UJard",
-      "largura": 64,
-      "altura": 64
+      "tipo": "sub",
+      "texto": "Precision"
+     },
+     {
+      "tipo": "p",
+      "texto": "The decision between the Precision KEYSTONES are in the section \"1. Spreadsheet\". It's always stated whether to take PtA or Fleet.",
+      "links": []
      }
     ]
    },
    {
-    "tipo": "imagens",
-    "imagens": [
+    "tipo": "secao",
+    "titulo": "Resolve",
+    "partes": [
      {
-      "src": "imagens/kayle/63726f48d9c6f4119f7467fc362cd6c70b0e7e2a4c5d46a9b9c4560483c1f581.png",
-      "alt": "Runes — UJard",
-      "largura": 55,
-      "altura": 55
+      "tipo": "imagens",
+      "imagens": [
+       {
+        "src": "imagens/kayle/4e44ea5b1bbfa48353818763245ce73eea3de55becd008bdee72426a78d1f379.png",
+        "alt": "Runes — UJard",
+        "largura": 64,
+        "altura": 64
+       },
+       {
+        "src": "imagens/kayle/d04bf9920f4112088e72b997b86dec9cb290965d8376b70528b36d2887f81440.png",
+        "alt": "Runes — UJard",
+        "largura": 64,
+        "altura": 64
+       },
+       {
+        "src": "imagens/kayle/63726f48d9c6f4119f7467fc362cd6c70b0e7e2a4c5d46a9b9c4560483c1f581.png",
+        "alt": "Runes — UJard",
+        "largura": 55,
+        "altura": 55
+       }
+      ]
+     },
+     {
+      "tipo": "lista",
+      "itens": [
+       {
+        "texto": "- Overgrowth, Bone Plating and Second Wind are stated on the \"1.Spreadsheet\" page for every champion on which you take resolve secondary because they're matchup dependant. If they're not stated, take conditioning.",
+        "links": []
+       }
+      ]
+     },
+     {
+      "tipo": "imagens",
+      "imagens": [
+       {
+        "src": "imagens/kayle/86a880fa16279eebc0bf5321c29f84a2ffd0fa7418d33f81da2d98a8c5958890.png",
+        "alt": "Runes — UJard",
+        "largura": 55,
+        "altura": 55
+       },
+       {
+        "src": "imagens/kayle/a3f1190a2a8b6d7f239c67d61a96bdd6fc43f63dd4ded7f669e46a0530b12a7b.png",
+        "alt": "Runes — UJard",
+        "largura": 55,
+        "altura": 55
+       }
+      ]
+     },
+     {
+      "tipo": "lista",
+      "itens": [
+       {
+        "texto": "- Presence of Mind if you need to spam your W this matchup and Triumph if you don't.",
+        "links": []
+       }
+      ]
      }
     ]
    },
    {
-    "tipo": "texto",
-    "texto": "-             ,            and               are  stated on the \"1.Spreadsheet\" page for every champion on which you take resolve secondary because they're matchup dependant. If they're not stated, take conditioning.",
-    "links": []
-   },
-   {
-    "tipo": "imagens",
-    "imagens": [
+    "tipo": "secao",
+    "titulo": "Minor Runes",
+    "partes": [
      {
-      "src": "imagens/kayle/86a880fa16279eebc0bf5321c29f84a2ffd0fa7418d33f81da2d98a8c5958890.png",
-      "alt": "Runes — UJard",
-      "largura": 55,
-      "altura": 55
+      "tipo": "lista",
+      "itens": [
+       {
+        "texto": "- Read the explanation given to the right in \"minor runes\" coupled with the information in \"1. Spreadsheet\" to best select minor runes for your given game.",
+        "links": []
+       }
+      ]
      }
     ]
    },
    {
-    "tipo": "imagens",
-    "imagens": [
+    "tipo": "secao",
+    "titulo": "PRIMARY RUNES",
+    "partes": [
      {
-      "src": "imagens/kayle/a3f1190a2a8b6d7f239c67d61a96bdd6fc43f63dd4ded7f669e46a0530b12a7b.png",
-      "alt": "Runes — UJard",
-      "largura": 55,
-      "altura": 55
+      "tipo": "sub",
+      "texto": "SECONDARY RUNES"
+     },
+     {
+      "tipo": "sub",
+      "texto": "MINOR RUNES"
+     },
+     {
+      "tipo": "imagens",
+      "imagens": [
+       {
+        "src": "imagens/kayle/470a1f1a57fa54956c5b4e2866249494129e1615c6137321eada926679f73ab5.png",
+        "alt": "Runes — UJard",
+        "largura": 329,
+        "altura": 487,
+        "legenda": "Precision Primary"
+       },
+       {
+        "src": "imagens/kayle/f76a2cd9bdc57afc52d6e0392000c11775ec69de3f09ebc308c78e6384f60370.png",
+        "alt": "Runes — UJard",
+        "largura": 320,
+        "altura": 321,
+        "legenda": "Resolve Secondary"
+       },
+       {
+        "src": "imagens/kayle/fa485a988c6515bdaf72d3f795af21a2b94a4775f0608aceccae7562cc760d68.png",
+        "alt": "Runes — UJard",
+        "largura": 243,
+        "altura": 259,
+        "legenda": "Sorcery Secondary"
+       },
+       {
+        "src": "imagens/kayle/0321ac930b135b99ef7f532276350a660a019b42078c333aba612a4766f2a490.png",
+        "alt": "Runes — UJard",
+        "largura": 323,
+        "altura": 320,
+        "legenda": "Inspiration Secondary"
+       },
+       {
+        "src": "imagens/kayle/e942ade85804c5d6458085fbdb6c4d260d157565ffcea8a64fc975434ae8ad88.png",
+        "alt": "Runes — UJard",
+        "largura": 203,
+        "altura": 132,
+        "legenda": "Minor Runes"
+       }
+      ]
+     },
+     {
+      "tipo": "p",
+      "texto": "Note: Although I added the default Minor Runes for every champion in \"1.Spreadsheet\", it's important to note that there are some games where my default runes are NOT the most efficient. This is because some champions have different Minor Runes that are viable against them. \n\nFor example, for Malphite, in the third row I added \"Health\" to be the default. That being said, there will be some games where \"Tenacity and Slow Resist\" would be more efficient against him if the enemy team has a lot of CC.",
+      "links": []
      }
     ]
-   },
-   {
-    "tipo": "texto",
-    "texto": "-               if you need to spam your W this matchup and               if you don't.",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Minor Runes",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "- Read the explanation given to the right in \"minor runes\" coupled with the information in \"1. Spreadsheet\" to best select minor runes for your given game.",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "PRIMARY RUNES",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "SECONDARY RUNES",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "MINOR RUNES",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Precision Primary",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Resolve Secondary",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Sorcery Secondary",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Inspiration Secondary",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Minor Runes",
-    "links": []
-   },
-   {
-    "tipo": "imagens",
-    "imagens": [
-     {
-      "src": "imagens/kayle/470a1f1a57fa54956c5b4e2866249494129e1615c6137321eada926679f73ab5.png",
-      "alt": "Runes — UJard",
-      "largura": 329,
-      "altura": 487
-     }
-    ]
-   },
-   {
-    "tipo": "imagens",
-    "imagens": [
-     {
-      "src": "imagens/kayle/f76a2cd9bdc57afc52d6e0392000c11775ec69de3f09ebc308c78e6384f60370.png",
-      "alt": "Runes — UJard",
-      "largura": 320,
-      "altura": 321
-     }
-    ]
-   },
-   {
-    "tipo": "imagens",
-    "imagens": [
-     {
-      "src": "imagens/kayle/fa485a988c6515bdaf72d3f795af21a2b94a4775f0608aceccae7562cc760d68.png",
-      "alt": "Runes — UJard",
-      "largura": 243,
-      "altura": 259
-     }
-    ]
-   },
-   {
-    "tipo": "imagens",
-    "imagens": [
-     {
-      "src": "imagens/kayle/0321ac930b135b99ef7f532276350a660a019b42078c333aba612a4766f2a490.png",
-      "alt": "Runes — UJard",
-      "largura": 323,
-      "altura": 320
-     }
-    ]
-   },
-   {
-    "tipo": "imagens",
-    "imagens": [
-     {
-      "src": "imagens/kayle/e942ade85804c5d6458085fbdb6c4d260d157565ffcea8a64fc975434ae8ad88.png",
-      "alt": "Runes — UJard",
-      "largura": 203,
-      "altura": 132
-     }
-    ]
-   },
-   {
-    "tipo": "texto",
-    "texto": "Note: Although I added the default Minor Runes for every champion in \"1.Spreadsheet\", it's important to note that there are some games where my default runes are NOT the most efficient. This is because some champions have different Minor Runes that are viable against them. \n\nFor example, for Malphite, in the third row I added \"Health\" to be the default. That being said, there will be some games where \"Tenacity and Slow Resist\" would be more efficient against him if the enemy team has a lot of CC.",
-    "links": []
    }
   ]
  },
@@ -334,528 +246,528 @@
   "titulo_en": "Builds",
   "blocos": [
    {
-    "tipo": "texto",
-    "texto": "META BUILDS",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Disclaimer: AP is at the moment the most EFFECTIVE build for Kayle.",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Kayle AP Build",
-    "links": []
-   },
-   {
-    "tipo": "imagens",
-    "imagens": [
+    "tipo": "secao",
+    "titulo": "META BUILDS",
+    "partes": [
      {
-      "src": "imagens/kayle/66ea7a26580f320f1dac9c4bd14f8ed00df6df364a5bb8ccd6f0e16c49f60720.png",
-      "alt": "Builds — UJard",
-      "largura": 32,
-      "altura": 33
+      "tipo": "p",
+      "texto": "Disclaimer: AP is at the moment the most EFFECTIVE build for Kayle.",
+      "links": []
      }
     ]
    },
    {
-    "tipo": "texto",
-    "texto": "Import (copy) this to the \"Import item sets\" to copy the build!    - ",
-    "links": []
-   },
-   {
-    "tipo": "pecas",
-    "grupos": [
+    "tipo": "secao",
+    "titulo": "Kayle AP Build",
+    "partes": [
      {
-      "titulo": "Starting",
-      "itens": [
+      "tipo": "imagens",
+      "imagens": [
        {
-        "nome": "Doran's Blade",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1055.png",
-        "id": "1055",
-        "quantidade": 1
-       },
-       {
-        "nome": "Doran's Ring",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1056.png",
-        "id": "1056",
-        "quantidade": 1
-       },
-       {
-        "nome": "Doran's Shield",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1054.png",
-        "id": "1054",
-        "quantidade": 1
-       },
-       {
-        "nome": "Health Potion",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/2003.png",
-        "id": "2003",
-        "quantidade": 5
-       },
-       {
-        "nome": "Cull",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1083.png",
-        "id": "1083",
-        "quantidade": 1
-       },
-       {
-        "nome": "Cloth Armor",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1029.png",
-        "id": "1029",
-        "quantidade": 1
+        "src": "imagens/kayle/66ea7a26580f320f1dac9c4bd14f8ed00df6df364a5bb8ccd6f0e16c49f60720.png",
+        "alt": "Builds — UJard",
+        "largura": 32,
+        "altura": 33
        }
       ]
      },
      {
-      "titulo": "Consumables",
-      "itens": [
+      "tipo": "p",
+      "texto": "Import (copy) this to the \"Import item sets\" to copy the build!    - ",
+      "links": []
+     },
+     {
+      "tipo": "bloco",
+      "bloco": {
+       "tipo": "pecas",
+       "grupos": [
+        {
+         "titulo": "Starting",
+         "itens": [
+          {
+           "nome": "Doran's Blade",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1055.png",
+           "id": "1055",
+           "quantidade": 1
+          },
+          {
+           "nome": "Doran's Ring",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1056.png",
+           "id": "1056",
+           "quantidade": 1
+          },
+          {
+           "nome": "Doran's Shield",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1054.png",
+           "id": "1054",
+           "quantidade": 1
+          },
+          {
+           "nome": "Health Potion",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/2003.png",
+           "id": "2003",
+           "quantidade": 5
+          },
+          {
+           "nome": "Cull",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1083.png",
+           "id": "1083",
+           "quantidade": 1
+          },
+          {
+           "nome": "Cloth Armor",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1029.png",
+           "id": "1029",
+           "quantidade": 1
+          }
+         ]
+        },
+        {
+         "titulo": "Consumables",
+         "itens": [
+          {
+           "nome": "Health Potion",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/2003.png",
+           "id": "2003",
+           "quantidade": 5
+          },
+          {
+           "nome": "Refillable Potion",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/2031.png",
+           "id": "2031",
+           "quantidade": 1
+          },
+          {
+           "nome": "Control Ward",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/2055.png",
+           "id": "2055",
+           "quantidade": 2
+          },
+          {
+           "nome": "Farsight Alteration",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3363.png",
+           "id": "3363",
+           "quantidade": 1
+          },
+          {
+           "nome": "Elixir of Sorcery",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/2139.png",
+           "id": "2139",
+           "quantidade": 1
+          }
+         ]
+        },
+        {
+         "titulo": "First buys",
+         "itens": [
+          {
+           "nome": "Boots",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1001.png",
+           "id": "1001",
+           "quantidade": 1
+          },
+          {
+           "nome": "Dagger",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1042.png",
+           "id": "1042",
+           "quantidade": 1
+          },
+          {
+           "nome": "Boots of Swiftness",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3009.png",
+           "id": "3009",
+           "quantidade": 1
+          },
+          {
+           "nome": "Blasting Wand",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1026.png",
+           "id": "1026",
+           "quantidade": 1
+          },
+          {
+           "nome": "Recurve Bow",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1043.png",
+           "id": "1043",
+           "quantidade": 1
+          },
+          {
+           "nome": "Amplifying Tome",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1052.png",
+           "id": "1052",
+           "quantidade": 1
+          },
+          {
+           "nome": "Glowing Mote",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/2022.png",
+           "id": "2022",
+           "quantidade": 1
+          },
+          {
+           "nome": "Sheen",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3057.png",
+           "id": "3057",
+           "quantidade": 1
+          },
+          {
+           "nome": "Aether Wisp",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3113.png",
+           "id": "3113",
+           "quantidade": 1
+          },
+          {
+           "nome": "Needlessly Large Rod",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1058.png",
+           "id": "1058",
+           "quantidade": 1
+          },
+          {
+           "nome": "Fiendish Codex",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3108.png",
+           "id": "3108",
+           "quantidade": 1
+          },
+          {
+           "nome": "Cull",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1083.png",
+           "id": "1083",
+           "quantidade": 1
+          },
+          {
+           "nome": "Dark Seal",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1082.png",
+           "id": "1082",
+           "quantidade": 1
+          }
+         ]
+        },
+        {
+         "titulo": "Boot options - Pick Swift 95% of games",
+         "itens": [
+          {
+           "nome": "Boots of Swiftness",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3009.png",
+           "id": "3009",
+           "quantidade": 1
+          },
+          {
+           "nome": "Mercury's Treads",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3111.png",
+           "id": "3111",
+           "quantidade": 1
+          },
+          {
+           "nome": "Plated Steelcaps",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3047.png",
+           "id": "3047",
+           "quantidade": 1
+          }
+         ]
+        },
+        {
+         "titulo": "Normal core build",
+         "itens": [
+          {
+           "nome": "Nashor's Tooth",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3115.png",
+           "id": "3115",
+           "quantidade": 1
+          },
+          {
+           "nome": "Dusk and Dawn",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/2510.png",
+           "id": "2510",
+           "quantidade": 1
+          },
+          {
+           "nome": "Rabadon's Deathcap",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3089.png",
+           "id": "3089",
+           "quantidade": 1
+          }
+         ]
+        },
+        {
+         "titulo": "Situational",
+         "itens": [
+          {
+           "nome": "Zhonya's Hourglass",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3157.png",
+           "id": "3157",
+           "quantidade": 1
+          },
+          {
+           "nome": "Banshee's Veil",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3102.png",
+           "id": "3102",
+           "quantidade": 1
+          },
+          {
+           "nome": "Void Staff",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3135.png",
+           "id": "3135",
+           "quantidade": 1
+          },
+          {
+           "nome": "Quicksilver Sash",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3140.png",
+           "id": "3140",
+           "quantidade": 1
+          }
+         ]
+        },
+        {
+         "titulo": "Buy if you don't need situ items (in this order) - mejais only if 10 stacks",
+         "itens": [
+          {
+           "nome": "Mejai's Soulstealer",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3041.png",
+           "id": "3041",
+           "quantidade": 1
+          },
+          {
+           "nome": "Shadowflame",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/4645.png",
+           "id": "4645",
+           "quantidade": 1
+          },
+          {
+           "nome": "Rylai's Crystal Scepter",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3116.png",
+           "id": "3116",
+           "quantidade": 1
+          }
+         ]
+        },
+        {
+         "titulo": "VERY SITUATIONAL, ONLY BUILD IF YOU KNOW WHAT YOU'RE DOING",
+         "itens": [
+          {
+           "nome": "Kaenic Rookern",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/2504.png",
+           "id": "2504",
+           "quantidade": 1
+          },
+          {
+           "nome": "Randuin's Omen",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3143.png",
+           "id": "3143",
+           "quantidade": 1
+          },
+          {
+           "nome": "Rylai's Crystal Scepter",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3116.png",
+           "id": "3116",
+           "quantidade": 1
+          },
+          {
+           "nome": "Death's Dance",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png",
+           "id": "6333",
+           "quantidade": 1
+          },
+          {
+           "nome": "Frozen Heart",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3110.png",
+           "id": "3110",
+           "quantidade": 1
+          },
+          {
+           "nome": "Guardian Angel",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3026.png",
+           "id": "3026",
+           "quantidade": 1
+          },
+          {
+           "nome": "Spirit Visage",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3065.png",
+           "id": "3065",
+           "quantidade": 1
+          },
+          {
+           "nome": "Force of Nature",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/4401.png",
+           "id": "4401",
+           "quantidade": 1
+          },
+          {
+           "nome": "Abyssal Mask",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/8020.png",
+           "id": "8020",
+           "quantidade": 1
+          },
+          {
+           "nome": "Bramble Vest",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3076.png",
+           "id": "3076",
+           "quantidade": 1
+          },
+          {
+           "nome": "Maw of Malmortius",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3156.png",
+           "id": "3156",
+           "quantidade": 1
+          },
+          {
+           "nome": "Wit's End",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3091.png",
+           "id": "3091",
+           "quantidade": 1
+          }
+         ]
+        },
+        {
+         "titulo": "Lategame",
+         "itens": [
+          {
+           "nome": "Elixir of Sorcery",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/2139.png",
+           "id": "2139",
+           "quantidade": 1
+          }
+         ]
+        }
+       ],
+       "codigo_importacao": "{\"title\":\"Kayle Season 26 AP\",\"associatedMaps\":[11,12],\"associatedChampions\":[10],\"blocks\":[{\"items\":[{\"id\":\"1055\",\"count\":1},{\"id\":\"1056\",\"count\":1},{\"id\":\"1054\",\"count\":1},{\"id\":\"2003\",\"count\":5},{\"id\":\"1083\",\"count\":1},{\"id\":\"1029\",\"count\":1}],\"type\":\"Starting\"},{\"items\":[{\"id\":\"2003\",\"count\":5},{\"id\":\"2031\",\"count\":1},{\"id\":\"2055\",\"count\":2},{\"id\":\"3363\",\"count\":1},{\"id\":\"2139\",\"count\":1}],\"type\":\"Consumables\"},{\"items\":[{\"id\":\"1001\",\"count\":1},{\"id\":\"1042\",\"count\":1},{\"id\":\"3009\",\"count\":1},{\"id\":\"1026\",\"count\":1},{\"id\":\"1043\",\"count\":1},{\"id\":\"1052\",\"count\":1},{\"id\":\"2022\",\"count\":1},{\"id\":\"3057\",\"count\":1},{\"id\":\"3113\",\"count\":1},{\"id\":\"1058\",\"count\":1},{\"id\":\"3108\",\"count\":1},{\"id\":\"1083\",\"count\":1},{\"id\":\"1082\",\"count\":1}],\"type\":\"First buys\"},{\"items\":[{\"id\":\"3009\",\"count\":1},{\"id\":\"3111\",\"count\":1},{\"id\":\"3047\",\"count\":1}],\"type\":\"Boot options - Pick Swift 95% of games\"},{\"items\":[{\"id\":\"3115\",\"count\":1},{\"id\":\"2510\",\"count\":1},{\"id\":\"3089\",\"count\":1}],\"type\":\"Normal core build\"},{\"items\":[{\"id\":\"3157\",\"count\":1},{\"id\":\"3102\",\"count\":1},{\"id\":\"3135\",\"count\":1},{\"id\":\"3140\",\"count\":1}],\"type\":\"Situational\"},{\"items\":[{\"id\":\"3041\",\"count\":1},{\"id\":\"4645\",\"count\":1},{\"id\":\"3116\",\"count\":1}],\"type\":\"Buy if you don't need situ items (in this order) - mejais only if 10 stacks\"},{\"items\":[{\"id\":\"2504\",\"count\":1},{\"id\":\"3143\",\"count\":1},{\"id\":\"3116\",\"count\":1},{\"id\":\"6333\",\"count\":1},{\"id\":\"3110\",\"count\":1},{\"id\":\"3026\",\"count\":1},{\"id\":\"3065\",\"count\":1},{\"id\":\"4401\",\"count\":1},{\"id\":\"8020\",\"count\":1},{\"id\":\"3076\",\"count\":1},{\"id\":\"3156\",\"count\":1},{\"id\":\"3091\",\"count\":1}],\"type\":\"VERY SITUATIONAL, ONLY BUILD IF YOU KNOW WHAT YOU'RE DOING\"},{\"items\":[{\"id\":\"2139\",\"count\":1}],\"type\":\"Lategame\"}]}"
+      }
+     },
+     {
+      "tipo": "imagens",
+      "imagens": [
        {
-        "nome": "Health Potion",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/2003.png",
-        "id": "2003",
-        "quantidade": 5
-       },
-       {
-        "nome": "Refillable Potion",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/2031.png",
-        "id": "2031",
-        "quantidade": 1
-       },
-       {
-        "nome": "Control Ward",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/2055.png",
-        "id": "2055",
-        "quantidade": 2
-       },
-       {
-        "nome": "Farsight Alteration",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3363.png",
-        "id": "3363",
-        "quantidade": 1
-       },
-       {
-        "nome": "Elixir of Sorcery",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/2139.png",
-        "id": "2139",
-        "quantidade": 1
+        "src": "imagens/kayle/cbd832e950cdc5c1aba2db432076adc7eecb71784fc0d559e5d2d98f616d219e.png",
+        "alt": "Builds — UJard",
+        "largura": 466,
+        "altura": 240
        }
       ]
      },
      {
-      "titulo": "First buys",
-      "itens": [
+      "tipo": "p",
+      "texto": "Starter Items are stated on \"1.Spreadsheet for every matchup. ",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "Added this Consumable's tab for quick access to every one of them :)",
+      "links": []
+     },
+     {
+      "tipo": "imagens",
+      "imagens": [
        {
-        "nome": "Boots",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1001.png",
-        "id": "1001",
-        "quantidade": 1
-       },
-       {
-        "nome": "Dagger",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1042.png",
-        "id": "1042",
-        "quantidade": 1
-       },
-       {
-        "nome": "Boots of Swiftness",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3009.png",
-        "id": "3009",
-        "quantidade": 1
-       },
-       {
-        "nome": "Blasting Wand",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1026.png",
-        "id": "1026",
-        "quantidade": 1
-       },
-       {
-        "nome": "Recurve Bow",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1043.png",
-        "id": "1043",
-        "quantidade": 1
-       },
-       {
-        "nome": "Amplifying Tome",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1052.png",
-        "id": "1052",
-        "quantidade": 1
-       },
-       {
-        "nome": "Glowing Mote",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/2022.png",
-        "id": "2022",
-        "quantidade": 1
-       },
-       {
-        "nome": "Sheen",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3057.png",
-        "id": "3057",
-        "quantidade": 1
-       },
-       {
-        "nome": "Aether Wisp",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3113.png",
-        "id": "3113",
-        "quantidade": 1
-       },
-       {
-        "nome": "Needlessly Large Rod",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1058.png",
-        "id": "1058",
-        "quantidade": 1
-       },
-       {
-        "nome": "Fiendish Codex",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3108.png",
-        "id": "3108",
-        "quantidade": 1
-       },
-       {
-        "nome": "Cull",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1083.png",
-        "id": "1083",
-        "quantidade": 1
-       },
-       {
-        "nome": "Dark Seal",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1082.png",
-        "id": "1082",
-        "quantidade": 1
+        "src": "imagens/kayle/40fb845922f7317a4f7ee794a6f9c82b98ab606de8441898ca4966fb48bffed3.png",
+        "alt": "Builds — UJard",
+        "largura": 461,
+        "altura": 154
        }
       ]
      },
      {
-      "titulo": "Boot options - Pick Swift 95% of games",
-      "itens": [
+      "tipo": "p",
+      "texto": "Swifties as boots always. Left some components here so you can easily buy them. \n\nAgainst short trade matchups, it's convenient to rush blasting wand + refillable. Just remember that if you're using Jack, you'll need to buy boots too for the stacks.\n\nCull if you have 450g extra earlygame and you need a bit of sustain.\n\nDark seal if you have 350g extra and you don't need the early AD adaptive force anymore, and you think you can win from here forward.\n\nAs a rule of thumb, you buy Cull 1st-2nd back or Dark seal 2nd-3rd back.",
+      "links": []
+     },
+     {
+      "tipo": "imagens",
+      "imagens": [
        {
-        "nome": "Boots of Swiftness",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3009.png",
-        "id": "3009",
-        "quantidade": 1
-       },
-       {
-        "nome": "Mercury's Treads",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3111.png",
-        "id": "3111",
-        "quantidade": 1
-       },
-       {
-        "nome": "Plated Steelcaps",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3047.png",
-        "id": "3047",
-        "quantidade": 1
+        "src": "imagens/kayle/14ad8fdb2dd0cc19242e9e4309c0988d9a04d8b3efe4a0fff42b29afd77d39e2.png",
+        "alt": "Builds — UJard",
+        "largura": 463,
+        "altura": 330
        }
       ]
      },
      {
-      "titulo": "Normal core build",
-      "itens": [
+      "tipo": "p",
+      "texto": "Boot options.\n\nPick swifties almost every game. Mercs and Tabis for when it's absolutely necessary.",
+      "links": []
+     },
+     {
+      "tipo": "imagens",
+      "imagens": [
        {
-        "nome": "Nashor's Tooth",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3115.png",
-        "id": "3115",
-        "quantidade": 1
-       },
-       {
-        "nome": "Dusk and Dawn",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/2510.png",
-        "id": "2510",
-        "quantidade": 1
-       },
-       {
-        "nome": "Rabadon's Deathcap",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3089.png",
-        "id": "3089",
-        "quantidade": 1
+        "src": "imagens/kayle/8782489b465bf06c9c982181c702d34a891e4b9ca9edc08e0fdb495166614b99.png",
+        "alt": "Builds — UJard",
+        "largura": 466,
+        "altura": 159
        }
       ]
      },
      {
-      "titulo": "Situational",
-      "itens": [
+      "tipo": "p",
+      "texto": "Normal core build you're taking probably 99% of your games. Only vary if they have a shit ton of AP and you need Wit's End first item.",
+      "links": []
+     },
+     {
+      "tipo": "imagens",
+      "imagens": [
        {
-        "nome": "Zhonya's Hourglass",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3157.png",
-        "id": "3157",
-        "quantidade": 1
-       },
-       {
-        "nome": "Banshee's Veil",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3102.png",
-        "id": "3102",
-        "quantidade": 1
-       },
-       {
-        "nome": "Void Staff",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3135.png",
-        "id": "3135",
-        "quantidade": 1
-       },
-       {
-        "nome": "Quicksilver Sash",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3140.png",
-        "id": "3140",
-        "quantidade": 1
+        "src": "imagens/kayle/07ed603825c2b2426be49e7c936c40b58c20ffaa4bd16da4131813384d3800cb.png",
+        "alt": "Builds — UJard",
+        "largura": 466,
+        "altura": 160
        }
       ]
      },
      {
-      "titulo": "Buy if you don't need situ items (in this order) - mejais only if 10 stacks",
-      "itens": [
+      "tipo": "p",
+      "texto": "Situational after Core build:\n\nAre they diving into you or need armour? Buy Zhonyas\n\nIs there a spell that's killing you (malph ult, etc.) or need mr? Buy Banshee's\n\nVoidstaff if they're MR Stacking.\n\nNeed QSS? Buy it and sit on it, then complete it into Mercurial Scimitar as a last item.\n\n",
+      "links": []
+     },
+     {
+      "tipo": "imagens",
+      "imagens": [
        {
-        "nome": "Mejai's Soulstealer",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3041.png",
-        "id": "3041",
-        "quantidade": 1
-       },
-       {
-        "nome": "Shadowflame",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/4645.png",
-        "id": "4645",
-        "quantidade": 1
-       },
-       {
-        "nome": "Rylai's Crystal Scepter",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3116.png",
-        "id": "3116",
-        "quantidade": 1
+        "src": "imagens/kayle/9ccf9989a5919bd39698f694b73a4cf44483b398b16ebbc03d139d0e944bef46.png",
+        "alt": "Builds — UJard",
+        "largura": 467,
+        "altura": 156
        }
       ]
      },
      {
-      "titulo": "VERY SITUATIONAL, ONLY BUILD IF YOU KNOW WHAT YOU'RE DOING",
-      "itens": [
+      "tipo": "p",
+      "texto": "If you don't need any of the previously mentioned items above, build these items in this order.\n\nOnly build Mejai's if you bought Dark Seal earlygame AND you already have 10 stacks.",
+      "links": []
+     },
+     {
+      "tipo": "imagens",
+      "imagens": [
        {
-        "nome": "Kaenic Rookern",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/2504.png",
-        "id": "2504",
-        "quantidade": 1
+        "src": "imagens/kayle/a7d384bf660331a1567dc1ea84cc4b993d8e694d6457b2430abb56689ab22e22.png",
+        "alt": "Builds — UJard",
+        "largura": 466,
+        "altura": 157
        },
        {
-        "nome": "Randuin's Omen",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3143.png",
-        "id": "3143",
-        "quantidade": 1
-       },
-       {
-        "nome": "Rylai's Crystal Scepter",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3116.png",
-        "id": "3116",
-        "quantidade": 1
-       },
-       {
-        "nome": "Death's Dance",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png",
-        "id": "6333",
-        "quantidade": 1
-       },
-       {
-        "nome": "Frozen Heart",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3110.png",
-        "id": "3110",
-        "quantidade": 1
-       },
-       {
-        "nome": "Guardian Angel",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3026.png",
-        "id": "3026",
-        "quantidade": 1
-       },
-       {
-        "nome": "Spirit Visage",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3065.png",
-        "id": "3065",
-        "quantidade": 1
-       },
-       {
-        "nome": "Force of Nature",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/4401.png",
-        "id": "4401",
-        "quantidade": 1
-       },
-       {
-        "nome": "Abyssal Mask",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/8020.png",
-        "id": "8020",
-        "quantidade": 1
-       },
-       {
-        "nome": "Bramble Vest",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3076.png",
-        "id": "3076",
-        "quantidade": 1
-       },
-       {
-        "nome": "Maw of Malmortius",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3156.png",
-        "id": "3156",
-        "quantidade": 1
-       },
-       {
-        "nome": "Wit's End",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3091.png",
-        "id": "3091",
-        "quantidade": 1
+        "src": "imagens/kayle/26933c673ee6377f66393094d4d881b9de42000a5961b95a063e8244b5e477f1.png",
+        "alt": "Builds — UJard",
+        "largura": 463,
+        "altura": 324
        }
       ]
      },
      {
-      "titulo": "Lategame",
-      "itens": [
+      "tipo": "p",
+      "texto": "Do NOT buy these items unless you know exactly what you're doing. I just added them here because they're viable items on Kayle on VERY niche scenarios. I build these items probably once or twice per season.",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "Buy blue pot when full build or when you really need it for a game ending teamfight.",
+      "links": []
+     },
+     {
+      "tipo": "imagens",
+      "imagens": [
        {
-        "nome": "Elixir of Sorcery",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/2139.png",
-        "id": "2139",
-        "quantidade": 1
+        "src": "imagens/kayle/c5015ce15448ba217d4b57621acfe0e9115a1f348f8c0aec9a724ea7607250bc.png",
+        "alt": "Builds — UJard",
+        "largura": 469,
+        "altura": 157
        }
       ]
-     }
-    ],
-    "codigo_importacao": "{\"title\":\"Kayle Season 26 AP\",\"associatedMaps\":[11,12],\"associatedChampions\":[10],\"blocks\":[{\"items\":[{\"id\":\"1055\",\"count\":1},{\"id\":\"1056\",\"count\":1},{\"id\":\"1054\",\"count\":1},{\"id\":\"2003\",\"count\":5},{\"id\":\"1083\",\"count\":1},{\"id\":\"1029\",\"count\":1}],\"type\":\"Starting\"},{\"items\":[{\"id\":\"2003\",\"count\":5},{\"id\":\"2031\",\"count\":1},{\"id\":\"2055\",\"count\":2},{\"id\":\"3363\",\"count\":1},{\"id\":\"2139\",\"count\":1}],\"type\":\"Consumables\"},{\"items\":[{\"id\":\"1001\",\"count\":1},{\"id\":\"1042\",\"count\":1},{\"id\":\"3009\",\"count\":1},{\"id\":\"1026\",\"count\":1},{\"id\":\"1043\",\"count\":1},{\"id\":\"1052\",\"count\":1},{\"id\":\"2022\",\"count\":1},{\"id\":\"3057\",\"count\":1},{\"id\":\"3113\",\"count\":1},{\"id\":\"1058\",\"count\":1},{\"id\":\"3108\",\"count\":1},{\"id\":\"1083\",\"count\":1},{\"id\":\"1082\",\"count\":1}],\"type\":\"First buys\"},{\"items\":[{\"id\":\"3009\",\"count\":1},{\"id\":\"3111\",\"count\":1},{\"id\":\"3047\",\"count\":1}],\"type\":\"Boot options - Pick Swift 95% of games\"},{\"items\":[{\"id\":\"3115\",\"count\":1},{\"id\":\"2510\",\"count\":1},{\"id\":\"3089\",\"count\":1}],\"type\":\"Normal core build\"},{\"items\":[{\"id\":\"3157\",\"count\":1},{\"id\":\"3102\",\"count\":1},{\"id\":\"3135\",\"count\":1},{\"id\":\"3140\",\"count\":1}],\"type\":\"Situational\"},{\"items\":[{\"id\":\"3041\",\"count\":1},{\"id\":\"4645\",\"count\":1},{\"id\":\"3116\",\"count\":1}],\"type\":\"Buy if you don't need situ items (in this order) - mejais only if 10 stacks\"},{\"items\":[{\"id\":\"2504\",\"count\":1},{\"id\":\"3143\",\"count\":1},{\"id\":\"3116\",\"count\":1},{\"id\":\"6333\",\"count\":1},{\"id\":\"3110\",\"count\":1},{\"id\":\"3026\",\"count\":1},{\"id\":\"3065\",\"count\":1},{\"id\":\"4401\",\"count\":1},{\"id\":\"8020\",\"count\":1},{\"id\":\"3076\",\"count\":1},{\"id\":\"3156\",\"count\":1},{\"id\":\"3091\",\"count\":1}],\"type\":\"VERY SITUATIONAL, ONLY BUILD IF YOU KNOW WHAT YOU'RE DOING\"},{\"items\":[{\"id\":\"2139\",\"count\":1}],\"type\":\"Lategame\"}]}"
-   },
-   {
-    "tipo": "imagens",
-    "imagens": [
-     {
-      "src": "imagens/kayle/cbd832e950cdc5c1aba2db432076adc7eecb71784fc0d559e5d2d98f616d219e.png",
-      "alt": "Builds — UJard",
-      "largura": 466,
-      "altura": 240
-     }
-    ]
-   },
-   {
-    "tipo": "texto",
-    "texto": "Starter Items are stated on \"1.Spreadsheet for every matchup. ",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Added this Consumable's tab for quick access to every one of them :)",
-    "links": []
-   },
-   {
-    "tipo": "imagens",
-    "imagens": [
-     {
-      "src": "imagens/kayle/40fb845922f7317a4f7ee794a6f9c82b98ab606de8441898ca4966fb48bffed3.png",
-      "alt": "Builds — UJard",
-      "largura": 461,
-      "altura": 154
-     }
-    ]
-   },
-   {
-    "tipo": "texto",
-    "texto": "Swifties as boots always. Left some components here so you can easily buy them. \n\nAgainst short trade matchups, it's convenient to rush blasting wand + refillable. Just remember that if you're using Jack, you'll need to buy boots too for the stacks.\n\nCull if you have 450g extra earlygame and you need a bit of sustain.\n\nDark seal if you have 350g extra and you don't need the early AD adaptive force anymore, and you think you can win from here forward.\n\nAs a rule of thumb, you buy Cull 1st-2nd back or Dark seal 2nd-3rd back.",
-    "links": []
-   },
-   {
-    "tipo": "imagens",
-    "imagens": [
-     {
-      "src": "imagens/kayle/14ad8fdb2dd0cc19242e9e4309c0988d9a04d8b3efe4a0fff42b29afd77d39e2.png",
-      "alt": "Builds — UJard",
-      "largura": 463,
-      "altura": 330
-     }
-    ]
-   },
-   {
-    "tipo": "texto",
-    "texto": "Boot options.\n\nPick swifties almost every game. Mercs and Tabis for when it's absolutely necessary.",
-    "links": []
-   },
-   {
-    "tipo": "imagens",
-    "imagens": [
-     {
-      "src": "imagens/kayle/8782489b465bf06c9c982181c702d34a891e4b9ca9edc08e0fdb495166614b99.png",
-      "alt": "Builds — UJard",
-      "largura": 466,
-      "altura": 159
-     }
-    ]
-   },
-   {
-    "tipo": "texto",
-    "texto": "Normal core build you're taking probably 99% of your games. Only vary if they have a shit ton of AP and you need Wit's End first item.",
-    "links": []
-   },
-   {
-    "tipo": "imagens",
-    "imagens": [
-     {
-      "src": "imagens/kayle/07ed603825c2b2426be49e7c936c40b58c20ffaa4bd16da4131813384d3800cb.png",
-      "alt": "Builds — UJard",
-      "largura": 466,
-      "altura": 160
-     }
-    ]
-   },
-   {
-    "tipo": "texto",
-    "texto": "Situational after Core build:\n\nAre they diving into you or need armour? Buy Zhonyas\n\nIs there a spell that's killing you (malph ult, etc.) or need mr? Buy Banshee's\n\nVoidstaff if they're MR Stacking.\n\nNeed QSS? Buy it and sit on it, then complete it into Mercurial Scimitar as a last item.\n\n",
-    "links": []
-   },
-   {
-    "tipo": "imagens",
-    "imagens": [
-     {
-      "src": "imagens/kayle/9ccf9989a5919bd39698f694b73a4cf44483b398b16ebbc03d139d0e944bef46.png",
-      "alt": "Builds — UJard",
-      "largura": 467,
-      "altura": 156
-     }
-    ]
-   },
-   {
-    "tipo": "texto",
-    "texto": "If you don't need any of the previously mentioned items above, build these items in this order.\n\nOnly build Mejai's if you bought Dark Seal earlygame AND you already have 10 stacks.",
-    "links": []
-   },
-   {
-    "tipo": "imagens",
-    "imagens": [
-     {
-      "src": "imagens/kayle/a7d384bf660331a1567dc1ea84cc4b993d8e694d6457b2430abb56689ab22e22.png",
-      "alt": "Builds — UJard",
-      "largura": 466,
-      "altura": 157
-     }
-    ]
-   },
-   {
-    "tipo": "imagens",
-    "imagens": [
-     {
-      "src": "imagens/kayle/26933c673ee6377f66393094d4d881b9de42000a5961b95a063e8244b5e477f1.png",
-      "alt": "Builds — UJard",
-      "largura": 463,
-      "altura": 324
-     }
-    ]
-   },
-   {
-    "tipo": "texto",
-    "texto": "Do NOT buy these items unless you know exactly what you're doing. I just added them here because they're viable items on Kayle on VERY niche scenarios. I build these items probably once or twice per season.",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Buy blue pot when full build or when you really need it for a game ending teamfight.",
-    "links": []
-   },
-   {
-    "tipo": "imagens",
-    "imagens": [
-     {
-      "src": "imagens/kayle/c5015ce15448ba217d4b57621acfe0e9115a1f348f8c0aec9a724ea7607250bc.png",
-      "alt": "Builds — UJard",
-      "largura": 469,
-      "altura": 157
      }
     ]
    }
@@ -867,173 +779,178 @@
   "titulo_en": "Macro and Gameplay",
   "blocos": [
    {
-    "tipo": "texto",
-    "texto": "MACRO AND GAMEPLAY",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "This part of the spreadsheet is how you should play Kayle on all stages of the game. There's obviously exceptions to these rules as League of Legends is a Dynamic game but use these as a rule of thumb.",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "We will be using the following bar to assess Kayle's power level compared to the median power level of League of Legends so we can decide how to play her:",
-    "links": []
-   },
-   {
-    "tipo": "imagens",
-    "imagens": [
+    "tipo": "secao",
+    "titulo": "MACRO AND GAMEPLAY",
+    "partes": [
      {
-      "src": "imagens/kayle/a5cadbd4ece7edd7308c8545adcc99cd6142a007c8383a73991be6777b1016c7.png",
-      "alt": "Macro and Gameplay — UJard",
-      "largura": 900,
-      "altura": 800
+      "tipo": "p",
+      "texto": "This part of the spreadsheet is how you should play Kayle on all stages of the game. There's obviously exceptions to these rules as League of Legends is a Dynamic game but use these as a rule of thumb.",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "We will be using the following bar to assess Kayle's power level compared to the median power level of League of Legends so we can decide how to play her:",
+      "links": []
+     },
+     {
+      "tipo": "imagens",
+      "imagens": [
+       {
+        "src": "imagens/kayle/a5cadbd4ece7edd7308c8545adcc99cd6142a007c8383a73991be6777b1016c7.png",
+        "alt": "Macro and Gameplay — UJard",
+        "largura": 900,
+        "altura": 800
+       }
+      ]
+     },
+     {
+      "tipo": "p",
+      "texto": "Inside the blue rectangle, Kayles power level is going to be compared with the average of other champions using a pink fill",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "The black bar is where the average power level of a League of Legends Champion is",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "The following Section contains how you should play on each one of Kayle's power levels:",
+      "links": []
+     },
+     {
+      "tipo": "imagens",
+      "imagens": [
+       {
+        "src": "imagens/kayle/70a5812ed38efbc9e00e5a5bac5aee1cb8bbbdfe9fa3a9108d3befe23c3f7831.png",
+        "alt": "Macro and Gameplay — UJard",
+        "largura": 541,
+        "altura": 541
+       }
+      ]
      }
     ]
    },
    {
-    "tipo": "texto",
-    "texto": "Inside the blue rectangle, Kayles power level is going to be compared with the average of other champions using a pink fill",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "The black bar is where the average power level of a League of Legends Champion is",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "The following Section contains how you should play on each one of Kayle's power levels:",
-    "links": []
-   },
-   {
-    "tipo": "imagens",
-    "imagens": [
+    "tipo": "secao",
+    "titulo": "Levels 1-5",
+    "partes": [
      {
-      "src": "imagens/kayle/70a5812ed38efbc9e00e5a5bac5aee1cb8bbbdfe9fa3a9108d3befe23c3f7831.png",
-      "alt": "Macro and Gameplay — UJard",
-      "largura": 541,
-      "altura": 541
+      "tipo": "imagens",
+      "imagens": [
+       {
+        "src": "imagens/kayle/a5cadbd4ece7edd7308c8545adcc99cd6142a007c8383a73991be6777b1016c7.png",
+        "alt": "Macro and Gameplay — UJard",
+        "largura": 900,
+        "altura": 800
+       }
+      ]
+     },
+     {
+      "tipo": "p",
+      "texto": "This is when Kayle is at her weakest point in the game. You're basically not a champion and trading most of the time will result in a lost trade. Your goal is to try and survive and NOT take a ton of damage because you can get all-ined or dived pretty easily. Respect the opponent's engage range or auto attack range if ranged and give up as much CS as possible to continue to be at as healthy as you possibly can. DON'T greed for farm and back if you need to; you can always use teleport to come back. There's times where you can get favourable trades levels 1-5, so you're not a completely useless champion; you're actually very strong level 1 with a LT rune page and you can have very decent short trades with PtA or Fleet rune page. Just know what if you're aggresive lvl 1 and it doesn't work, wave will be pushing in the opponent's favour so it's not always the best idea.\n\nWorst two scenarios are the level 3 dive and a level 4 freeze on their side. You can always use your teleport to go back, heal back up and have an item advantage for these. Against the dive, depending on their jungler it's sometimes better to just give up CS and wait. Try and help your team ONLY if the enemy team is trolling because 9 times out of 10, it's better to just ignore your team and give up an advantage early game if they get ganked/skirmished/invaded levels 1-5. Try and ask your jungler to start top side (if you play top kayle) so you don't have to give him prio for skuttle crab or a lvl 3 invade.",
+      "links": []
+     },
+     {
+      "tipo": "imagens",
+      "imagens": [
+       {
+        "src": "imagens/kayle/ee595ab9d432dc443a3351ac74af2b9d12b3bc6dc98a889def18186dfe268c82.png",
+        "alt": "Macro and Gameplay — UJard",
+        "largura": 555,
+        "altura": 555
+       }
+      ]
      }
     ]
    },
    {
-    "tipo": "texto",
-    "texto": "Levels 1-5",
-    "links": []
-   },
-   {
-    "tipo": "imagens",
-    "imagens": [
+    "tipo": "secao",
+    "titulo": "Levels 6-10",
+    "partes": [
      {
-      "src": "imagens/kayle/a5cadbd4ece7edd7308c8545adcc99cd6142a007c8383a73991be6777b1016c7.png",
-      "alt": "Macro and Gameplay — UJard",
-      "largura": 900,
-      "altura": 800
+      "tipo": "imagens",
+      "imagens": [
+       {
+        "src": "imagens/kayle/b1c10b3bfbe8576c5e5508c77701153c399e25b9e1b4fe01bb33567c936df5a8.png",
+        "alt": "Macro and Gameplay — UJard",
+        "largura": 900,
+        "altura": 800
+       }
+      ]
+     },
+     {
+      "tipo": "p",
+      "texto": "This is Kayles biggest power spike. This is where you'll have a few components from your build and tier 2 boots but not a completed item. You're kind of strong, especially leaning towards levels 9-10. Although you're still not as strong as most champions you're now ranged and can hold up.\n\nYou're still in lane most of these levels and what you have to do is basically look at the champ you're against. Can you actually use your range to your advantage? If you can, try and go for safe trades till you have enough of an HP advantage to all in. If you're against a Garen for example, you can trade very favourably and win lane off this; against a Viktor you're still getting out-traded.\n\nYou're actually very good in 2v2 and 3v3 skirmishes because of your ult. Just chuck it into the engange champion and you'll be fine; especially if you deny a lot of damage from the enemy team. Just be aware because your ult has a very long cooldown and your enemy laner can use his ult  about 1.5 times before you can use yours.\n",
+      "links": []
+     },
+     {
+      "tipo": "imagens",
+      "imagens": [
+       {
+        "src": "imagens/kayle/4be83c41ffd8bc78ec7387af5947567a802c186a33557966af9301dd3040ae86.png",
+        "alt": "Macro and Gameplay — UJard",
+        "largura": 538,
+        "altura": 538
+       }
+      ]
      }
     ]
    },
    {
-    "tipo": "texto",
-    "texto": "This is when Kayle is at her weakest point in the game. You're basically not a champion and trading most of the time will result in a lost trade. Your goal is to try and survive and NOT take a ton of damage because you can get all-ined or dived pretty easily. Respect the opponent's engage range or auto attack range if ranged and give up as much CS as possible to continue to be at as healthy as you possibly can. DON'T greed for farm and back if you need to; you can always use teleport to come back. There's times where you can get favourable trades levels 1-5, so you're not a completely useless champion; you're actually very strong level 1 with a LT rune page and you can have very decent short trades with PtA or Fleet rune page. Just know what if you're aggresive lvl 1 and it doesn't work, wave will be pushing in the opponent's favour so it's not always the best idea.\n\nWorst two scenarios are the level 3 dive and a level 4 freeze on their side. You can always use your teleport to go back, heal back up and have an item advantage for these. Against the dive, depending on their jungler it's sometimes better to just give up CS and wait. Try and help your team ONLY if the enemy team is trolling because 9 times out of 10, it's better to just ignore your team and give up an advantage early game if they get ganked/skirmished/invaded levels 1-5. Try and ask your jungler to start top side (if you play top kayle) so you don't have to give him prio for skuttle crab or a lvl 3 invade.",
-    "links": []
-   },
-   {
-    "tipo": "imagens",
-    "imagens": [
+    "tipo": "secao",
+    "titulo": "Levels 11-15",
+    "partes": [
      {
-      "src": "imagens/kayle/ee595ab9d432dc443a3351ac74af2b9d12b3bc6dc98a889def18186dfe268c82.png",
-      "alt": "Macro and Gameplay — UJard",
-      "largura": 555,
-      "altura": 555
+      "tipo": "imagens",
+      "imagens": [
+       {
+        "src": "imagens/kayle/73ec2f8400e7ae720bfbc5eb8d8e1d9f51be6f2d7a4d53b2607952e6b0e4ac6f.png",
+        "alt": "Macro and Gameplay — UJard",
+        "largura": 900,
+        "altura": 800
+       }
+      ]
+     },
+     {
+      "tipo": "p",
+      "texto": "By level 11 you've most likely completed your first full item other than t2 boots. Here's when you're actually better than the average champion. You get a big increase of damage because of the waves when exalted and now you have a decent amount of items which Kayle really scales insanely well (her ratios are insane).\n\nIf you can keep one recommendation from this guide it's: AVOID YOUR TEAM AS MUCH AS YOU CAN LEVELS 11-15.\n\nObviously don't get out of your way to not help them if they need your assistance and they're next to you or you have a great tp. Just try and avoid them while farming because you want to get level 16 as soon as possible. You're most likely stronger than your lane opponent, so go to a side lane and pressure while being annoying and taking all the enemy jungle camps. Your job is to farm and pressure, rarely it's to kill. Always try and stay at the opposite side of the map to where the next objective is going to be taken (dragon or baron). Be careful because there's some champions that counter this playstyle, especially since Kayle doesn't have the best tools to escape a gank when splitting. Champions like Nocturne, Blue Kayn and Quinn can all jump on you very fast and there's no counterplay for Kayle in these situations. Just try and play safe and scale with the farm you can get for free.  Rush to level 16.",
+      "links": []
+     },
+     {
+      "tipo": "imagens",
+      "imagens": [
+       {
+        "src": "imagens/kayle/0a38e3d48f5f2db0d3e3b25c22e80b4651d4fb2eeadaee72e362516e7ca710cb.png",
+        "alt": "Macro and Gameplay — UJard",
+        "largura": 577,
+        "altura": 576
+       }
+      ]
      }
     ]
    },
    {
-    "tipo": "texto",
-    "texto": "Levels 6-10",
-    "links": []
-   },
-   {
-    "tipo": "imagens",
-    "imagens": [
+    "tipo": "secao",
+    "titulo": "Levels 16+",
+    "partes": [
      {
-      "src": "imagens/kayle/b1c10b3bfbe8576c5e5508c77701153c399e25b9e1b4fe01bb33567c936df5a8.png",
-      "alt": "Macro and Gameplay — UJard",
-      "largura": 900,
-      "altura": 800
+      "tipo": "imagens",
+      "imagens": [
+       {
+        "src": "imagens/kayle/b012f710da65b25c1f6b16443a426fa8df005f014c0d8e52da0e630d198bc613.png",
+        "alt": "Macro and Gameplay — UJard",
+        "largura": 900,
+        "altura": 800
+       }
+      ]
+     },
+     {
+      "tipo": "p",
+      "texto": "You're the best champion in the game at this point so congrats, but that doesn't mean you're not vulnerable; everyone is going to have a big target on you. You're now permanently exalted, meaning you get all your passive stacks with the attack speed and movespeed that comes with it. You also get a pretty nice range increase on your auto attacks and waves. Bear in mind that although you're the best champion in the game overall, that doesn't mean you're the best champion in the game for that particular game. There are games where champs like Kassadin or Jinx are better than Kayle given the enemy team comp your your team comp. That also doesn't mean you can 1v1 anyone; Kayle's strength isn't to be a 1v1 machine but a hypercarry that can support. That being said, you're likely the best or close to the best.\n\nBy the time you get level 16, you're most likely finishing your 3 completed item (not counting boots) and your ratios are insane, this is when you're going to start one shotting squishies. Because of this, you're vital in a teamfight so unless you get a free splitpush, you're going to want to stick with your team (obviously while trying to avoid them from time to time to farm like you would with any other champion).\n\nYou can still splitpush and this is a desicion you're going to have to take (split or group) if you really think it's the only way to win the game.",
+      "links": []
      }
     ]
-   },
-   {
-    "tipo": "texto",
-    "texto": "This is Kayles biggest power spike. This is where you'll have a few components from your build and tier 2 boots but not a completed item. You're kind of strong, especially leaning towards levels 9-10. Although you're still not as strong as most champions you're now ranged and can hold up.\n\nYou're still in lane most of these levels and what you have to do is basically look at the champ you're against. Can you actually use your range to your advantage? If you can, try and go for safe trades till you have enough of an HP advantage to all in. If you're against a Garen for example, you can trade very favourably and win lane off this; against a Viktor you're still getting out-traded.\n\nYou're actually very good in 2v2 and 3v3 skirmishes because of your ult. Just chuck it into the engange champion and you'll be fine; especially if you deny a lot of damage from the enemy team. Just be aware because your ult has a very long cooldown and your enemy laner can use his ult  about 1.5 times before you can use yours.\n",
-    "links": []
-   },
-   {
-    "tipo": "imagens",
-    "imagens": [
-     {
-      "src": "imagens/kayle/4be83c41ffd8bc78ec7387af5947567a802c186a33557966af9301dd3040ae86.png",
-      "alt": "Macro and Gameplay — UJard",
-      "largura": 538,
-      "altura": 538
-     }
-    ]
-   },
-   {
-    "tipo": "texto",
-    "texto": "Levels 11-15",
-    "links": []
-   },
-   {
-    "tipo": "imagens",
-    "imagens": [
-     {
-      "src": "imagens/kayle/73ec2f8400e7ae720bfbc5eb8d8e1d9f51be6f2d7a4d53b2607952e6b0e4ac6f.png",
-      "alt": "Macro and Gameplay — UJard",
-      "largura": 900,
-      "altura": 800
-     }
-    ]
-   },
-   {
-    "tipo": "texto",
-    "texto": "By level 11 you've most likely completed your first full item other than t2 boots. Here's when you're actually better than the average champion. You get a big increase of damage because of the waves when exalted and now you have a decent amount of items which Kayle really scales insanely well (her ratios are insane).\n\nIf you can keep one recommendation from this guide it's: AVOID YOUR TEAM AS MUCH AS YOU CAN LEVELS 11-15.\n\nObviously don't get out of your way to not help them if they need your assistance and they're next to you or you have a great tp. Just try and avoid them while farming because you want to get level 16 as soon as possible. You're most likely stronger than your lane opponent, so go to a side lane and pressure while being annoying and taking all the enemy jungle camps. Your job is to farm and pressure, rarely it's to kill. Always try and stay at the opposite side of the map to where the next objective is going to be taken (dragon or baron). Be careful because there's some champions that counter this playstyle, especially since Kayle doesn't have the best tools to escape a gank when splitting. Champions like Nocturne, Blue Kayn and Quinn can all jump on you very fast and there's no counterplay for Kayle in these situations. Just try and play safe and scale with the farm you can get for free.  Rush to level 16.",
-    "links": []
-   },
-   {
-    "tipo": "imagens",
-    "imagens": [
-     {
-      "src": "imagens/kayle/0a38e3d48f5f2db0d3e3b25c22e80b4651d4fb2eeadaee72e362516e7ca710cb.png",
-      "alt": "Macro and Gameplay — UJard",
-      "largura": 577,
-      "altura": 576
-     }
-    ]
-   },
-   {
-    "tipo": "texto",
-    "texto": "Levels 16+",
-    "links": []
-   },
-   {
-    "tipo": "imagens",
-    "imagens": [
-     {
-      "src": "imagens/kayle/b012f710da65b25c1f6b16443a426fa8df005f014c0d8e52da0e630d198bc613.png",
-      "alt": "Macro and Gameplay — UJard",
-      "largura": 900,
-      "altura": 800
-     }
-    ]
-   },
-   {
-    "tipo": "texto",
-    "texto": "You're the best champion in the game at this point so congrats, but that doesn't mean you're not vulnerable; everyone is going to have a big target on you. You're now permanently exalted, meaning you get all your passive stacks with the attack speed and movespeed that comes with it. You also get a pretty nice range increase on your auto attacks and waves. Bear in mind that although you're the best champion in the game overall, that doesn't mean you're the best champion in the game for that particular game. There are games where champs like Kassadin or Jinx are better than Kayle given the enemy team comp your your team comp. That also doesn't mean you can 1v1 anyone; Kayle's strength isn't to be a 1v1 machine but a hypercarry that can support. That being said, you're likely the best or close to the best.\n\nBy the time you get level 16, you're most likely finishing your 3 completed item (not counting boots) and your ratios are insane, this is when you're going to start one shotting squishies. Because of this, you're vital in a teamfight so unless you get a free splitpush, you're going to want to stick with your team (obviously while trying to avoid them from time to time to farm like you would with any other champion).\n\nYou can still splitpush and this is a desicion you're going to have to take (split or group) if you really think it's the only way to win the game.",
-    "links": []
    }
   ]
  },
@@ -1043,89 +960,79 @@
   "titulo_en": "Tips and Tricks",
   "blocos": [
    {
-    "tipo": "texto",
-    "texto": "TIPS AND TRICKS FOR KAYLE",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "1. Your Auto Attacks and Waves can BOTH crit but do remember that they have different crit instances.",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "2. Try and ult (R) the champion that is engaging if you can as if you can land your ult damage on 3+ champions on the enemy team plus deny their damage to the engager, you're pretty much always winning that teamfight",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "3. Your E after level 11 has a splash. Use this on minions, wards, champions and towers in order to poke or secure a kill.",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "4. Use your ultimate (R) when you know the damage is going to come and deny burst, not when you're going to die as it's not a Tryndamere Ult. Try and not get baited using it though.",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "5. Try and use your E at the end of a short trade or kill because it does percent missing health damage.",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "6. Prioritize Plates and Farm over helping your team early on. You're useless, especially before level 6. You can't really help skirmishes or be useful either since you have no mobility or hard cc.",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "7. It's very important to remember that your Q shreds resistances, so against tanks if you miss; your damage output is going to be a lot less.",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "8. Don't force yourself to go for long trades. Kayle is an amazing short trader and just because her long trades are good too it doesn't mean you have to go for them.",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "9. Don't be afraid to experiment and try new builds on Kayle. She's a very versatile champion and a TON of builds/runes/spells work on her.",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "10. Use your Q extended range to poke or grab difficult minions early on for farming. Be careful using this and pushing wave into the enemy though.",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "11. Very minor but your ultimate will refresh your passive's Zeal stacks. You can use it to keep your passive up if it's really necessary.",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "12. Kayle's auto-attacks are treated as non-projectiles when in melee range after level 6. Meaning you can AA Yasuo and Samira over their abilities (wind wall and blade whirl) if you're next to them.",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "13. E on lvl 11 procs on-hits on AoE. Meaning you can proc things like Red Buff in an AoE.",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "14. Don't be afraid to dodge into bad matchups or bad teammates/ team comp. LP doesn't mean anything, MMR does.",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "15. Movement Speed is one of the BEST stats for Kayle. Do NOT be afraid into investing in movement speed (like boots of swiftness) on this champion.",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "16. When using the Last Stand rune, remember to use your ult (when possible) under 30% HP in order to gain the maximum amount of damage for the longest amount of time.",
-    "links": []
+    "tipo": "secao",
+    "titulo": "TIPS AND TRICKS FOR KAYLE",
+    "partes": [
+     {
+      "tipo": "lista",
+      "itens": [
+       {
+        "texto": "1. Your Auto Attacks and Waves can BOTH crit but do remember that they have different crit instances.",
+        "links": []
+       },
+       {
+        "texto": "2. Try and ult (R) the champion that is engaging if you can as if you can land your ult damage on 3+ champions on the enemy team plus deny their damage to the engager, you're pretty much always winning that teamfight",
+        "links": []
+       },
+       {
+        "texto": "3. Your E after level 11 has a splash. Use this on minions, wards, champions and towers in order to poke or secure a kill.",
+        "links": []
+       },
+       {
+        "texto": "4. Use your ultimate (R) when you know the damage is going to come and deny burst, not when you're going to die as it's not a Tryndamere Ult. Try and not get baited using it though.",
+        "links": []
+       },
+       {
+        "texto": "5. Try and use your E at the end of a short trade or kill because it does percent missing health damage.",
+        "links": []
+       },
+       {
+        "texto": "6. Prioritize Plates and Farm over helping your team early on. You're useless, especially before level 6. You can't really help skirmishes or be useful either since you have no mobility or hard cc.",
+        "links": []
+       },
+       {
+        "texto": "7. It's very important to remember that your Q shreds resistances, so against tanks if you miss; your damage output is going to be a lot less.",
+        "links": []
+       },
+       {
+        "texto": "8. Don't force yourself to go for long trades. Kayle is an amazing short trader and just because her long trades are good too it doesn't mean you have to go for them.",
+        "links": []
+       },
+       {
+        "texto": "9. Don't be afraid to experiment and try new builds on Kayle. She's a very versatile champion and a TON of builds/runes/spells work on her.",
+        "links": []
+       },
+       {
+        "texto": "10. Use your Q extended range to poke or grab difficult minions early on for farming. Be careful using this and pushing wave into the enemy though.",
+        "links": []
+       },
+       {
+        "texto": "11. Very minor but your ultimate will refresh your passive's Zeal stacks. You can use it to keep your passive up if it's really necessary.",
+        "links": []
+       },
+       {
+        "texto": "12. Kayle's auto-attacks are treated as non-projectiles when in melee range after level 6. Meaning you can AA Yasuo and Samira over their abilities (wind wall and blade whirl) if you're next to them.",
+        "links": []
+       },
+       {
+        "texto": "13. E on lvl 11 procs on-hits on AoE. Meaning you can proc things like Red Buff in an AoE.",
+        "links": []
+       },
+       {
+        "texto": "14. Don't be afraid to dodge into bad matchups or bad teammates/ team comp. LP doesn't mean anything, MMR does.",
+        "links": []
+       },
+       {
+        "texto": "15. Movement Speed is one of the BEST stats for Kayle. Do NOT be afraid into investing in movement speed (like boots of swiftness) on this champion.",
+        "links": []
+       },
+       {
+        "texto": "16. When using the Last Stand rune, remember to use your ult (when possible) under 30% HP in order to gain the maximum amount of damage for the longest amount of time.",
+        "links": []
+       }
+      ]
+     }
+    ]
    }
   ]
  },
@@ -1135,54 +1042,57 @@
   "titulo_en": "Ability Maxing",
   "blocos": [
    {
-    "tipo": "texto",
-    "texto": "In order to know what ability to max first as Kayle, this is the guide you need to read. ",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Her abilities aren't as straight forward as they used to be since now W is a viable spell to max earlygame.",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Lvl 1: Point into E.",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Lvl 2: Put a point into W if you need the healing or Q if you don't.",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Lvl 3: Put a second point into W if you need it (try and wait till lvl 3 in order to spam W as it heals more per mana), or a point into Q if you don't.",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Lvl 4: Put a point into Q if you still haven't. If you have a point into Q, debate between putting more points into Q (if you're doing well), or another point into W if you need it.",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Lvl 5: Point into Q.",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Lvl 6: Point into R.",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Lvls 7-10: Prioritize maxing Q on midlane. On toplane, prioritize E if you run Guinsoo's first item, otherwise prioritize Q.",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Lvls 11-18: Prioritize R>Q>E>W.",
-    "links": []
+    "tipo": "secao",
+    "titulo": "",
+    "partes": [
+     {
+      "tipo": "p",
+      "texto": "In order to know what ability to max first as Kayle, this is the guide you need to read. ",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "Her abilities aren't as straight forward as they used to be since now W is a viable spell to max earlygame.",
+      "links": []
+     },
+     {
+      "tipo": "lista",
+      "itens": [
+       {
+        "texto": "Lvl 1: Point into E.",
+        "links": []
+       },
+       {
+        "texto": "Lvl 2: Put a point into W if you need the healing or Q if you don't.",
+        "links": []
+       },
+       {
+        "texto": "Lvl 3: Put a second point into W if you need it (try and wait till lvl 3 in order to spam W as it heals more per mana), or a point into Q if you don't.",
+        "links": []
+       },
+       {
+        "texto": "Lvl 4: Put a point into Q if you still haven't. If you have a point into Q, debate between putting more points into Q (if you're doing well), or another point into W if you need it.",
+        "links": []
+       },
+       {
+        "texto": "Lvl 5: Point into Q.",
+        "links": []
+       },
+       {
+        "texto": "Lvl 6: Point into R.",
+        "links": []
+       },
+       {
+        "texto": "Lvls 7-10: Prioritize maxing Q on midlane. On toplane, prioritize E if you run Guinsoo's first item, otherwise prioritize Q.",
+        "links": []
+       },
+       {
+        "texto": "Lvls 11-18: Prioritize R>Q>E>W.",
+        "links": []
+       }
+      ]
+     }
+    ]
    }
   ]
  },
@@ -1192,296 +1102,280 @@
   "titulo_en": "Problematic Enemy Champions",
   "blocos": [
    {
-    "tipo": "texto",
-    "texto": "Subscribe to UJard on Youtube:",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "www.youtube.com/c/UJard",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Support UJard by joining his Patreon: ",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "https://www.patreon.com/UJard",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Problematic Enemy Champions for Kayle mid-lategame",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "The champions mentioned below are those who give Kayle problems mid-lategame after the laning phase is over (for laning phase, check \"1. Spreadsheet\"). They have a rating which means how problematic they are for Kayle mid-lategame, Why they are problematic for Kayle and Tips against them.",
-    "links": []
-   },
-   {
-    "tipo": "tabela",
-    "colunas": [
-     "Champion",
-     "Problematic Level\n1 - somewhat problematic\n10 - consider dodging if champ select wasn't perfect",
-     "Why they are problematic",
-     "Tips"
-    ],
-    "linhas": [
-     [
-      {
-       "texto": "Senna",
-       "links": []
-      },
-      {
-       "texto": "10.0",
-       "links": []
-      },
-      {
-       "texto": "She outranges you lategame. Senna will continue poking you down witout much counterplay as you can't commit as easily vs her because of her E. You'll get baited into her team if you try to commit while getting stunned.",
-       "links": []
-      },
-      {
-       "texto": "Flanking Senna is great as you'll make her missposition. Try and avoid her W while doing this. Also, she sucks holding your split-push pressure if she's alone.",
-       "links": []
+    "tipo": "secao",
+    "titulo": "Problematic Enemy Champions for Kayle mid-lategame",
+    "partes": [
+     {
+      "tipo": "p",
+      "texto": "The champions mentioned below are those who give Kayle problems mid-lategame after the laning phase is over (for laning phase, check \"1. Spreadsheet\"). They have a rating which means how problematic they are for Kayle mid-lategame, Why they are problematic for Kayle and Tips against them.",
+      "links": []
+     },
+     {
+      "tipo": "bloco",
+      "bloco": {
+       "tipo": "tabela",
+       "colunas": [
+        "Champion",
+        "Problematic Level\n1 - somewhat problematic\n10 - consider dodging if champ select wasn't perfect",
+        "Why they are problematic",
+        "Tips"
+       ],
+       "linhas": [
+        [
+         {
+          "texto": "Senna",
+          "links": []
+         },
+         {
+          "texto": "10.0",
+          "links": []
+         },
+         {
+          "texto": "She outranges you lategame. Senna will continue poking you down witout much counterplay as you can't commit as easily vs her because of her E. You'll get baited into her team if you try to commit while getting stunned.",
+          "links": []
+         },
+         {
+          "texto": "Flanking Senna is great as you'll make her missposition. Try and avoid her W while doing this. Also, she sucks holding your split-push pressure if she's alone.",
+          "links": []
+         }
+        ],
+        [
+         {
+          "texto": "Jinx",
+          "links": []
+         },
+         {
+          "texto": "9.0",
+          "links": []
+         },
+         {
+          "texto": "She'll outrange with with her rocket form and Lethal Tempo. Just as Senna, it's very hard to commit on her. At least commiting to her isn't as bad if you trade 1 for 1 as she's a priority pick.",
+          "links": []
+         },
+         {
+          "texto": "Flanking Jinx is great as you'll make her missposition.  Try and go in with Ult and kill her before it expires. She won't be able to damage you in that window. Try and avoid chompers while doing this.",
+          "links": []
+         }
+        ],
+        [
+         {
+          "texto": "Kha'Zix",
+          "links": []
+         },
+         {
+          "texto": "8.0",
+          "links": []
+         },
+         {
+          "texto": "Kha'zix is probably Kayle's perfect assasin. He'll bait your ult with just jumping on top of you and there's no counterplay since he stealths (you can't AA).",
+          "links": []
+         },
+         {
+          "texto": "Zhonyas is basically a must in this game. If he jumps on top of you while isolated, zhonyas or ult immediately to avoid the up-front burst. Remember to never be isolated.",
+          "links": []
+         }
+        ],
+        [
+         {
+          "texto": "Sylas",
+          "links": []
+         },
+         {
+          "texto": "8.0",
+          "links": []
+         },
+         {
+          "texto": "A mage with a Kayle ult. All his abilities are better than yours and on top of that, he has your ult. He can carry games just ulting the right person in teamfights while he had a way way better earlygame than you.",
+          "links": []
+         },
+         {
+          "texto": "His ult has a long cooldown to steal yours, especially earlygame. Meaning he can't steal it that often. While in teamfights, stall for him to steal another teammate's ult (he has a very long steal range). Remember to use your ult after he uses his if he's on top of you as you'll negate the burst damage.",
+          "links": []
+         }
+        ],
+        [
+         {
+          "texto": "Anivia",
+          "links": []
+         },
+         {
+          "texto": "7.0",
+          "links": []
+         },
+         {
+          "texto": "She's just too tanky to burst down because of Seraph's shield and HP stacking and she makes your life miserable lategame with constant slows and wall placements that you can't hop over. Even if you dodge her Qs, she's a problem. Just very clunky for Kayle to play against her.",
+          "links": []
+         },
+         {
+          "texto": "No real tips vs anivia, avoid her Q and try and don't be in a spot where her wall is effective against you. Banshee's is also great against her.",
+          "links": []
+         }
+        ],
+        [
+         {
+          "texto": "Akali",
+          "links": []
+         },
+         {
+          "texto": "6.0",
+          "links": []
+         },
+         {
+          "texto": "Just like Kha'zix, she's an assasin with a stealth but at least she has more counterplay and less upfront damage so you don't have to get baited into using ult.",
+          "links": []
+         },
+         {
+          "texto": "Try and sneak in an Mr item (like wit's end or banshee's), it's very effective vs her. Make it hard for her to hit her E as you won't get bursted if she misses it. Time your ult for her R2. Banshee's and even zhonyas are good into her.",
+          "links": []
+         }
+        ],
+        [
+         {
+          "texto": "Evelynn",
+          "links": []
+         },
+         {
+          "texto": "5.0",
+          "links": []
+         },
+         {
+          "texto": "One-shot you from stealth, and basically an un-dodgeable ganker for kayle unless you flash. Early and lategame she's a problem for you.",
+          "links": []
+         },
+         {
+          "texto": "Don't be isolated, it's hard for her to engage on you if you're with your team. Ult immedately if you are before you get charmed. Banshee's is great in this game.",
+          "links": []
+         }
+        ],
+        [
+         {
+          "texto": "Malphite",
+          "links": []
+         },
+         {
+          "texto": "4.0",
+          "links": []
+         },
+         {
+          "texto": "You're getting ulted lategame, which might literally mean you're getting oneshot. If you're not one-shot, your attack speed is going to be severely cripped with his E and probably frozen heart.",
+          "links": []
+         },
+         {
+          "texto": "Ward correctly and pay a lot of attention where malphite is before the teamfight starts. If he jumps on top of you, he can probably carry the TF from that alone. Banshee's is an amazing item into him.",
+          "links": []
+         }
+        ],
+        [
+         {
+          "texto": "Kog'maw",
+          "links": []
+         },
+         {
+          "texto": "4.0",
+          "links": []
+         },
+         {
+          "texto": "Out ranges you, same as Jinx. But it's a lot easier to commit to kog-maw as he doesnt have flame chompers. Beware if he has lulu on the enemy team.",
+          "links": []
+         },
+         {
+          "texto": "Flanking kog-maw is great as you'll make him missposition.  Try and go in with Ult and kill him before it expires. He won't be able to damage you in that window.",
+          "links": []
+         }
+        ],
+        [
+         {
+          "texto": "Vi",
+          "links": []
+         },
+         {
+          "texto": "3.0",
+          "links": []
+         },
+         {
+          "texto": "She ults you lategame and then Qs into combos you. It's undodgeable and you're getting one-shot ot chunked for most of your hp.",
+          "links": []
+         },
+         {
+          "texto": "Ward correctly and pay a lot of attention where Vi is before the teamfight starts. If he jumps on top of you, she can probably carry the TF from that alone. Zhonyas is an amazing item into her as it negates her ult and buys time for your team to help you. After zhonyas, immediately Ult if you think you're taking a lot of burst damage.",
+          "links": []
+         }
+        ],
+        [
+         {
+          "texto": "Zac",
+          "links": []
+         },
+         {
+          "texto": "3.0",
+          "links": []
+         },
+         {
+          "texto": "Same as malphite but less drastic, E has more time to flash and you won't get attack speed crippled. He does counter you more than malphite in-lane though.",
+          "links": []
+         },
+         {
+          "texto": "Ward correctly and pay a lot of attention where Zac is before the teamfight starts. If he jumps on top of you, he can probably carry the TF from that alone. Banshee's is a good item into him.",
+          "links": []
+         }
+        ],
+        [
+         {
+          "texto": "Nasus",
+          "links": []
+         },
+         {
+          "texto": "2.0",
+          "links": []
+         },
+         {
+          "texto": "W wither cripples your AS and movespeed. ",
+          "links": []
+         },
+         {
+          "texto": "Pay attention to him till he uses his wither on another person, focus other people in teamfights and stay away from him until he does so. QSS works if he's just targetting you and you have no cleanse. ",
+          "links": []
+         }
+        ],
+        [
+         {
+          "texto": "Teemo",
+          "links": []
+         },
+         {
+          "texto": "2.0",
+          "links": []
+         },
+         {
+          "texto": "Q blind makes your AAs not work.",
+          "links": []
+         },
+         {
+          "texto": "Pay attention to him till he uses his blind on another person, focus other people in teamfights. If he holds it, you can go in with ult and try and oneshot him. You can buy QSS to cleanse it or Zhonyas (if it's a good but that game) to wait it out.",
+          "links": []
+         }
+        ],
+        [
+         {
+          "texto": "Mordekaiser",
+          "links": []
+         },
+         {
+          "texto": "2.0",
+          "links": []
+         },
+         {
+          "texto": "He can isolate you with ult. If he's far ahead, you're out of the teamfight and you're dying.",
+          "links": []
+         },
+         {
+          "texto": "Try and build damage over time components this game. Nashor's tooth and items like wit's end are great because if he isolates you, you can fight back and kill him. Zhonyas works great if you want to stall his ult.",
+          "links": []
+         }
+        ]
+       ]
       }
-     ],
-     [
-      {
-       "texto": "Jinx",
-       "links": []
-      },
-      {
-       "texto": "9.0",
-       "links": []
-      },
-      {
-       "texto": "She'll outrange with with her rocket form and Lethal Tempo. Just as Senna, it's very hard to commit on her. At least commiting to her isn't as bad if you trade 1 for 1 as she's a priority pick.",
-       "links": []
-      },
-      {
-       "texto": "Flanking Jinx is great as you'll make her missposition.  Try and go in with Ult and kill her before it expires. She won't be able to damage you in that window. Try and avoid chompers while doing this.",
-       "links": []
-      }
-     ],
-     [
-      {
-       "texto": "Kha'Zix",
-       "links": []
-      },
-      {
-       "texto": "8.0",
-       "links": []
-      },
-      {
-       "texto": "Kha'zix is probably Kayle's perfect assasin. He'll bait your ult with just jumping on top of you and there's no counterplay since he stealths (you can't AA).",
-       "links": []
-      },
-      {
-       "texto": "Zhonyas is basically a must in this game. If he jumps on top of you while isolated, zhonyas or ult immediately to avoid the up-front burst. Remember to never be isolated.",
-       "links": []
-      }
-     ],
-     [
-      {
-       "texto": "Sylas",
-       "links": []
-      },
-      {
-       "texto": "8.0",
-       "links": []
-      },
-      {
-       "texto": "A mage with a Kayle ult. All his abilities are better than yours and on top of that, he has your ult. He can carry games just ulting the right person in teamfights while he had a way way better earlygame than you.",
-       "links": []
-      },
-      {
-       "texto": "His ult has a long cooldown to steal yours, especially earlygame. Meaning he can't steal it that often. While in teamfights, stall for him to steal another teammate's ult (he has a very long steal range). Remember to use your ult after he uses his if he's on top of you as you'll negate the burst damage.",
-       "links": []
-      }
-     ],
-     [
-      {
-       "texto": "Anivia",
-       "links": []
-      },
-      {
-       "texto": "7.0",
-       "links": []
-      },
-      {
-       "texto": "She's just too tanky to burst down because of Seraph's shield and HP stacking and she makes your life miserable lategame with constant slows and wall placements that you can't hop over. Even if you dodge her Qs, she's a problem. Just very clunky for Kayle to play against her.",
-       "links": []
-      },
-      {
-       "texto": "No real tips vs anivia, avoid her Q and try and don't be in a spot where her wall is effective against you. Banshee's is also great against her.",
-       "links": []
-      }
-     ],
-     [
-      {
-       "texto": "Akali",
-       "links": []
-      },
-      {
-       "texto": "6.0",
-       "links": []
-      },
-      {
-       "texto": "Just like Kha'zix, she's an assasin with a stealth but at least she has more counterplay and less upfront damage so you don't have to get baited into using ult.",
-       "links": []
-      },
-      {
-       "texto": "Try and sneak in an Mr item (like wit's end or banshee's), it's very effective vs her. Make it hard for her to hit her E as you won't get bursted if she misses it. Time your ult for her R2. Banshee's and even zhonyas are good into her.",
-       "links": []
-      }
-     ],
-     [
-      {
-       "texto": "Evelynn",
-       "links": []
-      },
-      {
-       "texto": "5.0",
-       "links": []
-      },
-      {
-       "texto": "One-shot you from stealth, and basically an un-dodgeable ganker for kayle unless you flash. Early and lategame she's a problem for you.",
-       "links": []
-      },
-      {
-       "texto": "Don't be isolated, it's hard for her to engage on you if you're with your team. Ult immedately if you are before you get charmed. Banshee's is great in this game.",
-       "links": []
-      }
-     ],
-     [
-      {
-       "texto": "Malphite",
-       "links": []
-      },
-      {
-       "texto": "4.0",
-       "links": []
-      },
-      {
-       "texto": "You're getting ulted lategame, which might literally mean you're getting oneshot. If you're not one-shot, your attack speed is going to be severely cripped with his E and probably frozen heart.",
-       "links": []
-      },
-      {
-       "texto": "Ward correctly and pay a lot of attention where malphite is before the teamfight starts. If he jumps on top of you, he can probably carry the TF from that alone. Banshee's is an amazing item into him.",
-       "links": []
-      }
-     ],
-     [
-      {
-       "texto": "Kog'maw",
-       "links": []
-      },
-      {
-       "texto": "4.0",
-       "links": []
-      },
-      {
-       "texto": "Out ranges you, same as Jinx. But it's a lot easier to commit to kog-maw as he doesnt have flame chompers. Beware if he has lulu on the enemy team.",
-       "links": []
-      },
-      {
-       "texto": "Flanking kog-maw is great as you'll make him missposition.  Try and go in with Ult and kill him before it expires. He won't be able to damage you in that window.",
-       "links": []
-      }
-     ],
-     [
-      {
-       "texto": "Vi",
-       "links": []
-      },
-      {
-       "texto": "3.0",
-       "links": []
-      },
-      {
-       "texto": "She ults you lategame and then Qs into combos you. It's undodgeable and you're getting one-shot ot chunked for most of your hp.",
-       "links": []
-      },
-      {
-       "texto": "Ward correctly and pay a lot of attention where Vi is before the teamfight starts. If he jumps on top of you, she can probably carry the TF from that alone. Zhonyas is an amazing item into her as it negates her ult and buys time for your team to help you. After zhonyas, immediately Ult if you think you're taking a lot of burst damage.",
-       "links": []
-      }
-     ],
-     [
-      {
-       "texto": "Zac",
-       "links": []
-      },
-      {
-       "texto": "3.0",
-       "links": []
-      },
-      {
-       "texto": "Same as malphite but less drastic, E has more time to flash and you won't get attack speed crippled. He does counter you more than malphite in-lane though.",
-       "links": []
-      },
-      {
-       "texto": "Ward correctly and pay a lot of attention where Zac is before the teamfight starts. If he jumps on top of you, he can probably carry the TF from that alone. Banshee's is a good item into him.",
-       "links": []
-      }
-     ],
-     [
-      {
-       "texto": "Nasus",
-       "links": []
-      },
-      {
-       "texto": "2.0",
-       "links": []
-      },
-      {
-       "texto": "W wither cripples your AS and movespeed. ",
-       "links": []
-      },
-      {
-       "texto": "Pay attention to him till he uses his wither on another person, focus other people in teamfights and stay away from him until he does so. QSS works if he's just targetting you and you have no cleanse. ",
-       "links": []
-      }
-     ],
-     [
-      {
-       "texto": "Teemo",
-       "links": []
-      },
-      {
-       "texto": "2.0",
-       "links": []
-      },
-      {
-       "texto": "Q blind makes your AAs not work.",
-       "links": []
-      },
-      {
-       "texto": "Pay attention to him till he uses his blind on another person, focus other people in teamfights. If he holds it, you can go in with ult and try and oneshot him. You can buy QSS to cleanse it or Zhonyas (if it's a good but that game) to wait it out.",
-       "links": []
-      }
-     ],
-     [
-      {
-       "texto": "Mordekaiser",
-       "links": []
-      },
-      {
-       "texto": "2.0",
-       "links": []
-      },
-      {
-       "texto": "He can isolate you with ult. If he's far ahead, you're out of the teamfight and you're dying.",
-       "links": []
-      },
-      {
-       "texto": "Try and build damage over time components this game. Nashor's tooth and items like wit's end are great because if he isolates you, you can fight back and kill him. Zhonyas works great if you want to stall his ult.",
-       "links": []
-      }
-     ]
+     }
     ]
    }
   ]
@@ -1492,129 +1386,114 @@
   "titulo_en": "Why Inspiration Secondary",
   "blocos": [
    {
-    "tipo": "texto",
-    "texto": "Subscribe to UJard on Youtube:",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "www.youtube.com/c/UJard",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Support UJard by joining his Patreon: ",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "https://www.patreon.com/UJard",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Why the Inspiration Tree secondary is broken on Kayle",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Comparison:",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Assume you have Deathcap here",
-    "links": []
-   },
-   {
-    "tipo": "tabela",
-    "colunas": [
-     "In-game Time",
-     "Minutes 0-3",
-     "Minutes 3-9",
-     "Minutes 10-19",
-     "Minutes 20-29",
-     "Minutes 30-39"
-    ],
-    "linhas": [
-     [
-      {
-       "texto": "Gathering Storm",
-       "links": []
-      },
-      {
-       "texto": "No stats",
-       "links": []
-      },
-      {
-       "texto": "No stats",
-       "links": []
-      },
-      {
-       "texto": "8 AP",
-       "links": []
-      },
-      {
-       "texto": "31 AP",
-       "links": []
-      },
-      {
-       "texto": "62 AP",
-       "links": []
-      }
-     ],
-     [
-      {
-       "texto": "Jack Of All Trades",
-       "links": []
-      },
-      {
-       "texto": "3 Haste",
-       "links": []
-      },
-      {
-       "texto": "6 AD, 5 haste",
-       "links": []
-      },
-      {
-       "texto": "10 AP, ~ 7 haste",
-       "links": []
-      },
-      {
-       "texto": "13 AP, ~ 8 haste",
-       "links": []
-      },
-      {
-       "texto": "13 AP, ~ 8 haste",
-       "links": []
-      }
-     ]
+    "tipo": "secao",
+    "titulo": "Why the Inspiration Tree secondary is broken on Kayle",
+    "partes": [
+     {
+      "tipo": "p",
+      "texto": "Comparison:",
+      "links": []
+     }
     ]
    },
    {
-    "tipo": "texto",
-    "texto": "It's broken because of Jack of all Trade's earlygame. Since you have Doran's Blade, you already have 3 stats from the get-go. You can back to base with either 550g or 1000g. 550g will get you boots and dagger, 1000g will get you boots and recurved bow. With either of these you proc Jack's first passive. You can do this as early as at minute 3. So at minute 3 you have: 10 Adaptive force and 5 haste.\n\nComparing this to Gathering storm, you get 8 adaptive force at minute 10 and then you continue at 8 adaptive force till minute 20. That means Jack is MUCH better on Kayle minutes 1-20 , Jack is just as good as Gathering Storm minute 20-29 (since you still get haste from Jack, you get 8 haste over 18 AP [assuming deathcap]), and Gathering is a lot better minute 30+.\n\nThat being said, we are losing Celerity which is amazing on Kayle, but you get either Triple tonic (if you need T2 boots rush), or Cashback if you don't. Cashback is like a Gathering Storm 2.0, it just scales and scales and scales.\n\nSo with Inspiration Secondary you're getting 10 adaptive force at minute 3 coupled with double adaptive damage on minor runes + doran's blade, you'll be getting a lot of kills earlygame even against very high elo players since the damage is just ridiculous. And the haste as a cherry on top.\n\nThere are some matchups where instead of building boots+dagger, you have to stay longer and build boots+blasting wand since YOU NEED the short trades earlygame, like veigar, velkoz, etc.",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "~ 8 Haste is better than 18 AP, but AP is a better stat for Kayle, so about even.",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Note, there's no need to proc the 10 stats with Jack to make it viable with Kayle. With 5 at minute 3-4 it's more than enough as it's a broken rune on her.",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "The reason why it's so good on her is because it gives her AD earlygame that transforms into AP for later into the game. So it makes your games a lot more consistent.\nRemember that Kayle is better with AD early and AP later into the game.",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Try and hold the AD adaptive force as much as possible. Delay the AP as much as you buy T1 boots, recurved bow, Cull (if viable), glowing mote and even refillable.\nTry and only break the AD adaptive force when buying blasting wand, not Amp tome or Fiendish Codex, as it'll lower your AA damage.\nT2 boots are great if really needed (like in Riven or Aatrox matchup) and it delays your AP adaptive force.",
-    "links": []
+    "tipo": "secao",
+    "titulo": "Assume you have Deathcap here",
+    "partes": [
+     {
+      "tipo": "bloco",
+      "bloco": {
+       "tipo": "tabela",
+       "colunas": [
+        "In-game Time",
+        "Minutes 0-3",
+        "Minutes 3-9",
+        "Minutes 10-19",
+        "Minutes 20-29",
+        "Minutes 30-39"
+       ],
+       "linhas": [
+        [
+         {
+          "texto": "Gathering Storm",
+          "links": []
+         },
+         {
+          "texto": "No stats",
+          "links": []
+         },
+         {
+          "texto": "No stats",
+          "links": []
+         },
+         {
+          "texto": "8 AP",
+          "links": []
+         },
+         {
+          "texto": "31 AP",
+          "links": []
+         },
+         {
+          "texto": "62 AP",
+          "links": []
+         }
+        ],
+        [
+         {
+          "texto": "Jack Of All Trades",
+          "links": []
+         },
+         {
+          "texto": "3 Haste",
+          "links": []
+         },
+         {
+          "texto": "6 AD, 5 haste",
+          "links": []
+         },
+         {
+          "texto": "10 AP, ~ 7 haste",
+          "links": []
+         },
+         {
+          "texto": "13 AP, ~ 8 haste",
+          "links": []
+         },
+         {
+          "texto": "13 AP, ~ 8 haste",
+          "links": []
+         }
+        ]
+       ]
+      }
+     },
+     {
+      "tipo": "p",
+      "texto": "It's broken because of Jack of all Trade's earlygame. Since you have Doran's Blade, you already have 3 stats from the get-go. You can back to base with either 550g or 1000g. 550g will get you boots and dagger, 1000g will get you boots and recurved bow. With either of these you proc Jack's first passive. You can do this as early as at minute 3. So at minute 3 you have: 10 Adaptive force and 5 haste.\n\nComparing this to Gathering storm, you get 8 adaptive force at minute 10 and then you continue at 8 adaptive force till minute 20. That means Jack is MUCH better on Kayle minutes 1-20 , Jack is just as good as Gathering Storm minute 20-29 (since you still get haste from Jack, you get 8 haste over 18 AP [assuming deathcap]), and Gathering is a lot better minute 30+.\n\nThat being said, we are losing Celerity which is amazing on Kayle, but you get either Triple tonic (if you need T2 boots rush), or Cashback if you don't. Cashback is like a Gathering Storm 2.0, it just scales and scales and scales.\n\nSo with Inspiration Secondary you're getting 10 adaptive force at minute 3 coupled with double adaptive damage on minor runes + doran's blade, you'll be getting a lot of kills earlygame even against very high elo players since the damage is just ridiculous. And the haste as a cherry on top.\n\nThere are some matchups where instead of building boots+dagger, you have to stay longer and build boots+blasting wand since YOU NEED the short trades earlygame, like veigar, velkoz, etc.",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "~ 8 Haste is better than 18 AP, but AP is a better stat for Kayle, so about even.",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "Note, there's no need to proc the 10 stats with Jack to make it viable with Kayle. With 5 at minute 3-4 it's more than enough as it's a broken rune on her.",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "The reason why it's so good on her is because it gives her AD earlygame that transforms into AP for later into the game. So it makes your games a lot more consistent.\nRemember that Kayle is better with AD early and AP later into the game.",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "Try and hold the AD adaptive force as much as possible. Delay the AP as much as you buy T1 boots, recurved bow, Cull (if viable), glowing mote and even refillable.\nTry and only break the AD adaptive force when buying blasting wand, not Amp tome or Fiendish Codex, as it'll lower your AA damage.\nT2 boots are great if really needed (like in Riven or Aatrox matchup) and it delays your AP adaptive force.",
+      "links": []
+     }
+    ]
    }
   ]
  },
@@ -1624,19 +1503,27 @@
   "titulo_en": "Notes",
   "blocos": [
    {
-    "tipo": "texto",
-    "texto": "Dorans ring strong ever since they buffed W mana ratios",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "AS rune strong for toplane",
-    "links": []
-   },
-   {
-    "tipo": "texto",
-    "texto": "Double scaling still good vs some matchups",
-    "links": []
+    "tipo": "secao",
+    "titulo": "",
+    "partes": [
+     {
+      "tipo": "lista",
+      "itens": [
+       {
+        "texto": "Dorans ring strong ever since they buffed W mana ratios",
+        "links": []
+       },
+       {
+        "texto": "AS rune strong for toplane",
+        "links": []
+       },
+       {
+        "texto": "Double scaling still good vs some matchups",
+        "links": []
+       }
+      ]
+     }
+    ]
    }
   ]
  }

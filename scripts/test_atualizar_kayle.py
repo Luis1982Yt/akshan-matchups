@@ -11,7 +11,7 @@ import unittest
 from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from atualizar_kayle import ROOT, dificuldade, itens_iniciais, runas, salvar_imagem
+from atualizar_kayle import CABECALHOS_MATCHUPS, CONVITES, ROOT, dificuldade, itens_iniciais, runas, salvar_imagem
 from planilha_xlsx import Planilha
 
 
@@ -82,19 +82,20 @@ class ImportadorKayle(unittest.TestCase):
         for p in self.paginas:
             self.assertTrue(p['titulo_en'])
             self.assertTrue(p['titulo'])
-            self.assertTrue(all(b['tipo'] in {'texto', 'lista', 'pecas', 'imagens', 'tabela'} for b in p['blocos']))
+            self.assertTrue(all(b['tipo'] == 'secao' for b in p['blocos']))
+            self.assertTrue(all(x['tipo'] in {'p', 'sub', 'lista', 'imagens', 'bloco'} for b in p['blocos'] for x in b['partes']))
         self.assertEqual(self.dados['fonte']['aviso'], 'September 2026: The spreadsheet is NOT up to date.')
         for p in self.paginas:
             for b in p['blocos']:
-                for img in b.get('imagens', []):
-                    self.assertNotIn('titulo', b)
-                    self.assertEqual(img['alt'], f'{p["titulo_en"]} — UJard')
-                    self.verificar_imagem(img)
+                for x in b['partes']:
+                    for img in x.get('imagens', []):
+                        self.assertEqual(img['alt'], f'{p["titulo_en"]} — UJard')
+                        self.verificar_imagem(img)
         for m in self.matchups:
             for img in m['imagens_runas']:
                 self.verificar_imagem(img)
         itens = next(p for p in self.paginas if p['id'] == 'itens')
-        bloco = next(b for b in itens['blocos'] if 'codigo_importacao' in b)
+        bloco = next(x['bloco'] for b in itens['blocos'] for x in b['partes'] if x['tipo'] == 'bloco' and 'codigo_importacao' in x['bloco'])
         conjunto = json.loads(bloco['codigo_importacao'])
         self.assertEqual([[i['id'] for i in g['itens']] for g in bloco['grupos']],
                          [[i['id'] for i in g['items']] for g in conjunto['blocks']])
@@ -140,9 +141,11 @@ class ImportadorKayle(unittest.TestCase):
         textos = set(strings(self.paginas))
         for aba in abas[1:]:
             for pos, original in xl.celulas(aba).items():
-                self.assertIn(original, textos, (aba, pos, original))
+                # Convites repetidos (o link fica só na Geral) e frases com ícone de runa no meio (o nome entra no buraco).
+                if not CONVITES.match(original.strip()) and '    ' not in original.strip():
+                    self.assertIn(original, textos, (aba, pos, original))
         for (r, col), original in c.items():
-            if r < 6 or col > 9 or r >= 177:
+            if (r < 6 or col > 9 or r >= 177) and not original.startswith(CABECALHOS_MATCHUPS):
                 self.assertIn(original, textos)
 
 

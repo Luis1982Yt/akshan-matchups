@@ -556,9 +556,23 @@ body.sem-rolar { overflow: hidden; }
 .pg-tabela th, .pg-tabela td { padding: 9px 14px 9px 0; border-bottom: 1px solid var(--linha); text-align: left; vertical-align: top; white-space: nowrap; }
 .pg-tabela th { font: 700 12px var(--corpo); letter-spacing: .08em; text-transform: uppercase; color: var(--texto-baixo); }
 .pg-tabela td.vazio { color: var(--texto-baixo); }
-.pecas-soltas { grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); }
+.pecas-soltas { grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr)); gap: 8px; }
+.pecas-soltas .pg-card { padding: 10px 12px; }
 .pg-imagens { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); }
 .pg-imagens img { width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--linha); }
+.pg-imagens figure { margin: 0; display: grid; gap: 8px; align-content: start; }
+.pg-imagens figcaption { font: 700 13px var(--corpo); letter-spacing: .1em; text-transform: uppercase; color: var(--texto-baixo); }
+/* Seção da planilha: blocos seguidos sem caixa dentro de caixa; ícones pequenos (runas citadas no texto) em fila no tamanho original. */
+.pg-secao.pg-bloco > * + * { margin-top: 12px; }
+.pg-secao h4 { margin: 20px 0 0; font: 700 13px var(--corpo); letter-spacing: .12em; text-transform: uppercase; color: var(--acento); }
+.pg-secao > .pg-bloco, .pg-secao > .pg-grupo { padding: 0; border: 0; background: none; }
+/* Imagens grandes da planilha (barras de poder, capturas) no tamanho de leitura, sem esticar a seção inteira. */
+.pg-secao .pg-imagens { grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), max-content)); }
+.pg-secao .pg-imagens img { width: auto; max-width: 100%; max-height: 340px; }
+.pg-imagens.pg-icones { display: flex; flex-wrap: wrap; gap: 8px; }
+.pg-imagens.pg-icones img { width: auto; border: 0; }
+.pg-marcas li { position: relative; padding-left: 20px; }
+.pg-marcas li::before { content: ""; position: absolute; left: 3px; top: .62em; width: 7px; height: 7px; transform: rotate(45deg); background: var(--destaque); }
 /* Aviso do autor sobre a planilha (ex.: "não está em dia"): o mesmo tracejado dos avisos das páginas, sem faixa colorida de lado. */
 .aviso-fonte { max-width: 1288px; margin: 12px auto; padding: 10px 16px; border-radius: 8px; border: 1px dashed var(--linha-forte); background: var(--painel); color: var(--texto-baixo); font-size: 14px; }
 .runa-original { max-width: 100%; width: auto; max-height: 160px; height: auto; display: block; margin: 10px 0; border-radius: 6px; }
@@ -1911,6 +1925,14 @@ const BLOCOS = {
     ${x.texto ? `<p class="texto">${esc(tr(x.texto))}</p>` : ""}${x.links.length ? `<ul class="pessoa-links">${x.links.map(k => `<li><a href="${esc(k.url)}" target="_blank" rel="noopener"><span>${esc(tr(k.texto))}</span></a></li>`).join("")}</ul>` : ""}</article>`).join("")}</div></section>`,
   // Listas de itens com ícone e explicação (Itens da Illaoi).
   pecas: b => b.grupos.map(g => `<section class="pg-grupo">${g.titulo ? `<h3${langOrig()}>${esc(tr(g.titulo))}</h3>` : ""}<div class="pg-cards${g.itens.some(i => i.texto) ? "" : " pecas-soltas"}"${langOrig()}>${g.itens.map(i => `<article class="pg-card${i.texto ? "" : " sem-texto"}"><div class="topo">${i.icone ? `<img src="${i.icone}" alt="" width="44" height="44" loading="lazy">` : ""}<b>${esc(nomePeca(i))}</b></div>${i.texto ? textoLongo(esc(fluxo(tr(i.texto)))) : ""}</article>`).join("")}</div></section>`).join(""),
+  // Seção da planilha (Kayle): título, parágrafos, listas, imagens com a legenda da planilha e blocos prontos (tabela, itens).
+  secao: b => `<section class="pg-bloco pg-secao">${b.titulo ? `<h3${langOrig()}>${esc(tr(b.titulo))}</h3>` : ""}${b.partes.map(x =>
+    x.tipo === "p" ? `<p${langOrig()}>${comLinks(x)}</p>`
+    : x.tipo === "sub" ? `<h4${langOrig()}>${esc(tr(x.texto))}</h4>`
+    : x.tipo === "lista" ? `<ul class="pg-lista pg-marcas"${langOrig()}>${x.itens.map(i => `<li>${comLinks(i)}</li>`).join("")}</ul>`
+    : x.tipo === "imagens" ? `<div class="pg-imagens${x.imagens.every(i => i.largura <= 100) ? " pg-icones" : ""}">${x.imagens.map(i =>
+        `<figure><a href="${esc(i.src)}" target="_blank" rel="noopener"><img src="${esc(i.src)}" alt="${esc(tr(i.legenda || i.alt || ""))}" width="${i.largura}" height="${i.altura}" loading="lazy"></a>${i.legenda ? `<figcaption${langOrig()}>${esc(tr(i.legenda))}</figcaption>` : ""}</figure>`).join("")}</div>`
+    : (BLOCOS[x.bloco.tipo] || (() => ""))(x.bloco)).join("")}</section>`,
   imagens: b => `<section class="pg-bloco">${b.titulo ? `<h3${langOrig()}>${esc(tr(b.titulo))}</h3>` : ""}<div class="pg-imagens">${b.imagens.map(i => `<a href="${esc(i.src)}" target="_blank" rel="noopener"><img src="${esc(i.src)}" alt="${esc(tr(i.alt || b.titulo || ""))}" width="${i.largura}" height="${i.altura}" loading="lazy"></a>`).join("")}</div></section>`,
   // Dicas e mecânicas: título (link do vídeo, quando tem) e explicação.
   dicas: b => `<div class="pg-cards"${langOrig()}>${b.itens.map(d => `<article class="pg-card"><div class="topo"><b>${comLinks(d.titulo)}</b></div>${textoLongo(comLinks(d.texto))}</article>`).join("")}</div>`,

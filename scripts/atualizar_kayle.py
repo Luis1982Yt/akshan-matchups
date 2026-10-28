@@ -170,6 +170,120 @@ def itens_iniciais(texto):
     return linhas
 
 
+# Cabeçalhos da tabela de matchups da aba 1: já viram o próprio guia, não entram na página Geral.
+CABECALHOS_MATCHUPS = ('Champion', 'Difficulty (easy=1', 'Summoner Spell', 'Rune Setup', 'Starting Items', 'Tips Against the Matchup',
+                       'Keystones', 'Secondary', 'Minor Runes', 'CHECK IN CHAMP SELECT', 'CHECK IN GAME LOADING SCREEN')
+# Convites do YouTube/Patreon repetidos no topo de algumas abas: o link fica uma vez só, na Geral.
+CONVITES = re.compile(r'^(Subscribe to UJard|Support UJard|www\.youtube\.com/c/UJard|https://www\.patreon\.com/UJard)', re.I)
+
+
+def eh_titulo(t):
+    """Célula curta de uma linha, sem pontuação final (ou em caixa-alta): título de seção ou legenda de imagem."""
+    t = t.strip()
+    if not t or '\n' in t or len(t) > 60 or re.match(r'^(\d+\.|-|Lvl|Levels? \d+.*:)', t):
+        return False
+    return t.isupper() or not t.endswith(('.', ':', '!', ')', ',', '-'))
+
+
+# Runas que a aba de runas mostra como ícone no meio da frase (o texto da célula fica com o buraco).
+# Identificadas comparando cada captura com os ícones do Data Dragon; o nome entra no lugar do buraco, na ordem.
+ICONES_NA_FRASE = {
+    '4e44ea5b1bbfa48353818763245ce73eea3de55becd008bdee72426a78d1f379': 'Overgrowth',
+    'd04bf9920f4112088e72b997b86dec9cb290965d8376b70528b36d2887f81440': 'Bone Plating',
+    '63726f48d9c6f4119f7467fc362cd6c70b0e7e2a4c5d46a9b9c4560483c1f581': 'Second Wind',
+    '86a880fa16279eebc0bf5321c29f84a2ffd0fa7418d33f81da2d98a8c5958890': 'Presence of Mind',
+    'a3f1190a2a8b6d7f239c67d61a96bdd6fc43f63dd4ded7f669e46a0530b12a7b': 'Triumph',
+}
+
+
+def preenche_icones(texto, imagens):
+    """Troca cada buraco (4+ espaços) da frase pelo nome do ícone correspondente, na ordem."""
+    nomes = [ICONES_NA_FRASE.get(i['src'].rsplit('/', 1)[-1][:-4]) for i in imagens]
+    if not nomes or None in nomes or len(re.findall(r'\s{4,}', texto)) != len(nomes):
+        return texto
+    for n in nomes:
+        texto = re.sub(r'\s{4,}', f' {n} ', texto, count=1)
+    return re.sub(r' +,', ',', re.sub(r' {2,}', ' ', texto))
+
+
+def eh_item(t):
+    return bool(re.match(r'^(\d+\.\s|Lvls? ?\d+[-\d]*:\s|-\s)', t.strip()))
+
+
+def seccionar(blocos, pid):
+    """Agrupa os blocos soltos (um por célula, na ordem de leitura) em seções com título.
+    Títulos seguidos de imagens viram as legendas delas, na mesma ordem (como na planilha)."""
+    secoes, atual, titulos = [], None, []
+
+    def nova(titulo=''):
+        nonlocal atual
+        atual = {'tipo': 'secao', 'titulo': titulo, 'partes': []}
+        secoes.append(atual)
+
+    def parte(x):
+        if atual is None:
+            nova()
+        ultima = atual['partes'][-1] if atual['partes'] else None
+        if x['tipo'] == 'lista' and ultima and ultima['tipo'] == 'lista':
+            ultima['itens'] += x['itens']
+        elif x['tipo'] == 'imagens' and ultima and ultima['tipo'] == 'imagens':
+            ultima['imagens'] += x['imagens']
+        else:
+            atual['partes'].append(x)
+
+    def descarrega_titulos():
+        # Títulos que não legendaram imagem: o primeiro abre a seção, os outros viram subtítulos dentro dela.
+        nonlocal titulos
+        if titulos:
+            nova(titulos[0]['texto'])
+            for t in titulos[1:]:
+                parte({'tipo': 'sub', 'texto': t['texto']})
+        titulos = []
+
+    # Imagens seguidas viram um grupo só (para casar com as legendas na mesma ordem).
+    juntos = []
+    for b in blocos:
+        if b['tipo'] == 'imagens' and juntos and juntos[-1]['tipo'] == 'imagens':
+            juntos[-1] = {'tipo': 'imagens', 'imagens': juntos[-1]['imagens'] + b['imagens']}
+        else:
+            juntos.append(b)
+    for b in juntos:
+        if b['tipo'] == 'texto':
+            t = b['texto']
+            if pid == 'notas':  # anotações soltas do autor: uma lista
+                parte({'tipo': 'lista', 'itens': [{'texto': t, 'links': b.get('links', [])}]})
+                continue
+            if pid == 'geral' and t.startswith(CABECALHOS_MATCHUPS):
+                continue
+            if pid != 'geral' and CONVITES.match(t.strip()):
+                continue
+            if eh_titulo(t) and not b.get('links'):
+                titulos.append(b)
+                continue
+            descarrega_titulos()
+            # Frase com os ícones de runa no meio: os ícones vêm logo antes, na última parte da seção.
+            antes = atual['partes'][-1] if atual and atual['partes'] else None
+            if antes and antes['tipo'] == 'imagens' and all(i['largura'] <= 100 for i in antes['imagens']):
+                t = preenche_icones(t, antes['imagens'])
+            parte({'tipo': 'lista', 'itens': [{'texto': t, 'links': b.get('links', [])}]} if eh_item(t)
+                  else {'tipo': 'p', 'texto': t, 'links': b.get('links', [])})
+        elif b['tipo'] == 'imagens':
+            imagens = [dict(i) for i in b['imagens']]
+            # Várias imagens grandes logo depois de títulos: os últimos títulos são as legendas delas, na ordem.
+            n = len(imagens)
+            if n >= 2 and len(titulos) >= n and all(i['largura'] > 100 for i in imagens):
+                for i, t in zip(imagens, titulos[-n:]):
+                    i['legenda'] = t['texto']
+                titulos = titulos[:-n]
+            descarrega_titulos()
+            parte({'tipo': 'imagens', 'imagens': imagens})
+        else:
+            descarrega_titulos()
+            parte({'tipo': 'bloco', 'bloco': b})
+    descarrega_titulos()
+    return [x for x in secoes if x['partes'] or x['titulo']]
+
+
 def gerar_paginas(xl, pasta=IMAGENS, itens=None):
     """Mantém células intactas e ordem de leitura; tabelas recebem colunas reais."""
     abas = list(xl.abas)
@@ -179,7 +293,7 @@ def gerar_paginas(xl, pasta=IMAGENS, itens=None):
     geral.append({'tipo': 'lista', 'texto': 'UJard', 'links': [], 'itens': [
         celula('YouTube: UJard', 'https://www.youtube.com/c/UJard'),
         celula('Patreon: UJard', 'https://www.patreon.com/UJard')]})
-    paginas = [{'id': 'geral', 'titulo': 'Geral', 'titulo_en': 'Overview', 'blocos': geral}]
+    paginas = [{'id': 'geral', 'titulo': 'Geral', 'titulo_en': 'Overview', 'blocos': seccionar(geral, 'geral')}]
     for aba, (pid, titulo, titulo_en) in zip(abas[1:], PAGINAS):
         c, links = xl.celulas(aba), xl.links(aba)
         por_linha = defaultdict(list)
@@ -224,7 +338,7 @@ def gerar_paginas(xl, pasta=IMAGENS, itens=None):
                 imagem = salvar_imagem(dados, legenda, pasta)
                 por_linha[r].append({'tipo': 'imagens', 'imagens': [imagem]})
         paginas.append({'id': pid, 'titulo': titulo, 'titulo_en': titulo_en,
-                        'blocos': [b for r in sorted(por_linha) for b in por_linha[r]]})
+                        'blocos': seccionar([b for r in sorted(por_linha) for b in por_linha[r]], pid)})
     return paginas
 
 
