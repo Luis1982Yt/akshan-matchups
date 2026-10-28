@@ -274,5 +274,38 @@ class TestImportar(unittest.TestCase):
         self.assertEqual(importados, [("mordekaiser", "darius")])
 
 
+class TestAceitar(unittest.TestCase):
+    def test_so_aceita_partida_esperando_resposta(self):
+        self.assertTrue(app.deve_aceitar({"state": "InProgress", "playerResponse": "None"}))
+        self.assertFalse(app.deve_aceitar({"state": "InProgress", "playerResponse": "Accepted"}))
+        self.assertFalse(app.deve_aceitar({"state": "InProgress", "playerResponse": "Declined"}))
+        self.assertFalse(app.deve_aceitar({"state": "Invalid", "playerResponse": "None"}))
+        self.assertFalse(app.deve_aceitar(None))
+
+    def test_aceitador_aceita_uma_vez(self):
+        chamadas = []
+
+        class Lcu:
+            def __init__(self):
+                self.rc = {"state": "InProgress", "playerResponse": "None"}
+
+            def _pede(self, metodo, caminho, **kw):
+                chamadas.append((metodo, caminho))
+                if metodo == "POST":
+                    self.rc = {"state": "InProgress", "playerResponse": "Accepted"}
+                    return None
+                return self.rc
+        a = app.Aceitador(Lcu())
+        self.assertTrue(a.passo())
+        self.assertFalse(a.passo())
+        self.assertEqual([c for c in chamadas if c[0] == "POST"], [("POST", "/lol-matchmaking/v1/ready-check/accept")])
+
+    def test_sem_partida_encontrada(self):
+        class Lcu:
+            def _pede(self, metodo, caminho, **kw):
+                raise RuntimeError("GET /lol-matchmaking/v1/ready-check: 404")
+        self.assertFalse(app.Aceitador(Lcu()).passo())
+
+
 if __name__ == "__main__":
     unittest.main()

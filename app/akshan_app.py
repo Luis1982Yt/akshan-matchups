@@ -5,7 +5,8 @@ quando o jogador trava um campeão que tem guia no site (Akshan, Mordekaiser,
 Illaoi...), abre o guia dele direto na matchup contra o inimigo mais provável
 da mesma rota e grava no cliente a página de runas e o conjunto de itens dessa
 matchup, como o Porofessor (dá para desligar no menu). Nunca aparece durante a
-partida: quando o jogo começa, a janela some. Nunca escolhe, bane nem aceita nada.
+partida: quando o jogo começa, a janela some. Nunca escolhe nem bane; só aceita a partida
+sozinho se o jogador ligar essa opção no menu.
 """
 
 import ctypes
@@ -66,6 +67,7 @@ TXT = {
         "iniciar": "Iniciar com o Windows",
         "importar": "Importar runas e itens no lock",
         "importar_agora": "Importar runas e itens agora",
+        "aceitar": "Aceitar partida automaticamente",
         "sair": "Sair",
     },
     "en": {
@@ -84,6 +86,7 @@ TXT = {
         "iniciar": "Start with Windows",
         "importar": "Import runes and items on lock-in",
         "importar_agora": "Import runes and items now",
+        "aceitar": "Auto-accept match",
         "sair": "Quit",
     },
 }
@@ -199,6 +202,11 @@ class Dados:
 
 
 # ---------- Leitura da sessão e escolha do inimigo da rota ----------
+
+def deve_aceitar(ready_check):
+    """A partida encontrada ainda espera a resposta do jogador (nem aceitou nem recusou)."""
+    return bool(ready_check) and ready_check.get("state") == "InProgress" and ready_check.get("playerResponse") == "None"
+
 
 def campeao_travado(sessao):
     """Campeão que o jogador travou (lock-in), ou 0. Passar o mouse ou só marcar não conta.
@@ -400,6 +408,28 @@ class Lcu:
             return r.json() if r.status_code == 200 else None
         except (requests.RequestException, ValueError):
             return None
+
+
+class Aceitador:
+    """Aceita a partida quando ela aparece, se o jogador ligou a opção no menu (vem desligada)."""
+
+    def __init__(self, lcu):
+        self.lcu = lcu
+
+    def passo(self):
+        try:
+            rc = self.lcu._pede("GET", "/lol-matchmaking/v1/ready-check")
+        except RuntimeError:
+            return False  # sem partida encontrada (404) ou cliente fechado
+        if not deve_aceitar(rc):
+            return False
+        try:
+            self.lcu._pede("POST", "/lol-matchmaking/v1/ready-check/accept")
+            log.info("partida aceita automaticamente")
+            return True
+        except RuntimeError as e:
+            log.warning("aceitar partida: %s", e)
+            return False
 
 
 class Importador:
@@ -760,6 +790,7 @@ def main():
     dados = Dados([], {}, {})
     icone = None
     importador = Importador(lcu, cfg, salva_config, lingua())
+    aceitador = Aceitador(lcu)
 
     def importa_no_lock(guia, s):
         if cfg.get("importar", True):
@@ -791,6 +822,9 @@ def main():
                 except Exception:
                     log.exception("erro ao recarregar os dados")
                 carregado = time.monotonic()
+            # Fila: a partida encontrada aparece fora da seleção; aceita sozinho só com a opção ligada.
+            if cfg.get("aceitar") and monitor.estado == "fora":
+                aceitador.passo()
             try:
                 monitor.passo()
             except Exception:
@@ -829,6 +863,10 @@ def main():
         if guia and s:
             threading.Thread(target=lambda: janela.avisa_importacao(importador.importa(guia, s)), daemon=True).start()
 
+    def alterna_aceitar(_icone, _item):
+        cfg["aceitar"] = not cfg.get("aceitar", False)
+        salva_config(cfg)
+
     def alterna_importar(_icone, _item):
         cfg["importar"] = not cfg.get("importar", True)
         salva_config(cfg)
@@ -853,6 +891,7 @@ def main():
         pystray.MenuItem(T["navegador"], lambda: webbrowser.open(monitor.url_alvo() or SITE)),
         pystray.Menu.SEPARATOR,
         pystray.MenuItem(T["importar"], alterna_importar, checked=lambda _: cfg.get("importar", True)),
+        pystray.MenuItem(T["aceitar"], alterna_aceitar, checked=lambda _: bool(cfg.get("aceitar", False))),
         pystray.MenuItem(T["por_cima"], alterna_por_cima, checked=lambda _: bool(cfg.get("por_cima"))),
         pystray.MenuItem(T["iniciar"], alterna_iniciar, checked=lambda _: cfg["iniciar"]),
         pystray.MenuItem(T["sair"], sair),

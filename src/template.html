@@ -1519,6 +1519,9 @@ const apiApp = () => (window.pywebview && window.pywebview.api && window.pywebvi
 const marcaApp = () => { $("importarLol").hidden = !apiApp(); };
 window.addEventListener("pywebviewready", marcaApp);
 marcaApp();
+// O app pode ficar pronto depois da página (e o aviso de pronto pode passar antes): confere de novo por alguns segundos.
+let tentativasApp = 0;
+const esperaApp = setInterval(() => { marcaApp(); if (apiApp() || ++tentativasApp > 30) clearInterval(esperaApp); }, 500);
 let someAviso;
 // Resultado da importação ({runas, itens}), do botão ou do app quando importa sozinho no lock.
 window.avisoImport = r => {
@@ -1555,6 +1558,7 @@ const ROTAS = ["top", "jungle", "jg", "mid", "adc", "bot", "sup", "support"];
 const ordemRota = r => { const i = ROTAS.indexOf((r || "").toLowerCase()); return i < 0 ? 99 : i; };
 function renderGuia() {
   const eu = guia.campeao;
+  if (typeof marcaApp === "function") marcaApp();  // o botão do app vale em todo guia
   const sub = (guia.rotas || [guia.rota]).filter(Boolean).join(" / ");
   $("avisoFonte").hidden = !guia.aviso;
   $("avisoFonte").textContent = guia.aviso ? tr(guia.aviso) : "";
