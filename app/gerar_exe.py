@@ -1,4 +1,4 @@
-"""Gera o app/dist/AkshanMatchups.exe (um arquivo só, sem console).
+"""Gera o app/dist/BattleMatch.exe (um arquivo só, sem console).
 
 Rode da raiz do repositório: python app/gerar_exe.py
 """
@@ -22,10 +22,10 @@ Image.open(os.path.join(SRC, "icone", "original.webp")).convert("RGBA").save(
 dados = [os.path.join(RAIZ, "guias-app.json"), os.path.join(SRC, "icone", "icone-64.png")]
 subprocess.run([
     sys.executable, "-m", "PyInstaller", "--noconfirm", "--onefile", "--windowed",
-    "--name", "AkshanMatchups", "--icon", ico,
+    "--name", "BattleMatch", "--icon", ico,
     "--distpath", os.path.join(APP, "dist"), "--workpath", os.path.join(APP, "build"), "--specpath", os.path.join(APP, "build"),
     *[a for d in dados for a in ("--add-data", f"{d}{os.pathsep}dados")],
     *[a for m in ("numpy", "tkinter", "unittest", "pydoc") for a in ("--exclude-module", m)],
     os.path.join(APP, "akshan_app.py"),
 ], check=True)
-print("Pronto:", os.path.join(APP, "dist", "AkshanMatchups.exe"))
+print("Pronto:", os.path.join(APP, "dist", "BattleMatch.exe"))

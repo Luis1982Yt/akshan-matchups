@@ -8,7 +8,7 @@ Programa de bandeja que acompanha a seleção de campeões do LoL. Quando você 
 
 **Todos os guias (v3):** a lista de guias vem de `https://akshan-matchups.vercel.app/guias-app.json`, que o `scripts/build.py` gera junto com o site (campeão de cada guia, rota e matchups com o slug do site). Guia novo no site já funciona no app sem gerar outro .exe.
 
-**Janela própria (v2):** o site roda dentro do app pelo WebView2 do Windows (pywebview), numa janela lateral estreita (460×900, encostada na direita na primeira vez; tamanho e posição ficam salvos). Trocar de matchup muda só o `#` do endereço, sem recarregar. Fechar no X esconde a janela; "Sair" no menu fecha o app. "Sempre por cima" no menu fixa a janela na frente do cliente. Skin, tema e língua do site ficam salvos em `%APPDATA%\AkshanMatchups\janela`. "Abrir no navegador" continua no menu. `AkshanMatchups.exe --testar-janela` abre a janela numa matchup, troca e fecha sozinho (anota no `log.txt`).
+**Janela própria (v2):** o site roda dentro do app pelo WebView2 do Windows (pywebview), numa janela lateral estreita (460×900, encostada na direita na primeira vez; tamanho e posição ficam salvos). Trocar de matchup muda só o `#` do endereço, sem recarregar. Fechar no X esconde a janela; "Sair" no menu fecha o app. "Sempre por cima" no menu fixa a janela na frente do cliente. Skin, tema e língua do site ficam salvos em `%APPDATA%\BattleMatch\janela`. "Abrir no navegador" continua no menu. `BattleMatch.exe --testar-janela` abre a janela numa matchup, troca e fecha sozinho (anota no `log.txt`).
 
 **Importar runas e itens (v4):** quando abre a matchup no lock (ou quando você troca o inimigo pelo menu), o app grava no cliente a página de runas e o conjunto de itens dela, como o Porofessor. Os dados vêm prontos no `guias-app.json` (`importar`, gerado por `scripts/importar_lol.py`).
 - Runas: `POST /lol-perks/v1/pages` com a página já selecionada, chamada "Campeão vs Inimigo". Ele troca sempre a página que ele mesmo criou (id guardado em `config.json > pagina_runas`); na primeira vez, se as páginas estiverem cheias (`/lol-perks/v1/inventory > ownedPageCount`), troca a página selecionada no cliente.
@@ -22,8 +22,8 @@ Programa de bandeja que acompanha a seleção de campeões do LoL. Quando você 
 - Entre eles, fica com quem mais joga na rota do guia (Top, Mid...): fração das partidas do campeão nessa rota, de `cdn.merakianalytics.com/.../championrates.json`. Se essa fonte falhar, vale a ordem do guia.
 - Abre a matchup (`https://akshan-matchups.vercel.app/#<guia>/<slug>`, mesma regra do `slug()` do site) só quando o alvo muda, com pelo menos 5 s entre aberturas. Se aparecer um inimigo com mais cara de mid, troca; se o escolhido sair do time inimigo, vai para o próximo.
 - Menu da bandeja: estado (aguardando o cliente / fora da seleção / na seleção), "Abrir o site", "Inimigos agora" (para abrir outro na mão), "Iniciar com o Windows" e "Sair". Inglês se o Windows estiver em inglês.
-- "Iniciar com o Windows" vem ligado: o .exe grava `AkshanMatchups` em `HKCU\Software\Microsoft\Windows\CurrentVersion\Run` do próprio usuário. Desmarcar apaga. Rodando como script (`python app/akshan_app.py`) ele não mexe no registro.
-- Configuração, cache dos dados e `log.txt` ficam em `%APPDATA%\AkshanMatchups`.
+- "Iniciar com o Windows" vem ligado: o .exe grava `BattleMatch` em `HKCU\Software\Microsoft\Windows\CurrentVersion\Run` do próprio usuário. Desmarcar apaga. Rodando como script (`python app/akshan_app.py`) ele não mexe no registro.
+- Configuração, cache dos dados e `log.txt` ficam em `%APPDATA%\BattleMatch`. Na primeira vez com o nome novo, o app copia tudo de `%APPDATA%\AkshanMatchups` (nome antigo) e apaga as entradas antigas do Run (`Akshan Matchups`), para o .exe antigo não abrir junto.
 
 ## Desenvolvimento
 
@@ -41,6 +41,6 @@ Os testes usam sessões de exemplo (fora da seleção, campeão sem guia, Akshan
 python app/gerar_exe.py
 ```
 
-Sai em `app/dist/AkshanMatchups.exe` (PyInstaller, um arquivo só, sem console, com o ícone de `src/icone/`). `AkshanMatchups.exe --testar` confere o pacote sem bandeja e sem registro: lê os dados e uma sessão e anota no `log.txt`.
+Sai em `app/dist/BattleMatch.exe` (PyInstaller, um arquivo só, sem console, com o ícone de `src/icone/`). `BattleMatch.exe --testar` confere o pacote sem bandeja e sem registro: lê os dados e uma sessão e anota no `log.txt`.
 
-Para publicar uma versão nova: `gh release create app-v3 app/dist/AkshanMatchups.exe --title "..." --notes "..."` e troque o link `APP_URL` no `src/template.html` se mudar de tag (o link atual aponta para `releases/latest`, então em geral não precisa).
+Para publicar uma versão nova: `gh release create app-v3 app/dist/BattleMatch.exe --title "..." --notes "..."` e troque o link `APP_URL` no `src/template.html` se mudar de tag (o link atual aponta para `releases/latest`, então em geral não precisa).

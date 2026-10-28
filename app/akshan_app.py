@@ -14,6 +14,7 @@ import json
 import logging
 import os
 import re
+import shutil
 import sys
 import threading
 import time
@@ -26,9 +27,10 @@ import urllib3
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-# Nome do app (decidido em 2026-10-28). Pasta de config, mutex, chave do Run e uid dos itens
-# continuam "AkshanMatchups" para quem já usa não perder as configurações.
+# Nome do app (decidido em 2026-10-28; antes "Akshan Matchups"). O uid dos conjuntos de itens continua
+# "akshan-matchups-*" para o app seguir reaproveitando os conjuntos que já gravou no cliente.
 NOME_APP = "BattleMatch"
+NOMES_ANTIGOS = ("Akshan Matchups", "AkshanMatchups")  # entradas antigas do Run, apagadas pela versão nova
 SITE = "https://akshan-matchups.vercel.app/"
 INTERVALO_POLL = 1.5        # segundos entre leituras na seleção
 INTERVALO_SEM_CLIENTE = 4   # segundos entre tentativas de achar o cliente
@@ -46,7 +48,9 @@ URL_TAXAS = "https://cdn.merakianalytics.com/riot/lol/resources/latest/en-US/cha
 PASTA_LOL = r"C:\Riot Games\League of Legends"
 CHAVE_RUN = r"Software\Microsoft\Windows\CurrentVersion\Run"
 
-PASTA_CONFIG = os.path.join(os.environ.get("APPDATA", os.path.expanduser("~")), "AkshanMatchups")
+APPDATA = os.environ.get("APPDATA", os.path.expanduser("~"))
+PASTA_CONFIG = os.path.join(APPDATA, "BattleMatch")
+PASTA_CONFIG_ANTIGA = os.path.join(APPDATA, "AkshanMatchups")
 log = logging.getLogger("akshan")
 
 
@@ -553,11 +557,31 @@ def salva_config(c):
         json.dump(c, f)
 
 
+def migra_config():
+    """Primeira vez com o nome novo: leva configuração, cache e janela da pasta antiga (AkshanMatchups)."""
+    if os.path.exists(PASTA_CONFIG) or not os.path.isdir(PASTA_CONFIG_ANTIGA):
+        return
+    try:
+        shutil.copytree(PASTA_CONFIG_ANTIGA, PASTA_CONFIG)
+    except (OSError, shutil.Error):
+        # Algum arquivo preso (app antigo aberto): fica só com a configuração.
+        os.makedirs(PASTA_CONFIG, exist_ok=True)
+        try:
+            shutil.copy2(os.path.join(PASTA_CONFIG_ANTIGA, "config.json"), PASTA_CONFIG)
+        except OSError:
+            pass
+
+
 def inicia_com_windows(ligar):
     if not getattr(sys, "frozen", False):
         return  # rodando como script: não mexe no registro
     import winreg
     with winreg.OpenKey(winreg.HKEY_CURRENT_USER, CHAVE_RUN, 0, winreg.KEY_SET_VALUE) as k:
+        for antigo in NOMES_ANTIGOS:  # o .exe antigo não abre mais junto com o Windows
+            try:
+                winreg.DeleteValue(k, antigo)
+            except FileNotFoundError:
+                pass
         if ligar:
             winreg.SetValueEx(k, NOME_APP, 0, winreg.REG_SZ, f'"{sys.executable}"')
         else:
@@ -710,11 +734,12 @@ class Janela:
 # ---------- Bandeja ----------
 
 def uma_instancia():
-    ctypes.windll.kernel32.CreateMutexW(None, False, "Local\\AkshanMatchupsApp")
+    ctypes.windll.kernel32.CreateMutexW(None, False, "Local\\BattleMatchApp")
     return ctypes.windll.kernel32.GetLastError() != 183  # ERROR_ALREADY_EXISTS
 
 
 def main():
+    migra_config()
     os.makedirs(PASTA_CONFIG, exist_ok=True)
     logging.basicConfig(filename=os.path.join(PASTA_CONFIG, "log.txt"), filemode="w", encoding="utf-8", level=logging.INFO,
                         format="%(asctime)s %(levelname)s %(message)s")
