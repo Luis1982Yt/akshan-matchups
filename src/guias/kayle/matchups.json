@@ -72,16 +72,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -91,7 +91,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Aatrox — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -214,7 +214,7 @@
    "secundarias_texto": "Sorcery w/Celerity  & Gathering Storm.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Ahri — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -337,7 +337,7 @@
    "secundarias_texto": "Sorcery w/ Celerity & Gathering Storm",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Akali — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -460,7 +460,7 @@
    "secundarias_texto": "Sorcery w/ Celerity & Gathering Storm",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Akshan — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -583,7 +583,7 @@
    "secundarias_texto": "Sorcery w/ Celerity & Gathering Storm",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Alistar — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -687,16 +687,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -706,7 +706,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Ambessa — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -829,7 +829,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Amumu — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -952,7 +952,7 @@
    "secundarias_texto": "Resolve: w/Second Wind & Overgrowth.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Anivia — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -1075,7 +1075,7 @@
    "secundarias_texto": "Resolve: w/Second Wind & Overgrowth.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Annie — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -1198,7 +1198,7 @@
    "secundarias_texto": "Resolve: w/Second Wind & Overgrowth.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Aphelios — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -1321,7 +1321,7 @@
    "secundarias_texto": "Resolve: w/Second Wind & Overgrowth.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Ashe — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -1434,7 +1434,7 @@
    "secundarias_texto": "Sorcery w/ Celerity & Gathering Storm",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Aurelion Sol — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -1542,8 +1542,8 @@
         "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Scaling Health",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
@@ -1557,7 +1557,7 @@
    "secundarias_texto": "Resolve: w/Second Wind & Overgrowth.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/68a54ed0197dfe829e877ce3dabd0e80bcdbe266c8b04efec4bfcbcda3da519d.png",
+     "src": "imagens/kayle/082e4460e568bf7d381ff23a8f8129a0e2f4ff491d123137e0441ec696fa2740.png",
      "alt": "Minor runes — Aurora — UJard (original spreadsheet)",
      "largura": 197,
      "altura": 130
@@ -1680,7 +1680,7 @@
    "secundarias_texto": "Resolve: w/Second Wind & Overgrowth.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Azir — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -1803,7 +1803,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Bard — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -1897,16 +1897,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -1916,7 +1916,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Bel'Veth — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -2039,7 +2039,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Blitzcrank — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -2152,7 +2152,7 @@
    "secundarias_texto": "Resolve: w/Second Wind & Overgrowth.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Brand — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -2275,7 +2275,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Braum — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -2388,7 +2388,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Briar — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -2501,7 +2501,7 @@
    "secundarias_texto": "Resolve: w/Second Wind & Overgrowth.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Caitlyn — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -2595,8 +2595,8 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Adaptive Force",
@@ -2614,7 +2614,7 @@
    "secundarias_texto": "Resolve: w/Bone Plating and Unflinching.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/ec62c8cb0ab55c84a315b47a5855bdcdfab0dc6ddfaabbc6ad403ec4a6aa8414.png",
+     "src": "imagens/kayle/0a697f973d5ae218ea644e2b7c216936d6c72f18d0c0ea1400152108f1fabec6.png",
      "alt": "Minor runes — Camille — UJard (original spreadsheet)",
      "largura": 204,
      "altura": 145
@@ -2737,7 +2737,7 @@
    "secundarias_texto": "Resolve: w/Second Wind & Overgrowth.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Cassiopeia — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -2841,16 +2841,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -2860,7 +2860,7 @@
    "secundarias_texto": "Sorcery w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Cho' Gath — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -2983,7 +2983,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Corki — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -3087,16 +3087,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -3106,7 +3106,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Darius — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -3229,7 +3229,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Diana — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -3323,16 +3323,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -3342,7 +3342,7 @@
    "secundarias_texto": "Sorcery w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Dr. Mundo — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -3455,7 +3455,7 @@
    "secundarias_texto": "Resolve: w/Second Wind & Overgrowth.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Draven — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -3574,7 +3574,7 @@
    "secundarias_texto": "Sorcery w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Ekko — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -3687,7 +3687,7 @@
    "secundarias_texto": "Sorcery w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Elise — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -3800,7 +3800,7 @@
    "secundarias_texto": "Sorcery w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Evelynn — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -3913,7 +3913,7 @@
    "secundarias_texto": "Sorcery w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Ezreal — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -4026,7 +4026,7 @@
    "secundarias_texto": "Sorcery w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Fiddlesticks — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -4130,16 +4130,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -4149,7 +4149,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Fiora — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -4272,7 +4272,7 @@
    "secundarias_texto": "Sorcery w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Fizz — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -4385,7 +4385,7 @@
    "secundarias_texto": "Sorcery w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Galio — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -4498,7 +4498,7 @@
    "secundarias_texto": "Sorcery w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Gangplank — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -4602,16 +4602,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -4621,7 +4621,7 @@
    "secundarias_texto": "Sorcery w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Garen — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -4725,8 +4725,8 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Adaptive Force",
@@ -4744,7 +4744,7 @@
    "secundarias_texto": "Sorcery w/Celerity & GS.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/ec62c8cb0ab55c84a315b47a5855bdcdfab0dc6ddfaabbc6ad403ec4a6aa8414.png",
+     "src": "imagens/kayle/0a697f973d5ae218ea644e2b7c216936d6c72f18d0c0ea1400152108f1fabec6.png",
      "alt": "Minor runes — Gnar — UJard (original spreadsheet)",
      "largura": 204,
      "altura": 145
@@ -4848,8 +4848,8 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Adaptive Force",
@@ -4867,7 +4867,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/ec62c8cb0ab55c84a315b47a5855bdcdfab0dc6ddfaabbc6ad403ec4a6aa8414.png",
+     "src": "imagens/kayle/0a697f973d5ae218ea644e2b7c216936d6c72f18d0c0ea1400152108f1fabec6.png",
      "alt": "Minor runes — Gragas — UJard (original spreadsheet)",
      "largura": 204,
      "altura": 145
@@ -4971,8 +4971,8 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Adaptive Force",
@@ -4990,7 +4990,7 @@
    "secundarias_texto": "Sorcery w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/ec62c8cb0ab55c84a315b47a5855bdcdfab0dc6ddfaabbc6ad403ec4a6aa8414.png",
+     "src": "imagens/kayle/0a697f973d5ae218ea644e2b7c216936d6c72f18d0c0ea1400152108f1fabec6.png",
      "alt": "Minor runes — Graves — UJard (original spreadsheet)",
      "largura": 204,
      "altura": 145
@@ -5084,8 +5084,8 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Adaptive Force",
@@ -5103,7 +5103,7 @@
    "secundarias_texto": "Sorcery w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/ec62c8cb0ab55c84a315b47a5855bdcdfab0dc6ddfaabbc6ad403ec4a6aa8414.png",
+     "src": "imagens/kayle/0a697f973d5ae218ea644e2b7c216936d6c72f18d0c0ea1400152108f1fabec6.png",
      "alt": "Minor runes — Gwen — UJard (original spreadsheet)",
      "largura": 204,
      "altura": 145
@@ -5207,8 +5207,8 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Adaptive Force",
@@ -5226,7 +5226,7 @@
    "secundarias_texto": "Sorcery w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/ec62c8cb0ab55c84a315b47a5855bdcdfab0dc6ddfaabbc6ad403ec4a6aa8414.png",
+     "src": "imagens/kayle/0a697f973d5ae218ea644e2b7c216936d6c72f18d0c0ea1400152108f1fabec6.png",
      "alt": "Minor runes — Hecarim — UJard (original spreadsheet)",
      "largura": 204,
      "altura": 145
@@ -5339,7 +5339,7 @@
    "secundarias_texto": "Resolve w/Second Wind & Overgrowth.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Heimer\ndinger — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -5462,7 +5462,7 @@
    "secundarias_texto": "Resolve w/Second Wind & Overgrowth.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Hwei — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -5556,16 +5556,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -5575,7 +5575,7 @@
    "secundarias_texto": "Sorcery w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Illaoi — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -5679,16 +5679,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Adaptive Force",
         "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Health",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -5698,7 +5698,7 @@
    "secundarias_texto": "Resolve: w/Bone Plating and Unflinching.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f8c37cad645621fb770457805e978c7f47df6861bc12b6f6b7d3bb7785118a50.png",
+     "src": "imagens/kayle/1ed66dbeea3a03d940b5de3256ff3eccb35a410046665980463c3e0b91c826ec.png",
      "alt": "Minor runes — Irelia — UJard (original spreadsheet)",
      "largura": 209,
      "altura": 145
@@ -5802,8 +5802,8 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Adaptive Force",
@@ -5821,7 +5821,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/ec62c8cb0ab55c84a315b47a5855bdcdfab0dc6ddfaabbc6ad403ec4a6aa8414.png",
+     "src": "imagens/kayle/0a697f973d5ae218ea644e2b7c216936d6c72f18d0c0ea1400152108f1fabec6.png",
      "alt": "Minor runes — Ivern — UJard (original spreadsheet)",
      "largura": 204,
      "altura": 145
@@ -5915,8 +5915,8 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Adaptive Force",
@@ -5934,7 +5934,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/ec62c8cb0ab55c84a315b47a5855bdcdfab0dc6ddfaabbc6ad403ec4a6aa8414.png",
+     "src": "imagens/kayle/0a697f973d5ae218ea644e2b7c216936d6c72f18d0c0ea1400152108f1fabec6.png",
      "alt": "Minor runes — Janna — UJard (original spreadsheet)",
      "largura": 204,
      "altura": 145
@@ -6028,8 +6028,8 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Adaptive Force",
@@ -6047,7 +6047,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/ec62c8cb0ab55c84a315b47a5855bdcdfab0dc6ddfaabbc6ad403ec4a6aa8414.png",
+     "src": "imagens/kayle/0a697f973d5ae218ea644e2b7c216936d6c72f18d0c0ea1400152108f1fabec6.png",
      "alt": "Minor runes — Jarvan IV — UJard (original spreadsheet)",
      "largura": 204,
      "altura": 145
@@ -6141,16 +6141,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -6160,7 +6160,7 @@
    "secundarias_texto": "Resolve: w/Bone Plating and Unflinching.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Jax — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -6272,8 +6272,8 @@
         "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Health",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -6283,7 +6283,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f2e3dffd5d0f9426a7c0a849f2e7ad18fad6bbbc1921d82589d13c5928375930.png",
+     "src": "imagens/kayle/178eb48bbc907081a66bb4afa190b5046a8abf4fea91798ebca3abd9bf6c0c0a.png",
      "alt": "Minor runes — Jayce — UJard (original spreadsheet)",
      "largura": 204,
      "altura": 142
@@ -6406,7 +6406,7 @@
    "secundarias_texto": "Resolve: w/Second Wind & Overgrowth.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Jhin — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -6519,7 +6519,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Jinx — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -6632,7 +6632,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Kaisa — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -6745,7 +6745,7 @@
    "secundarias_texto": "Resolve: w/Second Wind & Overgrowth.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Kalista — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -6858,7 +6858,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Karma — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -6971,7 +6971,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Karthus — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -7094,7 +7094,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Kassadin — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -7207,7 +7207,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Katarina — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -7351,7 +7351,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Kayn — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -7474,7 +7474,7 @@
    "secundarias_texto": "Resolve: w/Second Wind & Unflinching.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Kennen — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -7587,7 +7587,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Kha Zix — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -7700,7 +7700,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Kindred — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -7794,8 +7794,8 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Adaptive Force",
@@ -7813,7 +7813,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/ec62c8cb0ab55c84a315b47a5855bdcdfab0dc6ddfaabbc6ad403ec4a6aa8414.png",
+     "src": "imagens/kayle/0a697f973d5ae218ea644e2b7c216936d6c72f18d0c0ea1400152108f1fabec6.png",
      "alt": "Minor runes — Kled — UJard (original spreadsheet)",
      "largura": 204,
      "altura": 145
@@ -7926,7 +7926,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Kog Maw — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -8020,16 +8020,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -8039,7 +8039,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — K' Sante — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -8162,7 +8162,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Leblanc — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -8256,8 +8256,8 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Adaptive Force",
@@ -8275,7 +8275,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/ec62c8cb0ab55c84a315b47a5855bdcdfab0dc6ddfaabbc6ad403ec4a6aa8414.png",
+     "src": "imagens/kayle/0a697f973d5ae218ea644e2b7c216936d6c72f18d0c0ea1400152108f1fabec6.png",
      "alt": "Minor runes — Lee Sin — UJard (original spreadsheet)",
      "largura": 204,
      "altura": 145
@@ -8388,7 +8388,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Leona — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -8501,7 +8501,7 @@
    "secundarias_texto": "Resolve: w/Second Wind & Overgrowth.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Lillia — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -8614,7 +8614,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Lissandra — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -8727,7 +8727,7 @@
    "secundarias_texto": "Resolve: w/Second Wind & Overgrowth.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Lucian — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -8846,7 +8846,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Lulu — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -8959,7 +8959,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Lux — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -9061,8 +9061,8 @@
         "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -9072,7 +9072,7 @@
    "secundarias_texto": "Sorcery w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/46611a285dbdd1a23a75ea682af3913159f7ef8aef5099c9f6e384ec58a82a5b.png",
+     "src": "imagens/kayle/ffaaae46ad6166d964894da2f319b5f8b8a3aa42eede9511d0406defe3710d80.png",
      "alt": "Minor runes — Malphite — UJard (original spreadsheet)",
      "largura": 203,
      "altura": 134
@@ -9195,7 +9195,7 @@
    "secundarias_texto": "Sorcery w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Malzahar — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -9289,16 +9289,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -9308,7 +9308,7 @@
    "secundarias_texto": "Sorcery w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Maokai — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -9412,16 +9412,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -9431,7 +9431,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Master Yi — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -9544,7 +9544,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Mel — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -9657,7 +9657,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Milio — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -9770,7 +9770,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Miss Fortune — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -9864,8 +9864,8 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Adaptive Force",
@@ -9883,7 +9883,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/ec62c8cb0ab55c84a315b47a5855bdcdfab0dc6ddfaabbc6ad403ec4a6aa8414.png",
+     "src": "imagens/kayle/0a697f973d5ae218ea644e2b7c216936d6c72f18d0c0ea1400152108f1fabec6.png",
      "alt": "Minor runes — Mordekaiser — UJard (original spreadsheet)",
      "largura": 204,
      "altura": 145
@@ -10006,7 +10006,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Morgana — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -10119,7 +10119,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Nami — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -10242,7 +10242,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Naafiri — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -10336,16 +10336,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -10355,7 +10355,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Nasus — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -10459,16 +10459,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -10478,7 +10478,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Nautilus — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -10591,7 +10591,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Nilah — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -10714,7 +10714,7 @@
    "secundarias_texto": "Resolve: w/Second Wind & Overgrowth.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Neeko — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -10837,7 +10837,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Nidalee — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -10931,8 +10931,8 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Adaptive Force",
@@ -10950,7 +10950,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/ec62c8cb0ab55c84a315b47a5855bdcdfab0dc6ddfaabbc6ad403ec4a6aa8414.png",
+     "src": "imagens/kayle/0a697f973d5ae218ea644e2b7c216936d6c72f18d0c0ea1400152108f1fabec6.png",
      "alt": "Minor runes — Nocturne — UJard (original spreadsheet)",
      "largura": 204,
      "altura": 145
@@ -11048,8 +11048,8 @@
         "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Scaling Health",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
@@ -11063,7 +11063,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/68a54ed0197dfe829e877ce3dabd0e80bcdbe266c8b04efec4bfcbcda3da519d.png",
+     "src": "imagens/kayle/082e4460e568bf7d381ff23a8f8129a0e2f4ff491d123137e0441ec696fa2740.png",
      "alt": "Minor runes — Nunu — UJard (original spreadsheet)",
      "largura": 197,
      "altura": 130
@@ -11157,16 +11157,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -11176,7 +11176,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Olaf — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -11289,7 +11289,7 @@
    "secundarias_texto": "Resolve: w/Second Wind & Overgrowth.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Orianna — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -11397,16 +11397,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -11416,7 +11416,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Ornn — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -11514,12 +11514,12 @@
         "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Scaling Health",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -11529,7 +11529,7 @@
    "secundarias_texto": "Sorcery w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/a81b1ff9223e2369e65ee966795b884d61a0418b25e2eb6c0b575e9b78126f9a.png",
+     "src": "imagens/kayle/4da767a244c183a2c78553c13080ef4f1be76ea96e90ade2601f52c5e3594a0b.png",
      "alt": "Minor runes — Pantheon — UJard (original spreadsheet)",
      "largura": 203,
      "altura": 142
@@ -11633,16 +11633,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -11652,7 +11652,7 @@
    "secundarias_texto": "Sorcery w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Poppy — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -11775,7 +11775,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Pyke — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -11888,7 +11888,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Qiyana — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -11990,8 +11990,8 @@
         "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Health",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -12001,7 +12001,7 @@
    "secundarias_texto": "Resolve: w/Second Wind & Overgrowth.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f2e3dffd5d0f9426a7c0a849f2e7ad18fad6bbbc1921d82589d13c5928375930.png",
+     "src": "imagens/kayle/178eb48bbc907081a66bb4afa190b5046a8abf4fea91798ebca3abd9bf6c0c0a.png",
      "alt": "Minor runes — Quinn — UJard (original spreadsheet)",
      "largura": 204,
      "altura": 142
@@ -12120,7 +12120,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Rakan — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -12214,16 +12214,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -12233,7 +12233,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Rammus — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -12327,16 +12327,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -12346,7 +12346,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Rek Sai — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -12459,7 +12459,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Rell — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -12572,7 +12572,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Renata Glasc — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -12676,16 +12676,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -12695,7 +12695,7 @@
    "secundarias_texto": "Resolve: w/Bone Plating and Unflinching.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Renekton — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -12818,7 +12818,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Rengar — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -12922,16 +12922,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -12941,7 +12941,7 @@
    "secundarias_texto": "Resolve: w/Bone Plating and Unflinching.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Riven — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -13053,8 +13053,8 @@
         "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Health",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -13064,7 +13064,7 @@
    "secundarias_texto": "Sorcery w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f2e3dffd5d0f9426a7c0a849f2e7ad18fad6bbbc1921d82589d13c5928375930.png",
+     "src": "imagens/kayle/178eb48bbc907081a66bb4afa190b5046a8abf4fea91798ebca3abd9bf6c0c0a.png",
      "alt": "Minor runes — Rumble — UJard (original spreadsheet)",
      "largura": 204,
      "altura": 142
@@ -13177,7 +13177,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Ryze — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -13290,7 +13290,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Samira — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -13384,16 +13384,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -13403,7 +13403,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Sejuani — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -13516,7 +13516,7 @@
    "secundarias_texto": "Resolve: w/Second Wind & Overgrowth.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Senna — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -13629,7 +13629,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Seraphine — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -13723,16 +13723,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -13742,7 +13742,7 @@
    "secundarias_texto": "Resolve: w/Bone Plating and Unflinching.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Sett — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -13855,7 +13855,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Shaco — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -13949,16 +13949,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -13968,7 +13968,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Shen — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -14062,16 +14062,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -14081,7 +14081,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Shyvana — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -14175,12 +14175,12 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Scaling Health",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
@@ -14194,7 +14194,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/9d4a4b17521f931407b11a239f4ddd4506f31742b3e28bc6c600be67daf80908.png",
+     "src": "imagens/kayle/ee101260c0436aa76f3a0068d257a2c6f80eee184524616a3688855731c5db1b.png",
      "alt": "Minor runes — Singed — UJard (original spreadsheet)",
      "largura": 169,
      "altura": 115
@@ -14288,16 +14288,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -14307,7 +14307,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Sion — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -14430,7 +14430,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Sivir — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -14524,16 +14524,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -14543,7 +14543,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Skarner — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -14656,7 +14656,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Smolder — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -14754,8 +14754,8 @@
         "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Scaling Health",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
@@ -14769,7 +14769,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/68a54ed0197dfe829e877ce3dabd0e80bcdbe266c8b04efec4bfcbcda3da519d.png",
+     "src": "imagens/kayle/082e4460e568bf7d381ff23a8f8129a0e2f4ff491d123137e0441ec696fa2740.png",
      "alt": "Minor runes — Sona — UJard (original spreadsheet)",
      "largura": 197,
      "altura": 130
@@ -14867,8 +14867,8 @@
         "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Scaling Health",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
@@ -14882,7 +14882,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/68a54ed0197dfe829e877ce3dabd0e80bcdbe266c8b04efec4bfcbcda3da519d.png",
+     "src": "imagens/kayle/082e4460e568bf7d381ff23a8f8129a0e2f4ff491d123137e0441ec696fa2740.png",
      "alt": "Minor runes — Soraka — UJard (original spreadsheet)",
      "largura": 197,
      "altura": 130
@@ -14976,16 +14976,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -14995,7 +14995,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Swain — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -15089,8 +15089,8 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Adaptive Force",
@@ -15108,7 +15108,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/ec62c8cb0ab55c84a315b47a5855bdcdfab0dc6ddfaabbc6ad403ec4a6aa8414.png",
+     "src": "imagens/kayle/0a697f973d5ae218ea644e2b7c216936d6c72f18d0c0ea1400152108f1fabec6.png",
      "alt": "Minor runes — Sylas — UJard (original spreadsheet)",
      "largura": 204,
      "altura": 145
@@ -15221,7 +15221,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Syndra — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -15315,16 +15315,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -15334,7 +15334,7 @@
    "secundarias_texto": "Sorcery w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Tahm Kench — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -15428,12 +15428,12 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Scaling Health",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
@@ -15447,7 +15447,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/9d4a4b17521f931407b11a239f4ddd4506f31742b3e28bc6c600be67daf80908.png",
+     "src": "imagens/kayle/ee101260c0436aa76f3a0068d257a2c6f80eee184524616a3688855731c5db1b.png",
      "alt": "Minor runes — Taliyah — UJard (original spreadsheet)",
      "largura": 169,
      "altura": 115
@@ -15560,7 +15560,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Talon — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -15673,7 +15673,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Taric — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -15775,8 +15775,8 @@
         "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -15786,7 +15786,7 @@
    "secundarias_texto": "Resolve: w/Second Wind & Overgrowth.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/46611a285dbdd1a23a75ea682af3913159f7ef8aef5099c9f6e384ec58a82a5b.png",
+     "src": "imagens/kayle/ffaaae46ad6166d964894da2f319b5f8b8a3aa42eede9511d0406defe3710d80.png",
      "alt": "Minor runes — Teemo — UJard (original spreadsheet)",
      "largura": 203,
      "altura": 134
@@ -15890,16 +15890,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -15909,7 +15909,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Thresh — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -16022,7 +16022,7 @@
    "secundarias_texto": "Resolve: w/Second Wind & Overgrowth.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Tristana — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -16116,16 +16116,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -16135,7 +16135,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Trundle — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -16239,16 +16239,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -16258,7 +16258,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Tryndamere — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -16381,7 +16381,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Twisted Fate — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -16494,7 +16494,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Twitch — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -16588,16 +16588,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -16607,7 +16607,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Udyr — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -16711,16 +16711,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -16730,7 +16730,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Urgot — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -16853,7 +16853,7 @@
    "secundarias_texto": "Resolve: w/Second Wind & Overgrowth.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Varus — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -16966,7 +16966,7 @@
    "secundarias_texto": "Resolve: w/Second Wind & Overgrowth.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Vayne — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -17079,7 +17079,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Veigar — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -17192,7 +17192,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Velkoz — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -17305,7 +17305,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Vex — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -17409,16 +17409,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -17428,7 +17428,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Vi — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -17522,16 +17522,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -17541,7 +17541,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Viego — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -17654,7 +17654,7 @@
    "secundarias_texto": "Resolve: w/Second Wind & Overgrowth.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Viktor — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -17762,8 +17762,8 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Adaptive Force",
@@ -17781,7 +17781,7 @@
    "secundarias_texto": "Resolve: w/Second Wind & Overgrowth.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/ec62c8cb0ab55c84a315b47a5855bdcdfab0dc6ddfaabbc6ad403ec4a6aa8414.png",
+     "src": "imagens/kayle/0a697f973d5ae218ea644e2b7c216936d6c72f18d0c0ea1400152108f1fabec6.png",
      "alt": "Minor runes — Vladimir — UJard (original spreadsheet)",
      "largura": 204,
      "altura": 145
@@ -17875,16 +17875,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -17894,7 +17894,7 @@
    "secundarias_texto": "Sorcery w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Volibear — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -17998,16 +17998,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -18017,7 +18017,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Warwick — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -18119,8 +18119,8 @@
         "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Health",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -18130,7 +18130,7 @@
    "secundarias_texto": "Resolve: w/Bone Plating and Unflinching.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f2e3dffd5d0f9426a7c0a849f2e7ad18fad6bbbc1921d82589d13c5928375930.png",
+     "src": "imagens/kayle/178eb48bbc907081a66bb4afa190b5046a8abf4fea91798ebca3abd9bf6c0c0a.png",
      "alt": "Minor runes — Wukong — UJard (original spreadsheet)",
      "largura": 204,
      "altura": 142
@@ -18243,7 +18243,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Xayah — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -18356,7 +18356,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Xerath — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -18450,16 +18450,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -18469,7 +18469,7 @@
    "secundarias_texto": "Resolve: w/Second Wind & Overgrowth.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Xin Zhao — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -18592,7 +18592,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Yasuo — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -18709,7 +18709,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Yone — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -18813,16 +18813,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -18832,7 +18832,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Yorick — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -18940,8 +18940,8 @@
         "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Scaling Health",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
         "nome": "Scaling Health",
@@ -18955,7 +18955,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/68a54ed0197dfe829e877ce3dabd0e80bcdbe266c8b04efec4bfcbcda3da519d.png",
+     "src": "imagens/kayle/082e4460e568bf7d381ff23a8f8129a0e2f4ff491d123137e0441ec696fa2740.png",
      "alt": "Minor runes — Yuumi — UJard (original spreadsheet)",
      "largura": 197,
      "altura": 130
@@ -19059,16 +19059,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -19078,7 +19078,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Zaahen — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -19172,16 +19172,16 @@
       "rotulo": "Fragmentos",
       "pecas": [
        {
-        "nome": "Attack Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Movement Speed",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
        },
        {
-        "nome": "Tenacity and Slow Resist",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+        "nome": "Scaling Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
        }
       ]
      }
@@ -19191,7 +19191,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/7710bad5308c66ab8087a33633134dc37eb4d28551488d0a076a9df477f8d7d4.png",
+     "src": "imagens/kayle/b73fbdf7f2daf57d17acd040b214484ba4260e5eea8dbfac544e63a25b7781a1.png",
      "alt": "Minor runes — Zac — UJard (original spreadsheet)",
      "largura": 173,
      "altura": 128
@@ -19314,7 +19314,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Zeri — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -19427,7 +19427,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Zed — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -19550,7 +19550,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Ziggs — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -19663,7 +19663,7 @@
    "secundarias_texto": "Inspiration: w/ Jack & Triple Tonic.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Zilean — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -19776,7 +19776,7 @@
    "secundarias_texto": "Sorcery: w/Celerity & GS",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Zoe — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
@@ -19889,7 +19889,7 @@
    "secundarias_texto": "Resolve: w/Second Wind & Overgrowth.",
    "imagens_runas": [
     {
-     "src": "imagens/kayle/f0e1decd9686c518c0b4b6a99643a0c396d7ac3bec9ad0e0b3d1b1c199a3cf01.png",
+     "src": "imagens/kayle/565dba21232489cc99afe11fe454d4ee077a963323fa5f48f2adb7acebb5593a.png",
      "alt": "Minor runes — Zyra — UJard (original spreadsheet)",
      "largura": 167,
      "altura": 109
