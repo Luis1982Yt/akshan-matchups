@@ -569,6 +569,12 @@ body.sem-rolar { overflow: hidden; }
 .pg-tabela th, .pg-tabela td { padding: 9px 14px 9px 0; border-bottom: 1px solid var(--linha); text-align: left; vertical-align: top; white-space: nowrap; }
 .pg-tabela th { font: 700 12px var(--corpo); letter-spacing: .08em; text-transform: uppercase; color: var(--texto-baixo); }
 .pg-tabela td.vazio { color: var(--texto-baixo); }
+.tab-legenda { margin: 0 0 12px; font-size: 14px; color: var(--texto-baixo); }
+.tab-legenda b { color: var(--texto); }
+.tab-campeao { display: flex; align-items: center; gap: 10px; min-width: 0; color: inherit; text-decoration: none; }
+.tab-campeao img { width: 40px; height: 40px; flex: none; border-radius: 8px; box-shadow: 0 0 0 1px var(--linha-forte); }
+.tab-campeao:hover b { color: var(--acento-vivo); }
+.selo-nota { margin-left: auto; flex: none; min-width: 34px; padding: 3px 9px; border-radius: 999px; background: var(--destaque); color: var(--tinta-botao); font: 800 15px/1.2 var(--corpo); text-align: center; }
 .pecas-soltas { grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr)); gap: 8px; }
 .pecas-soltas .pg-card { padding: 10px 12px; }
 .pg-imagens { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); }
@@ -1954,7 +1960,27 @@ const BLOCOS = {
   imagens: b => `<section class="pg-bloco">${b.titulo ? `<h3${langOrig()}>${esc(tr(b.titulo))}</h3>` : ""}<div class="pg-imagens">${b.imagens.map(i => `<a href="${esc(i.src)}" target="_blank" rel="noopener"><img src="${esc(i.src)}" alt="${esc(tr(i.alt || b.titulo || ""))}" width="${i.largura}" height="${i.altura}" loading="lazy"></a>`).join("")}</div></section>`,
   // Dicas e mecânicas: título (link do vídeo, quando tem) e explicação.
   dicas: b => `<div class="pg-cards"${langOrig()}>${b.itens.map(d => `<article class="pg-card"><div class="topo"><b>${comLinks(d.titulo)}</b></div>${textoLongo(comLinks(d.texto))}</article>`).join("")}</div>`,
-  tabelaCrua: b => `<section class="pg-bloco">${b.titulo ? `<h3${langOrig()}>${esc(tr(b.titulo))}</h3>` : ""}<div class="pg-tabela"><table${langOrig()}><thead><tr>${b.colunas.map(c => `<th scope="col">${esc(tr(c))}</th>`).join("")}</tr></thead>
+  // Tabela com texto comprido (explicações): um cartão por linha. A 1ª coluna é o título (com retrato e link
+  // quando é um campeão com matchup no guia), colunas curtas de número viram selo e o resto vira "rótulo: texto".
+  // As linhas extras do cabeçalho do selo ("1 - ...", "10 - ...") aparecem uma vez, como legenda.
+  tabelaCartoes: b => {
+    const txt = c => (c && c.texto || "").trim();
+    const curta = i => b.linhas.every(l => /^[\d.,/+-]{0,6}$/.test(txt(l[i])));
+    const selos = b.colunas.map((c, i) => i).filter(i => i > 0 && curta(i));
+    const rotulo = c => tr(c).split("\n")[0].trim();
+    const legenda = selos.flatMap(i => tr(b.colunas[i]).split("\n").slice(1).map(x => x.trim()).filter(Boolean));
+    const campeao = nome => (guia.lista || []).find(c => c.slug === slug(nome));
+    const num = v => v.replace(/\.0$/, "");
+    return `<section class="pg-grupo">${b.titulo ? `<h3${langOrig()}>${esc(tr(b.titulo))}</h3>` : ""}
+      ${legenda.length ? `<p class="tab-legenda"${langOrig()}>${selos.map(i => `<b>${esc(rotulo(b.colunas[i]))}:</b> `).join("")}${legenda.map(esc).join(" · ")}</p>` : ""}
+      <div class="pg-cards"${langOrig()}>${b.linhas.map(l => {
+        const nome = txt(l[0]), c = campeao(nome);
+        const titulo = c ? `<a class="tab-campeao" href="#${guia.id}/${c.slug}"><img src="${sq(c.id)}" alt="" width="40" height="40" loading="lazy"><b>${esc(c.nome)}</b></a>` : `<b>${comLinks(l[0])}</b>`;
+        return `<article class="pg-card setup-alt"><div class="topo">${titulo}${selos.map(i => txt(l[i]) ? `<span class="selo-nota" title="${esc(rotulo(b.colunas[i]))}">${esc(num(txt(l[i])))}</span>` : "").join("")}</div>
+          <dl>${b.colunas.map((col, i) => [col, l[i], i]).filter(([, cel, i]) => i > 0 && !selos.includes(i) && txt(cel)).map(([col, cel]) => `<div><dt>${esc(rotulo(col))}</dt><dd>${comLinks(cel)}</dd></div>`).join("")}</dl></article>`;
+      }).join("")}</div></section>`;
+  },
+  tabelaCrua: b => b.linhas.some(l => l.some(c => c && (c.texto || "").length > 90)) ? BLOCOS.tabelaCartoes(b) : `<section class="pg-bloco">${b.titulo ? `<h3${langOrig()}>${esc(tr(b.titulo))}</h3>` : ""}<div class="pg-tabela"><table${langOrig()}><thead><tr>${b.colunas.map(c => `<th scope="col">${esc(tr(c))}</th>`).join("")}</tr></thead>
     <tbody>${b.linhas.map(l => `<tr>${l.map(c => c ? `<td>${comLinks(c)}</td>` : '<td class="vazio">—</td>').join("")}</tr>`).join("")}</tbody></table></div></section>`,
 };
 
