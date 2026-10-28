@@ -1,4 +1,4 @@
-"""Akshan Matchups: app de bandeja para a seleção de campeões.
+"""BattleMatch: app de bandeja para a seleção de campeões.
 
 Lê a sessão da seleção de campeões pela API local do cliente do LoL (LCU) e,
 quando o jogador trava um campeão que tem guia no site (Akshan, Mordekaiser,
@@ -26,7 +26,9 @@ import urllib3
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-NOME_APP = "Akshan Matchups"
+# Nome do app (decidido em 2026-10-28). Pasta de config, mutex, chave do Run e uid dos itens
+# continuam "AkshanMatchups" para quem já usa não perder as configurações.
+NOME_APP = "BattleMatch"
 SITE = "https://akshan-matchups.vercel.app/"
 INTERVALO_POLL = 1.5        # segundos entre leituras na seleção
 INTERVALO_SEM_CLIENTE = 4   # segundos entre tentativas de achar o cliente
