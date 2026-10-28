@@ -41,7 +41,16 @@ CLIPES_POR_CAMPEAO = {
         "laugh": "illaoi_laugh.anm", "taunt": "illaoi_taunt.anm", "attack1": "illaoi_attack1.anm", "attack2": "illaoi_attack2.anm",
         "crit": "illaoi_crit.anm", "recall": "illaoi_recall.anm",
     },
+    "kayle": {
+        "idle": "kayle_idle1.anm", "idle_var": "kayle_idle2.anm", "dance_intro": "kayle_dance_in.anm", "dance": "kayle_dance_loop.anm",
+        "laugh": "kayle_laugh.anm", "taunt": "kayle_taunt.anm", "attack1": "kayle_attack1.anm", "attack2": "kayle_attack2.anm",
+        "recall": "kayle_recall.anm",
+    },
 }
+# Partes que o jogo esconde no começo mas o site mostra: a Kayle aparece na forma final (asas e espada de fogo).
+MOSTRAR_POR_CAMPEAO = {"kayle": {"wings_mid", "wings_bot", "sword_hilt", "sword_blade"}}
+# Texturas cujo canal alfa não é transparência (na da Kayle ele marca o brilho): saem em JPEG, opacas.
+OPACAS_POR_CAMPEAO = {"kayle": {"kayle_base_tx_cm"}}
 CLIPES = CLIPES_POR_CAMPEAO[CAMPEAO]
 
 
@@ -75,7 +84,8 @@ def registra(caminho_tex):
         destino = PASTA / f"{chave}.png"
         if not destino.exists():
             destino.write_bytes(baixa(CD + png, binario=True))
-        texturas[chave] = (destino.name, "body" in chave or chave.endswith(f"skin{N}_tx_cm") or chave.endswith(f"skin{N:02d}_tx_cm"))
+        texturas[chave] = (destino.name, "body" in chave or chave.endswith(f"skin{N}_tx_cm") or chave.endswith(f"skin{N:02d}_tx_cm")
+                           or chave in OPACAS_POR_CAMPEAO.get(CAMPEAO, set()))
     return chave
 
 
@@ -88,6 +98,7 @@ for o in props.get("materialOverride", []):
 texturas = {"main": texturas[padrao], **{k: v for k, v in texturas.items() if k != padrao}}
 submesh_textura = {s: ("main" if k == padrao else k) for s, k in submesh_textura.items()}
 esconder = [x for x in re.split(r"[,\s]+", props.get("initialSubmeshToHide", "")) if x]
+esconder = [x for x in esconder if x.lower() not in MOSTRAR_POR_CAMPEAO.get(CAMPEAO, set())]
 
 # Animações: o caminho de cada arquivo vem do grafo de animação da skin.
 caminhos_anm = sorted(set(re.findall(r'"([^"]*\.anm)"', anims, re.I)))

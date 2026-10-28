@@ -49,10 +49,18 @@ EVENTOS = {
     }, {
         "vo_taunt": "Taunt3DGeneral", "vo_laugh": "Laugh3DGeneral", "vo_recall": "Recall3DGeneral",
         "vo_aa1": "IllaoiBasicAttack_cast3D", "vo_aa2": "IllaoiBasicAttack2_cast3D", "vo_crit": "IllaoiCritAttack_cast3D",
+    }),    "kayle": ({
+        "dance_cast": "Dance3D_buffactivate_in", "dance": "Dance3D_loop", "taunt": "Taunt3D_buffactivate",
+        "laugh": "Laugh3D_buffactivate", "recall": "Recall3D_leadin",
+        "aa1": "KayleBasicAttack_OnCast", "aa2": "KayleBasicAttack2_OnCast",
+        "hit1": "KayleBasicAttack_OnHit", "hit2": "KayleBasicAttack2_OnHit",
+    }, {
+        "vo_taunt": "Taunt3DGeneral", "vo_laugh": "Laugh3DGeneral", "vo_recall": "Recall3DGeneral",
+        "vo_aa1": "KayleBasicAttack_cast3D", "vo_aa2": "KayleBasicAttack2_cast3D",
     }),
 }
 SFX, VO = EVENTOS[CAMPEAO]
-NOME = {"akshan": "Akshan", "mordekaiser": "Mordekaiser", "illaoi": "Illaoi"}[CAMPEAO]
+NOME = {"akshan": "Akshan", "mordekaiser": "Mordekaiser", "illaoi": "Illaoi", "kayle": "Kayle"}[CAMPEAO]
 
 banco = f"{CAMPEAO}_skin{SKIN:02d}" if SKIN else f"{CAMPEAO}_base"
 prefixo = f"Play_sfx_{NOME}Skin{SKIN:02d}_" if SKIN else f"Play_sfx_{NOME}_"

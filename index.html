@@ -33,7 +33,7 @@ try {
   if (location.protocol !== "file:") {
     const m = document.createElement("link"); m.rel = "manifest"; m.href = "manifest.webmanifest"; document.head.appendChild(m);
   }
-  const gd = document.documentElement.dataset.guia, modelo3d = { akshan: sk ? `modelo/akshan-${sk}.glb` : "modelo/akshan.glb", mordekaiser: "modelo/mordekaiser.glb", illaoi: "modelo/illaoi.glb" }[gd];
+  const gd = document.documentElement.dataset.guia, modelo3d = { akshan: sk ? `modelo/akshan-${sk}.glb` : "modelo/akshan.glb", mordekaiser: "modelo/mordekaiser.glb", illaoi: "modelo/illaoi.glb", kayle: "modelo/kayle.glb" }[gd];
   if (location.protocol !== "file:" && matchMedia("(min-width: 1720px)").matches && modelo3d && localStorage.getItem("akshan3d") !== "0") {
     [["modulepreload", "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js"], ["modulepreload", "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/loaders/GLTFLoader.js"], ["modulepreload", "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/utils/BufferGeometryUtils.js"],
      ["preload", modelo3d]].forEach(([rel, href]) => {
@@ -2684,6 +2684,17 @@ const CONF_3D = {
     seq: { dance: [["dance_intro", 1], ["dance", 3]], taunt: [["taunt", 1]], laugh: [["laugh", 1]],
       attack: [["attack1", 1], ["attack2", 1], ["crit", 1]], recall: [["recall", 1]] },
     luz: [0xfff6dc, 0x0c1a18, 0xffe2a0, 0x5fe0cc], brilho: "240,190,90", emissivo: .45, caixaPose: true,
+  },  kayle: {
+    // Forma final (asas e espada de fogo): skin3d.py mostra as partes que o jogo esconde no nível 1.
+    modelo: () => "modelo/kayle.glb",
+    sons: "kayle3d",
+    variacoes: () => ({ dance_cast: 1, dance: 1, taunt: 1, laugh: 1, recall: 1, aa1: 4, aa2: 4, hit1: 4, hit2: 4,
+      vo_taunt: 2, vo_laugh: 3, vo_recall: 2, vo_aa1: 8, vo_aa2: 8 }),
+    clipe: () => ({ dance_intro: ["dance_cast"], dance: ["dance~"], taunt: ["taunt", "vo_taunt"], laugh: ["laugh", "vo_laugh"],
+      recall: ["recall", "vo_recall"], attack1: ["aa1@.15", "vo_aa1", "hit1@.45"], attack2: ["aa2@.15", "vo_aa2", "hit2@.45"] }),
+    seq: { dance: [["dance_intro", 1], ["dance", 2]], taunt: [["taunt", 1]], laugh: [["laugh", 1]],
+      attack: [["attack1", 1], ["attack2", 1]], recall: [["recall", 1]] },
+    luz: [0xfff1dc, 0x0c1024, 0xffd6a3, 0x9fb6e8], brilho: "255,160,80", emissivo: .6, caixaPose: true,
   },
 };
 const EMOTES_3D = ["dance", "taunt", "laugh"];
