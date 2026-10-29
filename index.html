@@ -536,42 +536,73 @@ body.sem-rolar { overflow: hidden; }
 .pagina > .rodape { grid-column: auto; grid-row: auto; margin-top: 12px; }
 .pagina > h2 { margin: 4px 0 0; font: 800 clamp(24px, 3vw, 34px)/1.1 var(--titulo); letter-spacing: .03em; color: var(--acento-vivo); }
 .pagina .lead { margin: -8px 0 0; font-size: 15px; color: var(--texto-baixo); }
-/* Crédito no topo das páginas do guia: a marca do BattleMatch, de quem são as notas e os links do autor. */
-.pg-credito { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 18px; margin-top: -6px; padding: 14px 18px; border-radius: 12px;
-  background: linear-gradient(90deg, rgba(198, 242, 78, .08), transparent 60%), var(--painel); border: 1px solid var(--linha); border-left: 3px solid #c6f24e; }
-.pg-credito img { width: 56px; height: 56px; flex: none; border-radius: 50%; box-shadow: 0 0 0 2px var(--fundo), 0 0 0 3px var(--acento); }
-.pg-credito-txt { flex: 1 1 260px; min-width: 0; display: grid; gap: 2px; }
-.pg-credito p { margin: 0; }
-.pg-credito-marca { font: 700 12px var(--corpo); letter-spacing: .14em; text-transform: uppercase; color: var(--texto-baixo); }
-.pg-credito-marca b { color: #c6f24e; font-weight: 800; }
-:root[data-tema="claro"] .pg-credito-marca b { color: #4d6b00; }
-:root[data-tema="claro"] .pg-credito { border-left-color: #7fa312; }
-.pg-credito-quem { font-size: 16px; color: var(--texto); }
-.pg-credito-quem b { color: var(--acento-vivo); }
-.pg-credito-obs { font-size: 13.5px; color: var(--texto-baixo); }
-/* Links em botão (no crédito e nas linhas "Rótulo: link" da planilha). */
+/* Páginas do guia na identidade "Rota" do BattleMatch (iguais em todos os guias; só os painéis seguem a paleta do campeão):
+   faixa grafite da marca com a rota na diagonal, da bolinha limão (você) ao anel com o campeão do guia, e as seções
+   penduradas num trilho vertical que sai da bolinha e termina num anel. */
+.pagina { --rota-x: 18px; --rota-recuo: 44px; --limao: #c6f24e; --grafite: #14161c; }
+:root[data-tema="claro"] .pagina { --limao-texto: #4f7a12; }
+.pg-hero { position: relative; overflow: hidden; display: grid; gap: 8px; padding: 26px 132px 30px var(--rota-recuo); border-radius: 16px; background: var(--grafite); color: #f2f2ee;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .06); color-scheme: dark; }
+.pg-hero::before { content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(420px 220px at 100% 0, rgba(198, 242, 78, .12), transparent 70%); }
+.pg-hero-rota { position: absolute; left: var(--rota-x); bottom: 26px; right: 66px; top: 66px; width: calc(100% - var(--rota-x) - 66px); height: calc(100% - 92px); overflow: visible; pointer-events: none; }
+.pg-hero-rota line { stroke: #2c303a; stroke-width: 10; stroke-linecap: round; }
+.pg-hero-voce { position: absolute; left: calc(var(--rota-x) - 9px); bottom: 17px; width: 18px; height: 18px; border-radius: 50%; background: var(--limao); box-shadow: 0 0 0 4px var(--grafite); }
+.pg-hero-anel { position: absolute; right: 30px; top: 30px; width: 72px; height: 72px; border-radius: 50%; padding: 5px; border: 4px solid var(--limao); background: var(--grafite); }
+.pg-hero-anel img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+.pg-hero > :not(svg):not(span) { position: relative; margin: 0; }
+.pg-hero-marca { font: 800 13px var(--corpo); letter-spacing: .02em; color: #a0a5b2; }
+.pg-hero-marca b { font-weight: 800; color: var(--limao); }
+.pg-hero h2 { font: 800 clamp(34px, 5vw, 52px)/1 var(--corpo); letter-spacing: -.02em; text-transform: lowercase; color: #f2f2ee; }
+.pg-hero h2::after { content: "."; color: var(--limao); }
+.pg-hero-fonte { font-size: 15px; color: #c9ccd4; }
+.pg-hero-fonte b { color: #f2f2ee; }
+.pg-hero-obs { font-size: 13px; color: #8a8f9c; }
+.pg-hero .pg-links { margin-top: 6px; }
+.pg-hero .pg-link { background: #1d2028; border-color: #3a3f4b; color: #f2f2ee; }
+.pg-hero .pg-link svg { color: var(--limao); }
+.pg-hero .pg-link:hover { border-color: var(--limao); color: #fff; }
+/* O trilho: cada bloco da página fica à direita da rota, com a bolinha na altura do título; o último fecha com o anel. */
+.pagina > :not(.pg-hero):not(.rodape) { position: relative; margin-left: var(--rota-recuo); }
+.pagina > :not(.pg-hero):not(.rodape)::before { content: ""; position: absolute; left: calc(var(--rota-x) - var(--rota-recuo) - 2px); top: -46px; bottom: -22px; width: 4px; border-radius: 2px; background: var(--linha-forte); }
+.pagina > :not(.pg-hero):not(.rodape)::after { content: ""; position: absolute; left: calc(var(--rota-x) - var(--rota-recuo) - 7px); top: 22px; width: 14px; height: 14px; border-radius: 50%;
+  background: var(--limao-texto, var(--limao)); box-shadow: 0 0 0 4px var(--fundo); }
+.pagina > :nth-last-child(2):not(.pg-hero)::before { bottom: auto; height: 68px; }
+.pagina > :nth-last-child(2):not(.pg-hero)::after { width: 18px; height: 18px; left: calc(var(--rota-x) - var(--rota-recuo) - 9px); background: var(--fundo); border: 4px solid var(--limao-texto, var(--limao)); box-shadow: none; }
+.pagina > .rodape { margin-left: var(--rota-recuo); }
+/* Títulos das seções na letra da marca: Hanken 800 em minúsculas. */
+.pagina .pg-bloco > h3, .pagina .pg-grupo > h3 { font: 800 21px/1.2 var(--corpo); letter-spacing: -.01em; text-transform: lowercase; color: var(--texto); }
+.pagina .pg-secao h4 { font: 800 15px var(--corpo); letter-spacing: 0; text-transform: lowercase; color: var(--acento-vivo); }
+/* Links em botão (no topo e nas linhas "Rótulo: link" da planilha). */
 .pg-links { display: flex; flex-wrap: wrap; gap: 8px; }
-.pg-link { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 6px 14px; border-radius: 999px; border: 1px solid var(--linha-forte);
+.pg-link { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 0 8px; min-height: 40px; padding: 6px 14px; border-radius: 999px; border: 1px solid var(--linha-forte);
   background: var(--painel-alto); color: var(--texto); text-decoration: none; font-size: 14px; max-width: 100%; }
 .pg-bloco .pg-link { color: var(--texto); }
 .pg-link b { font-weight: 700; min-width: 0; overflow-wrap: anywhere; }
-.pg-link { flex-wrap: wrap; row-gap: 0; }
 .pg-link span { color: var(--texto-baixo); font-size: 13px; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .pg-link svg { flex: none; color: var(--acento); }
 .pg-link:hover { border-color: var(--acento-vivo); color: var(--acento-vivo); }
-/* "1. ..." da planilha: lista numerada com o número em destaque. */
+/* "1. ..." da planilha: número na bolinha limão da marca. Linhas com emoji: lista com o emoji de marcador. */
 .pg-numerada, .pg-emojis { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
 .pg-numerada li, .pg-emojis li { display: flex; gap: 14px; align-items: flex-start; padding: 12px 14px; border-radius: 10px; background: var(--painel-alto); }
-.pg-numerada .num { flex: none; display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--destaque); color: var(--tinta-botao); font: 800 14px var(--corpo); }
+.pg-numerada .num { flex: none; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--limao); color: var(--grafite); font: 800 14px var(--corpo); }
 .pg-emojis li { padding: 8px 14px; align-items: center; }
 .pg-emojis .emo { flex: none; font-size: 20px; line-height: 1; }
 .pg-numerada p, .pg-emojis p { margin: 0; }
 /* Níveis de dificuldade da legenda do autor: um cartão por nível, com a mesma cor das bordas da lista. */
 .pg-niveis { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); }
 .pg-niveis li { display: grid; gap: 6px; align-content: start; padding: 12px 14px; border-radius: 10px; background: var(--painel-alto); border-top: 3px solid var(--dif); }
-.pg-niveis b { display: flex; align-items: center; gap: 8px; font: 700 13px var(--corpo); letter-spacing: .1em; text-transform: uppercase; }
+.pg-niveis b { display: flex; align-items: center; gap: 8px; font: 800 15px var(--corpo); text-transform: lowercase; }
 .pg-niveis i { width: 10px; height: 10px; border-radius: 50%; background: var(--dif); }
 .pg-niveis p { margin: 0; font-size: 14.5px; line-height: 1.5; color: var(--texto-baixo); }
+@media (max-width: 640px) {
+  .pagina { --rota-x: 10px; --rota-recuo: 26px; }
+  .pg-hero { padding: 22px 18px 34px var(--rota-recuo); }
+  .pg-hero-anel { width: 56px; height: 56px; right: 16px; top: 16px; border-width: 3px; padding: 4px; }
+  .pg-hero-rota { right: 44px; top: 44px; width: calc(100% - var(--rota-x) - 44px); height: calc(100% - 70px); }
+  .pg-hero-rota line { stroke-width: 7; }
+  .pg-hero h2, .pg-hero-marca { padding-right: 64px; }
+}
 .pg-bloco { min-width: 0; padding: 20px 22px; border-radius: 12px; background: var(--painel); border: 1px solid var(--linha); }
 .pg-bloco > h3, .pg-grupo > h3 { overflow-wrap: anywhere; margin: 0 0 12px; font: 700 15px var(--titulo); letter-spacing: .12em; text-transform: uppercase; color: var(--acento-vivo); }
 .pg-bloco p { margin: 0; font-size: 16px; line-height: 1.6; white-space: pre-line; overflow-wrap: anywhere; }
@@ -2105,11 +2136,13 @@ function renderPaginas() {
   const pg = ps.find(p => p.id === paginaAtual);
   // Crédito do BattleMatch em cima: o site organiza, o conteúdo é do autor da planilha (com os links dele em botão).
   const linksAutor = (guia.links || []).map(l => `<a class="pg-link" href="${esc(l.url)}" target="_blank" rel="noopener"><b>${esc((L === "en" && l.rotulo_en) || l.rotulo)}</b><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M4 2h6v6M10 2L3 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a>`).join("");
-  $("pagina").innerHTML = `<h2>${esc(t(NOME_PAGINA[pg.id] || pg.id))}</h2>
-    <header class="pg-credito"><img src="${sq(guia.campeao.id)}" alt="" width="56" height="56"><div class="pg-credito-txt">
-      <p class="pg-credito-marca">battle<b>match</b> · ${esc(t("pgGuiaDe").replace("{c}", guia.campeao.nome))}</p>
-      <p class="pg-credito-quem">${t("pgCredito").replace("{a}", `<b>${esc(guia.autor)}</b>`)}</p>
-      <p class="pg-credito-obs">${esc(t(L !== "en" && guia.traducao_pt ? "pgTraduzido" : "pgOriginal"))}</p></div>
+  $("pagina").innerHTML = `<header class="pg-hero">
+      <svg class="pg-hero-rota" aria-hidden="true"><line x1="0" y1="100%" x2="100%" y2="0"/></svg><span class="pg-hero-voce" aria-hidden="true"></span>
+      <span class="pg-hero-anel" aria-hidden="true"><img src="${sq(guia.campeao.id)}" alt="" width="56" height="56"></span>
+      <p class="pg-hero-marca">battle<b>match</b> · ${esc(t("pgGuiaDe").replace("{c}", guia.campeao.nome))}</p>
+      <h2>${esc(t(NOME_PAGINA[pg.id] || pg.id))}</h2>
+      <p class="pg-hero-fonte">${t("pgCredito").replace("{a}", `<b>${esc(guia.autor)}</b>`)}</p>
+      <p class="pg-hero-obs">${esc(t(L !== "en" && guia.traducao_pt ? "pgTraduzido" : "pgOriginal"))}</p>
       ${linksAutor ? `<div class="pg-links">${linksAutor}</div>` : ""}</header>` + pg.blocos.map(b => (BLOCOS[b.tipo] || (() => ""))(b)).join("")
     + `<footer class="rodape">${$("rodape").innerHTML}</footer>`;
 }
