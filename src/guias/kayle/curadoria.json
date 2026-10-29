@@ -1,0 +1,27 @@
+{
+ "remover": [
+  "This spreadsheet was made by UJard",
+  "To show your support to UJard",
+  "Hey guys, currently editing",
+  "YouTube: UJard",
+  "Patreon: UJard"
+ ],
+ "trocar": {
+  "September 2026: The spreadsheet is NOT up to date.": {
+   "en": "Heads-up: UJard's original spreadsheet is NOT up to date (September 2026).",
+   "pt": "Aviso: a planilha original do UJard NÃO está atualizada (setembro de 2026)."
+  },
+  "Current bans:": {
+   "en": "UJard's current bans: Top: Jax/Malphite · Mid: Hwei.",
+   "pt": "Bans atuais do UJard: Top: Jax/Malphite · Mid: Hwei."
+  },
+  "Note: Although I added the default Minor Runes": {
+   "en": "Note: the default shards listed for each matchup aren't always the most efficient, because some champions have other viable shards against them.\n\nFor example, against Malphite the third row defaults to \"Health\", but in games where the enemy team has a lot of CC, \"Tenacity and Slow Resist\" is more efficient.",
+   "pt": "Obs.: os fragmentos padrão de cada matchup nem sempre são os mais eficientes, porque alguns campeões têm outros fragmentos viáveis contra eles.\n\nPor exemplo, contra o Malphite a terceira linha vem com \"Vida\", mas em jogos em que o time inimigo tem muito controle de grupo, \"Tenacidade e Resistência a Lentidão\" é mais eficiente."
+  },
+  "Do NOT buy these items unless": {
+   "en": "Do NOT buy these items unless you know exactly what you're doing. They're only viable on Kayle in VERY niche scenarios (UJard builds them maybe once or twice per season).",
+   "pt": "NÃO compre estes itens a não ser que saiba exatamente o que está fazendo. Eles só são viáveis na Kayle em cenários MUITO específicos (o UJard faz talvez uma ou duas vezes por temporada)."
+  }
+ }
+}

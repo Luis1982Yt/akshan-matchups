@@ -1,0 +1,19 @@
+{
+ "remover": [
+  "Socials"
+ ],
+ "trocar": {
+  "Illaoi Matchup Sheet/Mechanics/Tips/Content Creators": {
+   "en": "About this guide",
+   "pt": "Sobre este guia"
+  },
+  "Hello My name is Hachiragi": {
+   "en": "This sheet covers how to play matchups, items and tips & tricks against specific champions. It assumes both players are the same level with the same experience, because every matchup depends on who's piloting the champions: some people find the Mordekaiser matchup easy, others perma-ban it. It's a general guide to how each matchup should go, made to help newer players.",
+   "pt": "Esta planilha mostra como jogar as matchups, os itens e dicas e truques contra campeões específicos. Ela considera os dois jogadores no mesmo nível e com a mesma experiência, porque toda matchup depende de quem está jogando: tem gente que acha a matchup contra o Mordekaiser fácil e tem gente que bane ela sempre. É um guia geral de como cada matchup deve ir, feito para ajudar quem está começando."
+  },
+  "I wanna say that all matchups": {
+   "en": "All matchups depend on the players piloting their champions. The sheet assumes both players are the same level; since people play very differently in high and low elo, some matchups may lean toward how they go in high elo.",
+   "pt": "Todas as matchups dependem de quem está jogando. A planilha considera os dois jogadores no mesmo nível; como se joga muito diferente no elo alto e no elo baixo, algumas matchups podem puxar para como elas vão no elo alto."
+  }
+ }
+}

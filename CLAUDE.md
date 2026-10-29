@@ -11,8 +11,13 @@ GUIAS_FUTUROS.md, como tudo funciona em README.md e app/README.md.
 - **Terminou uma mudança: commit + push direto na main** ("sobe sempre que terminar"). Antes do push, `git pull --rebase`
   (o workflow diário faz commits de bot), rodar `python scripts/build.py` de novo se o index.html conflitar. A Vercel publica sozinha.
 - Nunca editar `index.html` à mão: editar `src/template.html` e os dados, depois `python scripts/build.py`.
-- Nunca mudar o texto das notas das planilhas (voz do autor, gírias e erros incluídos). Tradução é camada à parte
+- Nunca mudar o texto das notas das matchups (voz do autor, gírias e erros incluídos). Tradução é camada à parte
   (`src/guias/<guia>/traducao_pt.json`, `scripts/traducao_pt.py --faltando`; `traducao_en.json` no Akshan).
+- O site é para aprender a matchup, e é do dono, não dos autores (pedido de 2026-10-29). Nas páginas extras do guia
+  (Geral, Sobre, Criadores…) sai o que é sobre o criador da planilha (bio, live, redes, "meu Discord", coaching,
+  doação, aviso de beta, prints de ranking, créditos da planilha) e o que é útil mas está em primeira pessoa vira texto
+  neutro. Isso fica em `src/guias/<guia>/curadoria.json` ("remover" e "trocar", com EN e PT), aplicado pelo build;
+  guia novo ganha o seu. Opinião de jogo em primeira pessoa ("eu prefiro Cicloespada") pode ficar: é a dica.
 - O site precisa abrir com dois cliques (file://). Sem npm, sem framework, sem dependência nova no site.
 - Testar em celular 390 px e desktop 1440 px, sem rolagem para o lado, temas claro e escuro.
 - Manter o aviso de projeto de fã, sem ligação com a Riot.

@@ -1,0 +1,49 @@
+{
+ "remover": [
+  "My name is Sad",
+  "Stream:",
+  "Channel:",
+  "My accounts that I'm playing",
+  "!!!NEW ADDITIONS!!!",
+  "Coaching:",
+  "Patreon:",
+  "📚",
+  "🎥",
+  "💬",
+  "🧠",
+  "If you want to personally ask me",
+  "Challenger EUNE",
+  "Rank 1",
+  "created and organised by"
+ ],
+ "trocar": {
+  "Fiora Matchup Spreadsheet 2026": {
+   "en": "How to read this guide",
+   "pt": "Como ler este guia"
+  },
+  "A 2.5 hour video going through each matchup": {
+   "en": "Sad's 2.5-hour video going through each matchup: https://www.youtube.com/watch?v=VbSP50h6smk",
+   "pt": "Vídeo de 2h30 do Sad passando por cada matchup: https://www.youtube.com/watch?v=VbSP50h6smk"
+  },
+  "The Best Resource for finding VODs": {
+   "en": "VODs of Fiora players playing out each matchup: https://dpm.lol/matchups",
+   "pt": "VODs de jogadores de Fiora jogando cada matchup: https://dpm.lol/matchups"
+  },
+  "1. These matchups are written": {
+   "en": "1. These matchups assume both players play their champions reasonably well: the enemy doesn't throw their CC straight at you, and they try to kite the vitals to some degree. Unless the matchup says otherwise, assume you win the level 1 all-in. You are Fiora.",
+   "pt": "1. As matchups consideram que os dois jogadores jogam razoavelmente bem com os seus campeões: o inimigo não joga o controle de grupo direto em você e tenta kitar os vitais até certo ponto. A não ser que a matchup diga o contrário, considere que você ganha o all-in do nível 1. Você é a Fiora."
+  },
+  "4. In Runes:": {
+   "en": "4. Runes: when there are two, both are viable. Pick depending on the rest of the enemy team comp (squishy/tanky or short/long fights) and how you want to trade in lane.",
+   "pt": "4. Runas: quando há duas, as duas são viáveis. Escolha de acordo com o resto da composição inimiga (frágil/resistente ou luta curta/longa) e com o jeito que você quer trocar na rota."
+  },
+  "5. In Summoner Spells:": {
+   "en": "5. Summoner spells: the one listed is optimal. When there are several, pick the one you're most comfortable with; Ignite = more aggressive fighting.",
+   "pt": "5. Feitiços: o que aparece é o ideal. Quando há mais de um, escolha o que você se sente mais à vontade; Incendiar = lutar de forma mais agressiva."
+  },
+  "SEASON 16 GUIDE:": {
+   "en": "Sad's Season 16 guide: https://youtu.be/tOilmDoeA_U",
+   "pt": "Guia da Season 16 do Sad: https://youtu.be/tOilmDoeA_U"
+  }
+ }
+}

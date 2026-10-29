@@ -64,6 +64,87 @@ def guia_completo(cfg, pasta):
             "traducao_pt": {"textos": camada.get("textos", {}), "nomes": camada.get("nomes", {})} if camada else None}
 
 
+def _normal(t):
+    return re.sub(r"\s+", " ", (t or "")).strip().lower()
+
+
+def curar(paginas, cur):
+    """Curadoria das páginas do guia (src/guias/<guia>/curadoria.json), aplicada aqui para a atualização diária não desfazer.
+    O site é para aprender a matchup: sai o que é sobre o criador da planilha (bio, redes, Discord pessoal, doação,
+    aviso de beta, prints de ranking) e o que é útil mas está em primeira pessoa vira texto neutro.
+      "remover": começos de texto; some o texto, a imagem (pela legenda), o item de lista ou a seção inteira (pelo título).
+      "trocar": {começo do texto original: {"en": texto novo, "pt": tradução}} (os links do original continuam).
+    Devolve as páginas curadas e as traduções PT dos textos novos. As notas das matchups não passam por aqui."""
+    remover = [_normal(x) for x in cur.get("remover", [])]
+    trocar = [(_normal(k), v) for k, v in cur.get("trocar", {}).items()]
+    usados, pt = set(), {}
+
+    def bate(t):
+        n = _normal(t)
+        achado = next((r for r in remover if n and n.startswith(r)), None)
+        if achado:
+            usados.add(achado)
+        return bool(achado)
+
+    def troca(x):
+        if isinstance(x, dict):
+            for k in ("texto", "titulo"):
+                if isinstance(x.get(k), str):
+                    n = _normal(x[k])
+                    for chave, novo in trocar:
+                        if n and n.startswith(chave):
+                            usados.add(chave)
+                            x[k] = novo["en"]
+                            if novo.get("pt"):
+                                pt[novo["en"]] = novo["pt"]
+                            break
+            for v in x.values():
+                troca(v)
+        elif isinstance(x, list):
+            for v in x:
+                troca(v)
+
+    def bloco(b):
+        """O bloco curado, ou None se ele sai inteiro."""
+        if bate(b.get("titulo")) or (b["tipo"] in ("texto", "aviso", "lista") and bate(b.get("texto"))):
+            return None
+        if "itens" in b and b["tipo"] == "lista":
+            antes = len(b["itens"])
+            b["itens"] = [i for i in b["itens"] if not bate(i.get("texto"))]
+            if antes and not b["itens"]:
+                return None
+        if b["tipo"] == "secao":
+            partes = []
+            for x in b["partes"]:
+                if x["tipo"] in ("p", "sub") and bate(x.get("texto")):
+                    continue
+                if x["tipo"] == "lista":
+                    x["itens"] = [i for i in x["itens"] if not bate(i.get("texto"))]
+                    if not x["itens"]:
+                        continue
+                if x["tipo"] == "imagens":
+                    x["imagens"] = [i for i in x["imagens"] if not bate(i.get("legenda"))]
+                    if not x["imagens"]:
+                        continue
+                if x["tipo"] == "bloco":
+                    x["bloco"] = bloco(x["bloco"])
+                    if not x["bloco"]:
+                        continue
+                partes.append(x)
+            b["partes"] = partes
+            if not partes:
+                return None
+        return b
+
+    for pg in paginas:
+        pg["blocos"] = [b for b in (bloco(b) for b in pg["blocos"]) if b]
+    troca(paginas)
+    sobrando = [r for r in remover + [k for k, _ in trocar] if r not in usados]
+    if sobrando:
+        print("  curadoria: textos que não existem mais na planilha (confira o curadoria.json):", sobrando)
+    return paginas, pt
+
+
 template = (SRC / "template.html").read_text(encoding="utf-8")
 for marker in ("/*GUIAS*/", "/*FONTS*/", "/*IDS*/", "/*ICONE*/", "/*ICONE_APPLE*/", "/*TITULO_OG*/", "/*VER_DD*/"):
     if template.count(marker) != 1:
@@ -79,6 +160,11 @@ for cfg in json.loads((SRC / "guias.json").read_text(encoding="utf-8")):
     # Outras abas da planilha do autor (itens, runas, criadores...), gravadas por scripts/paginas_<campeão>.py.
     if (pasta / "paginas.json").exists():
         g["paginas"] = json.loads((pasta / "paginas.json").read_text(encoding="utf-8"))
+        if (pasta / "curadoria.json").exists():
+            print(f"{cfg['id']}:")
+            g["paginas"], pt = curar(g["paginas"], json.loads((pasta / "curadoria.json").read_text(encoding="utf-8")))
+            if g.get("traducao_pt"):
+                g["traducao_pt"]["textos"].update(pt)
     guias.append(g)
 
 # Lista para o app da seleção de campeões (app/akshan_app.py): de qual campeão é cada guia, a rota
