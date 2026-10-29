@@ -25,7 +25,7 @@ SONS_UI = {
     "clique": "sfx-uikit-generic-click-small",
 }
 # Id numérico do campeão no cliente, para a fala de escolha.
-CHAVE = {"Akshan": 166, "Mordekaiser": 82, "Illaoi": 420, "Kayle": 10, "Fiora": 114}
+CHAVE = {"Akshan": 166, "Mordekaiser": 82, "Illaoi": 420, "Kayle": 10, "Fiora": 114, "K'Sante": 897}
 
 
 def baixar(url, destino):
@@ -40,8 +40,9 @@ for nome, arquivo in SONS_UI.items():
 
 for guia in json.loads((ROOT / "src" / "guias.json").read_text(encoding="utf-8")):
     campeao = guia["campeao"]
+    arquivo = guia.get("id_campeao", campeao)  # o site toca sons/vo/<id do campeão>.ogg
     if campeao in CHAVE:
-        baixar(f"{VO}/{CHAVE[campeao]}.ogg", ROOT / "sons" / "vo" / f"{campeao}.ogg")
-        baixar(f"{VO_EN}/{CHAVE[campeao]}.ogg", ROOT / "sons" / "vo" / "en" / f"{campeao}.ogg")
+        baixar(f"{VO}/{CHAVE[campeao]}.ogg", ROOT / "sons" / "vo" / f"{arquivo}.ogg")
+        baixar(f"{VO_EN}/{CHAVE[campeao]}.ogg", ROOT / "sons" / "vo" / "en" / f"{arquivo}.ogg")
     else:
         print(f"Sem id numérico para {campeao}: acrescente em CHAVE para ter a fala de escolha.")

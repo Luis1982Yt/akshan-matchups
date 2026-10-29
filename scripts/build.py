@@ -56,10 +56,12 @@ def guia_completo(cfg, pasta):
     titulos_en = camada.get("titulos_en", {})
     for m in dados["matchups"]:
         m["titulo_en"] = titulos_en.get(m["id"], "")
-    eu = next((m for m in dados["matchups"] if m["id"] == cfg["campeao"]), None)
+    # "id_campeao" quando o nome não é o id da Riot (K'Sante -> KSante); é o que monta as imagens do Data Dragon.
+    cid = cfg.get("id_campeao", cfg["campeao"])
+    eu = next((m for m in dados["matchups"] if m["id"] == cid), None)
     # Sem o espelho na planilha, o título vem do guias.json.
-    campeao = {"id": cfg["campeao"], "nome": eu["nome"] if eu else cfg["campeao"], "titulo": eu["titulo"] if eu else cfg.get("titulo", ""),
-               "titulo_en": cfg.get("titulo_en") or titulos_en.get(cfg["campeao"], "")}
+    campeao = {"id": cid, "nome": eu["nome"] if eu else cfg["campeao"], "titulo": eu["titulo"] if eu else cfg.get("titulo", ""),
+               "titulo_en": cfg.get("titulo_en") or titulos_en.get(cid, "")}
     return {"campeao": campeao, "matchups": dados["matchups"],
             "traducao_pt": {"textos": camada.get("textos", {}), "nomes": camada.get("nomes", {})} if camada else None}
 

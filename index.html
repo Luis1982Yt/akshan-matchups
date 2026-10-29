@@ -288,6 +288,23 @@ try {
   --texto: #1c2133; --texto-baixo: #525a74; --tinta-botao: #1a0f05;
   --luz: rgba(240, 130, 60, .12); color-scheme: light;
 }
+/* K'Sante: o pôr do sol de Nazumah (marrom-vinho), o bronze da armadura e o violeta da túnica. */
+:root[data-guia="ksante"] {
+  --fundo: #110b0b; --painel: #1b1212; --painel-alto: #251918;
+  --linha: rgba(224, 166, 107, .22); --linha-forte: rgba(224, 166, 107, .48);
+  --acento: #e0a66b; --acento-vivo: #f6d2a8; --destaque: #a98bff;
+  --texto: #f0e6df; --texto-baixo: #b09d93; --tinta-botao: #140a20;
+  --luz: rgba(224, 140, 90, .13); --sombra: 0 10px 30px rgba(0, 0, 0, .5);
+  --sobre-arte: #fff0e0; --destaque-arte: #c4b0ff; --botao-1: #ffd9b0; --botao-2: #c9824a;
+  --brilho: rgba(255, 220, 180, .5); --brilho-2: rgba(169, 139, 255, .2); color-scheme: dark;
+}
+:root[data-guia="ksante"][data-tema="claro"] {
+  --fundo: #f6efe9; --painel: #fffaf6; --painel-alto: #eee0d4;
+  --linha: rgba(120, 70, 40, .26); --linha-forte: rgba(120, 70, 40, .55);
+  --acento: #8a4f22; --acento-vivo: #6b3a14; --destaque: #6b4fd1;
+  --texto: #241713; --texto-baixo: #6a564c; --tinta-botao: #ffffff;
+  --luz: rgba(224, 140, 90, .12); --sombra: 0 10px 30px rgba(80, 40, 20, .14); color-scheme: light;
+}
 /* Fiora: a noite azul-ardósia da catedral, a prata-lavanda da armadura e o rosa das pétalas da splash padrão. */
 :root[data-guia="fiora"] {
   --fundo: #0c0d16; --painel: #141624; --painel-alto: #1c1f33;
@@ -1030,6 +1047,8 @@ b.ruim { font-weight: 700; color: var(--dif-dificil); }
 .secoes ul { margin: 0 0 14px; padding: 0; list-style: none; display: grid; gap: 10px; }
 .secoes li { position: relative; padding-left: 22px; font-size: 17px; line-height: 1.7; }
 .secoes li::before { content: ""; position: absolute; left: 4px; top: .7em; width: 7px; height: 7px; transform: rotate(45deg); background: var(--destaque); }
+/* Texto original da planilha embaixo da linha de runas (mostra as alternativas, como "Overgrowth/Unflinching"). */
+.nota-runa { flex-basis: 100%; margin: 4px 0 0; font-size: 13px; line-height: 1.45; color: var(--texto-baixo); }
 .cds { width: 100%; max-width: 560px; border-collapse: collapse; font-size: 15px; }
 .cds th, .cds td { padding: 9px 12px 9px 0; border-bottom: 1px solid var(--linha); text-align: left; vertical-align: top; }
 .cds th { font-weight: 700; color: var(--texto); white-space: nowrap; }
@@ -1182,6 +1201,10 @@ b.ruim { font-weight: 700; color: var(--dif-dificil); }
   .trocar b { font-size: 18px; }
   .trocar b.longo { font-size: 14px; letter-spacing: 0; }  /* Mordekaiser cabe sem reticências */
   .navega .lbl { display: none; }
+  /* Nome comprido do vizinho (Cho'Gath, Dr. Mundo) não empurra a linha para fora da tela. */
+  .navega { gap: 8px; }
+  .navega div { min-width: 0; gap: 6px; }
+  .navega button { padding: 0 10px; min-width: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
   .trava.on .eu, .trava.on .ele, .trava.on .vs, .trava.on::before { animation: none; }
@@ -1413,7 +1436,7 @@ const TXT = {
     guiaAtual: "Guia atual: ", trocarGuia: ". Trocar de guia", notasDo: "notas do ", matchups: " matchups", aberto: "Aberto",
     facil: "Fácil", medio: "Médio", dificil: "Difícil", resumo: "Resumo", runas: "Runas", itens: "Itens", geral: "Geral",
     principal: "Principal", fragmentos: "Fragmentos", ou: "ou", opcao: "Opção", cds: "Cooldowns", cdsTit: "Cooldowns do inimigo", cdsDe: "Cooldowns · {c}", passiva: "Passiva", cdsBase: "Cooldowns base de cada nível da habilidade, sem aceleração de habilidade.",
-    paginasGuia: "Páginas do guia", pgMatchups: "Matchups", pgSobre: "Sobre", pgItens: "Itens", pgRunas: "Runas", pgSetups: "Setups alternativos", pgCriadores: "Criadores", pgGeral: "Geral", pgDicas: "Dicas", pgMacro: "Macro", pgHabilidades: "Habilidades", pgAmeacas: "Ameaças no late", pgInspiracao: "Por que Inspiração", pgNotas: "Notas", runasPlanilha: "Fragmentos da planilha original",
+    paginasGuia: "Páginas do guia", pgMatchups: "Matchups", pgSobre: "Sobre", pgItens: "Itens", pgRunas: "Runas", pgSetups: "Setups alternativos", pgCriadores: "Criadores", pgGeral: "Geral", pgDicas: "Dicas", pgMacro: "Macro", pgHabilidades: "Habilidades", pgAmeacas: "Ameaças no late", pgInspiracao: "Por que Inspiração", pgNotas: "Notas", pgDificuldades: "Dificuldades", runasPlanilha: "Fragmentos da planilha original",
     pgOriginal: "Adaptado da planilha original, em inglês.", pgGuiaDe: "guia de {c}", pgCredito: "Notas de {a}, reunidas e organizadas pelo BattleMatch.", pgTraduzido: "Adaptado e traduzido da planilha original em inglês.", outraBuild: "Outra build", estagios: ["1º item", "2º item", "3º item", "4º item+"], estViavel: "dá para fazer nesse momento da build", estSo: "só comentário",
     lerMais: "Ler mais", lerMenos: "Ler menos", semComentario: "Sem comentário", arvores: { Precision: "Precisão", Domination: "Dominação", Sorcery: "Feitiçaria", Resolve: "Determinação", Inspiration: "Inspiração" },
     setRunas: "Runas", setItens: "Itens", setExemplo: "Exemplo", setComentario: "Comentário", ultimaMudanca: "Última mudança do campeão", emote: "Arraste para girar · clique para uma emote", mostra3d: "Mostrar o {c} 3D", skins: "Skins do Akshan", skinAnt: "Skin anterior", copiar: "Copiar link", copiado: "Link copiado!", copiarLink: "Copiar o link desta matchup", skinProx: "Próxima skin", chromas: "Chromas", semChroma: "Sem chroma", esconde3d: "Esconder o {c} 3D", carrega3d: "Carregando {c}…", tierBotao: "Tier list das matchups", tierTit: "Tier list · {c}", fechar: "Fechar", aoVivo: "Ao vivo", acompanhe: "Acompanhe mono {c}s", assistir: "Assistir", opggDe: "OP.GG do ", devPor: "Site feito por", contato: "Contato", baixarApp: "App para PC: abre a matchup sozinho",
@@ -1446,7 +1469,7 @@ const TXT = {
     guiaAtual: "Current guide: ", trocarGuia: ". Change guide", notasDo: "notes by ", matchups: " matchups", aberto: "Open",
     facil: "Easy", medio: "Medium", dificil: "Hard", resumo: "Summary", runas: "Runes", itens: "Items", geral: "Overall",
     principal: "Primary", fragmentos: "Shards", ou: "or", opcao: "Option", cds: "Cooldowns", cdsTit: "Enemy cooldowns", cdsDe: "Cooldowns · {c}", passiva: "Passive", cdsBase: "Base cooldowns per ability rank, without ability haste.",
-    paginasGuia: "Guide pages", pgMatchups: "Matchups", pgSobre: "About", pgItens: "Items", pgRunas: "Runes", pgSetups: "Alternative setups", pgCriadores: "Creators", pgGeral: "General", pgDicas: "Tips", pgMacro: "Macro", pgHabilidades: "Ability order", pgAmeacas: "Late-game threats", pgInspiracao: "Why Inspiration", pgNotas: "Notes", runasPlanilha: "Shards from the original spreadsheet",
+    paginasGuia: "Guide pages", pgMatchups: "Matchups", pgSobre: "About", pgItens: "Items", pgRunas: "Runes", pgSetups: "Alternative setups", pgCriadores: "Creators", pgGeral: "General", pgDicas: "Tips", pgMacro: "Macro", pgHabilidades: "Ability order", pgAmeacas: "Late-game threats", pgInspiracao: "Why Inspiration", pgNotas: "Notes", pgDificuldades: "Difficulties", runasPlanilha: "Shards from the original spreadsheet",
     pgOriginal: "Adapted from the original spreadsheet.", pgGuiaDe: "{c} guide", pgCredito: "Notes by {a}, gathered and organized by BattleMatch.", outraBuild: "Other build", estagios: ["1st item", "2nd item", "3rd item", "4th+ item"], estViavel: "viable at this point of the build", estSo: "comment only",
     lerMais: "Read more", lerMenos: "Read less", semComentario: "No comment", arvores: { Precision: "Precision", Domination: "Domination", Sorcery: "Sorcery", Resolve: "Resolve", Inspiration: "Inspiration" },
     setRunas: "Runes", setItens: "Items", setExemplo: "Example", setComentario: "Comments", ultimaMudanca: "Latest champion change", emote: "Drag to rotate · click for an emote", mostra3d: "Show 3D {c}", skins: "Akshan skins", skinAnt: "Previous skin", copiar: "Copy link", copiado: "Link copied!", copiarLink: "Copy this matchup's link", skinProx: "Next skin", chromas: "Chromas", semChroma: "No chroma", esconde3d: "Hide 3D {c}", carrega3d: "Loading {c}…", tierBotao: "Matchup tier list", tierTit: "Tier list · {c}", fechar: "Close", aoVivo: "Live", acompanhe: "Watch {c} mains", assistir: "Watch", opggDe: "OP.GG of ", devPor: "Site by", contato: "Contact", baixarApp: "PC app: opens the matchup by itself",
@@ -1729,12 +1752,13 @@ function renderGuia() {
   $("legenda").innerHTML = `${marcas}<span class="atalhos">${marcas ? " · " : ""}<kbd>/</kbd> ${t("legBusca")} · <kbd>←</kbd> <kbd>→</kbd> <kbd>↑</kbd> <kbd>↓</kbd> ${t("legTroca")}</span>`;
   const links = guia.links.map(l => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc((L === "en" && l.rotulo_en) || l.rotulo)}</a>`).join(" · ");
   const ac = guia.acompanhe || [];
-  $("acompanhe").hidden = !ac.length;
+  $("acompanhe").hidden = false;
   const losango = '<svg width="12" height="12" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1l6 6-6 6-6-6z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>';
   const twitch = '<svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 2.5L3 6.3v13.2h4.5V22h2.6l2.5-2.5h3.7l4.7-4.7V2.5zm14.6 11.4l-2.8 2.8h-4.5L9.4 19.1v-2.4H5.6V4.3h13.5zM16.2 7.2h-1.8v5.4h1.8zm-4.8 0H9.6v5.4h1.8z" fill="currentColor"/></svg>';
-  $("acompanhe").innerHTML = ac.length ? `<h2 id="acompanheTit">${losango}<span>${esc(t("acompanhe").replace("{c}", guia.campeao.nome))}</span>${losango}</h2>
-    <ul>${ac.map(x => `<li><a class="canal" href="${esc(x.url)}" target="_blank" rel="noopener">${twitch}<span><b>${esc(x.nome)}</b><small>Twitch</small></span><span class="ir" aria-hidden="true">→</span><span class="sr">, ${t("assistir")}</span></a>${x.opgg ? `<a class="opgg" href="${esc(x.opgg)}" target="_blank" rel="noopener" title="${esc(t("opggDe") + x.nome)}" aria-label="${esc(t("opggDe") + x.nome)}">OP.GG</a>` : ""}</li>`).join("")}</ul>
-    <p class="dev">${t("devPor")} <button type="button" class="dev-nome" id="devNome" aria-expanded="false" aria-controls="devContato">Luis1982<svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></p><p class="contato" id="devContato" hidden><span>${t("contato")}:</span> <a href="mailto:luiskoch7@gmail.com">luiskoch7@gmail.com</a> · <a href="https://x.com/Luis_AntonioAks" target="_blank" rel="noopener" aria-label="X (Twitter): @Luis_AntonioAks">X @Luis_AntonioAks</a></p><p class="baixa-app"><button type="button" id="verApp"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 20h8M12 16v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>${esc(t("baixarApp"))}<span class="wip">WIP</span></button></p>` : "";
+  // Sem canal do autor (K'Sante), o card mostra só o crédito do site e o app.
+  $("acompanhe").innerHTML = (ac.length ? `<h2 id="acompanheTit">${losango}<span>${esc(t("acompanhe").replace("{c}", guia.campeao.nome))}</span>${losango}</h2>
+    <ul>${ac.map(x => `<li><a class="canal" href="${esc(x.url)}" target="_blank" rel="noopener">${twitch}<span><b>${esc(x.nome)}</b><small>Twitch</small></span><span class="ir" aria-hidden="true">→</span><span class="sr">, ${t("assistir")}</span></a>${x.opgg ? `<a class="opgg" href="${esc(x.opgg)}" target="_blank" rel="noopener" title="${esc(t("opggDe") + x.nome)}" aria-label="${esc(t("opggDe") + x.nome)}">OP.GG</a>` : ""}</li>`).join("")}</ul>` : "") + `
+    <p class="dev">${t("devPor")} <button type="button" class="dev-nome" id="devNome" aria-expanded="false" aria-controls="devContato">Luis1982<svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></p><p class="contato" id="devContato" hidden><span>${t("contato")}:</span> <a href="mailto:luiskoch7@gmail.com">luiskoch7@gmail.com</a> · <a href="https://x.com/Luis_AntonioAks" target="_blank" rel="noopener" aria-label="X (Twitter): @Luis_AntonioAks">X @Luis_AntonioAks</a></p><p class="baixa-app"><button type="button" id="verApp"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 20h8M12 16v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>${esc(t("baixarApp"))}<span class="wip">WIP</span></button></p>`;
   $("verTier").hidden = !(guia.lista && guia.lista.some(c => c.dif));
   if (typeof marcaAoVivo === "function" && document.readyState === "complete") marcaAoVivo();
   $("rodape").innerHTML = `<p>${esc((L === "en" && guia.fonte_en) || guia.fonte)}${links ? " " + links + "." : ""} ${t("rodapeRiot")}</p><p class="remocao">${t("remocao")}</p><p id="estadoPlanilha" class="estado-planilha" role="status"></p>`;
@@ -1899,7 +1923,7 @@ function linhaNaLingua(l) {
 }
 
 /* ---------- Formato completo (runas, itens, dificuldade e seções) ---------- */
-const TITULOS = { "Enemy Cooldowns": "Cooldowns do inimigo", "Early Game": "Early game", "How to trade": "Como trocar", "What to watch out for": "Cuidado com", "Tips": "Dicas", "Mini Rant": "Desabafo", "Tips and Tricks": "Dicas e truques" };
+const TITULOS = { "Enemy Cooldowns": "Cooldowns do inimigo", "Early Game": "Early game", "How to trade": "Como trocar", "What to watch out for": "Cuidado com", "Tips": "Dicas", "Mini Rant": "Desabafo", "Tips and Tricks": "Dicas e truques", "Laning Overview": "Fase de rotas", "Trading / Fighting": "Trocas e lutas", "Level 6+": "Nível 6+", "Additional Information": "Informações extras", "VoD's/Clips": "VODs e clipes" };
 const KW_EN = /\b(level \d+|lvl \d+|nível \d+)\b/gi;
 const marcaEn = t => destaca(esc(t).replace(KW_EN, m => `<span class="kw">${m}</span>`));
 // Guias escritos em inglês têm uma camada em português (src/guias/<guia>/traducao_pt.json, de scripts/traducao_pt.py):
@@ -1979,7 +2003,7 @@ function setupCompleto(c) {
   // Mais de uma página de runas: "Opção 1 / Opção 2" em vez de uma embaixo da outra.
   const runas = abas("runas", c.runas.map((_, i) => t("opcao") + " " + (i + 1)), c.runas.map(bloco => bloco.map(l => l.rotulo === "Fragmentos"
     ? `<div class="linha-runa"><span class="rot">${esc(rotuloRuna(l.rotulo))}</span><p class="frag">${l.pecas.map(p => `<span class="frag-peca">${p.icone ? `<img src="${p.icone}" alt="" width="26" height="26">` : ""}${esc(nomePeca(p))}</span>`).join("")}</p></div>`
-    : `<div class="linha-runa"><span class="rot">${esc(rotuloRuna(l.rotulo))}</span><div class="pecas">${l.pecas.map(p => peca(p, true)).join("")}</div></div>`).join("")));
+    : `<div class="linha-runa"><span class="rot">${esc(rotuloRuna(l.rotulo))}</span><div class="pecas">${l.pecas.map(p => peca(p, true)).join("")}</div>${l.nota ? `<p class="nota-runa"${langOrig()}>${esc(tr(l.nota))}</p>` : ""}</div>`).join("")));
   // Builds condicionais ("If Aatrox rushes Hex Drinker" / "If he doesn't"): uma aba por condição.
   const conds = c.itens.map((g, i) => (g.rotulo && g.rotulo !== "Items vs." ? tr(g.rotulo).replace(/:\s*$/, "") : i ? t("outraBuild") : "Build"));
   const listas = c.itens.map(g => `<ol${langOrig()}>${linhasItens(g.linhas)}</ol>`);
@@ -2003,6 +2027,8 @@ function setupCompleto(c) {
 function blocoTexto(b) {
   if (b.tipo === "tabela") return `<table class="cds"><tbody>${b.linhas.map(([k, v]) => `<tr><th scope="row">${esc(tr(k))}</th><td>${esc(tr(v))}</td></tr>`).join("")}</tbody></table>`;
   if (b.tipo === "lista") return `<ul>${b.itens.map(x => `<li>${marcaEn(tr(x))}</li>`).join("")}</ul>`;
+  // Links da planilha (VoDs/clipes da matchup): botão com o texto da célula.
+  if (b.tipo === "links") return `<div class="pg-links">${b.itens.map(x => x.url ? `<a class="pg-link" href="${esc(x.url)}" target="_blank" rel="noopener"><b>${esc(tr(x.texto))}</b><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M4 2h6v6M10 2L3 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a>` : `<span class="pg-link">${esc(tr(x.texto))}</span>`).join("")}</div>`;
   return `<p>${marcaEn(tr(b.texto))}</p>`;
 }
 // "Como jogar": tudo numa página só (nada escondido em aba), o resumo primeiro e um título pequeno por seção.
@@ -2030,7 +2056,7 @@ document.addEventListener("click", e => {
 
 /* ---------- Páginas do guia (as outras abas da planilha do autor) ----------
    Texto do autor como no original no modo EN; no modo PT, a camada traduzida (tr e nomePeca). */
-const NOME_PAGINA = { sobre: "pgSobre", itens: "pgItens", runas: "pgRunas", setups: "pgSetups", criadores: "pgCriadores", geral: "pgGeral", dicas: "pgDicas", macro: "pgMacro", habilidades: "pgHabilidades", ameacas: "pgAmeacas", inspiracao: "pgInspiracao", notas: "pgNotas" };
+const NOME_PAGINA = { sobre: "pgSobre", itens: "pgItens", runas: "pgRunas", setups: "pgSetups", criadores: "pgCriadores", geral: "pgGeral", dicas: "pgDicas", macro: "pgMacro", habilidades: "pgHabilidades", ameacas: "pgAmeacas", inspiracao: "pgInspiracao", notas: "pgNotas", dificuldades: "pgDificuldades" };
 const ICONE_PAGINA = {
   matchups: '<path d="M6 4l12 16M18 4L6 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>',
   sobre: '<circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 11v6M12 7.5v.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>',

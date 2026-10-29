@@ -19,7 +19,7 @@ SRC = ROOT / "src"
 W, H = 1200, 630
 FUNDO, CREME, BAIXO = (14, 15, 19), (242, 242, 238), (160, 165, 178)
 # Onde fica o rosto na splash centralizada (fração da largura), para a faixa estreita não cortar a cabeça.
-ROSTO = {"Akshan": .45, "Mordekaiser": .5, "Illaoi": .47, "Kayle": .73, "Fiora": .52}
+ROSTO = {"Akshan": .45, "Mordekaiser": .5, "Illaoi": .47, "Kayle": .73, "Fiora": .52, "K'Sante": .5}
 
 
 def fonte(arquivo, tam, peso=None):
@@ -53,7 +53,7 @@ d = ImageDraw.Draw(img)
 # Faixas das splashes à direita, uma por guia, separadas por um fio dourado.
 x0, larg = 560, (W - 560) // len(guias)
 for i, g in enumerate(guias):
-    s = splash(g["campeao"])
+    s = splash(g.get("id_campeao", g["campeao"]))
     s = s.resize((round(s.width * H / s.height), H), Image.LANCZOS)
     centro = round(s.width * ROSTO.get(g["campeao"], .5))
     faixa = s.crop((centro - larg // 2, 0, centro - larg // 2 + larg, H))
