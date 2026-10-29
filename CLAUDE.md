@@ -44,9 +44,15 @@ GUIAS_FUTUROS.md, como tudo funciona em README.md e app/README.md.
   `python app/gerar_exe.py` — **só no Windows**. Testes: `python -m unittest app.test_akshan_app`.
 - Nunca rodar o .exe sem `--testar` ou `--testar-janela` (ele grava a inicialização com o Windows).
 - Publicar release no GitHub (`gh release create`) só depois que o dono testar e disser "pode publicar".
-- Pendente: versão nova com nome BattleMatch, ícone novo e "aceitar partida automaticamente" (já no código, desligado
-  por padrão). Ao publicar, apontar o link de download do site (`APP_URL`/`appPassos` no template) para
-  `BattleMatch.exe` e trocar o texto `appSeguro` que diz que o app nunca aceita fila.
+- **Aprovado pelo dono em 2026-10-29 ("pode publicar")**: versão nova com nome BattleMatch, ícone novo e "aceitar
+  partida automaticamente" (já no código, desligado por padrão; testes passam). Falta só, no PC (Windows):
+  1. `pip install -r app/requirements.txt` e `python app/gerar_exe.py` → `app/dist/BattleMatch.exe`.
+  2. `gh release create app-v5 app/dist/BattleMatch.exe --title "BattleMatch (app v5)" --notes "..."` (a última
+     release, app-v4, só tem `AkshanMatchups.exe`).
+  3. Só depois da release: no `src/template.html`, `APP_URL` → `.../releases/latest/download/BattleMatch.exe` e o
+     texto `appSeguro` (PT e EN) sem o "nunca aceita fila": em PT, "...só grava a página de runas e o conjunto de itens
+     da matchup, como o Porofessor (dá para desligar no menu do ícone). Nunca escolhe nem bane por você; aceitar a
+     partida sozinho é opcional e vem desligado." (EN equivalente). Conferir `appPassos` e `appTam`. Build, commit, push.
 
 ## Cuidados
 
