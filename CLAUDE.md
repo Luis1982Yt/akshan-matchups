@@ -18,6 +18,9 @@ GUIAS_FUTUROS.md, como tudo funciona em README.md e app/README.md.
   doação, aviso de beta, prints de ranking, créditos da planilha) e o que é útil mas está em primeira pessoa vira texto
   neutro. Isso fica em `src/guias/<guia>/curadoria.json` ("remover" e "trocar", com EN e PT), aplicado pelo build;
   guia novo ganha o seu. Opinião de jogo em primeira pessoa ("eu prefiro Cicloespada") pode ficar: é a dica.
+- Antes de um guia novo, ler a planilha atrás de aviso de direitos ("do not republish" etc.); se houver, pedir
+  autorização ao autor antes de publicar (nem no GitHub, que é público). Se o autor pedir para não ser citado:
+  `"autor": ""` e `"credito_minimo": true` no `guias.json`, e o script não grava nomes (caso do K'Sante).
 - O site precisa abrir com dois cliques (file://). Sem npm, sem framework, sem dependência nova no site.
 - Testar em celular 390 px e desktop 1440 px, sem rolagem para o lado, temas claro e escuro.
 - Manter o aviso de projeto de fã, sem ligação com a Riot.

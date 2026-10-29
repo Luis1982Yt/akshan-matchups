@@ -189,5 +189,33 @@
         "canal": "twitch.tv/justsad42"
       }
     ]
+  },
+  {
+    "id": "ksante",
+    "campeao": "K'Sante",
+    "id_campeao": "KSante",
+    "rota": "Top",
+    "autor": "",
+    "formato": "completo",
+    "dados": "guias/ksante",
+    "chave": 897,
+    "titulo": "o Orgulho de Nazumah",
+    "titulo_en": "the Pride of Nazumah",
+    "mira": [
+      50,
+      36
+    ],
+    "escala": 10,
+    "fonte": "Baseado numa planilha de matchups da comunidade, traduzida do inglês.",
+    "fonte_en": "Based on a community matchup spreadsheet.",
+    "links": [
+      {
+        "rotulo": "Planilha original",
+        "rotulo_en": "Original spreadsheet",
+        "url": "https://docs.google.com/spreadsheets/d/1ArJkfy78AtJ7l5pUQxxCBGYp1pioa0TOu6E9hKpb1gc/edit"
+      }
+    ],
+    "acompanhe": [],
+    "credito_minimo": true
   }
 ]

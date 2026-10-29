@@ -208,7 +208,7 @@ def em_lista(itens):
 
 
 descricao = ("Guias de matchup de League of Legends com as notas de quem joga: "
-             + em_lista([f"{g['campeao']['nome']} {(g.get('rota') or '').lower()} ({g['autor']})" for g in guias])
+             + em_lista([f"{g['campeao']['nome']} {(g.get('rota') or '').lower()} ({g['autor']})" if g.get('autor') else f"{g['campeao']['nome']} {(g.get('rota') or '').lower()}" for g in guias])
              + ". Runas, build, cooldowns e como jogar cada confronto, em português e inglês.")
 titulo_og = "Guias de matchup · " + em_lista([g["campeao"]["nome"] for g in guias])
 og_alt = "Faixas das splash arts de " + em_lista([g["campeao"]["nome"] for g in guias]) + " ao lado do título Guias de matchup"

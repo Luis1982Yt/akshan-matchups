@@ -30,6 +30,9 @@ PUBLICADA = f'https://docs.google.com/spreadsheets/d/{PLANILHA}/htmlview/sheet?h
 DD = f'https://ddragon.leagueoflegends.com/cdn/{VER}'
 SECOES = ['Laning Overview', 'Trading / Fighting', 'Level 6+', 'Additional Information']
 RESUMO = 'Short Version'
+# A aba Difficulties só repete a média de cada matchup (as notas por autor citam nomes e o autor pediu para não ser
+# citado), então ela fica fora do site; True traz de volta como página.
+INCLUIR_DIFICULDADES = False
 # Abreviações de runa escritas na planilha.
 APELIDO_RUNA = {'grasp': 'Grasp of the Undying', 'pom': 'Presence of Mind', 'hob': 'Hail of Blades'}
 # Itens que aparecem só como imagem no cabeçalho (md5 -> id), conferidos com o Data Dragon.
@@ -102,6 +105,12 @@ def linha_build(texto, por_item):
     return {'tipo': 'item', 'texto': limpa(texto), 'passos': passos}
 
 
+def vod(texto):
+    """'Aatreus (Patch 25.05 | Midlane)' -> 'VOD (Patch 25.05 | Midlane)': sem o nome de quem jogou (pedido do autor)."""
+    m = re.search(r'\(.*\)\s*$', limpa(texto))
+    return f'VOD {m.group(0)}' if m else 'VOD'
+
+
 def blocos_por_coluna(c, inicio, fim, col_rotulo, col_texto):
     """{rótulo: [textos]} das seções de um bloco (rótulo na coluna G, textos na H até o próximo rótulo)."""
     out, atual = defaultdict(list), None
@@ -160,7 +169,7 @@ def gerar_matchups(xl, links_por_texto, campeoes, por_runa, por_item):
                   for s in SECOES if secs.get(s)]
         if rot['vods']:
             secoes.append({'titulo': "VoD's/Clips", 'blocos': [{'tipo': 'links', 'itens': [
-                {'texto': limpa(t), 'url': (links_por_texto.get(limpa(t)) or [{}])[0].get('url')} for t in rot['vods']]}]})
+                {'texto': vod(t), 'url': (links_por_texto.get(limpa(t)) or [{}])[0].get('url')} for t in rot['vods']]}]})
         saida.append({
             'nome': ch['name'], 'planilha': nome, 'id': ch['id'], 'titulo': ch['title'],
             'dificuldade': {'overall': max(1, min(5, math.ceil(valor / 2))), 'valor': valor, 'texto': f'{valor:g}/10'},
@@ -222,18 +231,18 @@ def gerar_paginas(xl, itens):
     d = xl.celulas('Difficulties')
     tabelas = []
     for c0, rotulo in ((1, d.get((1, 1), 'Toplane')), (9, d.get((1, 9), 'Midlane'))):
-        cab = [d.get((3, c0 + k), '') for k in range(4)]
+        # Só campeão e média: as colunas de cada autor citam nomes, e o autor pediu para não ser citado.
+        cab = [d.get((3, c0 + k), '') for k in range(2)]
         linhas = []
         for r in range(4, max(rr for rr, _ in d) + 1):
             nome, media = d.get((r, c0), ''), d.get((r, c0 + 1), '')
             if nome and re.fullmatch(r'\d+(\.\d+)?', media.strip()):
-                linhas.append([{'texto': d.get((r, c0 + k), ''), 'links': []} for k in range(4)])
+                linhas.append([{'texto': d.get((r, c0 + k), ''), 'links': []} for k in range(2)])
         if linhas:
             tabelas.append({'tipo': 'tabela', 'titulo': rotulo, 'colunas': cab, 'linhas': linhas})
     return [
         {'id': 'geral', 'titulo': 'Geral', 'titulo_en': 'Overview', 'blocos': [atualizado, runas, build, legenda]},
-        {'id': 'dificuldades', 'titulo': 'Dificuldades', 'titulo_en': 'Difficulties', 'blocos': tabelas},
-    ]
+    ] + ([{'id': 'dificuldades', 'titulo': 'Dificuldades', 'titulo_en': 'Difficulties', 'blocos': tabelas}] if INCLUIR_DIFICULDADES else [])
 
 
 def main():
@@ -256,7 +265,8 @@ def main():
     matchups = gerar_matchups(xl, links_por_texto, campeoes, por_runa, por_item)
     paginas = gerar_paginas(xl, itens)
     DEST.mkdir(parents=True, exist_ok=True)
-    fonte = {'planilha': f'https://docs.google.com/spreadsheets/d/{PLANILHA}/edit', 'autor': 'r/KSanteMains'}
+    # O autor autorizou o guia pedindo que nada faça referência a ele: só o link da planilha (2026-10-29).
+    fonte = {'planilha': f'https://docs.google.com/spreadsheets/d/{PLANILHA}/edit'}
     for nome, valor in [('matchups.json', {'versao': VER, 'fonte': fonte, 'matchups': matchups}), ('paginas.json', paginas)]:
         (DEST / nome).write_text(json.dumps(valor, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
     sem_icone = sorted({p['nome'] for m in matchups for g in m['itens'] for l in g['linhas'] if l['tipo'] == 'item'

@@ -1,0 +1,373 @@
+[
+ {
+  "id": "geral",
+  "titulo": "Geral",
+  "titulo_en": "Overview",
+  "blocos": [
+   {
+    "tipo": "secao",
+    "titulo": "Last Updated:  2026-08-14",
+    "partes": [
+     {
+      "tipo": "lista",
+      "itens": [
+       {
+        "texto": "Updated Core build",
+        "links": []
+       },
+       {
+        "texto": "no longer recommending unending despair",
+        "links": []
+       },
+       {
+        "texto": "bring any inaccuriacies to our attention in the discord.",
+        "links": []
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "tipo": "secao",
+    "titulo": "Runes",
+    "partes": [
+     {
+      "tipo": "p",
+      "texto": "The Rune Page that is currently considered the strongest combination and can be used into almost every matchup. Grasp/Aftershock are interchangeable depending on matchup and preference.",
+      "links": []
+     },
+     {
+      "tipo": "sub",
+      "texto": "Recommended Runes"
+     },
+     {
+      "tipo": "p",
+      "texto": "Grasp > Aftershock\nDemolish + Second Wind + Overgrowth",
+      "links": []
+     },
+     {
+      "tipo": "sub",
+      "texto": "Secondary Rune Path(s)"
+     },
+     {
+      "tipo": "p",
+      "texto": "Biscuit Delivery + \nCosmic Insight/Approach Velocity",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "(optional) Sudden Impact + Ultimate Hunter\nor Legend: Haste + Last Stand/Triumph/PoM",
+      "links": []
+     },
+     {
+      "tipo": "sub",
+      "texto": "Possible Major Adjustments"
+     },
+     {
+      "tipo": "sub",
+      "texto": "Inspiration"
+     },
+     {
+      "tipo": "p",
+      "texto": "Inspiration is a super safe learning setup due to Biscuit Delivery, but also works as a preference choice. Always take Cosmic Insight as it is the most impactful option. Due to the safety/consistency, the sheet mainly recommends it as a second rune path, but it isn't a requirement.",
+      "links": []
+     },
+     {
+      "tipo": "sub",
+      "texto": "Other Inspiration combinations:"
+     },
+     {
+      "tipo": "p",
+      "texto": "Magical Footwear + Cosmic Insight - Mobility/Econ option",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "Biscuit Delivery + Cosmic Insight - Safe option into lane bullies",
+      "links": []
+     },
+     {
+      "tipo": "sub",
+      "texto": "Domination"
+     },
+     {
+      "tipo": "p",
+      "texto": "Sudden Impact + Ultimate Hunter",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "Focused around aggressive and easy trades with Sudden Impact. Best paired with Grasp + Shield Bash setups to maximize short Q+AA trade patterns",
+      "links": []
+     },
+     {
+      "tipo": "sub",
+      "texto": "Precision"
+     },
+     {
+      "tipo": "p",
+      "texto": "Legend:Haste and Last Stand are the best options to take. No reason to take anything else.",
+      "links": []
+     },
+     {
+      "tipo": "sub",
+      "texto": "Possible Minor Adjustments"
+     },
+     {
+      "tipo": "p",
+      "texto": "Shield Bash > Demolish: Shield Bash can be used if you don't expect to get a lot of value out of Demolish (Turret Plates)",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "Revitalize/Overgrowth/Unfliching: Revitalize adds more value if your team has a lot of healing and shielding. Unflinching adds trading power early in matchups that proc it.",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "Minor Rune Shards\nScaling Health > 15% Tenacity and Slow Resistance: The Tenacity and Slow Resistance can be very impactful into Slow and CC heavy comps, but isn't necessary if the enemy comp barely has any CC.",
+      "links": []
+     }
+    ]
+   },
+   {
+    "tipo": "secao",
+    "titulo": "Starting Items and Core build",
+    "partes": [
+     {
+      "tipo": "sub",
+      "texto": "Starting Items"
+     },
+     {
+      "tipo": "bloco",
+      "bloco": {
+       "tipo": "pecas",
+       "grupos": [
+        {
+         "titulo": "",
+         "itens": [
+          {
+           "nome": "Doran's Helm",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1120.png",
+           "id": "1120"
+          },
+          {
+           "nome": "Health Potion",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/2003.png",
+           "id": "2003"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     {
+      "tipo": "p",
+      "texto": "Doran's Helm + Health Potion (x1)",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "Dorans helm is incredibly important, never take D-Shield, if you are against a big lane bully then take second wind + biscuits, the resistances are too valuable to pass up.",
+      "links": []
+     },
+     {
+      "tipo": "sub",
+      "texto": "Core Build"
+     },
+     {
+      "tipo": "bloco",
+      "bloco": {
+       "tipo": "pecas",
+       "grupos": [
+        {
+         "titulo": "",
+         "itens": [
+          {
+           "nome": "Chain Vest",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1031.png",
+           "id": "1031"
+          },
+          {
+           "nome": "Chain Vest",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1031.png",
+           "id": "1031"
+          },
+          {
+           "nome": "Iceborn Gauntlet",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6662.png",
+           "id": "6662"
+          },
+          {
+           "nome": "Spirit Visage",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3065.png",
+           "id": "3065"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     {
+      "tipo": "p",
+      "texto": "This core build is the most reliable build for Iron - Master lobbies, if you were to default to a single build, this would be it. Against an AD opponent, prioritize 2x chain vests then finish your items, Knights vow third is good when you have a very fed teammate, adapt as you see fit in your game. Against an AP opponent, Kaenic first is most recommended, followed by gauntlet. Frozen heart can be slotted in over gauntlet as well.",
+      "links": []
+     },
+     {
+      "tipo": "sub",
+      "texto": "Other Items to look out for:"
+     },
+     {
+      "tipo": "lista",
+      "itens": [
+       {
+        "texto": "Thornmail",
+        "links": []
+       },
+       {
+        "texto": "Knight's Vow",
+        "links": []
+       },
+       {
+        "texto": "Force of Nature",
+        "links": []
+       },
+       {
+        "texto": "Dead Man's Plate",
+        "links": []
+       },
+       {
+        "texto": "Randuins Omen",
+        "links": []
+       },
+       {
+        "texto": "Jak'Sho",
+        "links": []
+       },
+       {
+        "texto": "Frozen Heart",
+        "links": []
+       },
+       {
+        "texto": "Protoplasm Harness",
+        "links": []
+       }
+      ]
+     },
+     {
+      "tipo": "sub",
+      "texto": "Items to avoid"
+     },
+     {
+      "tipo": "bloco",
+      "bloco": {
+       "tipo": "pecas",
+       "grupos": [
+        {
+         "titulo": "",
+         "itens": [
+          {
+           "nome": "Hollow Radiance",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6664.png",
+           "id": "6664"
+          },
+          {
+           "nome": "Sunfire Aegis",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3068.png",
+           "id": "3068"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     {
+      "tipo": "p",
+      "texto": "K'Sante does not need the wave clear, as well as low resists",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "Any item that gives Attack damage = not optimal\n\n (K'Sante has no AD or AP scalings)",
+      "links": []
+     }
+    ]
+   },
+   {
+    "tipo": "secao",
+    "titulo": "Additional Information",
+    "partes": [
+     {
+      "tipo": "p",
+      "texto": "Names will have each Champions wiki linked. (Check them for ability cooldowns.) Difficulties will be displayed next to the names.",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "Take the mentioned Runes",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "Runes seperated by a \"/\" are preference or situational choices you can make",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "Runes seperated by a \">\" means one option is better than the other, but both options are viable",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "Preference option (Check Rune Setup for more)",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "Good against that Matchup but depend on the enemy comp and what items you want to build that game.",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "Alternative build order/option. You find Additional Information on the related matchup.",
+      "links": []
+     },
+     {
+      "tipo": "sub",
+      "texto": "Scores · Relative Difficulty"
+     },
+     {
+      "tipo": "lista",
+      "itens": [
+       {
+        "texto": "10 - 8: Very Enemy favored",
+        "links": []
+       },
+       {
+        "texto": "7.9 - 6: Enemy favored",
+        "links": []
+       },
+       {
+        "texto": "5.9 - 4: Skill matchup",
+        "links": []
+       },
+       {
+        "texto": "3.9 - 2: K'Sante favored",
+        "links": []
+       },
+       {
+        "texto": "1.9 - 0: Very K'Sante favored",
+        "links": []
+       }
+      ]
+     },
+     {
+      "tipo": "p",
+      "texto": "Scores are used to display difficulties more accurately.",
+      "links": []
+     }
+    ]
+   }
+  ]
+ }
+]

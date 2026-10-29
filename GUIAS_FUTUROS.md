@@ -2,7 +2,7 @@
 
 Fontes que o dono juntou em 2026-10-28 para os próximos guias do BattleMatch, com a triagem feita no mesmo dia
 (planilha aberta ou não, o que tem dentro, quão atual). Os campeões da lista dele sem fonte ficaram de fora.
-Já no site: Akshan, Mordekaiser, Illaoi, Kayle e Fiora (2026-10-29; modelo 3D e sons da Fiora pendentes, só no PC do dono).
+Já no site: Akshan, Mordekaiser, Illaoi, Kayle, Fiora e K'Sante (2026-10-29; modelo 3D e sons da Fiora pendentes, só no PC do dono).
 
 ## Planilhas abertas (dá para ler e baixar)
 
@@ -80,53 +80,8 @@ Dá para ler pela página, como a do Peteruso, mas não baixar o arquivo com as 
 | Urgot | https://docs.google.com/spreadsheets/d/1sAMfo7X8nz1zhjmmV0EnSNEzWkveD5Ivot9312NMnMQ/edit?gid=576552123 | |
 | Yorick | https://docs.google.com/spreadsheets/d/1_G-9I9TxAMc3td_nGEbYx2RufL-wFSY6uFyld1kv_3c/edit?gid=393895688 | |
 
-## K'Sante: pronto, esperando autorização do autor
+## K'Sante: autorizado
 
 A planilha do r/KSanteMains abre com "© 2025 Demon – You may share this, but do not republish or distribute modified
-versions." Republicar traduzido/organizado no site (e no GitHub, que é público) vai contra isso; o dono decidiu em
-2026-10-29 esperar autorização. Contato do autor, na própria planilha: Discord `demoneuw`, Reddit u/Nalardemon
-(ele pede para entrar no Discord do r/KSanteMains antes de mandar DM).
-
-O código já está na main: `scripts/atualizar_ksante.py` (60 matchups, runas com 2-3 opções, itens, seções Short
-Version/Laning Overview/Trading/Level 6+/Additional Information, VoDs com link, páginas Geral e Dificuldades) e a
-paleta `:root[data-guia="ksante"]` no template. Para ativar, com a autorização:
-1. `python scripts/atualizar_ksante.py` (gera `src/guias/ksante/`).
-2. Entrada abaixo em `src/guias.json` e `src/guias/ksante/curadoria.json` com
-   `{"remover": ["-> bring any inaccuriacies", "bring any inaccuriacies", "Names will have each Champions wiki linked"]}`.
-3. Linha `python3 scripts/atualizar_ksante.py` e `src/guias/ksante` no workflow diário.
-4. Tradução PT (`scripts/traducao_pt.py --faltando`), `scripts/importar_lol.py`, `scripts/og.py`,
-   `scripts/baixar_sons.py` (fala de escolha; o arquivo sai como `KSante.ogg`), build, testes 390/1440.
-
-```json
-{
-  "id": "ksante",
-  "campeao": "K'Sante",
-  "id_campeao": "KSante",
-  "rota": "Top",
-  "autor": "r/KSanteMains",
-  "formato": "completo",
-  "dados": "guias/ksante",
-  "chave": 897,
-  "titulo": "o Orgulho de Nazumah",
-  "titulo_en": "the Pride of Nazumah",
-  "mira": [
-    50,
-    36
-  ],
-  "escala": 10,
-  "fonte": "Notas do \"r/KSanteMains Matchup Guide\" (Demon, Aatreus e Shourdy), traduzidas do inglês.",
-  "fonte_en": "Notes from the \"r/KSanteMains Matchup Guide\" (Demon, Aatreus and Shourdy).",
-  "links": [
-    {
-      "rotulo": "Ver a planilha original",
-      "rotulo_en": "See the original spreadsheet",
-      "url": "https://docs.google.com/spreadsheets/d/1ArJkfy78AtJ7l5pUQxxCBGYp1pioa0TOu6E9hKpb1gc/edit"
-    },
-    {
-      "rotulo": "r/KSanteMains",
-      "url": "https://www.reddit.com/r/KSanteMains/"
-    }
-  ],
-  "acompanhe": []
-}
-```
+versions." O dono pediu autorização ao autor (Demon: Discord `demoneuw`, Reddit u/Nalardemon) e ele **permitiu** em
+2026-10-29. Guia no ar desde então (`scripts/atualizar_ksante.py`, `src/guias/ksante/`).
