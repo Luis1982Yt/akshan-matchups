@@ -440,6 +440,8 @@ body.selecionando .sel-fundo { inset: 0; }
 .sel-inimigo small i { width: 9px; height: 9px; border-radius: 50%; background: var(--cor); }
 .sel-inimigo.vago { cursor: default; background: rgba(10, 20, 40, .4); }
 .sel-inimigo.vago span.sel-vago-ret { flex: none; width: 50px; height: 50px; border-radius: 50%; border: 1px dashed var(--hx-cinza-3); }
+.sel-busca-ini { width: 100%; margin-bottom: 16px; }
+.sel-busca-ini:has(input:disabled) { opacity: .5; }
 .sel-ini-nota { margin: 10px 2px 0; font-size: 13px; line-height: 1.5; text-align: right; color: var(--hx-cinza-1); }
 /* Confirmar: o botão de travar do cliente, moldura dourada em degradê, fundo azul-escuro e as pontas em seta da casa. */
 .sel-acao { grid-area: acao; position: sticky; bottom: 0; z-index: 2; display: grid; justify-items: center; gap: 10px; padding: 16px 0 max(20px, env(safe-area-inset-bottom, 0px));
@@ -1140,6 +1142,8 @@ body.sem-rolar { overflow: hidden; }
       <p class="sel-vazio" id="selVazio" role="status" hidden></p>
     </div>
     <aside class="sel-inimigos" aria-labelledby="selIniTit">
+      <!-- Busca de matchup: ir direto para um inimigo sem passar pelo Confirmar. -->
+      <label class="sel-busca sel-busca-ini" for="selBuscaIni"><svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M11 11l3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><input id="selBuscaIni" type="search" autocomplete="off" spellcheck="false" data-t-placeholder="selBuscaIni" data-t-aria="selBuscaIni"></label>
       <h3 id="selIniTit" data-t="selInimigos">Matchups mais difíceis</h3>
       <ul id="selInimigos"></ul>
       <p class="sel-ini-nota" id="selIniNota"></p>
@@ -1296,7 +1300,7 @@ document.addEventListener("load", e => { if (e.target.tagName === "IMG") e.targe
 /* ---------- Língua da interface (pt-BR ou inglês) ---------- */
 const TXT = {
   pt: {
-    pular: "Pular para o matchup", guiasTit: "Guias de matchup", selTit: "Escolha seu campeão!", selTime: "Seu time", selInimigos: "Matchups mais difíceis", selEscolhendo: "Escolhendo…", selInimigosNota: "Toque num inimigo para travar e já abrir a matchup.", selInimigosVazio: "Marque um campeão para ver as matchups mais difíceis dele.", selAbrirMatchup: "Travar {c} e abrir a matchup contra {e}", selDica: "O site guarda a sua escolha e abre direto nela da próxima vez. Para trocar, toque no campeão lá em cima.", selBusca: "Buscar campeão", selPosicoes: "Filtrar por posição", selEscolha: "Escolha um campeão", selTravar: "Confirmar", selTravarDe: "Confirmar {c}", selVazio: "Nenhum guia com essa busca.", selSemPos: "Ainda não tem guia de {p}. Os próximos guias vão aparecendo aqui.", pos_top: "Top", pos_jungle: "Jungle", pos_mid: "Mid", pos_bot: "ADC", pos_sup: "Suporte",
+    pular: "Pular para o matchup", guiasTit: "Guias de matchup", selTit: "Escolha seu campeão!", selTime: "Seu time", selInimigos: "Matchups mais difíceis", selBuscaIni: "Buscar matchup", selResultados: "Matchups encontradas", selIniSemBusca: "Nenhuma matchup com esse nome.", selIniBuscaNota: "Toque num inimigo, ou Enter no primeiro, para travar e já abrir a matchup.", selEscolhendo: "Escolhendo…", selInimigosNota: "Toque num inimigo para travar e já abrir a matchup.", selInimigosVazio: "Marque um campeão para ver as matchups mais difíceis dele.", selAbrirMatchup: "Travar {c} e abrir a matchup contra {e}", selDica: "O site guarda a sua escolha e abre direto nela da próxima vez. Para trocar, toque no campeão lá em cima.", selBusca: "Buscar campeão", selPosicoes: "Filtrar por posição", selEscolha: "Escolha um campeão", selTravar: "Confirmar", selTravarDe: "Confirmar {c}", selVazio: "Nenhum guia com essa busca.", selSemPos: "Ainda não tem guia de {p}. Os próximos guias vão aparecendo aqui.", pos_top: "Top", pos_jungle: "Jungle", pos_mid: "Mid", pos_bot: "ADC", pos_sup: "Suporte",
     escolhe: "Escolha o inimigo", busca: "Campeão ou palavra", buscaRotulo: "Procurar matchup", filtros: "Filtros", campeoes: "Campeões",
     vazio: "Nenhum campeão com essa busca.", limpar: "Limpar busca e filtros", voce: "Você", inimigo: "Inimigo", duelo: "Duelo",
     travarTit: "Travar o pick", travarContra: "Travar o pick contra ", setup: "Seu setup pro confronto",
@@ -1329,7 +1333,7 @@ const TXT = {
     a_dance: "Dança", a_taunt: "Provocação", a_laugh: "Risada", a_attack: "Ataque", a_recall: "Recall",
   },
   en: {
-    pular: "Skip to matchup", guiasTit: "Matchup guides", selTit: "Choose your champion!", selTime: "Your team", selInimigos: "Hardest matchups", selEscolhendo: "Picking…", selInimigosNota: "Tap an enemy to lock in and open that matchup.", selInimigosVazio: "Pick a champion to see their hardest matchups.", selAbrirMatchup: "Lock in {c} and open the matchup against {e}", selDica: "The site remembers your pick and opens straight to it next time. To switch, tap the champion at the top.", selBusca: "Search champion", selPosicoes: "Filter by position", selEscolha: "Choose a champion", selTravar: "Lock in", selTravarDe: "Lock in {c}", selVazio: "No guide matches this search.", selSemPos: "No {p} guide yet. New guides will show up here.", pos_top: "Top", pos_jungle: "Jungle", pos_mid: "Mid", pos_bot: "Bot", pos_sup: "Support",
+    pular: "Skip to matchup", guiasTit: "Matchup guides", selTit: "Choose your champion!", selTime: "Your team", selInimigos: "Hardest matchups", selBuscaIni: "Search matchup", selResultados: "Matchups found", selIniSemBusca: "No matchup with that name.", selIniBuscaNota: "Tap an enemy, or press Enter for the first one, to lock in and open the matchup.", selEscolhendo: "Picking…", selInimigosNota: "Tap an enemy to lock in and open that matchup.", selInimigosVazio: "Pick a champion to see their hardest matchups.", selAbrirMatchup: "Lock in {c} and open the matchup against {e}", selDica: "The site remembers your pick and opens straight to it next time. To switch, tap the champion at the top.", selBusca: "Search champion", selPosicoes: "Filter by position", selEscolha: "Choose a champion", selTravar: "Lock in", selTravarDe: "Lock in {c}", selVazio: "No guide matches this search.", selSemPos: "No {p} guide yet. New guides will show up here.", pos_top: "Top", pos_jungle: "Jungle", pos_mid: "Mid", pos_bot: "Bot", pos_sup: "Support",
     escolhe: "Choose your enemy", busca: "Champion or keyword", buscaRotulo: "Search matchup", filtros: "Filters", campeoes: "Champions",
     vazio: "No champion matches this search.", limpar: "Clear search and filters", voce: "You", inimigo: "Enemy", duelo: "Matchup",
     travarTit: "Lock in", travarContra: "Lock in vs ", setup: "Your setup for this matchup",
@@ -2247,6 +2251,12 @@ function inimigosDificeis(g) {
   const peso = c => (c.dif ? DIFS.length - DIFS.indexOf(c.dif) : 0);
   return g.lista.filter(c => c.dif).sort((a, b) => peso(b) - peso(a) || (b.dificuldade?.valor || 0) - (a.dificuldade?.valor || 0) || a.nome.localeCompare(b.nome)).slice(0, 5);
 }
+// Inimigos do guia cujo nome tem o texto buscado: quem começa com ele vem primeiro.
+function buscaInimigos(g, busca) {
+  if (!g.lista) prepara(g);
+  return g.lista.filter(c => c.id !== g.campeao.id && (normal(c.nome).includes(busca) || normal(c.planilha || "").includes(busca)))
+    .sort((a, b) => (normal(b.nome).startsWith(busca) - normal(a.nome).startsWith(busca)) || a.nome.localeCompare(b.nome)).slice(0, 6);
+}
 function renderVoce() {
   const g = GUIAS.find(x => x.id === selMarcado);
   $("selVoce").innerHTML = g
@@ -2255,11 +2265,16 @@ function renderVoce() {
       <p class="sel-meta"><span class="sel-titulo">${esc(tituloDe(g.campeao))}</span>${t("notasDo")}<strong>${esc(g.autor)}</strong> · ${g.matchups.length}${t("matchups")}</p>`
     : `<div class="sel-linha vago"><span class="sel-ret"><svg width="30" height="30" viewBox="0 0 34 34" aria-hidden="true"><path d="M17 5l12 12-12 12L5 17z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span>
         <span class="sel-linha-txt"><small>${t("voce")}</small><b>${t("selEscolhendo")}</b></span></div>`;
+  // Com algo escrito na busca de matchup, a lista mostra os inimigos com esse nome em vez das mais difíceis.
+  const busca = normal($("selBuscaIni").value.trim());
+  const achados = g && busca ? buscaInimigos(g, busca) : null;
+  $("selBuscaIni").disabled = !g;
+  $("selIniTit").textContent = t(achados ? "selResultados" : "selInimigos");
   $("selInimigos").innerHTML = g
-    ? inimigosDificeis(g).map(c => `<li><button type="button" class="sel-inimigo" data-slug="${c.slug}" aria-label="${esc(t("selAbrirMatchup").replace("{c}", g.campeao.nome).replace("{e}", c.nome))}">
-        <span><b>${esc(c.nome)}</b><small><i style="--cor: var(--difc-${c.dif})"></i>${esc(rotuloDif(c.dif))}</small></span><img src="${sq(c.id)}" alt="" width="50" height="50"></button></li>`).join("")
+    ? (achados || inimigosDificeis(g)).map(c => `<li><button type="button" class="sel-inimigo" data-slug="${c.slug}" aria-label="${esc(t("selAbrirMatchup").replace("{c}", g.campeao.nome).replace("{e}", c.nome))}">
+        <span><b>${esc(c.nome)}</b>${c.dif ? `<small><i style="--cor: var(--difc-${c.dif})"></i>${esc(rotuloDif(c.dif))}</small>` : ""}</span><img src="${sq(c.id)}" alt="" width="50" height="50"></button></li>`).join("")
     : Array.from({ length: 5 }, () => `<li><div class="sel-inimigo vago" aria-hidden="true"><span class="sel-vago-ret"></span></div></li>`).join("");
-  $("selIniNota").textContent = t(g ? "selInimigosNota" : "selInimigosVazio");
+  $("selIniNota").textContent = t(!g ? "selInimigosVazio" : achados && !achados.length ? "selIniSemBusca" : achados ? "selIniBuscaNota" : "selInimigosNota");
   const b = $("selTravar");
   b.disabled = !g;
   $("selTravarTxt").textContent = t(g ? "selTravar" : "selEscolha");
@@ -2326,6 +2341,7 @@ function abreSelecao(abrir, primeira, travado) {
     selMarcado = primeira ? null : guia.id;
     selPos = "";
     $("selBusca").value = "";
+    $("selBuscaIni").value = "";
     renderSelecao();
     fundoSelecao(selMarcado);
     s.hidden = false;
@@ -2375,6 +2391,12 @@ $("selBusca").addEventListener("keydown", e => {
   if (g) { marcaSelecao(g.id, true); $("selTravar").focus(); }
 });
 $("selTravar").addEventListener("click", () => travaSelecao());
+$("selBuscaIni").addEventListener("input", renderVoce);
+$("selBuscaIni").addEventListener("keydown", e => {
+  if (e.key !== "Enter") return;
+  const b = $("selInimigos").querySelector(".sel-inimigo[data-slug]");
+  if (b && $("selBuscaIni").value.trim()) travaSelecao(b.dataset.slug);
+});
 
 /* ---------- Tema ---------- */
 function marcaTema() {
