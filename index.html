@@ -1019,6 +1019,9 @@ body.sem-rolar { overflow: hidden; }
 .app-corpo .baixar:hover { filter: brightness(1.08); }
 .app-corpo .baixar small { font-weight: 600; opacity: .75; }
 .rodape p { margin: 0; }
+/* Pedido de remoção para os autores das planilhas. */
+.rodape .remocao { margin-top: 6px; }
+.rodape .remocao b { color: var(--texto); }
 .rodape a { display: inline-block; padding: 10px 0; margin: -10px 0; }
 .estado-planilha:not(:empty) { margin-top: 6px; font-size: 13px; }
 
@@ -1315,7 +1318,7 @@ const TXT = {
     runa: "Runa", secundaria: "Secundária", feitico: "Feitiço", bota: "Bota", build: "Build", semAnot: "Sem anotação", tantoFaz: "Tanto faz",
     anterior: "Anterior: ", proximo: "Próximo: ",
     legDif: "número = dificuldade (1 fácil, 5 difícil)", legBusca: "busca", legTroca: "troca de matchup",
-    rodapeRiot: "Imagens e sons de campeões, runas e itens da Riot Games. Site de fã, sem ligação com a Riot.",
+    rodapeRiot: "Imagens e sons de campeões, runas e itens da Riot Games. Site de fã, sem ligação com a Riot.", remocao: "É um dos criadores de alguma das planilhas daqui e quer que ela seja removida? Entre em contato pelo Discord: <b>luis1982</b>.",
     plOk: "Atualizado agora da planilha.", plArquivo: "Aberto como arquivo: mostrando a cópia salva. O site publicado lê a planilha ao vivo.",
     plFalhou: "Sem conexão com a planilha: mostrando a última cópia salva.", plBusca: "Buscando a versão mais nova da planilha…",
     srDif: (n, escala = 5) => `, dificuldade ${n} de ${escala}`, srNotas: ", achado nas notas", titNotas: " (achado nas notas)",
@@ -1348,7 +1351,7 @@ const TXT = {
     runa: "Rune", secundaria: "Secondary", feitico: "Spell", bota: "Boots", build: "Build", semAnot: "No note", tantoFaz: "Any",
     anterior: "Previous: ", proximo: "Next: ",
     legDif: "number = difficulty (1 easy, 5 hard)", legBusca: "search", legTroca: "change matchup",
-    rodapeRiot: "Champion, rune and item images and sounds by Riot Games. Fan site, not affiliated with Riot.",
+    rodapeRiot: "Champion, rune and item images and sounds by Riot Games. Fan site, not affiliated with Riot.", remocao: "Created one of the spreadsheets used here and want it removed? Reach out on Discord: <b>luis1982</b>.",
     plOk: "Updated just now from the spreadsheet.", plArquivo: "Opened as a file: showing the saved copy. The published site reads the spreadsheet live.",
     plFalhou: "Couldn't reach the spreadsheet: showing the last saved copy.", plBusca: "Fetching the latest version of the spreadsheet…",
     srDif: (n, escala = 5) => `, difficulty ${n} of ${escala}`, srNotas: ", found in the notes", titNotas: " (found in the notes)",
@@ -1649,7 +1652,7 @@ function renderGuia() {
     <p class="dev">${t("devPor")} <button type="button" class="dev-nome" id="devNome" aria-expanded="false" aria-controls="devContato">Luis1982<svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></p><p class="contato" id="devContato" hidden><span>${t("contato")}:</span> <a href="mailto:luiskoch7@gmail.com">luiskoch7@gmail.com</a> · <a href="https://x.com/Luis_AntonioAks" target="_blank" rel="noopener" aria-label="X (Twitter): @Luis_AntonioAks">X @Luis_AntonioAks</a></p><p class="baixa-app"><button type="button" id="verApp"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 20h8M12 16v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>${esc(t("baixarApp"))}<span class="wip">WIP</span></button></p>` : "";
   $("verTier").hidden = !(guia.lista && guia.lista.some(c => c.dif));
   if (typeof marcaAoVivo === "function" && document.readyState === "complete") marcaAoVivo();
-  $("rodape").innerHTML = `<p>${esc((L === "en" && guia.fonte_en) || guia.fonte)}${links ? " " + links + "." : ""} ${t("rodapeRiot")}</p><p id="estadoPlanilha" class="estado-planilha" role="status"></p>`;
+  $("rodape").innerHTML = `<p>${esc((L === "en" && guia.fonte_en) || guia.fonte)}${links ? " " + links + "." : ""} ${t("rodapeRiot")}</p><p class="remocao">${t("remocao")}</p><p id="estadoPlanilha" class="estado-planilha" role="status"></p>`;
   mostraPlanilha(guia);
 }
 
