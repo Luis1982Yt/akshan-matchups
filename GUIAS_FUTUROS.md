@@ -2,13 +2,12 @@
 
 Fontes que o dono juntou em 2026-10-28 para os próximos guias do BattleMatch, com a triagem feita no mesmo dia
 (planilha aberta ou não, o que tem dentro, quão atual). Os campeões da lista dele sem fonte ficaram de fora.
-Já no site: Akshan, Mordekaiser, Illaoi e Kayle.
+Já no site: Akshan, Mordekaiser, Illaoi, Kayle e Fiora (2026-10-29; modelo 3D e sons da Fiora pendentes, só no PC do dono).
 
 ## Planilhas abertas (dá para ler e baixar)
 
 | Campeão | Autor / planilha | Atualidade | O que tem |
 | --- | --- | --- | --- |
-| Fiora | Sad, "Fiora Bible 2026 (Updated October)" | outubro de 2026 | 1 aba, 127 linhas, 99 imagens |
 | K'Sante | r/KSanteMains Matchup Guide | 2026-08-14 | aba Matchups (muito texto, 72 imagens) + aba de dificuldades |
 | Ambessa | heywil's Ambessa Matchup Sheet | patch 16.3 | aba "Matchups - 16.3" (82 mil caracteres), FAQ, links; aba antiga 12.13 |
 | Olaf | TheeeKiiing's Olaf guide | recente (já tem Zaahen) | introdução + MATCHUPS (59 imagens) |

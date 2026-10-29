@@ -286,6 +286,23 @@ try {
   --texto: #1c2133; --texto-baixo: #525a74; --tinta-botao: #1a0f05;
   --luz: rgba(240, 130, 60, .12); color-scheme: light;
 }
+/* Fiora: a noite azul-ardósia da catedral, a prata-lavanda da armadura e o rosa das pétalas da splash padrão. */
+:root[data-guia="fiora"] {
+  --fundo: #0c0d16; --painel: #141624; --painel-alto: #1c1f33;
+  --linha: rgba(163, 184, 218, .22); --linha-forte: rgba(163, 184, 218, .48);
+  --acento: #a3b8da; --acento-vivo: #dfe9f6; --destaque: #f0507a;
+  --texto: #e8eaf3; --texto-baixo: #9a9fb8; --tinta-botao: #1c0610;
+  --luz: rgba(240, 80, 122, .11); --sombra: 0 10px 30px rgba(0, 0, 0, .5);
+  --sobre-arte: #f3f6ff; --destaque-arte: #ff6f94; --botao-1: #ffc2d2; --botao-2: #e0406c;
+  --brilho: rgba(223, 235, 242, .55); --brilho-2: rgba(240, 80, 122, .2); color-scheme: dark;
+}
+:root[data-guia="fiora"][data-tema="claro"] {
+  --fundo: #f0f1f7; --painel: #fcfcff; --painel-alto: #e2e5f0;
+  --linha: rgba(60, 70, 120, .24); --linha-forte: rgba(60, 70, 120, .52);
+  --acento: #44507f; --acento-vivo: #2e3760; --destaque: #c2224f;
+  --texto: #1b1d2b; --texto-baixo: #545972; --tinta-botao: #ffffff;
+  --luz: rgba(240, 80, 122, .1); --sombra: 0 10px 30px rgba(40, 45, 90, .14); color-scheme: light;
+}
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
 /* A página nunca rola para o lado: o clip corta sobras de meio pixel sem virar contêiner de rolagem (o sticky continua). */
@@ -711,6 +728,7 @@ body.sem-rolar { overflow: hidden; }
 .quem .n { margin: 0; font: 800 clamp(24px, 2.3vw, 32px)/1.05 var(--titulo); letter-spacing: .02em; color: var(--sobre-arte); overflow-wrap: break-word; text-wrap: balance; }
 .quem .n.longo { font-size: clamp(19px, 1.8vw, 25px); letter-spacing: 0; }
 .quem .guia { display: inline-flex; align-items: center; gap: 6px; margin-top: 6px; font-size: 14px; color: #e4ddcf; }
+.quem .guia:has(> span) { flex-wrap: wrap; justify-content: flex-end; column-gap: 6px; row-gap: 0; }
 .quem .guia.sim { color: var(--destaque-arte); }
 .quem .guia > i { width: 9px; height: 9px; border-radius: 50%; box-shadow: inset 0 0 0 1.5px currentColor; }
 .quem .guia.dif { font-weight: 700; color: #f6f3ea; }
@@ -1277,7 +1295,7 @@ const TXT = {
     vazio: "Nenhum campeão com essa busca.", limpar: "Limpar busca e filtros", voce: "Você", inimigo: "Inimigo", duelo: "Duelo",
     travarTit: "Travar o pick", travarContra: "Travar o pick contra ", setup: "Seu setup pro confronto",
     lembrete: "Lembrete", comoJogar: "Como jogar", contra: " contra ", arteDe: "Arte de ",
-    difMuito_facil: "Muito fácil", difFacil: "Fácil", difMedio: "Médio", difDificil: "Difícil", difMuito_dificil: "Muito difícil", dificuldade: "Dificuldade",
+    difMuito_facil: "Muito fácil", difFacil: "Fácil", difMedio: "Médio", difDificil: "Difícil", difMuito_dificil: "Muito difícil", dificuldade: "Dificuldade", difRota: "Ameaça na rota", difJogo: "Ameaça na partida", difRotaCurto: "Rota", difJogoCurto: "Partida",
     runa: "Runa", secundaria: "Secundária", feitico: "Feitiço", bota: "Bota", build: "Build", semAnot: "Sem anotação", tantoFaz: "Tanto faz",
     anterior: "Anterior: ", proximo: "Próximo: ",
     legDif: "número = dificuldade (1 fácil, 5 difícil)", legBusca: "busca", legTroca: "troca de matchup",
@@ -1310,7 +1328,7 @@ const TXT = {
     vazio: "No champion matches this search.", limpar: "Clear search and filters", voce: "You", inimigo: "Enemy", duelo: "Matchup",
     travarTit: "Lock in", travarContra: "Lock in vs ", setup: "Your setup for this matchup",
     lembrete: "Notes", comoJogar: "How to play", contra: " vs ", arteDe: "Art of ",
-    difMuito_facil: "Very easy", difFacil: "Easy", difMedio: "Medium", difDificil: "Hard", difMuito_dificil: "Very hard", dificuldade: "Difficulty",
+    difMuito_facil: "Very easy", difFacil: "Easy", difMedio: "Medium", difDificil: "Hard", difMuito_dificil: "Very hard", dificuldade: "Difficulty", difRota: "Lane threat", difJogo: "Game threat", difRotaCurto: "Lane", difJogoCurto: "Game",
     runa: "Rune", secundaria: "Secondary", feitico: "Spell", bota: "Boots", build: "Build", semAnot: "No note", tantoFaz: "Any",
     anterior: "Previous: ", proximo: "Next: ",
     legDif: "number = difficulty (1 easy, 5 hard)", legBusca: "search", legTroca: "change matchup",
@@ -1411,6 +1429,8 @@ const DIFS = ["muito_dificil", "dificil", "medio", "facil", "muito_facil"];
 // Guias com nota de 1 a 5 (formato completo) usam as mesmas cores: 1 = muito fácil … 5 = muito difícil.
 const DIF_NOTA = [null, "muito_facil", "facil", "medio", "dificil", "muito_dificil"];
 const rotuloDif = d => t("dif" + d.charAt(0).toUpperCase() + d.slice(1));
+// Planilhas com duas notas por matchup (Sad: "Lane Threat" e "Game Threat", de muito fácil a muito difícil).
+const temDifDupla = c => c.dificuldade && c.dificuldade.rota != null;
 // Filtros: dentro do mesmo grupo vale qualquer um; entre grupos, todos.
 const FILTROS = {
   simples: g => [
@@ -1755,7 +1775,7 @@ function linhaNaLingua(l) {
 }
 
 /* ---------- Formato completo (runas, itens, dificuldade e seções) ---------- */
-const TITULOS = { "Enemy Cooldowns": "Cooldowns do inimigo", "Early Game": "Early game", "How to trade": "Como trocar", "What to watch out for": "Cuidado com", "Tips": "Dicas", "Mini Rant": "Desabafo" };
+const TITULOS = { "Enemy Cooldowns": "Cooldowns do inimigo", "Early Game": "Early game", "How to trade": "Como trocar", "What to watch out for": "Cuidado com", "Tips": "Dicas", "Mini Rant": "Desabafo", "Tips and Tricks": "Dicas e truques" };
 const KW_EN = /\b(level \d+|lvl \d+|nível \d+)\b/gi;
 const marcaEn = t => esc(t).replace(KW_EN, m => `<span class="kw">${m}</span>`);
 // Guias escritos em inglês têm uma camada em português (src/guias/<guia>/traducao_pt.json, de scripts/traducao_pt.py):
@@ -1843,8 +1863,10 @@ function setupCompleto(c) {
     : listas.map((ol, i) => `<div class="grupo">${conds[i] !== "Build" ? `<p class="cond"${langOrig()}>${esc(conds[i])}</p>` : ""}${ol}</div>`).join("");
   // A captura da planilha só aparece quando a página não tem os fragmentos com ícone.
   const imagensRunas = c.runas.some(op => op.some(l => l.rotulo === "Fragmentos")) ? "" : (c.imagens_runas || []).map(i => `<img class="runa-original" src="${esc(i.src)}" alt="${esc(tr(i.alt || t("runasPlanilha")))}" width="${i.largura}" height="${i.altura}" loading="lazy">`).join("");
-  const feiticos = c.feiticos_texto ? `<div class="feiticos-guia"><h3>${t("feitico")}</h3><div class="pecas">${(c.feiticos || []).map(p => peca(p)).join("")}</div><p>${esc(tr(c.feiticos_texto))}</p></div>` : "";
-  const dif = [["early", "Early"], ["mid", "Mid"], ["late", "Late"], ["overall", "Geral"]]
+  // Feitiço só em ícone (a planilha do Sad não escreve o nome): os ícones aparecem sem o texto embaixo.
+  const feiticos = c.feiticos_texto || (c.feiticos || []).length ? `<div class="feiticos-guia"><h3>${t("feitico")}</h3><div class="pecas">${(c.feiticos || []).map(p => peca(p)).join(c.feiticos_ou ? `<span class="ou">${t("ou")}</span>` : "")}</div>${c.feiticos_texto ? `<p>${esc(tr(c.feiticos_texto))}</p>` : ""}</div>` : "";
+  const dif = temDifDupla(c) ? [["rota", "difRota"], ["jogo", "difJogo"]].map(([k, r]) => `<div><dt>${t(r)}</dt><dd aria-label="${c.dificuldade[k] ? esc(rotuloDif(DIF_NOTA[c.dificuldade[k]])) : t("semAnot")}">${pips(c.dificuldade[k])}<b>${c.dificuldade[k] ? esc(rotuloDif(DIF_NOTA[c.dificuldade[k]])) : "–"}</b></dd></div>`).join("")
+    : [["early", "Early"], ["mid", "Mid"], ["late", "Late"], ["overall", "Geral"]]
     .filter(([k]) => k === "overall" || c.dificuldade[k] != null)
     .map(([k, r]) => `<div><dt>${k === "overall" ? t("geral") : r}</dt><dd aria-label="${c.dificuldade[k] ? t("srDif", k === "overall" ? c.dificuldade.valor ?? c.dificuldade[k] : c.dificuldade[k], guia.escala || 5).replace(/^, /, "") : t("semAnot")}">${pips(c.dificuldade[k])}<b>${k === "overall" && c.dificuldade.texto ? esc(notaTexto(tr(c.dificuldade.texto))) : (c.dificuldade[k] ?? "–") + "/5"}</b></dd></div>`).join("");
   return `<div class="setup-completo">
@@ -2113,7 +2135,9 @@ function renderDetalhe(animar) {
     g.innerHTML = c.dif ? `<i></i>${rotuloDif(c.dif)}` : "";
   } else {
     g.className = "guia";
-    g.innerHTML = c.dificuldade.overall ? `${pips(c.dificuldade.overall)}${t("dificuldade")} ${c.dificuldade.texto ? esc(notaTexto(tr(c.dificuldade.texto)).replace(/\s*\(.*$/, "")) : c.dificuldade.overall + "/5"}` : "";
+    // Duas notas: cada uma num pedaço que pode descer de linha no celular, em vez de ser cortada.
+    g.innerHTML = temDifDupla(c) ? `${pips(c.dificuldade.rota)}<span>${t("difRotaCurto")}: ${esc(rotuloDif(DIF_NOTA[c.dificuldade.rota]))} ·</span><span>${t("difJogoCurto")}: ${esc(c.dificuldade.jogo ? rotuloDif(DIF_NOTA[c.dificuldade.jogo]) : "–")}</span>`
+      : c.dificuldade.overall ? `${pips(c.dificuldade.overall)}${t("dificuldade")} ${c.dificuldade.texto ? esc(notaTexto(tr(c.dificuldade.texto)).replace(/\s*\(.*$/, "")) : c.dificuldade.overall + "/5"}` : "";
   }
   $("travarNome").textContent = t("travarContra") + c.nome;
   // Se o painel de cooldowns estiver aberto, acompanha a troca de matchup.

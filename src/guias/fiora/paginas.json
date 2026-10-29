@@ -1,0 +1,424 @@
+[
+ {
+  "id": "geral",
+  "titulo": "Geral",
+  "titulo_en": "Overview",
+  "blocos": [
+   {
+    "tipo": "secao",
+    "titulo": "Fiora Matchup Spreadsheet 2026 - Updated October -",
+    "partes": [
+     {
+      "tipo": "p",
+      "texto": "My name is Sad. I stream everyday. I am a handless challenger Fiora main. Stream status: !!! ONLINE !!!",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "Stream: www.twitch.tv/justsad42",
+      "links": [
+       {
+        "texto": "www.twitch.tv/justsad42",
+        "url": "https://www.twitch.tv/justsad42"
+       }
+      ]
+     },
+     {
+      "tipo": "p",
+      "texto": "Channel: https://www.youtube.com/@JustSad42",
+      "links": [
+       {
+        "texto": "https://www.youtube.com/@JustSad42",
+        "url": "https://www.youtube.com/@JustSad42"
+       }
+      ]
+     },
+     {
+      "tipo": "p",
+      "texto": "My accounts that I'm playing on everyday: https://dpm.lol/pro/Sad",
+      "links": [
+       {
+        "texto": "https://dpm.lol/pro/Sad",
+        "url": "https://dpm.lol/pro/Sad"
+       }
+      ]
+     },
+     {
+      "tipo": "p",
+      "texto": "A 2.5 hour video going through each matchup: https://www.youtube.com/watch?v=VbSP50h6smk",
+      "links": [
+       {
+        "texto": "https://www.youtube.com/watch?v=VbSP50h6smk",
+        "url": "https://www.youtube.com/watch?v=VbSP50h6smk"
+       }
+      ]
+     },
+     {
+      "tipo": "p",
+      "texto": "The Best Resource for finding VODs of me or other Fiora players playing out matchups you want to learn: https://dpm.lol/matchups",
+      "links": [
+       {
+        "texto": "https://dpm.lol/matchups",
+        "url": "https://dpm.lol/matchups"
+       }
+      ]
+     },
+     {
+      "tipo": "p",
+      "texto": "1. These matchups are written with the understanding that both players are playing their champions somewhat well, meaning the enemy does not use their CC directly and clearly at you, and they attempt to kite vitals to some degree. Unless I say otherwise, assume you win the level 1 All-in. You are Fiora.",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "2. Lane Threat is how difficult the lane is to play. Game Threat is how difficult the game overall becomes because the enemy champion is on the enemy team.",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "Ex: Garen and Cho'gath are easy lane, and easy sidelane but the enemy team having a 1000 hp execute on you makes the game more harder to play.",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "3. If you take Grasp, you have no honor. Fight till the death.",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "4. In Runes: If I've put two, both are viable and choose which one you go depending on the rest of the enemy team comp (squishy/tanky or short/long fight) and how you want to trade in the lane.",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "5. In Summoner Spells: The summoner spell I've put is optimal. If I've put multiple, pick the one you are more comfortable with, Ignite = more aggressive fighting.",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "6. Ranged champion difficulty is based on assuming they can space you. If they are not able to do so, their difficulty level goes down by 1 or 2 tiers.",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "SEASON 16 GUIDE: https://youtu.be/tOilmDoeA_U",
+      "links": [
+       {
+        "texto": "https://youtu.be/tOilmDoeA_U",
+        "url": "https://youtu.be/tOilmDoeA_U"
+       }
+      ]
+     },
+     {
+      "tipo": "p",
+      "texto": "!!!NEW ADDITIONS!!!",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "Coaching: https://justsad42.com",
+      "links": [
+       {
+        "texto": "https://justsad42.com",
+        "url": "https://justsad42.com"
+       }
+      ]
+     },
+     {
+      "tipo": "p",
+      "texto": "Patreon: https://www.patreon.com/JustSad42",
+      "links": [
+       {
+        "texto": "https://www.patreon.com/JustSad42",
+        "url": "https://www.patreon.com/JustSad42"
+       }
+      ]
+     },
+     {
+      "tipo": "p",
+      "texto": "📚 Ever-growing matchup library from my games",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "🎥 Educational videos & lessons(in the future)",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "💬 Discord roles + access to people grinding the same thing",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "🧠 (Higher tiers) 1-on-1 coaching weekly/monthly depending on tier",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "If you want to personally ask me any questions about Fiora, gameplay, matchups or general tips, feel free to drop by in the discord: ! https://discord.gg/KT5hrKxq6K !",
+      "links": [
+       {
+        "texto": "https://discord.gg/KT5hrKxq6K",
+        "url": "https://discord.gg/KT5hrKxq6K"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "tipo": "secao",
+    "titulo": "",
+    "partes": [
+     {
+      "tipo": "imagens",
+      "imagens": [
+       {
+        "src": "imagens/fiora/27168444c4420300c2983a880137b375d072030f.jpg",
+        "alt": "Sad — ranking (original spreadsheet)",
+        "largura": 1400,
+        "altura": 1150,
+        "legenda": "Challenger EUNE"
+       },
+       {
+        "src": "imagens/fiora/103d4f2fae9c298b2cbe61153a81d144fc2b5bbf.jpg",
+        "alt": "Sad — ranking (original spreadsheet)",
+        "largura": 320,
+        "altura": 87,
+        "legenda": "Rank 1+2 Again (low quality)"
+       },
+       {
+        "src": "imagens/fiora/077866a0175796e886995fcaed7d5a964a4d1dfb.jpg",
+        "alt": "Sad — ranking (original spreadsheet)",
+        "largura": 1080,
+        "altura": 638,
+        "legenda": "Rank 1 + 2"
+       },
+       {
+        "src": "imagens/fiora/69276a431974c16478b35292e98e9247ff6e22ab.jpg",
+        "alt": "Sad — ranking (original spreadsheet)",
+        "largura": 1400,
+        "altura": 497,
+        "legenda": "Rank 1"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "tipo": "secao",
+    "titulo": "LANE THREAT / GAME THREAT",
+    "partes": [
+     {
+      "tipo": "p",
+      "texto": "Difficulty is based on how hard it is for you to get resources and be able to play your game if both you and the enemy play the matchup consistently well.",
+      "links": []
+     },
+     {
+      "tipo": "sub",
+      "texto": "VERY EASY"
+     },
+     {
+      "tipo": "p",
+      "texto": "Enemy can't do anything to stop you from getting resources and playing your game.",
+      "links": []
+     },
+     {
+      "tipo": "sub",
+      "texto": "EASY"
+     },
+     {
+      "tipo": "p",
+      "texto": "Enemy isn't as weak/divable/ignorable, but still can't limit your ability to get resources.",
+      "links": []
+     },
+     {
+      "tipo": "sub",
+      "texto": "MEDIUM"
+     },
+     {
+      "tipo": "p",
+      "texto": "Enemy now can have the opportunity to beat you even if you play it well. They can start to deny some resources, and you need to play some parts of the game conservatively.",
+      "links": []
+     },
+     {
+      "tipo": "sub",
+      "texto": "HARD"
+     },
+     {
+      "tipo": "p",
+      "texto": "You are in a losing state from champ select. You have to itemize differently, give minions or do your best to not bleed resources. Not being down CS, and not dying is winning the lane.",
+      "links": []
+     },
+     {
+      "tipo": "sub",
+      "texto": "VERY HARD"
+     },
+     {
+      "tipo": "p",
+      "texto": "If the enemy knows what they're doing, you will be down CS and/or die, not much you can do about it. Getting any value in a matchup like this comes down to outplays, jungle pressure and proxying.",
+      "links": []
+     }
+    ]
+   },
+   {
+    "tipo": "secao",
+    "titulo": "",
+    "partes": [
+     {
+      "tipo": "p",
+      "texto": "created and organised by yours truly, toughjourney, best moderator and Bard oat",
+      "links": []
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "runas",
+  "titulo": "Runas",
+  "titulo_en": "Runes",
+  "blocos": [
+   {
+    "tipo": "secao",
+    "titulo": "RUNES",
+    "partes": [
+     {
+      "tipo": "imagens",
+      "imagens": [
+       {
+        "src": "imagens/fiora/563fb9b43db2a5f06a32e67ea22ff3628bde242d.jpg",
+        "alt": "Fiora — CONQ Page — Sad",
+        "largura": 1400,
+        "altura": 1072,
+        "legenda": "CONQ Page"
+       },
+       {
+        "src": "imagens/fiora/55b66a51c649fc9d3a2c2de67e57113944ddef59.jpg",
+        "alt": "Fiora — PTA Page — Sad",
+        "largura": 1400,
+        "altura": 1075,
+        "legenda": "PTA Page"
+       },
+       {
+        "src": "imagens/fiora/407705383154687c4515965d6371ce41b4cb803c.jpg",
+        "alt": "Fiora — Hail of Blades Page — Sad",
+        "largura": 1400,
+        "altura": 1067,
+        "legenda": "Hail of Blades Page"
+       },
+       {
+        "src": "imagens/fiora/87b8d0ad6d4fc27b4256c88534c2542667d29e34.jpg",
+        "alt": "Fiora — Stormsurge Page — Sad",
+        "largura": 1400,
+        "altura": 1050,
+        "legenda": "Stormsurge Page"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "itens",
+  "titulo": "Itens",
+  "titulo_en": "Itemization",
+  "blocos": [
+   {
+    "tipo": "secao",
+    "titulo": "ITEMIZATION",
+    "partes": [
+     {
+      "tipo": "p",
+      "texto": "ALWAYS BUILD UNLESS THESE UNLESS STH IS SPECIFICALLY MENTIONED IN THE MATCHUP SECTION\nSquishy/short trade = Eclipse 2nd. Otherwise Trinity 2nd",
+      "links": []
+     },
+     {
+      "tipo": "bloco",
+      "bloco": {
+       "tipo": "pecas",
+       "grupos": [
+        {
+         "titulo": "",
+         "itens": [
+          {
+           "nome": "Ravenous Hydra",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png",
+           "id": "3074"
+          },
+          {
+           "nome": "Trinity Force",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png",
+           "id": "3078"
+          },
+          {
+           "nome": "Eclipse",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png",
+           "id": "6692"
+          },
+          {
+           "nome": "Death's Dance",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png",
+           "id": "6333"
+          },
+          {
+           "nome": "Endless Hunger",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/2517.png",
+           "id": "2517"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     {
+      "tipo": "sub",
+      "texto": "Updated Sep 22"
+     },
+     {
+      "tipo": "p",
+      "texto": "Fiora itemization is pretty consistent overall. You go Ravenous into Trinity/Eclipse into DD or Hullbreaker depending on if teamfight is in any way possible. Then, you buy Steraks if you need the extra hp/survive, Shojin if you don't and want to team fight or Hullbreaker if you want to split",
+      "links": []
+     },
+     {
+      "tipo": "bloco",
+      "bloco": {
+       "tipo": "pecas",
+       "grupos": [
+        {
+         "titulo": "",
+         "itens": [
+          {
+           "nome": "Voltaic Cyclosword",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6699.png",
+           "id": "6699",
+           "texto": "Good vs squishy champions (ex: Quinn/Jayce/Yone). Synergizes with HoB/Stormsurge. Others prefer Hubris instead, I prefer Cyclosword. Buy 2nd if getting it."
+          },
+          {
+           "nome": "Muramana",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3042.png",
+           "id": "3042",
+           "texto": "Very good vs champs that are very tanky and you can't quite dive even at 2-3 items because you don't have the damage, and they really only live because CC + turret damage. So, you invest early into it so you can kill them later (Ex: Malphite, Maokai)"
+          },
+          {
+           "nome": "Maw of Malmortius",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3156.png",
+           "id": "3156",
+           "texto": "You buy early hexdrinker into heavy ap threats like Akali, Rumble, Cassio, only finish after Rav if they're still a major threat. Generally, finish 3rd after Trinity."
+          },
+          {
+           "nome": "Endless Hunger",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/2517.png",
+           "id": "2517",
+           "texto": "You buy Endless Hunger 4th or 5th item into low CC comps with low burst. Good for when you snowball/are ahead."
+          }
+         ]
+        }
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ }
+]

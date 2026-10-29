@@ -1,4 +1,4 @@
-# Uma vez por dia baixa as planilhas dos guias (Akshan do Peteruso, Mordekaiser do Meowdekaiser, Illaoi do Hachiragi), atualiza a cópia embutida no site,
+# Uma vez por dia baixa as planilhas dos guias (Akshan do Peteruso, Mordekaiser do Meowdekaiser, Illaoi do Hachiragi, Kayle do UJard, Fiora do Sad), atualiza a cópia embutida no site,
 # gera o index.html e, se algo mudou, faz o commit. A Vercel publica sozinha a cada push.
 # Para rodar na hora: aba Actions do GitHub > "Atualizar planilhas dos guias" > Run workflow.
 # Para desligar: apague este arquivo (ou desative o workflow na aba Actions).
@@ -33,6 +33,7 @@ jobs:
           python3 scripts/atualizar_mordekaiser.py
           python3 scripts/atualizar_illaoi.py
           python3 scripts/atualizar_kayle.py
+          python3 scripts/atualizar_fiora.py
           python3 scripts/traducao_pt.py  # nomes em PT e títulos em EN; frase nova fica no original até ser traduzida
           python3 scripts/importar_lol.py  # runas e itens de cada matchup para o app importar no cliente
           python3 scripts/build.py
@@ -45,6 +46,6 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A src/versao_dd.txt src/guias/akshan src/guias/mordekaiser src/guias/illaoi src/guias/kayle imagens index.html guias-app.json
+          git add -A src/versao_dd.txt src/guias/akshan src/guias/mordekaiser src/guias/illaoi src/guias/kayle src/guias/fiora imagens index.html guias-app.json
           git commit -m "Atualiza a cópia das planilhas dos guias"
           git push

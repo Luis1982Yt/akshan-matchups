@@ -146,5 +146,48 @@
         "url": "https://www.patreon.com/UJard"
       }
     ]
+  },
+  {
+    "id": "fiora",
+    "campeao": "Fiora",
+    "rota": "Top",
+    "autor": "Sad",
+    "formato": "completo",
+    "dados": "guias/fiora",
+    "chave": 114,
+    "titulo": "a Grande Duelista",
+    "titulo_en": "the Grand Duelist",
+    "mira": [
+      52,
+      32
+    ],
+    "fonte": "Notas da planilha \"Fiora Bible 2026\" do Sad, traduzidas do inglês.",
+    "fonte_en": "Notes from Sad's \"Fiora Bible 2026\" spreadsheet.",
+    "links": [
+      {
+        "rotulo": "Ver a planilha original",
+        "rotulo_en": "See the original spreadsheet",
+        "url": "https://docs.google.com/spreadsheets/d/1g_YjX4jYcz15k8FZuOkhc4IWA1LLm28WinrVCGBXxLY/edit"
+      },
+      {
+        "rotulo": "Twitch",
+        "url": "https://www.twitch.tv/justsad42"
+      },
+      {
+        "rotulo": "YouTube",
+        "url": "https://www.youtube.com/@JustSad42"
+      },
+      {
+        "rotulo": "Discord",
+        "url": "https://discord.gg/KT5hrKxq6K"
+      }
+    ],
+    "acompanhe": [
+      {
+        "nome": "Sad",
+        "url": "https://www.twitch.tv/justsad42",
+        "canal": "twitch.tv/justsad42"
+      }
+    ]
   }
 ]
