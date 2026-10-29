@@ -787,8 +787,10 @@ body.sem-rolar { overflow: hidden; }
 .seta-mira:hover { color: var(--destaque); }
 .seta-mira svg { width: 15px; height: 24px; }
 .lista {
-  position: absolute; inset: 12% 12% 7%; overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--acento) transparent;
-  -webkit-mask-image: linear-gradient(to bottom, #000 78%, transparent); mask-image: linear-gradient(to bottom, #000 78%, transparent);
+  /* A grade cabe dentro do aro: com 5 colunas, os cantos dos retratos ficam sobre o círculo de dentro (raio 46,5%),
+     em vez de passar da borda em cima e embaixo. */
+  position: absolute; inset: 14.5% 13.75%; overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--acento) transparent;
+  -webkit-mask-image: linear-gradient(to bottom, #000 84%, transparent); mask-image: linear-gradient(to bottom, #000 84%, transparent);
   display: grid; grid-template-columns: repeat(auto-fill, minmax(46px, 1fr)); gap: 9px; align-content: start; padding: 12px 12px 28px;
 }
 .pick { position: relative; aspect-ratio: 1; padding: 0; border: 1px solid var(--linha-forte); border-radius: 6px; cursor: pointer; background: var(--painel-alto); }
