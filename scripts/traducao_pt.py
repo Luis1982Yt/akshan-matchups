@@ -9,7 +9,9 @@ Grava src/guias/<guia>/traducao_pt.json com:
 Uso:
   python scripts/traducao_pt.py                 atualiza os nomes e mostra quantas frases estão sem tradução
   python scripts/traducao_pt.py --faltando      lista as frases sem tradução (para traduzir e pôr em "textos")
-  python scripts/traducao_pt.py --importar DIR  junta pares NN.json ([id, origem, texto]) + NN_pt.json ({id: pt})
+  python scripts/traducao_pt.py --importar DIR --guia ID   junta pares NN.json ([id, origem, texto]) + NN_pt.json ({id: pt})
+                                                só no guia ID (sem --guia vale para todos, mas só preenche o que falta)
+  python scripts/traducao_pt.py --lotes DIR --guia ID      grava em DIR os lotes NN.json das frases sem tradução do guia
 
 Frase nova na planilha sem tradução aparece em inglês no modo PT até alguém traduzir.
 """
@@ -122,7 +124,34 @@ def importa(pasta):
     return pares
 
 
+def lotes(guia, pasta, limite=14000):
+    """Divide as frases sem tradução do guia em lotes NN.json ([id, guia, texto]) de até ~limite caracteres."""
+    arq = GUIAS / guia / "traducao_pt.json"
+    atual = json.loads(arq.read_text(encoding="utf-8")) if arq.exists() else {"textos": {}, "iguais": []}
+    frases = [t for t in textos_do_guia(guia) if t not in atual["textos"] and t not in atual.get("iguais", [])]
+    pasta = pathlib.Path(pasta)
+    pasta.mkdir(parents=True, exist_ok=True)
+    grupos, atual_lote, tam = [], [], 0
+    for i, t in enumerate(frases):
+        atual_lote.append([i, guia, t])
+        tam += len(t)
+        if tam > limite:
+            grupos.append(atual_lote)
+            atual_lote, tam = [], 0
+    if atual_lote:
+        grupos.append(atual_lote)
+    for n, g in enumerate(grupos):
+        (pasta / f"{n:02d}.json").write_text(json.dumps(g, ensure_ascii=False), encoding="utf-8")
+    print(f"{guia}: {len(frases)} frases em {len(grupos)} lotes ({[len(g) for g in grupos]}) em {pasta}")
+
+
 def main():
+    so_guia = sys.argv[sys.argv.index("--guia") + 1] if "--guia" in sys.argv else None
+    if "--lotes" in sys.argv:
+        if not so_guia:
+            raise SystemExit("use --lotes DIR --guia ID")
+        lotes(so_guia, sys.argv[sys.argv.index("--lotes") + 1])
+        return
     novos, iguais_novos = {}, []
     if "--importar" in sys.argv:
         pasta = pathlib.Path(sys.argv[sys.argv.index("--importar") + 1])
@@ -135,11 +164,19 @@ def main():
         guia = cfg["dados"].split("/")[-1]
         arq = GUIAS / guia / "traducao_pt.json"
         atual = json.loads(arq.read_text(encoding="utf-8")) if arq.exists() else {"textos": {}, "nomes": {}}
-        todos = {**atual["textos"], **novos}
+        # A tradução que o guia já tem vale mais que a nova: um lote de outro guia não troca frases iguais daqui
+        # ("Notes", "Dodge"). Com --guia, o lote só entra naquele guia (lá ele pode corrigir frases antigas).
+        if so_guia is None:
+            todos = {**novos, **atual["textos"]}
+        elif guia == so_guia:
+            todos = {**atual["textos"], **novos}
+        else:
+            todos = dict(atual["textos"])
         frases = textos_do_guia(guia)
         textos = {t: todos[t] for t in frases if t in todos and todos[t] != t}
         # "iguais": nomes, perfis e siglas que ficam iguais em PT (só para não aparecerem como faltando).
-        iguais = sorted({t for t in [*atual.get("iguais", []), *iguais_novos, *(t for t in todos if todos[t] == t)] if t in frases and t not in textos})
+        extra = iguais_novos if so_guia in (None, guia) else []
+        iguais = sorted({t for t in [*atual.get("iguais", []), *extra, *(t for t in todos if todos[t] == t)] if t in frases and t not in textos})
         try:
             nomes = nomes_pt(icones_do_guia(guia))
             ids = {m["id"] for m in json.loads((GUIAS / guia / "matchups.json").read_text(encoding="utf-8"))["matchups"]}

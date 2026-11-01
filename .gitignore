@@ -1,4 +1,5 @@
-.claude/
+.claude/*
+!.claude/skills/
 .impeccable/review/
 .impeccable/questions/
 __pycache__/

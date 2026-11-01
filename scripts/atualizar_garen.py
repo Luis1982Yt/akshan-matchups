@@ -11,68 +11,30 @@ Aba "FAQ": legenda das notas, bans, plano de split, notas de botas e Conquistado
 transcrita em PAGINA_RUNAS com a troca que o próprio autor anotou: Manto de Nimbus -> Arcanista do Axioma).
 A aba "Index" e as células de Twitch, Discord, coaching e agradecimentos são sobre o autor e ficam de fora.
 """
-import csv
-import io
 import json
-import math
-from pathlib import Path
 import re
-import urllib.request
 
-from atualizar_mordekaiser import chave, icone_fragmento, montar_icones
-from versao_dd import VER
+from atualizar_mordekaiser import chave, icone_fragmento
+from guia_comum import APELIDO_CAMPEAO, APELIDO_ITEM, DD, FEITICO, Ddragon, csv_aba, dificuldade_10, gravar_guia, limpa
 
-ROOT = Path(__file__).resolve().parent.parent
-DEST = ROOT / 'src/guias/garen'
-DD = f'https://ddragon.leagueoflegends.com/cdn/{VER}'
-PLANILHA = 'https://docs.google.com/spreadsheets/d/1896y14zn9YDA2c_AZWOkGa2Bwb1vCFIOf2EOTQ_o6VQ/edit'
-CSV = 'https://docs.google.com/spreadsheets/d/1896y14zn9YDA2c_AZWOkGa2Bwb1vCFIOf2EOTQ_o6VQ/gviz/tq?tqx=out:csv&gid={}'
+ID = '1896y14zn9YDA2c_AZWOkGa2Bwb1vCFIOf2EOTQ_o6VQ'
+PLANILHA = f'https://docs.google.com/spreadsheets/d/{ID}/edit'
 ABAS = {'matchups': 0, 'faq': 588252149}
 PAGINA_RUNAS = (['Phase Rush', 'Axiom Arcanist', 'Celerity', 'Gathering Storm'], ['Demolish', 'Second Wind'])
-FEITICO = {'ignite': ('Ignite', 'SummonerDot'), 'flash': ('Flash', 'SummonerFlash'), 'fsh': ('Flash', 'SummonerFlash'),
-           'ghost': ('Ghost', 'SummonerHaste'), 'exh': ('Exhaust', 'SummonerExhaust'), 'cleanse': ('Cleanse', 'SummonerBoost')}
-APELIDO_CAMPEAO = {'fiddle': 'Fiddlesticks', 'heimer': 'Heimerdinger', 'asol': 'AurelionSol', 'ksante': 'KSante',
-                   'morde': 'Mordekaiser', 'trynd': 'Tryndamere', 'nunuwillump': 'Nunu', 'nunuandwillump': 'Nunu'}
-APELIDO_ITEM = {'swifties': "Boots of Swiftness", "dead man's": "Dead Man's Plate", 'deadmans': "Dead Man's Plate",
-                "jak'sho": "Jak'Sho, The Protean", "sterak's": "Sterak's Gage", 'steraks': "Sterak's Gage",
-                "serpant's fang": "Serpent's Fang", 'serpants fang': "Serpent's Fang", "randuin's": "Randuin's Omen",
-                'randuins': "Randuin's Omen", 'rookern': 'Kaenic Rookern', 'fon': 'Force of Nature',
-                'ldr': "Lord Dominik's Regards", 'refill': 'Refillable Potion', 'refill pot': 'Refillable Potion',
-                'negatron': 'Negatron Cloak', 'bork': 'Blade of The Ruined King', 'chempunk': 'Chempunk Chainsword',
-                "exe cutioner's calling": "Executioner's Calling", 'shojin': 'Spear of Shojin', 'cleaver': 'Black Cleaver',
-                'tiamat': 'Tiamat', "berserker's swifties": "Berserker's Greaves", 'hb': 'Hullbreaker', 'exe': "Executioner's Calling",
-                "execution's calling": "Executioner's Calling", 'qss': 'Quicksilver Sash', "serpant's": "Serpent's Fang",
-                'serpants': "Serpent's Fang", 'shieldbow': 'Immortal Shieldbow', 'swiftness boots': 'Boots of Swiftness'}
 SPLIT = {'Y': 'Split push', 'N': 'Team fight', 'S': 'Split push or team fight, depending on the game'}
 
 
-def baixar(url):
-    with urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'}), timeout=60) as r:
-        return r.read()
-
-
 def aba(nome):
-    return list(csv.reader(io.StringIO(baixar(CSV.format(ABAS[nome])).decode('utf-8'))))
-
-
-def limpa(t):
-    """Junta as quebras de linha da célula (o autor quebra no meio da frase para caber); o texto continua o mesmo."""
-    return re.sub(r'\s+', ' ', t).strip()
+    return csv_aba(ID, ABAS[nome])
 
 
 def dificuldade(t):
-    t = limpa(t)
-    if not t:
-        return {'overall': None, 'valor': None, 'texto': ''}
-    numeros = [float(x) for x in re.findall(r'\d+(?:\.\d+)?', t)]
-    alto = max(numeros)
-    return {'overall': max(1, min(5, math.ceil(alto / 2))), 'valor': alto, 'texto': f'{t}/10'}
+    return dificuldade_10(t) if limpa(t) else {'overall': None, 'valor': None, 'texto': ''}
 
 
 def icone_item(nome, por_item):
     base = limpa(nome).strip(' .')
-    alvo = APELIDO_ITEM.get(base.lower(), base)
-    k = chave(alvo)
+    k = chave(APELIDO_ITEM.get(base.lower(), base))
     if k in por_item:
         return por_item[k]
     achados = [v for kk, v in por_item.items() if kk.startswith(k) and len(k) >= 5]
@@ -239,15 +201,10 @@ def gerar_paginas(faq, por_runa):
 
 def main():
     linhas, faq = aba('matchups'), aba('faq')
-    campeoes = json.loads(baixar(f'{DD}/data/pt_BR/champion.json'))['data']
-    itens = json.loads(baixar(f'{DD}/data/en_US/item.json'))['data']
-    por_item, por_runa = montar_icones(itens, json.loads(baixar(f'{DD}/data/en_US/runesReforged.json')))
-    matchups, faltando = gerar_matchups(linhas, campeoes, por_item, por_runa)
-    paginas = gerar_paginas(faq, por_runa)
-    DEST.mkdir(parents=True, exist_ok=True)
-    fonte = {'planilha': PLANILHA, 'autor': 'Triton', 'twitch': 'https://www.twitch.tv/triton'}
-    for nome, valor in [('matchups.json', {'versao': VER, 'fonte': fonte, 'matchups': matchups}), ('paginas.json', paginas)]:
-        (DEST / nome).write_text(json.dumps(valor, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
+    dd = Ddragon()
+    matchups, faltando = gerar_matchups(linhas, dd.campeoes, dd.por_item, dd.por_runa)
+    paginas = gerar_paginas(faq, dd.por_runa)
+    gravar_guia('garen', matchups, paginas, {'planilha': PLANILHA, 'autor': 'Triton', 'twitch': 'https://www.twitch.tv/triton'})
     print(f'{len(matchups)} matchups, {len(paginas)} páginas' + (f'; itens sem ícone: {sorted(faltando)}' if faltando else ''))
 
 

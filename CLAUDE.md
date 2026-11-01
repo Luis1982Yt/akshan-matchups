@@ -31,6 +31,10 @@ GUIAS_FUTUROS.md, como tudo funciona em README.md e app/README.md.
 
 ## Guia novo (passo a passo do que já foi feito com Mordekaiser, Illaoi e Kayle)
 
+**Sempre usar a skill `guia-novo` (`.claude/skills/guia-novo/SKILL.md`) para guia novo, fonte nova, tradução de guia
+ou mexer num `atualizar_<campeão>.py`, mesmo sem o dono pedir** (pedido de 2026-11-01). Scripts novos importam de
+`scripts/guia_comum.py`.
+
 1. Ler a planilha inteira (xlsx: `https://docs.google.com/spreadsheets/d/<id>/export?format=xlsx`; se o download
    for bloqueado, a versão `htmlview`). Script `scripts/atualizar_<campeão>.py` gera `src/guias/<id>/matchups.json`
    e `paginas.json` (todas as abas viram páginas, ícones da planilha reconhecidos por md5).
