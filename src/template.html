@@ -303,6 +303,23 @@ try {
   --texto: #241520; --texto-baixo: #6a5562; --tinta-botao: #ffffff;
   --luz: rgba(216, 120, 180, .12); --sombra: 0 10px 30px rgba(80, 20, 60, .14); color-scheme: light;
 }
+/* Azir: a areia dourada de Shurima, o turquesa do disco solar e a pedra do deserto. */
+:root[data-guia="azir"] {
+  --fundo: #120f0a; --painel: #1c1810; --painel-alto: #262016;
+  --linha: rgba(232, 196, 106, .22); --linha-forte: rgba(232, 196, 106, .48);
+  --acento: #e8c46a; --acento-vivo: #f8e6b4; --destaque: #4fd1c5;
+  --texto: #f3ecdc; --texto-baixo: #ab9f86; --tinta-botao: #1a1406;
+  --luz: rgba(232, 190, 90, .13); --sombra: 0 10px 30px rgba(0, 0, 0, .5);
+  --sobre-arte: #fff4d6; --destaque-arte: #7fe3d8; --botao-1: #fbe7b0; --botao-2: #c9962e;
+  --brilho: rgba(255, 236, 190, .5); --brilho-2: rgba(79, 209, 197, .2); color-scheme: dark;
+}
+:root[data-guia="azir"][data-tema="claro"] {
+  --fundo: #f7f2e6; --painel: #fffcf4; --painel-alto: #efe5cf;
+  --linha: rgba(110, 80, 20, .24); --linha-forte: rgba(110, 80, 20, .54);
+  --acento: #8a6512; --acento-vivo: #684b08; --destaque: #0f7f75;
+  --texto: #231c10; --texto-baixo: #67593d; --tinta-botao: #ffffff;
+  --luz: rgba(220, 170, 60, .12); --sombra: 0 10px 30px rgba(90, 60, 10, .14); color-scheme: light;
+}
 /* Garen: o azul real dos estandartes de Demacia, o aço da armadura e o ouro dos detalhes. */
 :root[data-guia="garen"] {
   --fundo: #090e19; --painel: #101726; --painel-alto: #172033;
@@ -1959,7 +1976,7 @@ function linhaNaLingua(l) {
 }
 
 /* ---------- Formato completo (runas, itens, dificuldade e seções) ---------- */
-const TITULOS = { "Enemy Cooldowns": "Cooldowns do inimigo", "Early Game": "Early game", "How to trade": "Como trocar", "What to watch out for": "Cuidado com", "Tips": "Dicas", "Mini Rant": "Desabafo", "Tips and Tricks": "Dicas e truques", "What to do as Akali": "O que fazer de Akali", "What to look out for": "Cuidado com", "Timers to think about": "Timers para ficar de olho", "Laning Overview": "Fase de rotas", "Trading / Fighting": "Trocas e lutas", "Level 6+": "Nível 6+", "Additional Information": "Informações extras", "VoD's/Clips": "VODs e clipes", "Strategy": "Estratégia" };
+const TITULOS = { "Enemy Cooldowns": "Cooldowns do inimigo", "Early Game": "Early game", "How to trade": "Como trocar", "What to watch out for": "Cuidado com", "Tips": "Dicas", "Mini Rant": "Desabafo", "Tips and Tricks": "Dicas e truques", "What to do as Akali": "O que fazer de Akali", "What to look out for": "Cuidado com", "Timers to think about": "Timers para ficar de olho", "Laning Overview": "Fase de rotas", "Trading / Fighting": "Trocas e lutas", "Level 6+": "Nível 6+", "Additional Information": "Informações extras", "VoD's/Clips": "VODs e clipes", "Strategy": "Estratégia", "Aggressive playstyle": "Jogo agressivo" };
 const KW_EN = /\b(level \d+|lvl \d+|nível \d+)\b/gi;
 const marcaEn = t => destaca(esc(t).replace(KW_EN, m => `<span class="kw">${m}</span>`));
 // Guias escritos em inglês têm uma camada em português (src/guias/<guia>/traducao_pt.json, de scripts/traducao_pt.py):
@@ -2065,9 +2082,11 @@ function setupCompleto(c) {
     : [["early", "Early"], ["mid", "Mid"], ["late", "Late"], ["overall", "Geral"]]
     .filter(([k]) => k === "overall" || c.dificuldade[k] != null)
     .map(([k, r]) => `<div><dt>${k === "overall" ? t("geral") : r}</dt><dd aria-label="${c.dificuldade[k] ? t("srDif", k === "overall" ? c.dificuldade.valor ?? c.dificuldade[k] : c.dificuldade[k], guia.escala || 5).replace(/^, /, "") : t("semAnot")}">${pips(c.dificuldade[k])}<b>${k === "overall" && c.dificuldade.texto ? esc(notaTexto(tr(c.dificuldade.texto))) : (c.dificuldade[k] ?? "–") + "/5"}</b></dd></div>`).join("");
+  // Guia sem runas e itens em nenhuma matchup (fonte só com dicas, como o Azir): o quadro mostra só a dificuldade.
+  const temSetup = guia.lista.some(m => (m.runas || []).length || (m.itens || []).length || (m.feiticos || []).length);
   return `<div class="setup-completo">
-    <section class="bloco"><h3>${t("runas")}</h3>${runas || `<p class="livre">${t("semAnot")}</p>`}${imagensRunas}${feiticos}</section>
-    <section class="bloco build"><h3>${t("itens")}</h3>${itens || `<p class="livre">${t("semAnot")}</p>`}</section>
+    ${temSetup ? `<section class="bloco"><h3>${t("runas")}</h3>${runas || `<p class="livre">${t("semAnot")}</p>`}${imagensRunas}${feiticos}</section>
+    <section class="bloco build"><h3>${t("itens")}</h3>${itens || `<p class="livre">${t("semAnot")}</p>`}</section>` : ""}
     <section class="bloco dif"><h3>${t("dificuldade")}</h3><dl>${dif}</dl></section>
   </div>`;
 }

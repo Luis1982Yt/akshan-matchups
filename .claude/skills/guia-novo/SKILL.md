@@ -56,7 +56,7 @@ Guias de referência: `scripts/atualizar_garen.py` (CSV, uma linha por matchup, 
 1. `python3 scripts/traducao_pt.py` (cria o arquivo e os nomes de itens/runas em PT).
 2. `python3 scripts/traducao_pt.py --lotes /tmp/<id>/trad --guia <id>` → lotes `NN.json` de ~14 mil caracteres.
 3. Para cada lote: imprimir (`for i,g,t in json.load(...)`) e escrever `NN_pt.json` = `{"<id>": "pt"}` com TODOS os ids
-   daquele lote (id de um lote no `_pt` de outro não é importado). Strings iguais (Mid, Top) mapeiam para si mesmas.
+   daquele lote (o id pode ficar em qualquer `_pt` da pasta). Strings iguais (Mid, Top) mapeiam para si mesmas.
 4. `python3 scripts/traducao_pt.py --importar /tmp/<id>/trad --guia <id> --faltando` até `0 sem tradução`.
    Sempre com `--guia`: sem ele o lote vale para todos os guias.
 - Glossário: nomes oficiais do cliente pt_BR (Data Dragon `pt_BR/item.json`, `runesReforged.json`; runa que saiu do

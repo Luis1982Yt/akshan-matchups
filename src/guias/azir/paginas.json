@@ -1,0 +1,123 @@
+[
+ {
+  "id": "geral",
+  "titulo": "Geral",
+  "titulo_en": "Overview",
+  "blocos": [
+   {
+    "tipo": "secao",
+    "titulo": "About Champion",
+    "partes": [
+     {
+      "tipo": "p",
+      "texto": "Azir is the Ascended leader of the ancient empire of Shurima. He is a mid lane mage which summons and controls sand soldiers. Azir is a really fun champion but extremely hard to master. You need to spend a lot of time to be at least decent with him. Azir has an extremely strong siege, insane zone control, high DPS (damage per second), decent pushing power in early game and insane in late game, strong engage and disengage due to his Emperor's Divide (R) and Shifting Sands (E), godly late game and good burst potential if built properly. Azir's Cons are: well as I said before - he is hard to master which means you're going to have a bad time in your first matches. He is extremely squishy, has a pretty bad early game if played wrong, obviously useless without his soldiers. The key to learning Azir is to never give up if the champion feels underwhelming.",
+      "links": []
+     }
+    ]
+   },
+   {
+    "tipo": "secao",
+    "titulo": "General tips",
+    "partes": [
+     {
+      "tipo": "lista",
+      "numerada": true,
+      "itens": [
+       {
+        "texto": "Try to shove the first wave ASAP. Kill the first minion of the 2nd wave with your soldier (W) to get level 2. Quickly get the point in Q and then use W again with Q to get a nice trade.",
+        "links": []
+       },
+       {
+        "texto": "Always try to predict where the enemy jungler can be. Ward jungle paths if you can - it will give you an idea on where he will be.",
+        "links": []
+       },
+       {
+        "texto": "Yellow trinket/Control Wards are your friends. Ward a lot when you shove a lane to keep yourself safe and to give your team vision.",
+        "links": []
+       },
+       {
+        "texto": "Try to get at least 7 cs/min every game - its the average score.",
+        "links": []
+       },
+       {
+        "texto": "Never do risky plays until you are 100% sure you will survive. You are the main DPS in your team.",
+        "links": []
+       },
+       {
+        "texto": "Your ult at level 16 does insane damage so use it to oneshot enemy ADC/APC (check #5)",
+        "links": []
+       },
+       {
+        "texto": "Use your ult to keep your ADC and yourself safe in teamfights.",
+        "links": []
+       },
+       {
+        "texto": "If you are pushing a tower put a soldier behind you to create an escape route. Also summon 3x soldiers for the atk speed boost.",
+        "links": []
+       },
+       {
+        "texto": "Keep it in mind: W + Q costs you 95 mana. W + E + Q costs you 155 mana. Shurima Shuffle (W + E + Q + R) costs you 255 mana.",
+        "links": []
+       },
+       {
+        "texto": "Ask your jungler for help. After 6, you potentially have a guaranteed kill if your jungler has any CC. For example, if you have Vi - ult your enemy towards her - enjoy a kill/assist.",
+        "links": []
+       },
+       {
+        "texto": "Use your passive all the time when you are trying to get Inner Turret/Inhibitor Turret to keep yourself safe or when you are defending from enemy siege.",
+        "links": []
+       },
+       {
+        "texto": "Never give up if you are losing/dying in the early stage of the game. Azir scales very well.",
+        "links": []
+       },
+       {
+        "texto": "You can deny Rift Herald push by summoning your own turret. For example: If one of your turrets is about to die and Herald will destroy it - use your passive in its place.",
+        "links": []
+       },
+       {
+        "texto": "You can dash through multiple walls. https://www.youtube.com/watch?v=nWvnzGSKDXU&feature=youtu.be",
+        "links": []
+       },
+       {
+        "texto": "Farm whenever you can. If there is a huge wave in one of the side lanes and you can get it without any risks get it.",
+        "links": []
+       },
+       {
+        "texto": "When you shove the lane, try to W over the wall to check raptors - it will give you an idea on where the enemy jungler might be... or you can find him with low HP if you are lucky.",
+        "links": []
+       },
+       {
+        "texto": "With 25 ability haste you need 5 points in W to get the atk speed buff constantly. With 40 ability haste thats 3 points in W. With 65 ability haste its 1 with small window - 2 to never miss it.",
+        "links": []
+       },
+       {
+        "texto": "Move between AAs - never stay still. Kiting is a very powerful tool.",
+        "links": []
+       },
+       {
+        "texto": "If you are behind a wall or in a bush and enemies see your soldiers - they see you as well on the map.",
+        "links": []
+       },
+       {
+        "texto": "If you build Lost Chapter make sure to spend some mana before leveling up. It will restore 20% of your maximum mana after a level up.",
+        "links": []
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "tipo": "secao",
+    "titulo": "Aggressive Azir playstyle",
+    "partes": [
+     {
+      "tipo": "p",
+      "texto": "/Laki: So I made this slide for Azir players that are focused on solo killing their opponents rather than playing for prio and cs advantage. I have been playing Azir like this for the entire season 10 and i have been successful in 70% of laning phases. Your rune choice for this playstyle should always be Domination + Precision/Inspiration or Conqueror + Sorcery (Conqueror only for specific matchups like Yasuo, Vladimir, Sylas). You can also play aggressively with Lethal Tempo but it doesn’t have the trading power that other runes have, it’s mostly for scaling and versus tanky comps. If you decide to use this playstyle you can easily snowball and win the game by yourself if you are successful in stomping your opponent. Only thing that can stop you is the enemy jungler, so try to improve your vision control. You have to constantly poke your opponents with W + AA + Q + AA combo , because it easily procs Electrocute. As soon as they are out of potions and are like below 40% hp (also dependable on how squishy the champion is, this percentage could be a little lower or higher), you can engage on them with W + AA + E + Q + AA (+ Flash to get out of turret range if you are diving them). You will know when you can kill someone with this simple combo when you get used to Azir’s damage. Now the downside of this playstyle is that your cs per minute will most likely fall off a little bit, but try to keep it at 7 cs per minute. This is because you will be focused more on poking down your enemy and you might lose some cs in the process (but they will as well because you will be denying cs when they walk up). I have highlighted most of aggressive tips in every matchup with this pink color.",
+      "links": []
+     }
+    ]
+   }
+  ]
+ }
+]

@@ -114,11 +114,16 @@ def nomes_pt(icones):
 
 def importa(pasta):
     """Junta as traduções feitas em lote: NN.json ([id, origem, texto]) com NN_pt.json ({id: pt})."""
+    # Os ids são únicos na pasta (--lotes numera tudo junto), então tanto faz em qual NN_pt.json a tradução ficou.
+    pasta = pathlib.Path(pasta)
+    pt = {}
+    for f in sorted(pasta.glob("*_pt.json")):
+        pt.update(json.loads(f.read_text(encoding="utf-8")))
     pares = {}
-    for f in sorted(glob.glob(str(pathlib.Path(pasta) / "*_pt.json"))):
-        fonte = pathlib.Path(f.replace("_pt.json", ".json"))
-        pt = json.loads(pathlib.Path(f).read_text(encoding="utf-8"))
-        for i, _, texto in json.loads(fonte.read_text(encoding="utf-8")):
+    for f in sorted(pasta.glob("[0-9]*.json")):
+        if f.name.endswith("_pt.json"):
+            continue
+        for i, _, texto in json.loads(f.read_text(encoding="utf-8")):
             if str(i) in pt:
                 pares[texto] = pt[str(i)]
     return pares

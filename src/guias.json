@@ -304,5 +304,30 @@
         "canal": "twitch.tv/triton"
       }
     ]
+  },
+  {
+    "id": "azir",
+    "campeao": "Azir",
+    "rota": "Mid",
+    "autor": "Eleyte e Lord Laki",
+    "formato": "completo",
+    "dados": "guias/azir",
+    "chave": 268,
+    "titulo": "o Imperador das Areias",
+    "titulo_en": "the Emperor of the Sands",
+    "mira": [
+      50,
+      30
+    ],
+    "fonte": "Dicas de rota dos slides de Azir do Eleyte e do Lord Laki (season 11, 2021), traduzidas do inglês. As runas e os itens da época mudaram demais e não entram.",
+    "fonte_en": "Lane tips from Eleyte and Lord Laki's Azir slides (season 11, 2021). The runes and items from back then changed too much and are left out.",
+    "links": [
+      {
+        "rotulo": "Ver os slides originais",
+        "rotulo_en": "See the original slides",
+        "url": "https://docs.google.com/presentation/d/1NpY9_GkE0qtJVqomq_CsvBntYKug1B0LGbzq1a6J_Zw/edit"
+      }
+    ],
+    "acompanhe": []
   }
 ]

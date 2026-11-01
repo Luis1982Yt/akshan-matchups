@@ -1,0 +1,2369 @@
+{
+ "versao": "16.21.1",
+ "fonte": {
+  "planilha": "https://docs.google.com/presentation/d/1NpY9_GkE0qtJVqomq_CsvBntYKug1B0LGbzq1a6J_Zw/edit",
+  "autor": "Eleyte e Lord Laki"
+ },
+ "matchups": [
+  {
+   "nome": "Ahri",
+   "planilha": "Ahri",
+   "id": "Ahri",
+   "titulo": "a Raposa de Nove Caudas",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 2,
+    "texto": "Easy/Medium"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Ahri wants to roam to impact the sidelanes and get the kills to snowball the game. If she can get a few kills she will be a major threat for you and your team.",
+        "She will use her Q to shove the lane and roam. Try to keep up with her. If possible keep her under her tower.",
+        "Never stay NEXT TO minions so she won't be able to harass you at the same time with Q.",
+        "Stay BEHIND minions so she won't be able to charm you (E).",
+        "This matchup is all about dodging her E, if she doesn’t have it and you are even in items you will always win 1v1.",
+        "Ahri is very squishy which allows you to all in her easily, try to poke her down and all in her once she is around 30-40% hp assuming that you have ignite and electrocute.",
+        "If she misses her Charm you have 12s until she'll have it again. Use it to your advantage – especially when her ult is down.",
+        "If she is missing and you know where she is going, try to follow her but take a different path. If you aren't able to follow her – try to get the tower instead, but warn your teammates and ping what you want to do.",
+        "Be aware of her E > Flash combo – it's unpredictable and you can't dodge it easily."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Aggressive playstyle",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "As soon as she uses her Q to clear minions you have a nice time window to poke her down with AA+Q+AA combo.",
+        "If her R is on cooldown, keep track of it – that's the time when you should fight her."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Akali",
+   "planilha": "Akali",
+   "id": "Akali",
+   "titulo": "a Assassina Renegada",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 4,
+    "texto": "Medium/Hard"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Try to make her lose as much CS as possible pre-6 by pushing her in. Make the waves crash on her tower.",
+        "If she hits her E she can dash to you regardless of distance. The same thing will happen if she hits the shroud. If she hits her E on you, try to play around it by dashing towards your turret and ulting her under tower.",
+        "After 6 avoid fighting with her. Try to prevent her from roaming by pushing her in but be careful.",
+        "If she is missing and you know where she is going try to follow her but take a different path. If you aren't able to follow her – try to get the tower instead, but warn your teammates and ping what you want to do."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Aggressive playstyle",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Pre-6 always try to harass her when she is trying to get CS. Be careful once she gets her shroud because she can just short trade with you and go invisible so you can’t hit her.",
+        "With her R she can dash twice. First one doesn’t do much damage and it’s a point click so she can’t go over walls with it, but second one does damage based on your missing health so you always want to dodge that one or to exhaust her while she is about to cast it.",
+        "You can also try to solo kill her because she is relatively squishy if she doesn’t take Doran’s shield or Resolve runes but be careful because she is really strong,only if you’re confident enough in your skill you should go ignite against her."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Anivia",
+   "planilha": "Anivia",
+   "id": "Anivia",
+   "titulo": "a Criofênix",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 3,
+    "texto": "Medium"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "This matchup is pretty simple:",
+        "You can't dodge her E but it doesn't deal much damage unless she hits her Q – then its damage is doubled (As of patch 10.25 her Q applies the double damage effect if Q just passes through you). You have to dodge her Q by sidestepping it. If you stay in her R she will do double damage with it as well.",
+        "If you are attacking her with a soldier from a solid distance and she throws Q at you, you can just dash into her and dodge her Q, it’s really hard for anivia to predict this.",
+        "After 6 - the lane automatically turns into a farm fiesta. She can easily shove the lane with her R so shove it back. Try to keep up with it.",
+        "She might start to be a bit more aggressive – she will try to trap you inside her ult by using her wall. You can dash through it. Be aware of the fact that she can also interrupt your dash by using the wall on you if she casts it at the right time.",
+        "She is really immobile so ask your jungler for help – after 6 you can easily setup a gank or make her waste a flash by using the Shurima Shuffle.",
+        "When her passive is up you literally have to kill her twice. If she turns into an egg her HP will be restored and after 6s (if she is still alive) she will revive with the HP she has left. The passive will go on cooldown for 4 min so that's the window for when you should be able to kill her.",
+        "Anivia buffs massively overhauled her which makes this matchup way harder",
+        "Take care of her Q , because it’s way faster now",
+        "Her burst is waay stronger now, she can hit 2 Qs in the laning phase and you are pretty much dead"
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Aggressive playstyle",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Shove her pre-6. Make her lose as much CS as possible under tower – her basic attack animation is long and slow.",
+        "Don’t stay next to your minions so she won’t be able to cast her R on both you and minions.",
+        "She is really squishy since she has one of the lowest base hp values in the game, try to poke her down as much as you can and try to solo kill with Ignite."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Annie",
+   "planilha": "Annie",
+   "id": "Annie",
+   "titulo": "a Criança Sombria",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 3,
+    "texto": "Medium"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Watch the bar under her HP and Mana. When she has 4 stacks, the next ability will stun you. Also keep in mind that she can instantly gain a stack after casting her E.",
+        "She can easily last hit minions with her Q refunding the mana and half of its cooldown. She can also stack the stun easily that way.",
+        "If she has all stun stacks Pre-6 – she will most likely use the Q on you and follow up with W to poke. You can't dodge the Q so try to keep your distance – she won't keep the stun forever. If she is holding onto it, there might be a chance that enemy jungler is nearby.",
+        "After 6 she should be more aggressive. Again, watch the stun bar – if she has 3/4 she may try to burst you down.",
+        "She is immobile so you can setup ganks with Shurima Shuffle, ask your jungler for help."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Aggressive playstyle",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Annie is quite squishy, which makes you able to solo kill her, playing around her stun and her E shield is the most important thing about the matchup.",
+        "Be careful at 6 if you have about 50% hp, she can easily burst you down especially if she has ignite.",
+        "Be careful when you are teamfighting and dont stand next to your teammates, she can flash ult with her passive and deal massive amounts of damage, learn how to position against her."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Aurelion Sol",
+   "planilha": "Aurelion Sol",
+   "id": "AurelionSol",
+   "titulo": "o Forjador de Estrelas",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 2,
+    "texto": "Easy/Medium"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Aurelion matchup can be tough if Aurelion is good.",
+        "Aurelion is one of the best - if not THE BEST roamer in the game. That's why you have to keep him in mid lane. Ideally your jungler should be helping you with that so ask him to do so.",
+        "He wants to shove the lane with his W – to do that he will try to find a spot to hit all minions. Use a soldier on that spot and poke him down if he tries to do it.",
+        "If he is not able to hit all minions with his W you should be able to keep the pressure on him and push the lane – preventing him from roaming.",
+        "He is immobile so you can setup ganks with Shurima Shuffle, ask your jungler for help.",
+        "You can interrupt his E (flying) by attacking him.",
+        "Everytime he is missing, ping it but never follow him – you won't be fast enough. Instead - try to get a tower. (Unless you take Teleport)"
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Aggressive playstyle",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "He is not really squishy but if you can play around his W and Q cooldowns you can have a large solo kill potential with ignite.",
+        "If he tries to Q you,just put a soldier on top of him auto him once and dash into him, because that way he can’t activate his W to deal more damage to you, so you will instantly win the trade.",
+        "At level 1 and 2 you should just be doing short trades because you can’t dash into him to dodge his Q and W"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Brand",
+   "planilha": "Brand",
+   "id": "Brand",
+   "titulo": "a Vingança Flamejante",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 2,
+    "texto": "Easy/Medium"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Laning against Brand is all about dodging his W. It's his main damage tool and shove skill. Get early boots if possible – they will help you a lot.",
+        "It’s not hard but rather an annoying matchup.",
+        "Don't stay next to minions so he won't be able to poke you and shove the lane at the same time with W.",
+        "Take care when he uses his E on the minions,the range is so big now that you can’t dodge it,so be careful of his Q",
+        "Don't stay still – make aiming harder for him.",
+        "If he hits any ability, it will give you a Blaze debuff. His skills will do additional effects. Q will stun you, W will do increased damage, E will spread itself to nearby targets and R will slow.",
+        "Q can't go through minions so you can stay behind them to avoid being stunned if you are Blazed.",
+        "If he misses his Q take advantage of it and play more aggressive.",
+        "He is immobile so you can setup ganks with Shurima Shuffle, ask your jungler for help.",
+        "While teamfighting – never stay near your allies. Brand's ult will bounce between you, up to 4 times."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Aggressive playstyle",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "He is relatively squishy so you can try to solo kill him, keep in mind that poking him will be harder since he can hit his W easily because you are busy auto attacking him."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Cassiopeia",
+   "planilha": "Cassiopeia",
+   "id": "Cassiopeia",
+   "titulo": "o Abraço da Serpente",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 4,
+    "texto": "Medium/Hard"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Cassiopeia is a single-target DPS champion. Avoid going into extended trades with her – you won't win them.",
+        "Watch the minions early - if she gets level 2 before you (first minion of 2nd wave) she will look for a trade which you will lose 100%.",
+        "She is immobile so you can setup ganks with Shurima Shuffle, ask your jungler for help.",
+        "She might try to zone you from minions if you will allow her to. Poke her whenever you can but remember - don't go into extended trades with her. You should be able to poke her down.",
+        "Buy farsight alteration it’s important because if there is a bush you think she is in, you need to ward it from a distance, if you face check it, she will ult you and then follow up with her W and you will most likely be dead."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Aggressive playstyle",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "It's mostly about not being poisoned. You have to dodge her Q and leave W immediately so she won't be able to DPS you with her E which will deal bonus damage to poisoned targets.",
+        "You can't dash away when you are standing in her W - you will get the Ground debuff. You can't flash from it either. Leave it as fast as you can. You can dash through it if you are not standing in it.",
+        "You can dodge her ultimate by turning away from her – you will get the stun only when your champion is facing her. To dodge her ult you need to listen – when she inhales that means she is using her ultimate, that's the time where you have to turn away immediately."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Cho'Gath",
+   "planilha": "Cho'Gath",
+   "id": "Chogath",
+   "titulo": "o Terror do Vazio",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 2,
+    "texto": "Easy"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Cho'Gath is mostly picked for top lane and goes tanky. However he is sometimes seen in mid with an AP build.",
+        "Laning against him is all about dodging his Q. If he can't hit it he won't be able to do any damage to you. He will most likely aim for minions so don't stay too close to them.",
+        "Keep your distance from him - his W silences you up to 2s.",
+        "After 6, avoid being low on health near him. He apparently likes raw chickens.",
+        "Each stack on R grants him bonus health. He will have a lot of HP so you want to build Liandry's Anguish to burn him.",
+        "Thanks to his passive, he has a lot of sustain in lane (each minion he kills restores his HP and Mana). You can try to poke him down but you probably won't be able to kill him. Just keep shoving the lane and make him lose some CS.",
+        "If he went for a full AP build be careful after 6. He might Flash > W > Q > R which will most likely kill you. Never underestimate the power of full AP Cho'Gath.",
+        "Cho’Gath is quite squishy with no ultimate stacks, so you can solo kill him before the first pick if you have ignite.",
+        "He is really immobile, if he doesn’t have flash and you have your ultimate, it should be a free kill with your jungler."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Corki",
+   "planilha": "Corki",
+   "id": "Corki",
+   "titulo": "o Bombardeiro Ousado",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 2,
+    "texto": "Easy"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "First of all – you want magic resist vs him. Even when he is building AD most of his damage is magic damage. His basic attacks are permanently modified to deal 20% physical and 80% magic damage. All his skills deal magic damage as well.",
+        "Don't stay near minions because he will most likely use Q to clear them.",
+        "With his W he can dash - if he uses it towards you he will try to pick a fight. Respond with your E to block the incoming damage. You should be able to win trades vs him if you place your soldiers well.",
+        "His E shreds your Armor and Magic Resist - not by a lot but you still should avoid it.",
+        "After 6 he will start to annoy you with his missiles. They are easy to dodge because you can stay behind minions as well but watch the bar behind his HP and Mana - the red one deals 100% increased damage and increasing its explosion radius so don't stay too close to minions to avoid the damage.",
+        "After 8 min have passed, he can pick up The Package near his fountain. The Package will change his W (he have 1 min to use it) – his dash will be further and the fire trail will do a lot of damage. He will most likely roam to another lane to use it (probably bot lane so you can try and follow it up).",
+        "He is quite squishy and has a weak early game so solo killing him is really easy with ignite, you mostly have to play around his W."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Diana",
+   "planilha": "Diana",
+   "id": "Diana",
+   "titulo": "o Escárnio da Lua",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 4,
+    "texto": "Medium/Hard"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Poke her everytime when she tries to take CS – she is a melee champion so try and take the range advantage",
+        "She will most likely use her Q to clear waves so don't stay near minions – the Q travels in the arc from her right.",
+        "Be careful at level 2. If you get hit by Q she can try to all in you with her E dash. Remember every time she dashes to target hit by Q it’s cooldown will be renewed.",
+        "Care at level 6 - her R will draw you in when you are near her and also do massive damage especially in teamfights when you are grouped (the more people she draws in the more damage it does).",
+        "Wave management is a key here. Try to freeze the wave near your turret so she won't be able to jump on you. Push when you have to.",
+        "If she is missing and you know where she is going try to follow her but take a different path. If she catches you - you are most likely dead. If you aren't able to follow – try to get the tower instead.",
+        "You should be taking barrier/exhaust against her to negate her ultimate damage.",
+        "If she hits her QE combo on you, she will be able to dash onto you again, so if you are near a turret and she dashes towards you, ult her into the turret but dash into her as she is flying to the tower, that way she can’t dash through your wall and escape."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Aggressive playstyle",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Going early magic resist can help a lot against her.",
+        "In teamfights try not to stand close to your teammates, her ult deals more damage per every champion hit."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Ekko",
+   "planilha": "Ekko",
+   "id": "Ekko",
+   "titulo": "o Rapaz que Estilhaçou o Tempo",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 4,
+    "texto": "Medium/Hard"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "He will use his Q to clear waves over and over. Just try to keep up with it.",
+        "If he decides to use his AA to last hit minions punish him for doing so - he is a melee champion take advantage from it.",
+        "Don't let him stack his passive on you – at 3 stacks the next attack will do additional damage.If he stacks it and you can’t dodge it, block it with your E shield.",
+        "If he disappears for a moment be careful – there is a chance he wants to hide his W animation to ambush you. He will shoot the sphere to a desired location. If he enters the sphere and you are inside it – you will be stunned. It also shields him. You don't want to be in that sphere so dash away from it before he enters.",
+        "After 6 if his R is not on cooldown he will be followed by a hologram of himself – after casting the ultimate he will go back to it dealing damage to nearby targets on arrival and restore some HP.  If you are fighting him don't stay too close to the hologram.",
+        "If he is missing and you know where he is going try to follow him but take a different path. If you aren't able to follow – try to get the tower instead.",
+        "Pre 6 he is really vulnerable so you can try to solo kill him with ignite, after he hits 6 the lane goes into his favor because he can just constantly trade with no risks."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Ezreal",
+   "planilha": "Ezreal",
+   "id": "Ezreal",
+   "titulo": "o Explorador Pródigo",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 2,
+    "texto": "Easy"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "He can go AP or AD. This matchup is simple:",
+        "Stay behind minions to avoid being hit by his Q.",
+        "His W can go through minions and stops on enemy champion or structure. It’s a yellow orb which is easy to dodge if you keep your distance from him. If he hit it, the next ability or basic attack will deal additional dmg.",
+        "With his E he can blink (like a flash). Don't try to Shurima Shuffle him if it's not on cooldown. If he wastes it, you have a lot of time to pick a trade.",
+        "His R is global so be careful when you are recalling with low HP.",
+        "Push him – make him lose CS.",
+        "Poke when you can.",
+        "Nobody really plays Ezreal midlane anymore so we have just left off the general tips."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Fizz",
+   "planilha": "Fizz",
+   "id": "Fizz",
+   "titulo": "o Trapaceiro das Marés",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 3,
+    "texto": "Medium"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Fizz can be tough to play against. If you know what you are doing you should be able to crush him.",
+        "Pre 6 you want to poke him as much as you can.",
+        "Wave management is a key here. Try to freeze the wave near your turret so he won't be able to jump on you. If he tries to CS - poke him - make him regret it.",
+        "If he wastes his E take advantage of that – it has a long cooldown early. Never engage with Shurima Shuffle if it's not on cooldown.",
+        "Be careful when he hits 6, try not to go near his turret, If you get hit by his ultimate dash as far as possible towards your turret.",
+        "Going early magic resist against him can be really helpful.",
+        "He is relatively squishy so if you are confident enough you can try to cheese him with ignite, but be careful.",
+        "His E can be really tricky because he can dodge your ultimate with it, try to outsmart him when he engages on you.",
+        "If rest of the enemy team is AD, it’s good to go Zhonya so you can dodge his ultimate with the stasis effect."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Aggressive playstyle",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Avoid fighting him in close range if possible. If he engages on you with Q – use your W on him and E to shield the damage and to get the stack of a soldier. If he then retreats with E - follow up with your Q and poke as much as you can."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Galio",
+   "planilha": "Galio",
+   "id": "Galio",
+   "titulo": "o Colosso",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 2,
+    "texto": "Easy"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Galio can go both full tank or AP. In mid he will most likely go AP.",
+        "His passive empowers his basic attacks every 8s, making it AoE. Because of that, he will push waves. Try to take advantage of that by pushing him under tower. He will have problems last hitting under it.",
+        "Avoid his Q – the tornado, it will do quite a lot of damage to you. He will mostly use it to clear casters.",
+        "He takes reduced damage while charging his W and then he taunts everyone inside the circle. His W also gives him a shield that absorbs magic damage every 12s when he is not taking damage.",
+        "Sidestep his E – he will step backwards first then dash forward knocking up on hit. If he hit it, you can get quite a lot of damage.",
+        "You'll see when he casts the ultimate – if you will be fast enough you can cancel it with your R.",
+        "Galio will usually perma shove the lane so he can roam, try to shove hard as well.",
+        "Always take teleport to follow up on his roams.",
+        "If he uses his E, he becomes really vulnerable to ganks.",
+        "It’s pretty much an afk farm lane and you really can’t kill him due to his high base magic resist, unless he is really bad and tries to trade with you constantly."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Gangplank",
+   "planilha": "Gangplank",
+   "id": "Gangplank",
+   "titulo": "o Terror dos Doze Mares",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 2,
+    "texto": "Easy"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "He will harass you a lot with his Q in the early game. He will mostly use it to finish minions for his passive. It has a short cooldown so it can be kinda annoying.",
+        "With his W he can remove all CC affecting him and heal a little.",
+        "You can hit his barrels with your soldiers. 1x soldier auto is 1 damage to a barrel which means with 3x soldiers you can destroy it with a single attack. You have to leave the area near barrel or destroy it to avoid the damage.",
+        "He can try to hide his barrels in bushes or behind walls to chain them and combo you.",
+        "Push him and make him lose CS under tower.",
+        "He is immobile so you can setup ganks with Shurima Shuffle so ask your jungler for help.",
+        "He is not that squishy but he is really weak early game, so if you play around his barrels you should be able to solo kill him easily with ignite.",
+        "Be careful if he has 2 barrels already placed and one is about to have one charge, because he can use his triple barrel combo (check it on youtube since it’s a little hard to explain)."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Heimerdinger",
+   "planilha": "Heimerdinger",
+   "id": "Heimerdinger",
+   "titulo": "o Inventor Idolatrado",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 1,
+    "texto": "Buy a bed and go to sleep"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Heimerdinger can be annoying in early levels because of his towers but the more AP you have the easier it gets.",
+        "Before the first wave he will want to deploy all his towers – try to prevent him from doing so.",
+        "You can attack his towers with your soldiers – you outrange them as well.",
+        "Try to destroy towers all the time – he is nothing without them.",
+        "You can avoid his rockets by simply staying behind minions or sidestepping.",
+        "Avoid being hit by his E – it will stun you but also trigger a beam from nearby towers.",
+        "With his R he can improve his abilities. You will know when he uses it – above his head there will be an electric light. If he uses his Q he will deploy an empowered turret – you don't want to stay near it. With R > W he will shot 4 waves of rockets so you have to dodge them. R > E makes the grenade bounce 3 times.",
+        "He is immobile so you can setup ganks with Shurima Shuffle, ask your jungler for help.",
+        "Literally an afk farm lane, it’s so boring that I’m thankful that nobody plays this champ.",
+        "Without your jungler you pretty much don’t have any chance to kill him unless he trolls hard."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Irelia",
+   "planilha": "Irelia",
+   "id": "Irelia",
+   "titulo": "a Dançarina das Lâminas",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 3,
+    "texto": "Medium"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "You don't want to push her because of her mobility – she can dash to any minion with her Q. If the Q kills the minion, its cooldown is refunded. Watch the minions HP – she can easily jump to you that way. Try to freeze the wave under your tower.",
+        "She will most likely try to jump on you when she got her passive stacked – it increases her basic attacks damage. Keep an eye on it.",
+        "Because you are freezing – she might try to break it, which means she can get closer to your tower. Try to use your ultimate to throw her into your tower – but dash into her immediately so she won't be able to dash with Q to you. Also watch how many minions you have left so she won't be able to escape.",
+        "Watch where she sends first blade from E. It will give you the idea where the 2nd one will land – makes it easier to dodge. If you are trapped between them you will be stunned. If she hits her E you will automatically lose the trade.",
+        "After level 6 if you get stunned she will most likely all-in you with her ultimate.",
+        "Get early Seeker’s Armguard - it will help you a lot fighting her.",
+        "Take care if she leaves like 4-5 minions on low hp, she will Q quickly on the to stack her passive and trade with you.",
+        "Try to dodge her E with your dash by either dashing into or away from her (never dash into her if she used E on herself).",
+        "Try to harass her level 1 as much as possible and be a little more cautious when she gets her lvl 2.",
+        "When you ult her towards the tower dash into her while she is flying so she can't escape with her dash."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Jayce",
+   "planilha": "Jayce",
+   "id": "Jayce",
+   "titulo": "o Defensor do Amanhã",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 2,
+    "texto": "Easy/Medium"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Jayce has 2 forms: Melee and Ranged.",
+        "He will play mostly in Ranged form. He will try to poke you with his E+Q combo. It will do a lot of damage so stay behind minions or try to avoid it. The gate (E) has a long cooldown (16s) so you have a lot of time between them.",
+        "Keep the distance from him because he can change his form to melee and jump on you with Q doing quite a lot of damage. Especially if he combine it with other skills.",
+        "Try to push him and make him lose some CS.",
+        "You can dodge his Melee Form Q by flashing before he hits the ground.",
+        "Get early Seeker’s Armguard - it will help you a lot fighting him."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Aggressive playstyle",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "If you get hit by his QE combo just run, if he engages on you while you are above 70% hp with Electrocute and ignite you should be able to win the trade.",
+        "Try to harass him lvl 1 and 2 your poke is way stronger especially if you take electrocute.",
+        "If he uses his Q on you he pretty much has no escape tool and you should try ulting him towards the tower.",
+        "The key to win this matchup is to dodge his QE combo and constantly poke him while those cooldowns are down.",
+        "Without his E (ranged) his Q damage is kinda mediocre so play around that."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Karma",
+   "planilha": "Karma",
+   "id": "Karma",
+   "titulo": "a Iluminada",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 2,
+    "texto": "Easy"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Karma starts with her R immediately so be careful about her level 1 R>Q combo – it will do a lot of damage. She got R again after 45s. Every basic attack or spell on you will lower its cooldown.",
+        "Stay behind minions so she won't be able to harass you with Q. Its her only source of damage but it has low mana cost and cooldown. She will try to R > Q you pretty much every time when its available. Keep in mind that when she uses R > Q you should leave the circle, or it will erupt which will deal bonus damage after a short duration.",
+        "Dash away from the range of her W if you will get it. After 2s it will root you.",
+        "She is pretty safe thanks to her Shield on E. Just farm up and avoid her poke",
+        "She is immobile so you can try to call the jungler and Shurima Shuffle her.",
+        "You can approach this matchup in two ways:",
+        "You either afk farm and eventually outscale her because she is more of a support midlaner.",
+        "Or you go full cheese build with ignite and try to constantly poke her to the point of solo killing her, you mostly have to play around her shield (E).",
+        "Constantly roam because she can’t really follow you, relentless hunter really comes in clutch here."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Karthus",
+   "planilha": "Karthus",
+   "id": "Karthus",
+   "titulo": "a Voz Mortal",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 2,
+    "texto": "Easy"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "He will pretty much always use the Q to CS and occasionally to harass you. Its quite easy to dodge it but it will do increased damage if it hits only 1 target.",
+        "If possible try to fight him near your own minions. Standing next to minions will reduce the Q damage if he hits both you and a minion.",
+        "If you are fighting him stay out of his E – the circle around him.",
+        "His R is global so avoid being on low HP or he will be able to easily execute you.",
+        "He is immobile so you can try to call the jungler and Shurima Shuffle.",
+        "Remember – when he dies he still remains active for 7s – he can't move but he can cast his abilities.",
+        "If Karthus tries to fight you in the early game always stay in your minion wave because he does less damage if he hits more than one target.",
+        "If you dodge most of his Qs you will always win 1v1, especially if you take ignite and electrocute.",
+        "If enemy is mostly AD you can take Zhonya to negate his ultimate with the stasis effect."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Kassadin",
+   "planilha": "Kassadin",
+   "id": "Kassadin",
+   "titulo": "o Andarilho do Vazio",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 5,
+    "texto": "Hard"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Kassadin is still the hardest matchup for Azir, if you don’t completely stomp him in the early game and if he gets hold of some kills, your lane is over. Feel free to ban him. Kassadin is a tough matchup especially after 6 when he will start to be mobile thanks to his R.",
+        "Thanks to his passive he will take 15% reduced magic damage.",
+        "He will poke you a lot with his Q which also gives him a magic shield. Poke him back when the shield goes down.",
+        "He is a melee champion so try to poke him a lot when he is trying to CS but use your basic attacks instead.",
+        "He can't use his E unless he has 6 stacks on it – he gains stacks when nearby champions, including him, uses an ability.",
+        "After 6 try to freeze the lane under your tower. He will start to be a major threat to you thanks to his R.",
+        "If he jumps on you try to dash away and kite him.",
+        "Every time he use his ultimate, the next cast will have increased mana cost and damage - he can stack it up to 4 times and the next cast will do large amounts of damage.",
+        "Its hard to keep track of him because he can easily take different roaming routes thanks to his R.",
+        "Try to solo kill him pre 6 because he will eventually outscale you, due to his passive he is really tanky but you can manage to poke him since he can’t trade you back pre 6.",
+        "At level 6 if he ults you near your tower, try to ult him towards it since his ultimate has a delay after he uses it."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Katarina",
+   "planilha": "Katarina",
+   "id": "Katarina",
+   "titulo": "a Lâmina Sinistra",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 3,
+    "texto": "Medium"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Poke her everytime she is trying to CS with your soldiers.",
+        "She will try to last hit minions with her Q. Remember that throwing a Q leaves a dagger on the ground.",
+        "With her W she can leave a dagger at her current location.",
+        "She can jump to daggers with her E. Remember to avoid staying near them - that's where the most damage comes from. If she picks up the dagger, it will restore some of the E's cooldown.",
+        "After 6 – remember that you can cancel her ult with your R. If you can't - try to dash away.",
+        "Be aware that if you miss position she can try to all-in. One mistake can be crucial."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Aggressive playstyle",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Prevent her from roaming – maintain the pressure on her but you have to be really careful. Ping your teammates constantly because if she gets a lead it’s hard for her to lose it.",
+        "Keep the sides warded so you will know when she is leaving the lane. She will look to roam all the time after level 6.",
+        "If you know you can kill her always stand on top of her daggers (if you are healthy though).",
+        "Poke her constantly, don’t let her breathe.",
+        "She is quite squishy so there’s a high solo kill potential with Ignite and Electrocute. Keep in mind she does a lot of damage so 1v1 fights might be close."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Kayle",
+   "planilha": "Kayle",
+   "id": "Kayle",
+   "titulo": "a Justa",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 2,
+    "texto": "Easy"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Kayle is really vulnerable before level 6 because she doesn’t have range to trade back with you, only her E."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Aggressive playstyle",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "She is pretty squishy so you should prioritize killing her before she reaches level 6.",
+        "Poke her down and you can all in her at 40% or less hp. Keep in mind her W heals her and gives movement speed.",
+        "After level 6 this matchup becomes a little tricky, especially if you haven’t solo killed her by then.",
+        "She will use her W to sustain your poke and get closer to you so she can harass you, short trades are best against her.",
+        "She will use her ultimate usually when she falls at about 20% hp, keep in mind that she can’t use her ultimate when you knock her up, so try to kill her in that time window.",
+        "She is immobile and really vulnerable without her ultimate, so if she doesn’t have flash, call your jungler to help you.",
+        "Kayle hard outscales you and it’s almost impossible for you to 1v1 her once she gets 4 items, so try to finish your games quickly or completely deny her from farming."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "LeBlanc",
+   "planilha": "LeBlanc",
+   "id": "Leblanc",
+   "titulo": "a Farsante",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 3,
+    "texto": "Medium"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "LeBlanc is a skill matchup. You can beat her if you know what you are doing. If you'll allow her to do what she wants she can snowball the game.",
+        "Her Q marks you for 3.5s – when she damages you again with ability, the mark will detonate dealing damage. If possible – don't let her detonate it.",
+        "With her W she can dash to desired location and then blink back to previous spot. It has a long cooldown and its also her main AoE ability to clear waves.",
+        "Her early wave clear is poor – try to push her and make her lose some gold under tower."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Aggressive playstyle",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Always take E level 2 because she will try to AA + Q + W you to proc Electrocute and deal massive damage to you, as soon as you see her throwing her Q at you just E into her, proc Electrocute and you will instantly win the trade.",
+        "When she uses her W try to poke her as much as you can",
+        "As for the summoner spells you should either take Barrier or Ignite. I would recommend taking barrier because then you will never lose 1v1 but she might escape from you, if you have ignite she will have less time to react and thus you will kill her in most cases.",
+        "If she jumps on you with her W near your tower never try to ult her because she can easily dodge it, instead try to dash to her W shadow and then ult her.",
+        "LeBlanc matchup is mostly about mind games and how you play around her W.",
+        "You need to dodge her chain. She can't hit it through minions so stay behind them."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Lissandra",
+   "planilha": "Lissandra",
+   "id": "Lissandra",
+   "titulo": "a Bruxa Gélida",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 2,
+    "texto": "Easy"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Any enemy that will die near Lissandra will become a Frozen Thrall. The Thrall will then chase nearby enemies slowing them and shattering after 4s dealing AoE Damage. You don't want to be near one so watch out if someone dies in a teamfight.",
+        "In lane try not to stay behind minions but to the side – her Q will shatter on them, gaining some range and can damage you.",
+        "Keep your distance from her - don’t let her land W for free.",
+        "With her E she can blink to the Claw's location. You can prevent her from doing that with your ult – but care she can also dodge it that way.",
+        "If she wasted that E – take the advantage of that. That's her only mobility tool and it has a long cooldown.",
+        "Don't try to Shurima Shuffle her – she can just ult herself dodging the whole combo.",
+        "If she ults you – Cleanse it. Take care if your Cleanse is on cooldown.",
+        "In 1v1 fights you should always be winning due to your consistent damage and her having long cooldowns.",
+        "She will try to perma shove with her Q, try to counter that.",
+        "Cleanse is essential against her."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Lucian",
+   "planilha": "Lucian",
+   "id": "Lucian",
+   "titulo": "o Purificador",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 3,
+    "texto": "Medium"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "You outrange him with your soldiers. His range is really low for an ADC. Try to kite him and don't let him attack you for free.",
+        "He has some burst thanks to his passive – everytime he uses an ability he can shoot twice. With a full combo he can do a lot of damage.",
+        "Don't stay behind your minions so his Q won't touch you if he uses it on them.",
+        "Try to mimic his movements (stay on the same side of the wave) – if he stands to the left, stand to the left – it will make it harder for him to harass you with Q.",
+        "With his E he can dash a short distance – care for his engages. He will most likely start the whole combo with it because every time his passive is triggered he can lower E's cooldown.",
+        "Watch the XP bar – if he will get level 2 before you (first minion of the 2nd wave) he most likely will engage on you and you will lose the trade.",
+        "His ultimate is really deadly, try dashing away from it if you are below 50% hp."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Aggressive playstyle",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Play around his E cooldown, he is vulnerable without it.",
+        "At level 1 try to play a bit passively and abuse your range advantage, don’t let him proc his Press The Attack on you.",
+        "At level 2 you have to just poke him from distance and proc Electrocute.",
+        "At level 3 you will be most likely pushed in, at this point with Electrocute and Ignite you can easily win the 1v1 because you can shield a big portion of his damage and all in him with the help of ignite. Not to forget, your minions will be hitting him.",
+        "Early Seeker’s Armguard can help you a lot."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Lux",
+   "planilha": "Lux",
+   "id": "Lux",
+   "titulo": "a Dama da Luz",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 2,
+    "texto": "Easy/Medium"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "This lane is highly dependant on how Lux plays it. If she plays it passively with barrier you have no chance of killing her. If she takes Teleport and tries to poke you down to get prio you should try to solo kill her.",
+        "All Lux abilities mark damaged enemies with light. If you get hit by her spells – don't let her basic attack you, it will consume the mark dealing bonus damage.",
+        "Her Q roots you for 2s upon hit. Hide behind minions because it affects only first two enemies hit.",
+        "If she wastes Q or misses it – she is vulnerable for 10s. Try to take advantage of it. You can even try to go all in if she is low enough.",
+        "She will use her E to clear waves and to poke you – try not to stand next to minions so she won't be able to harass you and clear waves at the same time. You obviously want to dodge it to avoid the poke.",
+        "After 6 stay away from blind spots. She might be waiting there so you won't see her combo coming.",
+        "If she Q you – she most likely will go with the whole combo so try to dodge it or Cleanse it immediately and sidestep."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Aggressive playstyle",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "She is immobile so you can easily setup ganks for your jungler with Shurima Shuffle.",
+        "She is really squishy but she has 2 shields and maybe even 3 if she takes barrier, so try to play around her shield cooldowns. This matchup is mostly jungle difference because if she doesn’t have flash she should be a free kill always."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Malzahar",
+   "planilha": "Malzahar",
+   "id": "Malzahar",
+   "titulo": "o Profeta do Vazio",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 3,
+    "texto": "Medium"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "/Laki So we come to another ban priority. Once again this matchup is not hard at all,it’s quite easy really but Malzahar is very strong this season and since in S11 you rely on getting power spikes as soon as possible, and if you buy Quicksilver which is 1300 gold you really won’t be dealing damage, and if you decide not to buy it you are just too vulnerable to ganks. I still think Ekko ban is better because he has a larger playerbase but still… ban Malzahar if you find him more annoying.",
+        "Try to destroy his Spell Shield passive with your basic/soldier attack before poking him.",
+        "Occasionally he will throw Q on you – it's fairly easy to dodge it.",
+        "You can kill his voidling with a single basic attack (not soldier) or with a single Q.",
+        "He will use his E to shove waves. If the minion is killed by E it will spread to other one. Don't stay too close to a dying minion or it will be able to spread onto you.",
+        "You can easily cancel Malzahar's ultimate with QSS. Cleanse doesn't work on it. Its also possible to cancel his channeling if you time your ult just in time.",
+        "Pre-6, try to out shove him – his clearing is not that great in the early game. He will have to waste a lot of mana to keep up.Until he gets Lost Chapter and never has to worry about mana again, he will just perma shove you and try to help his jungler control objectives.",
+        "After 6, if you don't have QSS yet – ward your sides. He can easily setup a ganks for his jungler by simply clicking R on you.",
+        "If you don't want to build QSS in the early game – Banshee's Veil can give you some protection.",
+        "He is really immobile so try setting up ganks with your jungler, but always keep in mind his passive."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Mordekaiser",
+   "planilha": "Mordekaiser",
+   "id": "Mordekaiser",
+   "titulo": "o Revenã de Ferro",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 2,
+    "texto": "Easy"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Mordekaiser mid omegalul.",
+        "Avoid being in his melee range. His basic attacks deal bonus on-hit damage and his Q have quite short range.",
+        "His Q deals increased damage if it hits only 1 target - standing near minions can help you a bit reducing his damage.",
+        "Recasting his W gives him a bit of sustain - getting Oblivion orb can help you to reduce his healing.",
+        "Sidestep his E at all cost - don't let him pull you to himself.",
+        "Because he is a melee poke him as much as you can when he tries to cs - don't let him get minion gold for free.",
+        "His R slows you for 0.5s and at the end of slow’s duration you are transferred to Death Realm for 7s. If you dash away in that 0.5s window it can be dodged but it’s really hard to do that.",
+        "Try not to use all of your soldier charges and your ultimate before entering his Death Realm - soldiers won’t be carried over there so you’ll be left with nothing.",
+        "If you are in Death Realm you can simply cancel it by using QSS.",
+        "If you know that he is about to ult you never throw your ulti because it doesn’t transfer to the Death Realm and you will just waste it, save it for your time in the Death realm.",
+        "As long as you keep your distance and abuse your astronomical range this should be a free lane."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Morgana",
+   "planilha": "Morgana",
+   "id": "Morgana",
+   "titulo": "a Caída",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 2,
+    "texto": "Easy"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Stay behind minions so she won't be able to hit her Q. It will root you for quite a long time so sidestep it.",
+        "If she misses Q before level 6 – that's the time when you have a 11s window to get a nice trade in.",
+        "She will constantly clear waves with W so don't stay near minions to avoid it's damage - try to match her early wave clear.",
+        "Never try to Shurima Shuffle her – she can easily deny the CC by shielding herself. Play around the shield cooldown.",
+        "If she wasted the shield for whatever reason – try to take advantage of it, she won't get it again for a long time.",
+        "After 6 when she uses her ultimate on you, dash away from it's range. When she is walking towards you for some reason that means enemy jungler can be nearby.",
+        "She is quite squishy and without Black Shield (E) she is really vulnerable, take an advantage of that and try to solo kill her with Electrocute + Ignite.",
+        "You can also just afk farm this lane and play for prio since you are stronger than her with completed items.",
+        "Her shield cooldown is 26 - 18 based on ability level."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Neeko",
+   "planilha": "Neeko",
+   "id": "Neeko",
+   "titulo": "a Camaleoa Curiosa",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 2,
+    "texto": "Easy"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "If you can keep track of her she won't be much of a problem. Pay attention what is she doing, when she is backing, where she is going etc.",
+        "If you can't see her anywhere on the map and there is a champion on your lane (which shouldn't be here) that means it's most likely Neeko in a disguise. If that stranger is not using abilities - that's most likely her as well. Watch your map.",
+        "Dodge her Q if possible and don't stay in it - it will deal additional damage each bloom (max 3). It will also bloom another time if it kills a minion.",
+        "Every 3rd attack (W passive) her basic attack will be empowered - if possible avoid it. She will most likely want to use it on you.",
+        "Her W clone will always go in a straight line - if you'll see one of them changing the direction - it's the real Neeko.",
+        "Dodge her E - it will root for a lot of time especially when it will go through minions. If she can't hit it - she won't be able to do much damage to you.Be aware that her E hitbox is quite badly designed so side step a little more when you are dashing"
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Aggressive playstyle",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Kite her when you fight. To use her R she has to go near you. Dash away immediately when you'll see a zone near her (if she is not disguised). After 1.85s she will deal a lot of damage and stun everyone around herself.",
+        "She is really squishy so try to constantly poke her and eventually solo kill her with Electrocute and ignite.",
+        "This matchup is all about dodging her E, if you dodge it you win 80% of the trades.",
+        "Without her W she is quite vulnerable to ganks, take advantage of this."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Orianna",
+   "planilha": "Orianna",
+   "id": "Orianna",
+   "titulo": "a Donzela Mecânica",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 3,
+    "texto": "Medium"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "This matchup can be really hard if orianna is good at her champion ,against an average one you will most likely win.",
+        "Orianna's basic attacks are empowered thanks to her passive. Keep your distance from her – she will try to harass you with basic attacks if you are close.",
+        "Always keep an eye where The Ball is – all of her abilities revolve around it. Avoid standing near it.",
+        "Always try to stay behind The Ball, she will have to walk up a bit to reposition it to hit you due to her range. That's when you should reposition as well. Avoid standing side by side.",
+        "Don’t let her hit her Q > W poke.",
+        "When she wasted her shield (E) you have 9s window to try and poke a bit.",
+        "She is immobile so after 6 you can easily setup ganks with Shurima Shuffle or burn a flash.",
+        "You can dodge her R by Flashing from it with proper reaction speed. Your dash also should be fast enough if you have a soldier somewhere already.",
+        "In teamfights – don't stay together with your allies so she won't be able to ult all of you. Also watch for who The Ball is on. She will want to attach it to someone with good engage to follow up with R.",
+        "Orianna gains bonus resistances when she has E leveled , so try to engage on her while the ball is not on her and she used her E recently.",
+        "She is relatively squishy so try to poke her as much as possible and look for a solo kill."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Aggressive playstyle",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Without her flash she has no escape from ganks, play around this and call your jungler for help."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Pantheon",
+   "planilha": "Pantheon",
+   "id": "Pantheon",
+   "titulo": "a Lança Indestrutível",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 3,
+    "texto": "Medium"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Watch his passive stacks, every 5 his abilities will be empowered.",
+        "Poke him when he tries to farm with basic attacks - take the range advantage.",
+        "Don’t let him free poke with your Q try to sidestep it. Also don’t stand near low HP minions - he will most likely want to last hit them with it.",
+        "Walk away from him when he is moving towards you - don’t let him jump on you with his W.",
+        "His E makes him invulnerable to any damage in the direction he is facing (No longer blocks turret shots). He will take damage if you are behind him so either reposition or just wait it off.",
+        "Get early Seeker’s Armguard it will help you a lot while fighting him.",
+        "Ping all the time he leaves the lane - he will want to roam all the time when his R is up.",
+        "Dash away to safety if you see a mark on the ground - that's where Pantheon will appear soon from his R.",
+        "His R channel can be interrupted by your R.",
+        "Always do short trades against him with Electrocute and keep in mind his W range because it can be quite deadly if he lands it."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Qiyana",
+   "planilha": "Qiyana",
+   "id": "Qiyana",
+   "titulo": "a Imperatriz dos Elementos",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 4,
+    "texto": "Medium/Hard"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "This matchup can be really hard if Qiyana knows the limits of her champion.",
+        "Watch which Element she picked. Her Q will have different additional bonuses depending on which Element she have.",
+        "Hard shove her level 1 and try to harass her from getting cs because she has a hard time csing under tower.",
+        "If she picked River element there is a chance enemy jungler wants to gank - it's great to setup a ganks.",
+        "If you are below 50% HP be aware when she picks up Terrain element - Q will deal bonus damage.",
+        "Everytime she wasted a Q you have 7s to take it for your advantage - she hates extended trades.",
+        "If she just picked up any element - she can't do that again for next 7s.",
+        "Her E dash has fairly high cooldown 12s-8s based on level. Try to keep a track of it.",
+        "Her R will stun you if the shockwave will pass through river or a brush or when it will stop on terrain.",
+        "Because of her melee nature - try to poke her as much as you can when she tries to CS.",
+        "She will want to roam a lot so try to push her in all the time but be careful when you are doing that especially after level 6. Her all-in damage is deadly.",
+        "Early Seeker’s Armguard can make this fight a lot easier.",
+        "She is quite squishy but keep in mind that her burst damage is really high so going Exhaust would be a nice idea.",
+        "Never stand next to walls because if she uses her ultimate and stuns you, you will most likely be dead."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Ryze",
+   "planilha": "Ryze",
+   "id": "Ryze",
+   "titulo": "o Mago Rúnico",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 1,
+    "texto": "Very Easy"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Probably one of the easiest if not the easiest matchup for Azir.",
+        "Always stand behind minions so he won't be able to hit his Q. Unless he used his E on the minions then you want to back off completely because if he uses his Q, E will bounce on top of you",
+        "Ryze is really bad in the early game",
+        "Taking Electrocute and Ignite and constantly harassing him throughout the laning phase is the key to this matchup",
+        "You can't dodge his W – its a point and click ability which will slow you for 1.5s. However when you are hit by his E – it will root you instead for 1.5s.",
+        "He is immobile so you could try to setup ganks for your jungler with Shurima Shuffle.",
+        "Ideally try to zone him from the CS if you are ahead or even on lane.",
+        "If you are slightly behind don’t try to fight him alone.",
+        "You can interrupt his R channel with yours.",
+        "However Ryze does outscale you so be careful in the extreme late game, he can do a surprising amounts of damage ."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Aggressive playstyle",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Once he is about 40-50% hp and has no potions you can Freely engage on him with Ignite.",
+        "Just keep in mind that your range is far greater than his."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Seraphine",
+   "planilha": "Seraphine",
+   "id": "Seraphine",
+   "titulo": "a Cantora Sonhadora",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 3,
+    "texto": "Medium"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Watch the bar on her nickname - if it's purple her next ability will be Echo’ed - means casted twice.",
+        "If she can’t hit her E on you there is almost no way she can deal any major damage to you. She will try to hit you with non echo’ed E for a slow then follow up with Echo’ed Q that will be casted twice.",
+        "If she is hovering the Echo for some time there is a chance jungler is nearby so she is waiting to hit the E that will root you.",
+        "Watch out for E + Flash combo - it's similar to Ahri’s, it's unpredictable but its actually easier to dodge because of the missile speed.",
+        "Same goes to R + Flash - she can cast it and after like ~1 sec flash to change its direction a bit.",
+        "In teamfights avoid fighting in narrow areas it’s a perfect scenario for her.",
+        "Remember that her ultimate has a really long range because every champion she hits with it resets the fly range (theoretically it can move from fountain to river if everyone is lined up perfectly).",
+        "She is really immobile so abuse your Shurima Shuffle."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Aggressive playstyle",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Once she is like 40% HP you can all in her with ignite and electrocute for an easy kill. But keep in mind her shield."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Swain",
+   "planilha": "Swain",
+   "id": "Swain",
+   "titulo": "o Grande General Noxiano",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 2,
+    "texto": "Easy/Moderate"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "It's mostly about dodging his E. Try to sidestep it every time so he won't be able to follow up with his combo. It roots the first enemy it hits when the claw is returning so if you have a minion between you and the claw you won't be rooted.",
+        "Staying behind minions will help you to avoid damage from his Q. Don't stay behind dying minions – killing a minion with it won't stop the bolt from continuing onwards.",
+        "Thanks to his passive he can pull just about any immobilized champion towards him.",
+        "After 6 avoid extended skirmishes with him. If he uses the ultimate – dash away from it.",
+        "Swain may have issues with clearing minions in the early levels so try to push him and deny some of the gold from him.",
+        "You want to get Oblivion orb to reduce his healing.",
+        "He has a good sustain thanks to his ultimate, taking consistent damage runes like Conqueror and Lethal Tempo wins this matchup. As long as you dodge his E you should be fine in an 1v1."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Sylas",
+   "planilha": "Sylas",
+   "id": "Sylas",
+   "titulo": "o Abjugado",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 2,
+    "texto": "Easy/Medium"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Poke him every time he tries to CS - he is a melee champion.",
+        "Push him into tower - make him lose CS. There is a chance he will lose a lot of it because every time he uses an ability the next basic attack will deal AoE damage around him.",
+        "His Q works similar to Lulu's Q with Pix. The chains will come from both of his hands. It slows on hit dealing damage and after 0.5s delay it detonates at the chains' intersection doing the same thing again.",
+        "Be careful for his W. It deals damage and heals Sylas. It will deal more damage when you are below 40% health. Additionally Sylas will heal a lot more when he is below 40% health. He will most likely bait you when he is very low to catch you off guard - don't be greedy. The W's cooldown is pretty high so punish him when its on cooldown (14s-12s). Get Morellonomicon vs him ASAP.",
+        "First cast on E is a small dash. For the next 3.5s he can recast the ability to shoot chains in the target direction dealing damage and stunning the first enemy hit pulling himself towards you. It also gives him a small shield on 2nd cast. This is his only escape and gap closer. You can avoid being hit by his chain by standing behind minions.",
+        "With his R he can steal any of your allies ultimates. Watch which one he steals and be careful. He can even Shurima Shuffle (Sylas Edition) you with his E.",
+        "Take Conqueror + Ignite against sylas and harass him pre level 3 as much as you can, don’t be afraid of losing your mana since you have presence of mind + manaflow. By constantly stacking conqueror even if he engages on you, with ignite you will win the extended trade and solo kill him. Since conqueror got buffed you are getting even more AP now which makes this matchup easier."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Syndra",
+   "planilha": "Syndra",
+   "id": "Syndra",
+   "titulo": "a Soberana Sombria",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 3,
+    "texto": "Medium"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "She will poke you a lot with her Q. Constantly move but try to be unpredictable.",
+        "With her W she can throw any Dark Sphere/Minion on you so try to avoid them.",
+        "Push her so she will have to use her Q and W to keep up with the shove but don't stay in minions so she won't be able to harass you.",
+        "Care about her E - she knock back all enemies in the radius – but also knocks back all dark spheres. If the Dark Sphear will hit you – you will be stunned for 1.5s. You have to dodge it at all cost or she will be able to follow with the whole combo.",
+        "E has a long cooldown – she is quite vulnerable in that time.",
+        "At level 6 she will gain her ultimate – that's where all her burst comes from. The more Dark Spheres she has on the field the more damage it deals. There is no way you can dodge its damage so try to barrier yourself with E or get Zhonya's to deny it completely.",
+        "Its generally a good idea to get some MR vs her."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Aggressive playstyle",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "She is immobile so you should be able to Shurima Shuffle her to setup ganks but her E is a problem – try to bait it first.",
+        "She is relatively squishy so try poking her down to low hp and eventually solo kill her with ignite + Electrocute once she is at about 40% or less health.",
+        "Take care when engaging onto her because she can interrupt your dash with her E.",
+        "Take barrier if you are not confident enough to 1v1 her and just want to play safe."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Taliyah",
+   "planilha": "Taliyah",
+   "id": "Taliyah",
+   "titulo": "a Tecelã de Pedras",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 2,
+    "texto": "Easy/Medium"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Thanks to her passive and ult she is a great roamer. Try to prevent her from doing so and push her in.",
+        "With her Q she throws 5 stones in one direction – she can't change the direction but she can still move so try to avoid them. Staying behind minions helps.",
+        "After using a Q she will leave an area of Worked Ground for 45s. Try to be on that side of the lane so she won't be able to use it. The Q casted on Worked Ground will only throw 1 stone.",
+        "With W she marks the targeted location for 1s and then knocking you – try to dodge it so she won't be able to follow up with E.",
+        "When she uses E, she will scatter stones on the ground. Never try to dash through it or you will get a lot of damage.",
+        "Her waveclear is fairly poor so make her lose CS under tower."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Aggressive playstyle",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "She is immobile so you can easily setup ganks for your jungler or burn a flash with Shurima Shuffle.",
+        "She is squishy so try to poke her down and eventually solo kill her when she is on about 40-50% hp with Electrocute + Ignite."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Talon",
+   "planilha": "Talon",
+   "id": "Talon",
+   "titulo": "a Sombra da Lâmina",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 3,
+    "texto": "Medium"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Poke him whenever you can when he is trying to CS with basic attacks.",
+        "Keep your distance from him – if he is close enough his Q will critically strike you if you are within 170 units range. Outside of it - he will dash to you but does way less damage.",
+        "With his W he will try to poke you and clear waves at the same time so try not to stand too close to minions. If you get hit by the second part of his W he will apply 2 passive stacks and if he is level 2 just back off because he will proc his passive and deal massive amount of damage.",
+        "With his E he can jump over walls – its a great roaming tool. If possible try to push him all the time to prevent him from doing so.",
+        "You won't be able to follow him because of his E to stay in lane and try to get a tower. Everytime he leaves the lane ping that he is missing. Ward potential roaming paths.",
+        "He can jump over your wall. Never try to shuffle him under turret when he is 70-100% hp, he will just take 1 or no tower shots and jump over your ultimate.",
+        "After 6 if you'll see the ring of daggers – dash to safety. Its his ultimate – he gains invisibility for 2.5s during that.",
+        "Be careful when he hits level 2 – he might be able to burst you down with ignite.",
+        "Early Seeker’s Armguard can make this fight a lot easier."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Tristana",
+   "planilha": "Tristana",
+   "id": "Tristana",
+   "titulo": "a Artilheira Yordle",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 3,
+    "texto": "Medium"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Tristana is one of those cheese picks, if you do survive early and manage a good cs difference, this matchup will not be problematic to you.",
+        "At level 1 Tristana will try to push the wave, so she can get level 2 first, you can’t prevent her from doing this, because her level 1 push with E is a lot faster than yours.",
+        "If she for some reason starts W first and jumps on you, you will always win the trade, your level 1 is stronger, ESPECIALLY if you have barrier/exhaust which I highly recommend.",
+        "Once she gets level 2 (1st minion of the 2nd wave), you have to be careful, if you are level 1 just back off and let her push out the wave, once you get level 2 level up your E. If she wants to engage on you, and her W dash is in range, just dash away. If she doesn’t hit her W just start trading her and use your E to block her damage.",
+        "This will repeat until level 6 where you gain advantage because you can just ult her while she is jumping onto you. You generally outscale her so this matchup isn’t that big of a threat.",
+        "Rushing Seeker’s Armguard completely negates her presence in this laning phase.",
+        "Keep in mind that she can time her W so that if you ult her, she won’t get knocked away. It’s a weird interaction so be cautious.",
+        "She is relatively squishy but she wins most of the long trades so i wouldn’t recommend the cheese tactic."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Twisted Fate",
+   "planilha": "Twisted Fate",
+   "id": "TwistedFate",
+   "titulo": "o Mestre das Cartas",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 2,
+    "texto": "Easy/Moderate"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "His Q's are slow and easy to dodge. Avoid the damage.",
+        "When you see the red card – try not to stay near minions to avoid the damage – its an AoE ability.",
+        "When you see the gold card – run away from him, its a stun. He can easily setup ganks with it.",
+        "When his W is on cooldown he is quite vulnerable for 6s. Try to take advantage of that and pick a fight.",
+        "After 6 he will want to roam a lot because of his R. He will have a lot of impact on map. Try to push him in to prevent him from doing so.",
+        "Don't try to follow his roams if the fights are very far from your current location – you won't get there in time. Try to get tower instead.",
+        "Ping your teammates whenever he leaves the lane. Try to keep wards on roam paths.",
+        "You can cancel his ultimate by using your R if you are fast enough."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Aggressive playstyle",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "He is really squishy so try to poke him down.",
+        "Once he is about 40-50% hp you will be able to kill him with Electrocute + Ignite.",
+        "You can also take Teleport to follow up his roams and afk farm since you outscale him pretty well."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Veigar",
+   "planilha": "Veigar",
+   "id": "Veigar",
+   "titulo": "o Pequeno Mestre do Mal",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 3,
+    "texto": "Medium"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "He will want to stack his passive for bonus AP. Constantly push him so he will lose some stacks.",
+        "His Q's are fairly easy to dodge – it damages first two targets it hits so be aware that he can still hit you behind minions.",
+        "When you'll see a small shadow somewhere in your location – run away from it (deals a lot of damage), it's his W. It lands after 1.25s so its easy to avoid it.",
+        "With his E he can materialize a cage after 0.5s delay. If you walk into the walls of it you'll be stunned for some time. If you can dodge it and be outside – great, if not – stay inside and try to dodge his skills in there. You can't dash through his cage.",
+        "When he wastes his E – he is a lot more vulnerable. He won't get it again for a long time. Take advantage of this.",
+        "After 6 avoid being low on health. His ultimate is a great execution tool. It's damage is increased based on target's missing health.",
+        "He is quite immobile so you can easily setup a gank for your jungler or waste his flash with Shurima Shuffle. Try to bait his cage first.",
+        "Later in the game he will have a lot of AP so be careful. He can easily delete you with his Q + R combo with enough stacks.",
+        "He is really squishy so try poking him down. Play around his E cooldown and you will be able to solo kill him.",
+        "Winning early game and putting him behind is crucial against Veigar since he hard outscales you."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Vel'Koz",
+   "planilha": "Vel'Koz",
+   "id": "Velkoz",
+   "titulo": "o Olho do Vazio",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 3,
+    "texto": "Medium"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "His main poking ability is his Q which is quite easy to dodge but it got 2 parts. First part is in a straight direction, then upon a recast or max range it will split into two bolts firing in the opposite direction perpendicular to the original bolt. Always watch where the first bolt is going, it will give you an idea on where you should go to dodge it.",
+        "Try not to stand in minions – he will use his W to clear waves.",
+        "Try not to get hit by his E – it will CC you. If you will get a hit, he most likely will follow up with other abilities and burst you down.",
+        "If he wastes his E you have a lot of time to try and pick a trade with him.",
+        "After 6 when he is casting his R: dash away from it or behind him (if you want to continue fighting), it will deal a lot of damage especially if he stacked his passive on you.",
+        "You can cancel his R channeling with your own R."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Aggressive playstyle",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "He is immobile so you can set up a gank for your jungler or burn his Flash with Shurima Shuffle.",
+        "He is relatively squishy, if he doesn’t have barrier, try to solo kill him.",
+        "Buying boots early can help you dodge his abilities.",
+        "You can also scale into the late game, you kinda scale the same but Azir is way more useful since he is mobile and can knock up multiple people with his ultimate."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Viktor",
+   "planilha": "Viktor",
+   "id": "Viktor",
+   "titulo": "o Arauto do Arcano",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 3,
+    "texto": "Medium"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "He will most likely start with his Q at level 1. He can try to pick up a fight immediately so don't try to fight him – he will easily win a trade because of his Q shield. Once you get level 2 it will be a lot easier to trade with him.",
+        "Be aggressive in the early game: poke him – he is weak in early stage of the game. Deny him from taking cs, especially cannons. Since he needs it to upgrade his abilities. Minions give 1 stack, large minions and monsters give 5 stacks and champions give 25 stacks. Once he reaches 100 stacks he can upgrade one of his abilities.",
+        "He will use his E to clear waves - so don't stay in minions - but also to harass you. His E goes in a straight line so try to dodge it (upgraded E has 1 additional wave of damage).",
+        "Don't stay in his W – it will stun you after a while. Leave it as soon as possible or just dash away.",
+        "Without his W he is quite vulnerable because he loses the zoning ability.",
+        "Run away from his ultimate, especially when it’s upgraded since it moves faster."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Aggressive playstyle",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "He is immobile so you can try to setup ganks for your jungler or burn a Flash with Shurima Shuffle but be careful – he can just use his W under his feet. Try to bait it first.",
+        "Stomping Viktor in the early game with Electrocute is key because if you let him scale up he can dish out huge amounts of damage."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Vladimir",
+   "planilha": "Vladimir",
+   "id": "Vladimir",
+   "titulo": "o Sanguinário Escarlate",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 3,
+    "texto": "Medium"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Watch his bar below his HP. When he's got it stacked fully – his Q will deal additional damage. He will want to use that on you so just avoid him for a moment (2.5s).",
+        "Try to avoid being near him – his E deals quite a lot of damage. Minions can block it.",
+        "With his W he sinks into a pool of blood and becoming untargetable so he can easily avoid crucial abilities like your ultimate.",
+        "When he wastes his W he is vulnerable for a long time.",
+        "If he ults you just dash away to safety. Don't try to fight him.",
+        "Try to pressure him all the time after you get Oblivion orb this fight will be a lot easier.",
+        "Avoid being stacked with your teammates in teamfights.",
+        "Conqueror is really good against Vladimir because you will always win extended fights as soon as you run away from his Stacked Q, so what you would do is kite him, then run away from his Stacked Q, once it expires, you dash back into him with shurima shuffle, paired with ignite, you will always win 1v1 if he is not ahead for some reason.",
+        "You don’t want to do short trades with him and that’s why domination runes aren’t that good against him",
+        "Take care in the late game because he outscales you, that’s why stomping him makes the game way easier."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Xerath",
+   "planilha": "Xerath",
+   "id": "Xerath",
+   "titulo": "o Mago Ascendente",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 4,
+    "texto": "Medium/Hard"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "This matchup is all about how good Xerath is and how smart is your jungler to abuse his lack of mobility.",
+        "Its all about dodging his Q and W – get early boots and don't stay behind minions. Make him choose: poke you or shoving the lane – don't let him get both.",
+        "His E is a stun and can be easily dodged. You can take Cleanse just in case but that's not necessary.",
+        "When he wastes his E you have a lot of time to pick a fight. Take advantage of that – you should be able to easily get a nice trade - he hates when you are on him.",
+        "His R can be easily dodged as well – pick up your dancing shoes. Remember that level 1 ult has 3 bolts, level 2 has 4 bolts, and level 3 has 5 bolts to dodge.",
+        "He is immobile so you can easily setup a gank or waste his Flash with Shurima Shuffle. If possible try to bait his E first.",
+        "Later in the game he will be the main \"poke machine\" for his team. Try to take him down as soon as possible with a good Shurima Shuffle.",
+        "He is pretty squishy but he will keep his distance so it will be hard for you to poke him, if he for some reason let’s you drop him to 40% hp you can solo kill him easily.",
+        "While he is charging his Q he can’t use his other abilities so it’s a perfect opportunity for you to go in."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Yasuo",
+   "planilha": "Yasuo",
+   "id": "Yasuo",
+   "titulo": "o Imperdoável",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 3,
+    "texto": "Medium"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "This matchup is dependant on the Yasuo player, against an average or bad one you are gonna have fun time since the matchup is favored to Azir and they don’t know how to play it out.",
+        "Don't try to fight him in minions – he is very mobile near them thanks to his E so he can easily dodge your soldiers.",
+        "It’s recommended to freeze the lane under your tower – he won't be able to do whatever he wants with his E.",
+        "He can't dash to the same target more than once for a certain amount of time.",
+        "Watch his stacks on Q – the 3rd one will become a tornado which he will mostly use to poke you. It can be dodged quite easily",
+        "Before poking him try to get rid of his shield first with a single basic attack or soldier attack.",
+        "Poke him whenever you can when he is taking CS - use the range advantage.",
+        "With his W he can stop your Q and R. He can't block your basic attacks or soldiers attacks. If he wastes it – he is quite vulnerable for a lot of time.",
+        "After 6 if you are still freezing – if he goes too close to your tower: try to R him under it – but make sure to go out of range of his E or just dash into him immediately. Make sure there aren't any of your minions around as well.",
+        "If he ults you ult him away when the effect ends.",
+        "Conqueror is great versus Yasuo because if you auto attack him with your soldier on top of his passive you won’t deal damage BUT you will gain 2 stacks for free. This will allow you to win extended trades with him if you dodge most of his Qs.",
+        "If Yasuo stacks his Tornado and he dashes towards you , AS SOON AS you see him use his E to perform EQ onto you just use your ultimate, because even if his knock up goes through, he won't be able to use his ultimate."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Yone",
+   "planilha": "Yone",
+   "id": "Yone",
+   "titulo": "o Inesquecido",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 5,
+    "texto": "Hard"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "/Laki  So Yone is going to be the last ban priority and there are multiple reasons why you should ban him. You have to play almost perfectly to win this lane (I managed to learn how to play against him since i faced like 80 of them since he got released). Second reason is that even if you stomp this champion he can still dish out enormous amounts of damage due to his high damage potential and powerspikes through items. One good ultimate in a teamfight and that 0/5 yone suddenly can 1v9. So if you don’t have much experience against him, just ban him.",
+        "The Key to beating Yone is pretty much taking every possible damage rune. You have to poke him every time he walks up for cs, you will probably lose some cs in the process but in the long run it will all be worth it. Dodging his tornado is also crucial. Continue harassing him and once you hit lvl 3 you want to back off a little but still harass him. If you were successful in poking him down he should be around 30-40% hp. Just all in him under tower and kill him, push out the wave and you have a big item advantage.",
+        "You can’t try to scale against Yone because he will repeatedly engage on you with his E + Q3 combo.",
+        "If you are 1v1ing Yone keep in mind that 80% of the time you want to dodge his ultimate, either by flashing it or breaking his ankles, that ability has a lot of damage and while you are knocked up he can do 2 more auto attacks and Q.",
+        "Be careful when he is level 3 and he has a stacked tornado, most of the time they will E forward and dash into you, always be prepared for this, because if you dodge it, simple AA + Q + AA combo combined with electrocute will make that a super worth trade for you.",
+        "Keep also in mind that Yone can actually dodge your ultimate while he is in his E form by just returning to his “shadow”.",
+        "Yone is really hard to gank unless you have a hardcore cc jungler like Rek’Sai for example.",
+        "Remember that if anything happens, Yone must return to his shadow, he can increase this duration by just a little bit if he ults just before the duration expires so be careful. The duration of his E is 5 seconds so play around it. And its cooldown is 22 seconds so assume that Yone won’t engage on you in that time window.That makes up a perfect time for you to all in him.",
+        "Early Seeker’s can help a lot against this champion.",
+        "In teamfights try not to stand in the choke points because his ult hitbox is quite broken, also dont stand next to your teammates, positioning against this champion is essential."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Zed",
+   "planilha": "Zed",
+   "id": "Zed",
+   "titulo": "o Mestre das Sombras",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 3,
+    "texto": "Medium"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Stand behind minions - his Q damage is reduced to 60% against units beyond first – but try to dodge it anyway.",
+        "His Shadow (W) will mimic his Q and E dealing the same amount of damage. Try not to get both of his Q or it will do a lot of damage.",
+        "He can swap places with his Shadow.",
+        "When he wastes his W Shadow – he will become immobile for a long time. Try to take advantage of it. The cooldown is 20 seconds.",
+        "Poke him every time he wants to CS and push slowly (if possible zone him) – he can easily farm under his tower thanks to his passive.",
+        "After level 6 if he jumps on you – remember that he will always appear behind your back. Time your R well and push him. Dash away immediately or he will come back to the shadow.",
+        "If you are overwhelmed by him – early Zhonya's will help to negate his ultimate.",
+        "After 6 he will want to roam so try to prevent him from doing so by pushing but be careful about ganks.",
+        "If he is missing and you know where he is going try to follow him but take a different path. If you can't follow – try to get the tower instead but warn your teammates and ping,",
+        "Try not to stand between Zed and his shadow because he can land both shurikens easily",
+        "Taking exhaust in this matchup is advised because if you play it correctly he shouldn’t be able to kill you",
+        "Try harassing him as much as you can before he gets level 6, but avoid getting hit by his WEQ.",
+        "If Zed first pokes you down with his WEQ combo and then ults you, you can time your ult perfectly and knock him into tower. If he throws a shadow behind him and then ults you, just dash away and don't try to ult him because he will be spamming to return to his W shadow.",
+        "If you are fighting against Zed in a close 1v1 always exhaust him after he uses his ultimate and try to dodge his Q (or even flash them) because that's where his damage comes from.",
+        "Generally a good idea to take ultimate hunter against Zed since his ult cd is low."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Ziggs",
+   "planilha": "Ziggs",
+   "id": "Ziggs",
+   "titulo": "o Especialista em Hexplosivos",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 2,
+    "texto": "Easy/Medium"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "It's mostly a farm lane so just push the waves constantly. He wants to get your tower.",
+        "Don't stay near minions – his Q will explode on impact with them. Try to avoid being hit by it too – its easy to dodge them.",
+        "Watch the bomb in his hand – if it will glow that means the upcoming basic attack will be empowered.",
+        "His W knocks back all enemies in the area. He can also knock back himself.",
+        "His E explodes on contact and lasts for 10s.",
+        "After 6 if you see a circle on you – that's his ultimate. Dash away from it or at least escape from its epicenter.",
+        "He is immobile so you can easily setup ganks for your jungler or burn his Flash with Shurima Shuffle. Try to bait his W first if possible.",
+        "He will try to perma shove you so try to keep up with it (Rush Lost Chapter).",
+        "He is generally squishy but it will be harder to poke him due to his long range.",
+        "His W can cancel your dash if he times it right, be aware of this."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Aggressive playstyle",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Try solo killing him because it’s hard for him to play if he is behind.",
+        "Avoid constant roaming and leaving him alone in midlane because he shreds towers."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Zilean",
+   "planilha": "Zilean",
+   "id": "Zilean",
+   "titulo": "o Guardião do Tempo",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 2,
+    "texto": "Easy"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Push waves and make him lose some gold under tower – his basic attacks are slow so he may have problems last hitting under it.",
+        "He will want to throw Bombs on you so try to not being hit by one it will attach to you – its all about dodging them.",
+        "Don't stay near minions – he can easily stun you with double bombs that way.",
+        "With his W he can lower the Q and E's cooldown by 10s.",
+        "If he ulted someone or himself decide what will be better: let the ulted person live for 5s or let him revive.",
+        "He don't have any dashes so you can easily setup ganks for your jungler or burn a Flash with Shurima Shuffle."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Aggressive playstyle",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "If possible try to kill him before level 6. At level 6 you won't be able to kill him due to his ultimate.",
+        "He is really squishy so this shouldn’t be hard to pull off with Electrocute + Ignite."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Zoe",
+   "planilha": "Zoe",
+   "id": "Zoe",
+   "titulo": "o Aspecto do Crepúsculo",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 3,
+    "texto": "Medium"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Stay behind minions to avoid her Q and E.",
+        "It's crucial to dodge her Q because its damage is increased by distance it travels.",
+        "It's also crucial to not get hit by her E – if you'll fall asleep she will deal a lot of damage on the next attack on you. Pick Cleanse if you want to be safe.",
+        "She can extend E's range by throwing it over the wall so be careful when she leaves the lane.",
+        "Push her in to prevent her from roaming – she'll want to do it a lot.",
+        "Sometimes there will be a minion with a balloon. If she kills it, she can pick up a randomly dropped active item or summoner spell and use it as her W.",
+        "Try not to use summoner spells when fighting with her if its not necessary - she can pick up them.",
+        "After 6 care about some sneaky Q's over the wall or fog of war.",
+        "She seems mobile but she is not. You can easily setup ganks for your jungler with Shurima Shuffle or burn her Flash."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Aggressive playstyle",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "She is squishy but you have to play around her W summoner spells since they can turn the tide of the 1v1.",
+        "Try to poke her but also avoid getting hit by her Q and E.",
+        "If the bubble (E) hits you, try to dash away as far as possible, but keep in mind that her Q range is pretty big so try to go over some fat walls."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "Zyra",
+   "planilha": "Zyra",
+   "id": "Zyra",
+   "titulo": "a Ascensão dos Espinhos",
+   "rota": "Mid",
+   "dificuldade": {
+    "overall": 2,
+    "texto": "Easy"
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": [
+    {
+     "titulo": "Tips",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Zyra's seeds can be crushed by stepping on them.",
+        "If possible try to not get hit by her Q which she will mostly use to clear caster minions. If any seed is in range of Q – it will transform into a flower which is ranged and attacks nearby targets.",
+        "With her E she shoots vines in straight location so try to dodge it – it goes through minions. It will root you. Any seed in range will transform into a flower with slightly less range than Q but also slows.",
+        "Avoid being near any of her flowers to avoid free damage.",
+        "You can destroy her flowers with your soldiers. It takes 2 hits with 1 soldier to take it down. - Dash away when she casts her ultimate – it will enrage all flowers inside it but also knock you up.",
+        "She is immobile so you can easily setup a gank for your jungler or burn a Flash with Shurima Shuffle."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Aggressive playstyle",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "Relatively squishy, you should be able to solo kill her pretty easily.",
+        "Poke her down as much as you can.",
+        "Electrocute and Ignite should do the rest of the job."
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

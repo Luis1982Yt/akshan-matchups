@@ -2,7 +2,7 @@
 
 Fontes que o dono juntou em 2026-10-28 para os próximos guias do BattleMatch, com a triagem feita no mesmo dia
 (planilha aberta ou não, o que tem dentro, quão atual). Os campeões da lista dele sem fonte ficaram de fora.
-Já no site: Akshan, Mordekaiser, Illaoi, Kayle, Fiora, K'Sante, Akali e Garen mid (2026-11-01; modelo 3D e sons da Fiora pendentes, só no PC do dono).
+Já no site: Akshan, Mordekaiser, Illaoi, Kayle, Fiora, K'Sante, Akali, Garen mid e Azir mid (2026-11-01; modelo 3D e sons da Fiora pendentes, só no PC do dono).
 
 ## Planilhas abertas (dá para ler e baixar)
 
@@ -111,3 +111,10 @@ mas o CSV do Google (gviz) abre, então está no workflow diário. É a v1 públ
 atualizada para assinantes da Twitch/Discord. Parte da planilha está desatualizada (o Ímpeto Gradual saiu do jogo;
 o Data Dragon ainda tem o ícone). Se o Triton pedir, tirar o guia (`"oculto": true` no `guias.json`).
 Modelo 3D do Garen: pendente, só no PC do dono.
+
+## Azir mid (Eleyte e Lord Laki): no site desde 2026-11-01
+
+Slides de 2021 (season 11), sem aviso de direitos. Por decisão do dono entram só a dificuldade e as dicas de rota;
+runas, feitiços e itens da época (itens míticos) ficam de fora, e o crédito avisa que a fonte é de 2021. Os slides do
+Akshan e da Vex estavam inacabados (sem dicas) e não entram. O export em .pptx funciona sem login: está no workflow
+diário. Modelo 3D do Azir: pendente, só no PC do dono.
