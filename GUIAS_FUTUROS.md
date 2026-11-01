@@ -95,3 +95,10 @@ Nenhuma dá para usar numa sessão na nuvem:
 - Akali "outra" (1dub4yd…) baixa, mas é a do Daito, Akali **top** da season 13.
 - Azir: abre, mas é da season 11 (itens míticos), desatualizada.
 - Aurora: vídeo.
+
+## Akali (SupremeG0at): no site desde 2026-11-01, sem autorização
+
+A planilha tem download e cópia bloqueados e o autor está com as DMs fechadas; o dono do site decidiu publicar
+mesmo assim, com crédito e links do autor (Twitch, YouTube, X) e o aviso de remoção do rodapé. Se o SupremeG0at
+pedir, tirar o guia (`"oculto": true` no `guias.json`). Como o download é bloqueado, **não está no workflow diário**:
+para atualizar, `node scripts/akali_baixar.js <pasta>` (lê a planilha no navegador) e `python scripts/atualizar_akali.py --de <pasta>`.

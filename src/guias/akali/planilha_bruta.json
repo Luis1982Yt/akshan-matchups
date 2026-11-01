@@ -1,0 +1,784 @@
+{
+ "_fonte": "SupremeG0at Akali Spreadsheet 2026 (download e cópia bloqueados pelo autor). Lida em 2026-11-01 pela página do Google Sheets no navegador (scripts/akali_baixar.js). Montado sem autorização do autor, por decisão do dono do site (GUIAS_FUTUROS.md).",
+ "planilha": "https://docs.google.com/spreadsheets/d/1QSmbqRpG-caL8flzDFVQw546CSp5VBvLB96ymQd2uzQ/edit",
+ "geral": {
+  "0,0": "SupremeG0at - Twitch\nCoaching can be redeemed as a channel\npoint reward for loyal viewers, so make\nsure to drop by :D",
+  "0,1": "Hi, i'm SupremeG0at, a high elo multi season Challenger Akali OTP on EUW, and this is a bit of a helper for inspiring Akali gamers, hope yall enjoy :D not required, but the best way to thank me is by watching me/ dropping by on the streams and following tiktok youtube twitter etc c:",
+  "1,0": "Youtube",
+  "2,0": "Discord\n We have a very active community, and\nalso its great if you don't want to miss the\nstreams!",
+  "3,0": "Twitter",
+  "4,0": "Tiktok",
+  "4,1": "Some things to keep in mind while playing Akali",
+  "5,1": "This champion is extremely early/midgame focused. you have to do well early and put your lead on your team to win games",
+  "6,1": "You don't have heavy loosing lane matchups mostly. champions are more \"thematically\" countering you, and making your",
+  "7,1": "life a living hell. a great example is galio, who you might be able to solokill once or twice if they aren't playing super well",
+  "8,1": "but you will have a hard time playing the game in every single fight because of his W in your shroud and his ult in",
+  "9,1": "later teamfights.",
+  "10,1": "Akali's biggest cap: being an energy champion. she is a very unique champion in that she is gated by energy, which you",
+  "11,0": "Table of content",
+  "11,1": "can't increase in any way outside of getting bluebuff. this means that high hp and magic resist targets will always be a pain",
+  "12,0": "Midlane Matchups",
+  "12,1": "to deal with, unless you are extremely fed,",
+  "13,0": "Toplane Matchups",
+  "13,1": "When is Akali strong in a draft? good generic indicators are being solo or max duo AP ( don't consider supports as too much",
+  "14,0": "Summoner Spells",
+  "14,1": "AP, but at the same time take into account that enemy team will build more mercurys treads the more CC you have which",
+  "15,0": "Runes",
+  "15,1": "will give them MR despite them not building against magic damage that heavily.",
+  "16,0": "Items",
+  "16,1": "And when enemy is rather squishy. Champions that have a hard time fitting a ruby crystal or a nullmagic mantle into their",
+  "17,0": "Matchup difficulity",
+  "17,1": "builds even at 2-3 items are the best for Akali to play against.",
+  "18,0": "Very hard",
+  "18,1": "Wincondition? Playing for drakes is the most straight forward easiest Akali wincondition. i know it sounds a bit weird",
+  "19,0": "hard",
+  "19,1": "but since Akali can't hit epic monsters or towers by herself to great effectiveness, her best way to win and close out",
+  "20,0": "skill",
+  "20,1": "games is by carrying thoose dragon fights, making sure you get to soul, and then you just overpower most champions",
+  "21,0": "Akali favoured",
+  "21,1": "in the game. This doesn't mean you should overforce every drakefight, be a bit flexible! but most of your wins will come by",
+  "22,0": "Easy matchups",
+  "22,1": "this being your main approach, since most champions outscale you  in 30+minute games, but soul makes you keep up",
+  "23,0": "Thematic counter/special matchups",
+  "23,1": "with them way better!",
+  "24,0": "Champions",
+  "24,1": "What to do as Akali",
+  "24,5": "What to look out for",
+  "24,6": "Timers to think about"
+ },
+ "legenda": {
+  "Very hard": "#e06666",
+  "hard": "#dd7e6b",
+  "skill": "#ffd966",
+  "Akali favoured": "#93c47d",
+  "Easy matchups": "#6aa84f",
+  "Thematic counter/special matchups": "#3c78d8"
+ },
+ "mid": [
+  {
+   "nome": "Ahri",
+   "fazer": "-Try to W when she is trying to w auto you then get a good trade in on her\n-Don't let her push the wave for free, lvl7 onwards she oneshots casters, try to put yourself between the wave and her\ndodge her charm and then trade on her. or atleast try to dance with her a bit trying to deny her and make her walk up to be\nable to cs, don't give it for free because thats what she wants.",
+   "observar": "-Just charms, really standard matchup. you don't get outscaled\nbut she has a long cc that can always be annoying\n-mercs good if they have more cc besides ahri, like an AP jungler\nor a heavy cc support.",
+   "timers": "-Her ult CD is same as yours, but she buys CDR\nand you don't, so basically if you trade ult for ult\nshe will always have it up if you use it at the \nsame time. If you get her ult by your junglers\nhelp then you can 100-0 her if she is slightly\nwalking up.",
+   "cor": "#93c47d"
+  },
+  {
+   "nome": "Akshan",
+   "fazer": "-Getting hit by q means trade will be bad almost always. if you can dodge it and you can make sure your electro doesn't\ngo into his passive shield that makes the trades favourable for you. also don't walk up too far without W or E up, because \nAkshan will just swing on you for a huge tradeback.\n-When he is swinging around a tower its hard to make him stop. you have to get ahead of him, so many times you will just\ndie if you E onto him.\n-Take some small trades, always ping roams, and around 60-70%hp you can always allin him.",
+   "observar": "-Ult is a reveal and deals massive damage based on missing HP\n-Swing is just annoying to deal with\n-His e resets\n-He can sniff you if you just killed one of his teammates.  make sure\nyou recall in a safespot.",
+   "timers": "-No real timers besides his E CD, its 18 seconds\nso its rather long, so try to get in a trade if you\nget him to use it and not get much value out of it.",
+   "cor": "#ffd966"
+  },
+  {
+   "nome": "Anivia",
+   "fazer": "-You will generally go even/slightly loose this lane, but you can do a lot in sidelane against her and have better \nearlygame skirmishes. \n-She is very tanky, you should not ever take her egg when you won't have any resources(Energy/e/ult/ignite) to deal any\ndamage to her in egg form, as she takes a lot more damage there, but if you just walk away after, then she will just be full \nHP for fun again.",
+   "observar": "-After 6 make sure you don't just walk up and  get trapped in her ult\nwithout E\n-Don't get your E canceled by her wall, you will die.\n-She has 600 autoattack range, so don't get auto poked too much.",
+   "timers": "-When she has no egg much easier to allin",
+   "cor": "#ffd966"
+  },
+  {
+   "nome": "Annie",
+   "fazer": "-Wear her down to about 60-70%HP and she is very easily allinable\n-Mercs very good value, only if she has more AP on her team tho\n-When Ult+eing her you need to be a bit careful with tibbers blocking the E from better annies, but otherwise you are \nrather safe to allin her",
+   "observar": "-600 auto range, don't get autoed to death.\n-her shield damages you, so it will make her electro/aery proc. Make \nsure you don't just go for a single Q because this will make trades\nextremely favourable for her. atleast Q auto Q her.",
+   "timers": "-Only flash timer matters here really, but it matters\na lot, perma allin her if she has no flash, even\nfrom full hp very oneshottable",
+   "cor": "#93c47d"
+  },
+  {
+   "nome": "Aurelion Sol",
+   "fazer": "-Very stationary, but deals a lot of damage so be careful. also don't allow him to chase you down with W\n-if he has W and Q lvl2 you are hard loosing, do not trade.\n-Easy to dive/dodging his ult with ult e is rather easy most of the times.",
+   "observar": "-too deep trades where he can chase you down with W\n-don't stand in his E, it gives him stacks.\n-lvl1-2-3 he is rather strong, don't overtrade, you will have a much\neasier time punishing him lvl4 onwards.",
+   "timers": "-No real timers here, you can always allin him from\n70-80%HP if he is far enough up on the lane. \n-You can sometimes force his big ult on a sidelane\nif you can try to kill him, which is huge for any \nbig fight coming up.",
+   "cor": "#93c47d"
+  },
+  {
+   "nome": "Aurora",
+   "fazer": "-  You have an extremely hard time chasing this champion down, and she is rather mobile.\n- Whenever you allin her she will just ult away\n- When you try to ULT+E her she is very likely to w somewhere and dodge the E, feel the player out and if they do it \ntry to predict the W.\n-very hard to fight her, one of the strongest earlygame champs. going even is winning in this matchup, can do more later\nin teamfights/skirmishes.",
+   "observar": "-Her Q even if it only hits minions when she pulls it back it deals a little\ndamage to everything its passing by, so it will proc electro on you.\n-if you are around 40%HP she has a rather easy way to allin you\nespecially with ignite.",
+   "timers": "-Her ult is very slightly more cd than yours, if used\nat the same time after the first timer she might not \nhave it back up for like 5-10seconds when yours is\nup. depends if she had CDR or not when she used \nit. afterwards its always a trade of ults.",
+   "cor": "#dd7e6b"
+  },
+  {
+   "nome": "Azir",
+   "fazer": "-Bait out soldiers lvl1 by walking into range and then play around said soldiers range. don't take too much poke from them.\n-His soldiers are his everything, if he has  no soldiers/q up he can't dash away.\n-he likes longer trades, make sure you don't let him keep up his lethal tempo stacks as thats the only way he wins trades\n-baiting his ult out with an e onto minion q him and e back is very common and useful. if you mess it up you are dead tho.",
+   "observar": "-You can stop his E by blocking his path\n-You can jump over his wall once its down but as he is casting it he \nwill knock you out of your dashes. make sure you only use dashes \nover it once its fully casted.",
+   "timers": "-His ult is same cd as yours,but you can bait it out\n-his soldiers have a rather long recharge time,\nso if you can bait some out he will be a lot weaker\nand a lot less safe.",
+   "cor": "#93c47d"
+  },
+  {
+   "nome": "Cassiopeia",
+   "fazer": "-Personally i hate this matchup, but it is playable. \"Just\" dodge her Qs and then she is weak, but she has infinite mana so\ndon't count on her ever running out. gotta dodge a q and then allin her, but she has her w and ult, you can sometimes flash\nout of your e animation and turn away and then ult through her to dodge the ult, but its rather rare as canceling e2 damage\noften makes it so you don't have enough DPS to kill her anymore. still a neat tech.\n-If she is up a bit far on the lane its your time to shine, allin her else you will get poked to death, every q that hits you is \ngonna be like half your hp if she gets like 2Es on you.",
+   "observar": "-obviously her ult and W in teamfights are the ones to look out for\n- on Lane Q matters by far the most. getting hit by r when you already\ndodged q doesn't actually matter super much. but the timing is tight\nas her Q with 0 cdr is 3.5s CD while her ult is a 2s CC",
+   "timers": "-W is a huge cd until like lvl15\n-be careful once she hits rylais, some cassios go\nfor it first before anything else. then she wil ltry to \nE you for slow and then Q, need to e out of that \nelse you are dead",
+   "cor": "#dd7e6b"
+  },
+  {
+   "nome": "Corki",
+   "fazer": "-Very allinable but so are you. His lvl1 is extremely strong, and so is his lvl2 if he takes W and Ws into your face. it is\none of the most surprising amount of damage spells in the game. \n-Even in midgame/lategame has a surprising amount of burst, need to dodge 1-1 spells so you are not blown up in an allin.\n-It really is just a giga damage champ, very straight forward matchup. he is an adc.",
+   "observar": "-His E shreds armor/MR so try not fighting him if you took too many \nticks of his E already. you will take 5-10% more damage which can \nmatter a lot.\n-never take big rockets to the head, you can see below his hp bar\nhow many rockets he has and if its a bigone coming next or not",
+   "timers": "-No real timers besides your own here and his \nflash",
+   "cor": "#ffd966"
+  },
+  {
+   "nome": "Diana",
+   "fazer": "-Make sure to dance with her a little lvl2, to get to know if she has W or E 2nd. If W try to play for kiting her at range and \nif she takes E then heavy trade on her go into her face if she misses Q or if she goes in with E.\n-Don't let her hit the wave for free, you are always stronger almost\n-Don't let her hit towers, she oneshots them even in 0/30. champs biggest strongpoint is objective damage for an assasin.",
+   "observar": "-Look out for quick trades when she has her Q on you, but this can \nbe your re engage timer as she might commit to going too deep and\nyou can just allin her when she Es onto you many times.",
+   "timers": "-Everytime her Q is down its a great timer to fight\n-Everytime her W is down its great to fight\nrather straight forward, her ult is 20s lower CD \nthan yours, so make sure you don't fight her on \nthat cruicial window.",
+   "cor": "#93c47d"
+  },
+  {
+   "nome": "Ekko",
+   "fazer": "-He is very weak to you lvl2-3-4, lvl7 onwards he starts oneshotting you. lvl4 onwards he can clear waves by 2 Qs\n-Make sure you fight him when he is trying to cs, just like Ahri don't let him get away with just Qing the wave for 0 damage\ntaken.\n-He scales well but still will have a hard time sidelaning against you unless he is 5-6 items.",
+   "observar": "-LOOK OUT FOR LVL1 HAIL OF BLADES TRADES. most important\nthing by far, as he can get lane control with this if you take too much\ndamage. might be worth having boneplating just for that if you are \ntoo scared to deal with it. its his best window to get an advantage.",
+   "timers": "-his ult is always lower CD than yours\n-when he uses his E to trade he is rather\npredictable so if you don't let him proc his passive\non you, he is allinable. try to keep e2 on him \nfor when he ults back to be able to follow him.",
+   "cor": "#93c47d"
+  },
+  {
+   "nome": "Fizz",
+   "fazer": "-Don't waste energy when he is about to E,its his best case scenario if he can dodge a Q with it, especially lvl1-2\n-Try to E him when he is Qing you\n-Allin him when his E is on CD/whenever he is agressively using it, as he has no way to trade back if he wastes it. If you can\ndodge it and maybe hit your own E you are almost guaranteed to win the fight.",
+   "observar": "-His ult reveals\n-can be very slippery after zhonya having the E into zhonya into E\n-can burst you, zhonya>banshee as a defensive item into him\n-as you can just zhonya 2 spells(either Q or E+ult usually) and make\nhis combo useless",
+   "timers": "-His ult is slightly lower CD than yours so be careful\nif you traded ult for ult for like 10 seconds\n-You kinda beat him everytime you are even, just\nlook out for zhonya CD once he has it, its 120S\nwhich is really really long.",
+   "cor": "#6aa84f"
+  },
+  {
+   "nome": "Galio",
+   "fazer": "-Don't waste energy as he does a stepback when Eing in a direction, which can make him dodge Qs. if he does that\nhe auto won the trade already\n-Champion is one of the biggest thematic counters in the game to Akali, which means he can go 0/10 and still be extremely\nOP and frustrating to play against in teamfights.\n-You basically either need the Galio to be occupied or try some kind of an ult E get him to ult then e back once his r is \nfinished, but even then he will just taunt you. so best if your team can catch/CC him to go in at all, else its hard to play.",
+   "observar": "-His E dodging your Q\n-His W in fights, need to zhonya it or get out of it some way else\nyou are dead\n-His ult is fairly high CD so a lot of fighting can mean he can't use that\nto disrupt you everytime.",
+   "timers": "-his W magic shield resets the timer on it if he takes\ndamage, try to not let him get it back up\n(same as malphite or malzahar)\n-really just when he has no ult its a good timer to \nmake a play on someone thats not him.",
+   "cor": "#3c78d8"
+  },
+  {
+   "nome": "Heimerdinger",
+   "fazer": "-His turrets will always be annoying to deal with. if you take D shield in this matchup i won't fault you for it, you can't really\nkill the turrets off, but you should try to go for angles where you can Q both heimer and the turret.\n-Always E his E unless you are looking for an allin, as you will loose all your HP to his turrets/W if you don't\n-very squishy lvl67 onwards, but need to get there fairly even.",
+   "observar": "-His E is his everything, if he hits it he kills you.\n-If you dodge it you have a good few seconds to kill him, but\nthe turrets will kill you if you don't finish the job fast enough\n-Lategame if he stand in any bush and sets up you are getting\noneshot. look at the map constantly and make sure he isn't cheesing\n-He oneshots baron",
+   "timers": "-lvl6 is your time to shine\n-everytime baron is up heimer just oneshots it\nwith extreme ease, so make sure you let your \nteam know that yall will need some vision around.",
+   "cor": "#ffd966"
+  },
+  {
+   "nome": "Hwei",
+   "fazer": "-Dshield if you are uncomfortable in the matchup helps, also mercs is really good against him, get it if theres more cc/ap\n-Dodging his E-E(Claws) forward can make you an insanely good trade. downside is if you get it by it you loose all your HP\nand because of the slow can't actually trade on him.his E W(purple circle) is a reveal if you are tagged and rooted by it,\nbut he can't reveal you with it if you are hiding in your W already. but if you are rooted by it you can't press W and disappear.\n-Put yourself between the wave and Hwei, make him fight if he wants to cs. you obviously need to dodge some of his spells\nbut its the best way to interact as he will just oneshot the wave if you let him close.",
+   "observar": "-try to make sure he cant hit both you and the wave with his E-E(claws)\nand Q-E(lava) at the same time. \n-His ult is a reveal, so you will get cooked if you get hit by it.\n-his E-Q is very long duration CC, you need to dodge it some way or \nyou will get oneshot.",
+   "timers": "-lvl4-5-6-7 are your best timers to get an advantage\n-his ult is rather long CD\n-Whenever he wastes his E is when you should be \nlooking to trade more agressively",
+   "cor": "#ffd966"
+  },
+  {
+   "nome": "Irelia",
+   "fazer": "-Fight her when no ally minions are nearby, makes her a lot more linear.\n-Don't combo into her W its a lot of damage reduction, try to make sure you proc your electro outside of it.\n-She looses to Akali mostly, but she can absolutely auto you to death if you allow her to. you are the one thats getting\nstatchecked here, and you need to kite her well to actually win.\n-boneplating is OP vs her",
+   "observar": "-lvl1 she is a lot stronger, will try to Q 3 meeles and then Q you get\nher passive and make you loose 40% hp. either Q auto Q her back\nor start W to make sure you don't loose the lane here.\n-BORK is a huge spike, her healing goes nuts so make sure you\naccount for it while all inning her.",
+   "timers": "-lvl1 is her timer, lvl6 onwards is when its really \nyour timer, but can kill her easily if she messes up \nearlier. playing on your ignite timer is something\ni can recommend, her healing is nuts but buying\nhealreduction is not something you can do in \nmost cases. not recommended vs irelia either.",
+   "cor": "#93c47d"
+  },
+  {
+   "nome": "Jayce",
+   "fazer": "-He wins lane if he plays well, can play dshield into him, depending on if he plays grasp or phase/first strike it can be a \nlot easier to allin him.\nhe doesn't get an ult, so lvl6 is not a real spike for him. he can use his combo from off your screen, make sure you \npay attention to it, it has a relatively high cd, but not high enough.",
+   "observar": "-his  firstautoattack after swapping forms shreds a lot of your r\nesistances, try to not give him a fight when he just swapped. \n-he gets mana back when autoing in hammer form. if he is low on mana\nand you can contest him, he can be mana starved if you don't let him\nauto for free.",
+   "timers": "-when he swaps from hammer to ranged is your \ntimer to allin, as he gets a lot more tanky in \nhammer form, he gets a lot of resistances for free.",
+   "cor": "#dd7e6b"
+  },
+  {
+   "nome": "Karma",
+   "fazer": "-Try to E out of her W tether, very important you don't let her root you as it will make her ult cd go down a lot,\nas she gets to auto you for free and gets her 2nd part w dmg and probably a Q aswell. thats a lot of ult cd reduction.\n-if you bait her w e her get out of range go back in is your best way to allin her, otherwise its rather hard to allin.\n-make sure you don't try to hind behind minions that she is gonna hit, because her q will splash onto you.",
+   "observar": "-her W is a reveal, not really something you can play around if you \nare too close to her.",
+   "timers": "-lvl6 is not a real ult for her, so its one of your\nbetter timers, otherwise really just anytime \nyou can get in a decent trade, you need to bait her\nW, otherwise she will always live allins.",
+   "cor": "#93c47d"
+  },
+  {
+   "nome": "Kassadin",
+   "fazer": "-very easy to play against, but you do get freescaled on. getting a 40cs lead at 15 minutes won't matter much if \nyou don't get drakesoul/close the game out before he hits 16. \n-play for longer trades, make him cs with his Q and trade once his shield is down.\n-you can dodge his Q dmg with your w if timed right, its a weird bug but riot hasn't fixed it for years so use it if you can.\nhe still gets his shield, butagainst Q max kassadins can be useful.\nyou win allins whenever your ult is up, but be careful about getting chased down without ult.",
+   "observar": "-his ult costs more mana the more he uses it, but also deals more\ndamage. early on he can be very mana starved, so he might not\nhave a way out when you don't even realize. pay attention to it.",
+   "timers": "-just literally lvl16, otherwise you are always winning\nas long as your ult is up.but need to make sure\nwe have a wincodtion by the time he is hitting it.",
+   "cor": "#93c47d"
+  },
+  {
+   "nome": "Katarina",
+   "fazer": "-pay attention to arriving minion waves, its her best way out of allins.\n-her daggers are most of her damage, but early on try to not take too much damage from her Q poking you down\nwith sudden impact. a lot of katarinas play for an allin after that poke nowdays.\n-when she Es on a dagger her E is not reset. its on a 2 second cooldown instead, here you can trade on her or E her\n-her E cd after picking up a dagger becomes roughly 0.8seconds after lvl11-13 so it becomes a lot less the window you have",
+   "observar": "-Her ult is half your ults cooldown. good katarinas will use it just to\ntrade with you.\nlook out for daggers, only take damage form them if you are baiting\nher into a fight.\n-SPAMPING ROAMS!!!",
+   "timers": "every timer till like 4 items is winning for you as long\nas you are somewhat even. the already mentioned\nE cd after picking up daggers is the only real timer\nto play around",
+   "cor": "#93c47d"
+  },
+  {
+   "nome": "Kayle",
+   "fazer": "-VERY STRONG LVL1 DO NOT DIE/ GET RAN DOWN. i have died to a kayle with doran shield lvl1 just running me down\nbefore. do not let her.\n-her passive is a  lot of ms, but she needs to auto for it. try to not let her stack it on minions for free.\n-you really just always win vs her in a 1v1, but she will just shit on your team in teamfights, but 1v1s even if you are behind\nyou are winning them usually.",
+   "observar": "-W movespeed\n-Q shreds a lot\n-passive being stacked makes her a lot stronger\n-her ult obviously",
+   "timers": "every single 1v1 is always winning, so are little\nfights, but after 16 teamfights become unwinnable\nstill can beat her on side if you get on her, but her\nbiggest advantage is her movement speed, hard\nto get on.\nHer ult on 6-11 is very high cd compared to yours.",
+   "cor": "#6aa84f"
+  },
+  {
+   "nome": "Leblanc",
+   "fazer": "-Strongest laner champion of midlane really, try to not get poked down by her q with sudden impact+scorch\n-E her w is your best chance to trade, but even then she has a good tradeback\n-Uncatachable, but you can kind of win on sidelane later, but impossible to get to midgame even. you will always loose \nvs good leblancs.\n-Dshield playable into her, mercs if there is more ap/cc in enemy team feels great\n-she gets clone at 40%, if you are allining make sure to ignite her prior so you know which is the real one.",
+   "observar": "-don't get dragged undertower by her w and then ulting backwards\nshenanigans \n-her E is a reveal, so if you are hit by it you are getting nuked\n-her ult is less than half your cd.",
+   "timers": "just her ult being up  every 2nd wave is what you \nhave to think about, otherwise no timer to think\nabout",
+   "cor": "#e06666"
+  },
+  {
+   "nome": "Lee Sin",
+   "fazer": "-He lifesteals back most of your damage, so need to fight him when no minions are near if possible.\n-he might max E, then you need to play around that, but he becomes a lot more killable than if he is \nplaying W max. \n-just wear him down with short trades and then try to all in him",
+   "observar": "-his E is a reveal\n-his Q is a reveal\n-his ult is very annoying to fight",
+   "timers": "-Whenever minions are not near and you have ignite\nup is your timer to kill him. You could buy oblivion\norb, but i personally dislike it, i think its hard to \nperma apply it when he is trying to heal, and it\ndelays your gunblade too much. but you can test it.",
+   "cor": "#ffd966"
+  },
+  {
+   "nome": "Lissandra",
+   "fazer": "-Can play cleanse/dshield/mercs into her. dshield if not confident, cleanse OR mercs mandatory. never both at the same time\n- try to bait her W and then heavily trade onto her. \n-Keeping wave near your own tower makes it easier for you if you are looking to allin her\n-don't get dragged undertower by her e while eing on her and get cced to death.\n-She is rather squishy.",
+   "observar": "-her ult even if you play cleanse she can just use it as a zhonya, so \nbe mindful of that. i much prefer mercs, but some games you need\ncleanse else you are oneshot/the mr doesn't have enough value etc.\n-her Q poke earlygame\n-her W never worth to cleanse almost.",
+   "timers": "-no real timers to keep in mind, her ult is slightly\nlower cd than yours.",
+   "cor": "#f6b26b"
+  },
+  {
+   "nome": "Lux",
+   "fazer": "-This matchup  is rather boring, but Akali favoured. Lux E is extremely hard to dodge, if you can dodge it while moving\ntowards her its kind of the only way to make sure you really get to punish her incase you dodge it. But very important\nto not get hit by Q while trying to do this, as it will give her a heavy chunk on you.\n-Lux Q is unhittable, Lux E is undodgeable. make sure to never ever ever get hit by the Q unless you kill her anyways in \nan all-in.\n-Roaming is key as its really hard to interact with this champion if she decides she doesn't want to interact.\n-Later you hardwin on sidelane",
+   "observar": "-Her Q cd is rather high, so thats a window to punish if she keeps \nwasting it.\n-Her ult cd doesn't exist, she has it up every 2 waves already at lvl6.\n-MAKE SURE U CHECK IF SHE HAS BARRIER OR NOT, PLAY \nAROUND IT IF SHE DOES.",
+   "timers": "-No timers outside of summoner spells especially if she \nplays double combat summoner(flash+barrier)",
+   "cor": "#93c47d"
+  },
+  {
+   "nome": "Malzahar",
+   "fazer": "-gotta keep his shield down, everytime the timer resets when he takes dmg, just like galio and malphite\n-Need to kill his spawns instantly, its way more of his waveclear than the E,\n-Can be worth taking his E(jumps to closest target in range) to make him not push a wave and make him walk up instead\nits your main way to bait him into walking up and hopefully allinining.\n-champion is a bit of a big counter as his push/ult is very hard to deal with as akali. would recommend banning if you meet\nhim a lot, not a thematic counter per say but extremely annoying champion to meet a lot.",
+   "observar": "-MERCS OR CLEANSE DOESN'T WORK ON HIS ULT\n-HIS ULT IS A SUPRESSION NO TENACITY WORKS ON IT\n-You could buy Qss if you reall need it, but i don't recommend, just\ntry to have your team CC him and cancel it.",
+   "timers": "-His ult cd is actually long earlygame, its 140s, can\nmaybe have 1 good timer on him.\n-Just keeping his shield down and whenever you can\nforce him to walk up is your timer to try to go all in.",
+   "cor": "#3c78d8"
+  },
+  {
+   "nome": "Mel",
+   "fazer": "-You can really never fight this champ unless you flash onto her while you have full HP else you get oneshot.\n-recommended ban if you meet her a lot, can play dshield/mercs, but her having double defensive spells(W+E) \nmakes it so you can never really play against her as Akali as long as the player is good. Once you get a lead you can kind\nof snowball it, but can never get a lead by yourself. Great example of this matchups Zeka vs Faker Kespa cup, Faker had\nlike 25cs vs Zeka 10 but he made a mistake and died very early on in the 1v1, but if he doesn't die there its extremely \npainful to play.",
+   "observar": "-W will just reflect everything, really important to try t o play around\nit and not let her Q you back if you are trading with her, because trade\nis auto lost if that happens.\n-If her E is up impossible to take your E2 unless you are much stronger.\nOne way to play around this is you can flash cancel your E2 and dodge\nthe E, could also do with rocketbelt, but we don't buy that item anymore.",
+   "timers": "-Just whenever her E is down is your time to play, \nbut even then its hard with her W, and if you are\n below 50%hp you should never try to kill, you will \njust get oneshot.",
+   "cor": "#e06666"
+  },
+  {
+   "nome": "Morgana",
+   "fazer": "-Need to put yourself between the wave and her to be able to fight her, otherwise she is a malzahar v2. very good push.\n-Need to dodge every Q, can't E2 her ever as long as her Q is up.\n-Mercs is very very nice, but can't always go for it if she is solo ap for example, as her CC is technically dodgeable.\n-Lvl5 onwards she oneshots waves really hard, and oneshots cannon waves even harder. you either fight her \nor you will just be locked under your tower permanently until midgame.",
+   "observar": "-Her ult is a reveal, so get out of it asap\n-can't E2 her while Q is not used\n-if you stand in her W the cooldown gets reduced on it, so do not stand \naround in it if you are not cced.",
+   "timers": "Whenever she wastes her Q is the only real timer you\nhave, otherwise just sidelane waiting room and roam\ning central.",
+   "cor": "#3c78d8"
+  },
+  {
+   "nome": "Naafiri",
+   "fazer": "-Lvl1 play safe until you know what spell she took. if she has W start and hail of blades, dodges 1 Q from you\nyou can loose 70-80%hp to her ignite hail of blades cheese. do not loose the lane over this.\n-Don't Try to E her if most of her dogs are alive, BUT HER DOGS BECOME UNTARGETABLE WHEN SHE IS ULTING\nSO ITS YOUR WINDOW TO HIT HER WITH E!!!!!!\n-Q is annoying to get hit by, geting hit by both makes it very hard to play. so if you get hit by first, by all means try to dodge\nthe 2nd.",
+   "observar": "-Her dogs blocking everything\n-Her W dodging your Q, very hard to play if you miss a single Q\n-getting hit by both Qs\n-dogs respawn at her when she is Wing",
+   "timers": "no specific timer. just wear her down a bit \nand then allin her when she is 60-70%HP",
+   "cor": "#f6b26b"
+  },
+  {
+   "nome": "Neeko",
+   "fazer": "-Don't stand near or behind your minions, as her E speeds up if it passes through minions, and her Q does 2nd-3rd wave\nof damage if it kills a target or if its hitting a champion.\n-Ignite her before she has a chance to W if you are allining her.\n-her W onhit damage is hard to see, but important you don't keep taking it to face for free, also harder to allin her on \nthe timer when she has it because she gets movespeed after using the 3rd empowered auto.",
+   "observar": "-Perma pinging missing\n-Minionwave shenanigans\n-pressing tab reveals if you have neeko in vision or not, there is a ?\non her if she is in fog(not on your wave as a minion or on your botlane)\n-dodging Qs and Es(E more important, as it will make sure you are\ntaking max dmg from Q)",
+   "timers": "no specific timer, just look to trade when her E misses\nand she uses up her W onhit stack  if possible.",
+   "cor": "#93c47d"
+  },
+  {
+   "nome": "Orianna",
+   "fazer": "-can be extremely annoying, you really need to learn ori Q to consistently be able to read what ori wants to do, and even\nwhen you do sometimes you can't play around it, its more on the Ori to miss than it is on you to hit.\n-When her phaserush is down is your time really start winning. Be careful with her ulting you and the wave at the same \ntime.\n-In general just do the typical E backwards to a minion Q her and then e to the minion so that you are safe until she is a bit\nlow, and whenever she lets you ult onto her with most of your spells up just all in her.",
+   "observar": "-Not getting ult pulled under tower\n-Not letting her freeze the wave infront of her own tower its her best\nsafespace she can get, so can't let her have that.",
+   "timers": "No real timer, her ult is lower CD than yours, all \nthrough the game, so keep that in mind.\notherwise lvl4-5-7 are great timers and once you hit\nalternator, very generic matchup.",
+   "cor": "#93c47d"
+  },
+  {
+   "nome": "Qiyana",
+   "fazer": "-Lvl1 she will try to dodge your qs with W, don't let her bait all of your energy out, because afterwards she can auto you W \nforward auto again proc electro etc. Cheesy like naafiri but less problematic.\n-On the 2 lvl3 waves don't take too much damage from her, she can allin you from like 60-70%HP, lvl3 and lvl4 are her\nscariest timers.\n-Getting to lvl5-6 fairly even favours you, it will be easier to play the game there. Zhonya can be useful even as a 2nd item\nbut up to your game's tempo. ofc can't buy it 2nd if enemy team is 4ap and they send their 2 levels up Gwen top into you.",
+   "observar": "-Her dodging Qs with her W\n-Oracle at like lvl7-9 to see her in bush Q, also your E reveals her for\nas long as its on her, so keep that in mind while fighting her. As soon as\nyou E2 her she will be invisible, so if your team is hitting her can be \nworth to not use it until she is in \"execute\" range. Also useful in 1v1s\nif you can get on her without using up E2",
+   "timers": "-Lvl1-2 is your timer to get a bit of a cs lead, lvl3-4 is\nplay safe, lvl5 onwards you win until midgame, but\nQiyanas just like Katarinas will get random leads,\nwhich can mess theese timers up.",
+   "cor": "#f6b26b"
+  },
+  {
+   "nome": "Ryze",
+   "fazer": "-Can't stand near minions, else you will get cooked up for dinner. Doran shield unplayable, will never have enough\ndamage to kill him without ring/ignite. \n-When his phase rush is on CD is when its a timer to allin, but otherwise insanely hard to kill, really low counterplay\nchampion \nIf you ult E him and he ults away you can't follow up on the E2. You have to hit E once he is already channeling ult to have\nthe timer to follow up. hard to do but its one way to finish him off sometimes.",
+   "observar": "-Can't stand near minions\n-Can't kill him without lich 2nd, hard even with lich.\n-Just ban if you meet a lot of them",
+   "timers": "-pre first recall is your best shot at doing anything, but\nvery unrealistic to be able to do anything \n-when phaserush is down and he is around 60%hp",
+   "cor": "#e06666"
+  },
+  {
+   "nome": "Smolder",
+   "fazer": "-Don't let him perma Q you off cd, its free stacks and you will take a lot of dmg\n-Ult Eing him can get iffy with the way his E works, many times don't even need the E dmg to kill him, so can be worth\nto just use it as a gapcloser.\n-1-2 Qs for poke after lvl6 and can allin him 0-24, just look out for JG/sup",
+   "observar": "-Don't take too much poke\n-HIS E REVEALS YOU IF ITS LOCKED ONTO YOU. BUT IT WON'T \nIF YOU ARE ALREADY IN SHROUD AND THEN HE PRESSES IT.",
+   "timers": "- literally every timer when he isn't under his tower \nand isn't 100%hp is a great timer to kill him",
+   "cor": "#6aa84f"
+  },
+  {
+   "nome": "Swain",
+   "fazer": "-Lvl1 before doing anything make sure you know if he started Q or E. If Q then need to play far away from him, keep\nyour range, else you get poked down very hard. If E then play very close to him be agressive trade and you will win the trade\nas long as you dodge the E. \n-He is killable in his ult if he has no MR and is 50-60%hp, but if he has MR/HP built then need to try to kite it out, and then\nreengage.\nhealing reduction bad to buy, play around ignite.",
+   "observar": "-You get outscaled if he builds tanky\n-His W can cancel your base, when you are basing play around it, so\nthat he never cancels you.",
+   "timers": "-His ult cd is around the same as yours. will have his \nup whenever you have it if you are trading it.\n-Anytime you dodge his E you can get great trades\nand allin at around 60%hp as long as your ignite\nis up.",
+   "cor": "#93c47d"
+  },
+  {
+   "nome": "Sylas",
+   "fazer": "-Lvl1 most sylases take E because of this you have to play boneplating to be able to agressively trade back, you should win\nthe trade even if he hits E as long as you get q auto q electro proc. \n-Lvl2 he takes W, don't let him raw W you, make him use E and W both to be able to W so that he cant dodge your Q with E\nafter Wing, then the trade will favour you\n-lvl4-5 his healing is kinda much, so there it can be bad to fight, lvl6-7 it usually feels way easier, and you just keep winning\nas long as you built up a lead lvl1-3 and didn't throw it. \nalso just play with your range in a way, you are the higher range champion in this matchup with Q passive, gotta \"kite\" him.",
+   "observar": "-Taking raw sylas E when your boneplating is not up\n-Letting him raw W you without having to E\n-using ignite before he uses his w in an allin\n-Getting poked down too much by his Qs explosion part",
+   "timers": "-Mostly need to play around your ignite timer",
+   "cor": "#6aa84f"
+  },
+  {
+   "nome": "Syndra",
+   "fazer": "-Need to find timers where she uses her E and walks up a bit too far where you can ult her, then you can kill her from 100%\n-She gets her double Q stack at around lvl7 usually, so be mindful of that, strongest upgrade of hers, its 40 stacks.\n-As long as you can get on top of her its really easy, the problem is doing that since her E getting gigabuffed on CD makes\nit so you have no real timers vs good syndras.\n-Mercs can be really nice, but not mandatory. if she is solo ap don't do it.",
+   "observar": "-Stacks she gets off of canonns/you are really important, try to deny as\nmany of them as possible. it also refunds mana, so if she is low\nmana its even more important.\n-she monster scales, so need to have a wincodtion before she hits\nthat 3-4 item spike",
+   "timers": "-Her E cd is everything",
+   "cor": "#dd7e6b"
+  },
+  {
+   "nome": "Taliyah",
+   "fazer": "-Special matchup because she is rather killable, but she is very annoying in teamfights. she is a thematic counter, TF \nis very similar to her, but TF is harder to deal with.\n-can't eat raw Qs to the face, need to play around phaserush timers\n-Her worked ground Qs that are big are massive slows and cost 1 mana, so make sure you don't get hit by them if you\nare trying to allin.\nshe is very allinable, just need to dodge the W, the hard part is getting on top of her. but you can 100to0 all the time.",
+   "observar": "-Can't let her keep poking you, need to trade back constantly\n-Her E is insanely annoying to deal with, but mainly in teamfights,\n1v1s less so.\n-Her first ult she can use in combat and get out of your allin. but most\ntaliyahs don't play around it. But this is only useable once on the first\nult.",
+   "timers": "-E and phaserush are the 2 things to play around,\notherwise allin 0-24 if you can get in range and have\nyour ult up.",
+   "cor": "#3c78d8"
+  },
+  {
+   "nome": "Talon",
+   "fazer": "-Never let him proc his passive, no matter what, even if you end up giving some prio lvl2 its better than possibly loosing\na free matchup. really avoid getting hit by 2nd part of the W.\n-Put yourself between talon and the wave, make him fight you lvl4onwards if he wants to cs.\n-When he Qs onto you you have a free E hit, E him and ult through him, so that even if he ults you can see him with your E\nreveal. only use E2 once he is 100% dead or if the E is going to run out, or if he is jumping over a wall.",
+   "observar": "-Perma ping roams, especially if your jgler is invading a lot, might\nneed to follow if he doesn't listen, but talon will always be first.\n-He is supposed to be weak because he is supposed to be behind.\nif even ofc he can fight back, don't underestimate his damage ever",
+   "timers": "-His ult is lower cd than yours always, but his ult\nis not super impactful. No real timers outside of LVL2\nthere you might need to respect a bit more.",
+   "cor": "#6aa84f"
+  },
+  {
+   "nome": "Tristana",
+   "fazer": "-Need to proc her boneplating, as most tristana mids will have that. She is very squishy but can also oneshot you\n-can't take AOE damage from her e, not the passive part nor her stacking it up on tower and exploding it.\n-If you don't get super behind first 5 levels you start being able to threaten her, as the champion auto pushes no matter what\nso it will make allinging her a bit easier. \n-try to E her as she is ulting you away, not easy to do, but its the best way to be able to follow up on her.",
+   "observar": "-Avoid getting overpoked\n-She is scaling extremely hard, so make sure you get a lead from lvl5-10\nelse you will start getting cooked if she hits 3-4 items for free.",
+   "timers": "-Level2-3 don't get allined by her, if you are too far up\nthe lane she might try to chase you down and chunk \nyou a lot and it can be hard to come back from.\n-Her ult is low cd early high late, so midgame catches\ncan be easier on her on sidelanes.",
+   "cor": "#f6b26b"
+  },
+  {
+   "nome": "Twisted Fate",
+   "fazer": "-Best thematic counter against Akali alongside Galio, he just completely shuts down everything Akali wants to do.\n-Lane is rather easy, sometimes Tfs will go 0/10 and they are still more useful than you.\n-The only thing to look out for while laning is his E stacks, he can definitely win trades if you trade into that. try to trade when\nhe is consuming his stacks.\n-Cleanse or mercs mandatory, can't playwithout it.",
+   "observar": "-His ult is just a reveal for free for fun, and his range with rapid fire\nis insanely high, but you need to play around it.\n-On lane avoid getting hit by Qs while he is Qing the wave, atleast don't\ntake free poke.\n-Always ping his potential ult plays, can ward on lane to know if he is\nlooking top or bot.",
+   "timers": "-cleanse CD and his ult CD are the ones to play \naround, if you don't play cleanse its only ult. its high\nCD but it lasts forever especially after lvl11, hard\nto avoid fighting while its on.",
+   "cor": "#3c78d8"
+  },
+  {
+   "nome": "Veigar",
+   "fazer": "-Need to try to get a freeze and slowly chunk him down and then get an allin, he is rather weak early on, especially\nprior to first item.\n-At around half HP is when you have to start being scared when he is 6, before that its no big deal\n-Having the S(make champion stop) key be bound and used is really good against him, moving in his cage gets a lot easier\nwith this, and dodging around aswell without walking into the cage.\n-Mercs can be very good into him if more cc/ap on enemy team.",
+   "observar": "-His cage\n-His item builds, some veigars like to go full AP some go very tanky,\nand this is what it depends on if you just need to dodge 1Q and nuke\nhim or if you need to slowplay, doesn't matter as much if you get hit\nbut need to stick on him.",
+   "timers": "-its all about his cage, 20s cd early on, which is very\nlong, but not longer than your W/E. just need to bait\nit before wanting to allin, and just don't panic  when \nyou are in it. you have plenty of space to dodge \naround.",
+   "cor": "#f6b26b"
+  },
+  {
+   "nome": "Vel'koz",
+   "fazer": "-Look out for Q into ult poke, many vel'kozes will ult for nothing but poke damage.\n-Will try to W the wave twice to clear it, don't get hit by it and try to trade on him in exchange.\n-he can get 100-0d easily if you can get on him with all your spells up, but that is very unrealistic. So some poke with e onto\nminion then an allin is usually easier.\n-If he has no flash and you do, anytime he is up halfway atleast on the wave you can just flash on him and kill him, but \nvery important to dodge his E. its rather fast and low cd since all of the buffs he got on it.",
+   "observar": "-Can't ever get hit by E\n-Make sure you have W or E to get out of his Q ult poke asap, if not\nyou will be cooked until you recall, or you have to allin him on his ult.",
+   "timers": "-When he is hitting the wave its time to hit him.\n-Flash timers are extremely important, both yours\nand his. Whenever you have flash and he doesn't he\nshould feel extremely scared.",
+   "cor": "#93c47d"
+  },
+  {
+   "nome": "Vex",
+   "fazer": "-Can't ever get hit by the fear, can't really E as Vex auto is really easy to buffer as you are Eing away and she will get \nthat annoying empowered auto against dashes, obviously if you dodge an eq combo of her with it its worth, but try to\nnot be Eing too much unless its an allin.\n-Cleanse or mercs is really really nice and important.\n-her lvl6 is not very strong as it is a reset ult, but you need to be careful from 40-50%hp as she can allin with ult into combo\n+ignite from off your screen. \n-Very allinable if she wastes her fear and walks up post lvl6.",
+   "observar": "-Her fearbar under her mana, getting hit by a fear spell is 10 times \nworse than any other.\n-lategame pay attention to what teammate she hits with her ult \nand make sure you are not in her W range incase she takes the ult,\nas she will always instacast that for the fear.",
+   "timers": "-Whenever her fear is down, i know it gets annoying\nbut it really is 80% of the champion. whenever you \nhave cleanse she is 100to0able if you just insta\ncleanse the fear.",
+   "cor": "#dd7e6b"
+  },
+  {
+   "nome": "Viktor",
+   "fazer": "-Try to wear him down, 1-2 quick trade can make him killable, but viktors have very different builds and approaches, of\ncourse if he is going grasp/resolve+ROA then its harder to kill him, but if he goes normal build maybe aery+resolve you can\njust proc his boneplating in one trade and then allin him lvl5-6 onwards.\n- lvl1-2-3 he is kinda strong, will poke you down, so make sure you try to not take too many free autos, especially if he plays\naery.\n-Try to not get stuck in his W, just e out r1 out etc if possible. you can stand in it for a split second before you get cced tho.",
+   "observar": "-His Q is more important to look out than E, as E is undodgeable and \nis way more about missing, but his Q auto combos are more play \naroundable, and his shield especially from the Q",
+   "timers": "-No specific timer, only flash is important.",
+   "cor": "#93c47d"
+  },
+  {
+   "nome": "Vlad",
+   "fazer": "-Q auto quick trade him a lot, longer trades he will win unless you can allin him.\n-Ignite is the only healing reduction you need. if you look at vlads ways of healing he heals most out of combat. that means\ngoing oblivion orb is useless, and you only need it for allin situations through ignite.\n-When going for the short trades he will try to W a Q from you and then go under you+your wave and get massive healing\nif you don't waste your Q into the pool its rather easy to trade back/disengage with passive, but if he gets that off its \nvery winning for him.\n-Need to get a lead by lvl7 max, otherwise you are gettting outscaled a lot, and it will get harder and harder to find allin \nwindows as he gets more W cdr. You win into him with ignite mostly if you are even on side, but in teamfights he does a lot\nmore than you if even.",
+   "observar": "-He gets bonus MS while having his red empowered Q, make sure \nyou keep that in mind and don't give that bonus healing and dmg \nfor free.\n-his W heals and slows a lot, very important to not stand in it and \ndon't let him use it agressively by mispositioning.",
+   "timers": "-Ignite ignite ignite\n-Vlad W cd is rather high early. if you have ignite up\nhe is very allinable everytime W is on cd. \n-His W cd goes down a lot in midgame, it will be \nsurprisingly low cd.",
+   "cor": "#93c47d"
+  },
+  {
+   "nome": "Xerath",
+   "fazer": "-Put yourself between the wave and Xerath, drop your W, if he self slows by trying to q the minions you can get a quick\nQ E on him, if he misses his E by panicking you might even be able to reactivate the E2 to chunk him hard. if he walks up\nto W then once again he is walking up a bit too far so you can do the same thing. he is extremely diveable even in 1v1s \nespecially on cannon waves as its harder to clear.\n-The closer you are to him the less his stun will last, so taking it to face close up is not bad. getting hit by a long range one is\nreally bad tho.",
+   "observar": "-Getting too poked down to the point its scary to walk up\n-His roams with ults, its important if he tries to walk up or down river \nfor an ult threaten killing him, and with that you cancel his ult aswell\nwhich your sidelaners will be thankful for!",
+   "timers": "-flash timers, both yours and his",
+   "cor": "#6aa84f"
+  },
+  {
+   "nome": "Yasuo",
+   "fazer": "-He can run you down lvl1-2-3  with lethal tempo, or heavily outtrade you with grasp/fleet. You win trades by not going\nsuper deep, keeping your range, dodging Qs.\n-Try to bait out his wall by just walking up without Qing. many yasuos will use it, then drop shroud, dodge as many Qs as \npossible, its more important to be patient if he has no Q stacks than it is to get hit by the Qs and in exchange deal ur dmg\na bit faster.\n-One matchup where i think scorch is good as it takes off his boneplating after you take off his passive shield with a Q.\n-fighting without minions near is much easier.\nthis is more of a generic skillmatchup than it is yasuo specific, moving well is an extremely big thing as Akali in this matchup.",
+   "observar": "-Missing Qs by not understanding where he is going to dash. if you \nwatch/play/play against Yasuo a lot you will have a fairly predictable \npattern in your head for where he wants to dash.Otherwise just try to\nQ him whenever he is in dash animation.",
+   "timers": "-Whenever his windwall is down its a lot easier and \nsimpler, whenever there is nothing for him to dash\non he is a free kill.",
+   "cor": "#93c47d"
+  },
+  {
+   "nome": "Yone",
+   "fazer": "-Constantly Q auto trade him, don't use E for trades unless its an allin, otherwise its a more of a disengage tool when\nhe tries to trade back with E-> Q+w or 3rd Q. so unless allin use it as that.\n-don't longtade, he will run you down, either short trade or allin.\n-Don't take free W poke and try to not use your combo into his W shield. if you can just wait around in shroud while \nshield is on him. he gets a way bigger shield if he hits champs than if he only hits minions.\n-Similar to yasuo except easier because no windwall.",
+   "observar": "-His tradebacks are the most important to learn to disengage from. \nIf you learn when and how to it will be a lot easier.\n-Stacked lethal tempo",
+   "timers": "-no specific timer, you generally win till 3-4 items\nand even then you have a decent outplay potential",
+   "cor": "#6aa84f"
+  },
+  {
+   "nome": "Zed",
+   "fazer": "-He is one of thoose matchups, just like Yasuo and Ambessa, where he might be a bit unpredictable so he is rather \nhard to play against the lower you go, this \"Akali favoured\" is mostly diamond+ label.\n-Important to not get hit by raw Qs, need to only get hit by them if you are you behind minions, but preferably not \nthere either. His W cd is super long early and need to abuse it, but everytime he hits you with an E its greatly lowered.\n-Eing him after he ults works if he doesn't already have a shadow down, else he gets to insta w away and you will not\nbe able to trade back at all. \n-He is heavily outscaling in a teamfight setting, but you always have a chace to 1v1 on side, Zed will mostly be able\nto run away tho.",
+   "observar": "-His W shadow being down already before ulting you, then you can't\nE him as he appears out of his ult behind you\n-He might try this Zed99 trick where when he is low hp, goes into fog\nof war under tower, comes back out, he will be missing some energy\nbecause he put a shadow down under his own turret, gets hit by your\nE on purpose and brings you into tower if you try to E2 him.\nlook out for his energy bar.",
+   "timers": "-He always has a better allin window as his ult is \nalways lower CD, so make sure if you use it at the same \ntime you don't overtrade in the 10-20second window\nas your ult is barely not up yet.",
+   "cor": "#93c47d"
+  },
+  {
+   "nome": "Ziggs",
+   "fazer": "-Ziggs is insanely hard to get in range of. similar to xerath but with better disengage/less stationary. His Qs are rather\neasy to dodge, so keep yourself atleast even and then you will be able to find e minion q champion e back trades, \nand if you do that 2-3 times at lvl7 you will be able to even dive him, but once again canon wave mostly needed else he\nclears the wave way too fast.\n-Later on sidelaning becomes a big problem for him, so don't stress super hard about getting a lead. Going even and then\nplaying fights/skirmishes well against him is rather common.",
+   "observar": "-Overroaming/giving him free time with your turrets. fastest tower taking\nchampion in the game, very similar to diana can't let them hit tower.",
+   "timers": "-Flash timers both of yours are important, just like \nmany of theese mages you can flash ult them if\nthey are overxtanding, and get a free allin from full hp.",
+   "cor": "#93c47d"
+  },
+  {
+   "nome": "Zilean",
+   "fazer": "-Very hard to kill him in a 1v1, not an uber thematic counter, but gets very hard to play against. His bombs explode when\nthe target gets killed, so make sure you keep this in mind if he Qs a minion be it his own, or yours.\n-You will go up 20-40cs etc, but don't throw it in 1v1, instead try to go for skirmishes\n-Mercs is fake vs him, tenacity shard is not bad, but mercs is not good unless its good against enemy team as a whole.",
+   "observar": "-His ult CD is basically non existant. literally 0, so trading ults is very\n bad\n-playing 1v1s is mostly pointless, unless the zilean is really bad.\n-It gets much worse and much more annoying, so need to try to\nbuild a wincondition through drakes/getting a huge lead elsewhere.",
+   "timers": "-no timers",
+   "cor": "#3c78d8"
+  },
+  {
+   "nome": "Zoe",
+   "fazer": "-Very hard to live against in earlygame, need to dodge every single E.\n-Cleanse is very good in this matchup, might be mandatory the more i play it. but in lower ranks especially mercs+tenacity\nshard should be completely fine. but one of them is needed 100%.\n-When she is ulting she is stationary so try to hit an E on her there and then go for allins\n-Slow trades, need to trade back consistently else you get poked out, but can't overtrade else you end up getting oneshot.",
+   "observar": "-Es over walls once she pushed the wave  she could be fishing from\neither side\n-whatever she gets from bubble minions\n-when you use a summ she is very likely to also pick it up and use it.",
+   "timers": "-Earlygame there aren't really timers, just whenever\nyou can poke her down a bit and you are not super\nlow to get oneshot by her is time to hard trade on her.",
+   "cor": "#dd7e6b"
+  }
+ ],
+ "top": [
+  {
+   "nome": "Aatrox",
+   "fazer": "-Important to never get hit by sweetspots, usually good trading consists of dodging first Q, Q2 he Es you E it out and you\ndon't take E2 because he has Q3, this is a very common pattern, you can never E2 when he has Q3 up, never worth it,\nThe only way is dodging it with R1, but if he catches you mid R1 you are going to hardloose trade and loose ur ult.\n-He is constantly outscaling you, so best to get a lead from lvl5-9, at 2-3 items nowdays he feels extremely unkillable.\n-The line is extremely thin between killing him and him surviving with a lot of HP, one two Qs being dodged matters a lot.\nallin from 60-70%hp extremely possible especially if you have ignite up.",
+   "observar": "-his sweetspots, much rather get hit by the inside of the spell if you\nare bound to get hit by some part of it, so learning when its good to\nwalk into the spell and when its better to E out etc is also a big skill\nto learn.\n-His W reveals you, but extremely easy to get out of it.",
+   "timers": "-his ult is lower cd than yours.\n-his Q cd is extremely important\n-Ignite is the most important to play around, especially\nthe later the game goes, since you do need healing\nreduction to kill him ALMOST always.",
+   "cor": "#dd7e6b"
+  },
+  {
+   "nome": "Ambessa",
+   "fazer": "-Will just inherently always be really annoying to 1v1 this champion, even if its a jungler as it has an insane amount \nof non telegraphed dashes and especially the lower rank you are the more annoyed you will get by this champ, you \nget better at reading it if you are really good but impossible to always do it, and Akali is not great vs anything with a lot of\nmobility, as loosing a single Q is a massive DPS loss, let alone if she dodges multiple or E on top of it.\n-her W is the most important spell to play around, but also her CDs overall in earlygame are rather high, so that is where\nwe need to capitalize and get some kind of lead, usually before first item completion. her lvl2-3 is kinda strong, lvl4 onwards\nyou should be winning.",
+   "observar": "-her earlygame CDs being high\n-Her ult is a reveal but rather hard to hit on a champion like Akali, also\nyou can hide in front of a champion because it only lands on the last \nperson in the line.\n-can't be trading into her W, make sure you max hit 1 Q into it, never\nproc your electro into it.",
+   "timers": "-no real timers, her ult cd is same as yours most\nof the game, just need a lead before first item.\n-the later the game is the more you need to play around\nhaving healing reduction vs her because of her ult\npassive. earlygame its close to not needed at all, late\ngame becomes unkillable without it.",
+   "cor": "#ffd966"
+  },
+  {
+   "nome": "Camille",
+   "fazer": "-very important to not give her free Ws on the outer edge, its a lot of healing and a shitton of damage.\n-Her passive shield is massive, can't trade into it, need to get them to proc in and then stall.\n-her E is very telegraphed, need to either E her if you can as she is flying at you ,or atleast W instantly so she doesn't get to\nauto you afterwards for free while you are stunned. She can keep herself on the wall for quiet a while and she might\ntry to bait you to use spells with only using the first part.\n-She scales extremely well but 1v1 is kind of always hard for her, Akali is insanely good into her in 1v1 situations if ure \nnot behind.\n-Don't give her alone time with towers, she demolishes them easily and free plates is one way for her to get back easily.",
+   "observar": "-dealing with her E one way or another\n-her ult is rather useless as long as you have your W, insane camilles\nmight try to exploit this when you don't, but i only ever met drututt \nwho realized how great of a fight window that is even if the camille \nis behind.\n-her passive shield is massive.\n-towers/tempo is key to keep her out of game once you have a lead.",
+   "timers": "-her passive shield by far the most important timer\nto play around\n-her ult is rather high cd, 140s early on, so there will be\nmismatch windows of 10-15 seconds.",
+   "cor": "#93c47d"
+  },
+  {
+   "nome": "Cho'gath",
+   "fazer": "-His Q is extremely important to always dodge\n-If he goes hail of blades he is very killable but takes ur whole hp bar if you get hit by Q. If he plays Dshield grasp i think \nthe matchups is pretty bad actually, but almost no cho player does that for some reason? i think he is rather unkillable then.\n-his ult is very low cd but he will use it to stack minions. pay attention as he needs to use it 6 times on minions, allining \nbecomes way less stressful if you play around it.",
+   "observar": "-infinite hp stacking, so with time he always outscales, but \nits not a great disruptor tank against Akali lategame as there is no\nhard cc on him, you just won't be able to 1v1 him.\n-His E through minions, it deals massive dmg and makes it  easier for\nhim to hit his Q with the slow.",
+   "timers": "-his ult cd, he uses it on minions but it is insanely low\ncd.",
+   "cor": "#93c47d"
+  },
+  {
+   "nome": "Darius",
+   "fazer": "-Its a bit tricky, i beleve at the highest of level of play this is a rather free scaling matchup for Darius that he doesn't mind,\nbut outside of raidergo i think everyone i met felt beatable,\n-lvl1 very important to get exp but not give them a good trade, just like in many toplane matchups see if they try to zone\nyou from first 3 start W if needed and just stand in shroud for thoose and then play to catch more xp. if you manage to\nsurvive this part on a decent HP lvl2-3-4 the lanegets a lot better \n-extremely important to dodge his outer Qs and not get Ed when he can combo it with his Q,, and need to build a lead \nas around lvl11-12-13 he starts outscaling you, and it won't ever get a lot better. so need to have a bit of a lead by then,",
+   "observar": "-lvl1 is extremely important, you can completely loose lane here.\n-lvl6 onwards getting hooked for free will mean you get traded down\nso hard that 1 more and you are dead to his allin.\n-his healing from outer Q is insane\n-he doesn't get passive stacks from the inner part of Q",
+   "timers": "-His E cd is the main concern, early on 25s which\nis a big window to play in.\n-whenever he wastes his Q you have a few seconds\nto quick trade into him, still important to not get ever Ed\n-Ignite is mostly necesarry for the allin, although \nnot always always.",
+   "cor": "#ffd966"
+  },
+  {
+   "nome": "Dr. Mundo",
+   "fazer": "-You are rather hard winning earlygame, but its in special because at 2 items+ a nullmagic he becomes completely\nunkillable for you in a 1v1 setting. This means you need to really hard accelerate the game.\n-leaving him with towers is a bad idea, his best way to get to that 2 items is through thoose plates. Have good tempo\n-His W is anti burst, so don't burst into it, especially if u don't  have healing reduction.\n-His healing is out of combat mostly(warmogs) so ignite is enough to sustain you until then, and oblivion won't help after.\n-Grubs are an extremely important objective against him, try to do your best to be as strong on grubs \nas possible through good tempo/having your stuff up. Obviously if team decides against it u can't do much alone.",
+   "observar": "-Bursting into his W\n-Healing reduction is bait, lategame someone else should have it\nearly game its going to be ignite\n-Just don't get hit by all his cleavers",
+   "timers": "-Only ignite timer matters, post 6 can't really kill\nhim without it.",
+   "cor": "#3c78d8"
+  },
+  {
+   "nome": "Fiora",
+   "fazer": "-Lvl1 PTA fiora can really screw you over. important to acknowledge how strong she is based on her items/runes/summs\nand play around whatever conclusion you came to, ignite dblade pta=be scared play for EXP.\n-Boneplating always. She will always use multiple instances of damage to damage you, she can't proc it for free\nits insanely good vs her passive.\n-Her passive has a \"down-left\" or \"right-up\" mode, and if you go out of her radius, you are guaranteed to get the opposite \nside spawn on passive than what she had before. This can be very useful, but don't loose minions over trying to reset\nthe vital on yourself.\n-Hardwinning 1v1 from lvl4 to lvl13ish, after that she starts statchecking a bit, but you can kind of win against her till like 4 \nitems, after that she is just a lategame monster scaled in.",
+   "observar": "-Ignite is rather important to play around, you can never get it parried.\n-Really need to bait her parry, and in best case also not get hit by the \nprojectile part of it, because the attack speed slow will fuck up\nyour combo flow.\n-standing near walls to block vitals can help especially vs her ult.",
+   "timers": "-ignite cd\n-her lvl1 strength",
+   "cor": "#93c47d"
+  },
+  {
+   "nome": "Gangplank",
+   "fazer": "-Extremely similar to Fiora, can kill you/poke you out/cheese you earlygame very heavily despite being a lategame champ.\n-Make sure you know if he has E or Q first, and don't get bush cheese barreled if he has E. there is an indicator\nunder his healthbar showing how many barrels he has, if he hasn't yet learned the spell it will be automatically at 0.\n-lvl4 onwards is when you can start taking longer trades, also its rather easy to takedown barrels with passive, so you can\ntry for that.\n-pay attention to him ulting somewhere else, its a huge CD",
+   "observar": "-Barrels are just basically everything, people call it the barrel minigame\nwhere you just win if you proc enough barrels.\n-With that still don't get Qd to death for free and also don't take passive\nproc autoattacks from him, that hurts\n-his W healing is crazy, calculate with it.",
+   "timers": "-no timers, just barrels.",
+   "cor": "#93c47d"
+  },
+  {
+   "nome": "Garen",
+   "fazer": "-You hardwin against him  for most of earlygame, but you have to be good at using your range advantage for that \nto be true.\n-His w is an insane amount of damage reduction, but it lasts long. if he wastes it then make sure you punish him\nfor that.\n-Obviously don't get comboed forfun, don't tank his full E damage for no reason,\n-His passive heals a lot but it goes on cd when he gets damaged like most spellshields like malz/malp/galio,\nmake sure you try to just keep not letting him have it up.",
+   "observar": "-His lategame is insanely strong, need to build an advantage\nand end  the game  in time/have winconditions ready.\n-His W is just a lot of his tankiness.",
+   "timers": "-No timers",
+   "cor": "#93c47d"
+  },
+  {
+   "nome": "Gnar",
+   "fazer": "-He is very squishy but can be a bit of a statchecker when he is in mega.\n-His ragebar is important to keep an eye on, you can trade into him while he is mega but extremely important to dodge\nevery spell and don't get stunned into the wall because you will be oneshot.\n-His ragebar fills very fast.\n-He scales extremely well, so if you let him get to 1.5-2-3 items it gets progressively harder to kill him, but while mini\nhe will be rather oneshottable almost always.\n-he has a cooldown after transforming back to mini when he can't gain rage. thats when he is most voulnerable.",
+   "observar": "-rage meter, mini gnar is what you are supposed to really be fighting\n-in mega keep away from thoose walls.",
+   "timers": "-ragetimer is the only timer",
+   "cor": "#93c47d"
+  },
+  {
+   "nome": "Gragas",
+   "fazer": "-His Q poke is extremely important to not get hit by forfun consistently, else you will be poked out even if its a rather\neasy matchup.\n-His E, getting hit by it is very bad, but if you bait it and he misses its a very easy tradeback timer. longtrade him just don't\nget slammed under tower and get perma CCed.\n-His W gives damage reduction, its not super bad but try to not trade into it too hard if you can manage to play around it.\n-Mercs/tenacity very nice into him",
+   "observar": "-Getting heavily poked for no reason\n-Getting ult Ed or E ulted under tower can loose you the whole game.\nits a favoured matchup but that would be a huge throw.",
+   "timers": "-His ult is wayy lower Cd than yours, this is the main\nthing to keep in mind, he will have it up 30seconds \nup before yours and you will be surprised.",
+   "cor": "#6aa84f"
+  },
+  {
+   "nome": "Gwen",
+   "fazer": "-Her lvl1, look out for it as She is very strong, she does just auto you down, keep your distance until you know\nwhat spell she started with/see how she is playing the lane.\n-Her W gives a massive amount of resistances, so even ifyou are able to hit her in it, if you need the damage then try to \nkite her while she is in it.\n-She outscales in teamfight settings but you mostly win into her all through the game in a 1v1.\n-Healing reduction(ignite) becomes rather necesarry the later the game goes\n-",
+   "observar": "-its all about her W and not getting hit by everything, Gwen spells\nare rather hard to hit but Akali dashes are rather telegraphed,\nbut dodging just 1 or 2 makes sure you win",
+   "timers": "-her W has a massive Cd, play around it.",
+   "cor": "#6aa84f"
+  },
+  {
+   "nome": "Illaoi",
+   "fazer": "-I won't lie i have played vs this champion less than 5 times in the past 3-4 years. So take it with a grain of salt.\n-I think since Akali has rather telegraphed dashes on both E and R you can kind of always die to her if she plays it well\n-The whole champion is her E, and it does also reveal if you get hit by it, so just run out of the circle if you do, unless\nyou are 100%sure you can allin her.\n-Her R makes tentacles slam a lot faster, so be mindful of that.\n-Ignite is mostly needed vs her, allining without that is usually sketchy.",
+   "observar": "-E E E and E, thats like 90%of the champion as far as i can understand\nand its rather hard to play around, but i think you can't really E or ult her\nuntil you bait her E out.",
+   "timers": "-Her E cd is what you are mostly supposed to care about\nexcept that your own ignite timer is important.",
+   "cor": "#e06666"
+  },
+  {
+   "nome": "Jax",
+   "fazer": "-This used to be an insanely easy matchup IMO it changed but maybe i don't play it enough/am mental blocked vs it, but \ni think if the jax has the right setup/approach its way more playable.\n-Boneplating extremely important, scout what he has as first spell, if he has Q you can start E to E him as eversince Akali\nQ backwards hitbox removal Qing him when he Qs on top of you is sketchy, otherwise just Q start.\n-You need to play on your W always, best if he has no passive stacks, disengage from his Q E with E.\n-Its a rather 60/40 whoever starts rolling rolls the other matchup nowdays if you ask me, but could be biased.",
+   "observar": "-His Q is extremely low cd, he might try to jump on your face off cd\na lot of good jaxes do this and imo its the best way for the jax to \napproach the 1v1.\n-His passive gives a shitton of AS\n-His ult gives a lot of resistances",
+   "timers": "-ignite cd as he is just generally very tanky, not for \nhealing reduction, just hard to finish him off\n-your own W and E cds as they are super high compared\nto his Q and E",
+   "cor": "#93c47d"
+  },
+  {
+   "nome": "Kennen",
+   "fazer": "-This champion is very annoying to face as Akali, a great Kennen almost always wins imo, but lot of mistakes to be made.\n-Constantly dodge/hide from Qs, keep attention on his autoattack passive stack, if he gets 1 on you then he might try to W\nand E run into your face, you need to E that, can't get stunned or you will loose half your hp bar.\n-His ult gives a lot of resistances, but its hard to play around that really, just a headsup information.\n-Mercs/tenacity shard is extremely good and should always be taken vs him. you need to slowly wear him down early,\nbut later on with mercs you can allin him from full hp\n-When he wastes his E its your timer to either heavily outtrade him or All in him if he is low enough.",
+   "observar": "-His passive stacks, both on you and on his autos are basically\nthe key to the matchup from both sides.\n-His ult/tp flanks, he might be 0/4 will still oneshot 2 people on your team\nrandomly if you don't scout for his TP well. important he doesn't\nget back into the game through this.",
+   "timers": "-No real timers, his ult is a bit lower cd than yours early\nbut it evens out around 11. Keep that in mind.",
+   "cor": "#dd7e6b"
+  },
+  {
+   "nome": "Kled",
+   "fazer": "-This champ has a reveal on his Q a reveal on his E, has infinite hp from lvl1, and gets bonus resistances and move\nspeed when he is dismounted, i was an advocate that this champ is somewhat playable for Akali, but nowdays feels like\nits completely unplayable. When you dismount him he almost always gets his Skarl back anyways, impossible to burst\nas he gets it back so fast/is so tanky still. \nNeed to dodge every spell, never get hit by his W 4th auto and maybe you can win if you allin him extremely smartly,\nbut otherwise just try to go even and hope your team helps you. if you get ahead you can stomp him, but getting there\nfeels near impossible.",
+   "observar": "-his Q and E being reveals\n-His ult roams you need to ping 0-24\n-his towertaking rivals mundo sion etc, so you can't ever let this \nguy alone with a turret for a single second.",
+   "timers": "-The best and only real timer is when you can make him\nbe barely on Skarl then have everything up and try\nto allin him there, and just pray he doesn't get the bike \nback.",
+   "cor": "#e06666"
+  },
+  {
+   "nome": "K'sante",
+   "fazer": "-Its not in Superhard, but might aswell be in there, he is impossible to kill if its a good player, and if its not you get to kill him\nmaybe twice, then he gets to rookern and he will just have perma priority and will kill you in a 1v1 despite being 2 levels\nand 1k gold behind.\n-The one positive is that he is rather clunky so you can play around him mostly in teamfights unless he flash ults\nyou out of there.\n-If he starts E make sure you dont give him a free grasp proc, and don't hardtrade into his W.",
+   "observar": "-His E is his one way to jump over walls. he actually can't by himself,\nbut if he has an ally over the wall he can actually jump over them\nits a weird mechanic.\n-he gets a lot less tanky when he is ulting but in exchange becomes\na lot more deadly.",
+   "timers": "-Ignite is needed to kill him because of tankiness not\nbecause of healing reduction purposes\n-his ult is lower cd than yours most of the game",
+   "cor": "#dd7e6b"
+  },
+  {
+   "nome": "Malphite",
+   "fazer": "-This champ is just very easy, just don't facetank his Qs off CD and don't stand still and auto trade him and you \nare winning.\n-He can become rather tanky midgame if you don't build enough of a lead, so make sure you aren't getting outscaled.\n-Try to Keep off his passive shield like with other champions we talked about, its very important.\n-His ult cd is same as yours, but yours is a little shorter the longer the game goes.",
+   "observar": "-Just getting ulted in AoE/under turret? i feel like there is really not \nmuch to look out for here.",
+   "timers": "-no timers(i guess his passive shield)",
+   "cor": "#6aa84f"
+  },
+  {
+   "nome": "Mordekaiser",
+   "fazer": "-This champion is rather easy to kill early on but gets exponencially harder as the game goes on. at some point\nhe will become so tanky you won't be able to deal with him if he builds against you.\n-Obviously dodge the Qs and Es 0-24, getting hit by Q is less bad but getting hit by E is a death sentence. \n-Need to build a lead and then capitalize off of it, constantly snowball, and start playing teamfights over 1v1s.\n-don't get ulted near his turret, its joever if that happens because you can't even W as the tower will most likely give vision\noff of you.",
+   "observar": "-Riot recently changed morde R where he doesn't bring shroud into\ndeathrealm, this means you can't really W for trade post 6 unless he \nhas no ult or you are confident you can win the allin when he ults you.",
+   "timers": "-His ult is always longer cd than yours, this is something \nto capitalize on.\n-Ignite is mostly needed to kill him, very tanky boy\nespecially when he steals your stats in his realm",
+   "cor": "#ffd966"
+  },
+  {
+   "nome": "Nasus",
+   "fazer": "I put thisone in special matchups, because  im 99%sure its heavily Nasus favoured, but even Akali has some windows\nyou get so outscaled in a 1v1 setting its not funny.\n-He can go both fleet or Aery E max and you are kinda done either way, you can try buying healing reduction, i don't think\nit does much tho, so not recommended.\n-He is just gonna take all your towers, and 2 shot you with Qs while you don't deal any damage to him after triforce.",
+   "observar": "-When his ult is down its your only real chance of killing him,\nbut its lower CD than yours always, so unless someone else\nhelps you out, its really painful.",
+   "timers": "-Ignite always needed if you want to kill\n-His ult is always up if you ult traded. missmatching\nthe ult timers is one way to build a lead.",
+   "cor": "#3c78d8"
+  },
+  {
+   "nome": "Nidalee",
+   "fazer": "-Completely unplayable into ad nida top with graps, just don't bother, thank god people don't play this",
+   "observar": "-",
+   "timers": "-",
+   "cor": "#cc0000"
+  },
+  {
+   "nome": "Olaf",
+   "fazer": "-This champion is the rare matchup where buying healreduction is good.\n-He gets increased lifesteal/as the lower HP he is\n-need to build a lead as at 3-4 items he can 1v1 you/start winning sides.\n-Need to play around dodging his axes and then keeping your distance with Q autos, can't ever facetank him\n-have W up when you are allining else he might outlifesteal your allin.",
+   "observar": "-If he throws his Q misses you can just not let him walk up and pick \nit up.\n-His ult is completely useless against you\n-he gets passive resistances from his ult past 6 so he is a bit tankier.",
+   "timers": "-Ignite timer if you don't go healing reduction is \nrather important, otherwise not much.",
+   "cor": "#6aa84f"
+  },
+  {
+   "nome": "Ornn",
+   "fazer": "-This is a weirdone, might be moreso skill, he is rather easy to kite but he scales insanely well and always be useful.\n-Just be careful, can't get hit by his auto when you have the brittle on you(empowered auto) and be careful around\nwalls overall. his Q can also proc his empowered auto thing if you stand on top of it \n-need to get a lead very early on, and keep that snowballing.",
+   "observar": "-Champ is heavily outscaling.\n-His empowered auto is 90%of his dmg\n-Walls",
+   "timers": "-no timers",
+   "cor": "#ffd966"
+  },
+  {
+   "nome": "Pantheon",
+   "fazer": "-This is a weird matchup, Getting hit by too many Qs early on are very punishing, especially if his passive \nstacks are up. If he has passive and he has PTA don't let him use it on you, its a huge trade window\n-If you survive earlygame you outscale him at lvl5-7 if you are even.\n-Don't trade into his E\n-Allins are great if you have space to work with and you are even HP\n-He  doesn't get a real ult on 6, so thats a huge spike. but he gets great tempo. its one way to throw, is if you overstay\nand he ults you and you die or even just have your recall be canceled.",
+   "observar": "-you heavily outscale him, he gets weaker every second that passes\nin the game.\n-Just very strong spammable spells early, so be careful\n-His Q is on a big cd if he uses the long range version, if he ever\nuses that its way easier to walk up for a bit.",
+   "timers": "-only real timer is if he wastes W and playing around his\npassive stacks.",
+   "cor": "#93c47d"
+  },
+  {
+   "nome": "Poppy",
+   "fazer": "-This matchup is rather skilled in a 1v1 setting you can kill her a lot she is squishy, but for the sake of being poppy\nshe gets to be in special thematic counter tier, as teamfights are completely unplayable later on.\n-Can't ever get slammed into wall, else trade is always loosing\n-Need to dodge her Qs on the ground, massive damage\n-Her passive needs to be played around, She can't save it, she will use it, try to not trade when its up.\n-Try to bait her W\n-Try to E her If she tries to ult you away.",
+   "observar": "-Walls\n-Her W is big CD but its rather hard to do anything about it,\nits all up to her if she wastes it\n",
+   "timers": "-Her ult is high cd all through the game reliatively\n-Her passive is high cd early on\n-Her W cd is rather high aswell and she maxes it last.",
+   "cor": "#3c78d8"
+  },
+  {
+   "nome": "Quinn",
+   "fazer": "-Insanely squishy, but she can kinda kill you lvl1-4, important to not give her a lead this early.\n-Lvl6 onwards make sure you always ping potential roams, its the real thing that makes this matchup not super easy,\nbecause most quinns just will win everywhere else not on their own lane.\n-Eing his E is very good, but can't let him E your E. so if you get a raw E on her, you can't really E2 in unless you are already\nvery fed, because she will just cancel it and trade you down heavily.\n",
+   "observar": "-Permaping roams, its not  gonna always happen that your team \nwill listen to it, but its the best you can do. ",
+   "timers": "-Her E is somewhat high CD and she maxes it last,\nits really the only thing to play around.",
+   "cor": "#93c47d"
+  },
+  {
+   "nome": "Renekton",
+   "fazer": "-He can be killed, but its insanely hard to win against a great renekton, but a badone/if they mess up if you get a lead you\ncan keep snowballing it and be fine\n-His ult is gamebreakingly OP, gives so much HP and randomly deals MAGIC damage not even physical, and gives rage\nfor free, if you can't oneshot him right after he ults then he will be op as long as its on.\n-Play around his ragebar, kite him around, if he Es in drop W and don't come out if he activates his W until he uses up\nhis empowered auto.\n-Don1t let him get free Raged up Qs on the wave and don't let him hit both you and the full wave.",
+   "observar": "-His ragebar and his ult cd are both insanely important,\n-Your main advantage is your range, but you need to play very well\nto be able to capitalize on that\n-His ult is hella broken.",
+   "timers": "-His ult is lower cd than yours. idk how this is possible,\nbut riot is smoking some good shit having Rene ult\nbe so broken and be so low CD.\n-Ignite is rather important to be up, he has a lot of healing\nbut it doesn't cut the healing from his R, it only works on \nthe Q.(works same way with lulu/nasus R that doesn't\ntechnically heal.)",
+   "cor": "#dd7e6b"
+  },
+  {
+   "nome": "Riven",
+   "fazer": "-At the top of the ladder i genuienly think this is unplayable, playing into V1per Riven made me feel like its the worst\nmatchup in the game. BUT there is a lot of room for mistake on rivens side, i think especially around diamond-master\nits moreso a skill matchup maybe even leaning to Akali side, and if you go lower it once again goes into Riven statchecks \nAkali.\n-This matchup is all about spacing, not comboing into her E knowing her cooldowns and oneshotting her before\nshe oneshots you, Need to be great at tracking Q and E cd. can't let her get a good proxy position.",
+   "observar": "-heavily outscales\n-can't let her get a good proxy\n-she has insanely good tempo, can't let her proxy, else she gets to\nskip laning phase, and she is insanely good at scaling.\n-you can somewhat 1v1 her until atleast 2 items/until MAW but \nif you ever die in a 1v1 in midgame she gets an insane amount of \nresources and will run away with her lead.",
+   "timers": "-Q and E are both insanely important timers, also at 6\nher oneshot pontential is insane, but so is yours,\nit really is just a cinema 1v1 situation there.\n-Her ult CD is a lot lower than yours, don't give her \ntimers to kill you when yours isn't up.\n-ignite is more and more needed the later the game goes.",
+   "cor": "#dd7e6b"
+  },
+  {
+   "nome": "Rumble",
+   "fazer": "-this is a tricky one, its extremely volatile, but i do think the Rumble has to play close to perfect for it to be winning for him.\nbut if he does get a slight lead he can run away with it for sure, but as long as he builds full dmg you almost always have\na way to kill him.\n-slowly wear him down, his W shield is important to try to bait out/use the timer when its not up, if you are rather high HP\nyou can try to make him overheat if he is close to it, and just allin him\n-don't stand in his ult, if he hits an E on you its best to not trade as it shreds a great amount of your MR, so it makes \nmost trades winning for him.\n- he is great at poking, less so at allins. keep this in mind always.",
+   "observar": "-its a weirder matchup as it mostly plays around his heat management\n-his w shield is low CD but you can still play around it in short trades\n-his e shredding MR means you shouldn always try to dodge it, or else\nyou are going to be extremely paper\n-he might try to ult a wave if he is low HP. if he does nothing to do except\nclear your wave and recall asap aswell.",
+   "timers": "-only timer is W, otherwise you just beat him\nall through the game in most settings ",
+   "cor": "#93c47d"
+  },
+  {
+   "nome": "Sett",
+   "fazer": "-you do win vs Sett, but you need to not loose the game pre lvl4. he just beats you to pulp lvl1-2, be careful, \nboth with Q or E start he just wins allins and kills you. especially if he has PTA+ignite. if he doesn't have thoose 2 then\nits a lot more bearable, but just be willing to give up early priority and accept that you start winning very hard later.\n-most important thing in this matchup is not getting stunned, he only stuns if there is another unit he hits with his E on the \nother side of it, if you only get pulled just make sure you get out of his W with one of your dashes, atleast the true\nDMG part, and then you beat him. ",
+   "observar": "-lvl1-2-3 is insanely important. if you die you might just get rolled\nso i can say its an Akali favoured matchup but if u don't play it right early\nyou will not have a fun time.\n-his ult is actually a reveal, so even if you have shroud if he grabs you\nenemy team will be able to hit you while you are getting slammed down.",
+   "timers": "-no timers, ignite can be good to have as he has the \nhighest HP regen in the game, but at the same time you\ncan kill him without it. otherwise just lvl4 onwards\ntill like lvl16 you perma beat him if you are even and \nkite him well enough.",
+   "cor": "#93c47d"
+  },
+  {
+   "nome": "Shen",
+   "fazer": "-His lvl1-2-3 is massive damage. Need to look out for it, can't be having him get in free damage.\n-He slows you AND deals increased damage on his autos if his sword travels through you. it is a very important minigame\npart of the lane that you don't get hit by that.\n-Can't get taunted , always try to react with E, and getting taunted under tower is a death sentence, its lane loosing.\n-He doesn't get a real combat ult at 6, so thats a big spike difference\n-around lvl4 is when you start really winning the lane, and you just win mostly through as you are stronger since he\nhas no combat ult.\n-boneplating is insanely good in this matchup, basically a must pick",
+   "observar": "-His E is a must play around, the less you dodge it the more cooked\nyou get\n-His q sword callback makes it a lot more deadly\n-track his ult cd for your team\n-passive is a lot of shielding, if he \"affects\" a champion with\nan ability the cd is reduced. so be mindful and try to not combo\ninto it.",
+   "timers": "-timers is just survival lvl1-3, stomp him afterwards\n(easier said than done)",
+   "cor": "#93c47d"
+  },
+  {
+   "nome": "Singed",
+   "fazer": "-Special matchup because on a technical level you win 1v1 against him insanely hard, but he insanely outscales you\nits not even funny how broken this champions ult is, and on top of that has insane amount of ms which Akali \ndespises.\n-Don't let him proxy, try to get your team to stop it, try to stop it yourself, depends on who is recalling, but if you are \ngoing even vs a singed you are hard loosing.Need to be able to lane into him and kill him",
+   "observar": "-He is never your problem later on, it is what it is hope your \nteam deals with his stupid shenanigans.\n-At lvl11 and even moreso at lvl16, he just becomes a full blown tank\ndespite building 0 tank items, and just generally insanely annoying\nhas one of the biggest stat steroid ults in the game, its like\nNasus/Renekton.\n-If he gets to proxy=gg",
+   "timers": "-His ult points are insane upgrades.\n-His ult is very low cd ",
+   "cor": "#3c78d8"
+  },
+  {
+   "nome": "Sion",
+   "fazer": "-My current ban on toplane due to how easy he is to play for how good he is into Akali.\n-This is a tempo matchup, you might kill him once or twice, he just scales like a beast and will just stand in your face\ndo whatever he wants and you have to tolerate it as nothing helps vs him.\n-This champ has the best tempo in the game due to his passive/ult, and Akali hates champions that are like that \nas she is one of the worst tempo champs, which means getting a lead of any way shape or form becomes impossible\nif the sion knows what he is doing.",
+   "observar": "-His E shreds armor\n-idk man just ban this champ who balances this game idk he deals way\ntoo much damage while being 10times tankier than you, somehow\non midlane its a bit more playable, but it becomes horrid at like lvl11-12.",
+   "timers": "-WHY ARE U STILL TRYING TO READ THIS JUST BAN\nTHIS ABOMINATION OF A CHAMPION",
+   "cor": "#cc0000"
+  },
+  {
+   "nome": "Tahm Kench",
+   "fazer": "-This champ is all about how you can dodge his Qs, as its a shitton of healing and all of his damage dealt.\n-Getting spit under tower=gg ure dead, make sure you are never getting 3 stacks put on urself while near tower.\n-Always E his W\n-he does have high hpreg with his grey health from E, but the real difference maker is the Q, its the whole champ \nbasically.",
+   "observar": "-If he does the dusk and dawn tech he can q auto and eat you, but if\nhe does that he is insanely squishy comperatively if he went full\ntank it would be worse.\n-Q is just everything.",
+   "timers": "-Ignite timer you should definitely be playing around,\nhe doesn't heal a crazy amount but its enough to mess\nup your allin ideas, and his healing is more over time\nwith his Q, not a big in combat influx.\n-Ult cd is lower than yours especially early game. so be\ncareful.",
+   "cor": "#ffd966"
+  },
+  {
+   "nome": "Teemo",
+   "fazer": "-This matchup is actually something that feels rather hard vs good teemos? ones that go boneplating full movespeed \nand then buy ruby ruby nullmagic on first recalls. if he doesn't do that its a rather easy matchup.\n-The worse the teemos spacing is the easier it gets, you can kinda just play into him with Q auto trades, just don't waste time\ntrying to auto while you are blinded.\n-His shrooms are extremely annoying, can go oracle earlier if you don't feel the need of wards.\n-He scales extremely well even if you put him behind.",
+   "observar": "-Just punish him when he walks up too far with Q auto Qs, but just do\nQ wait in shroud Q auto if he blinds you at the first Q, still should be \nable to proc electro.\n-oracle is great into him for both if he goes invis in passive and vs\nshrooms\n-he gets an AS steroid when he gets out of stealth for a bit.",
+   "timers": "-No timers exist in thisone",
+   "cor": "#93c47d"
+  },
+  {
+   "nome": "Trundle",
+   "fazer": "-This is just an easier entry level matchup of the same kind as sett, where if you use your range advantage well\nand don't die early on lvl1-3 you just start hard winning.\n-Ignite is a must, so is boneplating\n-Short trades and don't let him recall/proxy and get tempo advantage, its one of his best ways to weasel out of playing this\nlane.",
+   "observar": "-His Q steals a lot of AD, and your spells have good ad ratios. can't\nreally play around it most of the times, but good to keep in mind.\n-He gets very tanky in a wave at 2 items, if its hydra+visage\nits insanely hard to kill him unless you are atleast 3 items and have\nignite up, so kinda need to go 10-0 vs him to have a lead",
+   "timers": "-His ult is slightly lower cd than yours early on, be careful\ngetting allined, otherwise play around your W,  ignite is\nvery important the later the game goes, and don't give\nhim proxy timers is the main name of the game",
+   "cor": "#6aa84f"
+  },
+  {
+   "nome": "Tryndamere",
+   "fazer": "-People tell me this matchup is very Akali favoured, but imo its extremely volatile, very hard to play earlygame into HOB \nTrynda, i agree if you get a lead you just run him over, but getting that lead is harder said than done.\n-boneplating is a must, lvl1-3 you are hard loosing everytime, can't win.\n-Be careful getting doven by him\n-If he gets to proxy he is very happy camper, so don't let him do that\n-His Ult is very easy to play around if you get an E on him as he ults, just walk opposite way of him and E and its almost\nover the whole duration(5s)",
+   "observar": "-Not letting him proxy is key\n-If you get to lvl5-6-7 fairly even you start winning, but getting there is \nquiet tricky usually. \n-Need to E him when he is trying to E you always",
+   "timers": "-Ignite cd matters\n-his ult cd doesn't rly go down, so early on his is lower\nbut later his is going to be higher.",
+   "cor": "#ffd966"
+  },
+  {
+   "nome": "Urgot",
+   "fazer": "-This matchup could even go into worse, he is rather hard to beat, his lvl1 is insanely strong, mostly need W start else\ncan't get EXP,\n-Lvl3ish to lvl9 you win as long as you dodge every E and Q and don't take too many free autos, but thats unrealistic,\nmeaning you won't be perma winning on thoose timers, but you can win. you need to build a lead as he is heavily outscaling\nso you need to go for risky outplays at that times\n",
+   "observar": "-lvl1 you can loose the lane, pls pay a lot of attention\n-lvl2-3 still tricky so don't overtrade\n-keep track of what legs he used up already and try to fight on angles\nwhere his leg is on CD\n-his ult reveals you.",
+   "timers": "-His ult is always lower cd than yours\n-ignite somewhat important but not super necesarry\n",
+   "cor": "#ffd966"
+  },
+  {
+   "nome": "Varus",
+   "fazer": "-This champ is very  hard to play against despite many thinking Akali is good into ranged champions she kind of gets\nstatchecked by most of theese characters and counterplay is usually slim and more up to the ranged champ player to mess\nup.\n-Need to dodge every single spell, also small thing but don't use potions when you get hit by his E  as it gives healreduction\n-Mercs is actually very high value if he goes AP varus, still good value if he goes attackspeed but harder to justify buying.\n-if you get ahead you can definitely snowball off of him, but hard to get there",
+   "observar": "-If he has barrier and boneplating lethal becomes a lot higher\n-His  spells  go down a lot of cd based on detonated passive stacks, so\nmake sure yo dodge even more, extremely important\n-he might go tanky right away, thats the worst case",
+   "timers": "-His ult is way lower cd, can't be getting poked down\nby it\n",
+   "cor": "#e06666"
+  },
+  {
+   "nome": "Volibear",
+   "fazer": "-He is very tanky with his E/w heal, but you can kind of play around thoose and if you do then you beat him, one of thoose\nyou re higher range so you can kite them matchup.\n-Getting hit by his E is insanely bad, don't let him get his W off again after his W because the heal is not worth.\n-Don't trade into his E shield, he will win if you do, play around it.\n-allianable if he wastes his E/doesn't have W stack on you from rather high hp ,his tankiness is very conditional on W/E.",
+   "observar": "-His E\n-His second W\n-Don't get hit by his passive stacks through the wave too much, it used to\nbe okay to get hit, but not anymore since second wind is too nerfed.\nboneplating unplayable due to his passive.",
+   "timers": "-His ult is insanely long cd, so ult for ult trade is never bad\n-ignite is useful to play around, not always needed but\nits usually the key to killing him.",
+   "cor": "#93c47d"
+  },
+  {
+   "nome": "Warwick",
+   "fazer": "-volatile matchup, i think its winnable but pretty hard to do so, you need to play it very well, kiting his E, kiting his barrier\n- His healing is insane, its a must to buy oblivion first\n-He has high tempo due to getting MS if there is someone low hp on the map, and even if you kill him you will be low hp\non the map if you are trying to push a wave out.\n-it gets better later, but its never easy beating through his healing. its a matchup where you pray you snowball",
+   "observar": "-His barrier\n-His healing, like his hp is really not as much as what you see.\n-His ult is a reveal",
+   "timers": "-his ult is always lower cd than yours, ignite Cd not super\nimportant as you buy healreduction\n-his barrier is very important to keep track of\n",
+   "cor": "#dd7e6b"
+  },
+  {
+   "nome": "Wukong",
+   "fazer": "-You reveal him with E, but don't insta E onto him, keep it on as long as you can for the reveal\n-E his E to get a free hit\n-His passive gives him armor which is insanely useless vs you\n-Don't get your E2 or R2 canceled by his ult spin, he has a little downtime between the 2 spins where he can't \ncancel you, thats where you should use them.\n-Don't get too poked by his Q",
+   "observar": "-really generic easy matchup, just don't take too much damage from Qs\nwithout trading back and you should be chilling, most of your kit \ncounters his if you are even.",
+   "timers": "-his ult cd is very similar to yours\n-ignite is nice to have up but never mandatory\n-his W has a huge CD",
+   "cor": "#6aa84f"
+  },
+  {
+   "nome": "Yorick",
+   "fazer": "-This is a borderline unplayable matchup, you really need to get a huge lead very early on, as you won't be able to deal\nwith maiden or ghouls or his wall at all at any point  of the game and it just gets worse and worse and worse.\n-Never get hit by a single E and just allin him off cooldown really not much else to do.",
+   "observar": "-don't get trapped in his W, either be able to ult out of it, or E out of it, if \nyou have to stand still hitting it while his E is up you are going to regret\nqueing up league of legends and not just watching your favourite\nstreamer struggle instead",
+   "timers": "-Maiden CD is huge but you can't ever solo it, hope ur \njgler can kill it maybe?\n-Ignite is mostly necesarry to kill him due to how tanky\nhe is and how hard he is to get to.",
+   "cor": "#e06666"
+  },
+  {
+   "nome": "Zaahen",
+   "fazer": "-I'm not 100%sold this is a hard matchup, but from my little knowledge it is rather hard, especially if you can't get a lead\nby first item he starts heavily outscaling.\n-Need to never get hit by W and the outer part of E if possible, also try to keep track of his Q usage, its easier to short trade\nwhen his Q2 isn't up atleast\n-Never let him longtrade and get his passive, its the easiest way to loose into him, you 100%lost if he gets to that point.\n-Try to dodge his ult with a well timed E, it does a lot as he heals less and deals no dmg and gets no stacks, also\nnever burst into his ult as its a massive 50% dmg reduction, unless you are confident in that being the right play.",
+   "observar": "-Just look out for longer trades, you never can win them, don't let him\nget on you without him having to atleast use W/E or in best case both\n-he scales extremely well into both teamfights and 1v1s in most cases,\nso building a lead is essential.",
+   "timers": "-his ult is always lower cd than yours, otherwise his spells\nare rather long cd early and spammy later, but he is an\nautoattack mostly.\n-The longer the game is the more esssential ignite \nbecomes in every single allin.",
+   "cor": "#dd7e6b"
+  },
+  {
+   "nome": "Zac",
+   "fazer": "-I think this is once again a volatile one, as if he gets ahead he rolls you, if you get ahead you can also kind of roll him.\n-don't give him Q onto minion then auto you and get CC chained trade, just shroud away if you are too close.\n-Always E his E, else trade is mostly loosing.\n-Always step  on the little puddles he leaves on the ground, thats where his healing is coming from.\n-Make sure when you take his passive off its in a position where you can kill or heavily damage the passive, not safely under\ntower as if you do that he will just be chilling on half hp instead of being 1 hp and having to recall because if you kill him\non a better spot where you can actually finish off the blobs.",
+   "observar": "-Be mindful of his blobs, very important minigame\n-Don't get full cc chain comboed\n-ESPECIALLY DON'T UNDER TOWER\n-healing reduction is okayish to buy but imo ignite is mostly enough.",
+   "timers": "-Ignite cd if you don't buy healreduction, but if you do end\nup going oblivion i don't hate the buy.\n-His ult is same cd as yours,so don't get your R2 canceled\nby it or get baited by him having low hp.",
+   "cor": "#f6b26b"
+  }
+ ],
+ "aba2": {
+  "0,0": "Summoner Spells",
+  "0,5": "⬅ Back to Table of Contents",
+  "1,1": "Ignite: This is a very easy to use and useful summoner. should be your go\n to alongside flash IMO. Also your go to healing reduction source in\n99.9% of cases.",
+  "2,1": "Flash: your go to every single game. high skill but because you take it every\nsingle game you get value out of it, feel like thisone doesn't need much\nof an explanation.",
+  "3,1": "Since rolequests i don't ever take it. Tp is also a very highly skilled summoner\nwhich means you won't really get the true value out of TP flanks etc until\nyou are in higher elos. You can try using it in harder matchups, but don't I\ndon't recommend it at all, all the changes in S16 made Ignite way better.",
+  "4,1": "Cleanse: This summoner spell is very useful, but its a high skill one. I would\nrecommend not taking it below Diamond-Master, but try it out for yourself\nin matchups i recommend it in, if you can use it, great! if not no problem,\njust go with the classic mercs+tenacity shard approach.",
+  "5,0": "Runes",
+  "17,0": "Why Only Electrocute+resolve?\nImo every systematic change since 2022 pushed Akali into being unable to play any other rune. Conqueror and fleet are just bad every single matchup, other keystones\ndon't even exist for her. for secondary runes she has once again no real options, as the stuff she needed(tenacity, lane survival, energy regen) got taken out of the rune\ntrees completely over the years.",
+  "18,0": "What is changeable?\nRelentless hunter you can take over ultimate, it used to be good but i think with the new homeguards ultimate hunter value goes up and its actually correct to take now.\nOut of Resolve you can take conditioning if the matchup is free, Second wind is if its a poke lane, and Boneplating if the opponent has a hard time proccing it without\ndealing multiple instances of damage at the same time.",
+  "19,0": "WHY NO SORCERY NIMBUS+SCORCH?\nNimbus on Akali is fake and bad. its good on some AD assasins(talon, zed, and especially naafiri) because they can get in some more autoattacks when they are cheesing\nin earlygame, but Akali autos tickle you, she doesn't have enough ad for it, and thus you only take it for Scorch. scorch is a good rune vs other meele mids that you can Q\noften, but since there is no good 2nd rune option i rather go resolve and be more tanky/durable. I take scorch+absolute focus in exactly 1 matchup and that is Yasuo,\nbecause of a special interaction of taking down his passive shield with Q and then the scorch proccing his boneplating being actually a high value rune for that reason.",
+  "20,0": "WHY NO PRESENCE OF MIND FOR ENERGY?\nIt is completely fake, doesn't really give you energy if you do the math on how energy regens and how it interact with Akali and check the numbers on it, it basically gives you\nnothing outside of when you kill people. the passive when you hit someone gets wasted 0-24 and is never useful, it never makes the difference. The on kill effect is okayish,\nbut other runes do more for you, it really doesn't pull its weight giving you half a Q on every kill is not woth it.",
+  "21,0": "I SEE FAKER PICK UNFLINCHING, WHY NO UNFLINCHING?\nUnflinching is good when you are minmaxing your earlygame because you think enemy laner is going to play well, but trust me, unless you are high challenger playing\nagainst the best otps of certain champions overgrowth is better, as the lower the rank the less punished you get and the longer the games go, and unflinching is just  there\nfor laning phase, meanwhile overgrowth scales up really nicely into the midgame/lategame.",
+  "22,0": "SHARDS:\nTenacity shard really good in combination with mercs, so if its a mercs game go for it, take scaling HP from middle and always adaptive on top.\nMS shard is good in matchups where you don't need the adaptive damage or the tenacity shard( can't take ms+tenacity imo, i always like 1 HP shard atleast for combat)\nas  you are killing them anyways if you get in range. Example:vel'koz, orianna, viktor, Yone, etc. where spacing matters.\nDouble adapative: in matchups that are always in your face you Q them on cooldown. on midlane Sylas is a prime example, maybe yasuo, and most toplane matchups.",
+  "23,0": "FLAT HP VS SCALING HP:\nIf you ask me Scaling Hp always. pro players like to take scaling hp, and high elo players, but unless you are one of thoose you should be completely fine with scaling HP\nearlygame, and you will be scaling a lot better into the mid/lategame without getting oneshot as much. Also the combination of scaling HP and overgrowth gives around 300+\nHP midgame, which is almost as much as what rocketbelt gave you, so you effectively have that tankiness while building full dmg, and thats without calculating in gunblades \nhealings effective health. The lower rank you are the longer your games are on average statistically, so please believe me, scaling HP is the way to go, flat HP is a scam.",
+  "24,0": "ITEMS",
+  "25,0": "STARTER ITEMS",
+  "26,1": "Your best choice always. Riot is heavily pushing Akali in this direction, so imo\ntime to start learning the game with this item start 0-24. Very hard pokematchups\nyou can go doran shield in(LB/vex/zoe for example) but it doesn't feel great.\nyou just slowly bleed out vs them with it.",
+  "27,1": "Really only should play this into the worst of matchups that you are the least\nconfident in, but with time you should start converting to dring even in thoose,\nas winning with dshield/second wind as akali doesn't really exist anymore.\ntoo overnerfed of a combination.",
+  "28,1": "Why do i never see you use this item? Basically i would only buy it after first item\nand by then it feels like its too late. why only after first item? because many times\nyour inventory will look like this and you can't fit it. ->",
+  "29,0": "(And as a starter item it is way too inefficient compared to \nDRING in stats to consider instead of that)",
+  "30,0": "Boots",
+  "31,1": "-Really good earlygame into mages, and you will see me sit on this on toplane\neven at 25-30 mins. Why? tier2 boots are way too stat inefficient, and you \nmostly want offensive stats as Akali.  and magic pen boots are not good enough\nto purchase vs toplane champs as its good vs lower MR targets.",
+  "32,1": "Always good to buy on midlane for the tier3 around 11-14 mins depending on \nhow good you are doing on your quest. No matter what tier3 boots you have\nyou should always go for them as soon as quest is done/have them done by then.\nJust generic best boots if no need for the others.",
+  "33,1": "Anytime you need tenacity for the game and MR is generally good in the game\ntheese boots are really good even post nerf. just not an autobuy anymore.",
+  "34,1": "Would say most situational, but when you need Defensive stats over offensive\nand enemy comp is heavy AD i think its still good on Akali even if its not uber\nsuper broken.",
+  "35,1": "Worst item in the game for Akali, huge bait, never buy. In its current form this item\nis only usable on scaling champions, like riven and adcs sadly. Having to invest\nmoney into 0 offensive stats for not that much healing, and then having to get\n+10 kills to fully activate the item is really just awful. It was playable on the release\npatch, but got gutted really fast :/",
+  "36,0": "Legendary Items",
+  "37,1": "Every single game first item no questions asked. No but really, great buildpath\nis something Akali was missing for a long time now, and this has it. Akali has\ngreat AD scalings on her spells aswell, so its perfect for her with a great active.\nHealing part is pretty placebo because its 1/3rd of what it was pre season11.",
+  "38,1": "Akalis best 2nd item when going burst. Provides similar damage to Shadowflame\nall while having an easier buildpath, less cost, and movement speed on top of it\njust basically a better shadowflame as of now.",
+  "39,1": "This item is pretty good when not buying mpen boots,the buildpath sucks but that\nmatters way less when purchasing as a 2nd item.feels great into tankier \nopponents overall, value goes up when you go defensive boots as you play\nfor longer fights with thoose boots anyways, and less for burst.\ncan still buy with mpen boots anyways if you want gigadamage vs hp/mr stackers",
+  "40,1": "This item is buyable when you want more damage as 2nd, sadly this and \nstormsurge has no real different identity, they both do the same thing, stormsurge\ndoes it better for lower cost which makes no sense.",
+  "41,1": "Akali's 2nd best item, but because of the buildpath you usually go for it later on.\nIf you manage to get a largerod recall for shadowflame, and you have money\nfor another largerod on the nextone you can pivot into this instead.\nyes its already better as a 2nd item than shadow, the buildpath is the reason you\ndon't see it perma as a 2nd item.",
+  "42,1": "Another one of Akalis huge favourites, If opponents have above 60MR on average\nits already great value. synergies well with flatpen aswell, its just one of the best\nitems all around. Buildpath sucks tho, but mandatory in every fullbuild, just like\nrabadon/gunblade.",
+  "43,1": "Another huge favourite, great as a defensive tool, and as an agressive one aswell\nyou can zhonya while E2ing to guarantee not get your E2 canceled by CC.\nAnother neat trick with zhonya is not building out the item and sitting on seekers\nas long as you have the active. this does 2 things: 1: it allows you to buy largerod\nand then start building into another item if you don't end up using your seekers\nyou might end up going for rabadon instead of finishing it and still have the \nactive. and on top of it you can use seekers->recall->buy zhonya you have \nanother zhonya without it being on a 120second cooldown. this cd is very long\nand is even better if you have TP. you can legit fight zhonya get out buy zhonya\nand TP back to fight and have another surprise zhonya that people never \nexpect even in highelo. 99%part of your fullbuild, insane item.",
+  "44,0": "Won't be listing out more of them individually, as this is mostly your build, only 2nd item changes and ordering. probably the most asked items \nwill be outside of theese:\nWhy no rocketbelt: buildpath sucks,buying haste sucks, champ can't use  that stat and overall underwhelming.. we have better options now.\nMorello: Never buy this, maybe oblivion orb in certain matchups but i would say thoose matchups are extremely thin, but will be on the spread\nsheet if you need it. otherwise ignite is your healing reduction\nBanshee: buildpath sucks stats suck effect sucks overall item value is very low, maybe 1 out of 20 games you can buy it and not feel bad, but \nits rather slim. even against ap champs you will end up going zhonyas a lot more, the real anti magic item is definitely just mercurys treads.\nQSS: very rarely buyable, only useful vs supressions that tenacity doesn't effect/can't be cleansed(malza ult, ww ult, urgot ult) but \neven in thoose situations i wouldn't personally buy it, i  think having my team cancel thoose spells and me having that gold invested into\nsomething else is better. with that said if you have 1.3k gold and you think its going to win you the game go for it against them.\n."
+ }
+}

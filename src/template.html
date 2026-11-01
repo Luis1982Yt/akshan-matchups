@@ -286,6 +286,23 @@ try {
   --texto: #1c2133; --texto-baixo: #525a74; --tinta-botao: #1a0f05;
   --luz: rgba(240, 130, 60, .12); color-scheme: light;
 }
+/* Akali: a fumaça ameixa da névoa, o rosado da arte e o verde-jade da máscara. */
+:root[data-guia="akali"] {
+  --fundo: #120a10; --painel: #1c111a; --painel-alto: #261823;
+  --linha: rgba(216, 145, 187, .22); --linha-forte: rgba(216, 145, 187, .48);
+  --acento: #d891bb; --acento-vivo: #f3cfe2; --destaque: #9fd38c;
+  --texto: #f1e6ee; --texto-baixo: #ad98a8; --tinta-botao: #0e1a0b;
+  --luz: rgba(216, 120, 180, .13); --sombra: 0 10px 30px rgba(0, 0, 0, .5);
+  --sobre-arte: #ffe9f5; --destaque-arte: #b6e6a2; --botao-1: #ffd1e8; --botao-2: #c8679f;
+  --brilho: rgba(255, 220, 240, .5); --brilho-2: rgba(159, 211, 140, .2); color-scheme: dark;
+}
+:root[data-guia="akali"][data-tema="claro"] {
+  --fundo: #f6eff4; --painel: #fffafd; --painel-alto: #eedfe9;
+  --linha: rgba(120, 40, 90, .24); --linha-forte: rgba(120, 40, 90, .54);
+  --acento: #8e3a6c; --acento-vivo: #6c2350; --destaque: #3f7d2c;
+  --texto: #241520; --texto-baixo: #6a5562; --tinta-botao: #ffffff;
+  --luz: rgba(216, 120, 180, .12); --sombra: 0 10px 30px rgba(80, 20, 60, .14); color-scheme: light;
+}
 /* K'Sante: o pôr do sol de Nazumah (marrom-vinho), o bronze da armadura e o violeta da túnica. */
 :root[data-guia="ksante"] {
   --fundo: #110b0b; --painel: #1b1212; --painel-alto: #251918;
@@ -1563,7 +1580,11 @@ const FILTROS = {
     ...["Ignite", "TP", "Exhaust"].map(s => ({ id: s, grupo: "feitico", rotulo: s, icone: g.icones[s], teste: c => c.spell.split(/\s*\/\s*/).includes(s) })),
     { id: "Electro", grupo: "runa", rotulo: "Electro", icone: g.icones.Electro, teste: c => /electro/i.test(c.runa) },
   ],
-  completo: () => DIFS.map(d => ({ id: "dif_" + d, grupo: "dif", cor: d, teste: c => c.dif === d })),
+  completo: g => [
+    ...DIFS.map(d => ({ id: "dif_" + d, grupo: "dif", cor: d, teste: c => c.dif === d })),
+    // Planilha com matchups de mais de uma rota (Akali: mid e top): um filtro por rota.
+    ...[...new Set(g.matchups.map(m => m.rota).filter(Boolean))].map((r, i, rs) => rs.length > 1 && ({ id: "rota_" + r, grupo: "rota", rotulo: r, teste: c => c.rota === r })).filter(Boolean),
+  ],
 };
 
 /* ---------- Planilha ao vivo: o guia lê a planilha do autor quando abre ---------- */
@@ -1921,7 +1942,7 @@ function linhaNaLingua(l) {
 }
 
 /* ---------- Formato completo (runas, itens, dificuldade e seções) ---------- */
-const TITULOS = { "Enemy Cooldowns": "Cooldowns do inimigo", "Early Game": "Early game", "How to trade": "Como trocar", "What to watch out for": "Cuidado com", "Tips": "Dicas", "Mini Rant": "Desabafo", "Tips and Tricks": "Dicas e truques", "Laning Overview": "Fase de rotas", "Trading / Fighting": "Trocas e lutas", "Level 6+": "Nível 6+", "Additional Information": "Informações extras", "VoD's/Clips": "VODs e clipes" };
+const TITULOS = { "Enemy Cooldowns": "Cooldowns do inimigo", "Early Game": "Early game", "How to trade": "Como trocar", "What to watch out for": "Cuidado com", "Tips": "Dicas", "Mini Rant": "Desabafo", "Tips and Tricks": "Dicas e truques", "What to do as Akali": "O que fazer de Akali", "What to look out for": "Cuidado com", "Timers to think about": "Timers para ficar de olho", "Laning Overview": "Fase de rotas", "Trading / Fighting": "Trocas e lutas", "Level 6+": "Nível 6+", "Additional Information": "Informações extras", "VoD's/Clips": "VODs e clipes" };
 const KW_EN = /\b(level \d+|lvl \d+|nível \d+)\b/gi;
 const marcaEn = t => destaca(esc(t).replace(KW_EN, m => `<span class="kw">${m}</span>`));
 // Guias escritos em inglês têm uma camada em português (src/guias/<guia>/traducao_pt.json, de scripts/traducao_pt.py):

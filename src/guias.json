@@ -217,5 +217,52 @@
     ],
     "acompanhe": [],
     "credito_minimo": true
+  },
+  {
+    "id": "akali",
+    "campeao": "Akali",
+    "rota": "Mid",
+    "rotas": [
+      "Mid",
+      "Top"
+    ],
+    "autor": "SupremeG0at",
+    "formato": "completo",
+    "dados": "guias/akali",
+    "chave": 84,
+    "titulo": "a Assassina Renegada",
+    "titulo_en": "the Rogue Assassin",
+    "mira": [
+      52,
+      34
+    ],
+    "fonte": "Notas da planilha de Akali do SupremeG0at, traduzidas do inglês.",
+    "fonte_en": "Notes from SupremeG0at's Akali spreadsheet.",
+    "links": [
+      {
+        "rotulo": "Ver a planilha original",
+        "rotulo_en": "See the original spreadsheet",
+        "url": "https://docs.google.com/spreadsheets/d/1QSmbqRpG-caL8flzDFVQw546CSp5VBvLB96ymQd2uzQ/edit"
+      },
+      {
+        "rotulo": "Twitch",
+        "url": "https://www.twitch.tv/supremeg0at"
+      },
+      {
+        "rotulo": "YouTube",
+        "url": "https://www.youtube.com/@supremeg0at"
+      },
+      {
+        "rotulo": "X",
+        "url": "https://x.com/SupremeG0at"
+      }
+    ],
+    "acompanhe": [
+      {
+        "nome": "SupremeG0at",
+        "url": "https://www.twitch.tv/supremeg0at",
+        "canal": "twitch.tv/supremeg0at"
+      }
+    ]
   }
 ]
