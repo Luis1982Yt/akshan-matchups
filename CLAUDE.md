@@ -25,6 +25,8 @@ GUIAS_FUTUROS.md, como tudo funciona em README.md e app/README.md.
 - Testar em celular 390 px e desktop 1440 px, sem rolagem para o lado, temas claro e escuro.
 - Manter o aviso de projeto de fã, sem ligação com a Riot.
 - Recurso novo vale para todos os guias, inclusive os futuros. Organizar a interface, nunca tirar informação.
+- Runa que saiu do jogo aparece sempre como a que ficou no lugar no cliente (ex.: Lenda: Tenacidade -> Lenda: Aceleração,
+  Ímpeto Gradual -> Avanço da Tempestade): tabela `RUNA_SUBSTITUTA` no template e `SUBSTITUTA` no `importar_lol.py`.
 - Visual: cada guia tem paleta própria (`:root[data-guia="id"]`), tirada da arte oficial; mostrar prévia antes de
   decidir cores ou enquadramento (palpite de cabeça já foi rejeitado). A marca BattleMatch (identidade "Rota",
   verde-limão `#c6f24e` em `#14161c`) é a mesma em todos os guias.

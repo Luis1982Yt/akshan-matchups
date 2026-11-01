@@ -34,6 +34,10 @@ Guias de referência: `scripts/atualizar_garen.py` (CSV, uma linha por matchup, 
   {rotulo Principal/Secundária/Fragmentos, pecas, nota?}]], imagens_runas, itens [{rotulo, linhas [{tipo item|nota|rotulo|sep, passos [[peças]], motivo?}]}], secoes [{titulo, blocos [{tipo p|lista, ...}]}]`.
 - Campeão não reconhecido deve dar erro (KeyError), nunca chute.
 - Item sem ícone: o script imprime a lista; resolver com apelido até a lista ficar vazia.
+- Runa que saiu do jogo (Lenda: Tenacidade, Ímpeto Gradual...): o site SEMPRE mostra a que ficou no lugar (ícone e
+  nome de hoje, com o nome antigo entre parênteses). Tabela `RUNA_SUBSTITUTA` no `src/template.html` (chave = nome
+  da planilha só com letras minúsculas) e `SUBSTITUTA` no `scripts/importar_lol.py` (para o app). Runa nova removida:
+  pôr nas duas. Conferir: ícone de runa do guia que não está no `runesReforged.json` atual = runa antiga.
 - Quebra de linha dentro da célula: `limpa()` para exibir; para achar item, testar juntar com espaço e sem espaço.
 - Páginas extras (`paginas.json`): só o que ensina a jogar. Bio, redes, coaching, doação, Discord pessoal, aviso de
   beta, agradecimentos ficam de fora (no script, ou em `curadoria.json` se for frase no meio de texto útil).

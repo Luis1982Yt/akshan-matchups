@@ -1968,13 +1968,25 @@ const tr = x => (L !== "en" && x && guia.traducao_pt && guia.traducao_pt.textos[
 // Só o texto que continua em inglês no modo PT (guia sem a camada) leva lang="en".
 const langOrig = () => (L !== "en" && !guia.traducao_pt ? ' lang="en"' : "");
 // Item ou runa com ícone: no modo PT, o nome do cliente em português (o "rush" da planilha continua).
+// Runas que saíram do jogo (as planilhas antigas ainda citam): o site mostra sempre a que ficou no lugar no cliente,
+// com ícone e nome de hoje, e o nome antigo entre parênteses (é o que as notas citam). Vale para todos os guias.
+// Chave: o nome escrito na planilha só com letras minúsculas. Runa nova que sair do jogo: pôr aqui.
+const DD_RUNA = "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/";
+const RUNA_SUBSTITUTA = {
+  legendtenacity: { icone: DD_RUNA + "Precision/LegendHaste/LegendHaste.png", en: "Legend: Haste (ex-Legend: Tenacity)", pt: "Lenda: Aceleração (antiga Lenda: Tenacidade)" },
+  phaserush: { icone: DD_RUNA + "Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png", en: "Stormraider's Surge (ex-Phase Rush)", pt: "Avanço da Tempestade (antigo Ímpeto Gradual)" },
+};
+const runaSubstituta = p => RUNA_SUBSTITUTA[(p.nome || "").toLowerCase().replace(/[^a-z]/g, "")];
+const iconePeca = p => (runaSubstituta(p) || {}).icone || p.icone;
 const nomePeca = p => {
+  const sub = runaSubstituta(p);
+  if (sub) return L === "en" ? sub.en : sub.pt;
   const pt = L !== "en" && p.icone && guia.traducao_pt && guia.traducao_pt.nomes[p.icone];
   return pt ? pt + (/\brush\b/i.test(p.nome) && !/phase\s*rush/i.test(p.nome) ? " (rush)" : "") : tr(p.nome);
 };
 const notaTexto = t => { if (guia.escala === 10) return t; const m = t.match(/^(\d)(?:\s*\/\s*(\d))?\s*(.*)$/); return m ? `${m[1]}${m[2] ? "–" + m[2] : ""}/5${m[3] ? " " + m[3] : ""}` : t; };
 const pips = n => `<span class="pips" aria-hidden="true">${[1, 2, 3, 4, 5].map(i => `<i${i <= n ? ' class="on"' : ""}></i>`).join("")}</span>`;
-const peca = (p, runa) => `<span class="peca${runa ? " runa" : ""}">${p.icone ? `<img src="${p.icone}" alt="" width="32" height="32">` : '<span class="soquete" aria-hidden="true"></span>'}<span>${esc(nomePeca(p))}</span></span>`;
+const peca = (p, runa) => `<span class="peca${runa ? " runa" : ""}">${p.icone ? `<img src="${iconePeca(p)}" alt="" width="32" height="32">` : '<span class="soquete" aria-hidden="true"></span>'}<span>${esc(nomePeca(p))}</span></span>`;
 
 // Abas pequenas (condições da build, opções de runas, seções do "Como jogar"): uma à mostra por vez.
 // O site lembra a última escolhida de cada grupo ao trocar de matchup (por rótulo, quando ele existir na outra).
@@ -2170,7 +2182,7 @@ const BLOCOS = {
         ${it.estagios.map((e, i) => e && e.texto ? `<div class="est-texto" data-est="${i}"${i === ini ? "" : " hidden"}${langOrig()}>${textoLongo(esc(fluxo(tr(e.texto))))}</div>` : "").join("")}</article>`;
     }).join("")}</div></section>`).join(""),
   runas: b => b.arvores.map(a => `<section class="pg-bloco arvore"><h3><img src="https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/${ARVORE_ICONE[a.chave] || ""}.png" alt="" width="28" height="28">${esc((t("arvores") || {})[a.chave] || a.chave)}</h3>
-    ${a.linhas.map(l => `<div class="nivel">${l.map(r => `<article class="pg-card${r.texto ? "" : " sem-texto"}"><div class="topo runa"><img src="${r.icone}" alt="" width="44" height="44" loading="lazy"><b${langOrig()}>${esc(nomePeca(r))}</b></div>${r.texto ? `<div${langOrig()}>${textoLongo(esc(fluxo(tr(r.texto))))}</div>` : ""}</article>`).join("")}</div>`).join("")}</section>`).join(""),
+    ${a.linhas.map(l => `<div class="nivel">${l.map(r => `<article class="pg-card${r.texto ? "" : " sem-texto"}"><div class="topo runa"><img src="${iconePeca(r)}" alt="" width="44" height="44" loading="lazy"><b${langOrig()}>${esc(nomePeca(r))}</b></div>${r.texto ? `<div${langOrig()}>${textoLongo(esc(fluxo(tr(r.texto))))}</div>` : ""}</article>`).join("")}</div>`).join("")}</section>`).join(""),
   setups: b => b.grupos.map(g => `<section class="pg-grupo">${g.titulo ? `<h3${langOrig()}>${esc(tr(g.titulo))}</h3>` : ""}<div class="pg-cards">${g.setups.map(x => `<article class="pg-card setup-alt"${langOrig()}><div class="topo"><b>${esc(tr(x.nome).replace(/\s*\n\s*/g, " ").trim())}</b></div><dl>
       ${[["setRunas", x.runas], ["setItens", x.itens], ["setExemplo", x.exemplo], ["setComentario", x.comentario]].filter(([, v]) => v).map(([k, v]) => `<div><dt lang="${L === "en" ? "en" : "pt-BR"}">${esc(t(k))}</dt><dd>${comLinks(v)}</dd></div>`).join("")}</dl></article>`).join("")}</div></section>`).join(""),
   // Tabela com coluna "Name" (criadores, planilhas, vídeos): um cartão por linha, links viram botões.
@@ -2191,7 +2203,7 @@ const BLOCOS = {
   pessoas: b => `<section class="pg-grupo">${b.titulo ? `<h3${langOrig()}>${esc(tr(b.titulo))}</h3>` : ""}<div class="pg-cards pessoas"${langOrig()}>${b.pessoas.map(x => `<article class="pg-card pessoa"><div class="topo"><b>${esc(x.nome)}</b></div>
     ${x.texto ? `<p class="texto">${esc(tr(x.texto))}</p>` : ""}${x.links.length ? `<ul class="pessoa-links">${x.links.map(k => `<li><a href="${esc(k.url)}" target="_blank" rel="noopener"><span>${esc(tr(k.texto))}</span></a></li>`).join("")}</ul>` : ""}</article>`).join("")}</div></section>`,
   // Listas de itens com ícone e explicação (Itens da Illaoi).
-  pecas: b => b.grupos.map(g => `<section class="pg-grupo">${g.titulo ? `<h3${langOrig()}>${esc(tr(g.titulo))}</h3>` : ""}<div class="pg-cards${g.itens.some(i => i.texto) ? "" : " pecas-soltas"}"${langOrig()}>${g.itens.map(i => `<article class="pg-card${i.texto ? "" : " sem-texto"}"><div class="topo">${i.icone ? `<img src="${i.icone}" alt="" width="44" height="44" loading="lazy">` : ""}<b>${esc(nomePeca(i))}</b></div>${i.texto ? textoLongo(esc(fluxo(tr(i.texto)))) : ""}</article>`).join("")}</div></section>`).join(""),
+  pecas: b => b.grupos.map(g => `<section class="pg-grupo">${g.titulo ? `<h3${langOrig()}>${esc(tr(g.titulo))}</h3>` : ""}<div class="pg-cards${g.itens.some(i => i.texto) ? "" : " pecas-soltas"}"${langOrig()}>${g.itens.map(i => `<article class="pg-card${i.texto ? "" : " sem-texto"}"><div class="topo">${i.icone ? `<img src="${iconePeca(i)}" alt="" width="44" height="44" loading="lazy">` : ""}<b>${esc(nomePeca(i))}</b></div>${i.texto ? textoLongo(esc(fluxo(tr(i.texto)))) : ""}</article>`).join("")}</div></section>`).join(""),
   // Seção da planilha (Kayle): título, parágrafos, listas, imagens com a legenda da planilha e blocos prontos (tabela, itens).
   secao: b => `<section class="pg-bloco pg-secao">${b.titulo ? `<h3${langOrig()}>${esc(tr(b.titulo))}</h3>` : ""}${agrupaPartes(b.partes).map(x =>
     x.tipo === "p" ? `<p${langOrig()}>${comLinks(x)}</p>`

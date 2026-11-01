@@ -45,7 +45,8 @@ def chave(s):
 IMG_RUNA = "https://ddragon.leagueoflegends.com/cdn/img/perk-images/"
 # Runas que saíram do jogo mas ainda aparecem nas planilhas (o Data Dragon guarda a imagem).
 RUNAS_ANTIGAS = {"legendtenacity": IMG_RUNA + "Styles/Precision/LegendTenacity/LegendTenacity.png",
-                 "phaserush": IMG_RUNA + "Styles/Sorcery/PhaseRush/PhaseRush.png"}
+                 # O Ímpeto Gradual virou Avanço da Tempestade (mesmo id 8230 no cliente): ícone da runa de hoje.
+                 "phaserush": IMG_RUNA + "Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png"}
 # Fragmentos (não vêm no runesReforged): o primeiro padrão que bater no nome escrito na planilha.
 FRAGMENTOS = [(r"adap|adp", "StatModsAdaptiveForceIcon"), (r"attack\s*speed", "StatModsAttackSpeedIcon"),
               (r"ability\s*haste|cdr", "StatModsCDRScalingIcon"), (r"move(ment)?\s*speed|\bms\b", "StatModsMovementSpeedIcon"),
