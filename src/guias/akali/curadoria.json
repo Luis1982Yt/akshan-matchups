@@ -1,0 +1,13 @@
+{
+ "remover": [],
+ "trocar": {
+  "Why do i never see you use this item?": {
+   "en": "Why is this item so rarely used? It would only be worth buying after the first item, and by then it feels too late. Why only after the first item? Because many times your inventory will look like this and you can't fit it. ->",
+   "pt": "Por que esse item quase nunca aparece? Basicamente, ele só valeria depois do primeiro item, e aí parece tarde demais. Por que só depois do primeiro item? Porque muitas vezes o seu inventário vai estar assim e não vai caber. ->"
+  },
+  "-Really good earlygame into mages, and you will see me": {
+   "en": "- Really good early game into mages, and on top lane you can sit on these even at 25-30 minutes. Why? Tier 2 boots are way too stat inefficient, and as Akali you mostly want offensive stats. Magic pen boots are not good enough to buy against top lane champions, as they are good against lower MR targets.",
+   "pt": "- Muito boas no começo do jogo contra magos, e no top dá para ficar com elas até os 25-30 minutos. Por quê? As botas de nível 2 são ineficientes demais em atributos, e de Akali você quer mais atributos ofensivos. E as botas de penetração mágica não são boas o bastante para comprar contra campeões do top, porque elas são boas contra alvos com pouca resistência mágica."
+  }
+ }
+}
