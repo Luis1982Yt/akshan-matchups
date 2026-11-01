@@ -85,3 +85,13 @@ Dá para ler pela página, como a do Peteruso, mas não baixar o arquivo com as 
 A planilha do r/KSanteMains abre com "© 2025 Demon – You may share this, but do not republish or distribute modified
 versions." O dono pediu autorização ao autor (Demon: Discord `demoneuw`, Reddit u/Nalardemon) e ele **permitiu** em
 2026-10-29. Guia no ar desde então (`scripts/atualizar_ksante.py`, `src/guias/ksante/`).
+
+## Checagem de 2026-11-01: fontes que não são de top
+
+Nenhuma dá para usar numa sessão na nuvem:
+- Akali mid (SupremeG0at 2026), Aphelios, Garen mid (Triton, S15), Jayce (14.24) e o doc do Heimerdinger: download,
+  versão publicada e conector do Drive bloqueados pelos donos (401 / "not found"). Só com o dono do BattleMatch
+  pedindo acesso ao autor ou fazendo uma cópia no próprio Drive (se a planilha deixar).
+- Akali "outra" (1dub4yd…) baixa, mas é a do Daito, Akali **top** da season 13.
+- Azir: abre, mas é da season 11 (itens míticos), desatualizada.
+- Aurora: vídeo.
