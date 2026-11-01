@@ -264,5 +264,45 @@
         "canal": "twitch.tv/supremeg0at"
       }
     ]
+  },
+  {
+    "id": "garen",
+    "campeao": "Garen",
+    "rota": "Mid",
+    "autor": "Triton",
+    "formato": "completo",
+    "dados": "guias/garen",
+    "chave": 86,
+    "titulo": "o Poder de Demacia",
+    "titulo_en": "The Might of Demacia",
+    "escala": 10,
+    "mira": [
+      50,
+      30
+    ],
+    "fonte": "Notas do guia de Garen mid do Triton (season 15), traduzidas do inglês.",
+    "fonte_en": "Notes from Triton's Garen mid guide (season 15).",
+    "links": [
+      {
+        "rotulo": "Ver a planilha original",
+        "rotulo_en": "See the original spreadsheet",
+        "url": "https://docs.google.com/spreadsheets/d/1896y14zn9YDA2c_AZWOkGa2Bwb1vCFIOf2EOTQ_o6VQ/edit"
+      },
+      {
+        "rotulo": "Twitch",
+        "url": "https://www.twitch.tv/triton"
+      },
+      {
+        "rotulo": "YouTube",
+        "url": "https://www.youtube.com/@LoLTritonGG"
+      }
+    ],
+    "acompanhe": [
+      {
+        "nome": "Triton",
+        "url": "https://www.twitch.tv/triton",
+        "canal": "twitch.tv/triton"
+      }
+    ]
   }
 ]

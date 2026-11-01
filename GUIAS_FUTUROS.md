@@ -2,7 +2,7 @@
 
 Fontes que o dono juntou em 2026-10-28 para os próximos guias do BattleMatch, com a triagem feita no mesmo dia
 (planilha aberta ou não, o que tem dentro, quão atual). Os campeões da lista dele sem fonte ficaram de fora.
-Já no site: Akshan, Mordekaiser, Illaoi, Kayle, Fiora e K'Sante (2026-10-29; modelo 3D e sons da Fiora pendentes, só no PC do dono).
+Já no site: Akshan, Mordekaiser, Illaoi, Kayle, Fiora, K'Sante, Akali e Garen mid (2026-11-01; modelo 3D e sons da Fiora pendentes, só no PC do dono).
 
 ## Planilhas abertas (dá para ler e baixar)
 
@@ -102,3 +102,12 @@ A planilha tem download e cópia bloqueados e o autor está com as DMs fechadas;
 mesmo assim, com crédito e links do autor (Twitch, YouTube, X) e o aviso de remoção do rodapé. Se o SupremeG0at
 pedir, tirar o guia (`"oculto": true` no `guias.json`). Como o download é bloqueado, **não está no workflow diário**:
 para atualizar, `node scripts/akali_baixar.js <pasta>` (lê a planilha no navegador) e `python scripts/atualizar_akali.py --de <pasta>`.
+
+## Garen mid (Triton): no site desde 2026-11-01
+
+Busca de fontes novas fora do top em 2026-11-01: nada além de sites de estatística (u.gg, metabot), e o Reddit
+bloqueia acesso automático. O dono decidiu pelo Garen mid. A planilha não tem aviso de direitos; o xlsx é bloqueado,
+mas o CSV do Google (gviz) abre, então está no workflow diário. É a v1 pública (season 15): o autor vende a versão
+atualizada para assinantes da Twitch/Discord. Parte da planilha está desatualizada (o Ímpeto Gradual saiu do jogo;
+o Data Dragon ainda tem o ícone). Se o Triton pedir, tirar o guia (`"oculto": true` no `guias.json`).
+Modelo 3D do Garen: pendente, só no PC do dono.

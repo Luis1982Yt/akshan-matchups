@@ -25,7 +25,7 @@ SONS_UI = {
     "clique": "sfx-uikit-generic-click-small",
 }
 # Id numérico do campeão no cliente, para a fala de escolha.
-CHAVE = {"Akshan": 166, "Mordekaiser": 82, "Illaoi": 420, "Kayle": 10, "Fiora": 114, "K'Sante": 897, "Akali": 84}
+CHAVE = {"Akshan": 166, "Mordekaiser": 82, "Illaoi": 420, "Kayle": 10, "Fiora": 114, "K'Sante": 897, "Akali": 84, "Garen": 86}
 
 
 def baixar(url, destino):

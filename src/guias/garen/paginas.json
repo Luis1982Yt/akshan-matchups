@@ -1,0 +1,153 @@
+[
+ {
+  "id": "geral",
+  "titulo": "Geral",
+  "titulo_en": "Overview",
+  "blocos": [
+   {
+    "tipo": "secao",
+    "titulo": "Matchup Difficulty Color Index",
+    "partes": [
+     {
+      "tipo": "lista",
+      "itens": [
+       {
+        "texto": "0-3 (Pyke, Talon, etc)",
+        "links": []
+       },
+       {
+        "texto": "4-5 (Ahri, Diana, etc)",
+        "links": []
+       },
+       {
+        "texto": "6-7 (Viktor, Veigar, etc)",
+        "links": []
+       },
+       {
+        "texto": "8-9 (Anivia, Lucian, etc)",
+        "links": []
+       },
+       {
+        "texto": "RECOMMENDED DODGE (Camille, Kayle,Ori)",
+        "links": []
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "tipo": "secao",
+    "titulo": "General Splitpushing Strats with Garen:",
+    "partes": [
+     {
+      "tipo": "p",
+      "texto": "After laning phase, your general plan is to split with Hullbreaker when objectives are coming up if you're ahead or even. TEAM FIGHT IF YOU CAN'T SPLIT WELL",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "INTO CERTAIN CHAMPS.SPLITTING KEY ON MATCHUP TAB: Y= CAN SPLIT N= TEAM FIGHT S= SITUATIONALLY SPLIT / TEAM FIGHT",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "VOID GRUB STRATEGY FOR MID: GET PRIO MID AT ALL COSTS AT 5 MINS FOR GRUBS- GETTING 4-6 GRUBS WITH HULL BREAKER IS ALMOST A FREE WIN",
+      "links": []
+     }
+    ]
+   },
+   {
+    "tipo": "secao",
+    "titulo": "BAN RECOMMENDATIONS Season 15",
+    "partes": [
+     {
+      "tipo": "p",
+      "texto": "EMERALD+ Syndra Camille",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "Iron-Platinum Ahri, Akali (ban your current hated top)",
+      "links": []
+     }
+    ]
+   },
+   {
+    "tipo": "secao",
+    "titulo": "Notes",
+    "partes": [
+     {
+      "tipo": "p",
+      "texto": "NOTE ON BOOTS- After the Berserkers nerfs, I don't think it's viable going Berserkers anymore. Go Swiftness Boots every game.",
+      "links": []
+     },
+     {
+      "tipo": "p",
+      "texto": "A NOTE ON CONQUEROR GAREN: I don't personally endorse going Conq EVER,Top or mid.However,other high-elo Garen pla yers have had success with it still.",
+      "links": []
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "runas",
+  "titulo": "Runas",
+  "titulo_en": "Runes",
+  "blocos": [
+   {
+    "tipo": "secao",
+    "titulo": "ADAPTIVE FORCE FIRST IN ALL MATCHUPS,REFER TO MATCHUP TAB FOR 2ND-3RD RUNES",
+    "partes": [
+     {
+      "tipo": "bloco",
+      "bloco": {
+       "tipo": "pecas",
+       "grupos": [
+        {
+         "titulo": "Sorcery",
+         "itens": [
+          {
+           "nome": "Phase Rush",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/PhaseRush/PhaseRush.png"
+          },
+          {
+           "nome": "Axiom Arcanist",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/NullifyingOrb/Axiom_Arcanist.png"
+          },
+          {
+           "nome": "Celerity",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/Celerity/CelerityTemp.png"
+          },
+          {
+           "nome": "Gathering Storm",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/GatheringStorm/GatheringStorm.png"
+          }
+         ]
+        },
+        {
+         "titulo": "Resolve",
+         "itens": [
+          {
+           "nome": "Demolish",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/Demolish/Demolish.png"
+          },
+          {
+           "nome": "Second Wind",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/SecondWind/SecondWind.png"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     {
+      "tipo": "p",
+      "texto": "note: change Nimbus Cloak to Axiom Arcanist",
+      "links": []
+     }
+    ]
+   }
+  ]
+ }
+]

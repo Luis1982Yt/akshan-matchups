@@ -303,6 +303,23 @@ try {
   --texto: #241520; --texto-baixo: #6a5562; --tinta-botao: #ffffff;
   --luz: rgba(216, 120, 180, .12); --sombra: 0 10px 30px rgba(80, 20, 60, .14); color-scheme: light;
 }
+/* Garen: o azul real dos estandartes de Demacia, o aço da armadura e o ouro dos detalhes. */
+:root[data-guia="garen"] {
+  --fundo: #090e19; --painel: #101726; --painel-alto: #172033;
+  --linha: rgba(120, 160, 240, .22); --linha-forte: rgba(120, 160, 240, .48);
+  --acento: #7aa3f2; --acento-vivo: #d8e5ff; --destaque: #e2bf6a;
+  --texto: #e7ecf6; --texto-baixo: #97a3bb; --tinta-botao: #0b1222;
+  --luz: rgba(110, 150, 240, .13); --sombra: 0 10px 30px rgba(0, 0, 0, .5);
+  --sobre-arte: #eef3ff; --destaque-arte: #f0d18a; --botao-1: #dbe7ff; --botao-2: #4f7fe0;
+  --brilho: rgba(220, 232, 255, .5); --brilho-2: rgba(226, 191, 106, .2); color-scheme: dark;
+}
+:root[data-guia="garen"][data-tema="claro"] {
+  --fundo: #eef2f9; --painel: #fbfcff; --painel-alto: #e0e7f4;
+  --linha: rgba(30, 60, 130, .24); --linha-forte: rgba(30, 60, 130, .54);
+  --acento: #2c55a8; --acento-vivo: #1c3c80; --destaque: #8a6414;
+  --texto: #161d2c; --texto-baixo: #515c73; --tinta-botao: #ffffff;
+  --luz: rgba(80, 120, 220, .12); --sombra: 0 10px 30px rgba(20, 40, 90, .14); color-scheme: light;
+}
 /* K'Sante: o pôr do sol de Nazumah (marrom-vinho), o bronze da armadura e o violeta da túnica. */
 :root[data-guia="ksante"] {
   --fundo: #110b0b; --painel: #1b1212; --painel-alto: #251918;
@@ -1942,7 +1959,7 @@ function linhaNaLingua(l) {
 }
 
 /* ---------- Formato completo (runas, itens, dificuldade e seções) ---------- */
-const TITULOS = { "Enemy Cooldowns": "Cooldowns do inimigo", "Early Game": "Early game", "How to trade": "Como trocar", "What to watch out for": "Cuidado com", "Tips": "Dicas", "Mini Rant": "Desabafo", "Tips and Tricks": "Dicas e truques", "What to do as Akali": "O que fazer de Akali", "What to look out for": "Cuidado com", "Timers to think about": "Timers para ficar de olho", "Laning Overview": "Fase de rotas", "Trading / Fighting": "Trocas e lutas", "Level 6+": "Nível 6+", "Additional Information": "Informações extras", "VoD's/Clips": "VODs e clipes" };
+const TITULOS = { "Enemy Cooldowns": "Cooldowns do inimigo", "Early Game": "Early game", "How to trade": "Como trocar", "What to watch out for": "Cuidado com", "Tips": "Dicas", "Mini Rant": "Desabafo", "Tips and Tricks": "Dicas e truques", "What to do as Akali": "O que fazer de Akali", "What to look out for": "Cuidado com", "Timers to think about": "Timers para ficar de olho", "Laning Overview": "Fase de rotas", "Trading / Fighting": "Trocas e lutas", "Level 6+": "Nível 6+", "Additional Information": "Informações extras", "VoD's/Clips": "VODs e clipes", "Strategy": "Estratégia" };
 const KW_EN = /\b(level \d+|lvl \d+|nível \d+)\b/gi;
 const marcaEn = t => destaca(esc(t).replace(KW_EN, m => `<span class="kw">${m}</span>`));
 // Guias escritos em inglês têm uma camada em português (src/guias/<guia>/traducao_pt.json, de scripts/traducao_pt.py):
@@ -1953,7 +1970,7 @@ const langOrig = () => (L !== "en" && !guia.traducao_pt ? ' lang="en"' : "");
 // Item ou runa com ícone: no modo PT, o nome do cliente em português (o "rush" da planilha continua).
 const nomePeca = p => {
   const pt = L !== "en" && p.icone && guia.traducao_pt && guia.traducao_pt.nomes[p.icone];
-  return pt ? pt + (/\brush\b/i.test(p.nome) ? " (rush)" : "") : tr(p.nome);
+  return pt ? pt + (/\brush\b/i.test(p.nome) && !/phase\s*rush/i.test(p.nome) ? " (rush)" : "") : tr(p.nome);
 };
 const notaTexto = t => { if (guia.escala === 10) return t; const m = t.match(/^(\d)(?:\s*\/\s*(\d))?\s*(.*)$/); return m ? `${m[1]}${m[2] ? "–" + m[2] : ""}/5${m[3] ? " " + m[3] : ""}` : t; };
 const pips = n => `<span class="pips" aria-hidden="true">${[1, 2, 3, 4, 5].map(i => `<i${i <= n ? ' class="on"' : ""}></i>`).join("")}</span>`;

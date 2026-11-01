@@ -35,6 +35,7 @@ jobs:
           python3 scripts/atualizar_kayle.py
           python3 scripts/atualizar_fiora.py
           python3 scripts/atualizar_ksante.py
+          python3 scripts/atualizar_garen.py
           python3 scripts/traducao_pt.py  # nomes em PT e títulos em EN; frase nova fica no original até ser traduzida
           python3 scripts/importar_lol.py  # runas e itens de cada matchup para o app importar no cliente
           python3 scripts/build.py
