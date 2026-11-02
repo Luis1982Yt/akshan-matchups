@@ -5723,20 +5723,20 @@
       "rotulo": "Principal",
       "pecas": [
        {
-        "nome": "Press the Attack",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png"
+        "nome": "Hail of Blades",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png"
        },
        {
-        "nome": "Triumph",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/Triumph.png"
+        "nome": "Sudden Impact",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/SuddenImpact/SuddenImpact.png"
        },
        {
-        "nome": "Legend: Alacrity",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendAlacrity/LegendAlacrity.png"
+        "nome": "Grisly Mementos",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/GrislyMementos/GrislyMementos.png"
        },
        {
-        "nome": "Last Stand",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/LastStand/LastStand.png"
+        "nome": "Treasure Hunter",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/TreasureHunter/TreasureHunter.png"
        }
       ]
      },
@@ -5776,20 +5776,20 @@
       "rotulo": "Principal",
       "pecas": [
        {
-        "nome": "Stormraider's Surge",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png"
+        "nome": "Press the Attack",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png"
        },
        {
-        "nome": "Nimbus Cloak",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/NimbusCloak/6361.png"
+        "nome": "Triumph",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/Triumph.png"
        },
        {
-        "nome": "Transcendence",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/Transcendence/Transcendence.png"
+        "nome": "Legend: Alacrity",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendAlacrity/LegendAlacrity.png"
        },
        {
-        "nome": "Scorch",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/Scorch/Scorch.png"
+        "nome": "Last Stand",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/LastStand/LastStand.png"
        }
       ]
      },
@@ -5797,12 +5797,12 @@
       "rotulo": "Secundária",
       "pecas": [
        {
-        "nome": "Sudden Impact",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/SuddenImpact/SuddenImpact.png"
+        "nome": "Nimbus Cloak",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/NimbusCloak/6361.png"
        },
        {
-        "nome": "Treasure Hunter",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/TreasureHunter/TreasureHunter.png"
+        "nome": "Transcendence",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/Transcendence/Transcendence.png"
        }
       ]
      },
