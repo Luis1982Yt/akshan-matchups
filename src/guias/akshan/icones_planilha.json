@@ -132,8 +132,11 @@
    ]
   },
   "bota": {
-   "texto": "Tanto faz",
-   "pecas": []
+   "texto": "Berserker / Vampíricas",
+   "pecas": [
+    "3008",
+    "3006"
+   ]
   },
   "build": {
    "texto": "Craquen / Crit",
