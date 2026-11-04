@@ -3,7 +3,7 @@
 Site de fã de guias de matchup de League of Legends (antes "Akshan Matchups"), no ar em https://battlematch.vercel.app
 (o endereço antigo akshan-matchups.vercel.app redireciona). Domínio futuro: battlematch.gg (ainda não registrado,
 não comprar nem sugerir gastos). Contexto de produto em PRODUCT.md, visual em DESIGN.md, próximos guias em
-GUIAS_FUTUROS.md, como tudo funciona em README.md e app/README.md.
+GUIAS_FUTUROS.md, ideias para depois em IDEIAS.md, como tudo funciona em README.md e app/README.md.
 
 ## Jeito de trabalhar (pedidos do dono)
 
