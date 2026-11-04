@@ -343,27 +343,27 @@
          "itens": [
           {
            "nome": "Ravenous Hydra",
-           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png",
            "id": "3074"
           },
           {
            "nome": "Trinity Force",
-           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png",
            "id": "3078"
           },
           {
            "nome": "Eclipse",
-           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png",
            "id": "6692"
           },
           {
            "nome": "Death's Dance",
-           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png",
            "id": "6333"
           },
           {
            "nome": "Endless Hunger",
-           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/2517.png",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/2517.png",
            "id": "2517"
           }
          ]
@@ -390,25 +390,25 @@
          "itens": [
           {
            "nome": "Voltaic Cyclosword",
-           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6699.png",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6699.png",
            "id": "6699",
            "texto": "Good vs squishy champions (ex: Quinn/Jayce/Yone). Synergizes with HoB/Stormsurge. Others prefer Hubris instead, I prefer Cyclosword. Buy 2nd if getting it."
           },
           {
            "nome": "Muramana",
-           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3042.png",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3042.png",
            "id": "3042",
            "texto": "Very good vs champs that are very tanky and you can't quite dive even at 2-3 items because you don't have the damage, and they really only live because CC + turret damage. So, you invest early into it so you can kill them later (Ex: Malphite, Maokai)"
           },
           {
            "nome": "Maw of Malmortius",
-           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3156.png",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3156.png",
            "id": "3156",
            "texto": "You buy early hexdrinker into heavy ap threats like Akali, Rumble, Cassio, only finish after Rav if they're still a major threat. Generally, finish 3rd after Trinity."
           },
           {
            "nome": "Endless Hunger",
-           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/2517.png",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/2517.png",
            "id": "2517",
            "texto": "You buy Endless Hunger 4th or 5th item into low CC comps with low burst. Good for when you snowball/are ahead."
           }

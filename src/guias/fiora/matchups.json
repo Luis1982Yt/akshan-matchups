@@ -1,5 +1,5 @@
 {
- "versao": "16.21.1",
+ "versao": "16.22.1",
  "fonte": {
   "planilha": "https://docs.google.com/spreadsheets/d/1g_YjX4jYcz15k8FZuOkhc4IWA1LLm28WinrVCGBXxLY/edit",
   "autor": "Sad",
@@ -23,7 +23,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -146,41 +146,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -220,7 +220,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -396,41 +396,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -470,7 +470,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -540,41 +540,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -614,7 +614,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -684,41 +684,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -758,7 +758,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -881,41 +881,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -955,7 +955,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -1078,41 +1078,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -1152,7 +1152,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -1328,41 +1328,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -1402,7 +1402,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -1578,41 +1578,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -1652,7 +1652,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -1775,41 +1775,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -1849,7 +1849,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -1972,41 +1972,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -2076,7 +2076,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -2199,41 +2199,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -2273,7 +2273,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -2396,41 +2396,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -2470,7 +2470,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -2540,41 +2540,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -2614,7 +2614,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -2737,41 +2737,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -2811,7 +2811,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -2934,41 +2934,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -3008,7 +3008,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -3078,41 +3078,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -3152,7 +3152,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -3275,41 +3275,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -3349,7 +3349,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -3525,41 +3525,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -3599,7 +3599,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -3722,41 +3722,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -3796,7 +3796,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -3866,41 +3866,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -3940,7 +3940,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -4063,41 +4063,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -4137,7 +4137,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -4260,41 +4260,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -4334,7 +4334,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -4457,41 +4457,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -4531,7 +4531,7 @@
    "feiticos": [
     {
      "nome": "Exhaust",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerExhaust.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerExhaust.png"
     }
    ],
    "feiticos_ou": true,
@@ -4601,41 +4601,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -4675,7 +4675,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -4798,41 +4798,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -4872,7 +4872,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -4995,41 +4995,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -5069,7 +5069,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -5192,41 +5192,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -5266,7 +5266,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -5442,41 +5442,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -5516,7 +5516,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -5639,41 +5639,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -5713,7 +5713,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -5836,41 +5836,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -5910,7 +5910,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -6033,41 +6033,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -6107,7 +6107,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -6230,41 +6230,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -6304,7 +6304,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -6427,41 +6427,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -6501,11 +6501,11 @@
    "feiticos": [
     {
      "nome": "Barrier",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerBarrier.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerBarrier.png"
     },
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -6628,41 +6628,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -6702,7 +6702,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -6825,41 +6825,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -6899,7 +6899,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -7022,41 +7022,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -7096,7 +7096,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -7219,41 +7219,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -7293,7 +7293,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -7363,41 +7363,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -7437,7 +7437,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -7560,41 +7560,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -7634,7 +7634,7 @@
    "feiticos": [
     {
      "nome": "Exhaust",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerExhaust.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerExhaust.png"
     }
    ],
    "feiticos_ou": true,
@@ -7757,41 +7757,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -7831,7 +7831,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -7954,41 +7954,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -8028,7 +8028,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -8204,41 +8204,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -8278,7 +8278,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -8401,41 +8401,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -8475,11 +8475,11 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     },
     {
      "nome": "Barrier",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerBarrier.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerBarrier.png"
     }
    ],
    "feiticos_ou": true,
@@ -8602,41 +8602,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -8676,7 +8676,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -8852,41 +8852,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -8926,7 +8926,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -9049,41 +9049,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -9123,7 +9123,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -9246,41 +9246,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -9320,7 +9320,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -9443,41 +9443,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -9517,7 +9517,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -9640,41 +9640,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -9714,7 +9714,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -9890,41 +9890,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -9964,7 +9964,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -10087,41 +10087,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -10161,7 +10161,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -10284,41 +10284,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -10358,7 +10358,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -10428,41 +10428,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -10502,7 +10502,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -10625,41 +10625,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -10699,7 +10699,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -10769,41 +10769,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -10843,7 +10843,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -10966,41 +10966,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -11040,7 +11040,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -11216,41 +11216,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -11290,7 +11290,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -11413,41 +11413,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -11487,7 +11487,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -11663,41 +11663,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -11737,7 +11737,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -11860,41 +11860,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -11934,7 +11934,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -12057,41 +12057,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -12131,7 +12131,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -12254,41 +12254,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -12328,7 +12328,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -12451,41 +12451,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -12525,7 +12525,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -12701,41 +12701,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]
@@ -12775,7 +12775,7 @@
    "feiticos": [
     {
      "nome": "Ignite",
-     "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png"
+     "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png"
     }
    ],
    "feiticos_ou": true,
@@ -12898,41 +12898,41 @@
         [
          {
           "nome": "Ravenous Hydra",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3074.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3074.png"
          }
         ],
         [
          {
           "nome": "Trinity Force",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3078.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3078.png"
          },
          {
           "nome": "Eclipse",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6692.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6692.png"
          }
         ],
         [
          {
           "nome": "Death's Dance",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/6333.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/6333.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ],
         [
          {
           "nome": "Sterak's Gage",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3053.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3053.png"
          },
          {
           "nome": "Spear of Shojin",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3161.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3161.png"
          },
          {
           "nome": "Hullbreaker",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3181.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3181.png"
          }
         ]
        ]

@@ -1,5 +1,5 @@
 {
- "versao": "16.21.1",
+ "versao": "16.22.1",
  "fonte": {
   "planilha": "https://docs.google.com/spreadsheets/d/1ArJkfy78AtJ7l5pUQxxCBGYp1pioa0TOu6E9hKpb1gc/edit"
  },
@@ -142,19 +142,19 @@
         [
          {
           "nome": "Chain Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1031.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1031.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ],
         [
          {
           "nome": "Bramble Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3076.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3076.png"
          }
         ]
        ]
@@ -330,7 +330,7 @@
         [
          {
           "nome": "Kaenic Rookern",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222504.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/222504.png"
          }
         ]
        ]
@@ -491,13 +491,13 @@
         [
          {
           "nome": "Chain Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1031.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1031.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -513,11 +513,11 @@
         [
          {
           "nome": "Warden's Mail",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3082.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3082.png"
          },
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/223047.png"
          }
         ]
        ]
@@ -742,13 +742,13 @@
         [
          {
           "nome": "Chain Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1031.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1031.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -764,13 +764,13 @@
         [
          {
           "nome": "Cloth Armor",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1029.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1029.png"
          }
         ],
         [
          {
           "nome": "Refillable Potion",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/2031.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/2031.png"
          }
         ]
        ]
@@ -786,7 +786,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/223047.png"
          }
         ]
        ]
@@ -937,7 +937,7 @@
         [
          {
           "nome": "Kaenic Rookern",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222504.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/222504.png"
          }
         ]
        ]
@@ -1154,13 +1154,13 @@
         [
          {
           "nome": "Chain Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1031.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1031.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -1176,7 +1176,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/223047.png"
          }
         ]
        ]
@@ -1323,7 +1323,7 @@
         [
          {
           "nome": "Kaenic Rookern",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222504.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/222504.png"
          }
         ]
        ]
@@ -1339,7 +1339,7 @@
         [
          {
           "nome": "Boots of Swiftness",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223009.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/223009.png"
          }
         ]
        ]
@@ -1564,7 +1564,7 @@
         [
          {
           "nome": "Kaenic Rookern",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222504.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/222504.png"
          }
         ]
        ]
@@ -1580,19 +1580,19 @@
         [
          {
           "nome": "Negatron Cloak",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1057.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1057.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ],
         [
          {
           "nome": "Kaenic Rookern",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222504.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/222504.png"
          }
         ]
        ]
@@ -1813,13 +1813,13 @@
         [
          {
           "nome": "Chain Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1031.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1031.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -1835,19 +1835,19 @@
         [
          {
           "nome": "Chain Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1031.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1031.png"
          }
         ],
         [
          {
           "nome": "Bramble Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3076.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3076.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -2056,13 +2056,13 @@
         [
          {
           "nome": "Chain Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1031.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1031.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -2078,19 +2078,19 @@
         [
          {
           "nome": "Chain Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1031.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1031.png"
          }
         ],
         [
          {
           "nome": "Negatron Cloak",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1057.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1057.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -2274,19 +2274,19 @@
         [
          {
           "nome": "Bramble Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3076.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3076.png"
          }
         ],
         [
          {
           "nome": "Chain Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1031.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1031.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -2302,13 +2302,13 @@
         [
          {
           "nome": "Bramble Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3076.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3076.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -2492,13 +2492,13 @@
         [
          {
           "nome": "Chain Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1031.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1031.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -2514,7 +2514,7 @@
         [
          {
           "nome": "Randuin's Omen",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223143.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/223143.png"
          }
         ]
        ]
@@ -2715,13 +2715,13 @@
         [
          {
           "nome": "Chain Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1031.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1031.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -2864,13 +2864,13 @@
         [
          {
           "nome": "Chain Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1031.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1031.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -3079,7 +3079,7 @@
         [
          {
           "nome": "Kaenic Rookern",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222504.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/222504.png"
          }
         ]
        ]
@@ -3095,19 +3095,19 @@
         [
          {
           "nome": "Negatron Cloak",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1057.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1057.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ],
         [
          {
           "nome": "Kaenic Rookern",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222504.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/222504.png"
          }
         ]
        ]
@@ -3123,7 +3123,7 @@
         [
          {
           "nome": "Mercury's Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/223111.png"
          }
         ]
        ]
@@ -3323,13 +3323,13 @@
         [
          {
           "nome": "Kaenic Rookern",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222504.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/222504.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -3345,7 +3345,7 @@
         [
          {
           "nome": "Bramble Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3076.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3076.png"
          }
         ]
        ]
@@ -3483,7 +3483,7 @@
         [
          {
           "nome": "Kaenic Rookern",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222504.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/222504.png"
          }
         ]
        ]
@@ -3499,19 +3499,19 @@
         [
          {
           "nome": "Negatron Cloak",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1057.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1057.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ],
         [
          {
           "nome": "Kaenic Rookern",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222504.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/222504.png"
          }
         ]
        ]
@@ -3720,13 +3720,13 @@
         [
          {
           "nome": "Chain Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1031.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1031.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -3742,7 +3742,7 @@
         [
          {
           "nome": "Bramble Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3076.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3076.png"
          }
         ]
        ]
@@ -3922,13 +3922,13 @@
         [
          {
           "nome": "Bramble Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3076.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3076.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -4104,19 +4104,19 @@
         [
          {
           "nome": "Negatron Cloak",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1057.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1057.png"
          }
         ],
         [
          {
           "nome": "Chain Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1031.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1031.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -4337,13 +4337,13 @@
         [
          {
           "nome": "Chain Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1031.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1031.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -4470,13 +4470,13 @@
         [
          {
           "nome": "Null-Magic Mantle",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1033.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1033.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -4492,13 +4492,13 @@
         [
          {
           "nome": "Negatron Cloak",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1057.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1057.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -4633,7 +4633,7 @@
         [
          {
           "nome": "Kaenic Rookern",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222504.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/222504.png"
          }
         ]
        ]
@@ -4838,13 +4838,13 @@
         [
          {
           "nome": "Chain Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1031.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1031.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -5061,13 +5061,13 @@
         [
          {
           "nome": "Negatron Cloak",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1057.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1057.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -5272,13 +5272,13 @@
         [
          {
           "nome": "Kaenic Rookern",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222504.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/222504.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -5294,19 +5294,19 @@
         [
          {
           "nome": "Negatron Cloak",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1057.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1057.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ],
         [
          {
           "nome": "Kaenic Rookern",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222504.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/222504.png"
          }
         ]
        ]
@@ -5515,7 +5515,7 @@
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -5531,7 +5531,7 @@
         [
          {
           "nome": "Mercury's Treads",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223111.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/223111.png"
          }
         ]
        ]
@@ -5732,13 +5732,13 @@
         [
          {
           "nome": "Thornmail",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223075.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/223075.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -5754,13 +5754,13 @@
         [
          {
           "nome": "Bramble Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3076.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3076.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -5928,13 +5928,13 @@
         [
          {
           "nome": "Negatron Cloak",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1057.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1057.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -6139,13 +6139,13 @@
         [
          {
           "nome": "Chain Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1031.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1031.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -6350,13 +6350,13 @@
         [
          {
           "nome": "Chain Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1031.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1031.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -6372,7 +6372,7 @@
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -6498,13 +6498,13 @@
         [
          {
           "nome": "Chain Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1031.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1031.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -6520,11 +6520,11 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/223047.png"
          },
          {
           "nome": "Warden's Mail",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3082.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3082.png"
          }
         ]
        ]
@@ -6696,19 +6696,19 @@
         [
          {
           "nome": "Bramble Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3076.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3076.png"
          }
         ],
         [
          {
           "nome": "Chain Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1031.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1031.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -6925,13 +6925,13 @@
         [
          {
           "nome": "Thornmail",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223075.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/223075.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -6947,13 +6947,13 @@
         [
          {
           "nome": "Bramble Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3076.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3076.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -7166,13 +7166,13 @@
         [
          {
           "nome": "Bramble Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3076.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3076.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -7381,13 +7381,13 @@
         [
          {
           "nome": "Chain Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1031.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1031.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -7522,7 +7522,7 @@
         [
          {
           "nome": "Kaenic Rookern",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222504.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/222504.png"
          }
         ]
        ]
@@ -7653,13 +7653,13 @@
         [
          {
           "nome": "Kaenic Rookern",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222504.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/222504.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -7675,19 +7675,19 @@
         [
          {
           "nome": "Negatron Cloak",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1057.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1057.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ],
         [
          {
           "nome": "Kaenic Rookern",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222504.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/222504.png"
          }
         ]
        ]
@@ -7854,13 +7854,13 @@
         [
          {
           "nome": "Chain Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1031.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1031.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -7876,7 +7876,7 @@
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -7892,11 +7892,11 @@
         [
          {
           "nome": "Warden's Mail",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3082.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3082.png"
          },
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/223047.png"
          }
         ]
        ]
@@ -8109,13 +8109,13 @@
         [
          {
           "nome": "Null-Magic Mantle",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1033.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1033.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -8131,13 +8131,13 @@
         [
          {
           "nome": "Negatron Cloak",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1057.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1057.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -8345,7 +8345,7 @@
         [
          {
           "nome": "Kaenic Rookern",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222504.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/222504.png"
          }
         ]
        ]
@@ -8361,13 +8361,13 @@
         [
          {
           "nome": "Negatron Cloak",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1057.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1057.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -8568,7 +8568,7 @@
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -8691,13 +8691,13 @@
         [
          {
           "nome": "Chain Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1031.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1031.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -8885,13 +8885,13 @@
         [
          {
           "nome": "Negatron Cloak",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1057.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1057.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -9030,7 +9030,7 @@
         [
          {
           "nome": "Kaenic Rookern",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222504.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/222504.png"
          }
         ]
        ]
@@ -9046,19 +9046,19 @@
         [
          {
           "nome": "Negatron Cloak",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1057.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1057.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ],
         [
          {
           "nome": "Kaenic Rookern",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222504.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/222504.png"
          }
         ]
        ]
@@ -9283,13 +9283,13 @@
         [
          {
           "nome": "Bramble Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3076.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3076.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -9305,11 +9305,11 @@
         [
          {
           "nome": "Warden's Mail",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3082.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3082.png"
          },
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/223047.png"
          }
         ]
        ]
@@ -9514,13 +9514,13 @@
         [
          {
           "nome": "Chain Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1031.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1031.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -9536,11 +9536,11 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/223047.png"
          },
          {
           "nome": "Warden's Mail",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3082.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3082.png"
          }
         ]
        ]
@@ -9760,13 +9760,13 @@
         [
          {
           "nome": "Negatron Cloak",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1057.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1057.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -9970,13 +9970,13 @@
         [
          {
           "nome": "Warden's Mail",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3082.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3082.png"
          }
         ],
         [
          {
           "nome": "Thornmail",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223075.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/223075.png"
          }
         ]
        ]
@@ -9992,13 +9992,13 @@
         [
          {
           "nome": "Warden's Mail",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3082.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3082.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -10014,7 +10014,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/223047.png"
          }
         ]
        ]
@@ -10169,13 +10169,13 @@
         [
          {
           "nome": "Negatron Cloak",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1057.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1057.png"
          }
         ],
         [
          {
           "nome": "Zeke's Convergence",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223050.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/223050.png"
          }
         ]
        ]
@@ -10304,13 +10304,13 @@
         [
          {
           "nome": "Chain Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1031.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1031.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -10326,11 +10326,11 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/223047.png"
          },
          {
           "nome": "Warden's Mail",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3082.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3082.png"
          }
         ]
        ]
@@ -10469,7 +10469,7 @@
         [
          {
           "nome": "Kaenic Rookern",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222504.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/222504.png"
          }
         ]
        ]
@@ -10485,19 +10485,19 @@
         [
          {
           "nome": "Negatron Cloak",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1057.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1057.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ],
         [
          {
           "nome": "Kaenic Rookern",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/222504.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/222504.png"
          }
         ]
        ]
@@ -10693,13 +10693,13 @@
         [
          {
           "nome": "Bramble Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3076.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3076.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -10904,19 +10904,19 @@
         [
          {
           "nome": "Bramble Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3076.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3076.png"
          }
         ],
         [
          {
           "nome": "Negatron Cloak",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1057.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1057.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -11116,13 +11116,13 @@
         [
          {
           "nome": "Chain Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1031.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1031.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -11138,7 +11138,7 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/223047.png"
          }
         ]
        ]
@@ -11338,13 +11338,13 @@
         [
          {
           "nome": "Bramble Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3076.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3076.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -11360,11 +11360,11 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/223047.png"
          },
          {
           "nome": "Randuin's Omen",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223143.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/223143.png"
          }
         ]
        ]
@@ -11573,13 +11573,13 @@
         [
          {
           "nome": "Chain Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1031.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1031.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -11595,11 +11595,11 @@
         [
          {
           "nome": "Plated Steelcaps",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223047.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/223047.png"
          },
          {
           "nome": "Randuin's Omen",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/223143.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/223143.png"
          }
         ]
        ]
@@ -11812,7 +11812,7 @@
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -11828,7 +11828,7 @@
         [
          {
           "nome": "Bramble Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3076.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3076.png"
          }
         ]
        ]
@@ -12037,13 +12037,13 @@
         [
          {
           "nome": "Bramble Vest",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3076.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3076.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
@@ -12264,13 +12264,13 @@
         [
          {
           "nome": "Negatron Cloak",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1057.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1057.png"
          }
         ],
         [
          {
           "nome": "Iceborn Gauntlet",
-          "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/226662.png"
+          "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/226662.png"
          }
         ]
        ]
