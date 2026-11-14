@@ -2001,6 +2001,12 @@ const nomePeca = p => {
   const pt = L !== "en" && p.icone && guia.traducao_pt && guia.traducao_pt.nomes[p.icone];
   return pt ? pt + (/\brush\b/i.test(p.nome) && !/phase\s*rush/i.test(p.nome) ? " (rush)" : "") : tr(p.nome);
 };
+// Dificuldade no card do inimigo: nota ("6/10", "3/5") ganha "Dificuldade" na frente; rótulo em palavras do autor
+// ("A favor da Akali", "Matchup de skill", "Médio/Difícil") aparece sozinho, sem o "Dificuldade" repetido.
+const rotuloCardDif = c => {
+  const txt = c.dificuldade.texto ? notaTexto(tr(c.dificuldade.texto)).replace(/\s*\(.*$/, "") : c.dificuldade.overall + "/5";
+  return /[A-Za-zÀ-ÿ]/.test(txt) ? esc(txt) : `${t("dificuldade")} ${esc(txt)}`;
+};
 const notaTexto = t => { if (guia.escala === 10) return t; const m = t.match(/^(\d)(?:\s*\/\s*(\d))?\s*(.*)$/); return m ? `${m[1]}${m[2] ? "–" + m[2] : ""}/5${m[3] ? " " + m[3] : ""}` : t; };
 const pips = n => `<span class="pips" aria-hidden="true">${[1, 2, 3, 4, 5].map(i => `<i${i <= n ? ' class="on"' : ""}></i>`).join("")}</span>`;
 const peca = (p, runa) => `<span class="peca${runa ? " runa" : ""}">${p.icone ? `<img src="${iconePeca(p)}" alt="" width="32" height="32">` : '<span class="soquete" aria-hidden="true"></span>'}<span>${esc(nomePeca(p))}</span></span>`;
@@ -2404,7 +2410,7 @@ function renderDetalhe(animar) {
     g.className = "guia";
     // Duas notas: cada uma num pedaço que pode descer de linha no celular, em vez de ser cortada.
     g.innerHTML = temDifDupla(c) ? `${pips(c.dificuldade.rota)}<span>${t("difRotaCurto")}: ${esc(rotuloDif(DIF_NOTA[c.dificuldade.rota]))} ·</span><span>${t("difJogoCurto")}: ${esc(c.dificuldade.jogo ? rotuloDif(DIF_NOTA[c.dificuldade.jogo]) : "–")}</span>`
-      : c.dificuldade.overall ? `${pips(c.dificuldade.overall)}${t("dificuldade")} ${c.dificuldade.texto ? esc(notaTexto(tr(c.dificuldade.texto)).replace(/\s*\(.*$/, "")) : c.dificuldade.overall + "/5"}` : "";
+      : c.dificuldade.overall ? `${pips(c.dificuldade.overall)}${rotuloCardDif(c)}` : "";
   }
   $("travarNome").textContent = t("travarContra") + c.nome;
   // Se o painel de cooldowns estiver aberto, acompanha a troca de matchup.

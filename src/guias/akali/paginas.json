@@ -91,22 +91,22 @@
          "itens": [
           {
            "nome": "Ignite",
-           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerDot.png",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerDot.png",
            "texto": "Ignite: This is a very easy to use and useful summoner. should be your go\n to alongside flash IMO. Also your go to healing reduction source in\n99.9% of cases."
           },
           {
            "nome": "Flash",
-           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerFlash.png",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerFlash.png",
            "texto": "Flash: your go to every single game. high skill but because you take it every\nsingle game you get value out of it, feel like thisone doesn't need much\nof an explanation."
           },
           {
            "nome": "Teleport",
-           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerTeleport.png",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerTeleport.png",
            "texto": "Since rolequests i don't ever take it. Tp is also a very highly skilled summoner\nwhich means you won't really get the true value out of TP flanks etc until\nyou are in higher elos. You can try using it in harder matchups, but don't I\ndon't recommend it at all, all the changes in S16 made Ignite way better."
           },
           {
            "nome": "Cleanse",
-           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/spell/SummonerBoost.png",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SummonerBoost.png",
            "texto": "Cleanse: This summoner spell is very useful, but its a high skill one. I would\nrecommend not taking it below Diamond-Master, but try it out for yourself\nin matchups i recommend it in, if you can use it, great! if not no problem,\njust go with the classic mercs+tenacity shard approach."
           }
          ]
@@ -178,19 +178,19 @@
          "itens": [
           {
            "nome": "Doran's Ring",
-           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1056.png",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1056.png",
            "id": "1056",
            "texto": "Your best choice always. Riot is heavily pushing Akali in this direction, so imo\ntime to start learning the game with this item start 0-24. Very hard pokematchups\nyou can go doran shield in(LB/vex/zoe for example) but it doesn't feel great.\nyou just slowly bleed out vs them with it."
           },
           {
            "nome": "Doran's Shield",
-           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1054.png",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1054.png",
            "id": "1054",
            "texto": "Really only should play this into the worst of matchups that you are the least\nconfident in, but with time you should start converting to dring even in thoose,\nas winning with dshield/second wind as akali doesn't really exist anymore.\ntoo overnerfed of a combination."
           },
           {
            "nome": "Dark Seal",
-           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1082.png",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1082.png",
            "id": "1082",
            "texto": "Why do i never see you use this item? Basically i would only buy it after first item\nand by then it feels like its too late. why only after first item? because many times\nyour inventory will look like this and you can't fit it. ->"
           }
@@ -214,31 +214,31 @@
          "itens": [
           {
            "nome": "Boots",
-           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/1001.png",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/1001.png",
            "id": "1001",
            "texto": "-Really good earlygame into mages, and you will see me sit on this on toplane\neven at 25-30 mins. Why? tier2 boots are way too stat inefficient, and you \nmostly want offensive stats as Akali.  and magic pen boots are not good enough\nto purchase vs toplane champs as its good vs lower MR targets."
           },
           {
            "nome": "Spellslinger's Shoes",
-           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3175.png",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3175.png",
            "id": "3175",
            "texto": "Always good to buy on midlane for the tier3 around 11-14 mins depending on \nhow good you are doing on your quest. No matter what tier3 boots you have\nyou should always go for them as soon as quest is done/have them done by then.\nJust generic best boots if no need for the others."
           },
           {
            "nome": "Chainlaced Crushers",
-           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3173.png",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3173.png",
            "id": "3173",
            "texto": "Anytime you need tenacity for the game and MR is generally good in the game\ntheese boots are really good even post nerf. just not an autobuy anymore."
           },
           {
            "nome": "Armored Advance",
-           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3174.png",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3174.png",
            "id": "3174",
            "texto": "Would say most situational, but when you need Defensive stats over offensive\nand enemy comp is heavy AD i think its still good on Akali even if its not uber\nsuper broken."
           },
           {
            "nome": "Immortal Path",
-           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3168.png",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3168.png",
            "id": "3168",
            "texto": "Worst item in the game for Akali, huge bait, never buy. In its current form this item\nis only usable on scaling champions, like riven and adcs sadly. Having to invest\nmoney into 0 offensive stats for not that much healing, and then having to get\n+10 kills to fully activate the item is really just awful. It was playable on the release\npatch, but got gutted really fast :/"
           }
@@ -257,43 +257,43 @@
          "itens": [
           {
            "nome": "Hextech Gunblade",
-           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3146.png",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3146.png",
            "id": "3146",
            "texto": "Every single game first item no questions asked. No but really, great buildpath\nis something Akali was missing for a long time now, and this has it. Akali has\ngreat AD scalings on her spells aswell, so its perfect for her with a great active.\nHealing part is pretty placebo because its 1/3rd of what it was pre season11."
           },
           {
            "nome": "Stormsurge",
-           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/4646.png",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/4646.png",
            "id": "4646",
            "texto": "Akalis best 2nd item when going burst. Provides similar damage to Shadowflame\nall while having an easier buildpath, less cost, and movement speed on top of it\njust basically a better shadowflame as of now."
           },
           {
            "nome": "Lich Bane",
-           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3100.png",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3100.png",
            "id": "3100",
            "texto": "This item is pretty good when not buying mpen boots,the buildpath sucks but that\nmatters way less when purchasing as a 2nd item.feels great into tankier \nopponents overall, value goes up when you go defensive boots as you play\nfor longer fights with thoose boots anyways, and less for burst.\ncan still buy with mpen boots anyways if you want gigadamage vs hp/mr stackers"
           },
           {
            "nome": "Shadowflame",
-           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/4645.png",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/4645.png",
            "id": "4645",
            "texto": "This item is buyable when you want more damage as 2nd, sadly this and \nstormsurge has no real different identity, they both do the same thing, stormsurge\ndoes it better for lower cost which makes no sense."
           },
           {
            "nome": "Rabadon's Deathcap",
-           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3089.png",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3089.png",
            "id": "3089",
            "texto": "Akali's 2nd best item, but because of the buildpath you usually go for it later on.\nIf you manage to get a largerod recall for shadowflame, and you have money\nfor another largerod on the nextone you can pivot into this instead.\nyes its already better as a 2nd item than shadow, the buildpath is the reason you\ndon't see it perma as a 2nd item."
           },
           {
            "nome": "Void Staff",
-           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3135.png",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3135.png",
            "id": "3135",
            "texto": "Another one of Akalis huge favourites, If opponents have above 60MR on average\nits already great value. synergies well with flatpen aswell, its just one of the best\nitems all around. Buildpath sucks tho, but mandatory in every fullbuild, just like\nrabadon/gunblade."
           },
           {
            "nome": "Zhonya's Hourglass",
-           "icone": "https://ddragon.leagueoflegends.com/cdn/16.21.1/img/item/3157.png",
+           "icone": "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/item/3157.png",
            "id": "3157",
            "texto": "Another huge favourite, great as a defensive tool, and as an agressive one aswell\nyou can zhonya while E2ing to guarantee not get your E2 canceled by CC.\nAnother neat trick with zhonya is not building out the item and sitting on seekers\nas long as you have the active. this does 2 things: 1: it allows you to buy largerod\nand then start building into another item if you don't end up using your seekers\nyou might end up going for rabadon instead of finishing it and still have the \nactive. and on top of it you can use seekers->recall->buy zhonya you have \nanother zhonya without it being on a 120second cooldown. this cd is very long\nand is even better if you have TP. you can legit fight zhonya get out buy zhonya\nand TP back to fight and have another surprise zhonya that people never \nexpect even in highelo. 99%part of your fullbuild, insane item."
           }
