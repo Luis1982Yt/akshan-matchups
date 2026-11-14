@@ -1,10 +1,12 @@
 """Monta, para cada matchup, a página de runas e o conjunto de itens que o app importa no cliente do LoL.
 
 Grava src/guias/<guia>/importar.json:
-  {slug: {"runas": [página, ...], "itens": [bloco, ...]}}
+  {slug: {"runas": [página, ...], "itens": [bloco, ...], "feiticos": [id1, id2]}}
   página: {"primaryStyleId", "subStyleId", "selectedPerkIds"} no formato da API do cliente (/lol-perks/v1/pages),
           uma por opção de runas da planilha (Opção 1, Opção 2...);
-  bloco:  {"tipo": rótulo em inglês, "tipo_pt": rótulo em português, "itens": ["3076", ...]} (/lol-item-sets).
+  bloco:  {"tipo": rótulo em inglês, "tipo_pt": rótulo em português, "itens": ["3076", ...]} (/lol-item-sets);
+  feiticos: os dois feitiços de invocador da matchup, ids numéricos do cliente (campo "key" do summoner.json),
+          para /lol-champ-select/v1/session/my-selection. Lista vazia quando a planilha não diz.
 O build junta tudo no guias-app.json, que o app baixa.
 
 Formato completo (Mordekaiser, Illaoi): runas e itens saem do matchups.json, pelos ícones de cada peça.
@@ -160,6 +162,24 @@ def blocos_completo(m, itens, textos):
     return blocos
 
 
+FLASH = "SummonerFlash"
+# Como o Akshan (formato simples) escreve o segundo feitiço; o primeiro é sempre o Flash.
+FEITICO_AKSHAN = {"ignite": "SummonerDot", "tp": "SummonerTeleport", "exhaust": "SummonerExhaust", "cleanse": "SummonerBoost"}
+
+
+def feiticos_ids(arquivos, chaves, opcoes=False):
+    """['SummonerFlash', 'SummonerDot', ...] (na ordem da planilha) -> os 2 ids do cliente. Com mais de dois, ou
+    quando a planilha lista opções (feiticos_ou), fica o Flash e o primeiro outro. Só um feitiço, ou opções sem o
+    Flash (Fiora: "Incendiar ou Barreira"), quer dizer Flash + esse: o Flash fica subentendido."""
+    arquivos = list(dict.fromkeys(a for a in arquivos if a in chaves))
+    if arquivos and FLASH not in arquivos and (len(arquivos) == 1 or opcoes):
+        arquivos = [FLASH] + arquivos
+    if len(arquivos) > 2 or (opcoes and len(arquivos) == 2 and FLASH not in arquivos):
+        outros = [a for a in arquivos if a != FLASH]
+        arquivos = ([FLASH] if FLASH in arquivos else []) + outros[:2 - (FLASH in arquivos)]
+    return [int(chaves[a]) for a in arquivos] if len(arquivos) == 2 else []
+
+
 def slug(nome):
     """A mesma regra da função slug() do src/template.html."""
     s = unicodedata.normalize("NFD", nome.lower())
@@ -168,7 +188,7 @@ def slug(nome):
     return re.sub(r"\s+", "-", s)
 
 
-def guia_completo(pasta, runas_, itens):
+def guia_completo(pasta, runas_, itens, chaves):
     dados = json.loads((pasta / "matchups.json").read_text(encoding="utf-8"))
     trad = pasta / "traducao_pt.json"
     textos = json.loads(trad.read_text(encoding="utf-8"))["textos"] if trad.exists() else {}
@@ -191,11 +211,13 @@ def guia_completo(pasta, runas_, itens):
                 paginas.append(pg)
             else:
                 falhas.append(m["nome"])
-        saida[slug(m["nome"])] = {"runas": paginas, "itens": blocos_completo(m, itens, textos)}
+        arqs = [re.search(r"/spell/(\w+)\.png$", f.get("icone") or "") for f in m.get("feiticos", [])]
+        saida[slug(m["nome"])] = {"runas": paginas, "itens": blocos_completo(m, itens, textos),
+                                  "feiticos": feiticos_ids([a.group(1) for a in arqs if a], chaves, bool(m.get("feiticos_ou")))}
     return saida, falhas
 
 
-def guia_simples(pasta, runas_, itens):
+def guia_simples(pasta, runas_, itens, chaves):
     """Akshan: a página padrão da runa principal (meta.json > paginas_padrao) com as duas secundárias da planilha."""
     meta = json.loads((pasta / "meta.json").read_text(encoding="utf-8"))
     icones = json.loads((pasta / "icones_planilha.json").read_text(encoding="utf-8"))
@@ -215,7 +237,7 @@ def guia_simples(pasta, runas_, itens):
         return list(dict.fromkeys(ks))
 
     saida, falhas = {}, []
-    for nome, runa, sec, _spell, bota, build, *_ in rows:
+    for nome, runa, sec, spell, bota, build, *_ in rows:
         principais = [runas_.acha(meta["pecas"][k]) for k in pecas(nome, "runa", runa) if k in meta["pecas"]]
         chave_runa = next((r for r in principais if r and r["linha"] == 0), None)
         base = padrao.get(chave_runa["nome"]) if chave_runa else None
@@ -234,20 +256,24 @@ def guia_simples(pasta, runas_, itens):
             ids = [i for i in (itens.id(meta["pecas"].get(k, {}).get("icone")) for k in pecas(nome, campo, valor)) if i]
             if ids:
                 blocos.append({"tipo": en, "tipo_pt": pt, "itens": list(dict.fromkeys(ids))})
-        saida[slug(nome)] = {"runas": paginas, "itens": blocos}
+        segundo = FEITICO_AKSHAN.get(re.split(r"\s*/\s*", spell.strip())[0].lower())
+        saida[slug(nome)] = {"runas": paginas, "itens": blocos,
+                             "feiticos": feiticos_ids([FLASH, segundo] if segundo else [], chaves)}
     return saida, falhas
 
 
 def main():
     runas_ = Runas(baixa(f"{VER}/data/en_US/runesReforged.json"))
     itens = Itens(baixa(f"{VER}/data/en_US/item.json")["data"])
+    chaves = {k: v["key"] for k, v in baixa(f"{VER}/data/en_US/summoner.json")["data"].items()}
     for cfg in json.loads((RAIZ / "src" / "guias.json").read_text(encoding="utf-8")):
         pasta = RAIZ / "src" / cfg["dados"]
-        saida, falhas = (guia_simples if cfg["formato"] == "simples" else guia_completo)(pasta, runas_, itens)
+        saida, falhas = (guia_simples if cfg["formato"] == "simples" else guia_completo)(pasta, runas_, itens, chaves)
         (pasta / "importar.json").write_text(json.dumps(saida, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8", newline="\n")
         com_runas = sum(1 for v in saida.values() if v["runas"])
         com_itens = sum(1 for v in saida.values() if v["itens"])
-        print(f"{cfg['id']}: {len(saida)} matchups, {com_runas} com runas, {com_itens} com itens"
+        com_feiticos = sum(1 for v in saida.values() if v["feiticos"])
+        print(f"{cfg['id']}: {len(saida)} matchups, {com_runas} com runas, {com_itens} com itens, {com_feiticos} com feitiços"
               + (f"; página incompleta na planilha: {sorted(set(falhas))}" if falhas else ""))
 
 

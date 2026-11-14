@@ -71,7 +71,7 @@ TXT = {
         "nenhum": "Nenhum inimigo escolhido ainda",
         "sem_guia": "{c} (sem guia)",
         "iniciar": "Iniciar com o Windows",
-        "importar": "Importar runas e itens no lock",
+        "importar": "Importar runas, itens e feitiços no lock",
         "importar_agora": "Importar runas e itens agora",
         "aceitar": "Aceitar partida automaticamente",
         "sair": "Sair",
@@ -90,7 +90,7 @@ TXT = {
         "nenhum": "No enemy picked yet",
         "sem_guia": "{c} (no guide)",
         "iniciar": "Start with Windows",
-        "importar": "Import runes and items on lock-in",
+        "importar": "Import runes, items and spells on lock-in",
         "importar_agora": "Import runes and items now",
         "aceitar": "Auto-accept match",
         "sair": "Quit",
@@ -285,6 +285,17 @@ def conjuntos_com(conjuntos, novo):
     return [c for c in conjuntos if c.get("uid") != novo["uid"]] + [novo]
 
 
+def ordem_feiticos(atual, novos):
+    """Põe os dois feitiços da matchup nas teclas D/F sem bagunçar o costume do jogador: o feitiço que ele já tinha
+    escolhido (quase sempre o Flash) fica na mesma tecla; o outro vai na tecla que sobra.
+    atual = (spell1Id, spell2Id) da seleção agora; novos = [id, id] da matchup. Devolve (spell1Id, spell2Id)."""
+    a, b = novos
+    s1, s2 = atual
+    if b == s1 or a == s2:  # o 2º da matchup já estava na tecla D, ou o 1º estava na F: inverte
+        a, b = b, a
+    return a, b
+
+
 # ---------- LCU (API local do cliente) ----------
 
 def _exe_processos(nome):
@@ -406,6 +417,13 @@ class Lcu:
                                          "itemSets": conjuntos_com(atual.get("itemSets") or [], conjunto),
                                          "timestamp": int(time.time() * 1000)})
 
+    def grava_feiticos(self, novos):
+        """Escolhe os dois feitiços da matchup na seleção de campeões (só dá durante a seleção)."""
+        sessao = self._pede("GET", "/lol-champ-select/v1/session") or {}
+        eu = next((m for m in sessao.get("myTeam", []) if m.get("cellId") == sessao.get("localPlayerCellId")), {})
+        s1, s2 = ordem_feiticos((eu.get("spell1Id"), eu.get("spell2Id")), novos)
+        self._pede("PATCH", "/lol-champ-select/v1/session/my-selection", json={"spell1Id": s1, "spell2Id": s2})
+
     def fase(self):
         """Fase do cliente (Lobby, ChampSelect, InProgress...). Só GET."""
         try:
@@ -439,17 +457,17 @@ class Aceitador:
 
 
 class Importador:
-    """Grava no cliente as runas e os itens da matchup, uma importação por vez (o lock e o botão da janela podem coincidir)."""
+    """Grava no cliente as runas, os itens e os feitiços da matchup, uma importação por vez (o lock e o botão da janela podem coincidir)."""
 
     def __init__(self, lcu, cfg, salva, lingua_):
         self.lcu, self.cfg, self.salva, self.lingua = lcu, cfg, salva, lingua_
         self.trava = threading.Lock()
 
     def importa(self, guia, s, opcao=0):
-        """Devolve o que foi gravado: {"runas": bool, "itens": bool}. opcao = Opção 1, 2... das runas na planilha."""
+        """Devolve o que foi gravado: {"runas": bool, "itens": bool, "feiticos": bool}. opcao = Opção 1, 2... das runas."""
         dados = (guia.get("importar") or {}).get(s) or {}
         nome = next((m[0] for m in guia.get("matchups", []) if m[2] == s), s)
-        feito = {"runas": False, "itens": False}
+        feito = {"runas": False, "itens": False, "feiticos": False}
         with self.trava:
             paginas = dados.get("runas") or []
             if paginas:
@@ -468,6 +486,12 @@ class Importador:
                     feito["itens"] = True
                 except Exception as e:
                     log.warning("itens: %s", e)
+            if len(dados.get("feiticos") or []) == 2:
+                try:
+                    self.lcu.grava_feiticos(dados["feiticos"])
+                    feito["feiticos"] = True
+                except Exception as e:
+                    log.warning("feitiços: %s", e)
         log.info("importou %s/%s (opção %d): %s", guia["id"], s, opcao + 1, feito)
         return feito
 
@@ -807,7 +831,7 @@ def main():
     if "iniciar" not in cfg:
         cfg["iniciar"] = True  # ligado por padrão
         salva_config(cfg)
-    cfg.setdefault("importar", True)  # importar runas e itens no lock: ligado por padrão
+    cfg.setdefault("importar", True)  # importar runas, itens e feitiços no lock: ligado por padrão
     try:
         inicia_com_windows(cfg["iniciar"])
     except OSError as e:

@@ -2,7 +2,10 @@
 
 Lista do dono para depois. Cada uma com o que já se sabe para não começar do zero.
 
-## Importar feitiços de invocador (app)
+## Importar feitiços de invocador (app) — FEITO no código em 2026-11-14, falta testar no PC
+- Feito: `importar.json` traz `feiticos`, o app grava na seleção de campeões mantendo a tecla do Flash.
+  Falta: gerar o .exe no Windows (`python app/gerar_exe.py`), testar numa seleção de campeões de verdade e só
+  então publicar a release (depois do "pode publicar" do dono).
 - Hoje o app importa runas e itens da matchup no cliente. Faltam os feitiços (ex.: Flash + Incendiar).
 - Caminho provável: API local do cliente na seleção de campeões, `PATCH /lol-champ-select/v1/session/my-selection`
   com `spell1Id` / `spell2Id` (ids numéricos do `summoner.json` do Data Dragon, campo `key`).
@@ -10,7 +13,7 @@ Lista do dono para depois. Cada uma com o que já se sabe para não começar do 
   (Garen: `feiticos_texto`), importar a primeira e mostrar as outras como opção.
 - Cuidar da ordem D/F do jogador (Flash na mesma tecla de sempre): ler a seleção atual antes e manter o Flash onde estava.
 
-## Overlay no jogo (estilo Porofessor) com build e cooldowns
+## Overlay no jogo (estilo Porofessor) com build e cooldowns — fazer numa sessão no PC do dono
 - Uma janela por cima do jogo com a matchup da partida: build, dicas curtas, cooldowns do inimigo.
 - O app já lê a seleção de campeões; dentro da partida dá para ler a Live Client Data API (`https://127.0.0.1:2999/liveclientdata/allgamedata`):
   campeões, itens, nível.

@@ -197,6 +197,12 @@ class LcuFalso(app.Lcu):
             nova = {**kw["json"], "id": 900, "isDeletable": True}
             self.paginas.append(nova)
             return nova
+        if caminho == "/lol-champ-select/v1/session":
+            return {"localPlayerCellId": 2, "myTeam": [{"cellId": 1, "spell1Id": 7, "spell2Id": 3},
+                                                       {"cellId": 2, "spell1Id": 14, "spell2Id": 4}]}
+        if metodo == "PATCH":
+            self.feiticos = (kw["json"]["spell1Id"], kw["json"]["spell2Id"])
+            return None
         if caminho == "/lol-summoner/v1/current-summoner":
             return {"summonerId": 7, "accountId": 70}
         if metodo == "GET":
@@ -255,7 +261,7 @@ class TestImportar(unittest.TestCase):
         lcu, cfg, salvos = LcuFalso([PRESET], total=2), {}, []
         imp = app.Importador(lcu, cfg, salvos.append, "pt")
         feito = imp.importa(self.guias["illaoi"], "darius", 1)
-        self.assertEqual(feito, {"runas": True, "itens": True})
+        self.assertEqual(feito, {"runas": True, "itens": True, "feiticos": False})  # a planilha da Illaoi não traz feitiços
         self.assertEqual(lcu.paginas[-1]["selectedPerkIds"], self.guias["illaoi"]["importar"]["darius"]["runas"][1]["selectedPerkIds"])
         self.assertEqual(lcu.paginas[-1]["name"], "Illaoi vs Darius")
         self.assertEqual(cfg["pagina_runas"], 900)
@@ -263,7 +269,21 @@ class TestImportar(unittest.TestCase):
 
     def test_cliente_fechado_nao_quebra(self):
         imp = app.Importador(LcuFalso([], fechado=True), {}, lambda c: None, "pt")
-        self.assertEqual(imp.importa(self.guias["mordekaiser"], "aatrox"), {"runas": False, "itens": False})
+        self.assertEqual(imp.importa(self.guias["mordekaiser"], "aatrox"), {"runas": False, "itens": False, "feiticos": False})
+
+    def test_feiticos_mantem_a_tecla_do_flash(self):
+        self.assertEqual(app.ordem_feiticos((4, 14), [4, 14]), (4, 14))
+        self.assertEqual(app.ordem_feiticos((14, 4), [4, 14]), (14, 4))  # Flash no F continua no F
+        self.assertEqual(app.ordem_feiticos((4, 12), [6, 4]), (4, 6))
+        self.assertEqual(app.ordem_feiticos((12, 4), [4, 6]), (6, 4))
+        self.assertEqual(app.ordem_feiticos((None, None), [4, 14]), (4, 14))  # seleção vazia: ordem da matchup
+
+    def test_importador_grava_os_feiticos_da_matchup(self):
+        lcu = LcuFalso([PRESET], total=2)
+        feito = app.Importador(lcu, {}, lambda c: None, "pt").importa(self.guias["garen"], "darius")
+        self.assertTrue(feito["feiticos"])
+        self.assertEqual(sorted(lcu.feiticos), sorted(self.guias["garen"]["importar"]["darius"]["feiticos"]))
+        self.assertEqual(lcu.feiticos[1], 4)  # o jogador tinha o Flash na tecla F (spell2Id): continua lá
 
     def test_monitor_importa_quando_abre_a_matchup(self):
         importados = []
