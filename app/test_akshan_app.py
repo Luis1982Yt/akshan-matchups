@@ -6,6 +6,8 @@ Rode com: python -m unittest app/test_akshan_app.py
 import os
 import sys
 import unittest
+from unittest import mock
+import tempfile
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import akshan_app as app  # noqa: E402
@@ -342,3 +344,70 @@ class TestAceitar(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestAtualizacao(unittest.TestCase):
+    RELEASE = {"tag_name": "app-v9", "assets": [{"name": "BattleMatch.exe", "size": 6,
+                                                 "browser_download_url": "https://exemplo/BattleMatch.exe"}]}
+
+    def test_numero_da_versao(self):
+        self.assertEqual(app.numero_versao("app-v12"), 12)
+        self.assertIsNone(app.numero_versao("dev"))
+        self.assertIsNone(app.numero_versao("v3"))
+
+    def test_so_atualiza_para_versao_mais_nova(self):
+        self.assertEqual(app.versao_nova("app-v8", self.RELEASE), ("https://exemplo/BattleMatch.exe", 6))
+        self.assertIsNone(app.versao_nova("app-v9", self.RELEASE))
+        self.assertIsNone(app.versao_nova("app-v10", self.RELEASE))
+        self.assertIsNone(app.versao_nova("dev", self.RELEASE))  # rodando do código: nunca se troca
+        self.assertIsNone(app.versao_nova("app-v8", {"tag_name": "app-v9", "assets": []}))
+
+    def _exe(self, pasta, conteudo):
+        exe = os.path.join(pasta, "BattleMatch.exe")
+        with open(exe, "wb") as f:
+            f.write(conteudo)
+        return exe
+
+    def test_troca_o_exe_e_guarda_o_antigo(self):
+        with tempfile.TemporaryDirectory() as d:
+            exe = self._exe(d, b"MZvelho")
+            novo = os.path.join(d, "n.exe")
+            with open(novo, "wb") as f:
+                f.write(b"MZnovo")
+            antigo = app.troca_exe(exe, novo)
+            self.assertEqual(open(exe, "rb").read(), b"MZnovo")
+            self.assertEqual(open(antigo, "rb").read(), b"MZvelho")
+            app.apaga_antigo(exe)
+            self.assertFalse(os.path.exists(antigo))
+
+    def test_baixa_e_troca_quando_tem_versao_nova(self):
+        class Resp:
+            def __init__(self, dados=None, corpo=b""):
+                self.status_code, self._dados, self._corpo = 200, dados, corpo
+            def json(self):
+                return self._dados
+            def raise_for_status(self):
+                pass
+            def iter_content(self, _n):
+                yield self._corpo
+            def __enter__(self):
+                return self
+            def __exit__(self, *_):
+                return False
+
+        class Http:
+            def __init__(self, corpo):
+                self.corpo = corpo
+            def get(self, url, **_kw):
+                return Resp(dados=TestAtualizacao.RELEASE) if "api.github" in url else Resp(corpo=self.corpo)
+
+        with tempfile.TemporaryDirectory() as d, mock.patch.object(app, "VERSAO_APP", "app-v8"):
+            exe = self._exe(d, b"MZvelho")
+            self.assertEqual(app.baixa_atualizacao(exe, Http(b"MZnovo")), "app-v9")
+            self.assertEqual(open(exe, "rb").read(), b"MZnovo")
+        with tempfile.TemporaryDirectory() as d, mock.patch.object(app, "VERSAO_APP", "app-v8"):
+            exe = self._exe(d, b"MZvelho")
+            with self.assertRaises(RuntimeError):  # veio cortado: não troca nada
+                app.baixa_atualizacao(exe, Http(b"MZ"))
+            self.assertEqual(open(exe, "rb").read(), b"MZvelho")
+

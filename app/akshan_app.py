@@ -36,6 +36,10 @@ INTERVALO_POLL = 1.5        # segundos entre leituras na seleção
 INTERVALO_SEM_CLIENTE = 4   # segundos entre tentativas de achar o cliente
 INTERVALO_MIN_ABRIR = 5     # segundos mínimos entre duas trocas automáticas de matchup
 OVERLAY_LARGURA, OVERLAY_ALTURA = 360, 560  # janela por cima da partida
+# Versão do app: o workflow app-exe.yml troca "dev" pela tag da release (ex.: app-v8) antes de gerar o .exe.
+VERSAO_APP = "dev"
+URL_ULTIMA_VERSAO = "https://api.github.com/repos/Luis1982Yt/akshan-matchups/releases/latest"
+INTERVALO_VER_ATUALIZACAO = 6 * 3600  # segundos entre duas olhadas por versão nova
 INTERVALO_RECARREGAR = 600  # segundos entre renovações dos guias (guias-app.json) fora da seleção
 JANELA_LARGURA, JANELA_ALTURA = 460, 900
 FASES_JOGO = ("GameStart", "InProgress", "Reconnect")  # partida carregando ou rolando: a janela não aparece  # janela lateral estreita: o site mostra o formato compacto
@@ -830,9 +834,82 @@ class ApiOverlay:
 
 # ---------- Bandeja ----------
 
-def uma_instancia():
-    ctypes.windll.kernel32.CreateMutexW(None, False, "Local\\BattleMatchApp")
-    return ctypes.windll.kernel32.GetLastError() != 183  # ERROR_ALREADY_EXISTS
+def uma_instancia(esperar=0):
+    """True se for a única cópia aberta. Com esperar, tenta de novo por alguns segundos (a cópia antiga está
+    fechando depois de se atualizar)."""
+    fim = time.monotonic() + esperar
+    while True:
+        h = ctypes.windll.kernel32.CreateMutexW(None, False, "Local\\BattleMatchApp")
+        if ctypes.windll.kernel32.GetLastError() != 183:  # ERROR_ALREADY_EXISTS
+            return True
+        ctypes.windll.kernel32.CloseHandle(h)
+        if time.monotonic() >= fim:
+            return False
+        time.sleep(0.5)
+
+
+# ---------- Atualização automática (pela release mais nova do GitHub) ----------
+
+def numero_versao(tag):
+    """'app-v8' -> 8; o que não for uma tag de app -> None."""
+    m = re.fullmatch(r"app-v(\d+)", (tag or "").strip())
+    return int(m.group(1)) if m else None
+
+
+def versao_nova(atual, release):
+    """URL e tamanho do BattleMatch.exe da release, se ela for mais nova que a versão atual; senão None."""
+    n_atual, n_nova = numero_versao(atual), numero_versao((release or {}).get("tag_name"))
+    if n_atual is None or n_nova is None or n_nova <= n_atual:
+        return None
+    asset = next((a for a in release.get("assets", []) if a.get("name") == "BattleMatch.exe"), None)
+    return (asset["browser_download_url"], asset.get("size")) if asset else None
+
+
+def troca_exe(exe, novo):
+    """Põe o .exe novo no lugar do atual. O Windows deixa renomear um .exe aberto (só não deixa apagar):
+    o atual vira BattleMatch.antigo.exe, apagado na próxima abertura."""
+    antigo = os.path.splitext(exe)[0] + ".antigo.exe"
+    if os.path.exists(antigo):
+        os.remove(antigo)
+    os.replace(exe, antigo)
+    try:
+        os.replace(novo, exe)
+    except OSError:
+        os.replace(antigo, exe)  # deu errado: volta o antigo para o lugar
+        raise
+    return antigo
+
+
+def apaga_antigo(exe):
+    try:
+        os.remove(os.path.splitext(exe)[0] + ".antigo.exe")
+    except OSError:
+        pass
+
+
+def baixa_atualizacao(exe, http=requests):
+    """Se houver versão nova, baixa e troca o .exe. Devolve a tag nova (ou None). Não reinicia nada."""
+    r = http.get(URL_ULTIMA_VERSAO, timeout=15, headers={"Accept": "application/vnd.github+json"})
+    if r.status_code != 200:
+        return None
+    release = r.json()
+    nova = versao_nova(VERSAO_APP, release)
+    if not nova:
+        return None
+    url, tamanho = nova
+    temp = os.path.splitext(exe)[0] + ".novo.exe"
+    with http.get(url, timeout=120, stream=True) as d:
+        d.raise_for_status()
+        with open(temp, "wb") as f:
+            for parte in d.iter_content(1 << 16):
+                f.write(parte)
+    with open(temp, "rb") as f:
+        inicio = f.read(2)
+    if inicio != b"MZ" or (tamanho and os.path.getsize(temp) != tamanho):  # download cortado ou não é um .exe
+        os.remove(temp)
+        raise RuntimeError("download da versão nova veio incompleto")
+    troca_exe(exe, temp)
+    return release["tag_name"]
 
 
 def main():
@@ -896,8 +973,11 @@ def main():
         webview.start(lambda: threading.Thread(target=roteiro, daemon=True).start(), private_mode=False,
                       storage_path=os.path.join(PASTA_CONFIG, "janela-teste"), gui="edgechromium")
         return
-    if not uma_instancia():
+    if not uma_instancia(esperar=20 if "--atualizado" in sys.argv else 0):
         return
+    if getattr(sys, "frozen", False):
+        apaga_antigo(sys.executable)
+    log.info("BattleMatch %s", VERSAO_APP)
 
     T = TXT[lingua()]
     cfg = config()
@@ -944,10 +1024,32 @@ def main():
         monitor.dados = Dados(guias, ids, taxas)
         log.info("dados: guias %s, %d campeões, %d taxas", [g["id"] for g in monitor.dados.guias], len(monitor.dados.ids), len(monitor.dados.taxas))
 
+    def atualiza_se_tiver():
+        """Fora da seleção e da partida, troca o .exe pela versão nova e reabre o app sozinho."""
+        try:
+            tag = baixa_atualizacao(sys.executable)
+        except Exception as e:
+            log.warning("atualização: %s", e)
+            return
+        if not tag:
+            return
+        log.info("atualizado para %s: reabrindo", tag)
+        import subprocess
+        subprocess.Popen([sys.executable, "--atualizado"], close_fds=True,
+                         creationflags=getattr(subprocess, "DETACHED_PROCESS", 0))
+        sair(icone, None)
+
     def laco():
         carrega()
         carregado = time.monotonic()
+        olhou_versao = None
         while not parar.is_set():
+            if getattr(sys, "frozen", False) and VERSAO_APP != "dev" and monitor.estado in ("fora", "sem_cliente") \
+                    and (olhou_versao is None or time.monotonic() - olhou_versao > INTERVALO_VER_ATUALIZACAO):
+                olhou_versao = time.monotonic()
+                atualiza_se_tiver()
+                if parar.is_set():
+                    break
             # Fora da seleção, renova guias e runas de tempos em tempos: correção no site chega sem reabrir o app.
             if monitor.estado not in ("guia", "outro") and time.monotonic() - carregado > INTERVALO_RECARREGAR:
                 try:
