@@ -285,6 +285,19 @@ class TestImportar(unittest.TestCase):
         self.assertEqual(sorted(lcu.feiticos), sorted(self.guias["garen"]["importar"]["darius"]["feiticos"]))
         self.assertEqual(lcu.feiticos[1], 4)  # o jogador tinha o Flash na tecla F (spell2Id): continua lá
 
+    def test_overlay_abre_na_partida_e_fecha_no_fim(self):
+        eventos = []
+        estados = iter([("ok", sessao(eu=82, inimigos=[122])), ("jogo", None), ("jogo", None), ("fora", None)])
+        m = app.Monitor(app.Dados(app.carrega_guias_local(), IDS, TAXAS), lambda: next(estados), abre=lambda u: None,
+                        agora=Relogio(), no_jogo=lambda g, s: eventos.append(("jogo", g["id"], s)),
+                        fim_jogo=lambda: eventos.append(("fim",)))
+        for _ in range(4):
+            m.passo()
+        self.assertEqual(eventos, [("jogo", "mordekaiser", "darius"), ("fim",)])
+
+    def test_endereco_do_overlay(self):
+        self.assertEqual(app.url_overlay("garen", "darius"), app.SITE + "?overlay#garen/darius")
+
     def test_monitor_importa_quando_abre_a_matchup(self):
         importados = []
         m = app.Monitor(app.Dados(app.carrega_guias_local(), IDS, TAXAS), lambda: ("ok", sessao(eu=82, inimigos=[122])),

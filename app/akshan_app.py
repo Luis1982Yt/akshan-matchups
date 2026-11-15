@@ -35,6 +35,7 @@ SITE = "https://battlematch.vercel.app/"
 INTERVALO_POLL = 1.5        # segundos entre leituras na seleção
 INTERVALO_SEM_CLIENTE = 4   # segundos entre tentativas de achar o cliente
 INTERVALO_MIN_ABRIR = 5     # segundos mínimos entre duas trocas automáticas de matchup
+OVERLAY_LARGURA, OVERLAY_ALTURA = 360, 560  # janela por cima da partida
 INTERVALO_RECARREGAR = 600  # segundos entre renovações dos guias (guias-app.json) fora da seleção
 JANELA_LARGURA, JANELA_ALTURA = 460, 900
 FASES_JOGO = ("GameStart", "InProgress", "Reconnect")  # partida carregando ou rolando: a janela não aparece  # janela lateral estreita: o site mostra o formato compacto
@@ -72,6 +73,7 @@ TXT = {
         "sem_guia": "{c} (sem guia)",
         "iniciar": "Iniciar com o Windows",
         "importar": "Importar runas, itens e feitiços no lock",
+        "overlay": "Dicas por cima da partida (overlay)",
         "importar_agora": "Importar runas e itens agora",
         "aceitar": "Aceitar partida automaticamente",
         "sair": "Sair",
@@ -91,6 +93,7 @@ TXT = {
         "sem_guia": "{c} (no guide)",
         "iniciar": "Start with Windows",
         "importar": "Import runes, items and spells on lock-in",
+        "overlay": "Tips over the game (overlay)",
         "importar_agora": "Import runes and items now",
         "aceitar": "Auto-accept match",
         "sair": "Quit",
@@ -116,6 +119,11 @@ def slug(nome):
 
 def url_matchup(guia, s):
     return f"{SITE}#{guia}/{s}"
+
+
+def url_overlay(guia, s):
+    """A mesma matchup no modo compacto do site, para a janela por cima da partida."""
+    return f"{SITE}?overlay#{guia}/{s}"
 
 
 # ---------- Dados: guias do site, Data Dragon e taxa de cada rota ----------
@@ -509,8 +517,11 @@ class ApiJanela:
 # ---------- Monitor: decide quando abrir o navegador ----------
 
 class Monitor:
-    def __init__(self, dados, busca_sessao, abre=webbrowser.open, agora=time.monotonic, ao_mudar=None, esconde=None, importa=None):
+    def __init__(self, dados, busca_sessao, abre=webbrowser.open, agora=time.monotonic, ao_mudar=None, esconde=None, importa=None,
+                 no_jogo=None, fim_jogo=None):
         self.dados = dados
+        self.no_jogo = no_jogo or (lambda guia, s: None)  # partida começou com uma matchup aberta: mostra o overlay
+        self.fim_jogo = fim_jogo or (lambda: None)  # partida acabou: esconde o overlay
         self.importa = importa or (lambda guia, s: None)
         self.busca_sessao = busca_sessao
         self.abre = abre
@@ -529,6 +540,11 @@ class Monitor:
         if status == "jogo" and self.estado != "jogo":
             log.info("partida começou: escondendo a janela")
             self.esconde()
+            if self.guia and self.alvo:
+                self.no_jogo(self.guia, self.alvo)
+        elif self.estado == "jogo" and status != "jogo":
+            log.info("partida acabou")
+            self.fim_jogo()
         if status != "ok":
             self.estado, self.guia, self.inimigos, self.alvo = status, None, [], None
         else:
@@ -755,6 +771,63 @@ class Janela:
                 self.w.destroy()
 
 
+class Overlay(Janela):
+    """Janela pequena por cima da partida com a matchup no modo compacto do site (dicas, setup e a tabela fixa de
+    recargas do inimigo). Sem borda, arrastável, não rouba o foco do jogo. Nada de contador ao vivo de recarga do
+    inimigo: a política da Riot para apps proíbe. Só aparece com o jogo em modo janela ou sem bordas."""
+
+    def cria(self, webview):
+        x, y = self.cfg.get("overlay_x"), self.cfg.get("overlay_y")
+        if x is None:
+            try:  # primeira vez: no canto direito, abaixo do placar do jogo
+                tela = webview.screens[0]
+                x, y = max(0, tela.width - OVERLAY_LARGURA - 16), 120
+            except Exception:
+                x = y = None
+        self.w = webview.create_window(
+            NOME_APP + " (overlay)", SITE + "?overlay", width=self.cfg.get("overlay_l", OVERLAY_LARGURA),
+            height=self.cfg.get("overlay_a", OVERLAY_ALTURA), x=x, y=y, min_size=(300, 300), hidden=True, frameless=True,
+            easy_drag=True, on_top=True, focus=False, background_color="#0c0b09", js_api=self.api)
+        self.w.events.closing += self._fechando
+
+    def _guarda_tamanho(self, f):
+        try:
+            if f.WindowState.ToString() == "Normal":
+                self.cfg.update(overlay_l=f.Width, overlay_a=f.Height, overlay_x=f.Left, overlay_y=f.Top)
+                self.salva(self.cfg)
+        except Exception:
+            pass
+
+    def mostra(self, url=None):
+        if not self.w:
+            return
+
+        def faz(f):
+            import ctypes
+            from System import Uri
+            wv = f.browser.webview
+            self._poupa(f, False)
+            if url:
+                if wv.CoreWebView2 is not None:
+                    wv.Source = Uri(url)
+                else:
+                    self.w.real_url = url
+            # Mostra sem ativar (SW_SHOWNOACTIVATE): o jogo continua com o teclado e o mouse.
+            ctypes.windll.user32.ShowWindow(f.Handle.ToInt64(), 4)
+            f.TopMost = True
+        self._na_janela(faz)
+
+
+class ApiOverlay:
+    """O que o site chama de dentro do overlay: o ✕ do topo esconde a janela até a próxima partida."""
+
+    def __init__(self, esconde):
+        self._esconde = esconde
+
+    def fechar_overlay(self):
+        self._esconde()
+
+
 # ---------- Bandeja ----------
 
 def uma_instancia():
@@ -832,6 +905,7 @@ def main():
         cfg["iniciar"] = True  # ligado por padrão
         salva_config(cfg)
     cfg.setdefault("importar", True)  # importar runas, itens e feitiços no lock: ligado por padrão
+    cfg.setdefault("overlay", True)  # dicas por cima da partida: ligado por padrão
     try:
         inicia_com_windows(cfg["iniciar"])
     except OSError as e:
@@ -852,8 +926,16 @@ def main():
         return importador.importa(guia, s, opcao) if guia else {"runas": False, "itens": False}
 
     janela = Janela(cfg, salva_config, api=ApiJanela(importa_da_janela))
+    overlay = Overlay(cfg, salva_config)
+    overlay.api = ApiOverlay(overlay.esconde)
+
+    def no_jogo(guia, s):
+        if cfg.get("overlay", True):
+            log.info("overlay: %s/%s", guia["id"], s)
+            overlay.mostra(url_overlay(guia["id"], s))
+
     monitor = Monitor(dados, lcu.sessao, abre=janela.mostra, ao_mudar=lambda: icone and icone.update_menu(), esconde=janela.esconde,
-                      importa=importa_no_lock)
+                      importa=importa_no_lock, no_jogo=no_jogo, fim_jogo=overlay.esconde)
 
     def carrega():
         guias = com_cache("guias", carrega_guias, chaves_int=False) or carrega_guias_local()
@@ -922,6 +1004,12 @@ def main():
         cfg["importar"] = not cfg.get("importar", True)
         salva_config(cfg)
 
+    def alterna_overlay(_icone, _item):
+        cfg["overlay"] = not cfg.get("overlay", True)
+        salva_config(cfg)
+        if not cfg["overlay"]:
+            overlay.esconde()
+
     def alterna_por_cima(_icone, _item):
         cfg["por_cima"] = not cfg.get("por_cima")
         salva_config(cfg)
@@ -930,6 +1018,7 @@ def main():
     def sair(icone_, _item):
         parar.set()
         icone_.stop()
+        overlay.fecha()
         janela.fecha()
 
     menu = pystray.Menu(
@@ -942,6 +1031,7 @@ def main():
         pystray.MenuItem(T["navegador"], lambda: webbrowser.open(monitor.url_alvo() or SITE)),
         pystray.Menu.SEPARATOR,
         pystray.MenuItem(T["importar"], alterna_importar, checked=lambda _: cfg.get("importar", True)),
+        pystray.MenuItem(T["overlay"], alterna_overlay, checked=lambda _: cfg.get("overlay", True)),
         pystray.MenuItem(T["aceitar"], alterna_aceitar, checked=lambda _: bool(cfg.get("aceitar", False))),
         pystray.MenuItem(T["por_cima"], alterna_por_cima, checked=lambda _: bool(cfg.get("por_cima"))),
         pystray.MenuItem(T["iniciar"], alterna_iniciar, checked=lambda _: cfg["iniciar"]),
@@ -954,6 +1044,7 @@ def main():
     threading.Thread(target=icone.run, daemon=True).start()
     # Guarda skin, tema, língua etc. do site entre uma abertura e outra (o padrão do pywebview é modo anônimo).
     janela.cria(webview)
+    overlay.cria(webview)
     webview.start(lambda: threading.Thread(target=laco, daemon=True).start(), private_mode=False,
                   storage_path=os.path.join(PASTA_CONFIG, "janela"), gui="edgechromium")
 

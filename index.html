@@ -1261,6 +1261,25 @@ b.ruim { font-weight: 700; color: var(--dif-dificil); }
   .trava.on .eu, .trava.on .ele, .trava.on .vs, .trava.on::before { animation: none; }
   .trocar svg { transition: none; }
 }
+/* Modo overlay (?overlay no endereço): a janela do app por cima da partida. Só o que ajuda durante o jogo:
+   dicas, setup e a tabela fixa de recargas do inimigo (sem nenhum contador ao vivo: a política da Riot proíbe). */
+.ov-topo { display: none; }
+html.modo-overlay body { font-size: 13px; background: var(--fundo); }
+html.modo-overlay .pular, html.modo-overlay .bar, html.modo-overlay .selecao, html.modo-overlay .paginas,
+html.modo-overlay .aviso-fonte, html.modo-overlay .aviso-app, html.modo-overlay .col-lista, html.modo-overlay .rodape,
+html.modo-overlay .akshan3d, html.modo-overlay .navega > div, html.modo-overlay .trava, html.modo-overlay .importar-lol,
+html.modo-overlay .duelo .card, html.modo-overlay .duelo .travar, html.modo-overlay #cdsFecha { display: none !important; }
+html.modo-overlay .palco { display: block; padding: 8px 10px 16px; max-width: none; }
+html.modo-overlay .detalhe { display: flex; flex-direction: column; gap: 10px; }
+/* Na partida, as dicas valem mais que as runas: recargas, dicas e por último o setup. */
+html.modo-overlay .duelo { order: 0; } html.modo-overlay .notas { order: 1; } html.modo-overlay .setup { order: 2; }
+html.modo-overlay .duelo { display: block; }
+html.modo-overlay .cds-painel { position: static; width: auto; max-height: none; box-shadow: none; }
+html.modo-overlay .ov-topo { display: flex; align-items: center; gap: 8px; margin: 0; padding: 8px 10px; border-radius: 10px;
+  background: var(--painel); border: 1px solid var(--linha); font-weight: 700; cursor: move; }
+html.modo-overlay .ov-topo .guia { margin-left: auto; font-weight: 600; font-size: 12px; }
+html.modo-overlay .ov-topo button { width: 28px; height: 28px; border-radius: 8px; border: 1px solid var(--linha); background: transparent;
+  color: var(--texto); cursor: pointer; font: 700 14px/1 var(--corpo); }
 </style>
 </head>
 <body>
@@ -1328,6 +1347,7 @@ b.ruim { font-weight: 700; color: var(--dif-dificil); }
   <h1 class="sr" id="titulo"></h1>
   <p class="sr" id="anuncio" aria-live="polite"></p>
   <p class="aviso-app" id="avisoApp" hidden></p>
+  <p class="ov-topo" id="ovTopo" aria-live="polite"></p>
   <nav class="paginas" id="paginas" data-t-aria="paginasGuia" hidden><ul id="paginasLista"></ul></nav>
   <p class="aviso-fonte" id="avisoFonte" hidden></p>
   <div class="pagina" id="pagina" hidden></div>
@@ -1455,6 +1475,9 @@ const APP_URL = "https://github.com/Luis1982Yt/akshan-matchups/releases/latest/d
 const slug = s => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/['’.]/g, "").replace(/\s+/g, "-");
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const $ = id => document.getElementById(id);
+// Modo overlay: a janela pequena do app por cima da partida (endereço com ?overlay).
+const OVERLAY = new URLSearchParams(location.search).has("overlay");
+if (OVERLAY) document.documentElement.classList.add("modo-overlay");
 const raiz = document.documentElement;
 const semMovimento = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
 const SETA_E = '<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M9 2L4 7l5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
@@ -1492,7 +1515,7 @@ const TXT = {
     lerMais: "Ler mais", lerMenos: "Ler menos", semComentario: "Sem comentário", arvores: { Precision: "Precisão", Domination: "Dominação", Sorcery: "Feitiçaria", Resolve: "Determinação", Inspiration: "Inspiração" },
     setRunas: "Runas", setItens: "Itens", setExemplo: "Exemplo", setComentario: "Comentário", ultimaMudanca: "Última mudança do campeão", emote: "Arraste para girar · clique para uma emote", mostra3d: "Mostrar o {c} 3D", skins: "Skins do Akshan", skinAnt: "Skin anterior", copiar: "Copiar link", copiado: "Link copiado!", copiarLink: "Copiar o link desta matchup", skinProx: "Próxima skin", chromas: "Chromas", semChroma: "Sem chroma", esconde3d: "Esconder o {c} 3D", carrega3d: "Carregando {c}…", tierBotao: "Tier list das matchups", tierTit: "Tier list · {c}", fechar: "Fechar", aoVivo: "Ao vivo", acompanhe: "Acompanhe mono {c}s", assistir: "Assistir", opggDe: "OP.GG do ", devPor: "Site feito por", contato: "Contato", baixarApp: "App para PC: abre a matchup sozinho",
     appTit: "App para PC", appWip: "Em desenvolvimento (WIP): ainda pode ter bugs e vai mudar bastante.", appLead: "Um app para Windows com o guia numa janela própria, que se abre sozinha na hora certa: quando você trava um campeão que tem guia aqui ({guias}), ele descobre o inimigo da sua rota e já mostra essa matchup, sem você procurar.",
-    appPassos: ["Baixe e abra o <b>BattleMatch.exe</b>. Ele fica no canto da barra de tarefas, perto do relógio, e já liga junto com o Windows (dá para desligar no menu do ícone).", "Entre numa partida e trave um campeão com guia ({guias}). Passar o mouse não conta, e com outros campeões o app fica quieto.", "Quando o inimigo da sua rota travar o campeão, a janela do app aparece com a matchup dele, e a página de runas, os itens e os feitiços dela já vão para o seu cliente (o botão \"Importar no LoL\" na janela importa de novo, com a opção de runas aberta). Se ele errar o adversário, troque na própria janela ou pelo menu do ícone (\"Inimigos agora\"). Quando a partida começa a janela some sozinha, e fechar no X só esconde: ela volta na próxima seleção."],
+    appPassos: ["Baixe e abra o <b>BattleMatch.exe</b>. Ele fica no canto da barra de tarefas, perto do relógio, e já liga junto com o Windows (dá para desligar no menu do ícone).", "Entre numa partida e trave um campeão com guia ({guias}). Passar o mouse não conta, e com outros campeões o app fica quieto.", "Quando o inimigo da sua rota travar o campeão, a janela do app aparece com a matchup dele, e a página de runas, os itens e os feitiços dela já vão para o seu cliente (o botão \"Importar no LoL\" na janela importa de novo, com a opção de runas aberta). Se ele errar o adversário, troque na própria janela ou pelo menu do ícone (\"Inimigos agora\"). Quando a partida começa a janela some sozinha e aparece uma janelinha por cima do jogo com as dicas e as recargas do inimigo (o jogo precisa estar em modo sem bordas). Fechar no X só esconde: ela volta na próxima seleção."],
     appSeguro: "<b>Seguro:</b> o app lê a seleção de campeões pelo próprio cliente do LoL e só grava a página de runas e o conjunto de itens da matchup, como o Porofessor (dá para desligar no menu do ícone). Nunca escolhe nem bane por você; aceitar a partida sozinho é opcional e vem desligado.",
     appAviso: "<b>Aviso do Windows:</b> como o programa não tem assinatura digital, na primeira vez o Windows pode mostrar um alerta azul. Clique em <b>Mais informações</b> e depois em <b>Executar assim mesmo</b>.",
     appOpcional: "Se você não se sentir confortável em baixar, tudo continua funcionando aqui no site. O app é só uma forma de deixar o uso mais prático.",
@@ -1525,7 +1548,7 @@ const TXT = {
     lerMais: "Read more", lerMenos: "Read less", semComentario: "No comment", arvores: { Precision: "Precision", Domination: "Domination", Sorcery: "Sorcery", Resolve: "Resolve", Inspiration: "Inspiration" },
     setRunas: "Runes", setItens: "Items", setExemplo: "Example", setComentario: "Comments", ultimaMudanca: "Latest champion change", emote: "Drag to rotate · click for an emote", mostra3d: "Show 3D {c}", skins: "Akshan skins", skinAnt: "Previous skin", copiar: "Copy link", copiado: "Link copied!", copiarLink: "Copy this matchup's link", skinProx: "Next skin", chromas: "Chromas", semChroma: "No chroma", esconde3d: "Hide 3D {c}", carrega3d: "Loading {c}…", tierBotao: "Matchup tier list", tierTit: "Tier list · {c}", fechar: "Close", aoVivo: "Live", acompanhe: "Watch {c} mains", assistir: "Watch", opggDe: "OP.GG of ", devPor: "Site by", contato: "Contact", baixarApp: "PC app: opens the matchup by itself",
     appTit: "PC app", appWip: "Work in progress: it may still have bugs and will change a lot.", appLead: "A Windows app with the guide in its own window that shows up by itself at the right time: when you lock in a champion that has a guide here ({guias}), it figures out your lane opponent and shows that matchup, no searching needed.",
-    appPassos: ["Download and open <b>BattleMatch.exe</b>. It sits in the taskbar corner, next to the clock, and starts with Windows (you can turn that off in the icon menu).", "Join a game and lock in a champion with a guide ({guias}). Hovering doesn't count, and with other champions the app stays quiet.", "When your lane opponent locks in, the app window shows up with that matchup, and its rune page, item set and summoner spells go straight to your client (the \"Import to LoL\" button in the window imports again, with the open rune option). If it guesses wrong, switch in the window itself or in the icon menu (\"Current enemies\"). The window hides by itself when the game starts, and closing it just hides it: it comes back next champion select."],
+    appPassos: ["Download and open <b>BattleMatch.exe</b>. It sits in the taskbar corner, next to the clock, and starts with Windows (you can turn that off in the icon menu).", "Join a game and lock in a champion with a guide ({guias}). Hovering doesn't count, and with other champions the app stays quiet.", "When your lane opponent locks in, the app window shows up with that matchup, and its rune page, item set and summoner spells go straight to your client (the \"Import to LoL\" button in the window imports again, with the open rune option). If it guesses wrong, switch in the window itself or in the icon menu (\"Current enemies\"). The window hides by itself when the game starts and a small one shows up over the game with the tips and the enemy cooldowns (the game needs to be in borderless mode). Closing it just hides it: it comes back next champion select."],
     appSeguro: "<b>Safe:</b> the app reads champion select through the LoL client itself and only saves the matchup's rune page and item set, like Porofessor (you can turn that off in the icon menu). It never picks or bans for you; auto-accepting the match is optional and off by default.",
     appAviso: "<b>Windows warning:</b> since the program isn't digitally signed, Windows may show a blue alert the first time. Click <b>More info</b> and then <b>Run anyway</b>.",
     appOpcional: "If you don't feel comfortable downloading it, everything still works right here on the site. The app is just a way to make it more convenient.",
@@ -1554,7 +1577,7 @@ let somLigado = true;
 try { somLigado = localStorage.getItem("som") !== "desligado"; } catch (e) {}
 let ultimoPassa = 0;
 function toca(nome, arquivo) {
-  if (!somLigado) return;
+  if (!somLigado || OVERLAY) return;  // no overlay, por cima da partida: nunca toca som
   if (nome === "passa") { const agora = performance.now(); if (agora - ultimoPassa < 70) return; ultimoPassa = agora; }
   const a = new Audio(arquivo || `sons/ui/${nome}.ogg`);
   a.volume = VOLUME[nome] ?? .4;
@@ -2383,11 +2406,14 @@ async function mostraCds() {
   if (current === c && !p.hidden) p.innerHTML = topo + ul(hab);
 }
 function abreCds(abrir) {
+  if (OVERLAY && !abrir) return;  // no overlay a tabela de recargas fica sempre aberta
   $("cdsPainel").hidden = !abrir;
   $("cdBtn").setAttribute("aria-expanded", abrir);
   if (abrir) { toca("abre"); mostraCds(); }
 }
 $("cdBtn").addEventListener("click", () => abreCds($("cdsPainel").hidden));
+// Overlay: o ✕ esconde a janela do overlay no app (window.pywebview.api.fechar_overlay); no navegador, não faz nada.
+document.addEventListener("click", e => { if (e.target.closest("#ovFecha") && window.pywebview && window.pywebview.api && window.pywebview.api.fechar_overlay) window.pywebview.api.fechar_overlay(); });
 $("cdsPainel").addEventListener("click", e => { if (e.target.closest("#cdsFecha")) { abreCds(false); $("cdBtn").focus(); } });
 document.addEventListener("click", e => { if (!$("cdsPainel").hidden && !e.target.closest("#cdsPainel, #cdBtn")) abreCds(false); });
 document.addEventListener("keydown", e => { if (e.key === "Escape" && !$("cdsPainel").hidden) { abreCds(false); $("cdBtn").focus(); } });
@@ -2417,6 +2443,12 @@ function renderDetalhe(animar) {
   $("travarNome").textContent = t("travarContra") + c.nome;
   // Se o painel de cooldowns estiver aberto, acompanha a troca de matchup.
   $("cdBtn").hidden = false;
+  if (OVERLAY) {
+    // Topo do overlay: quem contra quem, a dificuldade e o botão de esconder (fecha só a janela do overlay).
+    $("ovTopo").innerHTML = `<span>${esc(guia.campeao.nome || guia.campeao)} vs ${esc(c.nome)}</span><span class="guia">${g.innerHTML}</span>` +
+      `<button type="button" id="ovFecha" aria-label="${esc(t("fechar"))}" title="${esc(t("fechar"))}">✕</button>`;
+    $("cdsPainel").hidden = false;
+  }
   if (!$("cdsPainel").hidden) mostraCds();
   if (guia.formato === "simples") {
     $("carga").innerHTML = `<dl class="carga">${slot(t("runa"), c.runa, c, "runa") + slot(t("secundaria"), c.sec, c, "sec") + slot(t("feitico"), c.spell) + slot(t("bota"), c.bota, c, "bota") + slot(t("build"), c.build, c, "build")}</dl>`;
@@ -3082,7 +3114,7 @@ function paraSons3d() {
 }
 function tocaSons3d(lista) {
   const cf = conf3d;
-  if (!somLigado || !lista || !cf || !cf.sons) return;
+  if (!somLigado || OVERLAY || !lista || !cf || !cf.sons) return;
   lista.forEach(item => {
     const repete = item.endsWith("~");
     const [nome, atraso] = item.replace("~", "").split("@");

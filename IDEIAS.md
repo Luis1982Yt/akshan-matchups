@@ -13,7 +13,9 @@ Lista do dono para depois. Cada uma com o que já se sabe para não começar do 
   (Garen: `feiticos_texto`), importar a primeira e mostrar as outras como opção.
 - Cuidar da ordem D/F do jogador (Flash na mesma tecla de sempre): ler a seleção atual antes e manter o Flash onde estava.
 
-## Overlay no jogo (estilo Porofessor) com build e cooldowns — fazer numa sessão no PC do dono
+## Overlay no jogo (estilo Porofessor) com build e cooldowns — FEITO e publicado (app-v7, 2026-11-15)
+- Feito: janela `Overlay` no app + modo `?overlay` do site (dicas, setup e tabela fixa de recargas; sem contador ao
+  vivo, que a Riot proíbe). Falta confirmar numa partida de verdade (posição, foco, modo sem bordas).
 - Uma janela por cima do jogo com a matchup da partida: build, dicas curtas, cooldowns do inimigo.
 - O app já lê a seleção de campeões; dentro da partida dá para ler a Live Client Data API (`https://127.0.0.1:2999/liveclientdata/allgamedata`):
   campeões, itens, nível.
