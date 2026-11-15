@@ -1,0 +1,48 @@
+name: Gerar e publicar o app (BattleMatch.exe)
+
+# Roda só à mão (aba Actions > Run workflow, ou pela API), com a tag da release (ex.: app-v6).
+# Gera o .exe numa máquina Windows do GitHub, roda os testes e o teste do próprio .exe, e publica a release.
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag da release (ex.: app-v6)"
+        required: true
+      notas:
+        description: "Texto da release"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  exe:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Dependências
+        run: python -m pip install --quiet -r app/requirements.txt
+      - name: Testes do app
+        run: python -m unittest app.test_akshan_app
+      - name: Gera o .exe
+        run: python app/gerar_exe.py
+      - name: Testa o .exe (sem bandeja e sem mexer no registro)
+        shell: pwsh
+        run: |
+          $p = Start-Process -FilePath app\dist\BattleMatch.exe -ArgumentList "--testar" -PassThru -Wait
+          if ($p.ExitCode -ne 0) { throw "o .exe saiu com código $($p.ExitCode)" }
+          $log = Join-Path $env:APPDATA "BattleMatch\log.txt"
+          if (-not (Test-Path $log)) { throw "o .exe não gravou o log" }
+          Get-Content $log
+          if (-not (Select-String -Path $log -Pattern "teste: guias" -Quiet)) { throw "o teste do .exe não chegou ao fim" }
+      - name: Publica a release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ inputs.tag }}
+          NOTAS: ${{ inputs.notas }}
+        shell: bash
+        run: gh release create "$TAG" app/dist/BattleMatch.exe --title "BattleMatch $TAG" --notes "$NOTAS" --latest

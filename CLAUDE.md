@@ -50,7 +50,8 @@ ou mexer num `atualizar_<campeão>.py`, mesmo sem o dono pedir** (pedido de 2026
 ## App para PC (`app/`)
 
 - `BattleMatch.exe` (pywebview + bandeja; lê a seleção de campeões pela API local do cliente). Gerar com
-  `python app/gerar_exe.py` — **só no Windows**. Testes: `python -m unittest app.test_akshan_app`.
+  `python app/gerar_exe.py` — **só no Windows**. Numa sessão na nuvem: o workflow `.github/workflows/app-exe.yml` gera o .exe
+  numa máquina Windows do GitHub, testa e publica a release (disparar com a tag, ex.: `app-v6`). Testes: `python -m unittest app.test_akshan_app`.
 - Nunca rodar o .exe sem `--testar` ou `--testar-janela` (ele grava a inicialização com o Windows).
 - Publicar release no GitHub (`gh release create`) só depois que o dono testar e disser "pode publicar".
 - App v5 (BattleMatch.exe: nome e ícone novos, "aceitar partida automaticamente" desligado por padrão) publicado em

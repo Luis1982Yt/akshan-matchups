@@ -2,10 +2,10 @@
 
 Lista do dono para depois. Cada uma com o que já se sabe para não começar do zero.
 
-## Importar feitiços de invocador (app) — FEITO no código em 2026-11-14, falta testar no PC
+## Importar feitiços de invocador (app) — FEITO e publicado (app-v6, 2026-11-15)
 - Feito: `importar.json` traz `feiticos`, o app grava na seleção de campeões mantendo a tecla do Flash.
-  Falta: gerar o .exe no Windows (`python app/gerar_exe.py`), testar numa seleção de campeões de verdade e só
-  então publicar a release (depois do "pode publicar" do dono).
+  O dono mandou publicar sem testar no PC. O .exe é gerado e testado no GitHub (`.github/workflows/app-exe.yml`);
+  falta só confirmar numa seleção de campeões de verdade.
 - Hoje o app importa runas e itens da matchup no cliente. Faltam os feitiços (ex.: Flash + Incendiar).
 - Caminho provável: API local do cliente na seleção de campeões, `PATCH /lol-champ-select/v1/session/my-selection`
   com `spell1Id` / `spell2Id` (ids numéricos do `summoner.json` do Data Dragon, campo `key`).
