@@ -14,20 +14,39 @@ from guia_comum import ROOT, Ddragon, gravar_guia
 NOTAS = ROOT / "src/guias/taric/notas.json"  # o que já foi escrito para o guia (por enquanto, a tier list do dono)
 
 
+def runas(dd, pagina):
+    """Página de runas de um print do mono Taric (nomes em inglês, como no cliente). Runa sem ícone dá erro."""
+    def peca(nome, icone):
+        if not icone:
+            raise KeyError(f"runa sem ícone: {nome}")
+        return {"nome": nome, "icone": icone}
+    return [[{"rotulo": "Principal", "pecas": [peca(n, dd.runa(n)) for n in pagina["principal"]]},
+             {"rotulo": "Secundária", "pecas": [peca(n, dd.runa(n)) for n in pagina["secundaria"]]},
+             {"rotulo": "Fragmentos", "pecas": [peca(n, dd.fragmento(n)) for n in pagina["fragmentos"]]}]]
+
+
 def gerar_matchups(dd, notas):
-    """Um campeão por matchup. Quem está na tier list (os suportes) ganha a dificuldade e a rota "Suporte"; os
-    atiradores (tag Marksman do Data Dragon) ganham a rota "Atirador", para o filtro da lista e o 2x2 da bot lane."""
-    dif = notas.get("dificuldade", {})
+    """Um campeão por matchup. Quem está na tier list de suportes ganha a dificuldade e a rota "Suporte"; quem está na
+    tier list de atiradores do mono Taric (ou tem a tag Marksman do Data Dragon) ganha a rota "Atirador", para o filtro
+    da lista e o 2x2 da bot lane. "adc" guarda a dificuldade como ADC inimigo (Ashe e Seraphine estão nas duas listas)."""
+    dif, dif_adc, dicas = notas.get("dificuldade", {}), notas.get("dificuldade_adc", {}), notas.get("dicas", {})
+    runas_de = {c: runas(dd, p) for p in notas.get("paginas_runas", []) for c in p["contra"]}
     saida = []
     for c in sorted(dd.campeoes.values(), key=lambda c: c["name"].lower()):
-        nota = dif.get(c["id"])
-        rota = "Suporte" if nota else ("Atirador" if "Marksman" in c.get("tags", []) else None)
+        sup, adc = dif.get(c["id"]), dif_adc.get(c["id"])
+        atirador = adc is not None or "Marksman" in c.get("tags", [])
+        rota = "Suporte" if sup else ("Atirador" if atirador else None)
+        nota = sup or adc
         saida.append({
             "nome": c["name"], "planilha": c["name"], "id": c["id"], "titulo": c["title"],
             **({"rota": rota} if rota else {}),
+            **({"adc": adc or True} if atirador else {}),
             "dificuldade": {"overall": nota, "valor": nota, "texto": ""},
-            "tldr": [], "feiticos": [], "runas": [], "imagens_runas": [], "itens": [], "secoes": [],
+            "tldr": dicas.get(c["id"], []), "feiticos": [], "runas": runas_de.get(c["id"], []), "imagens_runas": [], "itens": [], "secoes": [],
         })
+    falta = (set(dif) | set(dif_adc) | set(dicas) | set(runas_de)) - set(dd.campeoes)
+    if falta:
+        raise KeyError(f"campeão da tier list fora do Data Dragon: {sorted(falta)}")
     return saida
 
 

@@ -1,6 +1,23 @@
 {
-"textos": {},
-"nomes": {},
+"textos": {
+"Attack Speed": "Velocidade de Ataque",
+"Move Speed": "Velocidade de Movimento",
+"Health": "Vida",
+"Tenacity": "Tenacidade e Resistência a Lentidão",
+"Health Scaling": "Vida por nível"
+},
+"nomes": {
+"https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendHaste/LegendHaste.png": "Lenda: Aceleração",
+"https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png": "Ritmo Fatal",
+"https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png": "Presença de Espírito",
+"https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/BonePlating/BonePlating.png": "Osso Revestido",
+"https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/FontOfLife/FontOfLife.png": "Fonte da Vida",
+"https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/Guardian/Guardian.png": "Guardião",
+"https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/Revitalize/Revitalize.png": "Revitalizar",
+"https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/SecondWind/SecondWind.png": "Ventos Revigorantes",
+"https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png": "Pós-choque",
+"https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/LastStand/LastStand.png": "Até a Morte"
+},
 "titulos_en": {
 "Aatrox": "the Darkin Blade",
 "Ahri": "the Nine-Tailed Fox",

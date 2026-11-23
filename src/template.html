@@ -919,6 +919,12 @@ body.sem-rolar { overflow: hidden; }
 .chip .cor-dif { width: 11px; height: 11px; border-radius: 50%; background: var(--dif); box-shadow: 0 0 0 1.5px rgba(0, 0, 0, .35); }
 .chip:hover { border-color: var(--acento-vivo); }
 .chip[aria-pressed="true"] { background: var(--destaque); border-color: var(--destaque); color: var(--tinta-botao); }
+/* Rotas como na seleção de campeões do cliente: só o ícone, juntos numa barrinha. */
+.pos-grupo { flex: none; display: inline-flex; gap: 2px; padding: 2px; border: 1px solid var(--linha-forte); border-radius: 10px; }
+.chip.chip-pos { width: 40px; min-height: 38px; padding: 0; justify-content: center; border: 0; border-radius: 7px; color: var(--texto-baixo); }
+.chip-pos svg { width: 24px; height: 24px; }
+.chip.chip-pos:hover { color: var(--texto); }
+.chip.chip-pos[aria-pressed="true"] { background: var(--painel-alto); color: var(--destaque); box-shadow: inset 0 0 0 1px var(--destaque); }
 .roda { position: relative; width: min(100%, 400px); aspect-ratio: 1; margin: 12px auto 0; border-radius: 50%; }
 /* Mira da Punição (R do Akshan), como no jogo: losango que trava no alvo, círculo por dentro e setas laterais apontando para o centro. */
 .mira { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
@@ -1302,11 +1308,22 @@ html.guia-bot .card .quem .n { font-size: 22px; }
 .bot-nota h3 { display: flex; align-items: center; gap: 8px; margin: 0 0 8px; font: 700 13px/1.3 var(--titulo); letter-spacing: .1em; text-transform: uppercase; color: var(--destaque); }
 .bot-nota h3 img { width: 26px; height: 26px; border-radius: 6px; }
 .bot-nota .bot-vazio { margin: 0; color: var(--texto-baixo); font-size: 14px; }
-.bot-dialogo input { width: 100%; margin: 0 0 12px; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--linha-forte); background: var(--painel-alto); color: var(--texto); font: 15px var(--corpo); }
-.bot-grade { display: grid; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); gap: 8px; }
-.bot-grade button { display: grid; justify-items: center; gap: 4px; padding: 8px 4px; border-radius: 10px; border: 1px solid var(--linha); background: var(--painel); color: var(--texto); font: 600 12px var(--corpo); cursor: pointer; }
-.bot-grade button img { width: 48px; height: 48px; border-radius: 8px; }
-.bot-grade button[aria-pressed="true"] { border-color: var(--acento); box-shadow: 0 0 0 2px var(--acento) inset; }
+/* Seletor de atirador: enxuto, como a grade da seleção de campeões (só ícones quadrados, busca em cima). */
+.tier.bot-dialogo { width: min(470px, calc(100vw - 24px)); }
+.bot-dialogo .tier-topo { padding: 12px 14px 12px 18px; }
+.bot-dialogo .tier-topo h2 { font-size: 14px; }
+.bot-dialogo .tier-fecha { width: 36px; height: 36px; }
+.bot-barra { display: flex; gap: 8px; padding: 12px 14px 0; }
+.bot-barra input { flex: 1; min-width: 0; height: 40px; padding: 0 12px; border-radius: 8px; border: 1px solid var(--linha-forte); background: var(--painel-alto); color: var(--texto); font: 15px var(--corpo); }
+.bot-limpa { flex: none; height: 40px; padding: 0 12px; border-radius: 8px; border: 1px solid var(--linha-forte); background: none; color: var(--texto-baixo); font: 600 13px var(--corpo); cursor: pointer; }
+.bot-limpa:hover { color: var(--texto); border-color: var(--acento-vivo); }
+.bot-grade { display: grid; grid-template-columns: repeat(auto-fill, minmax(56px, 1fr)); gap: 6px; padding: 12px 14px 16px; }
+.bot-grade button { position: relative; padding: 0; border: 0; border-radius: 6px; background: none; cursor: pointer; line-height: 0; }
+.bot-grade button img { width: 100%; height: auto; aspect-ratio: 1; border-radius: 6px; filter: saturate(.85); transition: filter .15s; }
+.bot-grade button:hover img { filter: saturate(1.1) brightness(1.08); }
+.bot-grade button:hover, .bot-grade button:focus-visible { outline: 2px solid var(--acento-vivo); outline-offset: 1px; }
+.bot-grade button[aria-pressed="true"] { outline: 2px solid var(--destaque); outline-offset: 1px; }
+.bot-n { position: absolute; right: 2px; bottom: 2px; min-width: 16px; padding: 2px 3px; border-radius: 4px; background: rgba(0,0,0,.75); color: #fff; font: 700 10px/1 var(--corpo); box-shadow: inset 0 -2px 0 var(--cor); }
 .bot-grade button[hidden] { display: none; }
 /* Modo overlay (?overlay no endereço): a janela do app por cima da partida. Só o que ajuda durante o jogo:
    dicas, setup e a tabela fixa de recargas do inimigo (sem nenhum contador ao vivo: a política da Riot proíbe). */
@@ -1446,7 +1463,7 @@ html.modo-overlay .ov-topo button { width: 28px; height: 28px; border-radius: 8p
         <article class="card bot-carta adc-ini" id="cartaAdcIni" hidden>
           <div class="bot-arte"></div><span class="selo" data-t="botAdcIni">ADC inimigo</span>
           <button type="button" class="bot-troca" data-bot="adcIni"></button>
-          <div class="quem"><p class="n"></p><p class="t"></p></div>
+          <div class="quem"><p class="n"></p><p class="t"></p><span class="guia"></span></div>
         </article>
         <article class="card inimigo">
           <div id="artEle"></div>
@@ -1492,7 +1509,7 @@ html.modo-overlay .ov-topo button { width: 28px; height: 28px; border-radius: 8p
 </dialog>
 <dialog class="tier bot-dialogo" id="botDialogo" aria-labelledby="botTit">
   <div class="tier-topo"><h2 id="botTit"></h2><button class="tier-fecha" type="button" id="botFecha" data-t-aria="fechar"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
-  <input type="search" id="botBusca" autocomplete="off" spellcheck="false">
+  <div class="bot-barra"><input type="search" id="botBusca" autocomplete="off" spellcheck="false"><button type="button" id="botLimpa" class="bot-limpa" hidden></button></div>
   <div class="bot-grade" id="botGrade"></div>
 </dialog>
 <dialog class="tier" id="tier" aria-labelledby="tierTit">
@@ -1558,7 +1575,7 @@ const TXT = {
     vazio: "Nenhum campeão com essa busca.", limpar: "Limpar busca e filtros", voce: "Você", inimigo: "Inimigo", duelo: "Duelo",
     travarTit: "Travar o pick", travarContra: "Travar o pick contra ", setup: "Seu setup pro confronto",
     lembrete: "Lembrete", comoJogar: "Como jogar", contra: " contra ", arteDe: "Arte de ",
-    botAliado: "Seu ADC", botAdcIni: "ADC inimigo", botSupIni: "Suporte inimigo", botTrocar: "trocar", botEscolher: "Escolher", botContra: "Contra {c}", botCom: "Com {c}", botSem: "Ainda sem dicas para esta parte.", botEscolhaAliado: "Escolha o seu atirador", botEscolhaIni: "Escolha o atirador inimigo", botFalta: "Escolha o campeão na carta acima para ver as dicas.", botNenhum: "Nenhum", botBuscaPh: "Procurar atirador",
+    botAliado: "Seu ADC", botAdcIni: "ADC inimigo", botSupIni: "Suporte inimigo", botTrocar: "trocar", botEscolher: "Escolher", botContra: "Contra {c}", botCom: "Com {c}", botSem: "Ainda sem dicas para esta parte.", botEscolhaAliado: "Escolha o seu atirador", botEscolhaIni: "Escolha o atirador inimigo", botFalta: "Escolha o campeão na carta acima para ver as dicas.", botNenhum: "Nenhum", botBuscaPh: "Procurar atirador", botDifLane: "Lane 2x2", botDifSup: "Contra {c}", botDifAdc: "Contra {c}",
     difMuito_facil: "Muito fácil", difFacil: "Fácil", difMedio: "Médio", difDificil: "Difícil", difMuito_dificil: "Muito difícil", dificuldade: "Dificuldade", difRota: "Ameaça na rota", difJogo: "Ameaça na partida", difRotaCurto: "Rota", difJogoCurto: "Partida",
     runa: "Runa", secundaria: "Secundária", feitico: "Feitiço", bota: "Bota", build: "Build", semAnot: "Sem anotação", tantoFaz: "Tanto faz",
     anterior: "Anterior: ", proximo: "Próximo: ",
@@ -1592,7 +1609,7 @@ const TXT = {
     vazio: "No champion matches this search.", limpar: "Clear search and filters", voce: "You", inimigo: "Enemy", duelo: "Matchup",
     travarTit: "Lock in", travarContra: "Lock in vs ", setup: "Your setup for this matchup",
     lembrete: "Notes", comoJogar: "How to play", contra: " vs ", arteDe: "Art of ",
-    botAliado: "Your ADC", botAdcIni: "Enemy ADC", botSupIni: "Enemy support", botTrocar: "change", botEscolher: "Choose", botContra: "Against {c}", botCom: "With {c}", botSem: "No tips for this part yet.", botEscolhaAliado: "Choose your marksman", botEscolhaIni: "Choose the enemy marksman", botFalta: "Pick the champion on the card above to see the tips.", botNenhum: "None", botBuscaPh: "Search marksman",
+    botAliado: "Your ADC", botAdcIni: "Enemy ADC", botSupIni: "Enemy support", botTrocar: "change", botEscolher: "Choose", botContra: "Against {c}", botCom: "With {c}", botSem: "No tips for this part yet.", botEscolhaAliado: "Choose your marksman", botEscolhaIni: "Choose the enemy marksman", botFalta: "Pick the champion on the card above to see the tips.", botNenhum: "None", botBuscaPh: "Search marksman", botDifLane: "2v2 lane", botDifSup: "Vs {c}", botDifAdc: "Vs {c}",
     difMuito_facil: "Very easy", difFacil: "Easy", difMedio: "Medium", difDificil: "Hard", difMuito_dificil: "Very hard", dificuldade: "Difficulty", difRota: "Lane threat", difJogo: "Game threat", difRotaCurto: "Lane", difJogoCurto: "Game",
     runa: "Rune", secundaria: "Secondary", feitico: "Spell", bota: "Boots", build: "Build", semAnot: "No note", tantoFaz: "Any",
     anterior: "Previous: ", proximo: "Next: ",
@@ -1696,6 +1713,8 @@ const DIF_NOTA = [null, "muito_facil", "facil", "medio", "dificil", "muito_dific
 const rotuloDif = d => t("dif" + d.charAt(0).toUpperCase() + d.slice(1));
 // Planilhas com duas notas por matchup (Sad: "Lane Threat" e "Game Threat", de muito fácil a muito difícil).
 const temDifDupla = c => c.dificuldade && c.dificuldade.rota != null;
+// Rota da planilha -> ícone de posição do cliente (o filtro de rota aparece só com o ícone, como na seleção de campeões).
+const POS_FILTRO = { top: "top", jungle: "jungle", selva: "jungle", mid: "mid", meio: "mid", adc: "bot", bot: "bot", atirador: "bot", sup: "sup", support: "sup", suporte: "sup" };
 // Filtros: dentro do mesmo grupo vale qualquer um; entre grupos, todos.
 const FILTROS = {
   simples: g => [
@@ -1706,7 +1725,7 @@ const FILTROS = {
   completo: g => [
     ...DIFS.map(d => ({ id: "dif_" + d, grupo: "dif", cor: d, teste: c => c.dif === d })),
     // Planilha com matchups de mais de uma rota (Akali: mid e top): um filtro por rota.
-    ...[...new Set(g.matchups.map(m => m.rota).filter(Boolean))].map((r, i, rs) => rs.length > 1 && ({ id: "rota_" + r, grupo: "rota", rotulo: r, teste: c => c.rota === r })).filter(Boolean),
+    ...[...new Set(g.matchups.map(m => m.rota).filter(Boolean))].map((r, i, rs) => rs.length > 1 && ({ id: "rota_" + r, grupo: "rota", rotulo: r, pos: POS_FILTRO[normal(r)], teste: c => c.rota === r || (r === "Atirador" && !!c.adc) })).filter(Boolean),
   ],
 };
 
@@ -1866,7 +1885,7 @@ const ordemRota = r => { const i = ROTAS.indexOf((r || "").toLowerCase()); retur
 function renderGuia() {
   const eu = guia.campeao;
   if (typeof marcaApp === "function") marcaApp();  // o botão do app vale em todo guia
-  const sub = (guia.rotas || [guia.rota]).filter(Boolean).join(" / ");
+  const sub = (guia.rotas || [guia.rota]).filter(Boolean).map(r => POS_FILTRO[normal(r)] === "sup" ? t("pos_sup") : r).join(" / ");
   $("avisoFonte").hidden = !guia.aviso;
   $("avisoFonte").textContent = guia.aviso ? ((L === "en" && guia.aviso_en) || tr(guia.aviso)) : "";
   const skt = guia.id === "akshan" ? skinAtual() : SKINS[0];
@@ -1887,7 +1906,10 @@ function renderGuia() {
   $("vocNome").textContent = eu.nome;
   $("vocNome").classList.toggle("longo", eu.nome.length > 9);
   $("vocTitulo").textContent = tituloDe(eu);
-  $("filtros").innerHTML = filtros.map(f => `<button class="chip" type="button" data-f="${f.id}" aria-pressed="${ativos.has(f.id)}">${f.icone ? `<img src="${f.icone}" alt="" width="20" height="20">` : ""}${f.cor ? `<i class="cor-dif" style="--dif: var(--dif-${f.cor})" aria-hidden="true"></i>` : ""}${esc(f.cor ? rotuloDif(f.cor) : f.chave ? t(f.chave) : f.rotulo)}</button>`).join("");
+  const chip = f => f.pos ? `<button class="chip chip-pos" type="button" data-f="${f.id}" aria-pressed="${ativos.has(f.id)}" aria-label="${esc(t("pos_" + f.pos))}" title="${esc(t("pos_" + f.pos))}">${iconePos(f.pos)}</button>`
+    : `<button class="chip" type="button" data-f="${f.id}" aria-pressed="${ativos.has(f.id)}">${f.icone ? `<img src="${f.icone}" alt="" width="20" height="20">` : ""}${f.cor ? `<i class="cor-dif" style="--dif: var(--dif-${f.cor})" aria-hidden="true"></i>` : ""}${esc(f.cor ? rotuloDif(f.cor) : f.chave ? t(f.chave) : f.rotulo)}</button>`;
+  const pos = filtros.filter(f => f.pos);
+  $("filtros").innerHTML = filtros.filter(f => !f.pos).map(chip).join("") + (pos.length ? `<span class="pos-grupo" role="group" aria-label="${esc(t("selPosicoes"))}">${pos.map(chip).join("")}</span>` : "");
   $("nt").textContent = t(guia.formato === "simples" ? "lembrete" : "comoJogar");
   // O separador fica junto dos atalhos: no celular eles somem e não sobra um "·" solto.
   const marcas = guia.formato === "simples" ? "" : t("legDif").replace(/5/, guia.escala || 5);
@@ -2173,7 +2195,7 @@ function setupCompleto(c) {
   const imagensRunas = c.runas.some(op => op.some(l => l.rotulo === "Fragmentos")) ? "" : (c.imagens_runas || []).map(i => `<img class="runa-original" src="${esc(i.src)}" alt="${esc(tr(i.alt || t("runasPlanilha")))}" width="${i.largura}" height="${i.altura}" loading="lazy">`).join("");
   // Feitiço só em ícone (a planilha do Sad não escreve o nome): os ícones aparecem sem o texto embaixo.
   const feiticos = c.feiticos_texto || (c.feiticos || []).length ? `<div class="feiticos-guia"><h3>${t("feitico")}</h3><div class="pecas">${(c.feiticos || []).map(p => peca(p)).join(c.feiticos_ou ? `<span class="ou">${t("ou")}</span>` : "")}</div>${c.feiticos_texto ? `<p>${esc(tr(c.feiticos_texto))}</p>` : ""}</div>` : "";
-  const dif = temDifDupla(c) ? [["rota", "difRota"], ["jogo", "difJogo"]].map(([k, r]) => `<div><dt>${t(r)}</dt><dd aria-label="${c.dificuldade[k] ? esc(rotuloDif(DIF_NOTA[c.dificuldade[k]])) : t("semAnot")}">${pips(c.dificuldade[k])}<b>${c.dificuldade[k] ? esc(rotuloDif(DIF_NOTA[c.dificuldade[k]])) : "–"}</b></dd></div>`).join("")
+  const dif = guia.bot ? difBot(c) : temDifDupla(c) ? [["rota", "difRota"], ["jogo", "difJogo"]].map(([k, r]) => `<div><dt>${t(r)}</dt><dd aria-label="${c.dificuldade[k] ? esc(rotuloDif(DIF_NOTA[c.dificuldade[k]])) : t("semAnot")}">${pips(c.dificuldade[k])}<b>${c.dificuldade[k] ? esc(rotuloDif(DIF_NOTA[c.dificuldade[k]])) : "–"}</b></dd></div>`).join("")
     : [["early", "Early"], ["mid", "Mid"], ["late", "Late"], ["overall", "Geral"]]
     .filter(([k]) => k === "overall" || c.dificuldade[k] != null)
     .map(([k, r]) => `<div><dt>${k === "overall" ? t("geral") : r}</dt><dd aria-label="${c.dificuldade[k] ? t("srDif", k === "overall" ? c.dificuldade.valor ?? c.dificuldade[k] : c.dificuldade[k], guia.escala || 5).replace(/^, /, "") : t("semAnot")}">${pips(c.dificuldade[k])}<b>${k === "overall" && c.dificuldade.texto ? esc(notaTexto(tr(c.dificuldade.texto))) : (c.dificuldade[k] ?? "–") + "/5"}</b></dd></div>`).join("");
@@ -2487,7 +2509,7 @@ document.addEventListener("keydown", e => { if (e.key === "Escape" && !$("cdsPai
    O inimigo da roda é o suporte inimigo; as duas cartas novas guardam o seu ADC e o ADC inimigo (por guia, no
    navegador). Dicas: contra o suporte (a matchup), contra o ADC inimigo (a matchup dele) e com o seu ADC (o campo
    "sinergia" da matchup do seu ADC, quando o autor escrever). */
-const BOT_ATIRADORES = () => guia.lista.filter(x => x.rota === "Atirador");
+const BOT_ATIRADORES = () => guia.lista.filter(x => x.rota === "Atirador" || x.adc);
 function botEstado() {
   try { return JSON.parse(localStorage.getItem("bot:" + guia.id)) || {}; } catch (e) { return {}; }
 }
@@ -2499,6 +2521,8 @@ function botCarta(el, c) {
   el.querySelector(".t").textContent = c ? tituloDe(c) : "";
   el.querySelector(".bot-troca").textContent = t("botTrocar");
   el.querySelector(".bot-troca").hidden = !c;
+  const d = el.querySelector(".guia");
+  if (d) d.innerHTML = c && typeof c.adc === "number" ? `${pips(c.adc)}${t("dificuldade")} ${c.adc}/5` : "";
 }
 function botCaixa(rotulo, c, secoes, falta) {
   const corpo = !c ? `<p class="bot-vazio">${esc(t("botFalta"))}</p>`
@@ -2519,6 +2543,18 @@ function renderBot(c) {
   const sec = x => x ? [...(x.tldr || []).length ? [{ blocos: [{ tipo: "lista", itens: x.tldr }] }] : [], ...(x.secoes || [])] : [];
   return `<div class="bot-notas">${botCaixa(t("botContra"), c, sec(c), "")}${botCaixa(t("botContra"), adcIni, sec(adcIni), t("botEscolhaIni"))}${botCaixa(t("botCom"), aliado, aliado && aliado.sinergia, t("botEscolhaAliado"))}</div>`;
 }
+// Dificuldade da bot lane: conta o suporte (a matchup da roda) e o ADC inimigo escolhido; a lane é a média dos dois,
+// arredondada para cima (Caitlyn 5 com Braum 1 dá 3).
+function botNotas(c) {
+  const a = guia.lista.find(x => x.id === botEstado().adcIni);
+  const sup = c.dificuldade.overall || null, adc = a && typeof a.adc === "number" ? a.adc : null;
+  return { a, sup, adc, lane: sup && adc ? Math.ceil((sup + adc) / 2) : sup || adc };
+}
+function difBot(c) {
+  const n = botNotas(c);
+  const linha = (rot, v) => `<div><dt>${esc(rot)}</dt><dd aria-label="${v ? t("srDif", v, 5).replace(/^, /, "") : t("semAnot")}">${pips(v)}<b>${v ? v + "/5" : "–"}</b></dd></div>`;
+  return linha(t("botDifLane"), n.lane) + linha(t("botDifSup").replace("{c}", c.nome), n.sup) + linha(t("botDifAdc").replace("{c}", n.a ? n.a.nome : t("botAdcIni")), n.adc);
+}
 let botQual = null;
 function botAbre(qual) {
   botQual = qual;
@@ -2526,15 +2562,18 @@ function botAbre(qual) {
   $("botTit").textContent = t(qual === "aliado" ? "botEscolhaAliado" : "botEscolhaIni");
   $("botBusca").value = "";
   $("botBusca").placeholder = t("botBuscaPh");
-  $("botGrade").innerHTML = `<button type="button" data-id="" aria-pressed="${!e[qual]}"><span>${esc(t("botNenhum"))}</span></button>` +
-    BOT_ATIRADORES().map(x => `<button type="button" data-id="${x.id}" data-nome="${esc(x.nome.toLowerCase())}" aria-pressed="${e[qual] === x.id}"><img src="${sq(x.id)}" alt="" width="48" height="48" loading="lazy"><span>${esc(x.nome)}</span></button>`).join("");
+  $("botLimpa").textContent = t("botNenhum");
+  $("botLimpa").hidden = !e[qual];
+  // Só o ícone, como na seleção de campeões; o nome aparece ao passar o mouse e para o leitor de tela.
+  // No ADC inimigo, o número é a dificuldade da tier list (igual à roda).
+  $("botGrade").innerHTML = BOT_ATIRADORES().map(x => `<button type="button" data-id="${x.id}" data-nome="${esc(normal(x.nome))}" aria-pressed="${e[qual] === x.id}" title="${esc(x.nome)}" aria-label="${esc(x.nome)}"><img src="${sq(x.id)}" alt="" width="56" height="56">${qual === "adcIni" && typeof x.adc === "number" ? `<b class="bot-n" style="--cor: var(--difc-${DIF_NOTA[x.adc]})">${x.adc}</b>` : ""}</button>`).join("");
   $("botDialogo").showModal();
   $("botBusca").focus();
 }
 document.addEventListener("click", ev => {
   const troca = ev.target.closest(".bot-carta");
   if (troca && guia && guia.bot) { botAbre(troca.id === "cartaAliado" ? "aliado" : "adcIni"); return; }
-  const b = ev.target.closest("#botGrade button");
+  const b = ev.target.closest("#botGrade button, #botLimpa");
   if (b) {
     const e = botEstado(); e[botQual] = b.dataset.id || null; botGuarda(e);
     $("botDialogo").close(); toca("clique"); renderDetalhe(false);
@@ -2542,7 +2581,7 @@ document.addEventListener("click", ev => {
   if (ev.target.closest("#botFecha")) $("botDialogo").close();
 });
 $("botBusca").addEventListener("input", () => {
-  const q = $("botBusca").value.trim().toLowerCase();
+  const q = normal($("botBusca").value.trim());
   $("botGrade").querySelectorAll("button[data-nome]").forEach(b => { b.hidden = q && !b.dataset.nome.includes(q); });
 });
 
@@ -2567,6 +2606,11 @@ function renderDetalhe(animar) {
     // Duas notas: cada uma num pedaço que pode descer de linha no celular, em vez de ser cortada.
     g.innerHTML = temDifDupla(c) ? `${pips(c.dificuldade.rota)}<span>${t("difRotaCurto")}: ${esc(rotuloDif(DIF_NOTA[c.dificuldade.rota]))} ·</span><span>${t("difJogoCurto")}: ${esc(c.dificuldade.jogo ? rotuloDif(DIF_NOTA[c.dificuldade.jogo]) : "–")}</span>`
       : c.dificuldade.overall ? `${pips(c.dificuldade.overall)}${rotuloCardDif(c)}` : "";
+    if (guia.bot) {
+      // 2x2: o selo do suporte mostra a lane inteira quando o ADC inimigo já foi escolhido.
+      const n = botNotas(c);
+      if (n.adc) g.innerHTML = `${pips(n.lane)}${esc(t("botDifLane"))} ${n.lane}/5`;
+    }
   }
   $("travarNome").textContent = t("travarContra") + c.nome;
   // Se o painel de cooldowns estiver aberto, acompanha a troca de matchup.

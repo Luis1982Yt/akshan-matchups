@@ -1,5 +1,5 @@
 {
- "_fonte": "Notas do guia do Taric, escritas para o BattleMatch. dificuldade: tier list do dono (2026-11-23), de 1 (muito fácil) a 5 (muito difícil), contra o suporte inimigo.",
+ "_fonte": "Notas do guia do Taric, escritas para o BattleMatch. dificuldade: tier list do dono (2026-11-23), de 1 (muito fácil) a 5 (muito difícil), contra o suporte inimigo. dificuldade_adc: tier list de atiradores do mono Taric (2026-11-23), contra o ADC inimigo. dicas: frases curtas dele por campeão. paginas_runas: prints de runas do mono Taric, cada uma com os campeões em que ele usa.",
  "dificuldade": {
   "Janna": 5,
   "Karma": 5,
@@ -41,5 +41,126 @@
   "Nautilus": 1,
   "TahmKench": 1,
   "Pantheon": 1
- }
+ },
+ "dificuldade_adc": {
+  "Caitlyn": 5,
+  "Sivir": 5,
+  "Ashe": 5,
+  "Ezreal": 5,
+  "Lucian": 5,
+  "Kalista": 5,
+  "Vayne": 4,
+  "Veigar": 4,
+  "Kaisa": 4,
+  "Ziggs": 4,
+  "Xayah": 4,
+  "Seraphine": 4,
+  "Draven": 4,
+  "Aphelios": 4,
+  "Varus": 3,
+  "Yunara": 3,
+  "Corki": 3,
+  "Zeri": 3,
+  "Syndra": 3,
+  "Smolder": 3,
+  "AurelionSol": 3,
+  "Viktor": 3,
+  "Hwei": 2,
+  "Jhin": 2,
+  "Karthus": 2,
+  "Twitch": 2,
+  "Tristana": 2,
+  "Samira": 2,
+  "Nilah": 2,
+  "Jinx": 1,
+  "Yasuo": 1,
+  "Senna": 1,
+  "MissFortune": 1
+ },
+ "dicas": {
+  "Caitlyn": [
+   "Perma ban."
+  ]
+ },
+ "paginas_runas": [
+  {
+   "contra": [
+    "Braum",
+    "Galio",
+    "Nautilus",
+    "TahmKench",
+    "Pantheon",
+    "Blitzcrank",
+    "Shen",
+    "Maokai",
+    "Poppy",
+    "Rell",
+    "Sylas",
+    "Alistar"
+   ],
+   "principal": [
+    "Lethal Tempo",
+    "Presence of Mind",
+    "Legend: Haste",
+    "Last Stand"
+   ],
+   "secundaria": [
+    "Revitalize",
+    "Font of Life"
+   ],
+   "fragmentos": [
+    "Attack Speed",
+    "Move Speed",
+    "Health"
+   ]
+  },
+  {
+   "contra": [
+    "Leona",
+    "Thresh"
+   ],
+   "principal": [
+    "Aftershock",
+    "Font of Life",
+    "Bone Plating",
+    "Revitalize"
+   ],
+   "secundaria": [
+    "Presence of Mind",
+    "Legend: Haste"
+   ],
+   "fragmentos": [
+    "Attack Speed",
+    "Health Scaling",
+    "Tenacity"
+   ]
+  },
+  {
+   "contra": [
+    "Karma",
+    "Morgana",
+    "Zilean",
+    "Brand",
+    "Velkoz",
+    "Lux",
+    "Xerath",
+    "Zyra"
+   ],
+   "principal": [
+    "Guardian",
+    "Font of Life",
+    "Second Wind",
+    "Revitalize"
+   ],
+   "secundaria": [
+    "Presence of Mind",
+    "Legend: Haste"
+   ],
+   "fragmentos": [
+    "Attack Speed",
+    "Move Speed",
+    "Tenacity"
+   ]
+  }
+ ]
 }

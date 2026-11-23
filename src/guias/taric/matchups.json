@@ -62,6 +62,7 @@
    "id": "Akshan",
    "titulo": "o Sentinela Rebelde",
    "rota": "Atirador",
+   "adc": true,
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -87,7 +88,61 @@
    },
    "tldr": [],
    "feiticos": [],
-   "runas": [],
+   "runas": [
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Lethal Tempo",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png"
+       },
+       {
+        "nome": "Presence of Mind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+       },
+       {
+        "nome": "Legend: Haste",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+       },
+       {
+        "nome": "Last Stand",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/LastStand/LastStand.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Revitalize",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/Revitalize/Revitalize.png"
+       },
+       {
+        "nome": "Font of Life",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/FontOfLife/FontOfLife.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Attack Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+       },
+       {
+        "nome": "Move Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+       },
+       {
+        "nome": "Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
+       }
+      ]
+     }
+    ]
+   ],
    "imagens_runas": [],
    "itens": [],
    "secoes": []
@@ -166,9 +221,10 @@
    "id": "Aphelios",
    "titulo": "a Arma dos Devotos",
    "rota": "Atirador",
+   "adc": 4,
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 4,
+    "valor": 4,
     "texto": ""
    },
    "tldr": [],
@@ -184,6 +240,7 @@
    "id": "Ashe",
    "titulo": "a Arqueira do Gelo",
    "rota": "Suporte",
+   "adc": 5,
    "dificuldade": {
     "overall": 3,
     "valor": 3,
@@ -201,9 +258,11 @@
    "planilha": "Aurelion Sol",
    "id": "AurelionSol",
    "titulo": "o Forjador de Estrelas",
+   "rota": "Atirador",
+   "adc": 3,
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 3,
+    "valor": 3,
     "texto": ""
    },
    "tldr": [],
@@ -236,6 +295,7 @@
    "id": "Azir",
    "titulo": "o Imperador das Areias",
    "rota": "Atirador",
+   "adc": true,
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -296,7 +356,61 @@
    },
    "tldr": [],
    "feiticos": [],
-   "runas": [],
+   "runas": [
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Lethal Tempo",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png"
+       },
+       {
+        "nome": "Presence of Mind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+       },
+       {
+        "nome": "Legend: Haste",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+       },
+       {
+        "nome": "Last Stand",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/LastStand/LastStand.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Revitalize",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/Revitalize/Revitalize.png"
+       },
+       {
+        "nome": "Font of Life",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/FontOfLife/FontOfLife.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Attack Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+       },
+       {
+        "nome": "Move Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+       },
+       {
+        "nome": "Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
+       }
+      ]
+     }
+    ]
+   ],
    "imagens_runas": [],
    "itens": [],
    "secoes": []
@@ -314,7 +428,61 @@
    },
    "tldr": [],
    "feiticos": [],
-   "runas": [],
+   "runas": [
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Guardian",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/Guardian/Guardian.png"
+       },
+       {
+        "nome": "Font of Life",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/FontOfLife/FontOfLife.png"
+       },
+       {
+        "nome": "Second Wind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/SecondWind/SecondWind.png"
+       },
+       {
+        "nome": "Revitalize",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/Revitalize/Revitalize.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Presence of Mind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+       },
+       {
+        "nome": "Legend: Haste",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Attack Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+       },
+       {
+        "nome": "Move Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+       },
+       {
+        "nome": "Tenacity",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+       }
+      ]
+     }
+    ]
+   ],
    "imagens_runas": [],
    "itens": [],
    "secoes": []
@@ -332,7 +500,61 @@
    },
    "tldr": [],
    "feiticos": [],
-   "runas": [],
+   "runas": [
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Lethal Tempo",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png"
+       },
+       {
+        "nome": "Presence of Mind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+       },
+       {
+        "nome": "Legend: Haste",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+       },
+       {
+        "nome": "Last Stand",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/LastStand/LastStand.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Revitalize",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/Revitalize/Revitalize.png"
+       },
+       {
+        "nome": "Font of Life",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/FontOfLife/FontOfLife.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Attack Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+       },
+       {
+        "nome": "Move Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+       },
+       {
+        "nome": "Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
+       }
+      ]
+     }
+    ]
+   ],
    "imagens_runas": [],
    "itens": [],
    "secoes": []
@@ -360,12 +582,15 @@
    "id": "Caitlyn",
    "titulo": "a Xerife de Piltover",
    "rota": "Atirador",
+   "adc": 5,
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 5,
+    "valor": 5,
     "texto": ""
    },
-   "tldr": [],
+   "tldr": [
+    "Perma ban."
+   ],
    "feiticos": [],
    "runas": [],
    "imagens_runas": [],
@@ -429,9 +654,10 @@
    "id": "Corki",
    "titulo": "o Bombardeiro Ousado",
    "rota": "Atirador",
+   "adc": 3,
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 3,
+    "valor": 3,
     "texto": ""
    },
    "tldr": [],
@@ -498,9 +724,10 @@
    "id": "Draven",
    "titulo": "o Carrasco de Noxus",
    "rota": "Atirador",
+   "adc": 4,
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 4,
+    "valor": 4,
     "texto": ""
    },
    "tldr": [],
@@ -568,9 +795,10 @@
    "id": "Ezreal",
    "titulo": "o Explorador Pródigo",
    "rota": "Atirador",
+   "adc": 5,
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 5,
+    "valor": 5,
     "texto": ""
    },
    "tldr": [],
@@ -644,7 +872,61 @@
    },
    "tldr": [],
    "feiticos": [],
-   "runas": [],
+   "runas": [
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Lethal Tempo",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png"
+       },
+       {
+        "nome": "Presence of Mind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+       },
+       {
+        "nome": "Legend: Haste",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+       },
+       {
+        "nome": "Last Stand",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/LastStand/LastStand.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Revitalize",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/Revitalize/Revitalize.png"
+       },
+       {
+        "nome": "Font of Life",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/FontOfLife/FontOfLife.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Attack Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+       },
+       {
+        "nome": "Move Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+       },
+       {
+        "nome": "Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
+       }
+      ]
+     }
+    ]
+   ],
    "imagens_runas": [],
    "itens": [],
    "secoes": []
@@ -723,6 +1005,7 @@
    "id": "Graves",
    "titulo": "o Foragido",
    "rota": "Atirador",
+   "adc": true,
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -791,9 +1074,11 @@
    "planilha": "Hwei",
    "id": "Hwei",
    "titulo": "o Visionário",
+   "rota": "Atirador",
+   "adc": 2,
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 2,
+    "valor": 2,
     "texto": ""
    },
    "tldr": [],
@@ -912,6 +1197,7 @@
    "id": "Jayce",
    "titulo": "o Defensor do Amanhã",
    "rota": "Atirador",
+   "adc": true,
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -930,9 +1216,10 @@
    "id": "Jhin",
    "titulo": "o Virtuoso",
    "rota": "Atirador",
+   "adc": 2,
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 2,
+    "valor": 2,
     "texto": ""
    },
    "tldr": [],
@@ -948,9 +1235,10 @@
    "id": "Jinx",
    "titulo": "o Gatilho Desenfreado",
    "rota": "Atirador",
+   "adc": 1,
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 1,
+    "valor": 1,
     "texto": ""
    },
    "tldr": [],
@@ -983,9 +1271,10 @@
    "id": "Kaisa",
    "titulo": "a Filha do Vazio",
    "rota": "Atirador",
+   "adc": 4,
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 4,
+    "valor": 4,
     "texto": ""
    },
    "tldr": [],
@@ -1001,9 +1290,10 @@
    "id": "Kalista",
    "titulo": "a Lança da Vingança",
    "rota": "Atirador",
+   "adc": 5,
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 5,
+    "valor": 5,
     "texto": ""
    },
    "tldr": [],
@@ -1026,7 +1316,61 @@
    },
    "tldr": [],
    "feiticos": [],
-   "runas": [],
+   "runas": [
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Guardian",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/Guardian/Guardian.png"
+       },
+       {
+        "nome": "Font of Life",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/FontOfLife/FontOfLife.png"
+       },
+       {
+        "nome": "Second Wind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/SecondWind/SecondWind.png"
+       },
+       {
+        "nome": "Revitalize",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/Revitalize/Revitalize.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Presence of Mind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+       },
+       {
+        "nome": "Legend: Haste",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Attack Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+       },
+       {
+        "nome": "Move Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+       },
+       {
+        "nome": "Tenacity",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+       }
+      ]
+     }
+    ]
+   ],
    "imagens_runas": [],
    "itens": [],
    "secoes": []
@@ -1036,9 +1380,11 @@
    "planilha": "Karthus",
    "id": "Karthus",
    "titulo": "a Voz Mortal",
+   "rota": "Atirador",
+   "adc": 2,
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 2,
+    "valor": 2,
     "texto": ""
    },
    "tldr": [],
@@ -1088,6 +1434,7 @@
    "id": "Kayle",
    "titulo": "a Justa",
    "rota": "Atirador",
+   "adc": true,
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -1157,6 +1504,7 @@
    "id": "Kindred",
    "titulo": "os Caçadores Eternos",
    "rota": "Atirador",
+   "adc": true,
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -1192,6 +1540,7 @@
    "id": "KogMaw",
    "titulo": "a Boca do Abismo",
    "rota": "Atirador",
+   "adc": true,
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -1251,7 +1600,61 @@
    },
    "tldr": [],
    "feiticos": [],
-   "runas": [],
+   "runas": [
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Aftershock",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png"
+       },
+       {
+        "nome": "Font of Life",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/FontOfLife/FontOfLife.png"
+       },
+       {
+        "nome": "Bone Plating",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/BonePlating/BonePlating.png"
+       },
+       {
+        "nome": "Revitalize",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/Revitalize/Revitalize.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Presence of Mind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+       },
+       {
+        "nome": "Legend: Haste",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Attack Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+       },
+       {
+        "nome": "Health Scaling",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
+       },
+       {
+        "nome": "Tenacity",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+       }
+      ]
+     }
+    ]
+   ],
    "imagens_runas": [],
    "itens": [],
    "secoes": []
@@ -1313,9 +1716,10 @@
    "id": "Lucian",
    "titulo": "o Purificador",
    "rota": "Atirador",
+   "adc": 5,
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 5,
+    "valor": 5,
     "texto": ""
    },
    "tldr": [],
@@ -1356,7 +1760,61 @@
    },
    "tldr": [],
    "feiticos": [],
-   "runas": [],
+   "runas": [
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Guardian",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/Guardian/Guardian.png"
+       },
+       {
+        "nome": "Font of Life",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/FontOfLife/FontOfLife.png"
+       },
+       {
+        "nome": "Second Wind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/SecondWind/SecondWind.png"
+       },
+       {
+        "nome": "Revitalize",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/Revitalize/Revitalize.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Presence of Mind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+       },
+       {
+        "nome": "Legend: Haste",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Attack Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+       },
+       {
+        "nome": "Move Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+       },
+       {
+        "nome": "Tenacity",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+       }
+      ]
+     }
+    ]
+   ],
    "imagens_runas": [],
    "itens": [],
    "secoes": []
@@ -1408,7 +1866,61 @@
    },
    "tldr": [],
    "feiticos": [],
-   "runas": [],
+   "runas": [
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Lethal Tempo",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png"
+       },
+       {
+        "nome": "Presence of Mind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+       },
+       {
+        "nome": "Legend: Haste",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+       },
+       {
+        "nome": "Last Stand",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/LastStand/LastStand.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Revitalize",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/Revitalize/Revitalize.png"
+       },
+       {
+        "nome": "Font of Life",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/FontOfLife/FontOfLife.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Attack Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+       },
+       {
+        "nome": "Move Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+       },
+       {
+        "nome": "Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
+       }
+      ]
+     }
+    ]
+   ],
    "imagens_runas": [],
    "itens": [],
    "secoes": []
@@ -1472,9 +1984,10 @@
    "id": "MissFortune",
    "titulo": "a Caçadora de Recompensas",
    "rota": "Atirador",
+   "adc": 1,
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 1,
+    "valor": 1,
     "texto": ""
    },
    "tldr": [],
@@ -1514,7 +2027,61 @@
    },
    "tldr": [],
    "feiticos": [],
-   "runas": [],
+   "runas": [
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Guardian",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/Guardian/Guardian.png"
+       },
+       {
+        "nome": "Font of Life",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/FontOfLife/FontOfLife.png"
+       },
+       {
+        "nome": "Second Wind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/SecondWind/SecondWind.png"
+       },
+       {
+        "nome": "Revitalize",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/Revitalize/Revitalize.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Presence of Mind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+       },
+       {
+        "nome": "Legend: Haste",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Attack Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+       },
+       {
+        "nome": "Move Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+       },
+       {
+        "nome": "Tenacity",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+       }
+      ]
+     }
+    ]
+   ],
    "imagens_runas": [],
    "itens": [],
    "secoes": []
@@ -1584,7 +2151,61 @@
    },
    "tldr": [],
    "feiticos": [],
-   "runas": [],
+   "runas": [
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Lethal Tempo",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png"
+       },
+       {
+        "nome": "Presence of Mind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+       },
+       {
+        "nome": "Legend: Haste",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+       },
+       {
+        "nome": "Last Stand",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/LastStand/LastStand.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Revitalize",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/Revitalize/Revitalize.png"
+       },
+       {
+        "nome": "Font of Life",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/FontOfLife/FontOfLife.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Attack Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+       },
+       {
+        "nome": "Move Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+       },
+       {
+        "nome": "Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
+       }
+      ]
+     }
+    ]
+   ],
    "imagens_runas": [],
    "itens": [],
    "secoes": []
@@ -1629,9 +2250,11 @@
    "planilha": "Nilah",
    "id": "Nilah",
    "titulo": "a Alegria Irrestrita",
+   "rota": "Atirador",
+   "adc": 2,
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 2,
+    "valor": 2,
     "texto": ""
    },
    "tldr": [],
@@ -1739,7 +2362,61 @@
    },
    "tldr": [],
    "feiticos": [],
-   "runas": [],
+   "runas": [
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Lethal Tempo",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png"
+       },
+       {
+        "nome": "Presence of Mind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+       },
+       {
+        "nome": "Legend: Haste",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+       },
+       {
+        "nome": "Last Stand",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/LastStand/LastStand.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Revitalize",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/Revitalize/Revitalize.png"
+       },
+       {
+        "nome": "Font of Life",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/FontOfLife/FontOfLife.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Attack Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+       },
+       {
+        "nome": "Move Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+       },
+       {
+        "nome": "Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
+       }
+      ]
+     }
+    ]
+   ],
    "imagens_runas": [],
    "itens": [],
    "secoes": []
@@ -1757,7 +2434,61 @@
    },
    "tldr": [],
    "feiticos": [],
-   "runas": [],
+   "runas": [
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Lethal Tempo",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png"
+       },
+       {
+        "nome": "Presence of Mind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+       },
+       {
+        "nome": "Legend: Haste",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+       },
+       {
+        "nome": "Last Stand",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/LastStand/LastStand.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Revitalize",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/Revitalize/Revitalize.png"
+       },
+       {
+        "nome": "Font of Life",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/FontOfLife/FontOfLife.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Attack Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+       },
+       {
+        "nome": "Move Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+       },
+       {
+        "nome": "Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
+       }
+      ]
+     }
+    ]
+   ],
    "imagens_runas": [],
    "itens": [],
    "secoes": []
@@ -1803,6 +2534,7 @@
    "id": "Quinn",
    "titulo": "as Asas de Demacia",
    "rota": "Atirador",
+   "adc": true,
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -1880,7 +2612,61 @@
    },
    "tldr": [],
    "feiticos": [],
-   "runas": [],
+   "runas": [
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Lethal Tempo",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png"
+       },
+       {
+        "nome": "Presence of Mind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+       },
+       {
+        "nome": "Legend: Haste",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+       },
+       {
+        "nome": "Last Stand",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/LastStand/LastStand.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Revitalize",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/Revitalize/Revitalize.png"
+       },
+       {
+        "nome": "Font of Life",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/FontOfLife/FontOfLife.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Attack Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+       },
+       {
+        "nome": "Move Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+       },
+       {
+        "nome": "Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
+       }
+      ]
+     }
+    ]
+   ],
    "imagens_runas": [],
    "itens": [],
    "secoes": []
@@ -1994,9 +2780,10 @@
    "id": "Samira",
    "titulo": "a Rosa do Deserto",
    "rota": "Atirador",
+   "adc": 2,
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 2,
+    "valor": 2,
     "texto": ""
    },
    "tldr": [],
@@ -2029,6 +2816,7 @@
    "id": "Senna",
    "titulo": "A Redentora",
    "rota": "Suporte",
+   "adc": 1,
    "dificuldade": {
     "overall": 2,
     "valor": 2,
@@ -2047,6 +2835,7 @@
    "id": "Seraphine",
    "titulo": "a Cantora Sonhadora",
    "rota": "Suporte",
+   "adc": 4,
    "dificuldade": {
     "overall": 4,
     "valor": 4,
@@ -2106,7 +2895,61 @@
    },
    "tldr": [],
    "feiticos": [],
-   "runas": [],
+   "runas": [
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Lethal Tempo",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png"
+       },
+       {
+        "nome": "Presence of Mind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+       },
+       {
+        "nome": "Legend: Haste",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+       },
+       {
+        "nome": "Last Stand",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/LastStand/LastStand.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Revitalize",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/Revitalize/Revitalize.png"
+       },
+       {
+        "nome": "Font of Life",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/FontOfLife/FontOfLife.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Attack Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+       },
+       {
+        "nome": "Move Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+       },
+       {
+        "nome": "Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
+       }
+      ]
+     }
+    ]
+   ],
    "imagens_runas": [],
    "itens": [],
    "secoes": []
@@ -2168,9 +3011,10 @@
    "id": "Sivir",
    "titulo": "a Mestra da Batalha",
    "rota": "Atirador",
+   "adc": 5,
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 5,
+    "valor": 5,
     "texto": ""
    },
    "tldr": [],
@@ -2203,9 +3047,10 @@
    "id": "Smolder",
    "titulo": "o Filhote Flamejante",
    "rota": "Atirador",
+   "adc": 3,
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 3,
+    "valor": 3,
     "texto": ""
    },
    "tldr": [],
@@ -2282,7 +3127,61 @@
    },
    "tldr": [],
    "feiticos": [],
-   "runas": [],
+   "runas": [
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Lethal Tempo",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png"
+       },
+       {
+        "nome": "Presence of Mind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+       },
+       {
+        "nome": "Legend: Haste",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+       },
+       {
+        "nome": "Last Stand",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/LastStand/LastStand.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Revitalize",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/Revitalize/Revitalize.png"
+       },
+       {
+        "nome": "Font of Life",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/FontOfLife/FontOfLife.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Attack Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+       },
+       {
+        "nome": "Move Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+       },
+       {
+        "nome": "Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
+       }
+      ]
+     }
+    ]
+   ],
    "imagens_runas": [],
    "itens": [],
    "secoes": []
@@ -2292,9 +3191,11 @@
    "planilha": "Syndra",
    "id": "Syndra",
    "titulo": "a Soberana Sombria",
+   "rota": "Atirador",
+   "adc": 3,
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 3,
+    "valor": 3,
     "texto": ""
    },
    "tldr": [],
@@ -2317,7 +3218,61 @@
    },
    "tldr": [],
    "feiticos": [],
-   "runas": [],
+   "runas": [
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Lethal Tempo",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png"
+       },
+       {
+        "nome": "Presence of Mind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+       },
+       {
+        "nome": "Legend: Haste",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+       },
+       {
+        "nome": "Last Stand",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/LastStand/LastStand.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Revitalize",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/Revitalize/Revitalize.png"
+       },
+       {
+        "nome": "Font of Life",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/FontOfLife/FontOfLife.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Attack Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+       },
+       {
+        "nome": "Move Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+       },
+       {
+        "nome": "Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
+       }
+      ]
+     }
+    ]
+   ],
    "imagens_runas": [],
    "itens": [],
    "secoes": []
@@ -2379,6 +3334,7 @@
    "id": "Teemo",
    "titulo": "o Explorador Veloz",
    "rota": "Atirador",
+   "adc": true,
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -2404,7 +3360,61 @@
    },
    "tldr": [],
    "feiticos": [],
-   "runas": [],
+   "runas": [
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Aftershock",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png"
+       },
+       {
+        "nome": "Font of Life",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/FontOfLife/FontOfLife.png"
+       },
+       {
+        "nome": "Bone Plating",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/BonePlating/BonePlating.png"
+       },
+       {
+        "nome": "Revitalize",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/Revitalize/Revitalize.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Presence of Mind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+       },
+       {
+        "nome": "Legend: Haste",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Attack Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+       },
+       {
+        "nome": "Health Scaling",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthScalingIcon.png"
+       },
+       {
+        "nome": "Tenacity",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+       }
+      ]
+     }
+    ]
+   ],
    "imagens_runas": [],
    "itens": [],
    "secoes": []
@@ -2415,9 +3425,10 @@
    "id": "Tristana",
    "titulo": "a Artilheira Yordle",
    "rota": "Atirador",
+   "adc": 2,
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 2,
+    "valor": 2,
     "texto": ""
    },
    "tldr": [],
@@ -2467,6 +3478,7 @@
    "id": "TwistedFate",
    "titulo": "o Mestre das Cartas",
    "rota": "Atirador",
+   "adc": true,
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -2485,9 +3497,10 @@
    "id": "Twitch",
    "titulo": "o Semeador da Peste",
    "rota": "Atirador",
+   "adc": 2,
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 2,
+    "valor": 2,
     "texto": ""
    },
    "tldr": [],
@@ -2537,9 +3550,10 @@
    "id": "Varus",
    "titulo": "a Flecha da Vingança",
    "rota": "Atirador",
+   "adc": 3,
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 3,
+    "valor": 3,
     "texto": ""
    },
    "tldr": [],
@@ -2555,9 +3569,10 @@
    "id": "Vayne",
    "titulo": "a Caçadora Noturna",
    "rota": "Atirador",
+   "adc": 4,
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 4,
+    "valor": 4,
     "texto": ""
    },
    "tldr": [],
@@ -2572,9 +3587,11 @@
    "planilha": "Veigar",
    "id": "Veigar",
    "titulo": "o Pequeno Mestre do Mal",
+   "rota": "Atirador",
+   "adc": 4,
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 4,
+    "valor": 4,
     "texto": ""
    },
    "tldr": [],
@@ -2597,7 +3614,61 @@
    },
    "tldr": [],
    "feiticos": [],
-   "runas": [],
+   "runas": [
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Guardian",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/Guardian/Guardian.png"
+       },
+       {
+        "nome": "Font of Life",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/FontOfLife/FontOfLife.png"
+       },
+       {
+        "nome": "Second Wind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/SecondWind/SecondWind.png"
+       },
+       {
+        "nome": "Revitalize",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/Revitalize/Revitalize.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Presence of Mind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+       },
+       {
+        "nome": "Legend: Haste",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Attack Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+       },
+       {
+        "nome": "Move Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+       },
+       {
+        "nome": "Tenacity",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+       }
+      ]
+     }
+    ]
+   ],
    "imagens_runas": [],
    "itens": [],
    "secoes": []
@@ -2658,9 +3729,11 @@
    "planilha": "Viktor",
    "id": "Viktor",
    "titulo": "o Arauto do Arcano",
+   "rota": "Atirador",
+   "adc": 3,
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 3,
+    "valor": 3,
     "texto": ""
    },
    "tldr": [],
@@ -2744,9 +3817,10 @@
    "id": "Xayah",
    "titulo": "a Rebelde",
    "rota": "Atirador",
+   "adc": 4,
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 4,
+    "valor": 4,
     "texto": ""
    },
    "tldr": [],
@@ -2769,7 +3843,61 @@
    },
    "tldr": [],
    "feiticos": [],
-   "runas": [],
+   "runas": [
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Guardian",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/Guardian/Guardian.png"
+       },
+       {
+        "nome": "Font of Life",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/FontOfLife/FontOfLife.png"
+       },
+       {
+        "nome": "Second Wind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/SecondWind/SecondWind.png"
+       },
+       {
+        "nome": "Revitalize",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/Revitalize/Revitalize.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Presence of Mind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+       },
+       {
+        "nome": "Legend: Haste",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Attack Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+       },
+       {
+        "nome": "Move Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+       },
+       {
+        "nome": "Tenacity",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+       }
+      ]
+     }
+    ]
+   ],
    "imagens_runas": [],
    "itens": [],
    "secoes": []
@@ -2796,9 +3924,11 @@
    "planilha": "Yasuo",
    "id": "Yasuo",
    "titulo": "o Imperdoável",
+   "rota": "Atirador",
+   "adc": 1,
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 1,
+    "valor": 1,
     "texto": ""
    },
    "tldr": [],
@@ -2848,9 +3978,10 @@
    "id": "Yunara",
    "titulo": "a Fé Inabalável",
    "rota": "Atirador",
+   "adc": 3,
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 3,
+    "valor": 3,
     "texto": ""
    },
    "tldr": [],
@@ -2935,9 +4066,10 @@
    "id": "Zeri",
    "titulo": "A Faísca de Zaun",
    "rota": "Atirador",
+   "adc": 3,
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 3,
+    "valor": 3,
     "texto": ""
    },
    "tldr": [],
@@ -2952,9 +4084,11 @@
    "planilha": "Ziggs",
    "id": "Ziggs",
    "titulo": "o Especialista em Hexplosivos",
+   "rota": "Atirador",
+   "adc": 4,
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 4,
+    "valor": 4,
     "texto": ""
    },
    "tldr": [],
@@ -2977,7 +4111,61 @@
    },
    "tldr": [],
    "feiticos": [],
-   "runas": [],
+   "runas": [
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Guardian",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/Guardian/Guardian.png"
+       },
+       {
+        "nome": "Font of Life",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/FontOfLife/FontOfLife.png"
+       },
+       {
+        "nome": "Second Wind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/SecondWind/SecondWind.png"
+       },
+       {
+        "nome": "Revitalize",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/Revitalize/Revitalize.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Presence of Mind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+       },
+       {
+        "nome": "Legend: Haste",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Attack Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+       },
+       {
+        "nome": "Move Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+       },
+       {
+        "nome": "Tenacity",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+       }
+      ]
+     }
+    ]
+   ],
    "imagens_runas": [],
    "itens": [],
    "secoes": []
@@ -3012,7 +4200,61 @@
    },
    "tldr": [],
    "feiticos": [],
-   "runas": [],
+   "runas": [
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Guardian",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/Guardian/Guardian.png"
+       },
+       {
+        "nome": "Font of Life",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/FontOfLife/FontOfLife.png"
+       },
+       {
+        "nome": "Second Wind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/SecondWind/SecondWind.png"
+       },
+       {
+        "nome": "Revitalize",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/Revitalize/Revitalize.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Presence of Mind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+       },
+       {
+        "nome": "Legend: Haste",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Attack Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+       },
+       {
+        "nome": "Move Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+       },
+       {
+        "nome": "Tenacity",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+       }
+      ]
+     }
+    ]
+   ],
    "imagens_runas": [],
    "itens": [],
    "secoes": []
