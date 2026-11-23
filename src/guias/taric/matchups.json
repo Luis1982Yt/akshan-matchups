@@ -82,8 +82,8 @@
    "titulo": "o Minotauro",
    "rota": "Suporte",
    "dificuldade": {
-    "overall": 4,
-    "valor": 4,
+    "overall": 5,
+    "valor": 5,
     "texto": ""
    },
    "tldr": [
@@ -4744,7 +4744,11 @@
     "valor": 3,
     "texto": ""
    },
-   "tldr": [],
+   "tldr": [
+    "se ela gastar o E, é free kill",
+    "tenta matar ela antes do 6, depois fica mais dificil",
+    "gosto de ghost ou heal nessa lane"
+   ],
    "feiticos": [],
    "runas": [],
    "imagens_runas": [],
