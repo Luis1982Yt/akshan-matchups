@@ -382,6 +382,9 @@
    "id": "Bard",
    "titulo": "o Protetor Andarilho",
    "rota": "Suporte",
+   "lane": {
+    "Yunara": 4
+   },
    "dificuldade": {
     "overall": 3,
     "valor": 3,
