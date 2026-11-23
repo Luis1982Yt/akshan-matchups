@@ -71,7 +71,7 @@ module.exports = async (req, res) => {
 
   const { campeao, campo } = b;
   console.log("editor taric:", b.acao || campo, campeao || "");
-  if (!["dicas", "sinergia", "setup"].includes(campo)) return res.status(400).json({ erro: "campo inválido" });
+  if (!["dicas", "sinergia", "setup", "dif"].includes(campo)) return res.status(400).json({ erro: "campo inválido" });
   const difCampo = campo === "dicas" && b.tipo === "adc" ? "dificuldade_adc" : campo === "dicas" ? "dificuldade" : null;
   const dif = b.dificuldade === null || b.dificuldade === "" || b.dificuldade === undefined ? null : Number(b.dificuldade);
   if (dif !== null && !(Number.isInteger(dif) && dif >= 1 && dif <= 5)) return res.status(400).json({ erro: "dificuldade de 1 a 5" });
@@ -79,6 +79,9 @@ module.exports = async (req, res) => {
   try {
     const ids = new Set((await le(MATCHUPS)).dados.matchups.map(m => m.id));
     if (!ids.has(campeao)) return res.status(400).json({ erro: "campeão desconhecido" });
+    // Só a dificuldade (os quadradinhos): do suporte, do ADC inimigo ou da dupla inteira (lane 2x2 = suporte|ADC).
+    const DIF_ONDE = { sup: "dificuldade", adc: "dificuldade_adc", lane: "dificuldade_lane" };
+    if (campo === "dif" && (!DIF_ONDE[b.tipo] || (b.tipo === "lane" && !ids.has(b.adc)))) return res.status(400).json({ erro: "dificuldade inválida" });
     let setup = null;
     if (campo === "setup") {
       // Setup do confronto: runas, feitiços e anotações (itens, plano de jogo). Tudo opcional.
@@ -100,9 +103,14 @@ module.exports = async (req, res) => {
     // Duas tentativas: se alguém salvou ao mesmo tempo, lê de novo e grava por cima da versão nova.
     for (let tentativa = 0; tentativa < 2; tentativa++) {
       const { sha, dados } = await le(NOTAS);
-      const texto = campo === "setup" ? [] : linhas(b.texto);
-      dados[campo] = dados[campo] || {};
-      if (campo === "setup") { if (Object.keys(setup).length) dados.setup[campeao] = setup; else delete dados.setup[campeao]; }
+      const texto = campo === "setup" || campo === "dif" ? [] : linhas(b.texto);
+      if (campo === "dif") {
+        const onde = DIF_ONDE[b.tipo], chave = b.tipo === "lane" ? `${campeao}|${b.adc}` : campeao;
+        dados[onde] = dados[onde] || {};
+        if (dif) dados[onde][chave] = dif; else delete dados[onde][chave];
+      } else dados[campo] = dados[campo] || {};
+      if (campo === "dif") {}
+      else if (campo === "setup") { if (Object.keys(setup).length) dados.setup[campeao] = setup; else delete dados.setup[campeao]; }
       else if (texto.length) dados[campo][campeao] = texto; else delete dados[campo][campeao];
       if (difCampo && b.dificuldade !== undefined) {
         dados[difCampo] = dados[difCampo] || {};
@@ -112,11 +120,12 @@ module.exports = async (req, res) => {
       const r = await github(NOTAS, {
         method: "PUT",
         body: JSON.stringify({
-          message: `Taric (editor): ${campo === "setup" ? "setup contra" : campo === "sinergia" ? "com" : "contra"} ${campeao}`,
+          message: `Taric (editor): ${campo === "dif" ? `dificuldade (${b.tipo}) de` : campo === "setup" ? "setup contra" : campo === "sinergia" ? "com" : "contra"} ${campeao}`,
           content: Buffer.from(conteudo, "utf8").toString("base64"), sha, branch: "main",
         }),
       });
       if (r.ok) return res.json({ ok: true, texto, dificuldade: dif, setup });
+      if (r.status === 403) throw new Error("o token do GitHub não tem permissão de escrita (Contents: Read and write)");
       if (r.status !== 409) throw new Error(`GitHub ${r.status} ao gravar: ${(await r.text()).slice(0, 200)}`);
     }
     return res.status(409).json({ erro: "conflito, tente de novo" });

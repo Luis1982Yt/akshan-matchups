@@ -1322,6 +1322,12 @@ html.guia-bot .card .quem .n { font-size: 22px; }
 .ed-linha[hidden] { display: none; }
 .ed-acoes { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .ed-acoes #edMsg { flex: 1; min-width: 120px; font-size: 13px; color: var(--texto-baixo); }
+.ed-pips button { width: 14px; height: 14px; padding: 0; margin: 0 1px; border: 1px solid var(--acento-vivo); border-radius: 2px; background: transparent; cursor: pointer; }
+.ed-pips button.on { background: var(--destaque); border-color: var(--destaque); }
+.ed-pips:hover button { opacity: .85; } .ed-pips button:hover { transform: scale(1.2); opacity: 1; }
+.ed-aviso { position: fixed; z-index: 50; left: 50%; bottom: 20px; transform: translateX(-50%); max-width: calc(100vw - 32px); padding: 10px 16px; border-radius: 10px; background: var(--painel-alto); border: 1px solid var(--linha-forte); color: var(--texto); font: 600 14px var(--corpo); box-shadow: var(--sombra); overflow-wrap: anywhere; }
+.ed-aviso[hidden] { display: none; }
+.ed-acoes #edMsg, .ed-acoes #esMsg { overflow-wrap: anywhere; }
 .ed-setup-btn { grid-column: 1 / -1; justify-self: start; margin: 0 0 4px; }
 .es-tit { margin: 6px 0 0; font: 700 12px var(--corpo); letter-spacing: .12em; text-transform: uppercase; color: var(--acento-vivo); }
 .es-tit label { font: inherit; color: inherit; }
@@ -1627,7 +1633,7 @@ const TXT = {
     vazio: "Nenhum campeão com essa busca.", limpar: "Limpar busca e filtros", voce: "Você", inimigo: "Inimigo", duelo: "Duelo",
     travarTit: "Travar o pick", travarContra: "Travar o pick contra ", setup: "Seu setup pro confronto",
     lembrete: "Lembrete", comoJogar: "Como jogar", contra: " contra ", arteDe: "Arte de ",
-    botAliado: "Seu ADC", botAdcIni: "ADC inimigo", botSupIni: "Suporte inimigo", botTrocar: "trocar", botEscolher: "Escolher", botContra: "Contra {c}", botCom: "Com {c}", botSem: "Ainda sem dicas para esta parte.", botEscolhaAliado: "Escolha o seu atirador", botEscolhaIni: "Escolha o atirador inimigo", botFalta: "Escolha o campeão na carta acima para ver as dicas.", botNenhum: "Nenhum", botBuscaPh: "Procurar atirador", botDifLane: "Lane 2x2", botDifSup: "Contra {c}", botDifAdc: "Contra {c}", edEscrever: "✎ Escrever", edSetup: "✎ Editar runas, feitiços e anotações", edSetupDe: "Setup contra {c}", edCarregando: "Carregando runas e feitiços…", edFaltaSec: "Escolha a árvore secundária.", edAnotacoes: "Itens e anotações (uma por linha)", edDicas: "Dicas (uma por linha)", edSenha: "Senha do editor", edSair: "Sair do modo editor", edSalvar: "Salvar", edSalvando: "Salvando…", edSalvo: "Salvo! Em 1 a 2 minutos aparece para todo mundo.", edErro: "Não salvou: ", edFaltaSenha: "Digite a senha do editor.",
+    botAliado: "Seu ADC", botAdcIni: "ADC inimigo", botSupIni: "Suporte inimigo", botTrocar: "trocar", botEscolher: "Escolher", botContra: "Contra {c}", botCom: "Com {c}", botSem: "Ainda sem dicas para esta parte.", botEscolhaAliado: "Escolha o seu atirador", botEscolhaIni: "Escolha o atirador inimigo", botFalta: "Escolha o campeão na carta acima para ver as dicas.", botNenhum: "Nenhum", botBuscaPh: "Procurar atirador", botDifLane: "Lane 2x2", botDifSup: "Contra {c}", botDifAdc: "Contra {c}", edEscrever: "✎ Escrever", edSalvoCurto: "Dificuldade salva!", edSetup: "✎ Editar runas, feitiços e anotações", edSetupDe: "Setup contra {c}", edCarregando: "Carregando runas e feitiços…", edFaltaSec: "Escolha a árvore secundária.", edAnotacoes: "Itens e anotações (uma por linha)", edDicas: "Dicas (uma por linha)", edSenha: "Senha do editor", edSair: "Sair do modo editor", edSalvar: "Salvar", edSalvando: "Salvando…", edSalvo: "Salvo! Em 1 a 2 minutos aparece para todo mundo.", edErro: "Não salvou: ", edFaltaSenha: "Digite a senha do editor.",
     difMuito_facil: "Muito fácil", difFacil: "Fácil", difMedio: "Médio", difDificil: "Difícil", difMuito_dificil: "Muito difícil", dificuldade: "Dificuldade", difRota: "Ameaça na rota", difJogo: "Ameaça na partida", difRotaCurto: "Rota", difJogoCurto: "Partida",
     runa: "Runa", secundaria: "Secundária", feitico: "Feitiço", bota: "Bota", build: "Build", semAnot: "Sem anotação", tantoFaz: "Tanto faz",
     anterior: "Anterior: ", proximo: "Próximo: ",
@@ -1661,7 +1667,7 @@ const TXT = {
     vazio: "No champion matches this search.", limpar: "Clear search and filters", voce: "You", inimigo: "Enemy", duelo: "Matchup",
     travarTit: "Lock in", travarContra: "Lock in vs ", setup: "Your setup for this matchup",
     lembrete: "Notes", comoJogar: "How to play", contra: " vs ", arteDe: "Art of ",
-    botAliado: "Your ADC", botAdcIni: "Enemy ADC", botSupIni: "Enemy support", botTrocar: "change", botEscolher: "Choose", botContra: "Against {c}", botCom: "With {c}", botSem: "No tips for this part yet.", botEscolhaAliado: "Choose your marksman", botEscolhaIni: "Choose the enemy marksman", botFalta: "Pick the champion on the card above to see the tips.", botNenhum: "None", botBuscaPh: "Search marksman", botDifLane: "2v2 lane", botDifSup: "Vs {c}", botDifAdc: "Vs {c}", edEscrever: "✎ Write", edSetup: "✎ Edit runes, spells and notes", edSetupDe: "Setup vs {c}", edCarregando: "Loading runes and spells…", edFaltaSec: "Pick the secondary tree.", edAnotacoes: "Items and notes (one per line)", edDicas: "Tips (one per line)", edSenha: "Editor password", edSair: "Leave editor mode", edSalvar: "Save", edSalvando: "Saving…", edSalvo: "Saved! Everyone sees it in 1 to 2 minutes.", edErro: "Not saved: ", edFaltaSenha: "Type the editor password.",
+    botAliado: "Your ADC", botAdcIni: "Enemy ADC", botSupIni: "Enemy support", botTrocar: "change", botEscolher: "Choose", botContra: "Against {c}", botCom: "With {c}", botSem: "No tips for this part yet.", botEscolhaAliado: "Choose your marksman", botEscolhaIni: "Choose the enemy marksman", botFalta: "Pick the champion on the card above to see the tips.", botNenhum: "None", botBuscaPh: "Search marksman", botDifLane: "2v2 lane", botDifSup: "Vs {c}", botDifAdc: "Vs {c}", edEscrever: "✎ Write", edSalvoCurto: "Difficulty saved!", edSetup: "✎ Edit runes, spells and notes", edSetupDe: "Setup vs {c}", edCarregando: "Loading runes and spells…", edFaltaSec: "Pick the secondary tree.", edAnotacoes: "Items and notes (one per line)", edDicas: "Tips (one per line)", edSenha: "Editor password", edSair: "Leave editor mode", edSalvar: "Save", edSalvando: "Saving…", edSalvo: "Saved! Everyone sees it in 1 to 2 minutes.", edErro: "Not saved: ", edFaltaSenha: "Type the editor password.",
     difMuito_facil: "Very easy", difFacil: "Easy", difMedio: "Medium", difDificil: "Hard", difMuito_dificil: "Very hard", dificuldade: "Difficulty", difRota: "Lane threat", difJogo: "Game threat", difRotaCurto: "Lane", difJogoCurto: "Game",
     runa: "Rune", secundaria: "Secondary", feitico: "Spell", bota: "Boots", build: "Build", semAnot: "No note", tantoFaz: "Any",
     anterior: "Previous: ", proximo: "Next: ",
@@ -2602,12 +2608,17 @@ function renderBot(c) {
 function botNotas(c) {
   const a = guia.lista.find(x => x.id === botEstado().adcIni);
   const sup = c.dificuldade.overall || null, adc = a && typeof a.adc === "number" ? a.adc : null;
-  return { a, sup, adc, lane: sup && adc ? Math.ceil((sup + adc) / 2) : sup || adc };
+  const marcada = a && c.lane && c.lane[a.id];  // a dupla que o mono Taric marcou à mão vale mais que a média
+  return { a, sup, adc, lane: marcada || (sup && adc ? Math.ceil((sup + adc) / 2) : sup || adc) };
 }
 function difBot(c) {
   const n = botNotas(c);
-  const linha = (rot, v) => `<div><dt>${esc(rot)}</dt><dd aria-label="${v ? t("srDif", v, 5).replace(/^, /, "") : t("semAnot")}">${pips(v)}<b>${v ? v + "/5" : "–"}</b></dd></div>`;
-  return linha(t("botDifLane"), n.lane) + linha(t("botDifSup").replace("{c}", c.nome), n.sup) + linha(t("botDifAdc").replace("{c}", n.a ? n.a.nome : t("botAdcIni")), n.adc);
+  // No modo editor os quadradinhos viram botões: um clique grava a dificuldade na hora.
+  const quad = (v, ed) => !EDITOR || !ed ? pips(v) : `<span class="pips ed-pips" role="group" aria-label="${esc(t("dificuldade"))}">${[1, 2, 3, 4, 5].map(i =>
+    `<button type="button" class="${i <= v ? "on" : ""}" data-dif='${esc(JSON.stringify({ ...ed, dificuldade: i }))}' aria-label="${i}/5" title="${i}/5"></button>`).join("")}</span>`;
+  const linha = (rot, v, ed) => `<div><dt>${esc(rot)}</dt><dd aria-label="${v ? t("srDif", v, 5).replace(/^, /, "") : t("semAnot")}">${quad(v, ed)}<b>${v ? v + "/5" : "–"}</b></dd></div>`;
+  return linha(t("botDifLane"), n.lane, n.a && { tipo: "lane", campeao: c.id, adc: n.a.id }) + linha(t("botDifSup").replace("{c}", c.nome), n.sup, { tipo: "sup", campeao: c.id })
+    + linha(t("botDifAdc").replace("{c}", n.a ? n.a.nome : t("botAdcIni")), n.adc, n.a && { tipo: "adc", campeao: n.a.id });
 }
 /* ---------- Modo editor (só o guia do Taric, só no site publicado) ----------
    O mono Taric abre battlematch.vercel.app/?editor#taric, e cada caixa de dicas do 2x2 ganha "Escrever".
@@ -2742,11 +2753,38 @@ async function esSalva() {
   } catch (e) { $("esMsg").textContent = t("edErro") + e.message; }
   finally { $("esSalvar").disabled = false; }
 }
+// Quadradinho de dificuldade clicado no modo editor: mostra na hora e grava (só a dificuldade, sem mexer nas dicas).
+async function edDif(d) {
+  const acha = id => guia.lista.find(x => x.id === id), c = acha(d.campeao);
+  const antes = JSON.stringify([c.dificuldade, c.adc, c.lane]);
+  if (d.tipo === "sup") { c.dificuldade.overall = c.dificuldade.valor = d.dificuldade; c.dif = DIF_NOTA[d.dificuldade]; }
+  else if (d.tipo === "adc") c.adc = d.dificuldade;
+  else c.lane = { ...(c.lane || {}), [d.adc]: d.dificuldade };
+  renderDetalhe(false); renderLista();
+  try {
+    const r = await fetch("/api/taric", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ senha: edSenha(), campo: "dif", ...d }) });
+    const j = await r.json().catch(() => ({}));
+    if (!r.ok) throw new Error(j.erro || r.status);
+    avisa(t("edSalvoCurto"));
+  } catch (e) {
+    [c.dificuldade, c.adc, c.lane] = JSON.parse(antes); c.dif = DIF_NOTA[c.dificuldade.overall] || null;
+    renderDetalhe(false); renderLista();
+    avisa(t("edErro") + e.message);
+  }
+}
+function avisa(msg) {
+  let el = $("edAviso");
+  if (!el) { el = document.createElement("div"); el.id = "edAviso"; el.className = "ed-aviso"; el.setAttribute("role", "status"); document.body.append(el); }
+  el.textContent = msg; el.hidden = false;
+  clearTimeout(avisa.t); avisa.t = setTimeout(() => { el.hidden = true; }, 4000);
+}
 document.addEventListener("change", ev => {
   if (ev.target.id === "esPri") { esPrincipal(null); esSecundaria(null); }
   if (ev.target.id === "esSec") esSecundaria(null);
 });
 document.addEventListener("click", ev => {
+  const dq = ev.target.closest("[data-dif]");
+  if (dq) { edDif(JSON.parse(dq.dataset.dif)); return; }
   const st = ev.target.closest(".ed-setup-btn");
   if (st) { esAbre(st.dataset.setup); return; }
   if (ev.target.closest("#esFecha")) $("edSetupDialogo").close();
