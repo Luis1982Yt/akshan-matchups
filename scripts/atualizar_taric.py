@@ -50,7 +50,11 @@ def gerar_matchups(dd, notas):
     lane = {}  # dificuldade da dupla (suporte|ADC) que o mono Taric marcou à mão; sem ela, o site faz a média
     for chave, v in notas.get("dificuldade_lane", {}).items():
         sup, adc = chave.split("|")
-        lane.setdefault(sup, {})[adc] = v  # dicas jogando junto com esse ADC (escritas pelo modo editor do site)
+        lane.setdefault(sup, {})[adc] = v
+    duplas = {}  # dicas contra a dupla inteira (suporte|ADC), escritas pelo modo editor
+    for chave, v in notas.get("dupla", {}).items():
+        sup, adc = chave.split("|")
+        duplas.setdefault(sup, {})[adc] = v  # dicas jogando junto com esse ADC (escritas pelo modo editor do site)
     # Campeão em mais de um print (Zilean) fica com as duas páginas, como opções.
     runas_de = {}
     for p in notas.get("paginas_runas", []):
@@ -70,13 +74,14 @@ def gerar_matchups(dd, notas):
             **({"rota": rota} if rota else {}),
             **({"adc": adc or True} if atirador else {}),
             **({"lane": lane[c["id"]]} if c["id"] in lane else {}),
+            **({"duplas": duplas[c["id"]]} if c["id"] in duplas else {}),
             "dificuldade": {"overall": nota, "valor": nota, "texto": ""},
             **({"sinergia": [{"titulo": "", "blocos": [{"tipo": "lista", "itens": sinergia[c["id"]]}]}]} if sinergia.get(c["id"]) else {}),
             "tldr": dicas.get(c["id"], []), "feiticos": feiticos(dd, setup.get(c["id"], {}).get("feiticos", [])), "runas": runas_de.get(c["id"], []),
             "imagens_runas": [], "itens": anotacoes(setup.get(c["id"], {}).get("anotacoes", [])), "secoes": [],
         })
-    falta = (set(dif) | set(dif_adc) | set(dicas) | set(sinergia) | set(setup) | set(runas_de) | set(lane)
-            | {a for v in lane.values() for a in v}) - set(dd.campeoes)
+    falta = (set(dif) | set(dif_adc) | set(dicas) | set(sinergia) | set(setup) | set(runas_de) | set(lane) | set(duplas)
+            | {a for v in [*lane.values(), *duplas.values()] for a in v}) - set(dd.campeoes)
     if falta:
         raise KeyError(f"campeão da tier list fora do Data Dragon: {sorted(falta)}")
     return saida

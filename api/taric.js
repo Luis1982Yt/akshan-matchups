@@ -71,7 +71,7 @@ module.exports = async (req, res) => {
 
   const { campeao, campo } = b;
   console.log("editor taric:", b.acao || campo, campeao || "");
-  if (!["dicas", "sinergia", "setup", "dif"].includes(campo)) return res.status(400).json({ erro: "campo inválido" });
+  if (!["dicas", "sinergia", "dupla", "setup", "dif"].includes(campo)) return res.status(400).json({ erro: "campo inválido" });
   const difCampo = campo === "dicas" && b.tipo === "adc" ? "dificuldade_adc" : campo === "dicas" ? "dificuldade" : null;
   const dif = b.dificuldade === null || b.dificuldade === "" || b.dificuldade === undefined ? null : Number(b.dificuldade);
   if (dif !== null && !(Number.isInteger(dif) && dif >= 1 && dif <= 5)) return res.status(400).json({ erro: "dificuldade de 1 a 5" });
@@ -81,6 +81,8 @@ module.exports = async (req, res) => {
     if (!ids.has(campeao)) return res.status(400).json({ erro: "campeão desconhecido" });
     // Só a dificuldade (os quadradinhos): do suporte, do ADC inimigo ou da dupla inteira (lane 2x2 = suporte|ADC).
     const DIF_ONDE = { sup: "dificuldade", adc: "dificuldade_adc", lane: "dificuldade_lane" };
+    // Dicas da dupla inimiga inteira (suporte + ADC): chave "suporte|ADC", como a lane 2x2.
+    if (campo === "dupla" && !ids.has(b.adc)) return res.status(400).json({ erro: "ADC inválido" });
     if (campo === "dif" && (!DIF_ONDE[b.tipo] || (b.tipo === "lane" && !ids.has(b.adc)))) return res.status(400).json({ erro: "dificuldade inválida" });
     let setup = null;
     if (campo === "setup") {
@@ -109,9 +111,10 @@ module.exports = async (req, res) => {
         dados[onde] = dados[onde] || {};
         if (dif) dados[onde][chave] = dif; else delete dados[onde][chave];
       } else dados[campo] = dados[campo] || {};
+      const alvo = campo === "dupla" ? `${campeao}|${b.adc}` : campeao;
       if (campo === "dif") {}
       else if (campo === "setup") { if (Object.keys(setup).length) dados.setup[campeao] = setup; else delete dados.setup[campeao]; }
-      else if (texto.length) dados[campo][campeao] = texto; else delete dados[campo][campeao];
+      else if (texto.length) dados[campo][alvo] = texto; else delete dados[campo][alvo];
       if (difCampo && b.dificuldade !== undefined) {
         dados[difCampo] = dados[difCampo] || {};
         if (dif) dados[difCampo][campeao] = dif; else delete dados[difCampo][campeao];
@@ -120,7 +123,7 @@ module.exports = async (req, res) => {
       const r = await github(NOTAS, {
         method: "PUT",
         body: JSON.stringify({
-          message: `Taric (editor): ${campo === "dif" ? `dificuldade (${b.tipo}) de` : campo === "setup" ? "setup contra" : campo === "sinergia" ? "com" : "contra"} ${campeao}`,
+          message: `Taric (editor): ${campo === "dif" ? `dificuldade (${b.tipo}) de` : campo === "setup" ? "setup contra" : campo === "sinergia" ? "com" : "contra"} ${alvo}`,
           content: Buffer.from(conteudo, "utf8").toString("base64"), sha, branch: "main",
         }),
       });
