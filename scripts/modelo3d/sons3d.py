@@ -58,9 +58,75 @@ EVENTOS = {
         "vo_taunt": "Taunt3DGeneral", "vo_laugh": "Laugh3DGeneral", "vo_recall": "Recall3DGeneral",
         "vo_aa1": "KayleBasicAttack_cast3D", "vo_aa2": "KayleBasicAttack2_cast3D",
     }),
+    "fiora": ({
+        "dance": "Dance3D_buffactivate", "taunt": "Taunt3D_buffactivate",
+        "aa1": "FioraBasicAttack_OnCast", "hit1": "FioraBasicAttack_OnHit",
+        "aa2": "FioraBasicAttack2_OnCast", "hit2": "FioraBasicAttack2_OnHit",
+        "crit": "FioraCritAttack_OnCast", "hit_crit": "FioraCritAttack_OnHit",
+    }, {
+        "vo_taunt": "Taunt3DGeneral", "vo_laugh": "Laugh3DGeneral",
+        "vo_aa1": "FioraBasicAttack_cast3D", "vo_aa2": "FioraBasicAttack2_cast3D", "vo_crit": "FioraCritAttack_cast3D",
+    }),  # sem laugh/recall no SFX, sem recall na voz
+    "ksante": ({
+        "dance_cast": "Dance3D_leadin", "dance": "Dance3D_loop_buffactivate", "taunt": "Taunt3D_buffactivate",
+        "laugh": "Laugh3D_buffactivate", "recall": "Recall3D_buffactivate",
+        "aa1": "KSanteBasicAttack_OnCast", "hit1": "KSanteBasicAttack_OnHit",
+        "aa2": "KSanteBasicAttack2_OnCast", "hit2": "KSanteBasicAttack2_OnHit",
+        "aa3": "KSanteBasicAttack3_OnCast", "hit3": "KSanteBasicAttack3_OnHit",
+        "aa4": "KSanteBasicAttack4_OnCast", "hit4": "KSanteBasicAttack4_OnHit",
+        "crit": "KSanteCritAttack_OnCast", "hit_crit": "KSanteCritAttack_OnHit",
+    }, {
+        "vo_taunt": "Taunt3DGeneral", "vo_laugh": "Laugh3DGeneral", "vo_recall": "Recall3DGeneral",
+        "vo_aa1": "KSanteBasicAttack_cast3D", "vo_aa2": "KSanteBasicAttack2_cast3D",
+        "vo_aa3": "KSanteBasicAttack3_cast3D", "vo_aa4": "KSanteBasicAttack4_cast3D", "vo_crit": "KSanteCritAttack_cast3D",
+    }),
+    "akali": ({
+        "dance": "Dance3D", "taunt_cast": "Taunt3D_buffactivate", "taunt": "Taunt3D_loop",
+        "aa1": "AkaliBasicAttack_OnCast", "hit1": "AkaliBasicAttack_OnHit",
+        "aa2": "AkaliBasicAttack2_OnCast", "hit2": "AkaliBasicAttack2_OnHit",
+        "crit": "AkaliCritAttack_OnCast", "hit_crit": "AkaliCritAttack_OnHit",
+    }, {
+        "vo_taunt": "Taunt3DGeneral", "vo_laugh": "Laugh3DGeneral",
+        "vo_aa1": "AkaliBasicAttack_cast3D", "vo_aa2": "AkaliBasicAttack2_cast3D", "vo_crit": "AkaliCritAttack_cast3D",
+    }),  # sem laugh/recall no SFX, sem recall na voz
+    "garen": ({
+        "dance_cast": "Dance3D_buffactivate", "dance": "Dance3D_loop", "taunt": "Taunt3D_buffactivate",
+        "laugh": "Laugh3D_buffactivate",
+        "aa1": "GarenBasicAttack_OnCast", "hit1": "GarenBasicAttack_OnHit",
+        "aa2": "GarenBasicAttack2_OnCast", "hit2": "GarenBasicAttack2_OnHit",
+        "crit": "GarenCritAttack_OnCast", "hit_crit": "GarenCritAttack_OnHit",
+    }, {
+        "vo_taunt": "Taunt3DGeneral", "vo_laugh": "Laugh3DGeneral",
+        "vo_aa1": "GarenBasicAttack_cast3D", "vo_aa2": "GarenBasicAttack2_cast3D", "vo_crit": "GarenCritAttack_cast3D",
+    }),  # sem recall no SFX nem na voz
+    "azir": ({
+        "dance_cast": "Base_Dance3D_leadin", "dance": "Base_Dance3D_buffactivate", "taunt": "Base_Taunt3D_buffactivate",
+        "laugh": "Base_Laugh3D_buffactivate", "recall": "Recall_leadin",
+        "aa1": "AzirBasicAttack_OnCast", "hit1": "AzirBasicAttack_OnHit",
+        "aa2": "AzirBasicAttack2_OnCast", "hit2": "AzirBasicAttack2_OnHit",
+        "crit": "AzirCritAttack_OnCast", "hit_crit": "AzirCritAttack_OnHit",
+    }, {
+        "vo_taunt": "Taunt3DGeneral", "vo_laugh": "Laugh3DGeneral", "vo_recall": "Recall3DGeneral",
+        "vo_aa1": "AzirBasicAttack_cast3D", "vo_aa2": "AzirBasicAttack2_cast3D", "vo_crit": "AzirCritAttack_cast3D",
+    }),
+    "taric": ({
+        "dance_cast": "Base_Dance3D_buffactivate", "dance": "Base_Dance3D_loop_buffactivate",
+        "taunt": "Base_Taunt3D_buffactivate", "laugh": "Base_Laugh3D_buffactivate", "recall": "Base_Recall3D_buffactivate",
+        "aa1": "TaricBasicAttack_OnCast", "hit1": "TaricBasicAttack_OnHit",
+        "aa2": "TaricBasicAttack2_OnCast", "hit2": "TaricBasicAttack2_OnHit",
+        "aa3": "TaricBasicAttack3_OnCast", "hit3": "TaricBasicAttack3_OnHit",
+        "crit": "TaricCritAttack_OnCast", "hit_crit": "TaricCritAttack_OnHit",
+    }, {
+        "vo_taunt": "Taunt3DGeneral", "vo_laugh": "Laugh3DGeneral", "vo_recall": "Recall3DGeneral",
+        "vo_aa1": "TaricBasicAttack_cast3D", "vo_aa2": "TaricBasicAttack2_cast3D",
+        "vo_aa3": "TaricBasicAttack3_cast3D", "vo_crit": "TaricCritAttack_cast3D",
+    }),
 }
 SFX, VO = EVENTOS[CAMPEAO]
-NOME = {"akshan": "Akshan", "mordekaiser": "Mordekaiser", "illaoi": "Illaoi", "kayle": "Kayle"}[CAMPEAO]
+NOME = {
+    "akshan": "Akshan", "mordekaiser": "Mordekaiser", "illaoi": "Illaoi", "kayle": "Kayle",
+    "fiora": "Fiora", "ksante": "KSante", "akali": "Akali", "garen": "Garen", "azir": "Azir", "taric": "Taric",
+}[CAMPEAO]
 
 banco = f"{CAMPEAO}_skin{SKIN:02d}" if SKIN else f"{CAMPEAO}_base"
 prefixo = f"Play_sfx_{NOME}Skin{SKIN:02d}_" if SKIN else f"Play_sfx_{NOME}_"

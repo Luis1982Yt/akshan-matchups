@@ -5,3 +5,5 @@
 __pycache__/
 app/build/
 app/dist/
+scripts/modelo3d/bancos/
+scripts/modelo3d/vgmstream/
