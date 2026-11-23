@@ -329,5 +329,26 @@
       }
     ],
     "acompanhe": []
+  },
+  {
+    "id": "taric",
+    "campeao": "Taric",
+    "rota": "Suporte",
+    "autor": "",
+    "formato": "completo",
+    "dados": "guias/taric",
+    "chave": 44,
+    "titulo": "o Escudo de Valoran",
+    "titulo_en": "the Shield of Valoran",
+    "mira": [
+      50,
+      30
+    ],
+    "aviso": "Guia em construção: todas as matchups do jogo já estão aqui e as dicas chegam aos poucos.",
+    "aviso_en": "Guide under construction: every matchup in the game is already here, and the tips are on their way.",
+    "fonte": "Guia de Taric do BattleMatch.",
+    "fonte_en": "BattleMatch's Taric guide.",
+    "links": [],
+    "acompanhe": []
   }
 ]

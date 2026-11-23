@@ -171,7 +171,7 @@ for cfg in json.loads((SRC / "guias.json").read_text(encoding="utf-8")):
 
 # Lista para o app da seleção de campeões (app/akshan_app.py): de qual campeão é cada guia, a rota
 # e as matchups com o mesmo slug do site. O app baixa este arquivo, então guia novo já funciona nele.
-ROTA_LCU = {"top": "TOP", "jungle": "JUNGLE", "mid": "MIDDLE", "adc": "BOTTOM", "bot": "BOTTOM", "sup": "UTILITY", "support": "UTILITY"}
+ROTA_LCU = {"top": "TOP", "jungle": "JUNGLE", "mid": "MIDDLE", "adc": "BOTTOM", "bot": "BOTTOM", "sup": "UTILITY", "support": "UTILITY", "suporte": "UTILITY"}
 
 
 def slug(nome):

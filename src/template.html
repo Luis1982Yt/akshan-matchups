@@ -303,6 +303,23 @@ try {
   --texto: #241520; --texto-baixo: #6a5562; --tinta-botao: #ffffff;
   --luz: rgba(216, 120, 180, .12); --sombra: 0 10px 30px rgba(80, 20, 60, .14); color-scheme: light;
 }
+/* Taric: o turquesa dos cristais, o ouro da armadura e o rosa das gemas da splash padrão. */
+:root[data-guia="taric"] {
+  --fundo: #0a1013; --painel: #10191d; --painel-alto: #172327;
+  --linha: rgba(111, 211, 232, .22); --linha-forte: rgba(111, 211, 232, .48);
+  --acento: #6fd3e8; --acento-vivo: #d6f6fc; --destaque: #e9b949;
+  --texto: #e8f1f3; --texto-baixo: #93a7ad; --tinta-botao: #071216;
+  --luz: rgba(111, 211, 232, .13); --sombra: 0 10px 30px rgba(0, 0, 0, .5);
+  --sobre-arte: #eafcff; --destaque-arte: #f3cf70; --botao-1: #d6f6fc; --botao-2: #2fa9c4;
+  --brilho: rgba(220, 248, 255, .5); --brilho-2: rgba(233, 185, 73, .2); color-scheme: dark;
+}
+:root[data-guia="taric"][data-tema="claro"] {
+  --fundo: #eef6f8; --painel: #fbfeff; --painel-alto: #dfedf1;
+  --linha: rgba(20, 90, 110, .24); --linha-forte: rgba(20, 90, 110, .54);
+  --acento: #146f86; --acento-vivo: #0c5568; --destaque: #8a6412;
+  --texto: #12202a; --texto-baixo: #4f636b; --tinta-botao: #ffffff;
+  --luz: rgba(60, 170, 200, .12); --sombra: 0 10px 30px rgba(10, 60, 80, .14); color-scheme: light;
+}
 /* Azir: a areia dourada de Shurima, o turquesa do disco solar e a pedra do deserto. */
 :root[data-guia="azir"] {
   --fundo: #120f0a; --painel: #1c1810; --painel-alto: #262016;
@@ -1802,7 +1819,7 @@ function renderGuia() {
   if (typeof marcaApp === "function") marcaApp();  // o botão do app vale em todo guia
   const sub = (guia.rotas || [guia.rota]).filter(Boolean).join(" / ");
   $("avisoFonte").hidden = !guia.aviso;
-  $("avisoFonte").textContent = guia.aviso ? tr(guia.aviso) : "";
+  $("avisoFonte").textContent = guia.aviso ? ((L === "en" && guia.aviso_en) || tr(guia.aviso)) : "";
   const skt = guia.id === "akshan" ? skinAtual() : SKINS[0];
   $("trocarImg").innerHTML = `<img src="${skt.num ? tileSkin(eu.id, skt.num) : sq(eu.id)}" alt="" width="38" height="38">`;
   $("trocarNome").textContent = eu.nome;

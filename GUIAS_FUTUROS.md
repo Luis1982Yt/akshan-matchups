@@ -118,3 +118,8 @@ Slides de 2021 (season 11), sem aviso de direitos. Por decisão do dono entram s
 runas, feitiços e itens da época (itens míticos) ficam de fora, e o crédito avisa que a fonte é de 2021. Os slides do
 Akshan e da Vex estavam inacabados (sem dicas) e não entram. O export em .pptx funciona sem login: está no workflow
 diário. Modelo 3D do Azir: pendente, só no PC do dono.
+
+## Taric suporte: aba criada em 2026-11-23, sem notas
+
+Pedido do dono: guia de Taric com todas as matchups do jogo. A aba está no ar com os 173 campeões e o aviso de "em
+construção"; falta a fonte das dicas (o dono falou em "nova planilha, talvez"). Modelo 3D: pendente (PC do dono).

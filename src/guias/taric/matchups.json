@@ -1,0 +1,2950 @@
+{
+ "versao": "16.23.1",
+ "fonte": {
+  "planilha": "",
+  "autor": ""
+ },
+ "matchups": [
+  {
+   "nome": "Aatrox",
+   "planilha": "Aatrox",
+   "id": "Aatrox",
+   "titulo": "a Espada Darkin",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Ahri",
+   "planilha": "Ahri",
+   "id": "Ahri",
+   "titulo": "a Raposa de Nove Caudas",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Akali",
+   "planilha": "Akali",
+   "id": "Akali",
+   "titulo": "a Assassina Renegada",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Akshan",
+   "planilha": "Akshan",
+   "id": "Akshan",
+   "titulo": "o Sentinela Rebelde",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Alistar",
+   "planilha": "Alistar",
+   "id": "Alistar",
+   "titulo": "o Minotauro",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Ambessa",
+   "planilha": "Ambessa",
+   "id": "Ambessa",
+   "titulo": "Matriarca da Guerra",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Amumu",
+   "planilha": "Amumu",
+   "id": "Amumu",
+   "titulo": "a Múmia Triste",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Anivia",
+   "planilha": "Anivia",
+   "id": "Anivia",
+   "titulo": "a Criofênix",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Annie",
+   "planilha": "Annie",
+   "id": "Annie",
+   "titulo": "a Criança Sombria",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Aphelios",
+   "planilha": "Aphelios",
+   "id": "Aphelios",
+   "titulo": "a Arma dos Devotos",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Ashe",
+   "planilha": "Ashe",
+   "id": "Ashe",
+   "titulo": "a Arqueira do Gelo",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Aurelion Sol",
+   "planilha": "Aurelion Sol",
+   "id": "AurelionSol",
+   "titulo": "o Forjador de Estrelas",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Aurora",
+   "planilha": "Aurora",
+   "id": "Aurora",
+   "titulo": "a Bruxa Entre Mundos",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Azir",
+   "planilha": "Azir",
+   "id": "Azir",
+   "titulo": "o Imperador das Areias",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Bardo",
+   "planilha": "Bardo",
+   "id": "Bard",
+   "titulo": "o Protetor Andarilho",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Bel'Veth",
+   "planilha": "Bel'Veth",
+   "id": "Belveth",
+   "titulo": "a Imperatriz do Vazio",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Blitzcrank",
+   "planilha": "Blitzcrank",
+   "id": "Blitzcrank",
+   "titulo": "o Grande Golem a Vapor",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Brand",
+   "planilha": "Brand",
+   "id": "Brand",
+   "titulo": "a Vingança Flamejante",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Braum",
+   "planilha": "Braum",
+   "id": "Braum",
+   "titulo": "o Coração de Freljord",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Briar",
+   "planilha": "Briar",
+   "id": "Briar",
+   "titulo": "a Fome Contida",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Caitlyn",
+   "planilha": "Caitlyn",
+   "id": "Caitlyn",
+   "titulo": "a Xerife de Piltover",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Camille",
+   "planilha": "Camille",
+   "id": "Camille",
+   "titulo": "a Sombra de Aço",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Cassiopeia",
+   "planilha": "Cassiopeia",
+   "id": "Cassiopeia",
+   "titulo": "o Abraço da Serpente",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Cho'Gath",
+   "planilha": "Cho'Gath",
+   "id": "Chogath",
+   "titulo": "o Terror do Vazio",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Corki",
+   "planilha": "Corki",
+   "id": "Corki",
+   "titulo": "o Bombardeiro Ousado",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Darius",
+   "planilha": "Darius",
+   "id": "Darius",
+   "titulo": "a Mão de Noxus",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Diana",
+   "planilha": "Diana",
+   "id": "Diana",
+   "titulo": "o Escárnio da Lua",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Dr. Mundo",
+   "planilha": "Dr. Mundo",
+   "id": "DrMundo",
+   "titulo": "o Louco de Zaun",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Draven",
+   "planilha": "Draven",
+   "id": "Draven",
+   "titulo": "o Carrasco de Noxus",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Ekko",
+   "planilha": "Ekko",
+   "id": "Ekko",
+   "titulo": "o Rapaz que Estilhaçou o Tempo",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Elise",
+   "planilha": "Elise",
+   "id": "Elise",
+   "titulo": "a Aranha Rainha",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Evelynn",
+   "planilha": "Evelynn",
+   "id": "Evelynn",
+   "titulo": "o Abraço da Agonia",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Ezreal",
+   "planilha": "Ezreal",
+   "id": "Ezreal",
+   "titulo": "o Explorador Pródigo",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Fiddlesticks",
+   "planilha": "Fiddlesticks",
+   "id": "Fiddlesticks",
+   "titulo": "o Terror Ancestral",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Fiora",
+   "planilha": "Fiora",
+   "id": "Fiora",
+   "titulo": "a Grande Duelista",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Fizz",
+   "planilha": "Fizz",
+   "id": "Fizz",
+   "titulo": "o Trapaceiro das Marés",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Galio",
+   "planilha": "Galio",
+   "id": "Galio",
+   "titulo": "o Colosso",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Gangplank",
+   "planilha": "Gangplank",
+   "id": "Gangplank",
+   "titulo": "o Terror dos Doze Mares",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Garen",
+   "planilha": "Garen",
+   "id": "Garen",
+   "titulo": "o Poder de Demacia",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Gnar",
+   "planilha": "Gnar",
+   "id": "Gnar",
+   "titulo": "o Yordle Pré-Histórico",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Gragas",
+   "planilha": "Gragas",
+   "id": "Gragas",
+   "titulo": "o Badernista",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Graves",
+   "planilha": "Graves",
+   "id": "Graves",
+   "titulo": "o Foragido",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Gwen",
+   "planilha": "Gwen",
+   "id": "Gwen",
+   "titulo": "A Costureira Encantada",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Hecarim",
+   "planilha": "Hecarim",
+   "id": "Hecarim",
+   "titulo": "a Sombra da Guerra",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Heimerdinger",
+   "planilha": "Heimerdinger",
+   "id": "Heimerdinger",
+   "titulo": "o Inventor Idolatrado",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Hwei",
+   "planilha": "Hwei",
+   "id": "Hwei",
+   "titulo": "o Visionário",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Illaoi",
+   "planilha": "Illaoi",
+   "id": "Illaoi",
+   "titulo": "a Sacerdotisa Cráquem",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Irelia",
+   "planilha": "Irelia",
+   "id": "Irelia",
+   "titulo": "a Dançarina das Lâminas",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Ivern",
+   "planilha": "Ivern",
+   "id": "Ivern",
+   "titulo": "o Pai do Verde",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Janna",
+   "planilha": "Janna",
+   "id": "Janna",
+   "titulo": "a Fúria da Tormenta",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Jarvan IV",
+   "planilha": "Jarvan IV",
+   "id": "JarvanIV",
+   "titulo": "o Exemplo de Demacia",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Jax",
+   "planilha": "Jax",
+   "id": "Jax",
+   "titulo": "o Grão-Mestre das Armas",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Jayce",
+   "planilha": "Jayce",
+   "id": "Jayce",
+   "titulo": "o Defensor do Amanhã",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Jhin",
+   "planilha": "Jhin",
+   "id": "Jhin",
+   "titulo": "o Virtuoso",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Jinx",
+   "planilha": "Jinx",
+   "id": "Jinx",
+   "titulo": "o Gatilho Desenfreado",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "K'Sante",
+   "planilha": "K'Sante",
+   "id": "KSante",
+   "titulo": "o Orgulho de Nazumah.",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Kai'Sa",
+   "planilha": "Kai'Sa",
+   "id": "Kaisa",
+   "titulo": "a Filha do Vazio",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Kalista",
+   "planilha": "Kalista",
+   "id": "Kalista",
+   "titulo": "a Lança da Vingança",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Karma",
+   "planilha": "Karma",
+   "id": "Karma",
+   "titulo": "a Iluminada",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Karthus",
+   "planilha": "Karthus",
+   "id": "Karthus",
+   "titulo": "a Voz Mortal",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Kassadin",
+   "planilha": "Kassadin",
+   "id": "Kassadin",
+   "titulo": "o Andarilho do Vazio",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Katarina",
+   "planilha": "Katarina",
+   "id": "Katarina",
+   "titulo": "a Lâmina Sinistra",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Kayle",
+   "planilha": "Kayle",
+   "id": "Kayle",
+   "titulo": "a Justa",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Kayn",
+   "planilha": "Kayn",
+   "id": "Kayn",
+   "titulo": "o Ceifador das Sombras",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Kennen",
+   "planilha": "Kennen",
+   "id": "Kennen",
+   "titulo": "o Coração da Tempestade",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Kha'Zix",
+   "planilha": "Kha'Zix",
+   "id": "Khazix",
+   "titulo": "o Ceifador do Vazio",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Kindred",
+   "planilha": "Kindred",
+   "id": "Kindred",
+   "titulo": "os Caçadores Eternos",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Kled",
+   "planilha": "Kled",
+   "id": "Kled",
+   "titulo": "o Cavaleiro Intratável",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Kog'Maw",
+   "planilha": "Kog'Maw",
+   "id": "KogMaw",
+   "titulo": "a Boca do Abismo",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "LeBlanc",
+   "planilha": "LeBlanc",
+   "id": "Leblanc",
+   "titulo": "a Farsante",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Lee Sin",
+   "planilha": "Lee Sin",
+   "id": "LeeSin",
+   "titulo": "o Monge Cego",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Leona",
+   "planilha": "Leona",
+   "id": "Leona",
+   "titulo": "a Alvorada Radiante",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Lillia",
+   "planilha": "Lillia",
+   "id": "Lillia",
+   "titulo": "o Florir Receoso",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Lissandra",
+   "planilha": "Lissandra",
+   "id": "Lissandra",
+   "titulo": "a Bruxa Gélida",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Locke",
+   "planilha": "Locke",
+   "id": "Locke",
+   "titulo": "o Exorcista das Cinzas",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Lucian",
+   "planilha": "Lucian",
+   "id": "Lucian",
+   "titulo": "o Purificador",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Lulu",
+   "planilha": "Lulu",
+   "id": "Lulu",
+   "titulo": "a Fada Feiticeira",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Lux",
+   "planilha": "Lux",
+   "id": "Lux",
+   "titulo": "a Dama da Luz",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Malphite",
+   "planilha": "Malphite",
+   "id": "Malphite",
+   "titulo": "o Fragmento do Monolito",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Malzahar",
+   "planilha": "Malzahar",
+   "id": "Malzahar",
+   "titulo": "o Profeta do Vazio",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Maokai",
+   "planilha": "Maokai",
+   "id": "Maokai",
+   "titulo": "o Ente Sinistro",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Master Yi",
+   "planilha": "Master Yi",
+   "id": "MasterYi",
+   "titulo": "o Espadachim Wuju",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Mel",
+   "planilha": "Mel",
+   "id": "Mel",
+   "titulo": "o Reflexo da Alma",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Milio",
+   "planilha": "Milio",
+   "id": "Milio",
+   "titulo": "A Chama Gentil",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Miss Fortune",
+   "planilha": "Miss Fortune",
+   "id": "MissFortune",
+   "titulo": "a Caçadora de Recompensas",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Mordekaiser",
+   "planilha": "Mordekaiser",
+   "id": "Mordekaiser",
+   "titulo": "o Revenã de Ferro",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Morgana",
+   "planilha": "Morgana",
+   "id": "Morgana",
+   "titulo": "a Caída",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Naafiri",
+   "planilha": "Naafiri",
+   "id": "Naafiri",
+   "titulo": "Fera das Cem Mordidas",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Nami",
+   "planilha": "Nami",
+   "id": "Nami",
+   "titulo": "a Conjuradora das Marés",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Nasus",
+   "planilha": "Nasus",
+   "id": "Nasus",
+   "titulo": "o Curador das Areias",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Nautilus",
+   "planilha": "Nautilus",
+   "id": "Nautilus",
+   "titulo": "o Titã das Profundezas",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Neeko",
+   "planilha": "Neeko",
+   "id": "Neeko",
+   "titulo": "a Camaleoa Curiosa",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Nidalee",
+   "planilha": "Nidalee",
+   "id": "Nidalee",
+   "titulo": "a Caçadora Bestial",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Nilah",
+   "planilha": "Nilah",
+   "id": "Nilah",
+   "titulo": "a Alegria Irrestrita",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Nocturne",
+   "planilha": "Nocturne",
+   "id": "Nocturne",
+   "titulo": "o Eterno Pesadelo",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Nunu e Willump",
+   "planilha": "Nunu e Willump",
+   "id": "Nunu",
+   "titulo": "o Garoto e seu Yeti",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Olaf",
+   "planilha": "Olaf",
+   "id": "Olaf",
+   "titulo": "o Berserker",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Orianna",
+   "planilha": "Orianna",
+   "id": "Orianna",
+   "titulo": "a Donzela Mecânica",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Ornn",
+   "planilha": "Ornn",
+   "id": "Ornn",
+   "titulo": "O Fogo sob a Montanha",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Pantheon",
+   "planilha": "Pantheon",
+   "id": "Pantheon",
+   "titulo": "a Lança Indestrutível",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Poppy",
+   "planilha": "Poppy",
+   "id": "Poppy",
+   "titulo": "a Guardiã do Martelo",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Pyke",
+   "planilha": "Pyke",
+   "id": "Pyke",
+   "titulo": "o Estripador das Águas Sangrentas",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Qiyana",
+   "planilha": "Qiyana",
+   "id": "Qiyana",
+   "titulo": "a Imperatriz dos Elementos",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Quinn",
+   "planilha": "Quinn",
+   "id": "Quinn",
+   "titulo": "as Asas de Demacia",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Rakan",
+   "planilha": "Rakan",
+   "id": "Rakan",
+   "titulo": "O Charmoso",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Rammus",
+   "planilha": "Rammus",
+   "id": "Rammus",
+   "titulo": "o Tatu Blindado",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Rek'Sai",
+   "planilha": "Rek'Sai",
+   "id": "RekSai",
+   "titulo": "a Escavadora do Vazio",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Rell",
+   "planilha": "Rell",
+   "id": "Rell",
+   "titulo": "a Dama de Ferro",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Renata Glasc",
+   "planilha": "Renata Glasc",
+   "id": "Renata",
+   "titulo": "a Baronesa da Química",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Renekton",
+   "planilha": "Renekton",
+   "id": "Renekton",
+   "titulo": "o Carniceiro das Areias",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Rengar",
+   "planilha": "Rengar",
+   "id": "Rengar",
+   "titulo": "o Acossador da Alcateia",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Riven",
+   "planilha": "Riven",
+   "id": "Riven",
+   "titulo": "a Exilada",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Rumble",
+   "planilha": "Rumble",
+   "id": "Rumble",
+   "titulo": "a Ameaça Mecânica",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Ryze",
+   "planilha": "Ryze",
+   "id": "Ryze",
+   "titulo": "o Mago Rúnico",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Samira",
+   "planilha": "Samira",
+   "id": "Samira",
+   "titulo": "a Rosa do Deserto",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Sejuani",
+   "planilha": "Sejuani",
+   "id": "Sejuani",
+   "titulo": "a Fúria do Norte",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Senna",
+   "planilha": "Senna",
+   "id": "Senna",
+   "titulo": "A Redentora",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Seraphine",
+   "planilha": "Seraphine",
+   "id": "Seraphine",
+   "titulo": "a Cantora Sonhadora",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Sett",
+   "planilha": "Sett",
+   "id": "Sett",
+   "titulo": "o Chefe",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Shaco",
+   "planilha": "Shaco",
+   "id": "Shaco",
+   "titulo": "o Bufão Demoníaco",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Shen",
+   "planilha": "Shen",
+   "id": "Shen",
+   "titulo": "o Olho do Crepúsculo",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Shyvana",
+   "planilha": "Shyvana",
+   "id": "Shyvana",
+   "titulo": "a Meio-Dragão",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Singed",
+   "planilha": "Singed",
+   "id": "Singed",
+   "titulo": "o Químico Louco",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Sion",
+   "planilha": "Sion",
+   "id": "Sion",
+   "titulo": "o Colosso Morto-Vivo",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Sivir",
+   "planilha": "Sivir",
+   "id": "Sivir",
+   "titulo": "a Mestra da Batalha",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Skarner",
+   "planilha": "Skarner",
+   "id": "Skarner",
+   "titulo": "o Soberano Primordial",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Smolder",
+   "planilha": "Smolder",
+   "id": "Smolder",
+   "titulo": "o Filhote Flamejante",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Sona",
+   "planilha": "Sona",
+   "id": "Sona",
+   "titulo": "a Mestra das Cordas",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Soraka",
+   "planilha": "Soraka",
+   "id": "Soraka",
+   "titulo": "a Filha das Estrelas",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Swain",
+   "planilha": "Swain",
+   "id": "Swain",
+   "titulo": "o Grande General Noxiano",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Sylas",
+   "planilha": "Sylas",
+   "id": "Sylas",
+   "titulo": "o Abjugado",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Syndra",
+   "planilha": "Syndra",
+   "id": "Syndra",
+   "titulo": "a Soberana Sombria",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Tahm Kench",
+   "planilha": "Tahm Kench",
+   "id": "TahmKench",
+   "titulo": "o Rei do Rio",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Taliyah",
+   "planilha": "Taliyah",
+   "id": "Taliyah",
+   "titulo": "a Tecelã de Pedras",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Talon",
+   "planilha": "Talon",
+   "id": "Talon",
+   "titulo": "a Sombra da Lâmina",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Taric",
+   "planilha": "Taric",
+   "id": "Taric",
+   "titulo": "o Escudo de Valoran",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Teemo",
+   "planilha": "Teemo",
+   "id": "Teemo",
+   "titulo": "o Explorador Veloz",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Thresh",
+   "planilha": "Thresh",
+   "id": "Thresh",
+   "titulo": "o Guardião das Correntes",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Tristana",
+   "planilha": "Tristana",
+   "id": "Tristana",
+   "titulo": "a Artilheira Yordle",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Trundle",
+   "planilha": "Trundle",
+   "id": "Trundle",
+   "titulo": "o Rei dos Trolls",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Tryndamere",
+   "planilha": "Tryndamere",
+   "id": "Tryndamere",
+   "titulo": "o Rei Bárbaro",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Twisted Fate",
+   "planilha": "Twisted Fate",
+   "id": "TwistedFate",
+   "titulo": "o Mestre das Cartas",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Twitch",
+   "planilha": "Twitch",
+   "id": "Twitch",
+   "titulo": "o Semeador da Peste",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Udyr",
+   "planilha": "Udyr",
+   "id": "Udyr",
+   "titulo": "o Andarilho Espiritual",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Urgot",
+   "planilha": "Urgot",
+   "id": "Urgot",
+   "titulo": "o Encouraçado",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Varus",
+   "planilha": "Varus",
+   "id": "Varus",
+   "titulo": "a Flecha da Vingança",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Vayne",
+   "planilha": "Vayne",
+   "id": "Vayne",
+   "titulo": "a Caçadora Noturna",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Veigar",
+   "planilha": "Veigar",
+   "id": "Veigar",
+   "titulo": "o Pequeno Mestre do Mal",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Vel'Koz",
+   "planilha": "Vel'Koz",
+   "id": "Velkoz",
+   "titulo": "o Olho do Vazio",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Vex",
+   "planilha": "Vex",
+   "id": "Vex",
+   "titulo": "a Melancolista",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Vi",
+   "planilha": "Vi",
+   "id": "Vi",
+   "titulo": "a Defensora de Piltover",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Viego",
+   "planilha": "Viego",
+   "id": "Viego",
+   "titulo": "O Rei Destruído",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Viktor",
+   "planilha": "Viktor",
+   "id": "Viktor",
+   "titulo": "o Arauto do Arcano",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Vladimir",
+   "planilha": "Vladimir",
+   "id": "Vladimir",
+   "titulo": "o Sanguinário Escarlate",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Volibear",
+   "planilha": "Volibear",
+   "id": "Volibear",
+   "titulo": "a Tempestade Implacável",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Warwick",
+   "planilha": "Warwick",
+   "id": "Warwick",
+   "titulo": "a Ira Desimpedida de Zaun",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Wukong",
+   "planilha": "Wukong",
+   "id": "MonkeyKing",
+   "titulo": "o Macaco Rei",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Xayah",
+   "planilha": "Xayah",
+   "id": "Xayah",
+   "titulo": "a Rebelde",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Xerath",
+   "planilha": "Xerath",
+   "id": "Xerath",
+   "titulo": "o Mago Ascendente",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Xin Zhao",
+   "planilha": "Xin Zhao",
+   "id": "XinZhao",
+   "titulo": "o Senescal de Demacia",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Yasuo",
+   "planilha": "Yasuo",
+   "id": "Yasuo",
+   "titulo": "o Imperdoável",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Yone",
+   "planilha": "Yone",
+   "id": "Yone",
+   "titulo": "o Inesquecido",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Yorick",
+   "planilha": "Yorick",
+   "id": "Yorick",
+   "titulo": "o Pastor de Almas",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Yunara",
+   "planilha": "Yunara",
+   "id": "Yunara",
+   "titulo": "a Fé Inabalável",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Yuumi",
+   "planilha": "Yuumi",
+   "id": "Yuumi",
+   "titulo": "a Gata Mágica",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Zaahen",
+   "planilha": "Zaahen",
+   "id": "Zaahen",
+   "titulo": "O Indissociável",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Zac",
+   "planilha": "Zac",
+   "id": "Zac",
+   "titulo": "a Arma Secreta",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Zed",
+   "planilha": "Zed",
+   "id": "Zed",
+   "titulo": "o Mestre das Sombras",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Zeri",
+   "planilha": "Zeri",
+   "id": "Zeri",
+   "titulo": "A Faísca de Zaun",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Ziggs",
+   "planilha": "Ziggs",
+   "id": "Ziggs",
+   "titulo": "o Especialista em Hexplosivos",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Zilean",
+   "planilha": "Zilean",
+   "id": "Zilean",
+   "titulo": "o Guardião do Tempo",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Zoe",
+   "planilha": "Zoe",
+   "id": "Zoe",
+   "titulo": "o Aspecto do Crepúsculo",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  },
+  {
+   "nome": "Zyra",
+   "planilha": "Zyra",
+   "id": "Zyra",
+   "titulo": "a Ascensão dos Espinhos",
+   "dificuldade": {
+    "overall": null,
+    "valor": null,
+    "texto": ""
+   },
+   "tldr": [],
+   "feiticos": [],
+   "runas": [],
+   "imagens_runas": [],
+   "itens": [],
+   "secoes": []
+  }
+ ]
+}
