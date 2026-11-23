@@ -81,9 +81,12 @@
    "id": "Alistar",
    "titulo": "o Minotauro",
    "rota": "Suporte",
+   "lane": {
+    "Yunara": 2
+   },
    "dificuldade": {
-    "overall": 5,
-    "valor": 5,
+    "overall": 3,
+    "valor": 3,
     "texto": ""
    },
    "tldr": [
@@ -246,8 +249,8 @@
    "rota": "Suporte",
    "adc": 5,
    "dificuldade": {
-    "overall": 3,
-    "valor": 3,
+    "overall": 4,
+    "valor": 4,
     "texto": ""
    },
    "tldr": [],
@@ -3330,6 +3333,20 @@
     "valor": 2,
     "texto": ""
    },
+   "sinergia": [
+    {
+     "titulo": "",
+     "blocos": [
+      {
+       "tipo": "lista",
+       "itens": [
+        "samira é um dos melhores adc com taric, dificilmente vão perder 2v2 ou 2v3",
+        "tentem abusar do combo do E do Taric + E da samira no minion pra stunar o inimigo no fim"
+       ]
+      }
+     ]
+    }
+   ],
    "tldr": [],
    "feiticos": [],
    "runas": [],
