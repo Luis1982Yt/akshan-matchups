@@ -1278,6 +1278,9 @@ b.ruim { font-weight: 700; color: var(--dif-dificil); }
   .trava.on .eu, .trava.on .ele, .trava.on .vs, .trava.on::before { animation: none; }
   .trocar svg { transition: none; }
 }
+/* Shift + clique segurando selecionava a página inteira e pintava os ícones de amarelo: nas áreas de clicar
+   (roda, cartas, barra, botões de troca) não há texto para copiar, então a seleção fica desligada. */
+.anel, .roda, .lista, .duelo, .bar, .navega, .filtros, .paginas, .sel-grade, .bot-grade { -webkit-user-select: none; user-select: none; }
 /* Bot lane 2x2 (guia com "bot": true no guias.json, o Taric): você e o seu ADC contra o ADC e o suporte inimigos. */
 .bot-carta { cursor: pointer; }
 .bot-carta .bot-arte { position: absolute; inset: 0; display: grid; place-items: center; background: var(--painel-alto); }
