@@ -1324,6 +1324,14 @@ html.guia-bot .card .quem .n { font-size: 22px; }
 .ed-linha[hidden] { display: none; }
 .ed-acoes { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .ed-acoes #edMsg { flex: 1; min-width: 120px; font-size: 13px; color: var(--texto-baixo); }
+.ed-setup-btn { grid-column: 1 / -1; justify-self: start; margin: 0 0 4px; }
+.es-tit { margin: 6px 0 0; font: 700 12px var(--corpo); letter-spacing: .12em; text-transform: uppercase; color: var(--acento-vivo); }
+.es-tit label { font: inherit; color: inherit; }
+.es-rot { font: 600 13px var(--corpo); color: var(--texto-baixo); }
+.es-grade { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; }
+.es-grade:empty { display: none; }
+.es-grade.dois { grid-template-columns: 1fr 1fr; }
+#edSetupDialogo .ed-acoes #esMsg { flex: 1; min-width: 120px; font-size: 13px; color: var(--texto-baixo); }
 .ed-salvar { height: 44px; padding: 0 22px; border-radius: 10px; border: 0; background: var(--destaque); color: var(--tinta-botao); font: 700 15px var(--corpo); cursor: pointer; }
 .ed-salvar:disabled { opacity: .6; }
 .ed-sair { padding: 0; border: 0; background: none; color: var(--texto-baixo); font: 13px var(--corpo); text-decoration: underline; cursor: pointer; }
@@ -1526,6 +1534,22 @@ html.modo-overlay .ov-topo button { width: 28px; height: 28px; border-radius: 8p
   <div class="tier-topo"><h2 id="appTit" data-t="appTit">App para PC</h2><button class="tier-fecha" type="button" id="appFecha" data-t-aria="fechar"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button></div>
   <div class="app-corpo" id="appCorpo"></div>
 </dialog>
+<dialog class="tier ed-dialogo" id="edSetupDialogo" aria-labelledby="esTit">
+  <div class="tier-topo"><h2 id="esTit"></h2><button class="tier-fecha" type="button" id="esFecha" data-t-aria="fechar"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+  <div class="ed-corpo">
+    <h3 class="es-tit" data-t="runas">Runas</h3>
+    <div class="ed-linha"><label for="esPri" data-t="principal">Principal</label><select id="esPri"></select></div>
+    <div class="es-grade" id="esPriRunas"></div>
+    <div class="ed-linha"><label for="esSec" data-t="secundaria">Secundária</label><select id="esSec"></select></div>
+    <div class="es-grade" id="esSecRunas"></div>
+    <div class="ed-linha"><span class="es-rot" data-t="fragmentos">Fragmentos</span><div class="es-grade" id="esFrag"></div></div>
+    <h3 class="es-tit" data-t="feitico">Feitiços</h3>
+    <div class="es-grade dois" id="esFeit"></div>
+    <h3 class="es-tit"><label for="esNotas" data-t="edAnotacoes">Itens e anotações (uma por linha)</label></h3>
+    <textarea id="esNotas" rows="5"></textarea>
+    <div class="ed-acoes"><span id="esMsg" role="status"></span><button type="button" class="ed-salvar" id="esSalvar" data-t="edSalvar">Salvar</button></div>
+  </div>
+</dialog>
 <dialog class="tier ed-dialogo" id="edDialogo" aria-labelledby="edTit">
   <div class="tier-topo"><h2 id="edTit"></h2><button class="tier-fecha" type="button" id="edFecha" data-t-aria="fechar"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
   <div class="ed-corpo">
@@ -1605,7 +1629,7 @@ const TXT = {
     vazio: "Nenhum campeão com essa busca.", limpar: "Limpar busca e filtros", voce: "Você", inimigo: "Inimigo", duelo: "Duelo",
     travarTit: "Travar o pick", travarContra: "Travar o pick contra ", setup: "Seu setup pro confronto",
     lembrete: "Lembrete", comoJogar: "Como jogar", contra: " contra ", arteDe: "Arte de ",
-    botAliado: "Seu ADC", botAdcIni: "ADC inimigo", botSupIni: "Suporte inimigo", botTrocar: "trocar", botEscolher: "Escolher", botContra: "Contra {c}", botCom: "Com {c}", botSem: "Ainda sem dicas para esta parte.", botEscolhaAliado: "Escolha o seu atirador", botEscolhaIni: "Escolha o atirador inimigo", botFalta: "Escolha o campeão na carta acima para ver as dicas.", botNenhum: "Nenhum", botBuscaPh: "Procurar atirador", botDifLane: "Lane 2x2", botDifSup: "Contra {c}", botDifAdc: "Contra {c}", edEscrever: "✎ Escrever", edDicas: "Dicas (uma por linha)", edSenha: "Senha do editor", edSair: "Sair do modo editor", edSalvar: "Salvar", edSalvando: "Salvando…", edSalvo: "Salvo! Em 1 a 2 minutos aparece para todo mundo.", edErro: "Não salvou: ", edFaltaSenha: "Digite a senha do editor.",
+    botAliado: "Seu ADC", botAdcIni: "ADC inimigo", botSupIni: "Suporte inimigo", botTrocar: "trocar", botEscolher: "Escolher", botContra: "Contra {c}", botCom: "Com {c}", botSem: "Ainda sem dicas para esta parte.", botEscolhaAliado: "Escolha o seu atirador", botEscolhaIni: "Escolha o atirador inimigo", botFalta: "Escolha o campeão na carta acima para ver as dicas.", botNenhum: "Nenhum", botBuscaPh: "Procurar atirador", botDifLane: "Lane 2x2", botDifSup: "Contra {c}", botDifAdc: "Contra {c}", edEscrever: "✎ Escrever", edSetup: "✎ Editar runas, feitiços e anotações", edSetupDe: "Setup contra {c}", edCarregando: "Carregando runas e feitiços…", edFaltaSec: "Escolha a árvore secundária.", edAnotacoes: "Itens e anotações (uma por linha)", edDicas: "Dicas (uma por linha)", edSenha: "Senha do editor", edSair: "Sair do modo editor", edSalvar: "Salvar", edSalvando: "Salvando…", edSalvo: "Salvo! Em 1 a 2 minutos aparece para todo mundo.", edErro: "Não salvou: ", edFaltaSenha: "Digite a senha do editor.",
     difMuito_facil: "Muito fácil", difFacil: "Fácil", difMedio: "Médio", difDificil: "Difícil", difMuito_dificil: "Muito difícil", dificuldade: "Dificuldade", difRota: "Ameaça na rota", difJogo: "Ameaça na partida", difRotaCurto: "Rota", difJogoCurto: "Partida",
     runa: "Runa", secundaria: "Secundária", feitico: "Feitiço", bota: "Bota", build: "Build", semAnot: "Sem anotação", tantoFaz: "Tanto faz",
     anterior: "Anterior: ", proximo: "Próximo: ",
@@ -1639,7 +1663,7 @@ const TXT = {
     vazio: "No champion matches this search.", limpar: "Clear search and filters", voce: "You", inimigo: "Enemy", duelo: "Matchup",
     travarTit: "Lock in", travarContra: "Lock in vs ", setup: "Your setup for this matchup",
     lembrete: "Notes", comoJogar: "How to play", contra: " vs ", arteDe: "Art of ",
-    botAliado: "Your ADC", botAdcIni: "Enemy ADC", botSupIni: "Enemy support", botTrocar: "change", botEscolher: "Choose", botContra: "Against {c}", botCom: "With {c}", botSem: "No tips for this part yet.", botEscolhaAliado: "Choose your marksman", botEscolhaIni: "Choose the enemy marksman", botFalta: "Pick the champion on the card above to see the tips.", botNenhum: "None", botBuscaPh: "Search marksman", botDifLane: "2v2 lane", botDifSup: "Vs {c}", botDifAdc: "Vs {c}", edEscrever: "✎ Write", edDicas: "Tips (one per line)", edSenha: "Editor password", edSair: "Leave editor mode", edSalvar: "Save", edSalvando: "Saving…", edSalvo: "Saved! Everyone sees it in 1 to 2 minutes.", edErro: "Not saved: ", edFaltaSenha: "Type the editor password.",
+    botAliado: "Your ADC", botAdcIni: "Enemy ADC", botSupIni: "Enemy support", botTrocar: "change", botEscolher: "Choose", botContra: "Against {c}", botCom: "With {c}", botSem: "No tips for this part yet.", botEscolhaAliado: "Choose your marksman", botEscolhaIni: "Choose the enemy marksman", botFalta: "Pick the champion on the card above to see the tips.", botNenhum: "None", botBuscaPh: "Search marksman", botDifLane: "2v2 lane", botDifSup: "Vs {c}", botDifAdc: "Vs {c}", edEscrever: "✎ Write", edSetup: "✎ Edit runes, spells and notes", edSetupDe: "Setup vs {c}", edCarregando: "Loading runes and spells…", edFaltaSec: "Pick the secondary tree.", edAnotacoes: "Items and notes (one per line)", edDicas: "Tips (one per line)", edSenha: "Editor password", edSair: "Leave editor mode", edSalvar: "Save", edSalvando: "Saving…", edSalvo: "Saved! Everyone sees it in 1 to 2 minutes.", edErro: "Not saved: ", edFaltaSenha: "Type the editor password.",
     difMuito_facil: "Very easy", difFacil: "Easy", difMedio: "Medium", difDificil: "Hard", difMuito_dificil: "Very hard", dificuldade: "Difficulty", difRota: "Lane threat", difJogo: "Game threat", difRotaCurto: "Lane", difJogoCurto: "Game",
     runa: "Rune", secundaria: "Secondary", feitico: "Spell", bota: "Boots", build: "Build", semAnot: "No note", tantoFaz: "Any",
     anterior: "Previous: ", proximo: "Next: ",
@@ -2231,7 +2255,8 @@ function setupCompleto(c) {
     .map(([k, r]) => `<div><dt>${k === "overall" ? t("geral") : r}</dt><dd aria-label="${c.dificuldade[k] ? t("srDif", k === "overall" ? c.dificuldade.valor ?? c.dificuldade[k] : c.dificuldade[k], guia.escala || 5).replace(/^, /, "") : t("semAnot")}">${pips(c.dificuldade[k])}<b>${k === "overall" && c.dificuldade.texto ? esc(notaTexto(tr(c.dificuldade.texto))) : (c.dificuldade[k] ?? "–") + "/5"}</b></dd></div>`).join("");
   // Guia sem runas e itens em nenhuma matchup (fonte só com dicas, como o Azir): o quadro mostra só a dificuldade.
   const temSetup = guia.lista.some(m => (m.runas || []).length || (m.itens || []).length || (m.feiticos || []).length);
-  return `<div class="setup-completo">
+  const edSetup = EDITOR && guia.id === "taric" ? `<button type="button" class="bot-editar ed-setup-btn" data-setup="${c.id}">${esc(t("edSetup"))}</button>` : "";
+  return `<div class="setup-completo">${edSetup}
     ${temSetup ? `<section class="bloco"><h3>${t("runas")}</h3>${runas || `<p class="livre">${t("semAnot")}</p>`}${imagensRunas}${feiticos}</section>
     <section class="bloco build"><h3>${t("itens")}</h3>${itens || `<p class="livre">${t("semAnot")}</p>`}</section>` : ""}
     <section class="bloco dif"><h3>${t("dificuldade")}</h3><dl>${dif}</dl></section>
@@ -2590,15 +2615,18 @@ function difBot(c) {
    O mono Taric abre battlematch.vercel.app/?editor#taric, e cada caixa de dicas do 2x2 ganha "Escrever".
    Salvar manda para api/taric.js (que só mexe em src/guias/taric/notas.json) com a senha que o dono passou;
    o site remonta sozinho em 1-2 minutos. A senha fica guardada só no navegador dele. */
-const EDITOR = new URLSearchParams(location.search).has("editor") && /^https?:$/.test(location.protocol);
+const EDITOR_URL = new URLSearchParams(location.search).has("editor") && /^https?:$/.test(location.protocol);
 let edAtual = null;
 const edSenha = () => { try { return localStorage.getItem("editor:taric") || ""; } catch (e) { return ""; } };
 const edGuarda = senha => { try { localStorage.setItem("editor:taric", senha); } catch (e) {} };
 // Link com a senha (?editor=SENHA): guarda no navegador e tira a senha da barra de endereço. Ele nunca mais digita.
-if (EDITOR) {
+if (EDITOR_URL) {
   const daUrl = new URLSearchParams(location.search).get("editor");
   if (daUrl) { edGuarda(daUrl); history.replaceState(null, "", location.pathname + "?editor" + location.hash); }
 }
+// Os botões de escrever só aparecem para quem já tem a senha guardada (abriu o link com a senha). Para todo o resto,
+// inclusive quem digitar só "?editor", o site fica igual.
+const EDITOR = EDITOR_URL && !!edSenha();
 function edAbre(ed) {
   if (!guia || guia.id !== "taric") return;
   edAtual = ed;
@@ -2641,7 +2669,90 @@ async function edSalva() {
   } catch (e) { $("edMsg").textContent = t("edErro") + e.message; }
   finally { $("edSalvar").disabled = false; }
 }
+/* Editor do setup (runas, feitiços e anotações do confronto). As listas vêm do Data Dragon em português; o que vai
+   para o servidor são os nomes em inglês (os mesmos dos prints e do app), validados lá com a versão atual do jogo. */
+const ES_FRAG = [["Adaptive Force", "Attack Speed", "Ability Haste"], ["Adaptive Force", "Move Speed", "Health Scaling"], ["Health", "Tenacity", "Health Scaling"]];
+const ES_FRAG_PT = { "Adaptive Force": "Força Adaptativa", "Attack Speed": "Velocidade de Ataque", "Ability Haste": "Aceleração de Habilidade", "Move Speed": "Velocidade de Movimento", "Health Scaling": "Vida por nível", "Health": "Vida", "Tenacity": "Tenacidade e Resistência a Lentidão" };
+let esDados = null, esCampeao = null;
+async function esCarrega() {
+  if (esDados) return esDados;
+  const base = DD + VER + "/data/", pega = u => fetch(base + u).then(r => r.json());
+  const [pt, en, sp] = await Promise.all([pega("pt_BR/runesReforged.json"), pega("en_US/runesReforged.json"), pega("pt_BR/summoner.json")]);
+  esDados = {
+    arvores: en.map((a, i) => ({ nome: pt[i].name, slots: a.slots.map((s, j) => s.runes.map((r, k) => ({ en: r.name, pt: pt[i].slots[j].runes[k].name, icone: "https://ddragon.leagueoflegends.com/cdn/img/" + r.icon }))) })),
+    feiticos: Object.values(sp.data).filter(f => (f.modes || []).includes("CLASSIC")).map(f => ({ id: f.id, nome: f.name })).sort((a, b) => a.nome.localeCompare(b.nome)),
+  };
+  return esDados;
+}
+const esOpt = (v, txt, sel) => `<option value="${esc(v)}"${sel ? " selected" : ""}>${esc(txt)}</option>`;
+function esArvore(id, escolhida, outra) {
+  $(id).innerHTML = esOpt("", "–", escolhida < 0) + esDados.arvores.map((a, i) => i === outra ? "" : esOpt(i, a.nome, i === escolhida)).join("");
+}
+function esPrincipal(nomes) {
+  const i = Number($("esPri").value), a = esDados.arvores[i];
+  $("esPriRunas").innerHTML = $("esPri").value === "" ? "" : a.slots.map((s, j) => `<select data-es="p${j}">${s.map(r => esOpt(r.en, r.pt, nomes && nomes[j] === r.en)).join("")}</select>`).join("");
+  esArvore("esSec", Number($("esSec").value === "" ? -1 : $("esSec").value), $("esPri").value === "" ? -1 : i);
+}
+function esSecundaria(nomes) {
+  const v = $("esSec").value, a = esDados.arvores[Number(v)];
+  const opcoes = sel => a.slots.slice(1).map((s, j) => `<optgroup label="${j + 1}">${s.map(r => esOpt(r.en, r.pt, sel === r.en)).join("")}</optgroup>`).join("");
+  $("esSecRunas").innerHTML = v === "" ? "" : [0, 1].map(k => `<select data-es="s${k}">${opcoes(nomes ? nomes[k] : a.slots[k + 1][0].en)}</select>`).join("");
+}
+async function esAbre(id) {
+  esCampeao = guia.lista.find(x => x.id === id);
+  $("esTit").textContent = t("edSetupDe").replace("{c}", esCampeao.nome);
+  $("esMsg").textContent = t("edCarregando");
+  $("esSalvar").disabled = true;
+  $("edSetupDialogo").showModal();
+  try { await esCarrega(); } catch (e) { $("esMsg").textContent = t("edErro") + e.message; return; }
+  const pag = (esCampeao.runas || [])[0] || [], nomes = rot => ((pag.find(l => l.rotulo === rot) || {}).pecas || []).map(p => p.nome);
+  const pri = nomes("Principal"), sec = nomes("Secundária"), frag = nomes("Fragmentos");
+  const acha = n => esDados.arvores.findIndex(a => a.slots.some(s => s.some(r => r.en === n)));
+  esArvore("esPri", pri.length ? acha(pri[0]) : -1, -1);
+  $("esSec").innerHTML = "";
+  esPrincipal(pri);
+  esArvore("esSec", sec.length ? acha(sec[0]) : -1, pri.length ? acha(pri[0]) : -1);
+  esSecundaria(sec);
+  $("esFrag").innerHTML = ES_FRAG.map((op, k) => `<select data-es="f${k}">${op.map(f => esOpt(f, L === "en" ? f : ES_FRAG_PT[f], (frag.find(x => op.includes(x) && frag.indexOf(x) === k) || op[0]) === f)).join("")}</select>`).join("");
+  const fe = (esCampeao.feiticos || []).map(p => ((p.icone || "").match(/spell\/(\w+)\.png/) || [])[1]);
+  $("esFeit").innerHTML = [0, 1].map(k => `<select data-es="fe${k}">${esOpt("", "–", !fe[k])}${esDados.feiticos.map(f => esOpt(f.id, f.nome, fe[k] === f.id)).join("")}</select>`).join("");
+  $("esNotas").value = (esCampeao.itens || []).flatMap(g => g.linhas.filter(l => l.tipo === "nota").map(l => l.texto)).join("\n");
+  $("esMsg").textContent = "";
+  $("esSalvar").disabled = false;
+}
+async function esSalva() {
+  const v = k => { const el = $("edSetupDialogo").querySelector(`[data-es="${k}"]`); return el ? el.value : ""; };
+  const setup = {
+    runas: $("esPri").value === "" ? null : { principal: [0, 1, 2, 3].map(j => v("p" + j)), secundaria: [v("s0"), v("s1")], fragmentos: [0, 1, 2].map(k => v("f" + k)) },
+    feiticos: [v("fe0"), v("fe1")].filter(Boolean), anotacoes: $("esNotas").value,
+  };
+  if (setup.runas && $("esSec").value === "") { $("esMsg").textContent = t("edFaltaSec"); return; }
+  $("esSalvar").disabled = true; $("esMsg").textContent = t("edSalvando");
+  try {
+    const r = await fetch("/api/taric", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ senha: edSenha(), campeao: esCampeao.id, campo: "setup", setup }) });
+    const j = await r.json().catch(() => ({}));
+    if (!r.ok) { $("esMsg").textContent = t("edErro") + (j.erro || r.status); return; }
+    // Mostra na hora para quem salvou.
+    const s = j.setup || {}, runa = n => { for (const a of esDados.arvores) for (const sl of a.slots) for (const x of sl) if (x.en === n) return { nome: n, icone: x.icone }; return { nome: n }; };
+    esCampeao.runas = s.runas ? [[{ rotulo: "Principal", pecas: s.runas.principal.map(runa) }, { rotulo: "Secundária", pecas: s.runas.secundaria.map(runa) },
+      { rotulo: "Fragmentos", pecas: s.runas.fragmentos.map(f => ({ nome: f, icone: `${DD_RUNA}StatMods/${{ "Adaptive Force": "StatModsAdaptiveForceIcon", "Attack Speed": "StatModsAttackSpeedIcon", "Ability Haste": "StatModsCDRScalingIcon", "Move Speed": "StatModsMovementSpeedIcon", "Health Scaling": "StatModsHealthScalingIcon", "Tenacity": "StatModsTenacityIcon", "Health": "StatModsHealthPlusIcon" }[f]}.png` })) }]] : esCampeao.runas;
+    esCampeao.feiticos = (s.feiticos || []).map(id => ({ nome: (esDados.feiticos.find(f => f.id === id) || {}).nome || id, icone: `${DD}${VER}/img/spell/${id}.png` }));
+    esCampeao.itens = s.anotacoes ? [{ rotulo: "Build", linhas: s.anotacoes.map(texto => ({ tipo: "nota", texto })) }] : [];
+    $("esMsg").textContent = t("edSalvo");
+    renderDetalhe(false);
+    setTimeout(() => $("edSetupDialogo").open && $("edSetupDialogo").close(), 1600);
+  } catch (e) { $("esMsg").textContent = t("edErro") + e.message; }
+  finally { $("esSalvar").disabled = false; }
+}
+document.addEventListener("change", ev => {
+  if (ev.target.id === "esPri") { esPrincipal(null); esSecundaria(null); }
+  if (ev.target.id === "esSec") esSecundaria(null);
+});
 document.addEventListener("click", ev => {
+  const st = ev.target.closest(".ed-setup-btn");
+  if (st) { esAbre(st.dataset.setup); return; }
+  if (ev.target.closest("#esFecha")) $("edSetupDialogo").close();
+  if (ev.target.closest("#esSalvar")) esSalva();
   const b = ev.target.closest(".bot-editar");
   if (b) { edAbre(JSON.parse(b.dataset.ed)); return; }
   if (ev.target.closest("#edFecha")) $("edDialogo").close();
