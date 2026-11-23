@@ -5,6 +5,8 @@ Ainda não há planilha (pedido do dono em 2026-11-23: criar a aba já, as notas
 todos os campeões do Data Dragon, sem notas, e o site avisa que está em construção. Quando a fonte das notas existir,
 este script passa a ler dela (ver .claude/skills/guia-novo/SKILL.md) e junta as notas a cada campeão desta lista.
 Campeão novo no jogo entra sozinho: o workflow diário roda este script.
+O mono Taric escreve dicas e dificuldades pelo modo editor do site (api/taric.js grava em notas.json, e o workflow
+taric-editor.yml roda este script e o build a cada mudança).
 """
 import json
 from pathlib import Path
@@ -30,6 +32,7 @@ def gerar_matchups(dd, notas):
     tier list de atiradores do mono Taric (ou tem a tag Marksman do Data Dragon) ganha a rota "Atirador", para o filtro
     da lista e o 2x2 da bot lane. "adc" guarda a dificuldade como ADC inimigo (Ashe e Seraphine estão nas duas listas)."""
     dif, dif_adc, dicas = notas.get("dificuldade", {}), notas.get("dificuldade_adc", {}), notas.get("dicas", {})
+    sinergia = notas.get("sinergia", {})  # dicas jogando junto com esse ADC (escritas pelo modo editor do site)
     # Campeão em mais de um print (Zilean) fica com as duas páginas, como opções.
     runas_de = {}
     for p in notas.get("paginas_runas", []):
@@ -46,9 +49,10 @@ def gerar_matchups(dd, notas):
             **({"rota": rota} if rota else {}),
             **({"adc": adc or True} if atirador else {}),
             "dificuldade": {"overall": nota, "valor": nota, "texto": ""},
+            **({"sinergia": [{"titulo": "", "blocos": [{"tipo": "lista", "itens": sinergia[c["id"]]}]}]} if sinergia.get(c["id"]) else {}),
             "tldr": dicas.get(c["id"], []), "feiticos": [], "runas": runas_de.get(c["id"], []), "imagens_runas": [], "itens": [], "secoes": [],
         })
-    falta = (set(dif) | set(dif_adc) | set(dicas) | set(runas_de)) - set(dd.campeoes)
+    falta = (set(dif) | set(dif_adc) | set(dicas) | set(sinergia) | set(runas_de)) - set(dd.campeoes)
     if falta:
         raise KeyError(f"campeão da tier list fora do Data Dragon: {sorted(falta)}")
     return saida

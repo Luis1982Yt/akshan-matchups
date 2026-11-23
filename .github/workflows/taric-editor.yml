@@ -1,0 +1,43 @@
+# Quando o mono Taric salva uma dica pelo modo editor do site (api/taric.js grava src/guias/taric/notas.json),
+# este workflow remonta o guia do Taric e o index.html e faz o commit. A Vercel publica sozinha (cerca de 1-2 min no total).
+name: Taric (modo editor)
+
+on:
+  push:
+    branches: [main]
+    paths: [src/guias/taric/notas.json]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: atualizar-planilha  # o mesmo grupo do workflow diário: nunca os dois commitando ao mesmo tempo
+  cancel-in-progress: false
+
+jobs:
+  montar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Monta o guia do Taric e o site
+        run: |
+          python3 scripts/atualizar_taric.py
+          python3 scripts/traducao_pt.py
+          python3 scripts/importar_lol.py
+          python3 scripts/build.py
+
+      - name: Commit, se mudou algo
+        run: |
+          if git diff --quiet; then
+            echo "Nada mudou."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A src/guias/taric index.html guias-app.json
+          git commit -m "Taric: dicas novas do modo editor"
+          git pull --rebase
+          git push

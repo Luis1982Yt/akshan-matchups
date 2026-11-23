@@ -1310,6 +1310,22 @@ html.guia-bot .card .quem .n { font-size: 22px; }
 .bot-nota h3 { display: flex; align-items: center; gap: 8px; margin: 0 0 8px; font: 700 13px/1.3 var(--titulo); letter-spacing: .1em; text-transform: uppercase; color: var(--destaque); }
 .bot-nota h3 img { width: 26px; height: 26px; border-radius: 6px; }
 .bot-nota .bot-vazio { margin: 0; color: var(--texto-baixo); font-size: 14px; }
+/* Modo editor do Taric */
+.bot-nota { position: relative; }
+.bot-editar { margin-top: 10px; padding: 6px 12px; border-radius: 8px; border: 1px dashed var(--acento-vivo); background: none; color: var(--acento-vivo); font: 600 13px var(--corpo); cursor: pointer; }
+.bot-editar:hover { background: var(--painel-alto); }
+.tier.ed-dialogo { width: min(560px, calc(100vw - 24px)); }
+.ed-corpo { display: grid; gap: 10px; padding: 14px 18px 18px; }
+.ed-corpo label { font: 600 13px var(--corpo); color: var(--texto-baixo); }
+.ed-corpo textarea, .ed-corpo select, .ed-corpo input { width: 100%; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--linha-forte); background: var(--painel-alto); color: var(--texto); font: 15px/1.45 var(--corpo); }
+.ed-corpo textarea { resize: vertical; min-height: 140px; }
+.ed-linha { display: grid; grid-template-columns: 130px minmax(0, 1fr); align-items: center; gap: 10px; }
+.ed-linha[hidden] { display: none; }
+.ed-acoes { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.ed-acoes #edMsg { flex: 1; min-width: 120px; font-size: 13px; color: var(--texto-baixo); }
+.ed-salvar { height: 44px; padding: 0 22px; border-radius: 10px; border: 0; background: var(--destaque); color: var(--tinta-botao); font: 700 15px var(--corpo); cursor: pointer; }
+.ed-salvar:disabled { opacity: .6; }
+.ed-sair { padding: 0; border: 0; background: none; color: var(--texto-baixo); font: 13px var(--corpo); text-decoration: underline; cursor: pointer; }
 /* Seletor de atirador: enxuto, como a grade da seleção de campeões (só ícones quadrados, busca em cima). */
 .tier.bot-dialogo { width: min(470px, calc(100vw - 24px)); }
 .bot-dialogo .tier-topo { padding: 12px 14px 12px 18px; }
@@ -1509,6 +1525,17 @@ html.modo-overlay .ov-topo button { width: 28px; height: 28px; border-radius: 8p
   <div class="tier-topo"><h2 id="appTit" data-t="appTit">App para PC</h2><button class="tier-fecha" type="button" id="appFecha" data-t-aria="fechar"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button></div>
   <div class="app-corpo" id="appCorpo"></div>
 </dialog>
+<dialog class="tier ed-dialogo" id="edDialogo" aria-labelledby="edTit">
+  <div class="tier-topo"><h2 id="edTit"></h2><button class="tier-fecha" type="button" id="edFecha" data-t-aria="fechar"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+  <div class="ed-corpo">
+    <label for="edTexto" data-t="edDicas">Dicas (uma por linha)</label>
+    <textarea id="edTexto" rows="7"></textarea>
+    <div class="ed-linha" id="edDifLinha"><label for="edDif" data-t="dificuldade">Dificuldade</label>
+      <select id="edDif"><option value="">–</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div>
+    <div class="ed-linha" id="edSenhaLinha"><label for="edSenha" data-t="edSenha">Senha do editor</label><input type="password" id="edSenha" autocomplete="current-password"></div>
+    <div class="ed-acoes"><button type="button" class="ed-sair" id="edSair" data-t="edSair">Sair do modo editor</button><span id="edMsg" role="status"></span><button type="button" class="ed-salvar" id="edSalvar" data-t="edSalvar">Salvar</button></div>
+  </div>
+</dialog>
 <dialog class="tier bot-dialogo" id="botDialogo" aria-labelledby="botTit">
   <div class="tier-topo"><h2 id="botTit"></h2><button class="tier-fecha" type="button" id="botFecha" data-t-aria="fechar"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
   <div class="bot-barra"><input type="search" id="botBusca" autocomplete="off" spellcheck="false"><button type="button" id="botLimpa" class="bot-limpa" hidden></button></div>
@@ -1577,7 +1604,7 @@ const TXT = {
     vazio: "Nenhum campeão com essa busca.", limpar: "Limpar busca e filtros", voce: "Você", inimigo: "Inimigo", duelo: "Duelo",
     travarTit: "Travar o pick", travarContra: "Travar o pick contra ", setup: "Seu setup pro confronto",
     lembrete: "Lembrete", comoJogar: "Como jogar", contra: " contra ", arteDe: "Arte de ",
-    botAliado: "Seu ADC", botAdcIni: "ADC inimigo", botSupIni: "Suporte inimigo", botTrocar: "trocar", botEscolher: "Escolher", botContra: "Contra {c}", botCom: "Com {c}", botSem: "Ainda sem dicas para esta parte.", botEscolhaAliado: "Escolha o seu atirador", botEscolhaIni: "Escolha o atirador inimigo", botFalta: "Escolha o campeão na carta acima para ver as dicas.", botNenhum: "Nenhum", botBuscaPh: "Procurar atirador", botDifLane: "Lane 2x2", botDifSup: "Contra {c}", botDifAdc: "Contra {c}",
+    botAliado: "Seu ADC", botAdcIni: "ADC inimigo", botSupIni: "Suporte inimigo", botTrocar: "trocar", botEscolher: "Escolher", botContra: "Contra {c}", botCom: "Com {c}", botSem: "Ainda sem dicas para esta parte.", botEscolhaAliado: "Escolha o seu atirador", botEscolhaIni: "Escolha o atirador inimigo", botFalta: "Escolha o campeão na carta acima para ver as dicas.", botNenhum: "Nenhum", botBuscaPh: "Procurar atirador", botDifLane: "Lane 2x2", botDifSup: "Contra {c}", botDifAdc: "Contra {c}", edEscrever: "✎ Escrever", edDicas: "Dicas (uma por linha)", edSenha: "Senha do editor", edSair: "Sair do modo editor", edSalvar: "Salvar", edSalvando: "Salvando…", edSalvo: "Salvo! Em 1 a 2 minutos aparece para todo mundo.", edErro: "Não salvou: ", edFaltaSenha: "Digite a senha do editor.",
     difMuito_facil: "Muito fácil", difFacil: "Fácil", difMedio: "Médio", difDificil: "Difícil", difMuito_dificil: "Muito difícil", dificuldade: "Dificuldade", difRota: "Ameaça na rota", difJogo: "Ameaça na partida", difRotaCurto: "Rota", difJogoCurto: "Partida",
     runa: "Runa", secundaria: "Secundária", feitico: "Feitiço", bota: "Bota", build: "Build", semAnot: "Sem anotação", tantoFaz: "Tanto faz",
     anterior: "Anterior: ", proximo: "Próximo: ",
@@ -1611,7 +1638,7 @@ const TXT = {
     vazio: "No champion matches this search.", limpar: "Clear search and filters", voce: "You", inimigo: "Enemy", duelo: "Matchup",
     travarTit: "Lock in", travarContra: "Lock in vs ", setup: "Your setup for this matchup",
     lembrete: "Notes", comoJogar: "How to play", contra: " vs ", arteDe: "Art of ",
-    botAliado: "Your ADC", botAdcIni: "Enemy ADC", botSupIni: "Enemy support", botTrocar: "change", botEscolher: "Choose", botContra: "Against {c}", botCom: "With {c}", botSem: "No tips for this part yet.", botEscolhaAliado: "Choose your marksman", botEscolhaIni: "Choose the enemy marksman", botFalta: "Pick the champion on the card above to see the tips.", botNenhum: "None", botBuscaPh: "Search marksman", botDifLane: "2v2 lane", botDifSup: "Vs {c}", botDifAdc: "Vs {c}",
+    botAliado: "Your ADC", botAdcIni: "Enemy ADC", botSupIni: "Enemy support", botTrocar: "change", botEscolher: "Choose", botContra: "Against {c}", botCom: "With {c}", botSem: "No tips for this part yet.", botEscolhaAliado: "Choose your marksman", botEscolhaIni: "Choose the enemy marksman", botFalta: "Pick the champion on the card above to see the tips.", botNenhum: "None", botBuscaPh: "Search marksman", botDifLane: "2v2 lane", botDifSup: "Vs {c}", botDifAdc: "Vs {c}", edEscrever: "✎ Write", edDicas: "Tips (one per line)", edSenha: "Editor password", edSair: "Leave editor mode", edSalvar: "Save", edSalvando: "Saving…", edSalvo: "Saved! Everyone sees it in 1 to 2 minutes.", edErro: "Not saved: ", edFaltaSenha: "Type the editor password.",
     difMuito_facil: "Very easy", difFacil: "Easy", difMedio: "Medium", difDificil: "Hard", difMuito_dificil: "Very hard", dificuldade: "Difficulty", difRota: "Lane threat", difJogo: "Game threat", difRotaCurto: "Lane", difJogoCurto: "Game",
     runa: "Rune", secundaria: "Secondary", feitico: "Spell", bota: "Boots", build: "Build", semAnot: "No note", tantoFaz: "Any",
     anterior: "Previous: ", proximo: "Next: ",
@@ -2526,11 +2553,12 @@ function botCarta(el, c) {
   const d = el.querySelector(".guia");
   if (d) d.innerHTML = c && typeof c.adc === "number" ? `${pips(c.adc)}${t("dificuldade")} ${c.adc}/5` : "";
 }
-function botCaixa(rotulo, c, secoes, falta) {
+function botCaixa(rotulo, c, secoes, falta, ed) {
   const corpo = !c ? `<p class="bot-vazio">${esc(t("botFalta"))}</p>`
     : (secoes && secoes.length) ? `<div${langOrig()}>${secoes.map(s => s.blocos.map(blocoTexto).join("")).join("")}</div>`
     : `<p class="bot-vazio">${esc(t("botSem"))}</p>`;
-  return `<section class="bot-nota"><h3>${c ? `<img src="${sq(c.id)}" alt="" width="26" height="26">` : ""}${esc(c ? rotulo.replace("{c}", c.nome) : falta)}</h3>${corpo}</section>`;
+  const editar = EDITOR && c && ed ? `<button type="button" class="bot-editar" data-ed="${esc(JSON.stringify({ ...ed, campeao: c.id }))}">${esc(t("edEscrever"))}</button>` : "";
+  return `<section class="bot-nota"><h3>${c ? `<img src="${sq(c.id)}" alt="" width="26" height="26">` : ""}${esc(c ? rotulo.replace("{c}", c.nome) : falta)}</h3>${corpo}${editar}</section>`;
 }
 function renderBot(c) {
   const ativo = !!guia.bot;
@@ -2543,7 +2571,7 @@ function renderBot(c) {
   botCarta($("cartaAliado"), aliado);
   botCarta($("cartaAdcIni"), adcIni);
   const sec = x => x ? [...(x.tldr || []).length ? [{ blocos: [{ tipo: "lista", itens: x.tldr }] }] : [], ...(x.secoes || [])] : [];
-  return `<div class="bot-notas">${botCaixa(t("botContra"), c, sec(c), "")}${botCaixa(t("botContra"), adcIni, sec(adcIni), t("botEscolhaIni"))}${botCaixa(t("botCom"), aliado, aliado && aliado.sinergia, t("botEscolhaAliado"))}</div>`;
+  return `<div class="bot-notas">${botCaixa(t("botContra"), c, sec(c), "", { campo: "dicas", tipo: "sup" })}${botCaixa(t("botContra"), adcIni, sec(adcIni), t("botEscolhaIni"), { campo: "dicas", tipo: "adc" })}${botCaixa(t("botCom"), aliado, aliado && aliado.sinergia, t("botEscolhaAliado"), { campo: "sinergia" })}</div>`;
 }
 // Dificuldade da bot lane: conta o suporte (a matchup da roda) e o ADC inimigo escolhido; a lane é a média dos dois,
 // arredondada para cima (Caitlyn 5 com Braum 1 dá 3).
@@ -2557,6 +2585,62 @@ function difBot(c) {
   const linha = (rot, v) => `<div><dt>${esc(rot)}</dt><dd aria-label="${v ? t("srDif", v, 5).replace(/^, /, "") : t("semAnot")}">${pips(v)}<b>${v ? v + "/5" : "–"}</b></dd></div>`;
   return linha(t("botDifLane"), n.lane) + linha(t("botDifSup").replace("{c}", c.nome), n.sup) + linha(t("botDifAdc").replace("{c}", n.a ? n.a.nome : t("botAdcIni")), n.adc);
 }
+/* ---------- Modo editor (só o guia do Taric, só no site publicado) ----------
+   O mono Taric abre battlematch.vercel.app/?editor#taric, e cada caixa de dicas do 2x2 ganha "Escrever".
+   Salvar manda para api/taric.js (que só mexe em src/guias/taric/notas.json) com a senha que o dono passou;
+   o site remonta sozinho em 1-2 minutos. A senha fica guardada só no navegador dele. */
+const EDITOR = new URLSearchParams(location.search).has("editor") && /^https?:$/.test(location.protocol);
+let edAtual = null;
+const edSenha = () => { try { return localStorage.getItem("editor:taric") || ""; } catch (e) { return ""; } };
+function edAbre(ed) {
+  if (!guia || guia.id !== "taric") return;
+  edAtual = ed;
+  const c = guia.lista.find(x => x.id === ed.campeao);
+  const atuais = ed.campo === "sinergia" ? ((c.sinergia || [])[0]?.blocos[0]?.itens || []) : (c.tldr || []);
+  const dif = ed.tipo === "adc" ? (typeof c.adc === "number" ? c.adc : "") : ed.tipo === "sup" && c.rota === "Suporte" ? c.dificuldade.overall || "" : "";
+  $("edTit").textContent = (ed.campo === "sinergia" ? t("botCom") : t("botContra")).replace("{c}", c.nome);
+  $("edTexto").value = atuais.join("\n");
+  $("edDifLinha").hidden = ed.campo === "sinergia";
+  $("edDif").value = String(dif);
+  $("edSenhaLinha").hidden = !!edSenha();
+  $("edSenha").value = "";
+  $("edMsg").textContent = "";
+  $("edDialogo").showModal();
+  $("edTexto").focus();
+}
+async function edSalva() {
+  const senha = edSenha() || $("edSenha").value.trim();
+  if (!senha) { $("edMsg").textContent = t("edFaltaSenha"); return; }
+  const corpo = { senha, campeao: edAtual.campeao, campo: edAtual.campo, tipo: edAtual.tipo, texto: $("edTexto").value };
+  if (edAtual.campo === "dicas") corpo.dificuldade = $("edDif").value || null;
+  $("edSalvar").disabled = true; $("edMsg").textContent = t("edSalvando");
+  try {
+    const r = await fetch("/api/taric", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(corpo) });
+    const j = await r.json().catch(() => ({}));
+    if (r.status === 401) { try { localStorage.removeItem("editor:taric"); } catch (e) {} $("edSenhaLinha").hidden = false; }
+    if (!r.ok) { $("edMsg").textContent = t("edErro") + (j.erro || r.status); return; }
+    try { localStorage.setItem("editor:taric", senha); } catch (e) {}
+    // Mostra na hora para quem escreveu; para todo mundo, quando o site remontar.
+    const c = guia.lista.find(x => x.id === edAtual.campeao);
+    if (edAtual.campo === "sinergia") c.sinergia = j.texto.length ? [{ titulo: "", blocos: [{ tipo: "lista", itens: j.texto }] }] : undefined;
+    else {
+      c.tldr = j.texto;
+      if (edAtual.tipo === "adc") c.adc = j.dificuldade || true;
+      else if (j.dificuldade) { c.dificuldade.overall = c.dificuldade.valor = j.dificuldade; c.dif = DIF_NOTA[j.dificuldade]; }
+    }
+    $("edMsg").textContent = t("edSalvo");
+    renderDetalhe(false);
+    setTimeout(() => $("edDialogo").open && $("edDialogo").close(), 1600);
+  } catch (e) { $("edMsg").textContent = t("edErro") + e.message; }
+  finally { $("edSalvar").disabled = false; }
+}
+document.addEventListener("click", ev => {
+  const b = ev.target.closest(".bot-editar");
+  if (b) { edAbre(JSON.parse(b.dataset.ed)); return; }
+  if (ev.target.closest("#edFecha")) $("edDialogo").close();
+  if (ev.target.closest("#edSalvar")) edSalva();
+  if (ev.target.closest("#edSair")) { try { localStorage.removeItem("editor:taric"); } catch (e) {} location.href = location.pathname + location.hash; }
+});
 let botQual = null;
 function botAbre(qual) {
   botQual = qual;
