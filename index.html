@@ -2592,6 +2592,12 @@ function difBot(c) {
 const EDITOR = new URLSearchParams(location.search).has("editor") && /^https?:$/.test(location.protocol);
 let edAtual = null;
 const edSenha = () => { try { return localStorage.getItem("editor:taric") || ""; } catch (e) { return ""; } };
+const edGuarda = senha => { try { localStorage.setItem("editor:taric", senha); } catch (e) {} };
+// Link com a senha (?editor=SENHA): guarda no navegador e tira a senha da barra de endereço. Ele nunca mais digita.
+if (EDITOR) {
+  const daUrl = new URLSearchParams(location.search).get("editor");
+  if (daUrl) { edGuarda(daUrl); history.replaceState(null, "", location.pathname + "?editor" + location.hash); }
+}
 function edAbre(ed) {
   if (!guia || guia.id !== "taric") return;
   edAtual = ed;
@@ -2618,8 +2624,8 @@ async function edSalva() {
     const r = await fetch("/api/taric", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(corpo) });
     const j = await r.json().catch(() => ({}));
     if (r.status === 401) { try { localStorage.removeItem("editor:taric"); } catch (e) {} $("edSenhaLinha").hidden = false; }
+    if (r.status !== 401) edGuarda(senha);  // senha certa fica guardada mesmo se o GitHub falhar
     if (!r.ok) { $("edMsg").textContent = t("edErro") + (j.erro || r.status); return; }
-    try { localStorage.setItem("editor:taric", senha); } catch (e) {}
     // Mostra na hora para quem escreveu; para todo mundo, quando o site remontar.
     const c = guia.lista.find(x => x.id === edAtual.campeao);
     if (edAtual.campo === "sinergia") c.sinergia = j.texto.length ? [{ titulo: "", blocos: [{ tipo: "lista", itens: j.texto }] }] : undefined;
