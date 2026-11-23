@@ -1351,6 +1351,9 @@
    "id": "Janna",
    "titulo": "a Fúria da Tormenta",
    "rota": "Suporte",
+   "lane": {
+    "Yunara": 5
+   },
    "dificuldade": {
     "overall": 5,
     "valor": 5,
