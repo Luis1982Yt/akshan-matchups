@@ -248,7 +248,61 @@
    },
    "tldr": [],
    "feiticos": [],
-   "runas": [],
+   "runas": [
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Glacial Augment",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png"
+       },
+       {
+        "nome": "Hextech Flashtraption",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/HextechFlashtraption/HextechFlashtraption.png"
+       },
+       {
+        "nome": "Biscuit Delivery",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
+       },
+       {
+        "nome": "Jack of All Trades",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/JackOfAllTrades/JackofAllTrades2.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Presence of Mind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+       },
+       {
+        "nome": "Legend: Haste",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Attack Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+       },
+       {
+        "nome": "Move Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+       },
+       {
+        "nome": "Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
+       }
+      ]
+     }
+    ]
+   ],
    "imagens_runas": [],
    "itens": [],
    "secoes": []
@@ -321,7 +375,61 @@
    },
    "tldr": [],
    "feiticos": [],
-   "runas": [],
+   "runas": [
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Glacial Augment",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png"
+       },
+       {
+        "nome": "Hextech Flashtraption",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/HextechFlashtraption/HextechFlashtraption.png"
+       },
+       {
+        "nome": "Biscuit Delivery",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
+       },
+       {
+        "nome": "Jack of All Trades",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/JackOfAllTrades/JackofAllTrades2.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Presence of Mind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+       },
+       {
+        "nome": "Legend: Haste",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Attack Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+       },
+       {
+        "nome": "Move Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+       },
+       {
+        "nome": "Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
+       }
+      ]
+     }
+    ]
+   ],
    "imagens_runas": [],
    "itens": [],
    "secoes": []
@@ -767,7 +875,61 @@
    },
    "tldr": [],
    "feiticos": [],
-   "runas": [],
+   "runas": [
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Glacial Augment",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png"
+       },
+       {
+        "nome": "Hextech Flashtraption",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/HextechFlashtraption/HextechFlashtraption.png"
+       },
+       {
+        "nome": "Biscuit Delivery",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
+       },
+       {
+        "nome": "Jack of All Trades",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/JackOfAllTrades/JackofAllTrades2.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Presence of Mind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+       },
+       {
+        "nome": "Legend: Haste",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Attack Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+       },
+       {
+        "nome": "Move Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+       },
+       {
+        "nome": "Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
+       }
+      ]
+     }
+    ]
+   ],
    "imagens_runas": [],
    "itens": [],
    "secoes": []
@@ -1742,7 +1904,61 @@
    },
    "tldr": [],
    "feiticos": [],
-   "runas": [],
+   "runas": [
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Glacial Augment",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png"
+       },
+       {
+        "nome": "Hextech Flashtraption",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/HextechFlashtraption/HextechFlashtraption.png"
+       },
+       {
+        "nome": "Biscuit Delivery",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
+       },
+       {
+        "nome": "Jack of All Trades",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/JackOfAllTrades/JackofAllTrades2.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Presence of Mind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+       },
+       {
+        "nome": "Legend: Haste",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Attack Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+       },
+       {
+        "nome": "Move Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+       },
+       {
+        "nome": "Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
+       }
+      ]
+     }
+    ]
+   ],
    "imagens_runas": [],
    "itens": [],
    "secoes": []
@@ -1955,7 +2171,61 @@
    },
    "tldr": [],
    "feiticos": [],
-   "runas": [],
+   "runas": [
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Glacial Augment",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png"
+       },
+       {
+        "nome": "Hextech Flashtraption",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/HextechFlashtraption/HextechFlashtraption.png"
+       },
+       {
+        "nome": "Biscuit Delivery",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
+       },
+       {
+        "nome": "Jack of All Trades",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/JackOfAllTrades/JackofAllTrades2.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Presence of Mind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+       },
+       {
+        "nome": "Legend: Haste",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Attack Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+       },
+       {
+        "nome": "Move Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+       },
+       {
+        "nome": "Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
+       }
+      ]
+     }
+    ]
+   ],
    "imagens_runas": [],
    "itens": [],
    "secoes": []
@@ -1973,7 +2243,61 @@
    },
    "tldr": [],
    "feiticos": [],
-   "runas": [],
+   "runas": [
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Glacial Augment",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png"
+       },
+       {
+        "nome": "Hextech Flashtraption",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/HextechFlashtraption/HextechFlashtraption.png"
+       },
+       {
+        "nome": "Biscuit Delivery",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
+       },
+       {
+        "nome": "Jack of All Trades",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/JackOfAllTrades/JackofAllTrades2.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Presence of Mind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+       },
+       {
+        "nome": "Legend: Haste",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Attack Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+       },
+       {
+        "nome": "Move Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+       },
+       {
+        "nome": "Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
+       }
+      ]
+     }
+    ]
+   ],
    "imagens_runas": [],
    "itens": [],
    "secoes": []
@@ -2116,7 +2440,61 @@
    },
    "tldr": [],
    "feiticos": [],
-   "runas": [],
+   "runas": [
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Glacial Augment",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png"
+       },
+       {
+        "nome": "Hextech Flashtraption",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/HextechFlashtraption/HextechFlashtraption.png"
+       },
+       {
+        "nome": "Biscuit Delivery",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
+       },
+       {
+        "nome": "Jack of All Trades",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/JackOfAllTrades/JackofAllTrades2.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Presence of Mind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+       },
+       {
+        "nome": "Legend: Haste",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Attack Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+       },
+       {
+        "nome": "Move Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+       },
+       {
+        "nome": "Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
+       }
+      ]
+     }
+    ]
+   ],
    "imagens_runas": [],
    "itens": [],
    "secoes": []
@@ -2223,7 +2601,61 @@
    },
    "tldr": [],
    "feiticos": [],
-   "runas": [],
+   "runas": [
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Glacial Augment",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png"
+       },
+       {
+        "nome": "Hextech Flashtraption",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/HextechFlashtraption/HextechFlashtraption.png"
+       },
+       {
+        "nome": "Biscuit Delivery",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
+       },
+       {
+        "nome": "Jack of All Trades",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/JackOfAllTrades/JackofAllTrades2.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Presence of Mind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+       },
+       {
+        "nome": "Legend: Haste",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Attack Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+       },
+       {
+        "nome": "Move Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+       },
+       {
+        "nome": "Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
+       }
+      ]
+     }
+    ]
+   ],
    "imagens_runas": [],
    "itens": [],
    "secoes": []
@@ -2506,7 +2938,61 @@
    },
    "tldr": [],
    "feiticos": [],
-   "runas": [],
+   "runas": [
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Glacial Augment",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png"
+       },
+       {
+        "nome": "Hextech Flashtraption",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/HextechFlashtraption/HextechFlashtraption.png"
+       },
+       {
+        "nome": "Biscuit Delivery",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
+       },
+       {
+        "nome": "Jack of All Trades",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/JackOfAllTrades/JackofAllTrades2.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Presence of Mind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+       },
+       {
+        "nome": "Legend: Haste",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Attack Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+       },
+       {
+        "nome": "Move Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+       },
+       {
+        "nome": "Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
+       }
+      ]
+     }
+    ]
+   ],
    "imagens_runas": [],
    "itens": [],
    "secoes": []
@@ -2684,7 +3170,61 @@
    },
    "tldr": [],
    "feiticos": [],
-   "runas": [],
+   "runas": [
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Glacial Augment",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png"
+       },
+       {
+        "nome": "Hextech Flashtraption",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/HextechFlashtraption/HextechFlashtraption.png"
+       },
+       {
+        "nome": "Biscuit Delivery",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
+       },
+       {
+        "nome": "Jack of All Trades",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/JackOfAllTrades/JackofAllTrades2.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Presence of Mind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+       },
+       {
+        "nome": "Legend: Haste",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Attack Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+       },
+       {
+        "nome": "Move Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+       },
+       {
+        "nome": "Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
+       }
+      ]
+     }
+    ]
+   ],
    "imagens_runas": [],
    "itens": [],
    "secoes": []
@@ -2824,7 +3364,61 @@
    },
    "tldr": [],
    "feiticos": [],
-   "runas": [],
+   "runas": [
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Glacial Augment",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png"
+       },
+       {
+        "nome": "Hextech Flashtraption",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/HextechFlashtraption/HextechFlashtraption.png"
+       },
+       {
+        "nome": "Biscuit Delivery",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
+       },
+       {
+        "nome": "Jack of All Trades",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/JackOfAllTrades/JackofAllTrades2.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Presence of Mind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+       },
+       {
+        "nome": "Legend: Haste",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Attack Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+       },
+       {
+        "nome": "Move Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+       },
+       {
+        "nome": "Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
+       }
+      ]
+     }
+    ]
+   ],
    "imagens_runas": [],
    "itens": [],
    "secoes": []
@@ -2843,7 +3437,61 @@
    },
    "tldr": [],
    "feiticos": [],
-   "runas": [],
+   "runas": [
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Glacial Augment",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png"
+       },
+       {
+        "nome": "Hextech Flashtraption",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/HextechFlashtraption/HextechFlashtraption.png"
+       },
+       {
+        "nome": "Biscuit Delivery",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
+       },
+       {
+        "nome": "Jack of All Trades",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/JackOfAllTrades/JackofAllTrades2.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Presence of Mind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+       },
+       {
+        "nome": "Legend: Haste",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Attack Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+       },
+       {
+        "nome": "Move Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+       },
+       {
+        "nome": "Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
+       }
+      ]
+     }
+    ]
+   ],
    "imagens_runas": [],
    "itens": [],
    "secoes": []
@@ -3091,7 +3739,61 @@
    },
    "tldr": [],
    "feiticos": [],
-   "runas": [],
+   "runas": [
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Glacial Augment",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png"
+       },
+       {
+        "nome": "Hextech Flashtraption",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/HextechFlashtraption/HextechFlashtraption.png"
+       },
+       {
+        "nome": "Biscuit Delivery",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
+       },
+       {
+        "nome": "Jack of All Trades",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/JackOfAllTrades/JackofAllTrades2.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Presence of Mind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+       },
+       {
+        "nome": "Legend: Haste",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Attack Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+       },
+       {
+        "nome": "Move Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+       },
+       {
+        "nome": "Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
+       }
+      ]
+     }
+    ]
+   ],
    "imagens_runas": [],
    "itens": [],
    "secoes": []
@@ -3109,7 +3811,61 @@
    },
    "tldr": [],
    "feiticos": [],
-   "runas": [],
+   "runas": [
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Glacial Augment",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png"
+       },
+       {
+        "nome": "Hextech Flashtraption",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/HextechFlashtraption/HextechFlashtraption.png"
+       },
+       {
+        "nome": "Biscuit Delivery",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
+       },
+       {
+        "nome": "Jack of All Trades",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/JackOfAllTrades/JackofAllTrades2.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Presence of Mind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+       },
+       {
+        "nome": "Legend: Haste",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Attack Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+       },
+       {
+        "nome": "Move Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+       },
+       {
+        "nome": "Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
+       }
+      ]
+     }
+    ]
+   ],
    "imagens_runas": [],
    "itens": [],
    "secoes": []
@@ -4004,7 +4760,61 @@
    },
    "tldr": [],
    "feiticos": [],
-   "runas": [],
+   "runas": [
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Glacial Augment",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png"
+       },
+       {
+        "nome": "Hextech Flashtraption",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/HextechFlashtraption/HextechFlashtraption.png"
+       },
+       {
+        "nome": "Biscuit Delivery",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
+       },
+       {
+        "nome": "Jack of All Trades",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/JackOfAllTrades/JackofAllTrades2.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Presence of Mind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+       },
+       {
+        "nome": "Legend: Haste",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Attack Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+       },
+       {
+        "nome": "Move Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+       },
+       {
+        "nome": "Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
+       }
+      ]
+     }
+    ]
+   ],
    "imagens_runas": [],
    "itens": [],
    "secoes": []
@@ -4161,6 +4971,59 @@
        {
         "nome": "Tenacity",
         "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsTenacityIcon.png"
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Glacial Augment",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png"
+       },
+       {
+        "nome": "Hextech Flashtraption",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/HextechFlashtraption/HextechFlashtraption.png"
+       },
+       {
+        "nome": "Biscuit Delivery",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png"
+       },
+       {
+        "nome": "Jack of All Trades",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/JackOfAllTrades/JackofAllTrades2.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Presence of Mind",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png"
+       },
+       {
+        "nome": "Legend: Haste",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Attack Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAttackSpeedIcon.png"
+       },
+       {
+        "nome": "Move Speed",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsMovementSpeedIcon.png"
+       },
+       {
+        "nome": "Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
        }
       ]
      }

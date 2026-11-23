@@ -30,7 +30,11 @@ def gerar_matchups(dd, notas):
     tier list de atiradores do mono Taric (ou tem a tag Marksman do Data Dragon) ganha a rota "Atirador", para o filtro
     da lista e o 2x2 da bot lane. "adc" guarda a dificuldade como ADC inimigo (Ashe e Seraphine estão nas duas listas)."""
     dif, dif_adc, dicas = notas.get("dificuldade", {}), notas.get("dificuldade_adc", {}), notas.get("dicas", {})
-    runas_de = {c: runas(dd, p) for p in notas.get("paginas_runas", []) for c in p["contra"]}
+    # Campeão em mais de um print (Zilean) fica com as duas páginas, como opções.
+    runas_de = {}
+    for p in notas.get("paginas_runas", []):
+        for c in p["contra"]:
+            runas_de.setdefault(c, []).extend(runas(dd, p))
     saida = []
     for c in sorted(dd.campeoes.values(), key=lambda c: c["name"].lower()):
         sup, adc = dif.get(c["id"]), dif_adc.get(c["id"])

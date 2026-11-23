@@ -161,6 +161,41 @@
     "Move Speed",
     "Tenacity"
    ]
+  },
+  {
+   "contra": [
+    "Mel",
+    "Nami",
+    "Senna",
+    "Swain",
+    "Bard",
+    "Ashe",
+    "Elise",
+    "Lulu",
+    "Yuumi",
+    "Seraphine",
+    "Neeko",
+    "Pyke",
+    "Renata",
+    "Soraka",
+    "Zilean",
+    "Milio"
+   ],
+   "principal": [
+    "Glacial Augment",
+    "Hextech Flashtraption",
+    "Biscuit Delivery",
+    "Jack of All Trades"
+   ],
+   "secundaria": [
+    "Presence of Mind",
+    "Legend: Haste"
+   ],
+   "fragmentos": [
+    "Attack Speed",
+    "Move Speed",
+    "Health"
+   ]
   }
  ]
 }
