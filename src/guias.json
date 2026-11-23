@@ -349,6 +349,7 @@
     "fonte": "Guia de Taric do BattleMatch.",
     "fonte_en": "BattleMatch's Taric guide.",
     "links": [],
-    "acompanhe": []
+    "acompanhe": [],
+    "bot": true
   }
 ]

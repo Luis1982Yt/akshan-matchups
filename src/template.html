@@ -1276,6 +1276,35 @@ b.ruim { font-weight: 700; color: var(--dif-dificil); }
   .trava.on .eu, .trava.on .ele, .trava.on .vs, .trava.on::before { animation: none; }
   .trocar svg { transition: none; }
 }
+/* Bot lane 2x2 (guia com "bot": true no guias.json, o Taric): você e o seu ADC contra o ADC e o suporte inimigos. */
+.bot-carta { cursor: pointer; }
+.bot-carta .bot-arte { position: absolute; inset: 0; display: grid; place-items: center; background: var(--painel-alto); }
+.bot-carta .bot-arte .bot-vazio { font: 700 14px/1.3 var(--corpo); color: var(--acento-vivo); text-align: center; padding: 0 12px; }
+.bot-carta .bot-arte .bot-vazio b { display: block; font-size: 34px; line-height: 1; }
+.bot-carta.adc-ini .selo { left: auto; right: 12px; background: #f6f3ea; color: #111; }
+.bot-carta.adc-ini .quem { text-align: right; }
+.bot-troca { position: absolute; z-index: 3; top: 44px; padding: 4px 9px; border-radius: 7px; border: 1px solid rgba(255,255,255,.4); background: rgba(0,0,0,.45); color: #f6f3ea; font: 600 12px var(--corpo); cursor: pointer; }
+.bot-carta.aliado .bot-troca { left: 12px; } .bot-carta.adc-ini .bot-troca { right: 12px; }
+/* No 2x2 o botão de cooldowns desce para o canto de baixo, para não cobrir o selo "Suporte inimigo". */
+html.guia-bot .cd-btn { top: auto; bottom: 12px; left: 12px; right: auto; }
+html.guia-bot .cd-btn .lbl { display: none; }
+html.guia-bot .card.inimigo .quem { padding-left: 52px; }
+html.guia-bot .duelo { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+html.guia-bot .card { height: 220px; }
+html.guia-bot .card .quem .n { font-size: 22px; }
+@media (max-width: 760px) { html.guia-bot .duelo { grid-template-columns: 1fr 1fr; } html.guia-bot .card { height: 170px; } }
+.bot-notas { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 900px) { .bot-notas { grid-template-columns: 1fr; } }
+.bot-nota { min-width: 0; padding: 14px 16px; border-radius: 12px; background: var(--painel); border: 1px solid var(--linha); }
+.bot-nota h3 { display: flex; align-items: center; gap: 8px; margin: 0 0 8px; font: 700 13px/1.3 var(--titulo); letter-spacing: .1em; text-transform: uppercase; color: var(--destaque); }
+.bot-nota h3 img { width: 26px; height: 26px; border-radius: 6px; }
+.bot-nota .bot-vazio { margin: 0; color: var(--texto-baixo); font-size: 14px; }
+.bot-dialogo input { width: 100%; margin: 0 0 12px; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--linha-forte); background: var(--painel-alto); color: var(--texto); font: 15px var(--corpo); }
+.bot-grade { display: grid; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); gap: 8px; }
+.bot-grade button { display: grid; justify-items: center; gap: 4px; padding: 8px 4px; border-radius: 10px; border: 1px solid var(--linha); background: var(--painel); color: var(--texto); font: 600 12px var(--corpo); cursor: pointer; }
+.bot-grade button img { width: 48px; height: 48px; border-radius: 8px; }
+.bot-grade button[aria-pressed="true"] { border-color: var(--acento); box-shadow: 0 0 0 2px var(--acento) inset; }
+.bot-grade button[hidden] { display: none; }
 /* Modo overlay (?overlay no endereço): a janela do app por cima da partida. Só o que ajuda durante o jogo:
    dicas, setup e a tabela fixa de recargas do inimigo (sem nenhum contador ao vivo: a política da Riot proíbe). */
 .ov-topo { display: none; }
@@ -1405,7 +1434,17 @@ html.modo-overlay .ov-topo button { width: 28px; height: 28px; border-radius: 8p
           <button class="skin-seta prox" type="button" id="skinProx" data-t-aria="skinProx" data-t-title="skinProx" hidden><svg width="22" height="36" viewBox="0 0 22 36" aria-hidden="true"><path d="M5 3l13 15-13 15" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/></svg></button>
           <div class="quem"><p class="n" id="vocNome"></p><p class="t" id="vocTitulo"></p></div>
         </article>
+        <article class="card bot-carta aliado" id="cartaAliado" hidden>
+          <div class="bot-arte"></div><span class="selo" data-t="botAliado">Seu ADC</span>
+          <button type="button" class="bot-troca" data-bot="aliado"></button>
+          <div class="quem"><p class="n"></p><p class="t"></p></div>
+        </article>
         <button class="travar" type="button" id="travar" title="Travar o pick" data-t-title="travarTit"><span aria-hidden="true">VS</span><span class="sr" id="travarNome"></span></button>
+        <article class="card bot-carta adc-ini" id="cartaAdcIni" hidden>
+          <div class="bot-arte"></div><span class="selo" data-t="botAdcIni">ADC inimigo</span>
+          <button type="button" class="bot-troca" data-bot="adcIni"></button>
+          <div class="quem"><p class="n"></p><p class="t"></p></div>
+        </article>
         <article class="card inimigo">
           <div id="artEle"></div>
           <svg class="alvo" id="alvo" viewBox="0 0 100 100" aria-hidden="true">
@@ -1447,6 +1486,11 @@ html.modo-overlay .ov-topo button { width: 28px; height: 28px; border-radius: 8p
 <dialog class="tier app-info" id="appInfo" aria-labelledby="appTit">
   <div class="tier-topo"><h2 id="appTit" data-t="appTit">App para PC</h2><button class="tier-fecha" type="button" id="appFecha" data-t-aria="fechar"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button></div>
   <div class="app-corpo" id="appCorpo"></div>
+</dialog>
+<dialog class="tier bot-dialogo" id="botDialogo" aria-labelledby="botTit">
+  <div class="tier-topo"><h2 id="botTit"></h2><button class="tier-fecha" type="button" id="botFecha" data-t-aria="fechar"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+  <input type="search" id="botBusca" autocomplete="off" spellcheck="false">
+  <div class="bot-grade" id="botGrade"></div>
 </dialog>
 <dialog class="tier" id="tier" aria-labelledby="tierTit">
   <div class="tier-topo"><h2 id="tierTit"></h2><button class="tier-fecha" type="button" id="tierFecha" data-t-aria="fechar"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button></div>
@@ -1511,6 +1555,7 @@ const TXT = {
     vazio: "Nenhum campeão com essa busca.", limpar: "Limpar busca e filtros", voce: "Você", inimigo: "Inimigo", duelo: "Duelo",
     travarTit: "Travar o pick", travarContra: "Travar o pick contra ", setup: "Seu setup pro confronto",
     lembrete: "Lembrete", comoJogar: "Como jogar", contra: " contra ", arteDe: "Arte de ",
+    botAliado: "Seu ADC", botAdcIni: "ADC inimigo", botSupIni: "Suporte inimigo", botTrocar: "trocar", botEscolher: "Escolher", botContra: "Contra {c}", botCom: "Com {c}", botSem: "Ainda sem dicas para esta parte.", botEscolhaAliado: "Escolha o seu atirador", botEscolhaIni: "Escolha o atirador inimigo", botFalta: "Escolha o campeão na carta acima para ver as dicas.", botNenhum: "Nenhum", botBuscaPh: "Procurar atirador",
     difMuito_facil: "Muito fácil", difFacil: "Fácil", difMedio: "Médio", difDificil: "Difícil", difMuito_dificil: "Muito difícil", dificuldade: "Dificuldade", difRota: "Ameaça na rota", difJogo: "Ameaça na partida", difRotaCurto: "Rota", difJogoCurto: "Partida",
     runa: "Runa", secundaria: "Secundária", feitico: "Feitiço", bota: "Bota", build: "Build", semAnot: "Sem anotação", tantoFaz: "Tanto faz",
     anterior: "Anterior: ", proximo: "Próximo: ",
@@ -1544,6 +1589,7 @@ const TXT = {
     vazio: "No champion matches this search.", limpar: "Clear search and filters", voce: "You", inimigo: "Enemy", duelo: "Matchup",
     travarTit: "Lock in", travarContra: "Lock in vs ", setup: "Your setup for this matchup",
     lembrete: "Notes", comoJogar: "How to play", contra: " vs ", arteDe: "Art of ",
+    botAliado: "Your ADC", botAdcIni: "Enemy ADC", botSupIni: "Enemy support", botTrocar: "change", botEscolher: "Choose", botContra: "Against {c}", botCom: "With {c}", botSem: "No tips for this part yet.", botEscolhaAliado: "Choose your marksman", botEscolhaIni: "Choose the enemy marksman", botFalta: "Pick the champion on the card above to see the tips.", botNenhum: "None", botBuscaPh: "Search marksman",
     difMuito_facil: "Very easy", difFacil: "Easy", difMedio: "Medium", difDificil: "Hard", difMuito_dificil: "Very hard", dificuldade: "Difficulty", difRota: "Lane threat", difJogo: "Game threat", difRotaCurto: "Lane", difJogoCurto: "Game",
     runa: "Rune", secundaria: "Secondary", feitico: "Spell", bota: "Boots", build: "Build", semAnot: "No note", tantoFaz: "Any",
     anterior: "Previous: ", proximo: "Next: ",
@@ -2433,6 +2479,70 @@ $("cdsPainel").addEventListener("click", e => { if (e.target.closest("#cdsFecha"
 document.addEventListener("click", e => { if (!$("cdsPainel").hidden && !e.target.closest("#cdsPainel, #cdBtn")) abreCds(false); });
 document.addEventListener("keydown", e => { if (e.key === "Escape" && !$("cdsPainel").hidden) { abreCds(false); $("cdBtn").focus(); } });
 
+
+/* ---------- Bot lane 2x2 (guia com "bot": true) ----------
+   O inimigo da roda é o suporte inimigo; as duas cartas novas guardam o seu ADC e o ADC inimigo (por guia, no
+   navegador). Dicas: contra o suporte (a matchup), contra o ADC inimigo (a matchup dele) e com o seu ADC (o campo
+   "sinergia" da matchup do seu ADC, quando o autor escrever). */
+const BOT_ATIRADORES = () => guia.lista.filter(x => x.rota === "Atirador");
+function botEstado() {
+  try { return JSON.parse(localStorage.getItem("bot:" + guia.id)) || {}; } catch (e) { return {}; }
+}
+function botGuarda(e) { try { localStorage.setItem("bot:" + guia.id, JSON.stringify(e)); } catch (er) {} }
+function botCarta(el, c) {
+  el.querySelector(".bot-arte").innerHTML = c ? `<img src="${cena(c.id)}" alt="${t("arteDe")}${esc(c.nome)}" loading="lazy">`
+    : `<span class="bot-vazio"><b>+</b>${esc(t("botEscolher"))}</span>`;
+  el.querySelector(".n").textContent = c ? c.nome : "";
+  el.querySelector(".t").textContent = c ? tituloDe(c) : "";
+  el.querySelector(".bot-troca").textContent = t("botTrocar");
+  el.querySelector(".bot-troca").hidden = !c;
+}
+function botCaixa(rotulo, c, secoes, falta) {
+  const corpo = !c ? `<p class="bot-vazio">${esc(t("botFalta"))}</p>`
+    : (secoes && secoes.length) ? `<div${langOrig()}>${secoes.map(s => s.blocos.map(blocoTexto).join("")).join("")}</div>`
+    : `<p class="bot-vazio">${esc(t("botSem"))}</p>`;
+  return `<section class="bot-nota"><h3>${c ? `<img src="${sq(c.id)}" alt="" width="26" height="26">` : ""}${esc(c ? rotulo.replace("{c}", c.nome) : falta)}</h3>${corpo}</section>`;
+}
+function renderBot(c) {
+  const ativo = !!guia.bot;
+  document.documentElement.classList.toggle("guia-bot", ativo);
+  $("cartaAliado").hidden = $("cartaAdcIni").hidden = !ativo;
+  document.querySelector(".card.inimigo .selo").textContent = ativo ? t("botSupIni") : t("inimigo");
+  if (!ativo) return "";
+  const e = botEstado(), acha = id => guia.lista.find(x => x.id === id);
+  const aliado = acha(e.aliado), adcIni = acha(e.adcIni);
+  botCarta($("cartaAliado"), aliado);
+  botCarta($("cartaAdcIni"), adcIni);
+  const sec = x => x ? [...(x.tldr || []).length ? [{ blocos: [{ tipo: "lista", itens: x.tldr }] }] : [], ...(x.secoes || [])] : [];
+  return `<div class="bot-notas">${botCaixa(t("botContra"), c, sec(c), "")}${botCaixa(t("botContra"), adcIni, sec(adcIni), t("botEscolhaIni"))}${botCaixa(t("botCom"), aliado, aliado && aliado.sinergia, t("botEscolhaAliado"))}</div>`;
+}
+let botQual = null;
+function botAbre(qual) {
+  botQual = qual;
+  const e = botEstado();
+  $("botTit").textContent = t(qual === "aliado" ? "botEscolhaAliado" : "botEscolhaIni");
+  $("botBusca").value = "";
+  $("botBusca").placeholder = t("botBuscaPh");
+  $("botGrade").innerHTML = `<button type="button" data-id="" aria-pressed="${!e[qual]}"><span>${esc(t("botNenhum"))}</span></button>` +
+    BOT_ATIRADORES().map(x => `<button type="button" data-id="${x.id}" data-nome="${esc(x.nome.toLowerCase())}" aria-pressed="${e[qual] === x.id}"><img src="${sq(x.id)}" alt="" width="48" height="48" loading="lazy"><span>${esc(x.nome)}</span></button>`).join("");
+  $("botDialogo").showModal();
+  $("botBusca").focus();
+}
+document.addEventListener("click", ev => {
+  const troca = ev.target.closest(".bot-carta");
+  if (troca && guia && guia.bot) { botAbre(troca.id === "cartaAliado" ? "aliado" : "adcIni"); return; }
+  const b = ev.target.closest("#botGrade button");
+  if (b) {
+    const e = botEstado(); e[botQual] = b.dataset.id || null; botGuarda(e);
+    $("botDialogo").close(); toca("clique"); renderDetalhe(false);
+  }
+  if (ev.target.closest("#botFecha")) $("botDialogo").close();
+});
+$("botBusca").addEventListener("input", () => {
+  const q = $("botBusca").value.trim().toLowerCase();
+  $("botGrade").querySelectorAll("button[data-nome]").forEach(b => { b.hidden = q && !b.dataset.nome.includes(q); });
+});
+
 /* ---------- Detalhe do matchup ---------- */
 function renderDetalhe(animar) {
   const c = current, eu = guia.campeao;
@@ -2465,12 +2575,13 @@ function renderDetalhe(animar) {
     $("cdsPainel").hidden = false;
   }
   if (!$("cdsPainel").hidden) mostraCds();
+  if (!guia.bot) renderBot(c);  // guia sem bot lane: esconde as cartas do 2x2
   if (guia.formato === "simples") {
     $("carga").innerHTML = `<dl class="carga">${slot(t("runa"), c.runa, c, "runa") + slot(t("secundaria"), c.sec, c, "sec") + slot(t("feitico"), c.spell) + slot(t("bota"), c.bota, c, "bota") + slot(t("build"), c.build, c, "build")}</dl>`;
     $("linhas").innerHTML = `<ol class="lembretes"${L === "en" ? ' lang="en"' : ""}>${c.linhas.map(l => `<li><span>${linhaNaLingua(l)}</span></li>`).join("")}</ol>`;
   } else {
     $("carga").innerHTML = setupCompleto(c);
-    $("linhas").innerHTML = notasCompleto(c);
+    $("linhas").innerHTML = guia.bot ? renderBot(c) : notasCompleto(c);
   }
   atualizaVizinhos();
   lista.querySelectorAll(".pick").forEach(b => { const eh = b.dataset.id === c.slug; b.setAttribute("aria-current", eh); b.tabIndex = eh ? 0 : -1; });
