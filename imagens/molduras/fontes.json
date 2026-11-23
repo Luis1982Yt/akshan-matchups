@@ -1,0 +1,137 @@
+{
+  "descricao": "Texturas de partículas originais da Riot Games, skin base. Composição estática adaptada ao seletor; não é uma reprodução do motor completo de partículas. Arquivos PNG preservados sem edição. Os SVGs projetam as malhas e UVs originais.",
+  "efeitos": {
+    "akshan": "R — Reticle",
+    "akali": "Passiva — indicador",
+    "azir": "E — escudo",
+    "fiora": "R — quatro vitais e campo de cura",
+    "garen": "R — asas no alvo",
+    "illaoi": "E — selo/temporizador do espírito",
+    "ksante": "Passiva — marca no alvo",
+    "kayle": "R — círculo",
+    "mordekaiser": "Passiva — aura",
+    "taric": "R — círculo e estrelas"
+  },
+  "arquivos": [
+    {
+      "campeao": "akshan",
+      "arquivo": "akshan_base_sacgeo02.png",
+      "origem": "https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/base/particles/akshan_base_sacgeo02.png",
+      "sha256": "32b0ded99b7b94b4a4c585b61bf476855a25be0ab1948e236a455466c089071c"
+    },
+    {
+      "campeao": "akshan",
+      "arquivo": "akshan_base_sacgeo01b.png",
+      "origem": "https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/base/particles/akshan_base_sacgeo01b.png",
+      "sha256": "b0a5d6017a3550094102ed420af4d9493f28ba4abc0af1d38daf03cdcf80c9e5"
+    },
+    {
+      "campeao": "akshan",
+      "arquivo": "akshan_base_sacgeo03.png",
+      "origem": "https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/base/particles/akshan_base_sacgeo03.png",
+      "sha256": "cc4809a1c318824a74d62a816b90673b5e86451a22f7d63514629855b0a309d3"
+    },
+    {
+      "campeao": "akshan",
+      "arquivo": "akshan_base_arrows.png",
+      "origem": "https://raw.communitydragon.org/latest/game/assets/characters/akshan/skins/base/particles/akshan_base_arrows.png",
+      "sha256": "bf2b301838d7b2abbe96affa4db241924c9adae15ca3b476f7c6a965fee84bd6"
+    },
+    {
+      "campeao": "akali",
+      "arquivo": "akali_p_spin_ring.png",
+      "origem": "https://raw.communitydragon.org/latest/game/assets/characters/akali/skins/base/particles/akali_p_spin_ring.png",
+      "sha256": "84bee66aed0e9f9a0c008327f8193719abe3975edf12154d52a281773f937a41"
+    },
+    {
+      "campeao": "akali",
+      "arquivo": "akali_base_p_indicator_smaller.png",
+      "origem": "https://raw.communitydragon.org/latest/game/assets/characters/akali/skins/base/particles/akali_base_p_indicator_smaller.png",
+      "sha256": "133973869228bfb683d54aee952b73bc6cf8a5e31518b80e7c1960672de73ee8"
+    },
+    {
+      "campeao": "azir",
+      "arquivo": "azir_base_e_shield_base.png",
+      "origem": "https://raw.communitydragon.org/latest/game/assets/characters/azir/skins/base/particles/azir_base_e_shield_base.png",
+      "sha256": "37b35a3cd900e2dc5c48f645f09be0b7e9281f7351d7e3bc7d6051ad80ee01ec"
+    },
+    {
+      "campeao": "azir",
+      "arquivo": "azir_base_e_shield_outerring.png",
+      "origem": "https://raw.communitydragon.org/latest/game/assets/characters/azir/skins/base/particles/azir_base_e_shield_outerring.png",
+      "sha256": "1a27cdeee8a525745f2b0f95049d5f40ef4ed7046e7a1337463d62ef3e1c3ae7"
+    },
+    {
+      "campeao": "fiora",
+      "arquivo": "fiora_base_r_crest.png",
+      "origem": "https://raw.communitydragon.org/latest/game/assets/characters/fiora/skins/base/particles/fiora_base_r_crest.png",
+      "sha256": "e94b9df9f1b27d6f09b89dfea0b8035b9bd5ceb413e480db6761b081cbfcd31e"
+    },
+    {
+      "campeao": "fiora",
+      "arquivo": "fiora_base_r_healzone_ring.png",
+      "origem": "https://raw.communitydragon.org/latest/game/assets/characters/fiora/skins/base/particles/fiora_base_r_healzone_ring.png",
+      "sha256": "5ee5098bf77a1f808f9bbfd5f996dfcbbe2c768f94ed12583893818a2ff691fa"
+    },
+    {
+      "campeao": "garen",
+      "arquivo": "garen_base_r_tar_wings.png",
+      "origem": "https://raw.communitydragon.org/latest/game/assets/characters/garen/skins/base/particles/garen_base_r_tar_wings.png",
+      "sha256": "f0b47eca7fb0551196d3f5bb378fe73990dd2cf5cea62bad4a49ca480f2d13ec"
+    },
+    {
+      "campeao": "illaoi",
+      "arquivo": "illaoi_base_e_timerarc.png",
+      "origem": "https://raw.communitydragon.org/latest/game/assets/characters/illaoi/skins/base/particles/illaoi_base_e_timerarc.png",
+      "sha256": "6c21ab5886857c900acf41c291f37413f595ae7cad2396aa8a02c9eeffdf7da5"
+    },
+    {
+      "campeao": "illaoi",
+      "arquivo": "illaoi_base_p_tentacleindicator.png",
+      "origem": "https://raw.communitydragon.org/latest/game/assets/characters/illaoi/skins/base/particles/illaoi_base_p_tentacleindicator.png",
+      "sha256": "1a60f612c7f13546b52a3b99b7a418e73c102b1eb1356542c7b01aae44820dbb"
+    },
+    {
+      "campeao": "ksante",
+      "arquivo": "ksante_base_p_mesh_camerafacing.svg",
+      "origem": "Malha original extraída do WAD local do campeão e projetada em SVG com seus UVs",
+      "sha256": "94a00f15338991d62099ee83de1ddce0136b18d21b25ca9e07d41499aeb4aa61"
+    },
+    {
+      "campeao": "kayle",
+      "arquivo": "kayle_base_r_circle.png",
+      "origem": "https://raw.communitydragon.org/latest/game/assets/characters/kayle/skins/base/particles/kayle_base_r_circle.png",
+      "sha256": "4f9f3793a55f41b6b38332186d6a50fa5365fa1c944f6c018e088579d2018f27"
+    },
+    {
+      "campeao": "kayle",
+      "arquivo": "kayle_base_flame_ring_gold.png",
+      "origem": "https://raw.communitydragon.org/latest/game/assets/characters/kayle/skins/base/particles/kayle_base_flame_ring_gold.png",
+      "sha256": "08a01a9461c0230ed9affb9efc79e8b8b4e54f0a55542e538c89db477a25d5e9"
+    },
+    {
+      "campeao": "mordekaiser",
+      "arquivo": "mordekaiser_passive_ring.svg",
+      "origem": "Malha original extraída do WAD local do campeão e projetada em SVG com seus UVs",
+      "sha256": "ff60cebbee41a5eadc3ab5c5f49a97e70386e705a60fdf975a610fb5b9ffcc38"
+    },
+    {
+      "campeao": "taric",
+      "arquivo": "taric_base_r_outerring.png",
+      "origem": "https://raw.communitydragon.org/latest/game/assets/characters/taric/skins/base/particles/taric_base_r_outerring.png",
+      "sha256": "b4a254acf54538c73315e83b60299c1ef17a831fbb7a028a0a10e24991de76ea"
+    },
+    {
+      "campeao": "taric",
+      "arquivo": "taric_base_r_aoe_ring_tex.png",
+      "origem": "https://raw.communitydragon.org/latest/game/assets/characters/taric/skins/base/particles/taric_base_r_aoe_ring_tex.png",
+      "sha256": "e8b08e3f58aef5ffc284977b71eddbaa99a945ee70632004a7d17d94ae7eb7ce"
+    },
+    {
+      "campeao": "taric",
+      "arquivo": "taric_base_r_star.png",
+      "origem": "https://raw.communitydragon.org/latest/game/assets/characters/taric/skins/base/particles/taric_base_r_star.png",
+      "sha256": "7f97ca3c8c522dfd01acfdcdd78204f21fb3240a4fae204750ef915c914263f9"
+    }
+  ]
+}
