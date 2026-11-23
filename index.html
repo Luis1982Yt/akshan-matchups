@@ -2012,6 +2012,7 @@ function passaFiltros(c) {
 }
 
 function renderLista() {
+  edReaplica();
   const termo = normal(q.value.trim());
   const avaliados = guia.lista.map(c => [c, relevancia(c, termo)]).filter(([c, n]) => n > 0 && passaFiltros(c));
   if (termo) avaliados.sort((a, b) => b[1] - a[1]);
@@ -2667,13 +2668,7 @@ async function edSalva() {
     if (r.status !== 401) edGuarda(senha);  // senha certa fica guardada mesmo se o GitHub falhar
     if (!r.ok) { $("edMsg").textContent = t("edErro") + (j.erro || r.status); return; }
     // Mostra na hora para quem escreveu; para todo mundo, quando o site remontar.
-    const c = guia.lista.find(x => x.id === edAtual.campeao);
-    if (edAtual.campo === "sinergia") c.sinergia = j.texto.length ? [{ titulo: "", blocos: [{ tipo: "lista", itens: j.texto }] }] : undefined;
-    else {
-      c.tldr = j.texto;
-      if (edAtual.tipo === "adc") c.adc = j.dificuldade || true;
-      else if (j.dificuldade) { c.dificuldade.overall = c.dificuldade.valor = j.dificuldade; c.dif = DIF_NOTA[j.dificuldade]; }
-    }
+    edGuardaPend({ k: "texto", campeao: edAtual.campeao, campo: edAtual.campo, tipo: edAtual.tipo, texto: j.texto, dificuldade: j.dificuldade });
     $("edMsg").textContent = t("edSalvo");
     renderDetalhe(false);
     setTimeout(() => $("edDialogo").open && $("edDialogo").close(), 1600);
@@ -2745,28 +2740,64 @@ async function esSalva() {
     if (!r.ok) { $("esMsg").textContent = t("edErro") + (j.erro || r.status); return; }
     // Mostra na hora para quem salvou.
     const s = j.setup || {}, runa = n => { for (const a of esDados.arvores) for (const sl of a.slots) for (const x of sl) if (x.en === n) return { nome: n, icone: x.icone }; return { nome: n }; };
-    esCampeao.runas = s.runas ? [[{ rotulo: "Principal", pecas: s.runas.principal.map(runa) }, { rotulo: "Secundária", pecas: s.runas.secundaria.map(runa) },
-      { rotulo: "Fragmentos", pecas: s.runas.fragmentos.map(f => ({ nome: f, icone: `${DD_RUNA}StatMods/${{ "Adaptive Force": "StatModsAdaptiveForceIcon", "Attack Speed": "StatModsAttackSpeedIcon", "Ability Haste": "StatModsCDRScalingIcon", "Move Speed": "StatModsMovementSpeedIcon", "Health Scaling": "StatModsHealthScalingIcon", "Tenacity": "StatModsTenacityIcon", "Health": "StatModsHealthPlusIcon" }[f]}.png` })) }]] : esCampeao.runas;
-    esCampeao.feiticos = (s.feiticos || []).map(id => ({ nome: (esDados.feiticos.find(f => f.id === id) || {}).nome || id, icone: `${DD}${VER}/img/spell/${id}.png` }));
-    esCampeao.itens = s.anotacoes ? [{ rotulo: "Build", linhas: s.anotacoes.map(texto => ({ tipo: "nota", texto })) }] : [];
+    const runas = s.runas ? [[{ rotulo: "Principal", pecas: s.runas.principal.map(runa) }, { rotulo: "Secundária", pecas: s.runas.secundaria.map(runa) },
+      { rotulo: "Fragmentos", pecas: s.runas.fragmentos.map(f => ({ nome: f, icone: `${DD_RUNA}StatMods/${{ "Adaptive Force": "StatModsAdaptiveForceIcon", "Attack Speed": "StatModsAttackSpeedIcon", "Ability Haste": "StatModsCDRScalingIcon", "Move Speed": "StatModsMovementSpeedIcon", "Health Scaling": "StatModsHealthScalingIcon", "Tenacity": "StatModsTenacityIcon", "Health": "StatModsHealthPlusIcon" }[f]}.png` })) }]] : null;
+    edGuardaPend({ k: "setup", campeao: esCampeao.id, runas, feiticos: (s.feiticos || []).map(id => ({ nome: (esDados.feiticos.find(f => f.id === id) || {}).nome || id, icone: `${DD}${VER}/img/spell/${id}.png` })),
+      itens: s.anotacoes ? [{ rotulo: "Build", linhas: s.anotacoes.map(texto => ({ tipo: "nota", texto })) }] : [] });
     $("esMsg").textContent = t("edSalvo");
     renderDetalhe(false);
     setTimeout(() => $("edSetupDialogo").open && $("edSetupDialogo").close(), 1600);
   } catch (e) { $("esMsg").textContent = t("edErro") + e.message; }
   finally { $("esSalvar").disabled = false; }
 }
+/* O que o editor acabou de salvar fica guardado no navegador dele por 10 minutos e é reaplicado ao abrir o site:
+   o site leva cerca de 1 minuto para remontar e publicar, e sem isso um F5 nesse meio-tempo "sumia" com a edição. */
+const ED_PEND = "editor:pendente", ED_PEND_MS = 10 * 60e3;
+function edPend() { try { return (JSON.parse(localStorage.getItem(ED_PEND)) || []).filter(p => Date.now() - p.t < ED_PEND_MS); } catch (e) { return []; } }
+function edAplica(p) {
+  const c = guia.lista.find(x => x.id === p.campeao);
+  if (!c) return;
+  if (p.k === "texto" && p.campo === "sinergia") c.sinergia = p.texto.length ? [{ titulo: "", blocos: [{ tipo: "lista", itens: p.texto }] }] : undefined;
+  else if (p.k === "texto") {
+    c.tldr = p.texto;
+    if (p.dificuldade != null) edAplica({ k: "dif", campeao: p.campeao, tipo: p.tipo, dificuldade: p.dificuldade });
+  } else if (p.k === "dif") {
+    if (p.tipo === "sup") { c.dificuldade.overall = c.dificuldade.valor = p.dificuldade; c.dif = DIF_NOTA[p.dificuldade]; }
+    else if (p.tipo === "adc") c.adc = p.dificuldade;
+    else c.lane = { ...(c.lane || {}), [p.adc]: p.dificuldade };
+  } else if (p.k === "setup") {
+    if (p.runas) c.runas = p.runas;
+    c.feiticos = p.feiticos; c.itens = p.itens;
+  }
+}
+function edGuardaPend(p) {
+  edAplica(p);
+  try { localStorage.setItem(ED_PEND, JSON.stringify([...edPend(), { ...p, t: Date.now() }])); } catch (e) {}
+}
+// Ao abrir o guia do Taric no modo editor, reaplica o que ainda pode não ter sido publicado.
+function edReaplica() {
+  if (!EDITOR || !guia || guia.id !== "taric" || guia._pendente) return;
+  guia._pendente = true;
+  edPend().forEach(edAplica);
+}
 // Quadradinho de dificuldade clicado no modo editor: mostra na hora e grava (só a dificuldade, sem mexer nas dicas).
 async function edDif(d) {
+  // Cada linha é independente: mudar o suporte ou o ADC não pode mexer na lane 2x2 da dupla na tela. Se a lane
+  // ainda era a média (nunca marcada), ela é gravada antes com o valor de agora, e fica parada.
+  if (d.tipo !== "lane" && current && guia.bot) {
+    const n = botNotas(current);
+    if (n.a && n.lane && !(current.lane && current.lane[n.a.id]) && [current.id, n.a.id].includes(d.campeao))
+      await edDif({ tipo: "lane", campeao: current.id, adc: n.a.id, dificuldade: n.lane });
+  }
   const acha = id => guia.lista.find(x => x.id === id), c = acha(d.campeao);
   const antes = JSON.stringify([c.dificuldade, c.adc, c.lane]);
-  if (d.tipo === "sup") { c.dificuldade.overall = c.dificuldade.valor = d.dificuldade; c.dif = DIF_NOTA[d.dificuldade]; }
-  else if (d.tipo === "adc") c.adc = d.dificuldade;
-  else c.lane = { ...(c.lane || {}), [d.adc]: d.dificuldade };
+  edAplica({ k: "dif", ...d });
   renderDetalhe(false); renderLista();
   try {
     const r = await fetch("/api/taric", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ senha: edSenha(), campo: "dif", ...d }) });
     const j = await r.json().catch(() => ({}));
     if (!r.ok) throw new Error(j.erro || r.status);
+    edGuardaPend({ k: "dif", ...d });
     avisa(t("edSalvoCurto"));
   } catch (e) {
     [c.dificuldade, c.adc, c.lane] = JSON.parse(antes); c.dif = DIF_NOTA[c.dificuldade.overall] || null;
@@ -2829,6 +2860,7 @@ $("botBusca").addEventListener("input", () => {
 
 /* ---------- Detalhe do matchup ---------- */
 function renderDetalhe(animar) {
+  edReaplica();
   const c = current, eu = guia.campeao;
   $("artEle").innerHTML = `<img src="${cena(c.id)}" alt="${t("arteDe")}${esc(c.nome)}" fetchpriority="high">`;
   enquadraTudo();
