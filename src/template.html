@@ -931,6 +931,30 @@ body.sem-rolar { overflow: hidden; }
 .mira { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
 .mira .aro { fill: none; stroke: var(--acento); stroke-width: 1.5px; }
 .mira .aro.fino { stroke-width: 1px; opacity: .45; }
+/* Efeitos originais da skin base, em uma camada que não intercepta os controles. */
+.mira-vfx { overflow: hidden; }
+.vfx-guia { display: none; }
+.vfx-guia[data-vfx="ksante"] { filter: brightness(1.7); }
+:root[data-guia="akshan"] .vfx-guia[data-vfx="akshan"],
+:root[data-guia="akali"] .vfx-guia[data-vfx="akali"],
+:root[data-guia="azir"] .vfx-guia[data-vfx="azir"],
+:root[data-guia="fiora"] .vfx-guia[data-vfx="fiora"],
+:root[data-guia="garen"] .vfx-guia[data-vfx="garen"],
+:root[data-guia="illaoi"] .vfx-guia[data-vfx="illaoi"],
+:root[data-guia="ksante"] .vfx-guia[data-vfx="ksante"],
+:root[data-guia="kayle"] .vfx-guia[data-vfx="kayle"],
+:root[data-guia="mordekaiser"] .vfx-guia[data-vfx="mordekaiser"],
+:root[data-guia="taric"] .vfx-guia[data-vfx="taric"] { display: block; }
+/* O losango real do R pede área central menor: evita cortar os retratos nos cantos. */
+@media (min-width: 901px) {
+  :root[data-guia="akshan"] .roda .lista { inset: 28% 27%; padding: 4px 4px 20px; gap: 5px; grid-template-columns: repeat(auto-fill, minmax(36px, 1fr)); }
+  :root[data-guia="ksante"] .roda .lista { inset: 23% 22%; padding: 5px 6px 20px; gap: 7px; grid-template-columns: repeat(auto-fill, minmax(42px, 1fr)); }
+  :root[data-guia="akshan"] .seta-mira svg { opacity: 0; }
+  :root[data-guia="akshan"] .seta-mira.esq { left: 1%; }
+  :root[data-guia="akshan"] .seta-mira.dir { right: 1%; }
+  :root[data-guia="akshan"] .seta-mira:hover { background: #ffdf9218; border-radius: 50%; }
+}
+:root[data-tema="claro"] .mira-vfx { filter: drop-shadow(0 1px 1px #3c304b90); }
 .mira .setas { fill: var(--acento-vivo); }
 .alvo { position: absolute; z-index: 1; left: 50%; top: 50%; height: 70%; aspect-ratio: 1; transform: translate(-50%, -50%); overflow: visible; pointer-events: none; filter: drop-shadow(0 0 4px var(--mira-brilho, rgba(255, 214, 120, .75))) drop-shadow(0 1px 3px rgba(0, 0, 0, .6)); }
 .alvo .losango { fill: none; stroke: var(--mira, #ffe39a); stroke-width: 3.5px; }
@@ -1467,9 +1491,19 @@ html.modo-overlay .ov-topo button { width: 28px; height: 28px; border-radius: 8p
       </label>
       <div class="filtros" id="filtros" role="group" aria-label="Filtros" data-t-aria="filtros"></div>
       <div class="roda">
-        <svg class="mira" viewBox="0 0 100 100" aria-hidden="true">
-          <circle class="aro" cx="50" cy="50" r="49" vector-effect="non-scaling-stroke"/>
-          <circle class="aro fino" cx="50" cy="50" r="46.5" vector-effect="non-scaling-stroke"/>
+        <!-- Texturas originais dos efeitos da skin base; fontes em imagens/molduras/fontes.json. -->
+        <svg class="mira mira-vfx" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+          <defs><filter id="vfx-cor" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  1 1 1 0 0" result="luz"/><feComposite in="SourceGraphic" in2="luz" operator="in"/></filter><filter id="vfx-ouro" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB"><feColorMatrix type="luminanceToAlpha"/><feFlood flood-color="#ffdf92"/><feComposite in2="SourceGraphic" operator="in" result="cor"/><feColorMatrix in="SourceGraphic" type="luminanceToAlpha" result="mascara"/><feComposite in="cor" in2="mascara" operator="in"/></filter><filter id="vfx-espirito" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB"><feColorMatrix type="luminanceToAlpha"/><feFlood flood-color="#33d8bf"/><feComposite in2="SourceGraphic" operator="in" result="cor"/><feColorMatrix in="SourceGraphic" type="luminanceToAlpha" result="mascara"/><feComposite in="cor" in2="mascara" operator="in"/></filter><filter id="vfx-morte" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB"><feColorMatrix type="luminanceToAlpha"/><feFlood flood-color="#16d5bd"/><feComposite in2="SourceGraphic" operator="in" result="cor"/><feColorMatrix in="SourceGraphic" type="luminanceToAlpha" result="mascara"/><feComposite in="cor" in2="mascara" operator="in"/></filter><filter id="vfx-cosmico" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB"><feColorMatrix type="luminanceToAlpha"/><feFlood flood-color="#96a9ff"/><feComposite in2="SourceGraphic" operator="in" result="cor"/><feColorMatrix in="SourceGraphic" type="luminanceToAlpha" result="mascara"/><feComposite in="cor" in2="mascara" operator="in"/></filter></defs>
+          <g class="vfx-guia" data-vfx="akshan"><image href="imagens/molduras/akshan_base_sacgeo02.png" x="-10" y="-10" width="120" height="120" opacity="1" filter="url(#vfx-ouro)"/><image href="imagens/molduras/akshan_base_sacgeo01b.png" x="-10" y="-10" width="120" height="120" opacity="0.38" filter="url(#vfx-ouro)"/><image href="imagens/molduras/akshan_base_sacgeo03.png" x="12" y="12" width="76" height="76" opacity="0.9" filter="url(#vfx-ouro)"/><image href="imagens/molduras/akshan_base_arrows.png" x="0" y="38" width="100" height="24" opacity="1" filter="url(#vfx-ouro)"/></g>
+          <g class="vfx-guia" data-vfx="akali"><image href="imagens/molduras/akali_p_spin_ring.png" x="-3" y="-3" width="106" height="106" opacity="0.8" filter="url(#vfx-cor)"/><image href="imagens/molduras/akali_p_spin_ring.png" x="-3" y="-3" width="106" height="106" opacity="0.6" filter="url(#vfx-cor)" transform="rotate(180 50 50)"/><image href="imagens/molduras/akali_base_p_indicator_smaller.png" x="0" y="0" width="100" height="100" opacity="1" filter="url(#vfx-cor)"/></g>
+          <g class="vfx-guia" data-vfx="azir"><image href="imagens/molduras/azir_base_e_shield_base.png" x="-4" y="-4" width="108" height="108" opacity="0.85" filter="url(#vfx-cor)"/><image href="imagens/molduras/azir_base_e_shield_outerring.png" x="-4" y="-4" width="108" height="108" opacity="1.3" filter="url(#vfx-cor)"/></g>
+          <g class="vfx-guia" data-vfx="fiora"><image href="imagens/molduras/fiora_base_r_crest.png" x="0" y="0" width="100" height="100" opacity="1" filter="url(#vfx-cor)" transform="rotate(0 50 50)"/><image href="imagens/molduras/fiora_base_r_crest.png" x="0" y="0" width="100" height="100" opacity="1" filter="url(#vfx-cor)" transform="rotate(90 50 50)"/><image href="imagens/molduras/fiora_base_r_crest.png" x="0" y="0" width="100" height="100" opacity="1" filter="url(#vfx-cor)" transform="rotate(180 50 50)"/><image href="imagens/molduras/fiora_base_r_crest.png" x="0" y="0" width="100" height="100" opacity="1" filter="url(#vfx-cor)" transform="rotate(270 50 50)"/><image href="imagens/molduras/fiora_base_r_healzone_ring.png" x="0" y="0" width="100" height="100" opacity="0.45" filter="url(#vfx-cor)"/></g>
+          <g class="vfx-guia" data-vfx="garen"><image href="imagens/molduras/garen_base_r_tar_wings.png" x="-2" y="-2" width="104" height="104" opacity="1" filter="url(#vfx-cor)"/><image href="imagens/molduras/garen_base_r_tar_wings.png" x="-2" y="-2" width="104" height="104" opacity="0.7" filter="url(#vfx-cor)" transform="rotate(180 50 50)"/></g>
+          <g class="vfx-guia" data-vfx="illaoi"><image href="imagens/molduras/illaoi_base_e_timerarc.png" x="-5" y="-5" width="110" height="110" opacity="1" filter="url(#vfx-espirito)"/><image href="imagens/molduras/illaoi_base_p_tentacleindicator.png" x="-7" y="-7" width="114" height="114" opacity="1" filter="url(#vfx-cor)"/></g>
+          <g class="vfx-guia" data-vfx="ksante"><image href="imagens/molduras/ksante_base_p_mesh_camerafacing.svg" x="0" y="0" width="100" height="100" opacity="1" filter="url(#vfx-cor)"/></g>
+          <g class="vfx-guia" data-vfx="kayle"><image href="imagens/molduras/kayle_base_r_circle.png" x="-4" y="-4" width="108" height="108" opacity="1" filter="url(#vfx-cor)"/><image href="imagens/molduras/kayle_base_flame_ring_gold.png" x="-6" y="-6" width="112" height="112" opacity="0.45" filter="url(#vfx-cor)"/></g>
+          <g class="vfx-guia" data-vfx="mordekaiser"><image href="imagens/molduras/mordekaiser_passive_ring.svg" x="-3" y="-3" width="106" height="106" opacity="1" filter="url(#vfx-morte)"/></g>
+          <g class="vfx-guia" data-vfx="taric"><image href="imagens/molduras/taric_base_r_outerring.png" x="-4" y="-4" width="108" height="108" opacity="0.75" filter="url(#vfx-cosmico)"/><image href="imagens/molduras/taric_base_r_aoe_ring_tex.png" x="-6" y="-6" width="112" height="112" opacity="1.2" filter="url(#vfx-cor)"/><image href="imagens/molduras/taric_base_r_star.png" x="38" y="-5" width="24" height="24" opacity="0.95" filter="url(#vfx-cor)"/><image href="imagens/molduras/taric_base_r_star.png" x="81" y="38" width="24" height="24" opacity="0.95" filter="url(#vfx-cor)"/><image href="imagens/molduras/taric_base_r_star.png" x="38" y="81" width="24" height="24" opacity="0.95" filter="url(#vfx-cor)"/><image href="imagens/molduras/taric_base_r_star.png" x="-5" y="38" width="24" height="24" opacity="0.95" filter="url(#vfx-cor)"/></g>
         </svg>
         <button class="seta-mira esq" type="button" id="miraAnt" aria-label="Matchup anterior"><svg viewBox="0 0 15 24" aria-hidden="true"><path d="M0 0L15 12L0 24z" fill="currentColor"/></svg></button>
         <button class="seta-mira dir" type="button" id="miraProx" aria-label="Próximo matchup"><svg viewBox="0 0 15 24" aria-hidden="true"><path d="M15 0L0 12L15 24z" fill="currentColor"/></svg></button>
