@@ -27,7 +27,7 @@ async function github(caminho, opcoes = {}) {
 }
 async function le(caminho) {
   const r = await github(caminho + "?ref=main");
-  if (!r.ok) throw new Error("GitHub " + r.status);
+  if (!r.ok) throw new Error(`GitHub ${r.status} ao ler ${caminho}: ${(await r.text()).slice(0, 200)}`);
   const j = await r.json();
   return { sha: j.sha, dados: JSON.parse(Buffer.from(j.content, "base64").toString("utf8")) };
 }
@@ -63,12 +63,14 @@ module.exports = async (req, res) => {
   if (!process.env.EDITOR_SENHA || !process.env.GITHUB_TOKEN) return res.status(503).json({ erro: "editor ainda não configurado na Vercel" });
   const b = req.body || {};
   if (!igual(b.senha || "", process.env.EDITOR_SENHA)) {
+    console.warn("editor taric: senha errada");
     await new Promise(r => setTimeout(r, 800));  // freia quem tenta adivinhar a senha
     return res.status(401).json({ erro: "senha errada" });
   }
   if (b.acao === "entrar") return res.json({ ok: true });
 
   const { campeao, campo } = b;
+  console.log("editor taric:", b.acao || campo, campeao || "");
   if (!["dicas", "sinergia", "setup"].includes(campo)) return res.status(400).json({ erro: "campo inválido" });
   const difCampo = campo === "dicas" && b.tipo === "adc" ? "dificuldade_adc" : campo === "dicas" ? "dificuldade" : null;
   const dif = b.dificuldade === null || b.dificuldade === "" || b.dificuldade === undefined ? null : Number(b.dificuldade);
@@ -115,10 +117,11 @@ module.exports = async (req, res) => {
         }),
       });
       if (r.ok) return res.json({ ok: true, texto, dificuldade: dif, setup });
-      if (r.status !== 409) throw new Error("GitHub " + r.status);
+      if (r.status !== 409) throw new Error(`GitHub ${r.status} ao gravar: ${(await r.text()).slice(0, 200)}`);
     }
     return res.status(409).json({ erro: "conflito, tente de novo" });
   } catch (e) {
+    console.error("editor taric:", campeao, campo, e.message || e);  // aparece nos logs da Vercel (sem senha nem token)
     return res.status(502).json({ erro: String(e.message || e) });
   }
 };
