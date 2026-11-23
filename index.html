@@ -1306,7 +1306,15 @@ html.guia-bot .card { height: 220px; }
 html.guia-bot .card .quem .n { font-size: 22px; }
 @media (max-width: 760px) { html.guia-bot .duelo { grid-template-columns: 1fr 1fr; } html.guia-bot .card { height: 170px; } }
 .bot-notas { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
-.bot-notas.com-dupla { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+/* Uma caixa embaixo da outra, na largura toda (dupla, suporte, ADC inimigo, o seu ADC): lê como texto e não sobra
+   buraco do lado de uma caixa comprida. Caixa vazia fica baixinha. */
+.bot-notas, .bot-notas.com-dupla { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+.bot-nota.bot-dupla { grid-column: 1 / -1; }
+.bot-nota.bot-dupla h3 img + img { margin-left: -12px; box-shadow: 0 0 0 2px var(--painel); }
+.bot-nota.vazia { padding: 12px 16px; }
+.bot-nota.vazia h3 { margin-bottom: 4px; }
+.bot-nota.vazia .bot-vazio { font-size: 13px; }
+.bot-nota.vazia .bot-editar { margin-top: 8px; }
 @media (max-width: 900px) { .bot-notas, .bot-notas.com-dupla { grid-template-columns: 1fr; } }
 .bot-nota { min-width: 0; padding: 14px 16px; border-radius: 12px; background: var(--painel); border: 1px solid var(--linha); }
 .bot-nota h3 { display: flex; align-items: center; gap: 8px; margin: 0 0 8px; font: 700 13px/1.3 var(--titulo); letter-spacing: .1em; text-transform: uppercase; color: var(--destaque); }
@@ -2592,7 +2600,8 @@ function botCaixa(rotulo, c, secoes, falta, ed) {
     : (secoes && secoes.length) ? `<div${langOrig()}>${secoes.map(s => s.blocos.map(blocoTexto).join("")).join("")}</div>`
     : `<p class="bot-vazio">${esc(t("botSem"))}</p>`;
   const editar = EDITOR && c && ed ? `<button type="button" class="bot-editar" data-ed="${esc(JSON.stringify({ ...ed, campeao: c.id }))}">${esc(t("edEscrever"))}</button>` : "";
-  return `<section class="bot-nota"><h3>${c ? `<img src="${sq(c.id)}" alt="" width="26" height="26">` : ""}${esc(c ? rotulo.replace("{c}", c.nome) : falta)}</h3>${corpo}${editar}</section>`;
+  const vazia = !c || !(secoes && secoes.length);
+  return `<section class="bot-nota${vazia ? " vazia" : ""}${c && c.ids ? " bot-dupla" : ""}"><h3>${c ? (c.ids || [c.id]).map(id => `<img src="${sq(id)}" alt="" width="26" height="26">`).join("") : ""}${esc(c ? rotulo.replace("{c}", c.nome) : falta)}</h3>${corpo}${editar}</section>`;
 }
 function renderBot(c) {
   const ativo = !!guia.bot;
@@ -2607,7 +2616,7 @@ function renderBot(c) {
   const sec = x => x ? [...(x.tldr || []).length ? [{ blocos: [{ tipo: "lista", itens: x.tldr }] }] : [], ...(x.secoes || [])] : [];
   // A dupla inteira primeiro (é o mais específico): só aparece com o ADC inimigo escolhido.
   const dupla = adcIni && c.duplas && c.duplas[adcIni.id];
-  const caixaDupla = adcIni ? botCaixa(t("botContra"), { ...c, nome: `${c.nome} + ${adcIni.nome}` }, dupla ? [{ blocos: [{ tipo: "lista", itens: dupla }] }] : [], "", { campo: "dupla", adc: adcIni.id }) : "";
+  const caixaDupla = adcIni ? botCaixa(t("botContra"), { ...c, nome: `${c.nome} + ${adcIni.nome}`, ids: [c.id, adcIni.id] }, dupla ? [{ blocos: [{ tipo: "lista", itens: dupla }] }] : [], "", { campo: "dupla", adc: adcIni.id }) : "";
   return `<div class="bot-notas${adcIni ? " com-dupla" : ""}">${caixaDupla}${botCaixa(t("botContra"), c, sec(c), "", { campo: "dicas", tipo: "sup" })}${botCaixa(t("botContra"), adcIni, sec(adcIni), t("botEscolhaIni"), { campo: "dicas", tipo: "adc" })}${botCaixa(t("botCom"), aliado, aliado && aliado.sinergia, t("botEscolhaAliado"), { campo: "sinergia" })}</div>`;
 }
 // Dificuldade da bot lane: conta o suporte (a matchup da roda) e o ADC inimigo escolhido; a lane é a média dos dois,
