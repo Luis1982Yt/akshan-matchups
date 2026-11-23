@@ -248,12 +248,19 @@
    "titulo": "a Arqueira do Gelo",
    "rota": "Suporte",
    "adc": 5,
+   "lane": {
+    "Yunara": 3
+   },
    "dificuldade": {
     "overall": 4,
     "valor": 4,
     "texto": ""
    },
-   "tldr": [],
+   "tldr": [
+    "sempre que tiver uma ashe contra, suas spells TEM que ser ghost + flash, se vc entender isso, vai passar a ganhar todas as lanes.",
+    "pra ganhar de ashe é basicamente ligar o ghost e ela morre, nao tem muito mistério não",
+    "compra botinha branca e seja feliz, depois me agradece"
+   ],
    "feiticos": [],
    "runas": [
     [
