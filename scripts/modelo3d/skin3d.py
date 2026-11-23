@@ -46,6 +46,37 @@ CLIPES_POR_CAMPEAO = {
         "laugh": "kayle_laugh.anm", "taunt": "kayle_taunt.anm", "attack1": "kayle_attack1.anm", "attack2": "kayle_attack2.anm",
         "recall": "kayle_recall.anm",
     },
+    "fiora": {
+        "idle": "fiora_idle1.anm", "idle_var": "fiora_idle3.anm", "dance": "fiora_dance.anm",
+        "laugh": "fiora_laugh.anm", "taunt": "fiora_taunt.anm", "attack1": "fiora_attack1.anm", "attack2": "fiora_attack2.anm",
+        "crit": "fiora_crit.anm",
+    },  # sem recall (nem anim nem som)
+    "ksante": {
+        "idle": "idle1.anm", "idle_var": "idlevar_01.anm", "dance_intro": "dance_in.anm", "dance": "dance_loop.anm",
+        "laugh": "laugh.anm", "taunt": "taunt.anm", "attack1": "attack1.anm", "attack2": "attack2.anm",
+        "crit": "crit.anm", "recall": "recall.anm",
+    },
+    "akali": {
+        "idle": "akali_base_idle1.anm", "idle_var": "akali_base_idle3.anm", "dance": "akali_base_dance.anm",
+        "laugh": "akali_base_laugh.anm", "taunt_intro": "akali_base_taunt_start.anm", "taunt": "akali_base_taunt_loop.anm",
+        "attack1": "akali_base_attack1.anm", "attack2": "akali_base_attack2.anm", "crit": "akali_base_crit.anm",
+    },  # sem recall (nem anim nem som)
+    "garen": {
+        "idle": "garen_2013_idle1.anm", "idle_var": "garen_2013_idle2.anm", "dance_intro": "garen_2013_dance.anm",
+        "dance": "garen_2013_dance_loop.anm", "laugh": "garen_2013_laugh.anm", "taunt": "garen_2013_taunt.anm",
+        "attack1": "garen_2013_attack_01.anm", "attack2": "garen_2013_attack_02.anm", "crit": "garen_2013_crit.anm",
+    },  # sem recall (nem anim nem som)
+    "azir": {
+        "idle": "azir_idle1.anm", "idle_var": "azir_idle2.anm", "dance_intro": "azir_dance_windup.anm",
+        "dance": "azir_dance_loop.anm", "laugh": "azir_laugh.anm", "taunt": "azir_taunt.anm",
+        "attack1": "azir_attack1.anm", "attack2": "azir_attack2.anm", "recall": "azir_recall_leadin.anm",
+    },  # sem anim própria de crit (o jogo reusa o som do ataque normal)
+    "taric": {
+        "idle": "taric_idle1.anm", "idle_var": "taric_idle2.anm", "dance_intro": "taric_dancewindup.anm",
+        "dance": "taric_danceloop.anm", "laugh": "taric_laugh.anm", "taunt": "taric_taunt.anm",
+        "attack1": "taric_attack1.anm", "attack2": "taric_attack2.anm", "attack3": "taric_attack3.anm",
+        "recall": "taric_recall.anm",
+    },  # sem anim própria de crit (o jogo reusa o som do ataque normal)
 }
 # Partes que o jogo esconde no começo mas o site mostra: a Kayle aparece na forma final (asas e espada de fogo).
 MOSTRAR_POR_CAMPEAO = {"kayle": {"wings_mid", "wings_bot", "sword_hilt", "sword_blade"}}

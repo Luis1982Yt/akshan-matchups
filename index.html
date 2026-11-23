@@ -33,7 +33,8 @@ try {
   if (location.protocol !== "file:") {
     const m = document.createElement("link"); m.rel = "manifest"; m.href = "manifest.webmanifest"; document.head.appendChild(m);
   }
-  const gd = document.documentElement.dataset.guia, modelo3d = { akshan: sk ? `modelo/akshan-${sk}.glb` : "modelo/akshan.glb", mordekaiser: "modelo/mordekaiser.glb", illaoi: "modelo/illaoi.glb", kayle: "modelo/kayle.glb" }[gd];
+  const gd = document.documentElement.dataset.guia, modelo3d = { akshan: sk ? `modelo/akshan-${sk}.glb` : "modelo/akshan.glb", mordekaiser: "modelo/mordekaiser.glb", illaoi: "modelo/illaoi.glb", kayle: "modelo/kayle.glb",
+    fiora: "modelo/fiora.glb", ksante: "modelo/ksante.glb", akali: "modelo/akali.glb", garen: "modelo/garen.glb", azir: "modelo/azir.glb", taric: "modelo/taric.glb" }[gd];
   if (location.protocol !== "file:" && matchMedia("(min-width: 1720px)").matches && modelo3d && localStorage.getItem("akshan3d") !== "0") {
     [["modulepreload", "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js"], ["modulepreload", "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/loaders/GLTFLoader.js"], ["modulepreload", "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/utils/BufferGeometryUtils.js"],
      ["preload", modelo3d]].forEach(([rel, href]) => {
@@ -3353,6 +3354,80 @@ const CONF_3D = {
     seq: { dance: [["dance_intro", 1], ["dance", 2]], taunt: [["taunt", 1]], laugh: [["laugh", 1]],
       attack: [["attack1", 1], ["attack2", 1]], recall: [["recall", 1]] },
     luz: [0xfff1dc, 0x0c1024, 0xffd6a3, 0x9fb6e8], brilho: "255,160,80", emissivo: .6, caixaPose: true,
+  },
+  fiora: {
+    modelo: () => "modelo/fiora.glb",
+    sons: "fiora3d",
+    variacoes: () => ({ dance: 1, taunt: 1, aa1: 4, hit1: 20, aa2: 4, hit2: 20, crit: 4, hit_crit: 20,
+      vo_taunt: 2, vo_laugh: 4, vo_aa1: 4, vo_aa2: 4, vo_crit: 4 }),
+    // Sem recall: a Fiora não tem evento de som nem clipe de animação para isso no jogo.
+    clipe: () => ({ dance: ["dance"], taunt: ["taunt"], laugh: ["vo_laugh"],
+      attack1: ["aa1@.15", "vo_aa1", "hit1@.45"], attack2: ["aa2@.15", "vo_aa2", "hit2@.45"], crit: ["crit@.15", "vo_crit", "hit_crit@.45"] }),
+    seq: { dance: [["dance", 1]], taunt: [["taunt", 1]], laugh: [["laugh", 1]], attack: [["attack1", 1], ["attack2", 1], ["crit", 1]] },
+    luz: [0xf3f6ff, 0x0c0d16, 0xff6f94, 0xdfe9f6], brilho: "240,80,122", emissivo: .5,
+  },
+  ksante: {
+    modelo: () => "modelo/ksante.glb",
+    sons: "ksante3d",
+    variacoes: () => ({ dance_cast: 1, dance: 1, taunt: 1, laugh: 1, recall: 2, aa1: 8, hit1: 8, aa2: 8, hit2: 8,
+      aa3: 8, hit3: 8, aa4: 8, hit4: 8, crit: 8, hit_crit: 8,
+      vo_taunt: 1, vo_laugh: 1, vo_recall: 3, vo_aa1: 6, vo_aa2: 6, vo_aa3: 6, vo_aa4: 6, vo_crit: 6 }),
+    // O "modo ultra" (aa3/aa4) tem sons próprios no jogo, mas usa a mesma animação de ataque; só aa1/aa2 aparecem aqui.
+    clipe: () => ({ dance_intro: ["dance_cast"], dance: ["dance~"], taunt: ["taunt", "vo_taunt"], laugh: ["laugh", "vo_laugh"],
+      recall: ["recall", "vo_recall"], attack1: ["aa1@.15", "vo_aa1", "hit1@.45"], attack2: ["aa2@.15", "vo_aa2", "hit2@.45"],
+      crit: ["crit@.15", "vo_crit", "hit_crit@.45"] }),
+    seq: { dance: [["dance_intro", 1], ["dance", 2]], taunt: [["taunt", 1]], laugh: [["laugh", 1]],
+      attack: [["attack1", 1], ["attack2", 1], ["crit", 1]], recall: [["recall", 1]] },
+    luz: [0xfff0e0, 0x110b0b, 0xc4b0ff, 0xf6d2a8], brilho: "169,139,255", emissivo: .55,
+  },
+  akali: {
+    modelo: () => "modelo/akali.glb",
+    sons: "akali3d",
+    variacoes: () => ({ dance: 1, taunt_cast: 2, taunt: 2, aa1: 4, hit1: 11, aa2: 4, hit2: 11, crit: 4, hit_crit: 11,
+      vo_taunt: 2, vo_laugh: 1, vo_aa1: 6, vo_aa2: 6, vo_crit: 6 }),
+    // Sem recall: a Akali não tem evento de som nem clipe de animação para isso no jogo.
+    clipe: () => ({ dance: ["dance"], taunt_intro: ["taunt_cast", "vo_taunt"], taunt: ["taunt"], laugh: ["vo_laugh"],
+      attack1: ["aa1@.15", "vo_aa1", "hit1@.45"], attack2: ["aa2@.15", "vo_aa2", "hit2@.45"], crit: ["crit@.15", "vo_crit", "hit_crit@.45"] }),
+    seq: { dance: [["dance", 1]], taunt: [["taunt_intro", 1], ["taunt", 2]], laugh: [["laugh", 1]],
+      attack: [["attack1", 1], ["attack2", 1], ["crit", 1]] },
+    luz: [0xffe9f5, 0x120a10, 0xb6e6a2, 0xf3cfe2], brilho: "159,211,140", emissivo: .45,
+  },
+  garen: {
+    modelo: () => "modelo/garen.glb",
+    sons: "garen3d",
+    variacoes: () => ({ dance_cast: 1, dance: 1, taunt: 1, laugh: 1, aa1: 4, hit1: 16, aa2: 4, hit2: 16, crit: 7, hit_crit: 19,
+      vo_taunt: 3, vo_laugh: 4, vo_aa1: 4, vo_aa2: 4, vo_crit: 4 }),
+    // Sem recall: o Garen não tem evento de som nem clipe de animação para isso no jogo.
+    clipe: () => ({ dance_intro: ["dance_cast"], dance: ["dance~"], taunt: ["taunt", "vo_taunt"], laugh: ["laugh", "vo_laugh"],
+      attack1: ["aa1@.15", "vo_aa1", "hit1@.45"], attack2: ["aa2@.15", "vo_aa2", "hit2@.45"], crit: ["crit@.15", "vo_crit", "hit_crit@.45"] }),
+    seq: { dance: [["dance_intro", 1], ["dance", 2]], taunt: [["taunt", 1]], laugh: [["laugh", 1]],
+      attack: [["attack1", 1], ["attack2", 1], ["crit", 1]] },
+    luz: [0xeef3ff, 0x090e19, 0xf0d18a, 0xd8e5ff], brilho: "226,191,106", emissivo: .55,
+  },
+  azir: {
+    modelo: () => "modelo/azir.glb",
+    sons: "azir3d",
+    variacoes: () => ({ dance_cast: 1, dance: 2, taunt: 1, laugh: 1, recall: 1, aa1: 9, hit1: 4, aa2: 9, hit2: 4, crit: 9, hit_crit: 4,
+      vo_taunt: 3, vo_laugh: 4, vo_recall: 3, vo_aa1: 4, vo_aa2: 4, vo_crit: 4 }),
+    // Sem clipe de crit: o jogo reusa a animação do ataque normal (o som de crit existe, mas não aparece aqui).
+    clipe: () => ({ dance_intro: ["dance_cast"], dance: ["dance~"], taunt: ["taunt", "vo_taunt"], laugh: ["laugh", "vo_laugh"],
+      recall: ["recall", "vo_recall"], attack1: ["aa1@.15", "vo_aa1", "hit1@.45"], attack2: ["aa2@.15", "vo_aa2", "hit2@.45"] }),
+    seq: { dance: [["dance_intro", 1], ["dance", 3]], taunt: [["taunt", 1]], laugh: [["laugh", 1]],
+      attack: [["attack1", 1], ["attack2", 1]], recall: [["recall", 1]] },
+    luz: [0xfff4d6, 0x120f0a, 0x7fe3d8, 0xf8e6b4], brilho: "79,209,197", emissivo: .65,
+  },
+  taric: {
+    modelo: () => "modelo/taric.glb",
+    sons: "taric3d",
+    variacoes: () => ({ dance_cast: 1, dance: 1, taunt: 1, laugh: 1, recall: 1, aa1: 4, hit1: 16, aa2: 4, hit2: 16, aa3: 4, hit3: 16, crit: 4, hit_crit: 16,
+      vo_taunt: 3, vo_laugh: 4, vo_recall: 3, vo_aa1: 4, vo_aa2: 4, vo_aa3: 4, vo_crit: 4 }),
+    // Sem clipe de crit: o jogo reusa a animação do ataque normal (o som de crit existe, mas não aparece aqui).
+    clipe: () => ({ dance_intro: ["dance_cast"], dance: ["dance~"], taunt: ["taunt", "vo_taunt"], laugh: ["laugh", "vo_laugh"],
+      recall: ["recall", "vo_recall"], attack1: ["aa1@.15", "vo_aa1", "hit1@.45"], attack2: ["aa2@.15", "vo_aa2", "hit2@.45"],
+      attack3: ["aa3@.15", "vo_aa3", "hit3@.45"] }),
+    seq: { dance: [["dance_intro", 1], ["dance", 2]], taunt: [["taunt", 1]], laugh: [["laugh", 1]],
+      attack: [["attack1", 1], ["attack2", 1], ["attack3", 1]], recall: [["recall", 1]] },
+    luz: [0xeafcff, 0x0a1013, 0xf3cf70, 0xd6f6fc], brilho: "233,185,73", emissivo: .6,
   },
 };
 const EMOTES_3D = ["dance", "taunt", "laugh"];

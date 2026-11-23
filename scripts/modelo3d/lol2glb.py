@@ -115,18 +115,29 @@ def ler_skl(b):
 
 # ---------- SKN ----------
 def ler_skn(b):
+    # Versões 0 e 2 (campeões antigos, ex.: Garen) não têm flags nem caixa/esfera, e o vértice
+    # é sempre o básico (sem cor nem tangente); só a 4 tem esses campos extras.
     magic, maj, mnr = struct.unpack_from("<IHH", b, 0)
-    assert magic == 0x00112233 and maj == 4, (hex(magic), maj)
+    assert magic == 0x00112233 and maj in (0, 2, 4), (hex(magic), maj)
     o = 8
-    (nsub,) = struct.unpack_from("<I", b, o); o += 4
-    subs = []
-    for _ in range(nsub):
-        nome = b[o:o + 64].split(b"\0")[0].decode()
-        vs, vc, is_, ic = struct.unpack_from("<4I", b, o + 64)
-        subs.append({"nome": nome, "vs": vs, "vc": vc, "is": is_, "ic": ic})
-        o += 80
-    (flags, nidx, nvert, vtam, vtipo) = struct.unpack_from("<5I", b, o); o += 20
-    o += 24 + 16  # caixa e esfera
+    if maj == 0:
+        nidx, nvert = struct.unpack_from("<2I", b, o); o += 8
+        subs = [{"nome": "Base", "vs": 0, "vc": nvert, "is": 0, "ic": nidx}]
+    else:
+        (nsub,) = struct.unpack_from("<I", b, o); o += 4
+        subs = []
+        for _ in range(nsub):
+            nome = b[o:o + 64].split(b"\0")[0].decode()
+            vs, vc, is_, ic = struct.unpack_from("<4I", b, o + 64)
+            subs.append({"nome": nome, "vs": vs, "vc": vc, "is": is_, "ic": ic})
+            o += 80
+        if maj == 4:
+            (flags,) = struct.unpack_from("<I", b, o); o += 4
+        nidx, nvert = struct.unpack_from("<2I", b, o); o += 8
+    vtipo = 0
+    if maj == 4:
+        (vtam, vtipo) = struct.unpack_from("<2I", b, o); o += 8
+        o += 24 + 16  # caixa e esfera
     idx = np.frombuffer(b, "<u2", nidx, o).astype(np.uint32); o += nidx * 2
     dt = [("p", "<f4", 3), ("inf", "u1", 4), ("w", "<f4", 4), ("n", "<f4", 3), ("uv", "<f4", 2)]
     if vtipo >= 1:
@@ -134,7 +145,8 @@ def ler_skn(b):
     if vtipo >= 2:
         dt.append(("tan", "<f4", 4))
     v = np.frombuffer(b, np.dtype(dt), nvert, o)
-    assert np.dtype(dt).itemsize == vtam, (np.dtype(dt).itemsize, vtam)
+    if maj == 4:
+        assert np.dtype(dt).itemsize == vtam, (np.dtype(dt).itemsize, vtam)
     return subs, idx, v
 
 
