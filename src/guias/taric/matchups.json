@@ -61,6 +61,7 @@
    "planilha": "Akshan",
    "id": "Akshan",
    "titulo": "o Sentinela Rebelde",
+   "rota": "Atirador",
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -78,9 +79,10 @@
    "planilha": "Alistar",
    "id": "Alistar",
    "titulo": "o Minotauro",
+   "rota": "Suporte",
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 3,
+    "valor": 3,
     "texto": ""
    },
    "tldr": [],
@@ -163,6 +165,7 @@
    "planilha": "Aphelios",
    "id": "Aphelios",
    "titulo": "a Arma dos Devotos",
+   "rota": "Atirador",
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -180,9 +183,10 @@
    "planilha": "Ashe",
    "id": "Ashe",
    "titulo": "a Arqueira do Gelo",
+   "rota": "Suporte",
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 3,
+    "valor": 3,
     "texto": ""
    },
    "tldr": [],
@@ -231,6 +235,7 @@
    "planilha": "Azir",
    "id": "Azir",
    "titulo": "o Imperador das Areias",
+   "rota": "Atirador",
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -248,9 +253,10 @@
    "planilha": "Bardo",
    "id": "Bard",
    "titulo": "o Protetor Andarilho",
+   "rota": "Suporte",
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 3,
+    "valor": 3,
     "texto": ""
    },
    "tldr": [],
@@ -282,9 +288,10 @@
    "planilha": "Blitzcrank",
    "id": "Blitzcrank",
    "titulo": "o Grande Golem a Vapor",
+   "rota": "Suporte",
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 2,
+    "valor": 2,
     "texto": ""
    },
    "tldr": [],
@@ -299,9 +306,10 @@
    "planilha": "Brand",
    "id": "Brand",
    "titulo": "a Vingança Flamejante",
+   "rota": "Suporte",
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 4,
+    "valor": 4,
     "texto": ""
    },
    "tldr": [],
@@ -316,9 +324,10 @@
    "planilha": "Braum",
    "id": "Braum",
    "titulo": "o Coração de Freljord",
+   "rota": "Suporte",
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 1,
+    "valor": 1,
     "texto": ""
    },
    "tldr": [],
@@ -350,6 +359,7 @@
    "planilha": "Caitlyn",
    "id": "Caitlyn",
    "titulo": "a Xerife de Piltover",
+   "rota": "Atirador",
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -418,6 +428,7 @@
    "planilha": "Corki",
    "id": "Corki",
    "titulo": "o Bombardeiro Ousado",
+   "rota": "Atirador",
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -486,6 +497,7 @@
    "planilha": "Draven",
    "id": "Draven",
    "titulo": "o Carrasco de Noxus",
+   "rota": "Atirador",
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -520,9 +532,10 @@
    "planilha": "Elise",
    "id": "Elise",
    "titulo": "a Aranha Rainha",
+   "rota": "Suporte",
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 4,
+    "valor": 4,
     "texto": ""
    },
    "tldr": [],
@@ -554,6 +567,7 @@
    "planilha": "Ezreal",
    "id": "Ezreal",
    "titulo": "o Explorador Pródigo",
+   "rota": "Atirador",
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -622,9 +636,10 @@
    "planilha": "Galio",
    "id": "Galio",
    "titulo": "o Colosso",
+   "rota": "Suporte",
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 1,
+    "valor": 1,
     "texto": ""
    },
    "tldr": [],
@@ -707,6 +722,7 @@
    "planilha": "Graves",
    "id": "Graves",
    "titulo": "o Foragido",
+   "rota": "Atirador",
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -843,9 +859,10 @@
    "planilha": "Janna",
    "id": "Janna",
    "titulo": "a Fúria da Tormenta",
+   "rota": "Suporte",
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 5,
+    "valor": 5,
     "texto": ""
    },
    "tldr": [],
@@ -894,6 +911,7 @@
    "planilha": "Jayce",
    "id": "Jayce",
    "titulo": "o Defensor do Amanhã",
+   "rota": "Atirador",
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -911,6 +929,7 @@
    "planilha": "Jhin",
    "id": "Jhin",
    "titulo": "o Virtuoso",
+   "rota": "Atirador",
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -928,6 +947,7 @@
    "planilha": "Jinx",
    "id": "Jinx",
    "titulo": "o Gatilho Desenfreado",
+   "rota": "Atirador",
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -962,6 +982,7 @@
    "planilha": "Kai'Sa",
    "id": "Kaisa",
    "titulo": "a Filha do Vazio",
+   "rota": "Atirador",
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -979,6 +1000,7 @@
    "planilha": "Kalista",
    "id": "Kalista",
    "titulo": "a Lança da Vingança",
+   "rota": "Atirador",
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -996,9 +1018,10 @@
    "planilha": "Karma",
    "id": "Karma",
    "titulo": "a Iluminada",
+   "rota": "Suporte",
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 5,
+    "valor": 5,
     "texto": ""
    },
    "tldr": [],
@@ -1064,6 +1087,7 @@
    "planilha": "Kayle",
    "id": "Kayle",
    "titulo": "a Justa",
+   "rota": "Atirador",
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -1132,6 +1156,7 @@
    "planilha": "Kindred",
    "id": "Kindred",
    "titulo": "os Caçadores Eternos",
+   "rota": "Atirador",
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -1166,6 +1191,7 @@
    "planilha": "Kog'Maw",
    "id": "KogMaw",
    "titulo": "a Boca do Abismo",
+   "rota": "Atirador",
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -1217,9 +1243,10 @@
    "planilha": "Leona",
    "id": "Leona",
    "titulo": "a Alvorada Radiante",
+   "rota": "Suporte",
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 3,
+    "valor": 3,
     "texto": ""
    },
    "tldr": [],
@@ -1285,6 +1312,7 @@
    "planilha": "Lucian",
    "id": "Lucian",
    "titulo": "o Purificador",
+   "rota": "Atirador",
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -1302,9 +1330,10 @@
    "planilha": "Lulu",
    "id": "Lulu",
    "titulo": "a Fada Feiticeira",
+   "rota": "Suporte",
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 4,
+    "valor": 4,
     "texto": ""
    },
    "tldr": [],
@@ -1319,9 +1348,10 @@
    "planilha": "Lux",
    "id": "Lux",
    "titulo": "a Dama da Luz",
+   "rota": "Suporte",
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 4,
+    "valor": 4,
     "texto": ""
    },
    "tldr": [],
@@ -1370,9 +1400,10 @@
    "planilha": "Maokai",
    "id": "Maokai",
    "titulo": "o Ente Sinistro",
+   "rota": "Suporte",
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 2,
+    "valor": 2,
     "texto": ""
    },
    "tldr": [],
@@ -1404,9 +1435,10 @@
    "planilha": "Mel",
    "id": "Mel",
    "titulo": "o Reflexo da Alma",
+   "rota": "Suporte",
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 2,
+    "valor": 2,
     "texto": ""
    },
    "tldr": [],
@@ -1421,9 +1453,10 @@
    "planilha": "Milio",
    "id": "Milio",
    "titulo": "A Chama Gentil",
+   "rota": "Suporte",
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 5,
+    "valor": 5,
     "texto": ""
    },
    "tldr": [],
@@ -1438,6 +1471,7 @@
    "planilha": "Miss Fortune",
    "id": "MissFortune",
    "titulo": "a Caçadora de Recompensas",
+   "rota": "Atirador",
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -1472,9 +1506,10 @@
    "planilha": "Morgana",
    "id": "Morgana",
    "titulo": "a Caída",
+   "rota": "Suporte",
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 5,
+    "valor": 5,
     "texto": ""
    },
    "tldr": [],
@@ -1506,9 +1541,10 @@
    "planilha": "Nami",
    "id": "Nami",
    "titulo": "a Conjuradora das Marés",
+   "rota": "Suporte",
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 2,
+    "valor": 2,
     "texto": ""
    },
    "tldr": [],
@@ -1540,9 +1576,10 @@
    "planilha": "Nautilus",
    "id": "Nautilus",
    "titulo": "o Titã das Profundezas",
+   "rota": "Suporte",
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 1,
+    "valor": 1,
     "texto": ""
    },
    "tldr": [],
@@ -1557,9 +1594,10 @@
    "planilha": "Neeko",
    "id": "Neeko",
    "titulo": "a Camaleoa Curiosa",
+   "rota": "Suporte",
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 4,
+    "valor": 4,
     "texto": ""
    },
    "tldr": [],
@@ -1693,9 +1731,10 @@
    "planilha": "Pantheon",
    "id": "Pantheon",
    "titulo": "a Lança Indestrutível",
+   "rota": "Suporte",
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 1,
+    "valor": 1,
     "texto": ""
    },
    "tldr": [],
@@ -1710,9 +1749,10 @@
    "planilha": "Poppy",
    "id": "Poppy",
    "titulo": "a Guardiã do Martelo",
+   "rota": "Suporte",
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 2,
+    "valor": 2,
     "texto": ""
    },
    "tldr": [],
@@ -1727,9 +1767,10 @@
    "planilha": "Pyke",
    "id": "Pyke",
    "titulo": "o Estripador das Águas Sangrentas",
+   "rota": "Suporte",
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 4,
+    "valor": 4,
     "texto": ""
    },
    "tldr": [],
@@ -1761,6 +1802,7 @@
    "planilha": "Quinn",
    "id": "Quinn",
    "titulo": "as Asas de Demacia",
+   "rota": "Atirador",
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -1778,9 +1820,10 @@
    "planilha": "Rakan",
    "id": "Rakan",
    "titulo": "O Charmoso",
+   "rota": "Suporte",
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 2,
+    "valor": 2,
     "texto": ""
    },
    "tldr": [],
@@ -1829,9 +1872,10 @@
    "planilha": "Rell",
    "id": "Rell",
    "titulo": "a Dama de Ferro",
+   "rota": "Suporte",
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 2,
+    "valor": 2,
     "texto": ""
    },
    "tldr": [],
@@ -1846,9 +1890,10 @@
    "planilha": "Renata Glasc",
    "id": "Renata",
    "titulo": "a Baronesa da Química",
+   "rota": "Suporte",
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 4,
+    "valor": 4,
     "texto": ""
    },
    "tldr": [],
@@ -1948,6 +1993,7 @@
    "planilha": "Samira",
    "id": "Samira",
    "titulo": "a Rosa do Deserto",
+   "rota": "Atirador",
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -1982,9 +2028,10 @@
    "planilha": "Senna",
    "id": "Senna",
    "titulo": "A Redentora",
+   "rota": "Suporte",
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 2,
+    "valor": 2,
     "texto": ""
    },
    "tldr": [],
@@ -1999,9 +2046,10 @@
    "planilha": "Seraphine",
    "id": "Seraphine",
    "titulo": "a Cantora Sonhadora",
+   "rota": "Suporte",
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 4,
+    "valor": 4,
     "texto": ""
    },
    "tldr": [],
@@ -2050,9 +2098,10 @@
    "planilha": "Shen",
    "id": "Shen",
    "titulo": "o Olho do Crepúsculo",
+   "rota": "Suporte",
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 2,
+    "valor": 2,
     "texto": ""
    },
    "tldr": [],
@@ -2118,6 +2167,7 @@
    "planilha": "Sivir",
    "id": "Sivir",
    "titulo": "a Mestra da Batalha",
+   "rota": "Atirador",
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -2152,6 +2202,7 @@
    "planilha": "Smolder",
    "id": "Smolder",
    "titulo": "o Filhote Flamejante",
+   "rota": "Atirador",
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -2169,9 +2220,10 @@
    "planilha": "Sona",
    "id": "Sona",
    "titulo": "a Mestra das Cordas",
+   "rota": "Suporte",
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 3,
+    "valor": 3,
     "texto": ""
    },
    "tldr": [],
@@ -2186,9 +2238,10 @@
    "planilha": "Soraka",
    "id": "Soraka",
    "titulo": "a Filha das Estrelas",
+   "rota": "Suporte",
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 5,
+    "valor": 5,
     "texto": ""
    },
    "tldr": [],
@@ -2203,9 +2256,10 @@
    "planilha": "Swain",
    "id": "Swain",
    "titulo": "o Grande General Noxiano",
+   "rota": "Suporte",
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 3,
+    "valor": 3,
     "texto": ""
    },
    "tldr": [],
@@ -2220,9 +2274,10 @@
    "planilha": "Sylas",
    "id": "Sylas",
    "titulo": "o Abjugado",
+   "rota": "Suporte",
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 2,
+    "valor": 2,
     "texto": ""
    },
    "tldr": [],
@@ -2254,9 +2309,10 @@
    "planilha": "Tahm Kench",
    "id": "TahmKench",
    "titulo": "o Rei do Rio",
+   "rota": "Suporte",
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 1,
+    "valor": 1,
     "texto": ""
    },
    "tldr": [],
@@ -2322,6 +2378,7 @@
    "planilha": "Teemo",
    "id": "Teemo",
    "titulo": "o Explorador Veloz",
+   "rota": "Atirador",
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -2339,9 +2396,10 @@
    "planilha": "Thresh",
    "id": "Thresh",
    "titulo": "o Guardião das Correntes",
+   "rota": "Suporte",
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 3,
+    "valor": 3,
     "texto": ""
    },
    "tldr": [],
@@ -2356,6 +2414,7 @@
    "planilha": "Tristana",
    "id": "Tristana",
    "titulo": "a Artilheira Yordle",
+   "rota": "Atirador",
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -2407,6 +2466,7 @@
    "planilha": "Twisted Fate",
    "id": "TwistedFate",
    "titulo": "o Mestre das Cartas",
+   "rota": "Atirador",
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -2424,6 +2484,7 @@
    "planilha": "Twitch",
    "id": "Twitch",
    "titulo": "o Semeador da Peste",
+   "rota": "Atirador",
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -2475,6 +2536,7 @@
    "planilha": "Varus",
    "id": "Varus",
    "titulo": "a Flecha da Vingança",
+   "rota": "Atirador",
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -2492,6 +2554,7 @@
    "planilha": "Vayne",
    "id": "Vayne",
    "titulo": "a Caçadora Noturna",
+   "rota": "Atirador",
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -2526,9 +2589,10 @@
    "planilha": "Vel'Koz",
    "id": "Velkoz",
    "titulo": "o Olho do Vazio",
+   "rota": "Suporte",
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 4,
+    "valor": 4,
     "texto": ""
    },
    "tldr": [],
@@ -2679,6 +2743,7 @@
    "planilha": "Xayah",
    "id": "Xayah",
    "titulo": "a Rebelde",
+   "rota": "Atirador",
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -2696,9 +2761,10 @@
    "planilha": "Xerath",
    "id": "Xerath",
    "titulo": "o Mago Ascendente",
+   "rota": "Suporte",
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 4,
+    "valor": 4,
     "texto": ""
    },
    "tldr": [],
@@ -2781,6 +2847,7 @@
    "planilha": "Yunara",
    "id": "Yunara",
    "titulo": "a Fé Inabalável",
+   "rota": "Atirador",
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -2798,9 +2865,10 @@
    "planilha": "Yuumi",
    "id": "Yuumi",
    "titulo": "a Gata Mágica",
+   "rota": "Suporte",
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 4,
+    "valor": 4,
     "texto": ""
    },
    "tldr": [],
@@ -2866,6 +2934,7 @@
    "planilha": "Zeri",
    "id": "Zeri",
    "titulo": "A Faísca de Zaun",
+   "rota": "Atirador",
    "dificuldade": {
     "overall": null,
     "valor": null,
@@ -2900,9 +2969,10 @@
    "planilha": "Zilean",
    "id": "Zilean",
    "titulo": "o Guardião do Tempo",
+   "rota": "Suporte",
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 5,
+    "valor": 5,
     "texto": ""
    },
    "tldr": [],
@@ -2934,9 +3004,10 @@
    "planilha": "Zyra",
    "id": "Zyra",
    "titulo": "a Ascensão dos Espinhos",
+   "rota": "Suporte",
    "dificuldade": {
-    "overall": null,
-    "valor": null,
+    "overall": 3,
+    "valor": 3,
     "texto": ""
    },
    "tldr": [],
