@@ -768,59 +768,6 @@
       "rotulo": "Principal",
       "pecas": [
        {
-        "nome": "Stormraider's Surge",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png"
-       },
-       {
-        "nome": "Nimbus Cloak",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/NimbusCloak/6361.png"
-       },
-       {
-        "nome": "Transcendence",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/Transcendence/Transcendence.png"
-       },
-       {
-        "nome": "Scorch",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/Scorch/Scorch.png"
-       }
-      ]
-     },
-     {
-      "rotulo": "Secundária",
-      "pecas": [
-       {
-        "nome": "Sudden Impact",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/SuddenImpact/SuddenImpact.png"
-       },
-       {
-        "nome": "Treasure Hunter",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/TreasureHunter/TreasureHunter.png"
-       }
-      ]
-     },
-     {
-      "rotulo": "Fragmentos",
-      "pecas": [
-       {
-        "nome": "Adaptive Force",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
-       },
-       {
-        "nome": "Adaptive Force",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
-       },
-       {
-        "nome": "Health",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
-       }
-      ]
-     }
-    ],
-    [
-     {
-      "rotulo": "Principal",
-      "pecas": [
-       {
         "nome": "Hail of Blades",
         "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png"
        },
@@ -848,6 +795,59 @@
        {
         "nome": "Transcendence",
         "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/Transcendence/Transcendence.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
+       },
+       {
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
+       },
+       {
+        "nome": "Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Stormraider's Surge",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png"
+       },
+       {
+        "nome": "Nimbus Cloak",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/NimbusCloak/6361.png"
+       },
+       {
+        "nome": "Transcendence",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/Transcendence/Transcendence.png"
+       },
+       {
+        "nome": "Scorch",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/Scorch/Scorch.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Sudden Impact",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/SuddenImpact/SuddenImpact.png"
+       },
+       {
+        "nome": "Treasure Hunter",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/TreasureHunter/TreasureHunter.png"
        }
       ]
      },
@@ -1162,59 +1162,6 @@
       "rotulo": "Principal",
       "pecas": [
        {
-        "nome": "Stormraider's Surge",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png"
-       },
-       {
-        "nome": "Nimbus Cloak",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/NimbusCloak/6361.png"
-       },
-       {
-        "nome": "Transcendence",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/Transcendence/Transcendence.png"
-       },
-       {
-        "nome": "Scorch",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/Scorch/Scorch.png"
-       }
-      ]
-     },
-     {
-      "rotulo": "Secundária",
-      "pecas": [
-       {
-        "nome": "Sudden Impact",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/SuddenImpact/SuddenImpact.png"
-       },
-       {
-        "nome": "Treasure Hunter",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/TreasureHunter/TreasureHunter.png"
-       }
-      ]
-     },
-     {
-      "rotulo": "Fragmentos",
-      "pecas": [
-       {
-        "nome": "Adaptive Force",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
-       },
-       {
-        "nome": "Adaptive Force",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
-       },
-       {
-        "nome": "Health",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
-       }
-      ]
-     }
-    ],
-    [
-     {
-      "rotulo": "Principal",
-      "pecas": [
-       {
         "nome": "Hail of Blades",
         "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png"
        },
@@ -1242,6 +1189,59 @@
        {
         "nome": "Transcendence",
         "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/Transcendence/Transcendence.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
+       },
+       {
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
+       },
+       {
+        "nome": "Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Stormraider's Surge",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png"
+       },
+       {
+        "nome": "Nimbus Cloak",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/NimbusCloak/6361.png"
+       },
+       {
+        "nome": "Transcendence",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/Transcendence/Transcendence.png"
+       },
+       {
+        "nome": "Scorch",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/Scorch/Scorch.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Sudden Impact",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/SuddenImpact/SuddenImpact.png"
+       },
+       {
+        "nome": "Treasure Hunter",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/TreasureHunter/TreasureHunter.png"
        }
       ]
      },
@@ -1412,6 +1412,59 @@
       "rotulo": "Principal",
       "pecas": [
        {
+        "nome": "Hail of Blades",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png"
+       },
+       {
+        "nome": "Sudden Impact",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/SuddenImpact/SuddenImpact.png"
+       },
+       {
+        "nome": "Grisly Mementos",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/GrislyMementos/GrislyMementos.png"
+       },
+       {
+        "nome": "Treasure Hunter",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/TreasureHunter/TreasureHunter.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Nimbus Cloak",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/NimbusCloak/6361.png"
+       },
+       {
+        "nome": "Transcendence",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/Transcendence/Transcendence.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
+       },
+       {
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
+       },
+       {
+        "nome": "Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
         "nome": "Stormraider's Surge",
         "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png"
        },
@@ -1479,59 +1532,6 @@
        {
         "nome": "Last Stand",
         "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/LastStand/LastStand.png"
-       }
-      ]
-     },
-     {
-      "rotulo": "Secundária",
-      "pecas": [
-       {
-        "nome": "Nimbus Cloak",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/NimbusCloak/6361.png"
-       },
-       {
-        "nome": "Transcendence",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/Transcendence/Transcendence.png"
-       }
-      ]
-     },
-     {
-      "rotulo": "Fragmentos",
-      "pecas": [
-       {
-        "nome": "Adaptive Force",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
-       },
-       {
-        "nome": "Adaptive Force",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
-       },
-       {
-        "nome": "Health",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
-       }
-      ]
-     }
-    ],
-    [
-     {
-      "rotulo": "Principal",
-      "pecas": [
-       {
-        "nome": "Hail of Blades",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png"
-       },
-       {
-        "nome": "Sudden Impact",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/SuddenImpact/SuddenImpact.png"
-       },
-       {
-        "nome": "Grisly Mementos",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/GrislyMementos/GrislyMementos.png"
-       },
-       {
-        "nome": "Treasure Hunter",
-        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/TreasureHunter/TreasureHunter.png"
        }
       ]
      },
@@ -4568,6 +4568,59 @@
        {
         "nome": "Treasure Hunter",
         "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/TreasureHunter/TreasureHunter.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Fragmentos",
+      "pecas": [
+       {
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
+       },
+       {
+        "nome": "Adaptive Force",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png"
+       },
+       {
+        "nome": "Health",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/StatMods/StatModsHealthPlusIcon.png"
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "rotulo": "Principal",
+      "pecas": [
+       {
+        "nome": "Hail of Blades",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png"
+       },
+       {
+        "nome": "Sudden Impact",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/SuddenImpact/SuddenImpact.png"
+       },
+       {
+        "nome": "Grisly Mementos",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/GrislyMementos/GrislyMementos.png"
+       },
+       {
+        "nome": "Treasure Hunter",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/TreasureHunter/TreasureHunter.png"
+       }
+      ]
+     },
+     {
+      "rotulo": "Secundária",
+      "pecas": [
+       {
+        "nome": "Nimbus Cloak",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/NimbusCloak/6361.png"
+       },
+       {
+        "nome": "Transcendence",
+        "icone": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/Transcendence/Transcendence.png"
        }
       ]
      },
